@@ -87,8 +87,6 @@ h1[tabindex]:focus { outline: none; }
 
 .explore { padding-block: 3.7rem 5.3rem; }
 .section-heading { margin-bottom: 1.65rem; }
-.section-source { margin: 0 0 .4rem; color: var(--accent); font-size: .8rem; font-weight: 700; letter-spacing: .15em; }
-.section-source span { margin-right: .2rem; }
 .section-heading h2 { margin: 0; font: 800 clamp(1.95rem, 3vw, 2.8rem)/1.25 var(--serif); letter-spacing: .055em; }
 .entry-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(1rem, 2.2vw, 1.8rem); }
 .entry { display: flex; flex-direction: column; background: #fdf8ef; border: 1px solid var(--line); border-radius: 5px; overflow: hidden; text-decoration: none; }
@@ -106,10 +104,8 @@ h1[tabindex]:focus { outline: none; }
 .directory-header { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; column-gap: 1.25rem; row-gap: .75rem; margin-bottom: 1.9rem; border-bottom: 1px solid var(--line); padding-bottom: 1.4rem; }
 .directory-header h1 { flex: 1; margin: 0; font: 800 clamp(2.1rem, 5vw, 4.2rem)/1.2 var(--serif); letter-spacing: .055em; }
 .back-link { flex-basis: 100%; color: var(--accent); font-size: .875rem; font-weight: 600; text-decoration: none; }
-.back-link:hover, .source-link:hover { text-decoration: underline; text-underline-offset: 4px; }
+.back-link:hover { text-decoration: underline; text-underline-offset: 4px; }
 .back-link span { margin-right: .25rem; }
-.source-link { text-decoration: none; color: var(--muted); font-size: .85rem; }
-.source-link span { margin-left: .2rem; }
 .site-footer { border-top: 1px solid var(--line); }
 .site-footer-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; padding-block: 1.65rem; }
 .site-footer .brand { font-size: .96rem; }

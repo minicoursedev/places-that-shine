@@ -44,6 +44,13 @@
   list-style: none;
 }
 
+.store-results[hidden],
+.store-map-panel[hidden],
+.store-map[hidden],
+.store-map-status[hidden] {
+  display: none;
+}
+
 .store-card {
   display: flex;
   flex-direction: column;
@@ -95,6 +102,44 @@
   object-fit: contain;
 }
 
+.store-details {
+  margin-top: .55rem;
+  color: var(--muted, #6e6056);
+  font-size: .79rem;
+}
+
+.store-details summary {
+  min-height: 1.5rem;
+  cursor: pointer;
+  color: var(--ink, #211912);
+  font-weight: 650;
+}
+
+.store-details[open] summary {
+  margin-bottom: .3rem;
+}
+
+.store-hours,
+.store-visit-note {
+  margin: .18rem 0 .4rem;
+  white-space: pre-line;
+}
+
+.store-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .5rem;
+  margin-top: .5rem;
+}
+
+.store-gallery-image {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: .35rem;
+  background: var(--paper, #fffaf1);
+  object-fit: contain;
+}
+
 .store-links {
   display: flex;
   flex-wrap: wrap;
@@ -140,6 +185,66 @@
 .store-more {
   display: block;
   margin: 1.25rem auto 0;
+}
+
+.store-modes {
+  display: flex;
+  gap: .5rem;
+  flex-wrap: wrap;
+}
+
+.store-modes .store-action[aria-pressed="true"] {
+  border-color: var(--ink, #211912);
+  background: var(--ink, #211912);
+  color: var(--paper, #fffaf1);
+}
+
+.store-map {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  height: clamp(340px, 60dvh, 590px);
+  border: 1px solid var(--line, #dcd2c4);
+  border-radius: .5rem;
+  background: #e9e3d7;
+}
+
+.store-map-status {
+  margin: 0 0 .7rem;
+  color: var(--muted, #6e6056);
+  font-size: .87rem;
+}
+
+.store-cluster {
+  display: grid;
+  place-items: center;
+  border: 3px solid #fff3dd;
+  border-radius: 50%;
+  background: #8b3e1d;
+  color: #fff;
+  font-size: .8rem;
+  font-weight: 700;
+  box-shadow: 0 1px 5px #0004;
+}
+
+.store-map .leaflet-popup-content {
+  margin: .85rem;
+  font-family: inherit;
+}
+
+.store-map .store-card {
+  min-width: 14rem;
+  padding: .3rem;
+  border: 0;
+  background: transparent;
+}
+
+.store-map .store-card p {
+  margin: .2rem 0;
+}
+
+.store-map .store-card .store-link {
+  color: var(--ink, #211912);
 }
 
 @media (max-width: 880px) {
