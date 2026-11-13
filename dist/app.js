@@ -173,4 +173,6 @@ boothDialog.addEventListener('click', event => {
   if (event.clientX < left || event.clientX > right || event.clientY < top || event.clientY > bottom) returnToMarket();
 });
 window.addEventListener('hashchange', () => showRoute({ moveFocus: true }));
+const sharedRoute = document.querySelector('meta[name="designer-share-route"]')?.content;
+if (sharedRoute) history.replaceState(null, '', `/#${sharedRoute}`);
 showRoute();

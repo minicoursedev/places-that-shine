@@ -1,3 +1,5 @@
+import { createDesignerShare } from './designer-share.js';
+
 const pageSize = 9;
 const validId = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const designersPath = '/data/designers.json';
@@ -450,36 +452,7 @@ function boothHeader(name, { designer, boothNumber, onClose }) {
   return header;
 }
 
-function shareControls(name, hash, label) {
-  const controls = element('div', 'catalogue-sheet-share');
-  const button = element('button', 'catalogue-sheet-button', label);
-  button.type = 'button';
-  button.setAttribute('aria-label', `${label}：${name}`);
-  const status = element('span', 'catalogue-sheet-share-status');
-  status.setAttribute('role', 'status');
-  const input = element('input', 'catalogue-sheet-share-url');
-  input.type = 'text';
-  input.readOnly = true;
-  input.hidden = true;
-  input.setAttribute('aria-label', `${name}的分享網址`);
-  input.value = new URL(hash, document.baseURI).href;
-  button.addEventListener('click', async () => {
-    try {
-      await navigator.clipboard.writeText(input.value);
-      input.hidden = true;
-      status.textContent = '已複製連結';
-    } catch {
-      input.hidden = false;
-      input.focus();
-      input.select();
-      status.textContent = '已選取連結，可手動複製';
-    }
-  });
-  controls.append(button, status, input);
-  return controls;
-}
-
-function workArticle(work, designerId, mediaPlayer) {
+function workArticle(work, designerId, mediaPlayer, share) {
   const article = element('article', 'catalogue-work');
   const heading = element('h3', 'catalogue-sheet-sr', work.name);
   heading.setAttribute('data-work-title', work.id);
@@ -524,18 +497,17 @@ function workArticle(work, designerId, mediaPlayer) {
   }
   const original = socialLink(work.link, '作品連結');
   if (original) links.append(original);
-  links.append(shareControls(work.name, hash, '分享作品'));
+  links.append(share.trigger(work));
   article.append(links);
   return { article, heading };
 }
 
-function placeSheet(root, header, body, { backHash, onClose }, footer, dialog) {
+function placeSheet(root, header, body, { backHash, onClose }, footer, ...dialogs) {
   const sheet = element('div', 'catalogue-booth-sheet');
   sheet.append(header, body);
   if (footer) sheet.append(footer);
   const contents = onClose ? [sheet] : [backLink(backHash), sheet];
-  if (dialog) contents.push(dialog);
-  root.replaceChildren(...contents);
+  root.replaceChildren(...contents, ...dialogs);
 }
 
 function renderDesigner(root, designer, workId, request, options) {
@@ -553,9 +525,10 @@ function renderDesigner(root, designer, workId, request, options) {
   works.append(element('h2', 'catalogue-works-title', '作品選集'));
   const gallery = element('div', 'catalogue-sheet-works');
   const mediaPlayer = player('catalogue-work-player-title');
+  const share = createDesignerShare(designer);
   const found = new Map();
   for (const work of designer.works) {
-    const { article, heading } = workArticle(work, designer.id, mediaPlayer);
+    const { article, heading } = workArticle(work, designer.id, mediaPlayer, share);
     found.set(work.id, { article, heading });
     gallery.append(article);
   }
@@ -573,8 +546,8 @@ function renderDesigner(root, designer, workId, request, options) {
   const footer = element('footer', 'catalogue-sheet-foot');
   const socials = designer.socials.map(link => socialLink(link, '官方連結')).filter(Boolean);
   for (const social of socials) social.className = 'catalogue-sheet-button';
-  footer.append(...socials, shareControls(designer.name, designer.href, '分享設計師'));
-  placeSheet(root, header, body, options, footer, mediaPlayer.dialog);
+  footer.append(...socials, share.trigger());
+  placeSheet(root, header, body, options, footer, mediaPlayer.dialog, share.dialog);
 
   if (target) {
     requestAnimationFrame(() => {
