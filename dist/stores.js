@@ -317,7 +317,7 @@ export async function mountStores(root) {
   }
 
   function showMore() {
-    const batch = matches.slice(shown, shown + PAGE_SIZE).map(renderStore);
+    const batch = matches.slice(shown, shown + PAGE_SIZE).map(shop => renderStore(shop));
     list.append(...batch);
     shown += batch.length;
     updateStatus();
