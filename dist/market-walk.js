@@ -57,7 +57,7 @@ export function mountMarketWalk(root, { onOpen, designerId } = {}) {
             <p data-walk-aisle aria-live="polite"></p>
             <p data-walk-count></p>
           </div>
-          <p class="market-walk-hint">按住畫面拖著小人走，點一下就走過去，點設計師查看介紹。電腦可以用方向鍵。</p>
+          <p class="market-walk-hint">點地面或拖曳來走動，點攤位看作品，點路人或對話框可收聲。電腦也可用方向鍵。</p>
           <div class="market-walk-dock">
             <button type="button" data-walk-open disabled>靠近即可認識設計師</button>
             <button type="button" data-walk-next-booth>下一攤</button>

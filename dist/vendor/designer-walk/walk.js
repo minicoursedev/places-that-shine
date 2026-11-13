@@ -74,6 +74,7 @@ export function createWalkView(canvas, { onNear = () => {}, onOpen = () => {}, o
   let target = null, pending = null, goal = null;
   let nearId, latchL = false, latchR = false;
   let npcs = [];
+  const passerBalloons = [];
   let catCfg = null, cats = [];                   // Guide cats sitting in this aisle
   let chatter = null;                             // Designer dialogue from chatter.json
   let raf = 0, last = 0, frameNo = 0;
@@ -740,6 +741,7 @@ export function createWalkView(canvas, { onNear = () => {}, onOpen = () => {}, o
     c.fillStyle = INK; c.textAlign = 'left';
     lines.forEach((l, i) => c.fillText(l, bx + pad, by + pad + lh * i + lh / 2 - 2));
     c.textAlign = 'center';
+    return { left: bx, top: by, right: bx + w + 3, bottom: by + h + 3, tailX: tx, tipX: x, tipY };
   }
   const catCtx = () => ({ hall: data?.hall, hallName: data?.hallName, ...catContext() });
   function initCats(code) {
@@ -799,7 +801,21 @@ export function createWalkView(canvas, { onNear = () => {}, onOpen = () => {}, o
     n.line = praiseLine(chatter, onScreen, data.stores, n.last) || n.line;
     n.last = n.line;
   }
-  const npcAt = (wx, wy) => npcs.findLast(n => Math.abs(wx - n.x) < 9 * n.s && wy > n.y - 36 * n.s && wy < n.y + 4) || null;
+  function passerAt({ x, y }, slop) {
+    if (!chatter) return null;
+    const balloon = passerBalloons.findLast(({ left, top, right, bottom, tailX, tipX, tipY }) =>
+      (x >= left - slop && x <= right + slop && y >= top - slop && y <= bottom + slop)
+      || (y >= bottom - 4 && y <= tipY + slop && x >= Math.min(tailX, tipX) - 7 - slop && x <= Math.max(tailX, tipX) + 7 + slop));
+    if (balloon) return balloon.passer;
+
+    const hitsBody = (passer, extra) => {
+      const bagWidth = passer.bag && (x - passer.x) * passer.dir > 0 ? 13 : 9;
+      return Math.abs(x - passer.x) <= bagWidth * passer.s + extra
+        && y >= passer.y - 38 * passer.s - extra && y <= passer.y + 4 + extra;
+    };
+    return npcs.findLast(passer => passer.line && hitsBody(passer, slop))
+      || npcs.findLast(passer => hitsBody(passer, 0));
+  }
   const catAt = (wx, wy) => cats.find(k => Math.abs(wx - k.x) < 22 && wy > k.y - CAT_H - 4 && wy < k.y + 8) || null;
 
   function marker() {
@@ -817,6 +833,7 @@ export function createWalkView(canvas, { onNear = () => {}, onOpen = () => {}, o
 
   function draw() {
     frameNo++;
+    passerBalloons.length = 0;
     c.setTransform(1, 0, 0, 1, 0, 0);
     c.fillStyle = PAPER2; c.fillRect(0, 0, canvas.width, canvas.height);
     if (!L || !cssW || !T) return;
@@ -843,7 +860,11 @@ export function createWalkView(canvas, { onNear = () => {}, onOpen = () => {}, o
     marker();
     people(x0, x1);
     for (const k of cats) if (k.line) speech(k.x, k.y - CAT_H - 2, k.line, x0, x1);
-    for (const n of npcs) if (n.line) speech(n.x, n.y - 36 * n.s - 2, n.line, x0, x1);
+    for (const passer of npcs) {
+      if (!passer.line) continue;
+      const bounds = speech(passer.x, passer.y - 36 * passer.s - 2, passer.line, x0, x1);
+      passerBalloons.push({ passer, ...bounds });
+    }
     prefetch(x0 - BW * 2, x1 + BW * 2);
   }
 
@@ -927,8 +948,8 @@ export function createWalkView(canvas, { onNear = () => {}, onOpen = () => {}, o
       if (n) { mx = dx / n * SPEED * dt; my = dy / n * SPEED * dt; }
       want = true;
     } else {
-      const follow = ptr && (ptr.moved || performance.now() - ptr.t >= HOLD_MS);
-      if (ptr && !follow) want = true; // still deciding between a tap and a drag
+      const follow = ptr && (ptr.moved || (!ptr.passer && performance.now() - ptr.t >= HOLD_MS));
+      if (ptr && !follow && !ptr.passer) want = true; // still deciding between a tap and a drag
       const tg = follow ? clampWalk(toWorld(ptr.sx, ptr.sy)) : ptr ? null : target;
       if (tg) {
         const dx = tg.x - player.x, dy = tg.y - player.y, d = Math.hypot(dx, dy), step = SPEED * dt;
@@ -979,7 +1000,9 @@ export function createWalkView(canvas, { onNear = () => {}, onOpen = () => {}, o
     if (!L || !e.isPrimary || (e.pointerType === 'mouse' && e.button !== 0)) return;
     const p = local(e);
     // w0: the world point under the finger at press time; a tap acts on it even if the camera moves meanwhile
-    ptr = { id: e.pointerId, sx: p.sx, sy: p.sy, x0: p.sx, y0: p.sy, w0: toWorld(p.sx, p.sy), t: performance.now(), moved: false };
+    const w0 = toWorld(p.sx, p.sy);
+    const passer = passerAt(w0, (e.pointerType === 'mouse' ? 2 : 7) / scale);
+    ptr = { id: e.pointerId, sx: p.sx, sy: p.sy, x0: p.sx, y0: p.sy, w0, passer, t: performance.now(), moved: false };
     try { canvas.setPointerCapture(e.pointerId); } catch { /* pointer already gone */ }
     halt(); keys.clear();
     if (document.activeElement !== canvas) canvas.focus({ preventScroll: true });
@@ -995,27 +1018,26 @@ export function createWalkView(canvas, { onNear = () => {}, onOpen = () => {}, o
     }
     if (e.pointerType === 'mouse' && L && !ptr) {
       const w = toWorld(p.sx, p.sy), B = boothAt(w.x, w.y), id = B ? B.b.id : null, ex = exitAt(w.x, w.y);
-      canvas.style.cursor = creatorAt(w.x, w.y) ? 'pointer' : '';
+      canvas.style.cursor = passerAt(w, 2 / scale) || creatorAt(w.x, w.y) ? 'pointer' : '';
       if (id !== hover || ex !== hoverExit) { hover = id; hoverExit = ex; kick(); }
     }
   }
   function onUp(e) {
     if (!ptr || e.pointerId !== ptr.id) return;
-    const tap = !ptr.moved && performance.now() - ptr.t < HOLD_MS;
-    const w = ptr.w0;
+    const { moved, passer, t, w0: w } = ptr;
+    const tap = !moved && (passer || performance.now() - t < HOLD_MS);
     ptr = null;
     if (tap) {
-      const creator = creatorAt(w.x, w.y);
-      if (creator) { stopAll(); onCreator(creator.b.id); kick(); return; }
-      const kitty = catAt(w.x, w.y);
-      if (kitty) { say(kitty); kick(); return; }
-      const passer = chatter ? npcAt(w.x, w.y) : null;
       if (passer) {
         passer.line = null;
         passer.muted = true;
         kick();
         return;
       }
+      const creator = creatorAt(w.x, w.y);
+      if (creator) { stopAll(); onCreator(creator.b.id); kick(); return; }
+      const kitty = catAt(w.x, w.y);
+      if (kitty) { say(kitty); kick(); return; }
       const ex = exitAt(w.x, w.y);
       if (ex) {
         stopAll();
@@ -1116,6 +1138,7 @@ export function createWalkView(canvas, { onNear = () => {}, onOpen = () => {}, o
   }
   function setAisle(d, o = {}) {
     data = d;
+    passerBalloons.length = 0;
     opts = { prev: o.prev || null, next: o.next || null,
       prevLabel: o.prevLabel || null, nextLabel: o.nextLabel || null };
     L = build(d);
