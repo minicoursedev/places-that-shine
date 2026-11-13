@@ -43,7 +43,7 @@ function buildAisles(designers) {
   });
 }
 
-export function mountMarketWalk(root) {
+export function mountMarketWalk(root, { onOpen, designerId } = {}) {
   const controller = new AbortController();
   let walk;
   root.innerHTML = `
@@ -51,19 +51,23 @@ export function mountMarketWalk(root) {
       <p data-walk-status role="status">正在布置攤位…</p>
       <button type="button" data-walk-retry hidden>重新載入</button>
       <div data-walk-content hidden>
-        <div class="market-walk-header">
-          <p data-walk-aisle aria-live="polite"></p>
+        <div class="market-walk-scene">
+          <canvas tabindex="0" aria-label="設計師攤位走道">可用下方的選單開啟設計師攤位。</canvas>
+          <div class="market-walk-header">
+            <p data-walk-aisle aria-live="polite"></p>
+            <p data-walk-count></p>
+          </div>
+          <p class="market-walk-hint">按住畫面拖著小人走，點一下就走過去，點設計師查看介紹。電腦可以用方向鍵。</p>
+          <div class="market-walk-dock">
+            <button type="button" data-walk-open disabled>靠近即可認識設計師</button>
+            <button type="button" data-walk-next-booth>下一攤</button>
+            <button type="button" data-walk-find>找設計師</button>
+          </div>
+        </div>
+        <div class="market-walk-footer">
           <div class="market-walk-actions" aria-label="換走道">
             <button type="button" data-walk-prev>← 上一條走道</button>
             <button type="button" data-walk-next>下一條走道 →</button>
-          </div>
-        </div>
-        <p class="market-walk-hint">點攤位看作品，或在場內按住拖動小人。電腦可用方向鍵移動，按 Enter 打開附近攤位。</p>
-        <canvas tabindex="0" aria-label="設計師攤位走道">可用下方的選單開啟設計師攤位。</canvas>
-        <div class="market-walk-footer">
-          <div class="market-walk-actions">
-            <button type="button" data-walk-open disabled>靠近即可看攤位</button>
-            <button type="button" data-walk-next-booth>下一攤</button>
           </div>
           <label class="market-walk-choose">
             <span>找設計師</span>
@@ -78,12 +82,16 @@ export function mountMarketWalk(root) {
   const status = select('[data-walk-status]');
   const retry = select('[data-walk-retry]');
   const content = select('[data-walk-content]');
+  const scene = select('.market-walk-scene');
   const canvas = select('canvas');
   const aisleLabel = select('[data-walk-aisle]');
+  const visitedCount = select('[data-walk-count]');
+  const hint = select('.market-walk-hint');
   const prev = select('[data-walk-prev]');
   const next = select('[data-walk-next]');
   const open = select('[data-walk-open]');
   const nextBooth = select('[data-walk-next-booth]');
+  const find = select('[data-walk-find]');
   const designerPicker = select('[data-walk-select]');
   const selected = select('[data-walk-selected]');
   const message = select('[data-walk-message]');
@@ -105,7 +113,7 @@ export function mountMarketWalk(root) {
       }
       if (!canvas.getContext('2d')) {
         status.textContent = '這個瀏覽器無法顯示攤位走道。仍可從選單看設計師作品。';
-        canvas.hidden = prev.hidden = next.hidden = open.hidden = nextBooth.hidden = true;
+        canvas.hidden = scene.hidden = prev.hidden = next.hidden = true;
       }
       start(aisles);
       content.hidden = false;
@@ -124,11 +132,14 @@ export function mountMarketWalk(root) {
   }
 
   function start(aisles) {
-    let index = Math.max(0, aisles.findIndex(aisle => aisle.code === lastAisle));
     let near;
     const byId = new Map(aisles.flatMap(aisle => aisle.booths.map(booth => [booth.id, booth])));
     const byDesigner = new Map(aisles.flatMap((aisle, aisleIndex) =>
       aisle.booths.map(booth => [booth.store, { booth, aisleIndex }])));
+    const initial = byDesigner.get(designerId);
+    let index = initial?.aisleIndex ?? Math.max(0, aisles.findIndex(aisle => aisle.code === lastAisle));
+    const updateVisitedCount = () => { visitedCount.textContent = `已逛 ${visited.size} / ${byDesigner.size} 攤`; };
+    updateVisitedCount();
     designerPicker.replaceChildren();
     for (const hall of halls) {
       const group = document.createElement('optgroup');
@@ -168,13 +179,16 @@ export function mountMarketWalk(root) {
       const { aisleIndex } = byDesigner.get(booth.store);
       lastAisle = aisles[aisleIndex].code;
       lastBooth = booth.id;
+      updateVisitedCount();
+      walk?.refresh();
     }
 
     function openBooth(id) {
       const booth = byId.get(id);
-      if (!booth || root.offsetParent === null) return;
+      if (!booth || root.offsetParent === null || document.querySelector('dialog[open]')) return;
       rememberBooth(booth);
-      location.hash = designerHash(booth.store);
+      if (onOpen) onOpen(booth.store, booth.id);
+      else location.hash = designerHash(booth.store);
     }
 
     function moveAisle(step) {
@@ -189,8 +203,9 @@ export function mountMarketWalk(root) {
         onNear(id) {
           near = id;
           open.disabled = !near;
-          const current = byId.get(near);
-          open.textContent = current ? `看${aisles[index].stores[current.store].name}的攤位` : '靠近即可看攤位';
+          open.textContent = near ? `逛 ${near} 這攤` : '靠近即可認識設計師';
+          const booth = byId.get(near);
+          open.setAttribute('aria-label', booth ? `逛 ${near} ${aisles[index].stores[booth.store].name}的攤位` : open.textContent);
         },
         onOpen: openBooth,
         onEnd: direction => moveAisle(direction === 'prev' ? -1 : 1),
@@ -201,9 +216,13 @@ export function mountMarketWalk(root) {
         .then(response => response.ok ? response.json() : null)
         .then(data => { if (data && !signal.aborted) walk?.setChatter(data); })
         .catch(() => {});
+      const dismissHint = () => hint.classList.add('is-gone');
+      canvas.addEventListener('pointerdown', dismissHint, { once: true, signal });
+      canvas.addEventListener('keydown', dismissHint, { once: true, signal });
     }
 
-    designerPicker.value = byId.get(lastBooth)?.store || aisles[index].booths[0].store;
+    const initialBooth = initial?.booth ?? byId.get(lastBooth);
+    designerPicker.value = initialBooth?.store || aisles[index].booths[0].store;
     const updateSelected = () => { selected.href = designerHash(designerPicker.value); };
     updateSelected();
     designerPicker.addEventListener('change', () => {
@@ -212,12 +231,17 @@ export function mountMarketWalk(root) {
       if (aisleIndex !== index) showAisle(aisleIndex, { boothId: booth.id });
       else walk?.focusBooth(booth.id);
     }, { signal });
-    selected.addEventListener('click', () => rememberBooth(byDesigner.get(designerPicker.value).booth), { signal });
+    selected.addEventListener('click', event => {
+      if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      event.preventDefault();
+      openBooth(byDesigner.get(designerPicker.value).booth.id);
+    }, { signal });
     prev.addEventListener('click', () => moveAisle(-1), { signal });
     next.addEventListener('click', () => moveAisle(1), { signal });
     nextBooth.addEventListener('click', () => walk?.nextBooth(), { signal });
     open.addEventListener('click', () => openBooth(near), { signal });
-    showAisle(index, { boothId: lastBooth });
+    find.addEventListener('click', () => designerPicker.focus(), { signal });
+    showAisle(index, { boothId: initialBooth?.id });
   }
 
   retry.addEventListener('click', load, { signal });

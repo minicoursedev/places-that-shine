@@ -46,7 +46,9 @@ function imageEntries(images) {
 }
 
 function designerEntries(data) {
-  return enabledEntries(data?.designers).map((designer, index) => {
+  const hallCounts = { O: 0, A: 0 };
+  const twoDigits = value => String(value).padStart(2, '0');
+  return enabledEntries(data?.designers).filter(designer => textValue(designer.name)).map(designer => {
     const works = (Array.isArray(designer.works) ? enabledEntries(designer.works) : []).map(work => ({
       id: work.id,
       name: textValue(work.title),
@@ -56,9 +58,11 @@ function designerEntries(data) {
       ...stageMedia(work.videoUrl),
     })).filter(work => work.name);
     const avatar = safeUrl(typeof designer.logo === 'string' ? designer.logo : designer.logo?.url)?.href;
+    const hall = designer.category === '愛好者' ? 'A' : 'O';
+    const hallIndex = hallCounts[hall]++;
     return {
       id: designer.id,
-      boothColor: ['terracotta', 'sage', 'ochre'][index % 3],
+      boothNumber: textValue(designer.boothNumber) || `${hall}${twoDigits(Math.floor(hallIndex / 16) + 1)}-${twoDigits(hallIndex % 16 + 1)}`,
       name: textValue(designer.name),
       category: textValue(designer.category) || '設計師',
       description: textValue(designer.description || designer.bio),
@@ -68,7 +72,7 @@ function designerEntries(data) {
       works,
       href: designerHash(designer.id),
     };
-  }).filter(entry => entry.name);
+  });
 }
 
 function stageMedia(value) {
@@ -211,14 +215,14 @@ function boothLogo(designer) {
 
 function boothCard(designer, representativeOnly) {
   const item = element('li', 'catalogue-booth');
-  item.setAttribute('data-booth-color', designer.boothColor);
   const sign = element('div', 'catalogue-booth-sign');
   if (designer.avatar) sign.append(boothLogo(designer));
   const identity = element('div', 'catalogue-booth-identity');
-  identity.append(
-    element('p', 'catalogue-booth-category', designer.category),
-    element('h3', 'catalogue-booth-name', designer.name),
-  );
+  const title = element('h3', 'catalogue-booth-name');
+  const titleLink = element('a', '', designer.name);
+  titleLink.href = designer.href;
+  title.append(titleLink);
+  identity.append(title, element('p', 'catalogue-booth-category', `${designer.boothNumber} ・ ${designer.category}`));
   sign.append(identity);
 
   const wall = element('div', 'catalogue-booth-wall');
@@ -265,7 +269,7 @@ function boothCard(designer, representativeOnly) {
     counter.append(controls);
   }
 
-  item.append(sign, element('div', 'catalogue-booth-awning'), wall, counter);
+  item.append(sign, wall, counter);
   return item;
 }
 
@@ -422,20 +426,80 @@ function socialLink(link, fallbackLabel) {
   return externalLink(url.href, 'catalogue-source-link', `${label} ↗`);
 }
 
+function boothHeader(name, { designer, boothNumber, onClose }) {
+  const header = element('header', 'catalogue-sheet-head');
+  if (designer?.avatar) header.append(boothLogo(designer));
+  const identity = element('div', 'catalogue-booth-identity');
+  identity.append(detailTitle(name));
+  if (designer) {
+    const meta = element('p', 'catalogue-sheet-meta');
+    meta.append(
+      element('span', 'catalogue-sheet-tag catalogue-sheet-number', boothNumber || designer.boothNumber),
+      element('span', 'catalogue-sheet-tag catalogue-sheet-zone', designer.category),
+    );
+    identity.append(meta);
+  }
+  header.append(identity);
+  if (onClose) {
+    const close = element('button', 'catalogue-sheet-close', '×');
+    close.type = 'button';
+    close.setAttribute('aria-label', '關閉攤位');
+    close.addEventListener('click', onClose);
+    header.append(close);
+  }
+  return header;
+}
+
+function shareControls(name, hash, label) {
+  const controls = element('div', 'catalogue-sheet-share');
+  const button = element('button', 'catalogue-sheet-button', label);
+  button.type = 'button';
+  button.setAttribute('aria-label', `${label}：${name}`);
+  const status = element('span', 'catalogue-sheet-share-status');
+  status.setAttribute('role', 'status');
+  const input = element('input', 'catalogue-sheet-share-url');
+  input.type = 'text';
+  input.readOnly = true;
+  input.hidden = true;
+  input.setAttribute('aria-label', `${name}的分享網址`);
+  input.value = new URL(hash, document.baseURI).href;
+  button.addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(input.value);
+      input.hidden = true;
+      status.textContent = '已複製連結';
+    } catch {
+      input.hidden = false;
+      input.focus();
+      input.select();
+      status.textContent = '已選取連結，可手動複製';
+    }
+  });
+  controls.append(button, status, input);
+  return controls;
+}
+
 function workArticle(work, designerId, mediaPlayer) {
   const article = element('article', 'catalogue-work');
-  const heading = element('h3', 'catalogue-work-title');
+  const heading = element('h3', 'catalogue-sheet-sr', work.name);
   heading.setAttribute('data-work-title', work.id);
   heading.tabIndex = -1;
-  const title = element('a', '', work.name);
-  title.href = designerHash(designerId, work.id);
-  heading.append(title);
   article.append(heading);
 
-  if (work.description) article.append(element('p', 'catalogue-work-description', work.description));
-  if (work.images.length) {
+  if (work.file) {
+    const video = element('video', 'catalogue-work-video');
+    video.controls = true;
+    video.playsInline = true;
+    video.preload = 'none';
+    if (work.images[0]) video.poster = work.images[0].url;
+    video.setAttribute('aria-label', work.name);
+    video.src = work.file;
+    article.append(video);
+  }
+  const images = work.file ? work.images.slice(1) : work.images;
+  if (images.length) {
     const gallery = element('div', 'catalogue-work-gallery');
-    for (const { url, alt } of work.images) {
+    for (const { url, alt } of images) {
       const imageAlt = alt || work.name;
       const preview = externalLink(url, 'catalogue-work-image');
       preview.append(imageElement(url, imageAlt));
@@ -445,83 +509,105 @@ function workArticle(work, designerId, mediaPlayer) {
     }
     article.append(gallery);
   }
+  if (work.description) article.append(element('p', 'catalogue-work-description', work.description));
 
+  const hash = designerHash(designerId, work.id);
   const links = element('div', 'catalogue-work-links');
-  if (work.url) {
+  const detail = element('a', 'catalogue-work-detail', '查看作品');
+  detail.href = hash;
+  detail.setAttribute('aria-label', `查看作品：${work.name}`);
+  links.append(detail);
+  if (work.url && !work.file) {
     const video = externalLink(work.url, 'catalogue-source-link', '觀看作品影片 →');
     video.addEventListener('click', event => mediaPlayer.open(work, event));
     links.append(video);
   }
   const original = socialLink(work.link, '作品連結');
   if (original) links.append(original);
-  if (links.childElementCount) article.append(links);
+  links.append(shareControls(work.name, hash, '分享作品'));
+  article.append(links);
   return { article, heading };
 }
 
-function renderDesigner(root, designer, workId, request, backHash) {
-  const booth = element('div', 'catalogue-booth catalogue-booth-open');
-  booth.setAttribute('data-booth-color', designer.boothColor);
-  const sign = element('div', 'catalogue-booth-sign');
-  if (designer.avatar) sign.append(boothLogo(designer));
-  const identity = element('div', 'catalogue-booth-identity');
-  identity.append(element('p', 'catalogue-booth-category', designer.category), detailTitle(designer.name));
-  sign.append(identity);
+function placeSheet(root, header, body, { backHash, onClose }, footer, dialog) {
+  const sheet = element('div', 'catalogue-booth-sheet');
+  sheet.append(header, body);
+  if (footer) sheet.append(footer);
+  const contents = onClose ? [sheet] : [backLink(backHash), sheet];
+  if (dialog) contents.push(dialog);
+  root.replaceChildren(...contents);
+}
 
-  const wall = element('div', 'catalogue-booth-wall');
-  if (designer.description) wall.append(element('p', 'catalogue-designer-bio', designer.description));
-  const socials = designer.socials.map(link => socialLink(link, '官方連結')).filter(Boolean);
-  if (socials.length) {
-    const links = element('div', 'catalogue-designer-socials');
-    links.append(...socials);
-    wall.append(links);
+function renderDesigner(root, designer, workId, request, options) {
+  const header = boothHeader(designer.name, { ...options, designer });
+  const body = element('div', 'catalogue-sheet-body');
+  if (designer.description) {
+    const intro = element('section', 'catalogue-sheet-intro');
+    intro.append(
+      element('h2', 'catalogue-works-title', '簡介'),
+      element('p', 'catalogue-designer-bio', designer.description),
+    );
+    body.append(intro);
   }
   const works = element('section', 'catalogue-works');
-  works.append(element('h2', 'catalogue-works-title', '攤位作品'));
-  const rack = element('div', 'catalogue-booth-rack');
+  works.append(element('h2', 'catalogue-works-title', '作品選集'));
+  const gallery = element('div', 'catalogue-sheet-works');
   const mediaPlayer = player('catalogue-work-player-title');
   const found = new Map();
   for (const work of designer.works) {
     const { article, heading } = workArticle(work, designer.id, mediaPlayer);
-    found.set(work.id, heading);
-    rack.append(article);
+    found.set(work.id, { article, heading });
+    gallery.append(article);
   }
-  if (designer.works.length) works.append(rack);
-  else works.append(element('p', 'catalogue-status', '這個攤位目前沒有公開作品。'));
+  if (designer.works.length) works.append(gallery);
+  else works.append(element('p', 'catalogue-status', '這攤還沒擺上作品。'));
 
   const target = found.get(workId);
   const missingWork = workId && !target ? element('p', 'catalogue-status', '這件作品已下架或找不到。') : null;
   if (missingWork) {
     missingWork.setAttribute('role', 'status');
-    wall.append(missingWork);
+    body.append(missingWork);
   }
-  wall.append(works);
-  booth.append(sign, element('div', 'catalogue-booth-awning'), wall, element('div', 'catalogue-booth-counter'));
-  root.replaceChildren(backLink(backHash), booth, mediaPlayer.dialog);
+  body.append(works);
+
+  const footer = element('footer', 'catalogue-sheet-foot');
+  const socials = designer.socials.map(link => socialLink(link, '官方連結')).filter(Boolean);
+  for (const social of socials) social.className = 'catalogue-sheet-button';
+  footer.append(...socials, shareControls(designer.name, designer.href, '分享設計師'));
+  placeSheet(root, header, body, options, footer, mediaPlayer.dialog);
+
   if (target) {
     requestAnimationFrame(() => {
-      if (detailRequests.get(root) !== request || !target.isConnected) return;
-      target.focus({ preventScroll: true });
-      target.scrollIntoView({ block: 'start' });
+      if (detailRequests.get(root) !== request || !target.article.isConnected) return;
+      target.heading.focus({ preventScroll: true });
+      target.article.scrollIntoView({ block: 'start' });
     });
   }
   return { workFound: Boolean(target) };
 }
 
-export async function showDesigner(root, id, workId, { backHash = '#designers/list' } = {}) {
+export async function showDesigner(root, id, workId, { backHash = '#designers/list', boothNumber, onClose } = {}) {
+  const options = { backHash, boothNumber, onClose };
   const request = {};
   detailRequests.set(root, request);
   const loading = element('p', 'catalogue-status', '正在載入設計師資料…');
   loading.setAttribute('role', 'status');
-  root.replaceChildren(backLink(backHash), loading);
+  const loadingBody = element('div', 'catalogue-sheet-body');
+  loadingBody.append(loading);
+  placeSheet(root, boothHeader('設計師攤位', options), loadingBody, options);
 
   try {
     const entries = await loadDesigners();
     if (detailRequests.get(root) !== request) return;
     const designer = entries.find(entry => entry.id === id);
-    if (designer) return renderDesigner(root, designer, workId, request, backHash);
-    root.replaceChildren(backLink(backHash), detailTitle('找不到這位設計師'));
+    if (designer) return renderDesigner(root, designer, workId, request, options);
+    const body = element('div', 'catalogue-sheet-body');
+    body.append(element('p', 'catalogue-status', '這個攤位目前無法開啟。'));
+    placeSheet(root, boothHeader('找不到這位設計師', options), body, options);
   } catch {
     if (detailRequests.get(root) !== request) return;
-    root.replaceChildren(backLink(backHash), detailTitle('暫時無法載入設計師資料'), retryButton(() => showDesigner(root, id, workId, { backHash })));
+    const body = element('div', 'catalogue-sheet-body');
+    body.append(retryButton(() => showDesigner(root, id, workId, options)));
+    placeSheet(root, boothHeader('暫時無法載入設計師資料', options), body, options);
   }
 }

@@ -110,6 +110,21 @@ h1[tabindex]:focus { outline: none; }
 .directory-views a { padding: .5rem .9rem; color: var(--ink); border: 1px solid var(--line); border-radius: .35rem; font-size: .9rem; font-weight: 600; text-decoration: none; }
 .directory-views a:hover { border-color: var(--accent); }
 .directory-views a[aria-current="page"] { color: #fff8ef; background: var(--accent); border-color: var(--accent); }
+.designer-booth-dialog {
+  width: min(35rem, 100% - 1.5rem);
+  max-width: none;
+  max-height: min(86dvh, 860px);
+  padding: 0;
+  overscroll-behavior: contain;
+  border: 2.5px solid #f1d5dd;
+  border-radius: 8px;
+  background: #fff;
+  color: #303b3b;
+  box-shadow: 6px 6px #f1d5dd;
+}
+.designer-booth-dialog::backdrop { background: rgb(48 59 59 / 38%); }
+.designer-booth-loading { display: flex; align-items: center; justify-content: space-between; gap: .75rem; padding: .8rem 1rem; }
+.designer-booth-loading button { border: 1px solid currentColor; border-radius: .3rem; background: #fbf7ef; color: inherit; cursor: pointer; }
 .site-footer { border-top: 1px solid var(--line); }
 .site-footer-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; padding-block: 1.65rem; }
 .site-footer .brand { font-size: .96rem; }
@@ -123,6 +138,7 @@ h1[tabindex]:focus { outline: none; }
   .entry-grid { grid-template-columns: minmax(0, 1fr); gap: 1.25rem; }
   .entry-info h3 { font-size: 1.35rem; }
   .directory { padding-block: 2rem 3.25rem; }
+  .designer-booth-dialog { inset-block: max(.75rem, env(safe-area-inset-top)) auto; margin-block: 0; max-height: calc(100dvh - max(.75rem, env(safe-area-inset-top)) - max(1.125rem, env(safe-area-inset-bottom))); }
 }
 
 @media (max-width: 375px) {
