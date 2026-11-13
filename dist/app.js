@@ -9,6 +9,12 @@ const mounted = new Set();
 const designerList = document.getElementById('designers-content');
 const designerDetail = document.getElementById('designers-detail');
 const designersHeader = document.getElementById('designers-header');
+const designerModes = document.getElementById('designers-views');
+const designerWalk = document.getElementById('designers-walk');
+const walkHash = 'designers';
+const listHash = 'designers/list';
+let walkSession;
+let designerBackHash = `#${walkHash}`;
 
 async function loadDirectory(route) {
   if (mounted.has(route)) return;
@@ -34,7 +40,7 @@ async function loadDesigner(hash, designerId, workId) {
   try {
     const { showDesigner } = await import('./catalogues.js');
     if (location.hash.slice(1) !== hash) return;
-    const result = await showDesigner(designerDetail, designerId, workId);
+    const result = await showDesigner(designerDetail, designerId, workId, { backHash: designerBackHash });
     if (location.hash.slice(1) !== hash) return;
     const title = designerDetail.querySelector('[data-designer-title]');
     if (title) {
@@ -47,16 +53,38 @@ async function loadDesigner(hash, designerId, workId) {
     message.setAttribute('role', 'status');
     message.textContent = '目前無法載入設計師作品。';
     const back = document.createElement('a');
-    back.href = '#designers';
-    back.textContent = '回設計師目錄';
+    back.href = designerBackHash;
+    back.textContent = '回設計師市集';
     designerDetail.replaceChildren(message, back);
+  }
+}
+
+async function openWalk() {
+  if (walkSession) return;
+  const session = {};
+  walkSession = session;
+  try {
+    const { mountMarketWalk } = await import('./market-walk.js');
+    if (walkSession === session) session.instance = mountMarketWalk(designerWalk);
+  } catch {
+    if (walkSession !== session) return;
+    const message = document.createElement('p');
+    message.setAttribute('role', 'status');
+    message.textContent = '目前無法開啟市集走道。';
+    const back = document.createElement('a');
+    back.href = `#${listHash}`;
+    back.textContent = '回攤位列表';
+    designerWalk.replaceChildren(message, back);
   }
 }
 
 function showRoute({ moveFocus = false } = {}) {
   const hash = location.hash.slice(1);
-  const match = hash.match(/^designers\/([a-z0-9-]+)(?:\/([a-z0-9-]+))?$/);
-  const route = match ? 'designers' : Object.hasOwn(routes, hash) ? hash : 'home';
+  const walking = hash === walkHash || hash === 'designers/walk';
+  const listing = hash === listHash;
+  const match = walking || listing ? null : hash.match(/^designers\/([a-z0-9-]+)(?:\/([a-z0-9-]+))?$/);
+  const route = match || walking || listing ? 'designers' : Object.hasOwn(routes, hash) ? hash : 'home';
+  if (walking || listing) designerBackHash = `#${walking ? walkHash : listHash}`;
   const view = document.getElementById(route);
   for (const item of views) {
     if (item !== view) {
@@ -72,9 +100,19 @@ function showRoute({ moveFocus = false } = {}) {
   if (!match) {
     for (const dialog of designerDetail.querySelectorAll('dialog[open]')) dialog.close();
   }
-  designerList.hidden = Boolean(match);
+  designerList.hidden = walking || Boolean(match);
   designerDetail.hidden = !match;
   designersHeader.hidden = Boolean(match);
+  designerModes.hidden = Boolean(match);
+  designerWalk.hidden = !walking;
+  for (const link of designerModes.querySelectorAll('a')) {
+    if (link.hash === `#${walking ? walkHash : listHash}`) link.setAttribute('aria-current', 'page');
+    else link.removeAttribute('aria-current');
+  }
+  if (!walking && walkSession) {
+    walkSession.instance?.destroy();
+    walkSession = undefined;
+  }
   view.setAttribute('aria-labelledby', match ? 'designers-detail-title' : `${route}-title`);
 
   const heading = document.getElementById(`${route}-title`);
@@ -89,7 +127,8 @@ function showRoute({ moveFocus = false } = {}) {
     window.scrollTo(0, 0);
   }
 
-  if (match) loadDesigner(hash, match[1], match[2]);
+  if (walking) openWalk();
+  else if (match) loadDesigner(hash, match[1], match[2]);
   else if (route !== 'home') loadDirectory(route);
 }
 

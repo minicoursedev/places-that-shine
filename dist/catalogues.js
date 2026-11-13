@@ -46,7 +46,7 @@ function imageEntries(images) {
 }
 
 function designerEntries(data) {
-  return enabledEntries(data?.designers).map(designer => {
+  return enabledEntries(data?.designers).map((designer, index) => {
     const works = (Array.isArray(designer.works) ? enabledEntries(designer.works) : []).map(work => ({
       id: work.id,
       name: textValue(work.title),
@@ -55,15 +55,13 @@ function designerEntries(data) {
       link: work.link,
       ...stageMedia(work.videoUrl),
     })).filter(work => work.name);
-    const cover = works.find(work => work.images.length)?.images[0];
     const avatar = safeUrl(typeof designer.logo === 'string' ? designer.logo : designer.logo?.url)?.href;
     return {
       id: designer.id,
+      boothColor: ['terracotta', 'sage', 'ochre'][index % 3],
       name: textValue(designer.name),
       category: textValue(designer.category) || '設計師',
       description: textValue(designer.description || designer.bio),
-      image: cover?.url || avatar,
-      imageAlt: cover?.alt,
       avatar,
       avatarFit: designer.logo?.fit === 'contain' ? 'contain' : 'cover',
       socials: Array.isArray(designer.socials) ? designer.socials : [],
@@ -180,27 +178,22 @@ function player(id) {
   return { dialog, open };
 }
 
-function card(entry, videoPlayer) {
+function stageCard(entry, videoPlayer) {
   const item = element('li', 'catalogue-card');
-  const isVideo = Boolean(videoPlayer);
-  const link = isVideo ? externalLink(entry.url, 'catalogue-card-link') : element('a', 'catalogue-card-link');
-  if (!isVideo) link.href = entry.href;
-  const cover = element('div', `catalogue-cover${isVideo ? ' catalogue-cover-video' : ''}`);
+  const link = externalLink(entry.url, 'catalogue-card-link');
+  const cover = element('div', 'catalogue-cover catalogue-cover-video');
   if (entry.image) cover.append(imageElement(entry.image, entry.imageAlt));
-  if (isVideo) {
-    const play = element('span', 'catalogue-play');
-    play.setAttribute('aria-hidden', 'true');
-    cover.append(play);
-    link.addEventListener('click', event => videoPlayer.open(entry, event));
-  }
+  const play = element('span', 'catalogue-play');
+  play.setAttribute('aria-hidden', 'true');
+  cover.append(play);
+  link.addEventListener('click', event => videoPlayer.open(entry, event));
   const content = element('div', 'catalogue-card-content');
   const title = element('h3', 'catalogue-card-title', entry.name);
   content.append(element('p', 'catalogue-card-category', entry.category), title);
-  const detail = isVideo ? entry.creator : entry.description;
-  if (detail && (!isVideo || detail !== entry.category)) {
-    content.append(element('p', 'catalogue-card-detail', detail));
+  if (entry.creator && entry.creator !== entry.category) {
+    content.append(element('p', 'catalogue-card-detail', entry.creator));
   }
-  const action = element('span', 'catalogue-card-action', isVideo ? '觀看影片' : '瀏覽作品');
+  const action = element('span', 'catalogue-card-action', '觀看影片');
   const arrow = element('span', '', '→');
   arrow.setAttribute('aria-hidden', 'true');
   action.append(arrow);
@@ -210,13 +203,79 @@ function card(entry, videoPlayer) {
   return item;
 }
 
+function boothLogo(designer) {
+  const logo = element('div', `catalogue-designer-avatar catalogue-avatar-${designer.avatarFit}`);
+  if (designer.avatar) logo.append(imageElement(designer.avatar, ''));
+  return logo;
+}
+
+function boothCard(designer, representativeOnly) {
+  const item = element('li', 'catalogue-booth');
+  item.setAttribute('data-booth-color', designer.boothColor);
+  const sign = element('div', 'catalogue-booth-sign');
+  if (designer.avatar) sign.append(boothLogo(designer));
+  const identity = element('div', 'catalogue-booth-identity');
+  identity.append(
+    element('p', 'catalogue-booth-category', designer.category),
+    element('h3', 'catalogue-booth-name', designer.name),
+  );
+  sign.append(identity);
+
+  const wall = element('div', 'catalogue-booth-wall');
+  const shelf = element('div', 'catalogue-booth-shelf');
+  shelf.id = `booth-shelf-${designer.id}`;
+  const representative = designer.works.find(work => (work.images[0]?.url || work.image) && work.images[0]?.url !== designer.avatar);
+  const displayedWorks = representativeOnly ? [representative || designer.works[0]].filter(Boolean) : designer.works;
+  if (representativeOnly) shelf.classList.add('catalogue-booth-shelf-compact');
+  for (const work of displayedWorks) {
+    const frame = element('a', 'catalogue-booth-frame');
+    frame.href = designerHash(designer.id, work.id);
+    frame.setAttribute('aria-label', `查看作品 ${work.name}`);
+    const cover = work.images[0]?.url || work.image;
+    if (cover) frame.append(imageElement(cover, ''));
+    else frame.append(element('span', 'catalogue-booth-frame-label', work.name));
+    shelf.append(frame);
+  }
+  if (displayedWorks.length) wall.append(shelf);
+  else wall.append(element('p', 'catalogue-booth-empty', '目前沒有公開作品'));
+
+  const counter = element('div', 'catalogue-booth-counter');
+  const visit = element('a', 'catalogue-booth-visit', '逛攤位 →');
+  visit.href = designer.href;
+  visit.setAttribute('aria-label', `逛攤位 ${designer.name}`);
+  const count = element('span', 'catalogue-booth-count', `${designer.works.length} 件作品`);
+  counter.append(visit, count);
+
+  if (displayedWorks.length > 3) {
+    const controls = element('div', 'catalogue-shelf-controls');
+    const previous = element('button', '', '←');
+    const next = element('button', '', '→');
+    for (const [button, label, direction] of [[previous, '上一組作品', -1], [next, '下一組作品', 1]]) {
+      button.type = 'button';
+      button.setAttribute('aria-label', `${designer.name}：${label}`);
+      button.setAttribute('aria-controls', shelf.id);
+      button.addEventListener('click', () => shelf.scrollBy({ left: shelf.clientWidth * direction }));
+    }
+    previous.disabled = true;
+    shelf.addEventListener('scroll', () => {
+      previous.disabled = shelf.scrollLeft <= 1;
+      next.disabled = shelf.scrollLeft + shelf.clientWidth >= shelf.scrollWidth - 1;
+    }, { passive: true });
+    controls.append(previous, next);
+    counter.append(controls);
+  }
+
+  item.append(sign, element('div', 'catalogue-booth-awning'), wall, counter);
+  return item;
+}
+
 function normalize(value) {
   return value.normalize('NFKC').toLocaleLowerCase('zh-TW');
 }
 
 function setupCatalogue(root, entries, config) {
   const videoPlayer = config.isVideo ? player('catalogue-stage-player-title') : null;
-  const list = element('ul', 'catalogue-grid');
+  const list = element('ul', config.isVideo ? 'catalogue-grid' : 'catalogue-market');
   const status = element('p', 'catalogue-status');
   status.setAttribute('role', 'status');
   const searchLabel = element('label', 'catalogue-field');
@@ -237,6 +296,23 @@ function setupCatalogue(root, entries, config) {
   const more = element('button', 'catalogue-button catalogue-more', '載入更多');
   more.type = 'button';
 
+  let representativeOnly = false;
+  if (!config.isVideo) {
+    list.id = 'designer-booths';
+    const toggle = element('button', 'catalogue-button catalogue-market-toggle', '只看代表作');
+    toggle.type = 'button';
+    toggle.setAttribute('aria-controls', list.id);
+    toggle.addEventListener('click', () => {
+      representativeOnly = !representativeOnly;
+      toggle.textContent = representativeOnly ? '顯示全部作品' : '只看代表作';
+      const visible = shown;
+      shown = 0;
+      list.replaceChildren();
+      appendPage(visible);
+    });
+    controls.append(toggle);
+  }
+
   const searchable = entries.map(entry => ({
     entry,
     text: normalize([entry.name, entry.category, entry.description, entry.creator].filter(Boolean).join(' ')),
@@ -244,15 +320,16 @@ function setupCatalogue(root, entries, config) {
   let matching = [];
   let shown = 0;
 
-  function appendPage(focusNewCards = false) {
-    const cards = matching.slice(shown, shown + pageSize).map(({ entry }) => card(entry, videoPlayer));
+  function appendPage(limit = pageSize, focusNewCards = false) {
+    const cards = matching.slice(shown, shown + limit).map(({ entry }) =>
+      videoPlayer ? stageCard(entry, videoPlayer) : boothCard(entry, representativeOnly));
     list.append(...cards);
     shown += cards.length;
     more.hidden = shown >= matching.length;
     status.textContent = matching.length
-      ? `顯示 ${shown}／${matching.length} 筆${config.unit}`
+      ? `顯示 ${shown}／${matching.length} ${config.countUnit}`
       : config.empty;
-    if (focusNewCards) cards[0]?.querySelector('a')?.focus();
+    if (focusNewCards) cards[0]?.querySelector(videoPlayer ? 'a' : '.catalogue-booth-visit')?.focus();
   }
 
   function applyFilters() {
@@ -266,7 +343,7 @@ function setupCatalogue(root, entries, config) {
 
   search.addEventListener('input', applyFilters);
   filter.addEventListener('change', applyFilters);
-  more.addEventListener('click', () => appendPage(true));
+  more.addEventListener('click', () => appendPage(pageSize, true));
   root.replaceChildren(controls, status, list, more);
   if (videoPlayer) root.append(videoPlayer.dialog);
   applyFilters();
@@ -311,7 +388,7 @@ async function mountCatalogue(root, config) {
 export function mountDesigners(root) {
   return mountCatalogue(root, {
     load: loadDesigners,
-    unit: '設計師資料', placeholder: '輸入設計師或品牌名稱', searchLabel: '搜尋設計師',
+    unit: '設計師資料', countUnit: '攤', placeholder: '輸入設計師或品牌名稱', searchLabel: '搜尋設計師',
     filterLabel: '創作類別', all: '所有類別', empty: '找不到符合條件的設計師。',
   });
 }
@@ -319,7 +396,7 @@ export function mountDesigners(root) {
 export function mountStage(root) {
   return mountCatalogue(root, {
     load: async () => stageEntries(await readData('/data/stage.json')), isVideo: true,
-    unit: '舞台影片', placeholder: '輸入影片名稱或創作者', searchLabel: '搜尋影片',
+    unit: '舞台影片', countUnit: '支影片', placeholder: '輸入影片名稱或創作者', searchLabel: '搜尋影片',
     filterLabel: '舞台', all: '所有舞台', empty: '找不到符合條件的影片。',
   });
 }
@@ -332,9 +409,9 @@ function detailTitle(name) {
   return title;
 }
 
-function backLink() {
-  const back = element('a', 'catalogue-back', '← 返回設計師名錄');
-  back.href = '#designers';
+function backLink(backHash) {
+  const back = element('a', 'catalogue-back', '← 返回設計師市集');
+  back.href = backHash;
   return back;
 }
 
@@ -381,38 +458,45 @@ function workArticle(work, designerId, mediaPlayer) {
   return { article, heading };
 }
 
-function renderDesigner(root, designer, workId, request) {
-  const intro = element('div', 'catalogue-designer-intro');
-  if (designer.avatar) {
-    const avatar = element('div', `catalogue-designer-avatar catalogue-avatar-${designer.avatarFit}`);
-    avatar.append(imageElement(designer.avatar, ''));
-    intro.append(avatar);
-  }
-  const introText = element('div', 'catalogue-intro-text');
-  introText.append(element('p', 'catalogue-card-category', designer.category), detailTitle(designer.name));
-  if (designer.description) introText.append(element('p', 'catalogue-designer-bio', designer.description));
+function renderDesigner(root, designer, workId, request, backHash) {
+  const booth = element('div', 'catalogue-booth catalogue-booth-open');
+  booth.setAttribute('data-booth-color', designer.boothColor);
+  const sign = element('div', 'catalogue-booth-sign');
+  if (designer.avatar) sign.append(boothLogo(designer));
+  const identity = element('div', 'catalogue-booth-identity');
+  identity.append(element('p', 'catalogue-booth-category', designer.category), detailTitle(designer.name));
+  sign.append(identity);
+
+  const wall = element('div', 'catalogue-booth-wall');
+  if (designer.description) wall.append(element('p', 'catalogue-designer-bio', designer.description));
   const socials = designer.socials.map(link => socialLink(link, '官方連結')).filter(Boolean);
   if (socials.length) {
     const links = element('div', 'catalogue-designer-socials');
     links.append(...socials);
-    introText.append(links);
+    wall.append(links);
   }
-  intro.append(introText);
   const works = element('section', 'catalogue-works');
-  works.append(element('h2', 'catalogue-works-title', '作品'));
+  works.append(element('h2', 'catalogue-works-title', '攤位作品'));
+  const rack = element('div', 'catalogue-booth-rack');
   const mediaPlayer = player('catalogue-work-player-title');
   const found = new Map();
   for (const work of designer.works) {
     const { article, heading } = workArticle(work, designer.id, mediaPlayer);
     found.set(work.id, heading);
-    works.append(article);
+    rack.append(article);
   }
-  if (!designer.works.length) works.append(element('p', 'catalogue-status', '目前沒有公開作品。'));
+  if (designer.works.length) works.append(rack);
+  else works.append(element('p', 'catalogue-status', '這個攤位目前沒有公開作品。'));
 
   const target = found.get(workId);
   const missingWork = workId && !target ? element('p', 'catalogue-status', '這件作品已下架或找不到。') : null;
-  if (missingWork) missingWork.setAttribute('role', 'status');
-  root.replaceChildren(backLink(), intro, ...(missingWork ? [missingWork] : []), works, mediaPlayer.dialog);
+  if (missingWork) {
+    missingWork.setAttribute('role', 'status');
+    wall.append(missingWork);
+  }
+  wall.append(works);
+  booth.append(sign, element('div', 'catalogue-booth-awning'), wall, element('div', 'catalogue-booth-counter'));
+  root.replaceChildren(backLink(backHash), booth, mediaPlayer.dialog);
   if (target) {
     requestAnimationFrame(() => {
       if (detailRequests.get(root) !== request || !target.isConnected) return;
@@ -423,21 +507,21 @@ function renderDesigner(root, designer, workId, request) {
   return { workFound: Boolean(target) };
 }
 
-export async function showDesigner(root, id, workId) {
+export async function showDesigner(root, id, workId, { backHash = '#designers/list' } = {}) {
   const request = {};
   detailRequests.set(root, request);
   const loading = element('p', 'catalogue-status', '正在載入設計師資料…');
   loading.setAttribute('role', 'status');
-  root.replaceChildren(backLink(), loading);
+  root.replaceChildren(backLink(backHash), loading);
 
   try {
     const entries = await loadDesigners();
     if (detailRequests.get(root) !== request) return;
     const designer = entries.find(entry => entry.id === id);
-    if (designer) return renderDesigner(root, designer, workId, request);
-    root.replaceChildren(backLink(), detailTitle('找不到這位設計師'));
+    if (designer) return renderDesigner(root, designer, workId, request, backHash);
+    root.replaceChildren(backLink(backHash), detailTitle('找不到這位設計師'));
   } catch {
     if (detailRequests.get(root) !== request) return;
-    root.replaceChildren(backLink(), detailTitle('暫時無法載入設計師資料'), retryButton(() => showDesigner(root, id, workId)));
+    root.replaceChildren(backLink(backHash), detailTitle('暫時無法載入設計師資料'), retryButton(() => showDesigner(root, id, workId, { backHash })));
   }
 }

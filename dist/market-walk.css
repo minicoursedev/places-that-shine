@@ -1,0 +1,95 @@
+.market-walk {
+  --walk-ink: #303b3b;
+  --walk-paper: #fff;
+  --walk-paper-2: #fffaf1;
+  --walk-pink: #f82970;
+  --walk-pink-soft: #fff0f4;
+  --walk-green: #009a50;
+  --walk-green-deep: #007b3f;
+  --walk-green-soft: #e6f5ec;
+  margin-block: 1.5rem;
+}
+.market-walk-header, .market-walk-footer, .market-walk-actions, .market-walk-choose {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .65rem;
+}
+.market-walk-header {
+  justify-content: space-between;
+}
+.market-walk-footer {
+  margin-top: .8rem;
+}
+.market-walk-choose {
+  margin-inline-start: auto;
+  min-width: 0;
+  color: var(--muted);
+  font-size: .9rem;
+}
+.market-walk-choose select {
+  max-width: min(20rem, 100%);
+}
+.market-walk [data-walk-aisle] {
+  margin: 0;
+  font-weight: 700;
+}
+.market-walk-hint {
+  margin: .6rem 0 .8rem;
+  color: var(--muted);
+  font-size: .875rem;
+}
+.market-walk button, .market-walk select, .market-walk [data-walk-selected] {
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: .48rem .75rem;
+  min-height: 2.75rem;
+  background: #fdf8ef;
+  color: var(--ink);
+}
+.market-walk button:not(:disabled), .market-walk [data-walk-selected] {
+  cursor: pointer;
+}
+.market-walk button:disabled {
+  opacity: .5;
+}
+.market-walk [data-walk-selected] {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+  white-space: nowrap;
+}
+.market-walk button:not(:disabled):hover, .market-walk [data-walk-selected]:hover {
+  border-color: var(--accent);
+}
+.market-walk [data-walk-message]:empty {
+  display: none;
+}
+.market-walk [data-walk-message] {
+  margin: .65rem 0 0;
+  color: var(--muted);
+  font-size: .9rem;
+}
+.market-walk canvas {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: clamp(23rem, 36vw, 31rem);
+  touch-action: none;
+  cursor: pointer;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--walk-paper-2);
+}
+.market-walk canvas:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+@media (max-width: 640px) {
+  .market-walk canvas { height: clamp(24rem, 62vh, 32rem); }
+  .market-walk-choose { margin-inline-start: 0; }
+  .market-walk-choose select { max-width: min(16rem, 57vw); }
+}

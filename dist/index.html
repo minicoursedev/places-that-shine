@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href="./stores.css">
   <link rel="stylesheet" href="./catalogues.css">
+  <link rel="stylesheet" href="./market-walk.css">
   <script type="module" src="./app.js"></script>
 </head>
 <body>
@@ -81,7 +82,12 @@
         <a class="back-link" href="#explore"><span aria-hidden="true">←</span> 回探索首頁</a>
         <h1 id="designers-title" tabindex="-1">發光的設計師</h1>
       </div>
-      <div id="designers-content" aria-label="設計師目錄"><p role="status">正在載入設計師資料…</p></div>
+      <nav id="designers-views" class="directory-views" aria-label="設計師瀏覽方式">
+        <a href="#designers">逛市集</a>
+        <a href="#designers/list">攤位列表</a>
+      </nav>
+      <div id="designers-content" aria-label="設計師攤位"><p role="status">正在載入設計師攤位…</p></div>
+      <div id="designers-walk" hidden></div>
       <div id="designers-detail" hidden></div>
     </section>
 

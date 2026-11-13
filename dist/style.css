@@ -106,6 +106,10 @@ h1[tabindex]:focus { outline: none; }
 .back-link { flex-basis: 100%; color: var(--accent); font-size: .875rem; font-weight: 600; text-decoration: none; }
 .back-link:hover { text-decoration: underline; text-underline-offset: 4px; }
 .back-link span { margin-right: .25rem; }
+.directory-views { display: flex; flex-wrap: wrap; gap: .6rem; margin-bottom: 1.25rem; }
+.directory-views a { padding: .5rem .9rem; color: var(--ink); border: 1px solid var(--line); border-radius: .35rem; font-size: .9rem; font-weight: 600; text-decoration: none; }
+.directory-views a:hover { border-color: var(--accent); }
+.directory-views a[aria-current="page"] { color: #fff8ef; background: var(--accent); border-color: var(--accent); }
 .site-footer { border-top: 1px solid var(--line); }
 .site-footer-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; padding-block: 1.65rem; }
 .site-footer .brand { font-size: .96rem; }
