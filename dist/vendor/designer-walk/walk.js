@@ -783,7 +783,13 @@ export function createWalkView(canvas, { onNear = () => {}, onOpen = () => {}, o
     let near = null;
     for (const n of npcs) if (!near || dist(n) < dist(near)) near = n;
     for (const n of npcs) {
-      if (n === near && dist(n) < rn) { if (!n.line) praise(n); } else if (n.line && dist(n) > rn * 1.35) n.line = null;
+      const distance = dist(n);
+      if (distance > rn * 1.35) {
+        n.line = null;
+        n.muted = false;
+      } else if (n === near && distance < rn && !n.line && !n.muted) {
+        praise(n);
+      }
     }
   }
   // A passer-by mentions a designer from the booths on screen.
@@ -793,7 +799,7 @@ export function createWalkView(canvas, { onNear = () => {}, onOpen = () => {}, o
     n.line = praiseLine(chatter, onScreen, data.stores, n.last) || n.line;
     n.last = n.line;
   }
-  const npcAt = (wx, wy) => npcs.find(n => Math.abs(wx - n.x) < 9 * n.s && wy > n.y - 36 * n.s && wy < n.y + 4) || null;
+  const npcAt = (wx, wy) => npcs.findLast(n => Math.abs(wx - n.x) < 9 * n.s && wy > n.y - 36 * n.s && wy < n.y + 4) || null;
   const catAt = (wx, wy) => cats.find(k => Math.abs(wx - k.x) < 22 && wy > k.y - CAT_H - 4 && wy < k.y + 8) || null;
 
   function marker() {
@@ -1004,7 +1010,12 @@ export function createWalkView(canvas, { onNear = () => {}, onOpen = () => {}, o
       const kitty = catAt(w.x, w.y);
       if (kitty) { say(kitty); kick(); return; }
       const passer = chatter ? npcAt(w.x, w.y) : null;
-      if (passer) { praise(passer); kick(); return; }
+      if (passer) {
+        passer.line = null;
+        passer.muted = true;
+        kick();
+        return;
+      }
       const ex = exitAt(w.x, w.y);
       if (ex) {
         stopAll();
