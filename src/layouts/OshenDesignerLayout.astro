@@ -77,7 +77,7 @@ const shareImageAlt = designer?.og?.alt || hall?.alt || '洋流設計師展逛�
 </head>
 <body>
 <div class="app designer-app">
-  <a class="btn designer-home" id="designer-back" href="/designers/periods/">上一頁</a>
+  <a class="btn designer-home" href="/designers/periods/">上一頁</a>
   <details class="floating-nav" id="floating-nav">
     <summary class="floating-nav-toggle" aria-label="導覽選單"><span aria-hidden="true">☰</span> 選單</summary>
     <nav class="bar" aria-label="導覽選單">
@@ -125,13 +125,6 @@ const shareImageAlt = designer?.og?.alt || hall?.alt || '洋流設計師展逛�
 <dialog id="dlg-booth" class="dlg" aria-labelledby="booth-title"></dialog>
 <WorkShareDialog kind="designer" />
 <WorkShareDialog />
-<script is:inline>
-  document.getElementById('designer-back').addEventListener('click', event => {
-    if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || history.length < 2) return;
-    event.preventDefault();
-    history.back();
-  });
-</script>
 <script is:inline type="module" src="/designers/js/app.js?v=20261114-share-channels"></script>
 </body>
 </html>
