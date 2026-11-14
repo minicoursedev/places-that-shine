@@ -1,4 +1,4 @@
-import { designerMetadata, designerStructuredData, serializeStructuredData, publicUrl } from './profile-seo.js?v=20261110-profile-share-title';
+import { designerMetadata, designerStructuredData, serializeStructuredData, publicUrl } from './profile-seo.js?v=20261114-designer-title';
 import { hallPageForCode, hallPageForPath } from './hall-pages.js?v=20261114-bluebird-hall';
 import { browserOrigin } from './config.js';
 
