@@ -21,7 +21,7 @@ import SiteLayout from '../../../layouts/SiteLayout.astro';
       <a class="entry" href="/designers/halls/shovel-heroes/">
         <span class="entry-info">
           <span class="period-label">
-            <img class="period-logo period-logo-portrait" src="/media/library/yuan-art-space/4.webp" width="637" height="800" alt="" />
+            <img class="period-logo period-logo-contained" src="/media/library/yuan-art-space/4.webp" width="637" height="800" alt="" />
             <span>2025 隡子超人</span>
           </span>
           <span class="entry-arrow" aria-hidden="true">→</span>
@@ -29,7 +29,10 @@ import SiteLayout from '../../../layouts/SiteLayout.astro';
       </a>
       <a class="entry" href="/designers/halls/bluebird-action/">
         <span class="entry-info">
-          <span>2024 青鳥行動館</span>
+          <span class="period-label">
+            <img class="period-logo period-logo-contained" src="/media/bluebird-action-2024-logo.webp" width="800" height="800" alt="" />
+            <span>2024 青鳥行動館</span>
+          </span>
           <span class="entry-arrow" aria-hidden="true">→</span>
         </span>
       </a>
@@ -42,5 +45,5 @@ import SiteLayout from '../../../layouts/SiteLayout.astro';
   .period-menu .entry-info { font: 800 1.3rem/1.35 var(--serif); }
   .period-label { display: flex; align-items: center; justify-content: flex-start; gap: .75rem; }
   .period-logo { display: block; flex: none; width: clamp(3.5rem, 17vw, 5.5rem); height: auto; border-radius: 3px; }
-  .period-logo-portrait { aspect-ratio: 256 / 181; object-fit: contain; }
+  .period-logo-contained { aspect-ratio: 256 / 181; object-fit: contain; }
 </style>
