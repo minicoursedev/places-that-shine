@@ -1,22 +1,13 @@
 ---
 import SiteLayout from '../../layouts/SiteLayout.astro';
-import '../../styles/stores.css';
 ---
 
-<SiteLayout title="發光的店家" description="搜尋店家，查看到訪資訊與地圖位置。" active="stores">
+<SiteLayout title="發光的店家" description="店家名錄暫停公開。">
   <section class="directory page-width" aria-labelledby="stores-title">
     <div class="directory-header">
       <a class="back-link" href="/#explore"><span aria-hidden="true">←</span> 回探索首頁</a>
       <h1 id="stores-title">發光的店家</h1>
     </div>
-    <div id="stores-content" aria-label="店家目錄"><p role="status">正在載入店家資料…</p></div>
-    <noscript><p>請開啟 JavaScript 以在本站瀏覽目錄。</p></noscript>
+    <p>店家名錄暫停公開。</p>
   </section>
 </SiteLayout>
-
-<script>
-  import { mountStores } from '../../features/stores.js';
-
-  const directory = document.querySelector<HTMLElement>('#stores-content');
-  if (directory) void mountStores(directory);
-</script>
