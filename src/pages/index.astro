@@ -1,13 +1,34 @@
 ---
 import SiteLayout from '../layouts/SiteLayout.astro';
 
+const title = '發光的地方';
+const description = '在發光的地方，逛設計師的作品、看舞台演出。';
+const quoteLead = '我相信光';
+const quoteLine = '是為了巷弄間的歡騰，不是為了墳前的孤寂';
+const shareImage = new URL('/media/places-that-shine-og.jpg', Astro.site);
+const shareImageAlt = `${title}。 ${quoteLead}，${quoteLine}`;
+
 const entries = [
   { href: '/stores/', title: '發光的店家', description: '找一間想走進去的店', cover: 'store.webp', width: 600, height: 400 },
   { href: '/designers/periods/', title: '發光的設計師', description: '逛逛設計師與他們的作品', cover: 'designer.webp', width: 600, height: 400 },
   { href: '/stage/', title: '發光的舞台', description: '聽一首歌，看一場演出', cover: 'stage.webp', width: 320, height: 180 },
 ];
 ---
-<SiteLayout title="發光的地方" description="在發光的地方，逛設計師的作品、看舞台演出。">
+<SiteLayout title={title} description={description}>
+  <Fragment slot="head">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.site} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={shareImage} />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={shareImageAlt} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content={shareImage} />
+    <meta name="twitter:image:alt" content={shareImageAlt} />
+  </Fragment>
   <script is:inline slot="head">
     const oldLocation = /^#(stores|designers|stage)(?:\/([a-z0-9-]+)(?:\/([a-z0-9-]+))?)?$/.exec(location.hash);
     if (oldLocation) {
@@ -28,8 +49,8 @@ const entries = [
     <img class="hero-image" src="/media/tainan-evening.webp" width="1774" height="887" alt="" fetchpriority="high" />
     <div class="hero-inner page-width">
       <span class="hero-mark" aria-hidden="true">✦</span>
-      <h1 id="home-title">發光的地方</h1>
-      <p class="hero-quote">我相信光<br />是為了巷弄間的歡騰，不是為了墳前的孤寂</p>
+      <h1 id="home-title">{title}</h1>
+      <p class="hero-quote">{quoteLead}<br />{quoteLine}</p>
       <a class="hero-action" href="#explore">開始探索 <span aria-hidden="true">↓</span></a>
     </div>
   </section>
