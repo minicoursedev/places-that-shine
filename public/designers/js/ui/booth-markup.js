@@ -1,7 +1,7 @@
 import { thumbnailUrl } from '../images.js';
-import { designerPath, designerWalkPath } from '../routes.js?v=20261114-bluebird-hall';
+import { designerPath, designerWalkPath } from '../routes.js?v=20261114-work-hall';
 import { designerMetadata } from '../profile-seo.js?v=20261110-profile-share-title';
-import { designerWorkPath } from '../work-links.js';
+import { designerWorkPath } from '../work-links.js?v=20261114-work-hall';
 import { browserOrigin } from '../config.js';
 
 const ESC = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' };
@@ -38,11 +38,11 @@ function coverHtml(src, label, width, height, eager = false) {
   return `<span class="bo-cover"><img src="${esc(thumbnailUrl(url))}" data-original="${esc(url)}" alt="${esc(label)}"${dimensions} loading="${eager ? 'eager' : 'lazy'}"${eager ? ' fetchpriority="high"' : ''} decoding="async" data-label="${esc(label)}"></span>`;
 }
 
-function workHtml(w, index, name, profile, designerId) {
+function workHtml(w, index, name, profile, booth) {
   const label = w.name?.trim() || w.caption?.trim() || `${name}作品圖片 ${index + 1}`;
   const video = safeUrl(w.video);
   const description = w.caption ? `<span class="bo-caption">${esc(w.caption)}</span>` : '';
-  const path = designerWorkPath(designerId, w.id);
+  const path = designerWorkPath(booth.store, w.id, booth.id[0]);
   const actions = `<div class="bo-work-actions"><a class="bo-work-detail" href="${esc(path)}">查看作品</a><button type="button" class="btn" data-share-work="${esc(path)}" data-work-designer="${esc(name)}" data-work-image="${esc(safeUrl(w.cover))}" data-work-label="${esc(label)}" aria-label="分享${esc(label)}" aria-haspopup="dialog" aria-controls="work-share-dialog">分享作品</button></div>`;
   if (video) return `<li><div class="bo-work"><video controls playsinline preload="metadata" poster="${esc(safeUrl(w.cover))}" aria-label="${esc(label)}" style="display:block;width:100%;max-height:400px" src="${esc(video)}"></video>${description}</div>${actions}</li>`;
   const url = safeUrl(w.url);
@@ -109,7 +109,7 @@ export function boothHtml(booth, store, { profile = false, staticProfile = false
       <${subheading} class="bo-section-title">作品選集</${subheading}>
       ${booth.productsError ? '<p class="bo-note" role="status">產品清單暫時無法載入，目前顯示預覽圖片，請稍後重新開啟。</p>' : ''}
       ${works.length ? `<ul class="bo-works">
-        ${works.map((work, index) => workHtml(work, index, name, profile, booth.store)).join('')}
+        ${works.map((work, index) => workHtml(work, index, name, profile, booth)).join('')}
         ${more > 0 ? `<li>${storeUrl
           ? `<a class="bo-work bo-more" href="${esc(storeUrl)}" target="_blank" rel="noopener"><span class="bo-more-n">還有 ${more} 部</span><span>看設計師</span></a>`
           : `<span class="bo-work bo-more"><span class="bo-more-n">還有 ${more} 部</span></span>`}</li>` : ''}

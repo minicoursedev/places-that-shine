@@ -19,6 +19,7 @@ export interface DesignerWork {
 
 interface Booth {
   store: string;
+  hallBooths: Array<{ aisle: string; hall: string }>;
   works: DesignerWork[];
   total: number;
   randomSelection?: boolean;

@@ -1,7 +1,8 @@
 // Work links use the stored work ID, independently of the image URL and booth order.
 import { browserOrigin, CONFIG } from './config.js';
 
-export const designerWorkPath = (designerId, workId) => `/designers/${encodeURIComponent(designerId)}/works/${encodeURIComponent(workId)}/`;
+export const designerWorkPath = (designerId, workId, hall) =>
+  `/designers/${encodeURIComponent(designerId)}/works/${encodeURIComponent(workId)}/${hall ? `?hall=${encodeURIComponent(hall)}` : ''}`;
 export const designerWorkUrl = (designerId, workId, base = browserOrigin()) => new URL(designerWorkPath(designerId, workId), base).href;
 
 export function inlineWorkId(designerId, product) {

@@ -1,9 +1,8 @@
 // Designer dialog: profile, catalogue images, social links and share link.
 import { state, markVisited, findBoothIn } from '../state.js';
-import { loadAisle, aisleOfBooth } from '../data.js?v=20261114-profile-halls';
-import { designerBoothUrl } from '../nav.js?v=20261114-profile-halls';
-import { boothHtml, loadingHtml, failHtml } from './booth-markup.js?v=20261114-profile-halls';
-import { designerHallRoot, designerWalkPath, resolveDesignerRoute, updateDesignerMetadata } from '../routes.js?v=20261114-bluebird-hall';
+import { loadAisle, aisleOfBooth } from '../data.js?v=20261114-work-hall';
+import { boothHtml, loadingHtml, failHtml } from './booth-markup.js?v=20261114-work-hall';
+import { designerHallRoot, designerPath, designerWalkPath, resolveDesignerRoute, updateDesignerMetadata } from '../routes.js?v=20261114-work-hall';
 import { retryOriginal } from '../images.js';
 import { loadProducts, sampleProducts } from '../products.js?v=20261030-pinned-work';
 
@@ -33,7 +32,7 @@ async function getAisleFor(boothId) {
   return loadAisle(code);
 }
 
-export async function openBooth(boothId) {
+export async function openBooth(boothId, { keepHall = false } = {}) {
   const d = dlg();
   if (!d || !boothId) return;
   const token = ++openToken;
@@ -67,7 +66,7 @@ export async function openBooth(boothId) {
     if (token !== openToken) return;
   }
   current = { boothId, booth, aisle };
-  history.replaceState(null, '', designerBoothUrl(booth.store));
+  history.replaceState(null, '', designerPath(booth.store, keepHall ? aisle.hall : undefined));
   updateDesignerMetadata(store, booth);
   paint();
   if (!d.open) d.showModal();

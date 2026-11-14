@@ -127,7 +127,7 @@ export function createCatalogue(data, { baseUrl = CONFIG.DESIGNERS_URL, ogImages
       halls,
       totals: { designers: designers.length, booths: search.length },
     },
-    aisles, search, designerBooths,
+    aisles, search, designerBooths, hallBoothsByDesigner,
   };
 }
 
@@ -151,7 +151,12 @@ function loadCatalogue() {
 export const aisleOfBooth = boothId => boothId.split('-')[0];
 export const hallOf = code => code[0];
 export const loadIndex = async () => (await loadCatalogue()).index;
-export const loadBoothForDesigner = async id => (await loadCatalogue()).designerBooths.get(id) || null;
+export async function loadBoothForDesigner(id, hall) {
+  const { designerBooths, hallBoothsByDesigner } = await loadCatalogue();
+  if (!hall) return designerBooths.get(id) || null;
+  const booths = hallBoothsByDesigner.get(id) || [];
+  return (booths.find(booth => hallOf(booth.aisle) === hall) || booths[0])?.id || null;
+}
 export async function loadAisle(code) {
   const aisle = (await loadCatalogue()).aisles.get(code);
   if (!aisle) throw Object.assign(new Error('Aisle not found'), { status: 404 });

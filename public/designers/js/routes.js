@@ -3,7 +3,8 @@ import { hallPageForCode, hallPageForPath } from './hall-pages.js?v=20261114-blu
 import { browserOrigin } from './config.js';
 
 export const designerRoot = '/designers/';
-export const designerPath = id => `${designerRoot}${encodeURIComponent(id)}/`;
+export const designerPath = (id, hall) =>
+  `${designerRoot}${encodeURIComponent(id)}/${hall ? `?hall=${encodeURIComponent(hall)}` : ''}`;
 export const designerHallRoot = code => hallPageForCode(code)?.path || designerRoot;
 export { hallPageForPath };
 export function designerWalkPath(code, boothId = null) {
@@ -19,7 +20,8 @@ export function resolveDesignerRoute(url, { boot = false } = {}) {
   const [mode, target, then] = url.hash.replace(/^#\/?/, '').split('/');
   const profile = url.pathname.match(/^\/designers\/([a-z0-9]+(?:-[a-z0-9]+)*)\/?$/);
   if (profile && (boot || !mode)) {
-    return { mode: 'designer', target: decodeURIComponent(profile[1]) };
+    const hall = url.searchParams.get('hall');
+    return { mode: 'designer', target: decodeURIComponent(profile[1]), ...(hall && { hall }) };
   }
   const hall = hallPageForPath(url.pathname);
   if (hall && !mode) return { mode: 'walk', target: `${hall.code}01`, then: undefined };
