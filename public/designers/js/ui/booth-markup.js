@@ -1,5 +1,5 @@
 import { thumbnailUrl } from '../images.js';
-import { designerPath } from '../routes.js?v=20261114-bluebird-hall';
+import { designerPath, designerWalkPath } from '../routes.js?v=20261114-bluebird-hall';
 import { designerMetadata } from '../profile-seo.js?v=20261110-profile-share-title';
 import { designerWorkPath } from '../work-links.js';
 import { browserOrigin } from '../config.js';
@@ -75,12 +75,12 @@ export function boothHtml(booth, store, { profile = false, staticProfile = false
   const works = booth.works || [];
   const more = booth.randomSelection ? 0 : Math.max(0, (booth.total || 0) - works.length);
 
-  const also = booth.also || [];
-  const alsoHtml = also.length ? `
-    <section class="bo-also" aria-label="這家也在">
-      <h3>這家也在</h3>
-      ${also.length ? `<div class="bo-also-list">${also.map(a => `<button type="button" class="bo-also-item" data-go="${esc(a.id)}">
-        <span class="bo-also-where">${esc(a.hall)}・${esc(a.zone)}</span><span class="mono">${esc(a.id)}</span></button>`).join('')}</div>` : ''}
+  const hallBooths = booth.hallBooths || [];
+  const hallsHtml = hallBooths.length > 1 ? `
+    <section class="bo-also" aria-label="參展館別">
+      <${subheading}>參展館別</${subheading}>
+      <div class="bo-also-list">${hallBooths.map(entry => `<a class="bo-also-item" href="${esc(designerWalkPath(entry.aisle, entry.id) + '/open')}">
+        <span class="bo-also-where">${esc(entry.hall)}</span><span class="mono">${esc(entry.id)}</span></a>`).join('')}</div>
     </section>` : '';
 
   return `
@@ -105,6 +105,7 @@ export function boothHtml(booth, store, { profile = false, staticProfile = false
         <${subheading}>簡介</${subheading}>
         <p>${esc(introduction)}</p>
       </section>` : ''}
+      ${hallsHtml}
       <${subheading} class="bo-section-title">作品選集</${subheading}>
       ${booth.productsError ? '<p class="bo-note" role="status">產品清單暫時無法載入，目前顯示預覽圖片，請稍後重新開啟。</p>' : ''}
       ${works.length ? `<ul class="bo-works">
@@ -113,7 +114,6 @@ export function boothHtml(booth, store, { profile = false, staticProfile = false
           ? `<a class="bo-work bo-more" href="${esc(storeUrl)}" target="_blank" rel="noopener"><span class="bo-more-n">還有 ${more} 部</span><span>看設計師</span></a>`
           : `<span class="bo-work bo-more"><span class="bo-more-n">還有 ${more} 部</span></span>`}</li>` : ''}
       </ul>` : '<p class="bo-note">這攤還沒擺上作品。</p>'}
-      ${alsoHtml}
     </div>
     <div class="bo-foot">
       ${socialLinks}

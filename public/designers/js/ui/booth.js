@@ -1,8 +1,8 @@
 // Designer dialog: profile, catalogue images, social links and share link.
-import { state, markVisited, findBoothIn, toast } from '../state.js';
-import { loadAisle, aisleOfBooth } from '../data.js?v=20261114-bluebird-hall';
-import { goToBooth, designerBoothUrl } from '../nav.js?v=20261114-bluebird-hall';
-import { boothHtml, loadingHtml, failHtml } from './booth-markup.js?v=20261114-bluebird-hall';
+import { state, markVisited, findBoothIn } from '../state.js';
+import { loadAisle, aisleOfBooth } from '../data.js?v=20261114-profile-halls';
+import { designerBoothUrl } from '../nav.js?v=20261114-profile-halls';
+import { boothHtml, loadingHtml, failHtml } from './booth-markup.js?v=20261114-profile-halls';
 import { designerHallRoot, designerWalkPath, resolveDesignerRoute, updateDesignerMetadata } from '../routes.js?v=20261114-bluebird-hall';
 import { retryOriginal } from '../images.js';
 import { loadProducts, sampleProducts } from '../products.js?v=20261030-pinned-work';
@@ -75,11 +75,6 @@ export async function openBooth(boothId) {
   markVisited(boothId);
 }
 
-function switchToWalk() {
-  const list = document.getElementById('stage-list');
-  if (list && !list.hidden) document.querySelector('.modes button[data-mode="walk"]')?.click();
-}
-
 async function shareDesigner(button) {
   const share = button.closest('.bo-share');
   const link = new URL(button.dataset.shareDesigner, location.href).href;
@@ -120,14 +115,7 @@ function wire() {
   });
   d.addEventListener('click', e => {
     const share = e.target.closest('[data-share-designer]');
-    if (share) { shareDesigner(share); return; }
-    const go = e.target.closest('[data-go]');
-    if (go) {
-      const id = go.dataset.go;
-      d.close();
-      switchToWalk();
-      goToBooth(id).catch(() => toast('換設計師失敗，請再試一次'));
-    }
+    if (share) shareDesigner(share);
   });
   // a cover that fails to load falls back to the halftone square
   d.addEventListener('error', e => {

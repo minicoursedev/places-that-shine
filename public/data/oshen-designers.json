@@ -3640,6 +3640,7 @@
     {
       "id": "kewpiewu",
       "name": "吳奕裴",
+      "additionalHalls": ["B"],
       "category": "設計師",
       "description": "",
       "entityType": "Person",

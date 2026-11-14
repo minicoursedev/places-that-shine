@@ -6,7 +6,7 @@ const HALLS = [
   { code: 'O', name: '洋流設計師館', category: '設計師', zone: { code: 'DESIGNERS', name: '設計師' } },
   { code: 'A', name: '洋流愛好者館', category: '愛好者', zone: { code: 'AMATEURS', name: '愛好者' } },
   { code: 'S', name: '鏟子超人館', category: '設計師', zone: { code: 'SHOVEL-HEROES', name: '鏟子超人' } },
-  { code: 'B', name: '青鳥行動館', category: '設計師', zone: { code: 'BLUEBIRD-ACTION', name: '青鳥行動' } },
+  { code: 'B', name: '青鳥行動館', year: 2024, category: '設計師', zone: { code: 'BLUEBIRD-ACTION', name: '青鳥行動' } },
 ];
 const PER_ISLAND = 8;
 const PER_AISLE = PER_ISLAND * 2;
@@ -51,6 +51,7 @@ export function createCatalogue(data, { baseUrl = CONFIG.DESIGNERS_URL, ogImages
   const designers = data.designers.filter(d => d.disabled !== true);
   const aisles = new Map();
   const designerBooths = new Map();
+  const hallBoothsByDesigner = new Map();
   const search = [];
   const halls = [];
 
@@ -67,6 +68,9 @@ export function createCatalogue(data, { baseUrl = CONFIG.DESIGNERS_URL, ogImages
         const id = `${code}-${pad2(pos + 1)}`;
         const category = ['設計師', '創作者', '愛好者'].includes(designer.category) ? designer.category : HALL.category;
         if (HALL.code === primaryHall(designer)) designerBooths.set(designer.id, id);
+        const hallBooths = hallBoothsByDesigner.get(designer.id) || [];
+        hallBooths.push({ id, aisle: code, hall: HALL.year ? `${HALL.year} ${HALL.name}` : HALL.name });
+        hallBoothsByDesigner.set(designer.id, hallBooths);
         const social = Object.fromEntries(Object.entries(designer.social || {})
           .map(([key, value]) => [key, externalUrl(value)]));
         const works = (Array.isArray(designer.productImages) ? designer.productImages : [])
@@ -97,7 +101,7 @@ export function createCatalogue(data, { baseUrl = CONFIG.DESIGNERS_URL, ogImages
           id, pos: pos % PER_ISLAND, store: designer.id,
           corner: pos % PER_ISLAND === 0 || pos % PER_ISLAND === PER_ISLAND - 1 || pos === members.length - 1,
           zone: ZONE.code, zoneName: category, type: '',
-          works, total: works.length, also: [],
+          works, total: works.length, hallBooths,
         };
       });
       const islands = ['N', 'S'].map((side, i) => ({

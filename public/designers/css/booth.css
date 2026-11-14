@@ -73,18 +73,18 @@ a.bo-work:active .bo-cover, button.bo-work:active .bo-cover { transform: transla
 a.bo-more:hover { background: var(--pink-soft); }
 a.bo-more:focus-visible { outline: 3px solid var(--pink); outline-offset: 2px; }
 
-/* Other booths for the same designer. */
-.bo-also { margin-top: 20px; padding-top: 12px; border-top: 2px dashed var(--line); }
-.bo-also h3 { margin: 0 0 8px; font-size: 14px; font-weight: 900; }
+/* Halls that show the same designer. */
+.bo-also { margin-bottom: 20px; }
+.bo-also h2, .bo-also h3 { margin: 0 0 8px; font-size: 16px; font-weight: 900; }
 .bo-also-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 200px), 1fr)); gap: 6px; }
 .bo-also-item {
   display: flex; align-items: center; justify-content: space-between; gap: 8px; min-width: 0;
   padding: 6px 10px; border: 2px solid var(--line); border-radius: 6px; background: var(--paper); box-shadow: 2px 2px 0 var(--line);
-  text-align: left; cursor: pointer;
+  text-align: left; text-decoration: none;
 }
 .bo-also-item:hover { background: var(--pink-soft); }
 .bo-also-item:focus-visible { outline: 3px solid var(--pink); outline-offset: 2px; }
-.bo-also-where { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 700; font-size: 13px; }
+.bo-also-where { min-width: 0; font-weight: 700; font-size: 13px; }
 .bo-also-item .mono { flex: none; font-size: 12px; }
 
 .bo-foot {
