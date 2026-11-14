@@ -2,11 +2,11 @@
 // Fill each card’s logo and works gallery as it scrolls into view.
 import { state, toast, findBoothIn } from '../state.js';
 import { loadSearch, loadAisle, aisleOfBooth } from '../data.js?v=20261114-share-channels';
-import { goToBooth } from '../nav.js?v=20261114-designer-title';
-import { openBooth } from './booth.js?v=20261114-designer-title';
+import { goToBooth } from '../nav.js?v=20261114-oshen-hall-preview';
+import { openBooth } from './booth.js?v=20261114-oshen-hall-preview';
 import { thumbnailUrl, retryOriginal } from '../images.js';
 import { loadProducts } from '../products.js?v=20261030-pinned-work';
-import { designerPath, designerWalkPath } from '../routes.js?v=20261114-designer-title';
+import { designerPath, designerWalkPath } from '../routes.js?v=20261114-oshen-hall-preview';
 
 const PAGE = 60;
 const TYPES = ['漫畫', '插圖', '小說', '攝影', '有聲'];

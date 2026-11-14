@@ -3,7 +3,7 @@ import { designers, designerRoot, designerPath } from '../lib/oshen-designers';
 import { boothHtml } from '../../public/designers/js/ui/booth-markup.js';
 import { designerMetadata, designerStructuredData, serializeStructuredData } from '../../public/designers/js/profile-seo.js';
 import { hallPageForCode } from '../../public/designers/js/hall-pages.js';
-import { designerSharePath } from '../../public/designers/js/routes.js';
+import { designerSharePath, designerMarketPreview } from '../../public/designers/js/routes.js';
 import WorkShareDialog from '../components/WorkShareDialog.astro';
 interface Props { designerId?: string; hallCode?: string; shareHall?: string }
 const designer = designers.find(profile => profile.id === Astro.props.designerId);
@@ -19,8 +19,9 @@ const canonical = new URL(designer ? designerPath(designer.id) : hall?.path || d
 const shareUrl = designer && shareHall ? new URL(designerSharePath(designer.id, shareHall), Astro.site).href : canonical;
 const structuredData = designer && designerStructuredData(designer.store, designer.booth, canonical, new URL(designerRoot, Astro.site).href);
 const exhibitionImage = new URL('/designers/assets/exhibition-og.png?v=19f09d0c7c56f7bd', Astro.site).href;
-const shareImage = new URL(designer?.og?.url || hall?.image || exhibitionImage, Astro.site).href;
-const shareImageAlt = designer?.og?.alt || hall?.alt || '洋流設計師展逛攤畫面';
+const preview = designer?.og || hall || (!designer ? designerMarketPreview : null);
+const shareImage = new URL(designer?.og?.url || preview?.image || exhibitionImage, Astro.site).href;
+const shareImageAlt = preview?.alt || '洋流設計師展逛攤畫面';
 ---
 <!doctype html>
 <html lang="zh-Hant-TW" data-designer-profile={designer?.id}>
@@ -55,10 +56,10 @@ const shareImageAlt = designer?.og?.alt || hall?.alt || '洋流設計師展逛�
 {description && <meta property="og:description" content={description}>}
 <meta property="og:image" content={shareImage}>
 <meta property="og:image:alt" content={shareImageAlt}>
-<meta property="og:image:type" content={designer?.og?.type || hall?.type || 'image/png'}>
-<meta property="og:image:width" content={designer?.og?.width || hall?.width || 2622}>
-<meta property="og:image:height" content={designer?.og?.height || hall?.height || 1206}>
-<meta name="twitter:card" content={hall ? 'summary_large_image' : 'summary'}>
+<meta property="og:image:type" content={preview?.type || 'image/png'}>
+<meta property="og:image:width" content={preview?.width || 2622}>
+<meta property="og:image:height" content={preview?.height || 1206}>
+<meta name="twitter:card" content={designer ? 'summary' : 'summary_large_image'}>
 <meta name="twitter:title" content={shareTitle}>
 {description && <meta name="twitter:description" content={description}>}
 <meta name="twitter:image" content={shareImage}>
@@ -125,6 +126,6 @@ const shareImageAlt = designer?.og?.alt || hall?.alt || '洋流設計師展逛�
 <dialog id="dlg-booth" class="dlg" aria-labelledby="booth-title"></dialog>
 <WorkShareDialog kind="designer" />
 <WorkShareDialog />
-<script is:inline type="module" src="/designers/js/app.js?v=20261114-designer-title"></script>
+<script is:inline type="module" src="/designers/js/app.js?v=20261114-oshen-hall-preview"></script>
 </body>
 </html>

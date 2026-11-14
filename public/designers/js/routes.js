@@ -28,6 +28,13 @@ export function resolveDesignerRoute(url, { boot = false } = {}) {
   if (hall && !mode) return { mode: 'walk', target: `${hall.code}01`, then: undefined };
   return { mode, target, then };
 }
+export const designerMarketPreview = {
+  image: '/designers/assets/oshen-hall-o01-og.jpg',
+  alt: '洋流設計師館 O01 的第 05 至 09 攤：Koi Design Studio 扣乙図設、駱 乃康 Lo NaiKang、GIKO 吉可小賣部、顧紫蝶與阿猛、皮皮手作',
+  width: 1200,
+  height: 630,
+  type: 'image/jpeg',
+};
 const exhibitionImage = '/designers/assets/exhibition-og.png';
 const initialPreview = typeof document === 'undefined' ? null : {
   id: document.documentElement.dataset.designerProfile,
@@ -57,11 +64,12 @@ export function updateDesignerMetadata(designer = null, booth = {}) {
     tag.content = value;
   }
   const avatar = publicUrl(designer?.avatar, canonical);
-  const preview = designer?.og ? { ...designer.og, image: designer.og.url } : designer && initialPreview?.id === designer.id ? initialPreview : avatar
+  const preview = !designer && !hall ? designerMarketPreview
+    : designer?.og ? { ...designer.og, image: designer.og.url } : designer && initialPreview?.id === designer.id ? initialPreview : avatar
     ? { image: avatar } : hall?.image ? hall : { image: exhibitionImage, width: '2622', height: '1206', type: 'image/png' };
   const image = publicUrl(preview.image, canonical) || new URL(exhibitionImage, canonical).href;
   const imageAlt = preview.alt || (designer && avatar ? `${designer.name}的頭像` : '發光的設計師市集逛攤畫面');
-  document.querySelector('meta[name="twitter:card"]').content = hall ? 'summary_large_image' : 'summary';
+  document.querySelector('meta[name="twitter:card"]').content = designer ? 'summary' : 'summary_large_image';
   for (const selector of ['meta[property="og:image"]', 'meta[name="twitter:image"]']) document.querySelector(selector).content = image;
   for (const selector of ['meta[property="og:image:alt"]', 'meta[name="twitter:image:alt"]']) document.querySelector(selector).content = imageAlt;
   for (const key of ['width', 'height', 'type']) {
