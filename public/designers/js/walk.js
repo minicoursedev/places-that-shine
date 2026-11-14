@@ -192,7 +192,7 @@ export function createWalkView(canvas, { onNear = () => {}, onOpen = () => {}, o
     const slot = I.isl.booths.length * BW / count;
     return Array.from({ length: count }, (_, i) => ({
       cx: I.x0 + slot * (i + 0.5), maxW: clamp(slot - 12, 148, 250),
-      label: hallName,
+      label: hallName.replace(/館$/, ''),
     }));
   }
   function build(d) {
