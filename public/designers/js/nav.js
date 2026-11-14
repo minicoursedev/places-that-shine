@@ -1,11 +1,11 @@
 // Move between designer aisles and resolve share links.
-import { designerWalkPath, updateDesignerMetadata } from './routes.js?v=20261114-work-hall';
+import { designerWalkPath, updateDesignerMetadata } from './routes.js?v=20261114-share-channels';
 import { state, emit, toast } from './state.js';
-import { loadAisle, aisleOfBooth, hallOf, isOshenHall } from './data.js?v=20261114-work-hall';
+import { loadAisle, aisleOfBooth, hallOf, isOshenHall } from './data.js?v=20261114-share-channels';
 
 const hallOfIndex = code => state.index.halls.find(h => h.code === hallOf(code));
 
-export { designerBoothUrl } from './routes.js?v=20261114-work-hall';
+export { designerBoothUrl } from './routes.js?v=20261114-share-channels';
 
 export function aisleNeighbors(code) {
   const currentHall = hallOf(code);

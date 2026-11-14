@@ -1,8 +1,8 @@
 // Designer dialog: profile, catalogue images, social links and share link.
 import { state, markVisited, findBoothIn } from '../state.js';
-import { loadAisle, aisleOfBooth } from '../data.js?v=20261114-work-hall';
-import { boothHtml, loadingHtml, failHtml } from './booth-markup.js?v=20261114-work-hall';
-import { designerHallRoot, designerPath, designerWalkPath, resolveDesignerRoute, updateDesignerMetadata } from '../routes.js?v=20261114-work-hall';
+import { loadAisle, aisleOfBooth } from '../data.js?v=20261114-share-channels';
+import { boothHtml, loadingHtml, failHtml } from './booth-markup.js?v=20261114-share-channels';
+import { designerHallRoot, designerPath, designerSharePath, designerWalkPath, resolveDesignerRoute, updateDesignerMetadata } from '../routes.js?v=20261114-share-channels';
 import { retryOriginal } from '../images.js';
 import { loadProducts, sampleProducts } from '../products.js?v=20261030-pinned-work';
 
@@ -66,7 +66,10 @@ export async function openBooth(boothId, { keepHall = false } = {}) {
     if (token !== openToken) return;
   }
   current = { boothId, booth, aisle };
-  history.replaceState(null, '', designerPath(booth.store, keepHall ? aisle.hall : undefined));
+  const path = keepHall || booth.id !== booth.hallBooths[0].id
+    ? designerSharePath(booth.store, aisle.hall)
+    : designerPath(booth.store);
+  history.replaceState(null, '', path);
   updateDesignerMetadata(store, booth);
   paint();
   if (!d.open) d.showModal();
@@ -74,48 +77,9 @@ export async function openBooth(boothId, { keepHall = false } = {}) {
   markVisited(boothId);
 }
 
-async function shareDesigner(button) {
-  const share = button.closest('.bo-share');
-  const link = new URL(button.dataset.shareDesigner, location.href).href;
-  const status = share.querySelector('[role="status"]');
-  button.disabled = true;
-  status.textContent = '';
-  try {
-    const { qrcode } = await import('../../../vendor/qrcode-generator/qrcode-2.0.4.mjs');
-    if (!button.isConnected || (!dlg().open && !button.closest('#static-designer-profile'))) return;
-    const qr = qrcode(0, 'M');
-    qr.addData(link);
-    qr.make();
-    const name = button.closest('dialog, article').querySelector('h1, h2').textContent;
-    const shareDialog = document.getElementById('designer-share-dialog');
-    document.getElementById('designer-share-title').textContent = name;
-    const image = document.getElementById('designer-share-qr');
-    image.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(qr.createSvgTag({ cellSize: 6, margin: 24, scalable: true }));
-    image.alt = `${name} QR Code，掃描開啟 ${link}`;
-    image.hidden = false;
-    const url = document.getElementById('designer-share-url');
-    url.href = link;
-    url.textContent = link;
-    document.getElementById('designer-share-status').textContent = '';
-    shareDialog.showModal();
-  } catch {
-    status.textContent = '暫時無法產生 QRCode，請稍後再試。';
-  } finally {
-    button.disabled = false;
-  }
-}
-
 function wire() {
   const d = dlg();
   if (!d) return;
-  document.getElementById('static-designer-profile')?.addEventListener('click', event => {
-    const button = event.target.closest('[data-share-designer]');
-    if (button) shareDesigner(button);
-  });
-  d.addEventListener('click', e => {
-    const share = e.target.closest('[data-share-designer]');
-    if (share) shareDesigner(share);
-  });
   // a cover that fails to load falls back to the halftone square
   d.addEventListener('error', e => {
     const img = e.target;
@@ -133,15 +97,6 @@ function wire() {
         : `${designerHallRoot(state.hallCode)}#/list`;
       history.replaceState(null, '', returnPath);
       updateDesignerMetadata();
-    }
-  });
-  document.getElementById('designer-share-copy').addEventListener('click', async () => {
-    const status = document.getElementById('designer-share-status');
-    try {
-      await navigator.clipboard.writeText(document.getElementById('designer-share-url').href);
-      status.textContent = '已複製連結';
-    } catch {
-      status.textContent = '無法自動複製，請長按或右鍵上方網址複製。';
     }
   });
 }

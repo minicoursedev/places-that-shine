@@ -4,6 +4,8 @@ import { browserOrigin, CONFIG } from './config.js';
 export const designerWorkPath = (designerId, workId, hall) =>
   `/designers/${encodeURIComponent(designerId)}/works/${encodeURIComponent(workId)}/${hall ? `?hall=${encodeURIComponent(hall)}` : ''}`;
 export const designerWorkUrl = (designerId, workId, base = browserOrigin()) => new URL(designerWorkPath(designerId, workId), base).href;
+export const designerWorkSharePath = (designerId, workId, hall) =>
+  `${designerWorkPath(designerId, workId)}at/${encodeURIComponent(hall)}/`;
 
 export function inlineWorkId(designerId, product) {
   if (typeof product?.id === 'string' && product.id.trim()) return product.id.trim();

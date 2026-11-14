@@ -1,7 +1,7 @@
 import { thumbnailUrl } from '../images.js';
-import { designerPath, designerWalkPath } from '../routes.js?v=20261114-work-hall';
+import { designerSharePath, designerWalkPath } from '../routes.js?v=20261114-share-channels';
 import { designerMetadata } from '../profile-seo.js?v=20261110-profile-share-title';
-import { designerWorkPath } from '../work-links.js?v=20261114-work-hall';
+import { designerWorkSharePath } from '../work-links.js?v=20261114-share-channels';
 import { browserOrigin } from '../config.js';
 
 const ESC = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' };
@@ -42,7 +42,7 @@ function workHtml(w, index, name, profile, booth) {
   const label = w.name?.trim() || w.caption?.trim() || `${name}作品圖片 ${index + 1}`;
   const video = safeUrl(w.video);
   const description = w.caption ? `<span class="bo-caption">${esc(w.caption)}</span>` : '';
-  const path = designerWorkPath(booth.store, w.id, booth.id[0]);
+  const path = designerWorkSharePath(booth.store, w.id, booth.id[0]);
   const actions = `<div class="bo-work-actions"><a class="bo-work-detail" href="${esc(path)}">查看作品</a><button type="button" class="btn" data-share-work="${esc(path)}" data-work-designer="${esc(name)}" data-work-image="${esc(safeUrl(w.cover))}" data-work-label="${esc(label)}" aria-label="分享${esc(label)}" aria-haspopup="dialog" aria-controls="work-share-dialog">分享作品</button></div>`;
   if (video) return `<li><div class="bo-work"><video controls playsinline preload="metadata" poster="${esc(safeUrl(w.cover))}" aria-label="${esc(label)}" style="display:block;width:100%;max-height:400px" src="${esc(video)}"></video>${description}</div>${actions}</li>`;
   const url = safeUrl(w.url);
@@ -120,8 +120,7 @@ export function boothHtml(booth, store, { profile = false, staticProfile = false
       ${genericLinks ? `<div class="bo-share bo-links" aria-label="通用連結">${genericLinks}</div>` : ''}
       <div class="bo-share">
         ${storeUrl ? `<a class="btn btn-primary" href="${esc(storeUrl)}" target="_blank" rel="noopener">看設計師</a>` : ''}
-        <button type="button" class="btn" data-share-designer="${esc(designerPath(booth.store))}" aria-haspopup="dialog" aria-controls="designer-share-dialog">分享設計師</button>
-        <span class="bo-share-status muted" role="status"></span>
+        <button type="button" class="btn" data-share-designer="${esc(designerSharePath(booth.store, booth.id[0]))}" aria-haspopup="dialog" aria-controls="designer-share-dialog">分享設計師</button>
       </div>
     </div>`;
 }

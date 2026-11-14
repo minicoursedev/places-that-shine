@@ -1,10 +1,10 @@
 ---
 import WorkShareDialog from '../components/WorkShareDialog.astro';
 import { designerWorks, designerPath } from '../lib/oshen-designers';
-import { designerWorkPath } from '../../public/designers/js/work-links.js';
-import { designerHallRoot } from '../../public/designers/js/routes.js';
+import { designerWorkPath, designerWorkSharePath } from '../../public/designers/js/work-links.js';
+import { designerHallRoot, designerSharePath } from '../../public/designers/js/routes.js';
 import { serializeStructuredData } from '../../public/designers/js/profile-seo.js';
-interface Props { designerId: string; workId: string }
+interface Props { designerId: string; workId: string; shareHall?: string }
 const entry = designerWorks.find(({ designer, work }) => designer.id === Astro.props.designerId && work.id === Astro.props.workId)!;
 const { designer, work } = entry;
 const shareTitle = `${designer.name} 設計師`;
@@ -12,15 +12,18 @@ const title = `${designer.name}的作品｜發光的地方`;
 const description = work.caption?.trim() || designer.store.description;
 const label = work.name || `${designer.name}的作品`;
 const canonical = new URL(designerWorkPath(designer.id, work.id), Astro.site).href;
+const shareUrl = Astro.props.shareHall
+  ? new URL(designerWorkSharePath(designer.id, work.id, Astro.props.shareHall), Astro.site).href
+  : canonical;
 const workImage = new URL(work.cover, Astro.site).href;
 const halls = designer.booth.hallBooths.map(({ aisle, hall }) => ({
   code: aisle[0],
   name: hall,
   marketPath: designerHallRoot(aisle[0]),
-  boothPath: designerPath(designer.id, aisle[0]),
-  sharePath: designerWorkPath(designer.id, work.id, aisle[0]),
+  boothPath: designerSharePath(designer.id, aisle[0]),
+  sharePath: designerWorkSharePath(designer.id, work.id, aisle[0]),
 }));
-const firstHall = halls[0];
+const firstHall = halls.find(hall => hall.code === Astro.props.shareHall) || halls[0];
 const structuredData = {
   '@context': 'https://schema.org', '@type': 'WebPage', url: canonical, name: title, inLanguage: 'zh-Hant-TW',
   ...(description ? { description } : {}),
@@ -34,12 +37,12 @@ const structuredData = {
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>{title}</title>
-  <link rel="canonical" href={canonical} />
+  {Astro.props.shareHall ? <meta name="robots" content="noindex,follow" /> : <link rel="canonical" href={canonical} />}
   <meta name="theme-color" content="#f82970" />
   <link rel="icon" href="data:," />
   {description && <meta name="description" content={description} />}
   <meta property="og:type" content="website" />
-  <meta property="og:url" content={canonical} />
+  <meta property="og:url" content={shareUrl} />
   <meta property="og:site_name" content="發光的地方" />
   <meta property="og:locale" content="zh_TW" />
   <meta property="og:title" content={shareTitle} />
@@ -56,8 +59,8 @@ const structuredData = {
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" />
   <link rel="stylesheet" href="/designers/css/market.css" />
-  <link rel="stylesheet" href="/designers/css/booth.css?v=20261110-work-mobile" />
-  <link rel="stylesheet" href="/designers/css/work.css?v=20261110-social-share" />
+  <link rel="stylesheet" href="/designers/css/booth.css?v=20261114-share-channels" />
+  <link rel="stylesheet" href="/designers/css/work.css?v=20261114-share-channels" />
 </head>
 <body class="work-page">
   <header class="work-header">
@@ -91,7 +94,7 @@ const structuredData = {
     </article>
   </main>
   <footer class="work-footer"><small>© 2026 發光的地方｜收錄之作品與商標，其權利歸各設計師或原權利人所有。</small></footer>
-  <script define:vars={{ halls }}>
+  {!Astro.props.shareHall && <script define:vars={{ halls }}>
     const hallCode = new URLSearchParams(location.search).get('hall');
     const hall = halls.find(entry => entry.code === hallCode);
     if (hall) {
@@ -102,7 +105,7 @@ const structuredData = {
       document.querySelector('.work-market-link').href = hall.marketPath;
       document.querySelector('[data-share-work]').dataset.shareWork = hall.sharePath;
     }
-  </script>
+  </script>}
   <WorkShareDialog />
 </body>
 </html>

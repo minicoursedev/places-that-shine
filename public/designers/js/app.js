@@ -1,17 +1,17 @@
 // Boot and wiring: header, dock, walk view, dialogs, list and map pages, routes (#/walk/<aisle or booth>, #/list, #/map).
 import { state, on, emit, visitedCount, toast } from './state.js';
-import { loadIndex, aisleOfBooth, loadBoothForDesigner, isOshenHall } from './data.js?v=20261114-work-hall';
-import { goToAisle } from './nav.js?v=20261114-work-hall';
+import { loadIndex, aisleOfBooth, loadBoothForDesigner, isOshenHall } from './data.js?v=20261114-share-channels';
+import { goToAisle } from './nav.js?v=20261114-share-channels';
 import { createWalkView } from './walk.js?v=20261114-passer-click';
 import { wireFloatingNav } from './floating-nav.js';
-import { openBooth } from './ui/booth.js?v=20261114-work-hall';
-import { mountMap } from './ui/map.js?v=20261114-work-hall';
-import { mountList } from './ui/list.js?v=20261114-work-hall';
+import { openBooth } from './ui/booth.js?v=20261114-share-channels';
+import { mountMap } from './ui/map.js?v=20261114-share-channels';
+import { mountList } from './ui/list.js?v=20261114-share-channels';
 import { loadSchedule, isClosed, closeTagText, msLeft, lastOpenLabel } from './schedule.js?v=20261030-site-data';
 import { loadCats, loadChatter } from './cats.js?v=20261030-site-data';
 import { showClosed } from './ui/closed.js';
 
-import { designerHallRoot, designerWalkPath, hallPageForPath, updateDesignerMetadata, resolveDesignerRoute } from './routes.js?v=20261114-work-hall';
+import { designerHallRoot, designerWalkPath, hallPageForPath, updateDesignerMetadata, resolveDesignerRoute } from './routes.js?v=20261114-share-channels';
 
 const $ = id => document.getElementById(id);
 const BOOTH_ID = /^[A-Z]\d{2}-\d{2}$/;

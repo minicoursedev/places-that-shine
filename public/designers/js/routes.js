@@ -5,6 +5,7 @@ import { browserOrigin } from './config.js';
 export const designerRoot = '/designers/';
 export const designerPath = (id, hall) =>
   `${designerRoot}${encodeURIComponent(id)}/${hall ? `?hall=${encodeURIComponent(hall)}` : ''}`;
+export const designerSharePath = (id, hall) => `${designerPath(id)}at/${encodeURIComponent(hall)}/`;
 export const designerHallRoot = code => hallPageForCode(code)?.path || designerRoot;
 export { hallPageForPath };
 export function designerWalkPath(code, boothId = null) {
@@ -18,9 +19,9 @@ export function designerBoothUrl(id, base = browserOrigin()) {
 // A shared profile URL owns the initial view, even with a stale walk hash.
 export function resolveDesignerRoute(url, { boot = false } = {}) {
   const [mode, target, then] = url.hash.replace(/^#\/?/, '').split('/');
-  const profile = url.pathname.match(/^\/designers\/([a-z0-9]+(?:-[a-z0-9]+)*)\/?$/);
+  const profile = url.pathname.match(/^\/designers\/([a-z0-9]+(?:-[a-z0-9]+)*)(?:\/at\/([A-Z]))?\/?$/);
   if (profile && (boot || !mode)) {
-    const hall = url.searchParams.get('hall');
+    const hall = profile[2] || url.searchParams.get('hall');
     return { mode: 'designer', target: decodeURIComponent(profile[1]), ...(hall && { hall }) };
   }
   const hall = hallPageForPath(url.pathname);
@@ -44,9 +45,12 @@ export function updateDesignerMetadata(designer = null, booth = {}) {
   const shareTitle = metadata ? metadata.shareTitle : title;
   const description = metadata ? metadata.description : hall?.description || '走進發光的設計師線上市集，瀏覽設計師介紹、創作作品與官方社群。透過設計師列表、地圖與互動攤位，找到喜歡的創作者。';
   const canonical = new URL(designer ? designerPath(designer.id) : hall?.path || designerRoot, browserOrigin()).href;
+  const canonicalLink = document.querySelector('link[rel="canonical"]');
+  const onSharePath = designer && location.pathname.startsWith(`${designerPath(designer.id)}at/`);
+  const socialUrl = onSharePath ? new URL(location.pathname, browserOrigin()).href : canonical;
   document.title = title;
-  document.querySelector('link[rel="canonical"]').href = canonical;
-  for (const [attribute, key, value] of [['name', 'description', description], ['property', 'og:title', shareTitle], ['property', 'og:description', description], ['property', 'og:url', canonical], ['name', 'twitter:title', shareTitle], ['name', 'twitter:description', description]]) {
+  if (canonicalLink) canonicalLink.href = canonical;
+  for (const [attribute, key, value] of [['name', 'description', description], ['property', 'og:title', shareTitle], ['property', 'og:description', description], ['property', 'og:url', socialUrl], ['name', 'twitter:title', shareTitle], ['name', 'twitter:description', description]]) {
     let tag = document.querySelector(`meta[${attribute}="${key}"]`);
     if (!value) { tag?.remove(); continue; }
     if (!tag) { tag = document.createElement('meta'); tag.setAttribute(attribute, key); document.head.append(tag); }

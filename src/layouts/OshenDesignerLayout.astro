@@ -3,9 +3,12 @@ import { designers, designerRoot, designerPath } from '../lib/oshen-designers';
 import { boothHtml } from '../../public/designers/js/ui/booth-markup.js';
 import { designerMetadata, designerStructuredData, serializeStructuredData } from '../../public/designers/js/profile-seo.js';
 import { hallPageForCode } from '../../public/designers/js/hall-pages.js';
+import { designerSharePath } from '../../public/designers/js/routes.js';
 import WorkShareDialog from '../components/WorkShareDialog.astro';
-interface Props { designerId?: string; hallCode?: string }
+interface Props { designerId?: string; hallCode?: string; shareHall?: string }
 const designer = designers.find(profile => profile.id === Astro.props.designerId);
+const shareHall = designer && Astro.props.shareHall;
+const shareBooth = shareHall && designer?.booth.hallBooths.find(booth => booth.aisle[0] === shareHall);
 const hall = designer ? null : hallPageForCode(Astro.props.hallCode);
 const listedDesigners = hall ? designers.filter(profile => profile.hallCodes.includes(hall.code)) : designers;
 const metadata = designer && designerMetadata(designer.store);
@@ -13,6 +16,7 @@ const title = metadata ? metadata.title : hall?.title || '發光的設計師｜�
 const shareTitle = metadata ? metadata.shareTitle : title;
 const description = metadata ? metadata.description : hall?.description || '逛發光的設計師市集，瀏覽設計師介紹、創作作品與官方社群。透過設計師列表、地圖與互動攤位，找到喜歡的創作者。';
 const canonical = new URL(designer ? designerPath(designer.id) : hall?.path || designerRoot, Astro.site).href;
+const shareUrl = designer && shareHall ? new URL(designerSharePath(designer.id, shareHall), Astro.site).href : canonical;
 const structuredData = designer && designerStructuredData(designer.store, designer.booth, canonical, new URL(designerRoot, Astro.site).href);
 const exhibitionImage = new URL('/designers/assets/exhibition-og.png?v=19f09d0c7c56f7bd', Astro.site).href;
 const shareImage = new URL(designer?.og?.url || hall?.image || exhibitionImage, Astro.site).href;
@@ -39,12 +43,12 @@ const shareImageAlt = designer?.og?.alt || hall?.alt || '洋流設計師展逛�
 </style>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>{title}</title>
-<link rel="canonical" href={canonical}>
+{shareHall ? <meta name="robots" content="noindex,follow" /> : <link rel="canonical" href={canonical} />}
 <meta name="theme-color" content="#f82970">
 <link rel="icon" href="data:,">
 {description && <meta name="description" content={description}>}
 <meta property="og:type" content="website">
-<meta property="og:url" content={canonical}>
+<meta property="og:url" content={shareUrl}>
 <meta property="og:site_name" content="發光的地方">
 <meta property="og:locale" content="zh_TW">
 <meta property="og:title" content={shareTitle}>
@@ -64,8 +68,8 @@ const shareImageAlt = designer?.og?.alt || hall?.alt || '洋流設計師展逛�
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=IBM+Plex+Mono:wght@500;600&display=swap">
 <link rel="stylesheet" href="/designers/css/market.css">
-<link rel="stylesheet" href="/designers/css/booth.css?v=20261114-profile-halls">
-<link rel="stylesheet" href="/designers/css/work.css?v=20261110-social-share">
+<link rel="stylesheet" href="/designers/css/booth.css?v=20261114-share-channels">
+<link rel="stylesheet" href="/designers/css/work.css?v=20261114-share-channels">
 <link rel="stylesheet" href="/designers/css/map.css?v=20261114-bluebird-hall">
 <link rel="stylesheet" href="/designers/css/list.css?v=20261112-designer-work-views">
 <link rel="stylesheet" href="/designers/css/closed.css">
@@ -108,7 +112,7 @@ const shareImageAlt = designer?.og?.alt || hall?.alt || '洋流設計師展逛�
   </main>
 
   <main class="list-mode" id="stage-list" tabindex="-1"><div class="ls-wrap">
-  {designer ? <article id="static-designer-profile" aria-label={designer.name} set:html={boothHtml(designer.booth, designer.store, { profile: true, staticProfile: true })} /> : <><h1 class="ls-title">{hall?.name || '設計師列表'}</h1>{!listedDesigners.length && <p>{hall?.name}目前尚無攤位。</p>}<div class="ls-grid">{listedDesigners.map(profile => <article class="lc"><div class="lc-heading"><h3 class="lc-name"><a class="lc-open" href={designerPath(profile.id)}>{profile.name}</a></h3></div><p class="lc-owner">{profile.store.category} {profile.name}</p><p class="lc-zone">{hall?.name || profile.hallName}・{profile.store.category}</p><a class="btn btn-primary lc-go" href={designerPath(profile.id)}>{profile.works.length ? '看作品' : '看介紹'}</a></article>)}</div></>}
+  {designer ? <article id="static-designer-profile" aria-label={designer.name} set:html={boothHtml(shareBooth ? { ...designer.booth, id: shareBooth.id } : designer.booth, designer.store, { profile: true, staticProfile: true })} /> : <><h1 class="ls-title">{hall?.name || '設計師列表'}</h1>{!listedDesigners.length && <p>{hall?.name}目前尚無攤位。</p>}<div class="ls-grid">{listedDesigners.map(profile => <article class="lc"><div class="lc-heading"><h3 class="lc-name"><a class="lc-open" href={designerPath(profile.id)}>{profile.name}</a></h3></div><p class="lc-owner">{profile.store.category} {profile.name}</p><p class="lc-zone">{hall?.name || profile.hallName}・{profile.store.category}</p><a class="btn btn-primary lc-go" href={designerPath(profile.id)}>{profile.works.length ? '看作品' : '看介紹'}</a></article>)}</div></>}
   </div></main>
   <main class="map-mode" id="stage-map" hidden></main>
   <footer class="app-footer">
@@ -119,17 +123,7 @@ const shareImageAlt = designer?.og?.alt || hall?.alt || '洋流設計師展逛�
 </div>
 
 <dialog id="dlg-booth" class="dlg" aria-labelledby="booth-title"></dialog>
-<dialog id="designer-share-dialog" class="dlg designer-share-dialog" aria-labelledby="designer-share-title" aria-describedby="designer-share-description">
-  <div class="dlg-head"><h2 id="designer-share-title">分享設計師</h2><button type="button" class="dlg-close" aria-label="關閉分享">×</button></div>
-  <div class="dlg-body">
-    <p id="designer-share-description">掃描 QRCode，開啟這位設計師的本站連結。</p>
-    <img id="designer-share-qr" width="264" height="264" alt="" hidden>
-    <a id="designer-share-url" target="_blank" rel="noopener noreferrer"></a>
-    <div class="designer-share-actions"><button id="designer-share-copy" type="button" class="btn btn-primary" autofocus>複製連結</button><form method="dialog"><button class="btn">關閉</button></form></div>
-    <p id="designer-share-status" class="muted" role="status" aria-live="polite"></p>
-  </div>
-</dialog>
-
+<WorkShareDialog kind="designer" />
 <WorkShareDialog />
 <script is:inline>
   document.getElementById('designer-back').addEventListener('click', event => {
@@ -138,6 +132,6 @@ const shareImageAlt = designer?.og?.alt || hall?.alt || '洋流設計師展逛�
     history.back();
   });
 </script>
-<script is:inline type="module" src="/designers/js/app.js?v=20261114-work-hall"></script>
+<script is:inline type="module" src="/designers/js/app.js?v=20261114-share-channels"></script>
 </body>
 </html>
