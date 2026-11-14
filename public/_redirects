@@ -1,0 +1,10 @@
+/puma_oshen_wave / 301
+/puma_oshen_wave/ / 301
+/puma_oshen_wave/designer /designers/ 301
+/puma_oshen_wave/designer/ /designers/ 301
+/puma_oshen_wave/designer/halls/amateurs /designers/halls/amateurs/ 301
+/puma_oshen_wave/designer/halls/amateurs/ /designers/halls/amateurs/ 301
+/puma_oshen_wave/designer/profiles/:id/works/:workId /designers/:id/works/:workId/ 301
+/puma_oshen_wave/designer/profiles/:id/works/:workId/ /designers/:id/works/:workId/ 301
+/puma_oshen_wave/designer/profiles/:id /designers/:id/ 301
+/puma_oshen_wave/designer/profiles/:id/ /designers/:id/ 301
