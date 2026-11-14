@@ -1,0 +1,61 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import { designers } from '../../lib/oshen-designers';
+
+const designerIds = designers.map(designer => designer.id);
+const marketPath = '/puma_oshen_wave/yilan_taiwan_11_07/';
+const address = '宜蘭縣羅東鎮光榮路271-1號';
+const directions = new URL('https://www.google.com/maps/search/?api=1');
+directions.searchParams.set('query', address);
+---
+
+<SiteLayout title="宜蘭暖流・台派市集地點" description="宜蘭暖流・台派市集在羅東後火車站旁廣場。">
+  <script slot="head" define:vars={{ designerIds }}>
+    const params = new URLSearchParams(location.search);
+    if (params.get('place') === 'yilan-20261107') {
+      document.documentElement.dataset.yilanLocation = '';
+    } else {
+      const id = params.get('designer');
+      if (designerIds.includes(id)) location.replace(`/designers/${id}/`);
+      else if (params.get('view') === 'designers') location.replace('/designers/');
+      else location.replace('/');
+    }
+  </script>
+  <link slot="head" rel="stylesheet" href="/vendor/leaflet/leaflet.css" />
+  <script slot="head" is:inline defer src="/vendor/leaflet/leaflet.js"></script>
+  <section class="directory page-width" aria-labelledby="market-location-title">
+    <div class="directory-header">
+      <a class="back-link" href={marketPath}>← 返回宜蘭暖流市集</a>
+      <h1 id="market-location-title">宜蘭暖流・台派市集</h1>
+    </div>
+    <section id="map-area" aria-label="市集地點">
+      <p>活動地址：{address}（羅東後火車站旁廣場）</p>
+      <p>地圖標記為附近參考點。</p>
+      <div id="yilan-location-map" aria-label="宜蘭暖流市集附近地圖" hidden></div>
+      <p><a href={directions.href}>在 Google 地圖查看地址</a></p>
+    </section>
+    <noscript><a href="/">前往發光的地方首頁</a></noscript>
+  </section>
+</SiteLayout>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    if (!document.documentElement.hasAttribute('data-yilan-location') || !window.L) return;
+
+    const container = document.getElementById('yilan-location-map');
+    const position = { lat: 24.6766424, lng: 121.7776524 };
+    container.hidden = false;
+    const map = L.map(container, { center: position, zoom: 17, scrollWheelZoom: false });
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>',
+    }).addTo(map);
+    L.circleMarker(position, {
+      radius: 10, color: '#fff', weight: 3, fillColor: '#d8441e', fillOpacity: 1,
+    }).addTo(map).bindPopup('宜蘭暖流・台派市集附近').openPopup();
+  });
+</script>
+
+<style>
+  #yilan-location-map { height: clamp(20rem, 55vh, 32rem); }
+</style>

@@ -7,7 +7,6 @@ export default defineConfig({
   build: { format: 'directory' },
   trailingSlash: 'always',
   redirects: {
-    '/puma_oshen_wave': '/',
     '/designers/wendy-tsai': '/designers/yuan-art-space/',
     '/designers/profiles/wendy-tsai': '/designers/yuan-art-space/',
     '/designers/wendy-tsai/works/wendy-tsai-bluebird-action-logo': '/designers/yuan-art-space/works/wendy-tsai-bluebird-action-logo/',
