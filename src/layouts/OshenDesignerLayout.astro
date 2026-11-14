@@ -66,7 +66,7 @@ const shareImageAlt = designer?.og?.alt || hall?.alt || '洋流設計師展逛�
 <link rel="stylesheet" href="/designers/css/market.css">
 <link rel="stylesheet" href="/designers/css/booth.css?v=20261110-work-mobile">
 <link rel="stylesheet" href="/designers/css/work.css?v=20261110-social-share">
-<link rel="stylesheet" href="/designers/css/map.css">
+<link rel="stylesheet" href="/designers/css/map.css?v=20261114-period-halls">
 <link rel="stylesheet" href="/designers/css/list.css?v=20261112-designer-work-views">
 <link rel="stylesheet" href="/designers/css/closed.css">
 <link rel="stylesheet" href="/designers/css/floating-nav.css?v=20261114-home">
@@ -97,7 +97,7 @@ const shareImageAlt = designer?.og?.alt || hall?.alt || '洋流設計師展逛�
   </main>
   <main class="stage" id="stage-walk" hidden>
     <canvas id="walk-canvas" tabindex="0" aria-label="逛場子畫面：按住拖著小人走，點設計師即可查看介紹"></canvas>
-    <button type="button" class="where" id="btn-where"><b id="where-hall">設計師館</b><span id="where-aisle"></span><span class="where-switch">換館</span></button>
+    <button type="button" class="where" id="btn-where"><b id="where-hall">{hall?.name || designer?.hallName || '洋流設計師館'}</b><span id="where-aisle"></span><span class="where-switch">換館</span></button>
     <div class="status"><span class="tag tag-zone" id="status-zone"></span><span class="tag" id="status-count"></span></div>
     <p class="hint" id="hint">按住畫面拖著小人走，點一下就走過去，點設計師查看介紹，點路人或對話框可收聲。電腦可以用方向鍵。</p>
     <div class="dock">
@@ -108,7 +108,7 @@ const shareImageAlt = designer?.og?.alt || hall?.alt || '洋流設計師展逛�
   </main>
 
   <main class="list-mode" id="stage-list" tabindex="-1"><div class="ls-wrap">
-  {designer ? <article id="static-designer-profile" aria-label={designer.name} set:html={boothHtml(designer.booth, designer.store, { profile: true, staticProfile: true })} /> : <><h1 class="ls-title">{hall?.name || '設計師列表'}</h1><div class="ls-grid">{listedDesigners.map(profile => <article class="lc"><div class="lc-heading"><h3 class="lc-name"><a class="lc-open" href={designerPath(profile.id)}>{profile.name}</a></h3></div><p class="lc-owner">{profile.store.category} {profile.name}</p><p class="lc-zone">{profile.hallName}・{profile.store.category}</p><a class="btn btn-primary lc-go" href={designerPath(profile.id)}>{profile.works.length ? '看作品' : '看介紹'}</a></article>)}</div></>}
+  {designer ? <article id="static-designer-profile" aria-label={designer.name} set:html={boothHtml(designer.booth, designer.store, { profile: true, staticProfile: true })} /> : <><h1 class="ls-title">{hall?.name || '設計師列表'}</h1>{!listedDesigners.length && <p>{hall?.name}目前尚無攤位。</p>}<div class="ls-grid">{listedDesigners.map(profile => <article class="lc"><div class="lc-heading"><h3 class="lc-name"><a class="lc-open" href={designerPath(profile.id)}>{profile.name}</a></h3></div><p class="lc-owner">{profile.store.category} {profile.name}</p><p class="lc-zone">{profile.hallName}・{profile.store.category}</p><a class="btn btn-primary lc-go" href={designerPath(profile.id)}>{profile.works.length ? '看作品' : '看介紹'}</a></article>)}</div></>}
   </div></main>
   <main class="map-mode" id="stage-map" hidden></main>
   <footer class="app-footer">
@@ -131,6 +131,6 @@ const shareImageAlt = designer?.og?.alt || hall?.alt || '洋流設計師展逛�
 </dialog>
 
 <WorkShareDialog />
-<script is:inline type="module" src="/designers/js/app.js?v=20261112-designer-work-views"></script>
+<script is:inline type="module" src="/designers/js/app.js?v=20261114-period-halls"></script>
 </body>
 </html>

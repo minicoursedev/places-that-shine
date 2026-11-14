@@ -1,5 +1,5 @@
 import { designerMetadata, designerStructuredData, serializeStructuredData, publicUrl } from './profile-seo.js?v=20261110-profile-share-title';
-import { hallPageForCode, hallPageForPath } from './hall-pages.js?v=20261108-amateur-og';
+import { hallPageForCode, hallPageForPath } from './hall-pages.js?v=20261114-period-halls';
 import { browserOrigin } from './config.js';
 
 export const designerRoot = '/designers/';
@@ -7,8 +7,9 @@ export const designerPath = id => `${designerRoot}${encodeURIComponent(id)}/`;
 export const designerHallRoot = code => hallPageForCode(code)?.path || designerRoot;
 export { hallPageForPath };
 export function designerWalkPath(code, boothId = null) {
-  const root = designerHallRoot(code?.[0]);
-  return code === 'A01' && !boothId ? root : `${root}#/walk/${boothId || code || ''}`;
+  const hall = hallPageForCode(code?.[0]);
+  const root = hall?.path || designerRoot;
+  return hall && code === `${hall.code}01` && !boothId ? root : `${root}#/walk/${boothId || code || ''}`;
 }
 export function designerBoothUrl(id, base = browserOrigin()) {
   return new URL(designerPath(id), base).href;

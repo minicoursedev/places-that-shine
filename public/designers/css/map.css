@@ -90,7 +90,10 @@
 }
 @media (max-width: 560px) {
   .mp-tools { padding: 8px 12px; gap: 8px; }
+  .mp-tabs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); width: 100%; }
   .mp-tabs button { padding: 4px 9px; font-size: 13px; }
+  .mp-tabs button:nth-child(odd) { border-left: 0; }
+  .mp-tabs button:nth-child(n + 3) { border-top: 2px solid var(--line); }
   .mp-jump { margin-left: 0; }
   .mp-body { padding: 10px 12px 14px; }
   .mp-row { grid-template-columns: 58px minmax(0, 1fr); gap: 6px; padding: 4px; }

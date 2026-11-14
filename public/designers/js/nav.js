@@ -1,14 +1,17 @@
 // Move between designer aisles and resolve share links.
-import { designerWalkPath, updateDesignerMetadata } from './routes.js?v=20261110-profile-share-title';
+import { designerWalkPath, updateDesignerMetadata } from './routes.js?v=20261114-period-halls';
 import { state, emit, toast } from './state.js';
-import { loadAisle, aisleOfBooth, hallOf } from './data.js?v=20261110-work-share';
+import { loadAisle, aisleOfBooth, hallOf } from './data.js?v=20261114-period-halls';
 
 const hallOfIndex = code => state.index.halls.find(h => h.code === hallOf(code));
 
-export { designerBoothUrl } from './routes.js?v=20261110-profile-share-title';
+export { designerBoothUrl } from './routes.js?v=20261114-period-halls';
 
 export function aisleNeighbors(code) {
-  const list = state.index.halls.flatMap(hall => hall.aisles);
+  const inShovelHeroes = hallOf(code) === 'S';
+  const list = state.index.halls
+    .filter(hall => (hall.code === 'S') === inShovelHeroes)
+    .flatMap(hall => hall.aisles);
   const i = list.findIndex(a => a.code === code);
   return {
     prev: i > 0 ? list[i - 1].code : null,

@@ -1,17 +1,17 @@
 // Boot and wiring: header, dock, walk view, dialogs, list and map pages, routes (#/walk/<aisle or booth>, #/list, #/map).
 import { state, on, emit, visitedCount, toast } from './state.js';
-import { loadIndex, aisleOfBooth, loadBoothForDesigner } from './data.js?v=20261110-work-share';
-import { goToAisle } from './nav.js?v=20261110-profile-share-title';
+import { loadIndex, aisleOfBooth, loadBoothForDesigner } from './data.js?v=20261114-period-halls';
+import { goToAisle } from './nav.js?v=20261114-period-halls';
 import { createWalkView } from './walk.js?v=20261108-hall-signs';
 import { wireFloatingNav } from './floating-nav.js';
-import { openBooth } from './ui/booth.js?v=20261112-designer-browsing';
-import { mountMap } from './ui/map.js?v=20261110-profile-share-title';
-import { mountList } from './ui/list.js?v=20261112-designer-work-views';
+import { openBooth } from './ui/booth.js?v=20261114-period-halls';
+import { mountMap } from './ui/map.js?v=20261114-period-halls';
+import { mountList } from './ui/list.js?v=20261114-period-halls';
 import { loadSchedule, isClosed, closeTagText, msLeft, lastOpenLabel } from './schedule.js?v=20261030-site-data';
 import { loadCats, loadChatter } from './cats.js?v=20261030-site-data';
 import { showClosed } from './ui/closed.js';
 
-import { designerHallRoot, designerWalkPath, hallPageForPath, updateDesignerMetadata, resolveDesignerRoute } from './routes.js?v=20261110-profile-share-title';
+import { designerHallRoot, designerWalkPath, hallPageForPath, updateDesignerMetadata, resolveDesignerRoute } from './routes.js?v=20261114-period-halls';
 
 const $ = id => document.getElementById(id);
 const BOOTH_ID = /^[A-Z]\d{2}-\d{2}$/;
@@ -34,7 +34,7 @@ function setMode(mode, opts = {}) {
   for (const b of document.querySelectorAll('.modes button')) b.setAttribute('aria-pressed', String(b.dataset.mode === mode));
   if (mode === 'list') {
     list ||= mountList($('stage-list'));
-    list.show();
+    list.show({ hall: state.hallCode === 'S' ? 'S' : undefined });
     history.replaceState(null, '', `${designerHallRoot(state.hallCode)}#/list`);
     updateDesignerMetadata();
   } else list?.hide();
@@ -55,10 +55,12 @@ function updateStatus() {
   const a = state.aisle;
   if (!a) return;
   const zones = [...new Set(a.islands.map(i => i.zoneName))];
+  const hasBooths = a.islands.some(i => i.booths.length);
   $('where-hall').textContent = a.hallName;
   $('where-aisle').textContent = `${a.code} 走道`;
-  $('status-zone').textContent = zones.join('、') || '尚無設計師資料';
-  $('btn-next').disabled = !a.islands.some(i => i.booths.length);
+  $('status-zone').textContent = zones.join('、') || '目前尚無攤位';
+  for (const id of ['hint', 'btn-browse', 'btn-next', 'status-count']) $(id).hidden = !hasBooths;
+  $('btn-next').disabled = !hasBooths;
   $('status-count').textContent = `已逛 ${visitedCount()} / ${state.index.totals.designers} 攤`;
 }
 

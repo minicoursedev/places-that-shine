@@ -3,12 +3,17 @@ import { CONFIG, resolveAsset } from './config.js';
 import { inlineWorkId } from './work-links.js';
 
 const HALLS = [
-  { code: 'O', name: '設計師館', zone: { code: 'DESIGNERS', name: '設計師' } },
-  { code: 'A', name: '愛好者館', zone: { code: 'AMATEURS', name: '愛好者' } },
+  { code: 'O', name: '洋流設計師館', category: '設計師', zone: { code: 'DESIGNERS', name: '設計師' } },
+  { code: 'A', name: '洋流愛好者館', category: '愛好者', zone: { code: 'AMATEURS', name: '愛好者' } },
+  { code: 'S', name: '鏟子超人館', category: '設計師', zone: { code: 'SHOVEL-HEROES', name: '鏟子超人' } },
 ];
 const PER_ISLAND = 8;
 const PER_AISLE = PER_ISLAND * 2;
 const pad2 = n => String(n).padStart(2, '0');
+const designerHall = designer => {
+  if (designer.hall === 'S') return 'S';
+  return designer.category === '愛好者' ? 'A' : 'O';
+};
 
 function externalUrl(value) {
   if (typeof value !== 'string' || !value.trim()) return '';
@@ -48,7 +53,7 @@ export function createCatalogue(data, { baseUrl = CONFIG.DESIGNERS_URL, ogImages
 
   for (const HALL of HALLS) {
     const ZONE = HALL.zone;
-    const hallDesigners = designers.filter(designer => (designer.category === '愛好者') === (HALL.code === 'A'));
+    const hallDesigners = designers.filter(designer => designerHall(designer) === HALL.code);
     const summaries = [];
     // Keep one empty aisle in each hall, including before its first author is listed.
     for (let start = 0; start < Math.max(1, hallDesigners.length); start += PER_AISLE) {
@@ -57,7 +62,7 @@ export function createCatalogue(data, { baseUrl = CONFIG.DESIGNERS_URL, ogImages
       const stores = {};
       const booths = members.map((designer, pos) => {
         const id = `${code}-${pad2(pos + 1)}`;
-        const category = ['設計師', '創作者', '愛好者'].includes(designer.category) ? designer.category : ZONE.name;
+        const category = ['設計師', '創作者', '愛好者'].includes(designer.category) ? designer.category : HALL.category;
         designerBooths.set(designer.id, id);
         const social = Object.fromEntries(Object.entries(designer.social || {})
           .map(([key, value]) => [key, externalUrl(value)]));

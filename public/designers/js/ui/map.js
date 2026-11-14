@@ -1,6 +1,6 @@
 // 設計師地圖 page (<main id="stage-map">): hall overview, and a hall plan with one compact row per aisle.
 import { state, on, isVisited } from '../state.js';
-import { goToAisle, goToBooth } from '../nav.js?v=20261110-profile-share-title';
+import { goToAisle, goToBooth } from '../nav.js?v=20261114-period-halls';
 
 const ZONES_SHOWN = 8;
 
@@ -128,7 +128,7 @@ function overviewHtml() {
       <button type="button" class="mp-hall-name" data-go-hall="${h.code}">
         <b>${esc(h.name)}</b><small>${fmt(zoneBooths(h))} 攤・${h.aisles.length} 條走道</small>
         ${isHere ? '<span class="mp-pin">你在這裡</span>' : ''}</button>
-      <div class="mp-zones">${zoneBtns}${rest > 0 ? `<button type="button" class="mp-zone mp-zone-more" data-go-hall="${h.code}"><b>還有 ${rest} 區</b></button>` : ''}</div>
+      <div class="mp-zones">${zoneBtns}${rest > 0 ? `<button type="button" class="mp-zone mp-zone-more" data-go-hall="${h.code}"><b>還有 ${rest} 區</b></button>` : ''}${zones.length ? '' : '<small>目前尚無設計師攤位</small>'}</div>
       <div class="mp-door" aria-hidden="true">入口</div>
     </section>`;
   }).join('');
@@ -150,8 +150,10 @@ function planHtml(hall) {
     }
     out.push(rowHtml(a, zoneName));
   }
-  return `<div class="mp-plan">${out.join('')}</div>
-    <p class="mp-legend"><span><i class="mp-c"></i>一攤</span><span><i class="mp-c is-visited"></i>逛過</span><span><i class="mp-c is-near"></i>你旁邊這攤</span><span><i class="mp-key-here"></i>你在這條走道</span></p>`;
+  const empty = aisles.every(aisle => aisle.booths === 0);
+  return `${empty ? `<p class="mp-note">${esc(hall.name)}目前尚無設計師攤位。點選走道即可入館。</p>` : ''}
+    <div class="mp-plan">${out.join('')}</div>
+    ${empty ? '' : '<p class="mp-legend"><span><i class="mp-c"></i>一攤</span><span><i class="mp-c is-visited"></i>逛過</span><span><i class="mp-c is-near"></i>你旁邊這攤</span><span><i class="mp-key-here"></i>你在這條走道</span></p>'}`;
 }
 
 function rowHtml(a, zoneName) {

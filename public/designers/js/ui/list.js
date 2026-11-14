@@ -1,12 +1,12 @@
 // 設計師列表模式 <main id="stage-list">: filter the search rows in memory, render 60 cards at a time,
 // Fill each card’s logo and works gallery as it scrolls into view.
 import { state, toast, findBoothIn } from '../state.js';
-import { loadSearch, loadAisle, aisleOfBooth } from '../data.js?v=20261110-work-share';
-import { goToBooth } from '../nav.js?v=20261110-profile-share-title';
-import { openBooth } from './booth.js?v=20261112-designer-browsing';
+import { loadSearch, loadAisle, aisleOfBooth } from '../data.js?v=20261114-period-halls';
+import { goToBooth } from '../nav.js?v=20261114-period-halls';
+import { openBooth } from './booth.js?v=20261114-period-halls';
 import { thumbnailUrl, retryOriginal } from '../images.js';
 import { loadProducts } from '../products.js?v=20261030-pinned-work';
-import { designerPath } from '../routes.js?v=20261110-profile-share-title';
+import { designerPath, designerWalkPath } from '../routes.js?v=20261114-period-halls';
 
 const PAGE = 60;
 const TYPES = ['漫畫', '插圖', '小說', '攝影', '有聲'];
@@ -21,6 +21,7 @@ export function mountList(container) {
   let results = [];
   let shown = 0;
   let loading = null;
+  let entryHall = '';
   const cardRows = new WeakMap();
 
   const halls = () => state.index?.halls || [];
@@ -53,7 +54,7 @@ export function mountList(container) {
         <button type="button" class="btn ls-view" aria-controls="designer-list-grid">只看代表作</button>
       </div>
       <div class="ls-grid ls-grid-designer" id="designer-list-grid"></div>
-      <p class="ls-empty" hidden>沒有符合的設計師。換個關鍵字，或少選一點條件。</p>
+      <p class="ls-empty" hidden><span></span> <a class="link-btn ls-empty-aisle" hidden></a></p>
       <div class="ls-more"><button type="button" class="btn" hidden>再多 60 攤</button></div>
     </div>`;
 
@@ -92,15 +93,23 @@ export function mountList(container) {
   // ---------- filters UI
   function fillZones() {
     const hall = halls().find(h => h.code === f.hall);
-    zoneSel.disabled = !hall;
     const names = [];
     if (hall) {
-      for (const row of rows.filter(row => row.hall === hall.code)) {
+      for (const row of (rows || []).filter(row => row.hall === hall.code)) {
         if (!names.includes(row.zone)) names.push(row.zone);
       }
     }
     if (!names.includes(f.zone)) f.zone = '';
+    zoneSel.disabled = names.length === 0;
     zoneSel.innerHTML = `<option value="">全部區</option>` + names.map(n => `<option value="${esc(n)}"${n === f.zone ? ' selected' : ''}>${esc(n)}</option>`).join('');
+  }
+
+  function selectHall(code) {
+    f.hall = code;
+    for (const button of container.querySelectorAll('[data-hall]')) {
+      button.setAttribute('aria-pressed', String(button.dataset.hall === code));
+    }
+    fillZones();
   }
 
   function summary() {
@@ -113,6 +122,24 @@ export function mountList(container) {
     if (q) parts.push(`搜尋「${q}」`);
     $('.ls-cond').textContent = parts.join('・');
     $('.ls-clear').hidden = !(f.hall || f.zone || f.types.size || q);
+  }
+
+  function showEmptyState() {
+    const empty = $('.ls-empty');
+    empty.hidden = results.length > 0;
+    if (empty.hidden) return;
+    const hall = halls().find(item => item.code === f.hall);
+    const emptyHall = hall && !rows.some(row => row.hall === hall.code);
+    empty.querySelector('span').textContent = emptyHall
+      ? `${hall.name}目前尚無設計師攤位。`
+      : rows.length ? '沒有符合的設計師。換個關鍵字，或少選一點條件。' : '目前尚無設計師資料。';
+    const aisle = emptyHall ? hall.aisles[0] : null;
+    const link = $('.ls-empty-aisle');
+    link.hidden = !aisle;
+    if (aisle) {
+      link.textContent = `進入 ${aisle.code} 走道`;
+      link.href = designerWalkPath(aisle.code);
+    }
   }
 
   // ---------- cards
@@ -229,6 +256,7 @@ export function mountList(container) {
       return;
     }
     if (p !== loading) return;
+    fillZones();
     filterRows();
     container.querySelector('[aria-label="作品類型"]').hidden = !rows.some(row => row.type);
     summary();
@@ -236,8 +264,8 @@ export function mountList(container) {
     grid.textContent = '';
     shown = 0;
     if (!keepScroll) container.scrollTop = 0;
-    $('.ls-empty').hidden = results.length > 0;
-    $('.ls-empty').textContent = rows.length ? '沒有符合的設計師。換個關鍵字，或少選一點條件。' : '目前尚無設計師資料。';
+    showEmptyState();
+    moreBtn.hidden = true;
     renderMore();
   }
 
@@ -256,9 +284,7 @@ export function mountList(container) {
     const t = e.target;
     const hallChip = t.closest('[data-hall]');
     if (hallChip && container.contains(hallChip)) {
-      f.hall = hallChip.dataset.hall;
-      for (const b of container.querySelectorAll('[data-hall]')) b.setAttribute('aria-pressed', String(b === hallChip));
-      fillZones();
+      selectHall(hallChip.dataset.hall);
       return refresh();
     }
     const typeChip = t.closest('[data-type]');
@@ -294,9 +320,12 @@ export function mountList(container) {
 
   zoneSel.addEventListener('change', () => { f.zone = zoneSel.value; refresh(); });
   return {
-    show() {
-      fillZones();
-      if (!rows) refresh();
+    show({ hall } = {}) {
+      const nextHall = halls().some(item => item.code === hall) ? hall : '';
+      const filterChanged = nextHall !== entryHall && (nextHall !== '' || f.hall === entryHall);
+      if (filterChanged) selectHall(nextHall);
+      entryHall = nextHall;
+      if (!rows || filterChanged) refresh();
     },
     hide() {
       clearTimeout(timer);

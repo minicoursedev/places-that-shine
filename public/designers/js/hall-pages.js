@@ -1,15 +1,26 @@
 // Static share pages for halls with their own entry URL and preview image.
 export const hallPages = [{
   code: 'A',
-  name: '愛好者館',
+  name: '洋流愛好者館',
   path: '/designers/halls/amateurs/',
-  title: '愛好者館｜發光的設計師',
-  description: '走進愛好者館，瀏覽愛好者的作品、介紹與社群連結。',
+  title: '洋流愛好者館｜發光的設計師',
+  description: '走進洋流愛好者館，瀏覽愛好者的作品、介紹與社群連結。',
   image: '/designers/assets/amateur-hall-og.jpg',
-  alt: '愛好者館逛攤畫面',
+  alt: '洋流愛好者館逛攤畫面',
   width: 1200,
   height: 630,
   type: 'image/jpeg',
+}, {
+  code: 'S',
+  name: '鏟子超人館',
+  path: '/designers/halls/shovel-heroes/',
+  title: '鏟子超人館｜發光的設計師',
+  description: '2025 鏟子超人時期的設計師展館。',
+  image: '/media/library/yuan-art-space/4.webp',
+  alt: '鏟子超人館入口圖',
+  width: 637,
+  height: 800,
+  type: 'image/webp',
 }];
 
 export const hallPageForCode = code => hallPages.find(hall => hall.code === code) || null;
