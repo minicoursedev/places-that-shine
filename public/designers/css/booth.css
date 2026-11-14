@@ -1,0 +1,136 @@
+/* Designer dialog, catalogue images and share controls. */
+
+/* ---------- booth dialog ---------- */
+.bo-head { position: relative; flex: none; align-items: center; justify-content: flex-start; padding-inline: 16px 64px; background: var(--paper); }
+.bo-identity { display: flex; align-items: center; justify-content: flex-start; gap: 12px; width: 100%; min-width: 0; }
+.bo-head > .dlg-close { position: absolute; right: 16px; top: 50%; margin-left: 0; transform: translateY(-50%); }
+.bo-avatar {
+  flex: none; width: 56px; height: 56px; border: 2.5px solid var(--line); border-radius: 50%; overflow: hidden;
+  background: var(--paper); box-shadow: 2px 2px 0 var(--line);
+}
+.bo-avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.bo-avatar-contain { border-radius: 4px; }
+.bo-avatar-contain img { object-fit: contain; }
+.bo-avatar-none { background-color: var(--paper); background-image: var(--tone); }
+.bo-title { min-width: 0; flex: 0 1 auto; text-align: left; }
+.bo-title h1, .bo-title h2 { margin: 0; font-size: 20px; overflow-wrap: anywhere; }
+.bo-breadcrumbs { flex: none; padding: 10px 16px; font-size: 12px; line-height: 1.6; overflow-wrap: anywhere; }
+.bo-breadcrumbs a { color: var(--green-deep); }
+.bo-intro { margin-bottom: 20px; }
+.bo-intro h2, .bo-intro h3, .bo-section-title { margin: 0 0 8px; font-size: 16px; line-height: 1.5; }
+.bo-intro p { margin: 0; line-height: 1.8; white-space: pre-line; overflow-wrap: anywhere; }
+.bo-owner { margin: 0; font-size: 13px; color: var(--muted); overflow-wrap: anywhere; }
+.bo-owner:empty { display: none; }
+.bo-meta { display: none; }
+.bo-meta .tag { max-width: 100%; overflow: hidden; text-overflow: ellipsis; }
+.bo-corp { background: var(--ink); color: var(--pink-soft); }
+
+.bo-body { padding-bottom: 20px; overscroll-behavior-y: contain; }
+.bo-note { margin: 8px 0; color: var(--muted); }
+
+.bo-works {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px;
+}
+.bo-works > li { min-width: 0; }
+.bo-work-actions { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 10px 0 4px; }
+.bo-work-actions .btn { min-height: 44px; padding: 4px 12px; font-size: 13px; }
+.bo-work-detail { display: inline-flex; align-items: center; min-height: 44px; color: var(--green-deep); font-size: 13px; text-underline-offset: 4px; }
+.bo-work-detail:focus-visible { outline: 3px solid var(--pink); outline-offset: 4px; }
+.bo-caption { font-size: 15px; line-height: 1.65; overflow-wrap: anywhere; white-space: pre-line; }
+.bo-work {
+  position: relative; display: flex; flex-direction: column; gap: 6px; width: 100%; padding: 0;
+  border: 0; background: none; text-align: left; text-decoration: none; color: var(--ink); cursor: pointer;
+}
+span.bo-work { cursor: default; }
+.bo-cover {
+  position: relative; display: block; width: 100%; overflow: hidden;
+  border: 2px solid var(--line); border-radius: 3px; background: var(--paper-2); box-shadow: 3px 3px 0 var(--line);
+  transition: transform .08s, box-shadow .08s;
+}
+.bo-cover img { width: 100%; height: auto; display: block; }
+.bo-cover-none { aspect-ratio: 3 / 4; background-color: var(--paper); background-image: var(--tone); }
+.bo-cover-none::after {
+  content: ""; position: absolute; left: 22%; top: 30%; width: 56%; height: 22%;
+  background: var(--paper); border: 2px solid var(--line);
+}
+a.bo-work:hover .bo-cover, button.bo-work:hover .bo-cover { transform: translate(-1px, -1px); box-shadow: 4px 4px 0 var(--line); }
+a.bo-work:active .bo-cover, button.bo-work:active .bo-cover { transform: translate(2px, 2px); box-shadow: 1px 1px 0 var(--line); }
+.bo-work:focus-visible { outline: none; }
+.bo-work:focus-visible .bo-cover { outline: 3px solid var(--pink); outline-offset: 2px; }
+.bo-name {
+  font-size: 13px; font-weight: 700; line-height: 1.4; overflow-wrap: anywhere;
+  display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-clamp: 2; overflow: hidden;
+}
+.bo-name.muted { font-weight: 400; }
+
+/* Link to more designer works. */
+.bo-more {
+  aspect-ratio: 3 / 4; justify-content: center; align-items: center; gap: 2px; text-align: center;
+  border: 2px dashed var(--line); border-radius: 3px; background: var(--paper-2); font-size: 13px; font-weight: 700;
+}
+.bo-more-n { font-size: 16px; font-weight: 900; }
+a.bo-more:hover { background: var(--pink-soft); }
+a.bo-more:focus-visible { outline: 3px solid var(--pink); outline-offset: 2px; }
+
+/* Other booths for the same designer. */
+.bo-also { margin-top: 20px; padding-top: 12px; border-top: 2px dashed var(--line); }
+.bo-also h3 { margin: 0 0 8px; font-size: 14px; font-weight: 900; }
+.bo-also-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 200px), 1fr)); gap: 6px; }
+.bo-also-item {
+  display: flex; align-items: center; justify-content: space-between; gap: 8px; min-width: 0;
+  padding: 6px 10px; border: 2px solid var(--line); border-radius: 6px; background: var(--paper); box-shadow: 2px 2px 0 var(--line);
+  text-align: left; cursor: pointer;
+}
+.bo-also-item:hover { background: var(--pink-soft); }
+.bo-also-item:focus-visible { outline: 3px solid var(--pink); outline-offset: 2px; }
+.bo-also-where { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 700; font-size: 13px; }
+.bo-also-item .mono { flex: none; font-size: 12px; }
+
+.bo-foot {
+  flex: none; display: flex; align-items: center; gap: 4px 8px; flex-wrap: wrap;
+  padding: 6px 16px; border-top: 2px solid var(--line); background: var(--paper-2);
+}
+.bo-foot .btn { min-height: 32px; padding-block: 2px; }
+/* Reuse the market's unaltered official marks and approved button artwork. */
+.bo-foot .bo-social-button {
+  flex: none; width: 44px; height: 44px; min-height: 44px; padding: 12px;
+  border: 0; border-radius: 8px; box-shadow: none;
+  background: #fff url('../assets/buttons/button-background.png') center / 100% 100% no-repeat;
+}
+.bo-social-button img { display: block; width: 20px; height: 20px; object-fit: contain; }
+.bo-social-button:active:not(:disabled) { transform: none; box-shadow: none; }
+.bo-social-button:hover { outline: 2px solid var(--green-deep); outline-offset: 2px; }
+.bo-count { margin-left: auto; font-size: 13px; }
+.bo-share { flex-basis: 100%; display: grid; align-items: center; grid-template-columns: max-content max-content; gap: 6px 8px; }
+.bo-share .btn { padding-inline: clamp(4px, 2vw, 16px); }
+.bo-share-status { grid-column: 1 / -1; font-size: 13px; }
+.bo-share-status:empty { display: none; }
+
+.designer-share-dialog { width: min(360px, calc(100vw - 32px)); max-height: calc(100dvh - 32px); }
+#designer-share-title { overflow-wrap: anywhere; }
+#designer-share-description { margin: 0 0 16px; font-size: 14px; line-height: 1.7; }
+#designer-share-qr { display: block; width: 220px; max-width: 100%; height: auto; margin: 0 auto 16px; }
+#designer-share-qr[hidden] { display: none; }
+#designer-share-url { display: block; margin-bottom: 16px; overflow-wrap: anywhere; font-size: 13px; line-height: 1.7; color: var(--green-deep); }
+.designer-share-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.designer-share-actions form { margin: 0; }
+.designer-share-actions .btn { width: 100%; }
+#designer-share-status { margin: 12px 0 0; font-size: 13px; line-height: 1.7; }
+#designer-share-status:empty { display: none; }
+
+@media (max-width: 560px) {
+  /* Keep controls inside Safari's visible area when its bars or text size change. */
+  #dlg-booth {
+    --bo-top-gap: max(12px, env(safe-area-inset-top, 0px));
+    --bo-bottom-gap: max(18px, env(safe-area-inset-bottom, 0px));
+    position: fixed; top: var(--bo-top-gap); bottom: auto; margin-block: 0;
+    max-height: calc(100svh - var(--bo-top-gap) - var(--bo-bottom-gap));
+    max-height: calc(100dvh - var(--bo-top-gap) - var(--bo-bottom-gap));
+  }
+  .bo-avatar { width: 46px; height: 46px; }
+  .bo-head h1, .bo-head h2 { font-size: 16px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .bo-cover { transition: none; }
+}

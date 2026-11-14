@@ -1,0 +1,137 @@
+---
+import { designers, designerRoot, designerPath } from '../lib/oshen-designers';
+import { boothHtml } from '../../public/designers/js/ui/booth-markup.js';
+import { designerMetadata, designerStructuredData, serializeStructuredData } from '../../public/designers/js/profile-seo.js';
+import { hallPageForCode } from '../../public/designers/js/hall-pages.js';
+import WorkShareDialog from '../components/WorkShareDialog.astro';
+interface Props { designerId?: string; hallCode?: string }
+const designer = designers.find(profile => profile.id === Astro.props.designerId);
+const hall = designer ? null : hallPageForCode(Astro.props.hallCode);
+const listedDesigners = hall ? designers.filter(profile => profile.hallCode === hall.code) : designers;
+const metadata = designer && designerMetadata(designer.store);
+const title = metadata ? metadata.title : hall?.title || '發光的設計師｜發光的地方';
+const shareTitle = metadata ? metadata.shareTitle : title;
+const description = metadata ? metadata.description : hall?.description || '逛發光的設計師市集，瀏覽設計師介紹、創作作品與官方社群。透過設計師列表、地圖與互動攤位，找到喜歡的創作者。';
+const canonical = new URL(designer ? designerPath(designer.id) : hall?.path || designerRoot, Astro.site).href;
+const structuredData = designer && designerStructuredData(designer.store, designer.booth, canonical, new URL(designerRoot, Astro.site).href);
+const exhibitionImage = new URL('/designers/assets/exhibition-og.png?v=19f09d0c7c56f7bd', Astro.site).href;
+const shareImage = new URL(designer?.og?.url || hall?.image || exhibitionImage, Astro.site).href;
+const shareImageAlt = designer?.og?.alt || hall?.alt || '洋流設計師展逛攤畫面';
+---
+<!doctype html>
+<html lang="zh-Hant-TW" data-designer-profile={designer?.id}>
+<head>
+<meta charset="utf-8">
+<script is:inline>
+  if (!document.documentElement.hasAttribute('data-designer-profile')) {
+    document.documentElement.classList.add('designer-booting');
+  }
+</script>
+<style is:global>
+  #stage-loading { display: none; min-height: 0; flex-direction: column; align-items: center; justify-content: center; gap: 16px; background: var(--paper-2); text-align: center; }
+  #stage-loading img { display: block; width: min(600px, calc(100% - 32px)); height: auto; max-height: calc(100svh - 150px); object-fit: contain; }
+  #stage-loading p { margin: 0; color: var(--green-deep); font-weight: 700; }
+  #stage-loading .designer-loading-sr { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+  html.designer-booting #stage-loading { display: flex; }
+  html.designer-booting #stage-walk,
+  html.designer-booting #stage-list,
+  html.designer-booting #stage-map { display: none !important; }
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{title}</title>
+<link rel="canonical" href={canonical}>
+<meta name="theme-color" content="#f82970">
+<link rel="icon" href="data:,">
+{description && <meta name="description" content={description}>}
+<meta property="og:type" content="website">
+<meta property="og:url" content={canonical}>
+<meta property="og:site_name" content="發光的地方">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:title" content={shareTitle}>
+{description && <meta property="og:description" content={description}>}
+<meta property="og:image" content={shareImage}>
+<meta property="og:image:alt" content={shareImageAlt}>
+<meta property="og:image:type" content={designer?.og?.type || hall?.type || 'image/png'}>
+<meta property="og:image:width" content={designer?.og?.width || hall?.width || 2622}>
+<meta property="og:image:height" content={designer?.og?.height || hall?.height || 1206}>
+<meta name="twitter:card" content={hall ? 'summary_large_image' : 'summary'}>
+<meta name="twitter:title" content={shareTitle}>
+{description && <meta name="twitter:description" content={description}>}
+<meta name="twitter:image" content={shareImage}>
+<meta name="twitter:image:alt" content={shareImageAlt}>
+{structuredData && <script is:inline id="designer-structured-data" type="application/ld+json" set:html={serializeStructuredData(structuredData)} />}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<link rel="stylesheet" href="/designers/css/market.css">
+<link rel="stylesheet" href="/designers/css/booth.css?v=20261110-work-mobile">
+<link rel="stylesheet" href="/designers/css/work.css?v=20261110-social-share">
+<link rel="stylesheet" href="/designers/css/map.css">
+<link rel="stylesheet" href="/designers/css/list.css?v=20261112-designer-work-views">
+<link rel="stylesheet" href="/designers/css/closed.css">
+<link rel="stylesheet" href="/designers/css/floating-nav.css?v=20261101">
+</head>
+<body>
+<div class="app">
+  <details class="floating-nav" id="floating-nav">
+    <summary class="floating-nav-toggle" aria-label="導覽選單"><span aria-hidden="true">☰</span> 選單</summary>
+    <nav class="bar" aria-label="導覽選單">
+    <a class="plaque" href="#/walk" aria-label="發光的設計師">
+      <span>發光的設計師</span>
+    </a>
+    <div class="modes" role="group" aria-label="逛法">
+      <button type="button" data-mode="walk" aria-pressed="true">逛場子</button>
+      <button type="button" data-mode="list" aria-pressed="false">設計師列表</button>
+      <button type="button" data-mode="map" aria-pressed="false">設計師地圖</button>
+    </div>
+    <span class="tag close-tag" id="close-tag" hidden></span>
+    <a class="link-btn" href="/stage/">發光的舞台</a>
+    <a class="link-btn" href="/">首頁</a>
+    <a class="link-btn back-to-map" href="/stores/">返回店家地圖</a>
+    </nav>
+  </details>
+
+  <main id="stage-loading" aria-label="載入市集">
+    {!designer && <img src="/designers/assets/loading-market-v1.webp?v=a8357891a028f24f" width="960" height="640" alt="" fetchpriority="high" decoding="async" />}
+    <p id="designer-loading-message" class="designer-loading-sr" role="status">設計師市集，載入中，馬上來</p>
+    <button id="designer-loading-retry" type="button" class="btn" hidden>重新載入</button>
+  </main>
+  <main class="stage" id="stage-walk" hidden>
+    <canvas id="walk-canvas" tabindex="0" aria-label="逛場子畫面：按住拖著小人走，點設計師即可查看介紹"></canvas>
+    <button type="button" class="where" id="btn-where"><b id="where-hall">設計師館</b><span id="where-aisle"></span><span class="where-switch">換館</span></button>
+    <div class="status"><span class="tag tag-zone" id="status-zone"></span><span class="tag" id="status-count"></span></div>
+    <p class="hint" id="hint">按住畫面拖著小人走，點一下就走過去，點設計師查看介紹，點路人或對話框可收聲。電腦可以用方向鍵。</p>
+    <div class="dock">
+      <button type="button" class="btn btn-primary" id="btn-browse" disabled>靠近即可認識設計師</button>
+      <button type="button" class="btn" id="btn-next">下一攤</button>
+      <button type="button" class="btn" id="btn-find-designer" aria-controls="stage-list">找設計師</button>
+    </div>
+  </main>
+
+  <main class="list-mode" id="stage-list" tabindex="-1"><div class="ls-wrap">
+  {designer ? <article id="static-designer-profile" aria-label={designer.name} set:html={boothHtml(designer.booth, designer.store, { profile: true, staticProfile: true })} /> : <><h1 class="ls-title">{hall?.name || '設計師列表'}</h1><div class="ls-grid">{listedDesigners.map(profile => <article class="lc"><div class="lc-heading"><h3 class="lc-name"><a class="lc-open" href={designerPath(profile.id)}>{profile.name}</a></h3></div><p class="lc-owner">{profile.store.category} {profile.name}</p><p class="lc-zone">{profile.hallName}・{profile.store.category}</p><a class="btn btn-primary lc-go" href={designerPath(profile.id)}>{profile.works.length ? '看作品' : '看介紹'}</a></article>)}</div></>}
+  </div></main>
+  <main class="map-mode" id="stage-map" hidden></main>
+  <footer class="app-footer">
+    <small class="footer-full">© 2026 發光的地方｜收錄之設計師資料、作品與商標，其權利歸各設計師或原權利人所有。</small>
+    <details class="footer-details"><summary>© 2026 發光的地方・版權資訊</summary><small>收錄之設計師資料、作品與商標，其權利歸各設計師或原權利人所有。</small></details>
+  </footer>
+  <div class="toast" id="toast" role="status" popover="manual"></div>
+</div>
+
+<dialog id="dlg-booth" class="dlg" aria-labelledby="booth-title"></dialog>
+<dialog id="designer-share-dialog" class="dlg designer-share-dialog" aria-labelledby="designer-share-title" aria-describedby="designer-share-description">
+  <div class="dlg-head"><h2 id="designer-share-title">分享設計師</h2><button type="button" class="dlg-close" aria-label="關閉分享">×</button></div>
+  <div class="dlg-body">
+    <p id="designer-share-description">掃描 QRCode，開啟這位設計師的本站連結。</p>
+    <img id="designer-share-qr" width="264" height="264" alt="" hidden>
+    <a id="designer-share-url" target="_blank" rel="noopener noreferrer"></a>
+    <div class="designer-share-actions"><button id="designer-share-copy" type="button" class="btn btn-primary" autofocus>複製連結</button><form method="dialog"><button class="btn">關閉</button></form></div>
+    <p id="designer-share-status" class="muted" role="status" aria-live="polite"></p>
+  </div>
+</dialog>
+
+<WorkShareDialog />
+<script is:inline type="module" src="/designers/js/app.js?v=20261112-designer-work-views"></script>
+</body>
+</html>

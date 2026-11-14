@@ -1,0 +1,50 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+
+const entries = [
+  { route: 'stores', title: '發光的店家', description: '找一間想走進去的店', cover: 'store.webp', width: 600, height: 400 },
+  { route: 'designers', title: '發光的設計師', description: '逛逛設計師與他們的作品', cover: 'designer.webp', width: 600, height: 400 },
+  { route: 'stage', title: '發光的舞台', description: '聽一首歌，看一場演出', cover: 'stage.webp', width: 320, height: 180 },
+];
+---
+<SiteLayout title="發光的地方" description="在發光的地方，找店家、逛設計師的作品、看舞台演出。">
+  <script is:inline slot="head">
+    const oldLocation = /^#(stores|designers|stage)(?:\/([a-z0-9-]+)(?:\/([a-z0-9-]+))?)?$/.exec(location.hash);
+    if (oldLocation) {
+      const [, section, detail, work] = oldLocation;
+      let target = `/${section}/`;
+      if (section === 'designers' && detail) {
+        if (!work && ['walk', 'list', 'map'].includes(detail)) {
+          if (detail !== 'walk') target += `#/${detail}`;
+        } else {
+          target += `${detail}/`;
+          if (work) target += `works/${work}/`;
+        }
+      }
+      location.replace(target);
+    }
+  </script>
+  <section id="home" class="hero" aria-labelledby="home-title">
+    <img class="hero-image" src="/media/tainan-evening.webp" width="1774" height="887" alt="" fetchpriority="high" />
+    <div class="hero-inner page-width">
+      <span class="hero-mark" aria-hidden="true">✦</span>
+      <h1 id="home-title">發光的地方</h1>
+      <p class="hero-quote">我相信光<br />是為了巷弄間的歡騰，不是為了墳前的孤寂</p>
+      <a class="hero-action" href="#explore">開始探索 <span aria-hidden="true">↓</span></a>
+    </div>
+  </section>
+  <section id="explore" class="explore page-width" aria-labelledby="explore-title">
+    <div class="section-heading"><h2 id="explore-title">尋光去</h2></div>
+    <div class="entry-grid">
+      {entries.map(({ route, title, description, cover, width, height }) => (
+        <a class="entry" href={`/${route}/`}>
+          <div class="entry-photo"><img src={`/media/${cover}`} width={width} height={height} alt="" /></div>
+          <div class="entry-info">
+            <div><h3>{title}</h3><p>{description}</p></div>
+            <span class="entry-arrow" aria-hidden="true">↗</span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+</SiteLayout>

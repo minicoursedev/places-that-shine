@@ -1,0 +1,660 @@
+{
+  "wolfsignal-tw": {
+    "url": "/designers/assets/og/wolfsignal-tw.jpg?v=3972d4a690fd40e8",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "野狼信號｜Logo、名字"
+  },
+  "tigoon-788": {
+    "url": "/designers/assets/og/tigoon-788.jpg?v=39caf60cf9334b14",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "TIGOON 天滾宮｜Logo、名字與簡介"
+  },
+  "vincent-atu": {
+    "url": "/designers/assets/og/vincent-atu.jpg?v=e37fc8b76b454042",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "ATU｜Logo、名字與簡介"
+  },
+  "kting-hoooo": {
+    "url": "/designers/assets/og/kting-hoooo.jpg?v=1128649725f4637e",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "Sou Ho｜Logo、名字與簡介"
+  },
+  "koi-design-studio": {
+    "url": "/designers/assets/og/koi-design-studio.jpg?v=663e9189b33108fb",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "Koi Design Studio 扣乙図設｜Logo、名字與簡介"
+  },
+  "lakubox": {
+    "url": "/designers/assets/og/lakubox.jpg?v=f56f80dc1a756bb9",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "駱 乃康 Lo NaiKang｜Logo、名字與簡介"
+  },
+  "giko-ig": {
+    "url": "/designers/assets/og/giko-ig.jpg?v=c29909ed6cd40c52",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "GIKO吉可小賣部｜招財木牌·台灣文字設計｜Logo、名字與簡介"
+  },
+  "axmonart": {
+    "url": "/designers/assets/og/axmonart.jpg?v=d2be41314a154bd7",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "顧紫蝶 | 阿猛。AxMon手繪工作室｜Logo、名字與簡介"
+  },
+  "suede-ydmd": {
+    "url": "/designers/assets/og/suede-ydmd.jpg?v=f37ebc5eb1f5f7e7",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "皮皮手作🎗️｜Logo、名字與簡介"
+  },
+  "dearestmiranda": {
+    "url": "/designers/assets/og/dearestmiranda.jpg?v=cf683c6915208108",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "米蘭達｜Logo、名字"
+  },
+  "theaya1108": {
+    "url": "/designers/assets/og/theaya1108.jpg?v=c835cf70d7cccd32",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "AYA🌙 全糖腐女中心｜Logo、名字與簡介"
+  },
+  "hashimotoarina": {
+    "url": "/designers/assets/og/hashimotoarina.jpg?v=563eb23c9d1da060",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "Arina Hashimoto｜Logo、名字與簡介"
+  },
+  "fabliansohappy": {
+    "url": "/designers/assets/og/fabliansohappy.jpg?v=5292200a592d4820",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "LiAn｜Logo、名字與簡介"
+  },
+  "yuan-art-space": {
+    "url": "/designers/assets/og/yuan-art-space.jpg?v=5abbbb5af4e546a3",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "Yuan Art & Space | 沅藝術空間｜Logo、名字與簡介"
+  },
+  "liangbo-wang": {
+    "url": "/designers/assets/og/liangbo-wang.jpg?v=cded471307a75e49",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "王亮博｜Logo、名字與簡介"
+  },
+  "clairehandwriting": {
+    "url": "/designers/assets/og/clairehandwriting.jpg?v=22b3f30db1f7a44d",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "claire chien｜Logo、名字與簡介"
+  },
+  "hope-huang17": {
+    "url": "/designers/assets/og/hope-huang17.jpg?v=c0cec4fa1a2f9f82",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "黃千倫｜Logo、名字與簡介"
+  },
+  "coya-art": {
+    "url": "/designers/assets/og/coya-art.jpg?v=f5eed4dfbeaf8ba8",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "COYA · 插畫｜Logo、名字與簡介"
+  },
+  "vantablack-yu": {
+    "url": "/designers/assets/og/vantablack-yu.jpg?v=c5be948e6121c71b",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "劉聿·Yu｜悪人刺青｜Logo、名字與簡介"
+  },
+  "mu-von": {
+    "url": "/designers/assets/og/mu-von.jpg?v=eeadeb272a1238bf",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "MU｜Logo、名字與簡介"
+  },
+  "angelake": {
+    "url": "/designers/assets/og/angelake.jpg?v=0ef828ce41d950fb",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "柯柯Angela Ke｜Logo、名字與簡介"
+  },
+  "yang-liu": {
+    "url": "/designers/assets/og/yang-liu.jpg?v=2ef9e4ae742dff86",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "洋流｜Logo、名字"
+  },
+  "rio-ouo": {
+    "url": "/designers/assets/og/rio-ouo.jpg?v=478a3892d08ba3b2",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "Rio.ouo 哩喔｜Logo、名字與簡介"
+  },
+  "renzai-3-2-4": {
+    "url": "/designers/assets/og/renzai-3-2-4.jpg?v=fadace8805406d46",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "REN⚡️｜Logo、名字與簡介"
+  },
+  "halfawakedept": {
+    "url": "/designers/assets/og/halfawakedept.jpg?v=7de3b6a1555687de",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "半醒出張所｜Logo、名字與簡介"
+  },
+  "shen-illust": {
+    "url": "/designers/assets/og/shen-illust.jpg?v=a9258e81d188a41b",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "Shen Chia Hua｜Logo、名字與簡介"
+  },
+  "waneng-huang": {
+    "url": "/designers/assets/og/waneng-huang.jpg?v=d4c563df00e3c00a",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "Waneng____huang｜Logo、名字與簡介"
+  },
+  "rareone-design": {
+    "url": "/designers/assets/og/rareone-design.jpg?v=0611cc083713b381",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "奇物設計 rare one design｜Logo、名字"
+  },
+  "olopaskoni": {
+    "url": "/designers/assets/og/olopaskoni.jpg?v=ff610162484bb1c5",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "Lopas｜Logo、名字與簡介"
+  },
+  "tr-hsin-yi": {
+    "url": "/designers/assets/og/tr-hsin-yi.jpg?v=3d94320313a06081",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "我喜歡工作室｜Logo、名字與簡介"
+  },
+  "moonlight432hz": {
+    "url": "/designers/assets/og/moonlight432hz.jpg?v=8e526790a448fa0b",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "慢來｜Logo、名字與簡介"
+  },
+  "ys0u0": {
+    "url": "/designers/assets/og/ys0u0.jpg?v=f3c8e9925601622c",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "Cindy｜Logo、名字與簡介"
+  },
+  "pontiff-tattoo": {
+    "url": "/designers/assets/og/pontiff-tattoo.jpg?v=1e84c6c729aa11ad",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "藏匿處刺青 光頭 🔥🔥｜Logo、名字與簡介"
+  },
+  "kylekuo0215": {
+    "url": "/designers/assets/og/kylekuo0215.jpg?v=f770f72e924e19f2",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "Kyle Kuo｜Logo、名字"
+  },
+  "mousebearhello": {
+    "url": "/designers/assets/og/mousebearhello.jpg?v=0ae2c24f8441972b",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "熊熊鼠｜Logo、名字與簡介"
+  },
+  "water-art-design": {
+    "url": "/designers/assets/og/water-art-design.jpg?v=79ca4834bf130a6a",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "白開水 設計 | Water.Art.Design.｜Logo、名字與簡介"
+  },
+  "fourspirits": {
+    "url": "/designers/assets/og/fourspirits.jpg?v=7db98ec3c0910456",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "閆方陳｜Logo、名字與簡介"
+  },
+  "mizshop18": {
+    "url": "/designers/assets/og/mizshop18.jpg?v=cad44ed67601cadb",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "米子文化設計｜Logo、名字與簡介"
+  },
+  "naiewgnaws": {
+    "url": "/designers/assets/og/naiewgnaws.jpg?v=74760cf53433eb48",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "naiewgnaw’s｜Logo、名字與簡介"
+  },
+  "aten002": {
+    "url": "/designers/assets/og/aten002.jpg?v=22bb3ceb07d7c6a4",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "亞頓設計｜Logo、名字與簡介"
+  },
+  "im-hanburger": {
+    "url": "/designers/assets/og/im-hanburger.jpg?v=6b9f1e78e23d6c7e",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "Han_burger｜Logo、名字與簡介"
+  },
+  "photochicken-72": {
+    "url": "/designers/assets/og/photochicken-72.jpg?v=0c065ba5fd43cb6e",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "Jackey Wu｜Logo、名字與簡介"
+  },
+  "gom-boc-visual": {
+    "url": "/designers/assets/og/gom-boc-visual.jpg?v=aac500ea8bcb45d0",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "GOM.BOC｜Logo、名字與簡介"
+  },
+  "woo4-woo": {
+    "url": "/designers/assets/og/woo4-woo.jpg?v=ccb8cfdb4464ae40",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "woo4_.woo｜Logo、名字與簡介"
+  },
+  "neko-0421": {
+    "url": "/designers/assets/og/neko-0421.jpg?v=63e7180e11a31c29",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "黑毛｜Logo、名字與簡介"
+  },
+  "takashi-1450": {
+    "url": "/designers/assets/og/takashi-1450.jpg?v=8a8e968c85b4725b",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "TAKASHI｜Logo、名字與簡介"
+  },
+  "zinger-8-88": {
+    "url": "/designers/assets/og/zinger-8-88.jpg?v=35e0ef7278a28fe0",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "zinger_8_88｜Logo、名字與簡介"
+  },
+  "awaawa-no-hibi": {
+    "url": "/designers/assets/og/awaawa-no-hibi.jpg?v=918997364200965e",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "awaawa.no.hibi｜Logo、名字"
+  },
+  "dipsydisplay": {
+    "url": "/designers/assets/og/dipsydisplay.jpg?v=34d0a711c2246bdd",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "迪普西 Dipsy｜Logo、名字與簡介"
+  },
+  "nie-snapshot": {
+    "url": "/designers/assets/og/nie-snapshot.jpg?v=c0ff4bff60292a19",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "妮｜Logo、名字與簡介"
+  },
+  "afoxtreetw": {
+    "url": "/designers/assets/og/afoxtreetw.jpg?v=b4d7e3f0499e5acf",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "阿狐與樹先生｜Logo、名字與簡介"
+  },
+  "midoli0213": {
+    "url": "/designers/assets/og/midoli0213.jpg?v=7eae2a7b14cd1815",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "Midoli｜Logo、名字與簡介"
+  },
+  "twczzn": {
+    "url": "/designers/assets/og/twczzn.jpg?v=c8ef515e74cc78f3",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "騎車豬豬｜Logo、名字與簡介"
+  },
+  "sep18-maker": {
+    "url": "/designers/assets/og/sep18-maker.jpg?v=6427856efaf89a56",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "Kimi｜Logo、名字與簡介"
+  },
+  "southvolunteerproject": {
+    "url": "/designers/assets/og/southvolunteerproject.jpg?v=b4d71e48a62c84ca",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "南方工作小組｜Logo、名字與簡介"
+  },
+  "wgundamcustom": {
+    "url": "/designers/assets/og/wgundamcustom.jpg?v=c48522e975017510",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "趙猫｜Logo、名字與簡介"
+  },
+  "alice-cat-holic": {
+    "url": "/designers/assets/og/alice-cat-holic.jpg?v=43d91f044ca8b764",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "Alice｜Logo、名字與簡介"
+  },
+  "jiala-beefnoodle": {
+    "url": "/designers/assets/og/jiala-beefnoodle.jpg?v=d6cdbabd8b6b1682",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "家辣麻辣鴨血｜Logo、名字與簡介"
+  },
+  "flower-6104": {
+    "url": "/designers/assets/og/flower-6104.jpg?v=66cc177f67ed1fcd",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "花花🌹｜Logo、名字與簡介"
+  },
+  "moonshow": {
+    "url": "/designers/assets/og/moonshow.jpg?v=d505f3a713b7fa73",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "林麓｜Logo、名字與簡介"
+  },
+  "crazyhead0311": {
+    "url": "/designers/assets/og/crazyhead0311.jpg?v=6605bd2b7a8339e4",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "Crazyhead ｜瘋狂腦迴路｜Logo、名字與簡介"
+  },
+  "taipeifallinlove": {
+    "url": "/designers/assets/og/taipeifallinlove.jpg?v=4f0596ba6831ae3f",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "臺北Fall in love｜Logo、名字與簡介"
+  },
+  "dizz4valleywood": {
+    "url": "/designers/assets/og/dizz4valleywood.jpg?v=33ab92c53fcef920",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "Dizzy Duzz｜Logo、名字與簡介"
+  },
+  "arashi1326": {
+    "url": "/designers/assets/og/arashi1326.jpg?v=0b8aa94c7c060d70",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "Aancen｜Logo、名字與簡介"
+  },
+  "hua-hua-design": {
+    "url": "/designers/assets/og/hua-hua-design.jpg?v=26caedabca722f63",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "Hua Hua Design｜Logo、名字與簡介"
+  },
+  "miss-mimi2-0": {
+    "url": "/designers/assets/og/miss-mimi2-0.jpg?v=056327a4dcacf02a",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "Miss Mimi｜Logo、名字與簡介"
+  },
+  "cumo4966": {
+    "url": "/designers/assets/og/cumo4966.jpg?v=b7e92de85e7f98db",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "異端小Q｜Logo、名字與簡介"
+  },
+  "poe-design": {
+    "url": "/designers/assets/og/poe-design.jpg?v=88a07eb6d739bc52",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "波式 Poe Design｜Logo、名字與簡介"
+  },
+  "chuck8031": {
+    "url": "/designers/assets/og/chuck8031.jpg?v=bd0569a4adf39c1f",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "chuck8031｜Logo、名字與簡介"
+  },
+  "yeloshi0628": {
+    "url": "/designers/assets/og/yeloshi0628.jpg?v=e85d60152c3d8f56",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "Ning Fang｜Logo、名字與簡介"
+  },
+  "kaede1623": {
+    "url": "/designers/assets/og/kaede1623.jpg?v=e7e41c7c2eb350ad",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "子魚｜Logo、名字與簡介"
+  },
+  "nichsandy1004": {
+    "url": "/designers/assets/og/nichsandy1004.jpg?v=1cfff1afb91311ce",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "陳芷嫻｜Logo、名字與簡介"
+  },
+  "zhuying-tw": {
+    "url": "/designers/assets/og/zhuying-tw.jpg?v=11eadc4ee770f99b",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "築映 ZHUYING｜3D列印設計｜Logo、名字與簡介"
+  },
+  "shaopingmeng": {
+    "url": "/designers/assets/og/shaopingmeng.jpg?v=03fddb9d8b581dfc",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "shaopingmeng｜作品圖片、名字"
+  },
+  "catsfang": {
+    "url": "/designers/assets/og/catsfang.jpg?v=b5d5643578213d6c",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "catsfang｜作品圖片、名字"
+  },
+  "qi-jun-1608": {
+    "url": "/designers/assets/og/qi-jun-1608.jpg?v=24b86ae4c45a165f",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "qi_jun_1608｜作品圖片、名字"
+  },
+  "wendy7668yahoo-com-tw": {
+    "url": "/designers/assets/og/wendy7668yahoo-com-tw.jpg?v=af3999ce6d114869",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "wendy7668yahoo.com.tw｜Logo、名字與簡介"
+  },
+  "chamber-hiroto": {
+    "url": "/designers/assets/og/chamber-hiroto.jpg?v=6d430fcebc6afbf0",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "Hiroto｜Logo、名字與簡介"
+  },
+  "kewpiewu": {
+    "url": "/designers/assets/og/kewpiewu.jpg?v=17ab60c8235a5b41",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "吳奕裴｜Logo、名字"
+  },
+  "shua-liao": {
+    "url": "/designers/assets/og/shua-liao.jpg?v=5dc1ffa0d7ec7c70",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "書亞 SHUA｜Logo、名字與簡介"
+  },
+  "suyu-art": {
+    "url": "/designers/assets/og/suyu-art.jpg?v=6210a94c43aad5df",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "suyu_art 兔子麻糬點心舖｜Logo、名字與簡介"
+  },
+  "xiekamaoshi": {
+    "url": "/designers/assets/og/xiekamaoshi.jpg?v=597325279816ef80",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "諧咖貓室｜Logo、名字與簡介"
+  },
+  "cute-bambis": {
+    "url": "/designers/assets/og/cute-bambis.jpg?v=b888bc31e152a3de",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "BambiFarm•班比牧場｜Logo、名字與簡介"
+  },
+  "wenchanee": {
+    "url": "/designers/assets/og/wenchanee.jpg?v=862744d5f4414018",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "筆獺君｜Logo、名字與簡介"
+  },
+  "kingsonartworks": {
+    "url": "/designers/assets/og/kingsonartworks.jpg?v=33a9891a6ff44138",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "Kingson Artworks｜Logo、名字與簡介"
+  },
+  "cat-asanehi": {
+    "url": "/designers/assets/og/cat-asanehi.jpg?v=e6dd6c3a49599fb6",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "@cat_asanehi｜Logo、名字與簡介"
+  },
+  "machiko324": {
+    "url": "/designers/assets/og/machiko324.jpg?v=d5dbbdbc4b1fcab9",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "雪路／YUKIJI｜Logo、名字與簡介"
+  },
+  "yesiangwun": {
+    "url": "/designers/assets/og/yesiangwun.jpg?v=d82b87598aa69944",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "湘雯｜Logo、名字與簡介"
+  },
+  "pokeno255": {
+    "url": "/designers/assets/og/pokeno255.jpg?v=84d747c745345631",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "pokeno255｜Logo、名字與簡介"
+  },
+  "hittoushimatora8964": {
+    "url": "/designers/assets/og/hittoushimatora8964.jpg?v=219d15470c8fd09f",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "島虎万事屋-筆頭｜Logo、名字與簡介"
+  },
+  "lulala0606": {
+    "url": "/designers/assets/og/lulala0606.jpg?v=04feeef7fa985a5b",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "SARAH LU 莎拉呂｜Logo、名字與簡介"
+  },
+  "isogashi-man": {
+    "url": "/designers/assets/og/isogashi-man.jpg?v=b1a2d3d7ec84e49c",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "文忙人。ISOGASHI｜Logo、名字與簡介"
+  },
+  "isweb200": {
+    "url": "/designers/assets/og/isweb200.jpg?v=f9e683346a2c74b7",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "自然色人文美學｜Logo、名字與簡介"
+  },
+  "boyealai": {
+    "url": "/designers/assets/og/boyealai.jpg?v=a2dbcf7cc825b18e",
+    "width": 1200,
+    "height": 630,
+    "type": "image/jpeg",
+    "alt": "賴 柏燁｜Logo、名字"
+  }
+}

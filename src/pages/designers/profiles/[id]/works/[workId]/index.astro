@@ -1,0 +1,11 @@
+---
+import { designerWorks } from '../../../../../../lib/oshen-designers';
+import { designerWorkPath } from '../../../../../../../public/designers/js/work-links.js';
+
+export function getStaticPaths() {
+  return designerWorks.map(({ designer, work }) => ({ params: { id: designer.id, workId: work.id } }));
+}
+
+const { id, workId } = Astro.params;
+return Astro.redirect(designerWorkPath(id, workId), 301);
+---

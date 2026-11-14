@@ -1,0 +1,162 @@
+// Designer dialog: profile, catalogue images, social links and share link.
+import { state, markVisited, findBoothIn, toast } from '../state.js';
+import { loadAisle, aisleOfBooth } from '../data.js?v=20261110-work-share';
+import { goToBooth, designerBoothUrl } from '../nav.js?v=20261110-profile-share-title';
+import { boothHtml, loadingHtml, failHtml } from './booth-markup.js?v=20261110-profile-share-title';
+import { designerHallRoot, designerWalkPath, resolveDesignerRoute, updateDesignerMetadata } from '../routes.js?v=20261110-profile-share-title';
+import { retryOriginal } from '../images.js';
+import { loadProducts, sampleProducts } from '../products.js?v=20261030-pinned-work';
+
+const dlg = () => document.getElementById('dlg-booth');
+
+// The designer currently shown in the dialog.
+let current = null;   // { boothId, booth, aisle }
+let openToken = 0;
+
+
+function paint() {
+  const d = dlg();
+  if (!d || !current) return;
+  const { booth, aisle } = current;
+  const store = aisle.stores?.[booth.store] || null;
+  const scroll = d.querySelector('.dlg-body')?.scrollTop || 0;
+  // Replace the static fallback only once the complete interactive profile is ready.
+  document.getElementById('static-designer-profile')?.remove();
+  d.innerHTML = boothHtml(booth, store, { profile: true });
+  const body = d.querySelector('.dlg-body');
+  if (body) body.scrollTop = scroll;
+}
+
+async function getAisleFor(boothId) {
+  const code = aisleOfBooth(boothId);
+  if (state.aisle && state.aisle.code === code) return state.aisle;
+  return loadAisle(code);
+}
+
+export async function openBooth(boothId) {
+  const d = dlg();
+  if (!d || !boothId) return;
+  const token = ++openToken;
+  current = null;
+  d.innerHTML = loadingHtml(boothId);
+  if (!d.open) d.showModal();
+
+  let aisle;
+  try {
+    aisle = await getAisleFor(boothId);
+  } catch (e) {
+    if (token !== openToken) return;
+    d.innerHTML = failHtml(boothId, '設計師資料載入失敗，請再試一次。');
+    return;
+  }
+  if (token !== openToken) return;
+  if (!aisle) { if (d.open) d.close(); return; }
+  let booth = findBoothIn(aisle, boothId);
+  if (!booth) {
+    d.innerHTML = failHtml(boothId, '找不到這位設計師。');
+    return;
+  }
+  const store = aisle.stores?.[booth.store];
+  if (store?.productsUrl) {
+    try {
+      const products = await loadProducts(store.productsUrl, booth.store);
+      booth = { ...booth, works: sampleProducts(products), total: products.length, randomSelection: true };
+    } catch {
+      booth = { ...booth, productsError: true };
+    }
+    if (token !== openToken) return;
+  }
+  current = { boothId, booth, aisle };
+  history.replaceState(null, '', designerBoothUrl(booth.store));
+  updateDesignerMetadata(store, booth);
+  paint();
+  if (!d.open) d.showModal();
+  d.querySelector('.dlg-close')?.focus();
+  markVisited(boothId);
+}
+
+function switchToWalk() {
+  const list = document.getElementById('stage-list');
+  if (list && !list.hidden) document.querySelector('.modes button[data-mode="walk"]')?.click();
+}
+
+async function shareDesigner(button) {
+  const share = button.closest('.bo-share');
+  const link = new URL(button.dataset.shareDesigner, location.href).href;
+  const status = share.querySelector('[role="status"]');
+  button.disabled = true;
+  status.textContent = '';
+  try {
+    const { qrcode } = await import('../../../vendor/qrcode-generator/qrcode-2.0.4.mjs');
+    if (!button.isConnected || (!dlg().open && !button.closest('#static-designer-profile'))) return;
+    const qr = qrcode(0, 'M');
+    qr.addData(link);
+    qr.make();
+    const name = button.closest('dialog, article').querySelector('h1, h2').textContent;
+    const shareDialog = document.getElementById('designer-share-dialog');
+    document.getElementById('designer-share-title').textContent = name;
+    const image = document.getElementById('designer-share-qr');
+    image.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(qr.createSvgTag({ cellSize: 6, margin: 24, scalable: true }));
+    image.alt = `${name} QR Code，掃描開啟 ${link}`;
+    image.hidden = false;
+    const url = document.getElementById('designer-share-url');
+    url.href = link;
+    url.textContent = link;
+    document.getElementById('designer-share-status').textContent = '';
+    shareDialog.showModal();
+  } catch {
+    status.textContent = '暫時無法產生 QRCode，請稍後再試。';
+  } finally {
+    button.disabled = false;
+  }
+}
+
+function wire() {
+  const d = dlg();
+  if (!d) return;
+  document.getElementById('static-designer-profile')?.addEventListener('click', event => {
+    const button = event.target.closest('[data-share-designer]');
+    if (button) shareDesigner(button);
+  });
+  d.addEventListener('click', e => {
+    const share = e.target.closest('[data-share-designer]');
+    if (share) { shareDesigner(share); return; }
+    const go = e.target.closest('[data-go]');
+    if (go) {
+      const id = go.dataset.go;
+      d.close();
+      switchToWalk();
+      goToBooth(id).catch(() => toast('換設計師失敗，請再試一次'));
+    }
+  });
+  // a cover that fails to load falls back to the halftone square
+  d.addEventListener('error', e => {
+    const img = e.target;
+    if (!(img instanceof HTMLImageElement)) return;
+    if (retryOriginal(img)) return;
+    const box = img.parentElement;
+    if (box?.classList.contains('bo-cover')) { box.classList.add('bo-cover-none'); img.remove(); }
+    else if (box?.classList.contains('bo-avatar')) { box.classList.add('bo-avatar-none'); img.remove(); }
+  }, true);
+  d.addEventListener('close', () => {
+    openToken++; current = null;
+    if (resolveDesignerRoute(new URL(location.href)).mode === 'designer') {
+      const returnPath = document.getElementById('stage-list').hidden
+        ? designerWalkPath(state.aisleCode)
+        : `${designerHallRoot(state.hallCode)}#/list`;
+      history.replaceState(null, '', returnPath);
+      updateDesignerMetadata();
+    }
+  });
+  document.getElementById('designer-share-copy').addEventListener('click', async () => {
+    const status = document.getElementById('designer-share-status');
+    try {
+      await navigator.clipboard.writeText(document.getElementById('designer-share-url').href);
+      status.textContent = '已複製連結';
+    } catch {
+      status.textContent = '無法自動複製，請長按或右鍵上方網址複製。';
+    }
+  });
+}
+
+wire();

@@ -1,0 +1,46 @@
+---
+import '../styles/site.css';
+
+interface Props {
+  title: string;
+  description: string;
+  active?: 'stores' | 'designers' | 'stage';
+}
+
+const { title, description, active } = Astro.props;
+const siteName = '發光的地方';
+const pageTitle = title === siteName ? title : `${title}｜${siteName}`;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const routes = [{ id: 'stores', label: '店家' }, { id: 'designers', label: '設計師' }, { id: 'stage', label: '舞台' }];
+---
+<!doctype html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f8f3e8" />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <title>{pageTitle}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;600;700&family=Noto+Serif+TC:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <slot name="head" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner page-width">
+        <a class="brand" href="/"><span class="brand-mark" aria-hidden="true">✦</span>{siteName}</a>
+        <nav class="site-nav" aria-label="網站導覽">
+          {routes.map(({ id, label }) => <a href={`/${id}/`} aria-current={active === id ? 'page' : undefined}>{label}</a>)}
+        </nav>
+      </div>
+    </header>
+    <main><slot /></main>
+    <footer class="site-footer">
+      <div class="site-footer-inner page-width">
+        <a class="brand" href="/"><span class="brand-mark" aria-hidden="true">✦</span>{siteName}</a>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import '../../styles/stage.css';
+---
+
+<SiteLayout title="發光的舞台" description="找一首歌，看一場演出。" active="stage">
+  <section class="directory page-width" aria-labelledby="stage-title">
+    <div class="directory-header">
+      <a class="back-link" href="/#explore"><span aria-hidden="true">←</span> 回探索首頁</a>
+      <h1 id="stage-title">發光的舞台</h1>
+    </div>
+    <div id="stage-content" aria-label="舞台影片目錄"><p role="status">正在載入舞台資料…</p></div>
+    <noscript><p>請開啟 JavaScript 以在本站瀏覽目錄。</p></noscript>
+  </section>
+</SiteLayout>
+
+<script>
+  import { mountStage } from '../../features/stage.js';
+
+  const gallery = document.querySelector<HTMLElement>('#stage-content');
+  if (gallery) void mountStage(gallery);
+</script>
