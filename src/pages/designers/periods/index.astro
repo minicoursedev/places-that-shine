@@ -2,7 +2,7 @@
 import SiteLayout from '../../../layouts/SiteLayout.astro';
 ---
 
-<SiteLayout title="發光的設計師" description="從2026洋流時期的市集探索設計師與作品。" active="designers">
+<SiteLayout title="發光的設計師" description="按時期探索發光的設計師與作品。" active="designers">
   <section class="directory page-width" aria-labelledby="designer-period-title">
     <div class="directory-header">
       <a class="back-link" href="/#explore"><span aria-hidden="true">←</span> 回探索首頁</a>
@@ -18,13 +18,21 @@ import SiteLayout from '../../../layouts/SiteLayout.astro';
           <span class="entry-arrow" aria-hidden="true">→</span>
         </span>
       </a>
+      <div class="period-display">
+        <span class="entry-info period-label">
+          <img class="period-logo" src="/media/library/yuan-art-space/4.webp" width="637" height="800" alt="" />
+          <span>2025 隡子超人</span>
+        </span>
+      </div>
     </nav>
   </section>
 </SiteLayout>
 
 <style>
-  .period-menu { max-width: 28rem; }
+  .period-menu { display: grid; gap: .75rem; max-width: 28rem; }
+  .period-display { border: 1px solid var(--line); border-radius: 5px; background: #fdf8ef; }
   .period-menu .entry-info { font: 800 1.3rem/1.35 var(--serif); }
-  .period-label { display: flex; align-items: center; gap: .75rem; }
+  .period-label { display: flex; align-items: center; justify-content: flex-start; gap: .75rem; }
   .period-logo { display: block; flex: none; width: clamp(3.5rem, 17vw, 5.5rem); height: auto; border-radius: 3px; }
+  .period-display .period-logo { aspect-ratio: 256 / 181; object-fit: contain; }
 </style>
