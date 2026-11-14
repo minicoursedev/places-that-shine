@@ -691,7 +691,10 @@
     {
       "id": "yuan-art-space",
       "name": "Yuan Art & Space | 沅藝術空間",
-      "additionalHalls": ["S", "B"],
+      "additionalHalls": [
+        "S",
+        "B"
+      ],
       "description": "跌跌撞撞的初級大人🥲\n努力畫圖、場地租借",
       "social": {
         "fb": "https://www.facebook.com/profile.php?id=100051575187294",
@@ -3640,7 +3643,9 @@
     {
       "id": "kewpiewu",
       "name": "吳奕裴",
-      "additionalHalls": ["B"],
+      "additionalHalls": [
+        "B"
+      ],
       "category": "設計師",
       "description": "",
       "entityType": "Person",
@@ -4544,6 +4549,76 @@
           "id": "work-f875f993ca7c4cc38b4fd9ff8da275e0",
           "alt": "新北活動視覺社群頭像設計",
           "url": "/media/library/boyealai/6.webp"
+        }
+      ]
+    },
+    {
+      "id": "marskino0811",
+      "name": "腦開",
+      "category": "設計師",
+      "description": "插畫、漫畫\n有需要的\n可到臉書搜尋【腦開】私訊洽談\n也歡迎支持者抖內贊助🤝",
+      "social": {
+        "fb": "https://www.facebook.com/profile.php?id=100083101641638",
+        "threads": "https://www.threads.com/@marskino0811",
+        "ig": "",
+        "web": "https://marskino0811.oen.tw/"
+      },
+      "verification": true,
+      "disabled": false,
+      "logo": {
+        "url": "/media/library/marskino0811/logo.webp?v=9e58432337621d74",
+        "source": "https://www.threads.com/@marskino0811",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-14",
+        "note": "官方 Threads 個人檔案頭像，已核對作者頭像並確認 HTTPS 圖片可讀取。",
+        "originalUrl": "https://scontent-lax3-1.cdninstagram.com/v/t51.2885-19/442678382_766522232322023_1612682398483134934_n.jpg?stp=dst-jpg_s640x640_tt6&_nc_cat=105&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=b3fa00&_nc_ohc=BhWwBDcvBkoQ7kNvwGjxNJf&_nc_oc=AdqfdrL4Nzyfg98KXFrZaxi8doXL-ioiHETwDB0edkdEb-o2mc4-DKnhELaMVnSPjL0&_nc_zt=24&_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_ss=7920f&oh=00_AQQf3-uE9AOx0plt0wvlxdcAKWNfMOYWMCGKWILnJHYFjg&oe=6AFE25AF"
+      },
+      "productImages": [
+        {
+          "url": "/media/library/marskino0811/1.webp?v=ded922a7b2fb90a8",
+          "alt": "腦開作品照片 1",
+          "source": "https://www.threads.com/@marskino0811/post/DftTSCVCW7B/media",
+          "checkedAt": "2026-11-14",
+          "note": "使用者提供，指定為此設計師作品照片；圖片取自指定 Threads 貼文。",
+          "id": "work-1dbfb0c3b44740daa2260bb0b20ed4fa",
+          "originalUrl": "https://scontent-lax3-2.cdninstagram.com/v/t51.82787-15/900765603_17999982066109108_1723833746895752926_n.webp?_nc_cat=105&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTk2MjA0MzkwMTE3NzUzNw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMTgwMC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=j7osfLCnW5oQ7kNvwHljR5E&_nc_oc=AdpUbgsYkzpcnZOEOOJuvcwcrySe5PgU-UMZyWmUMh26VVf53_Ch1TpAjiOexR_la-g&_nc_zt=23&_nc_ht=scontent-lax3-2.cdninstagram.com&_nc_gid=wzIoApXXw8c_KXUKXtMzzQ&_nc_ss=7920f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQQDW9fTG6oK6DQa0Wtk-wBPYxnVCrAYVHvzBN6HnCklDg&oe=6AFE087F"
+        },
+        {
+          "url": "/media/library/marskino0811/2.webp?v=2a676bbc62825759",
+          "alt": "腦開作品照片 2",
+          "source": "https://www.threads.com/@marskino0811/post/DfSMkROCZbu/media",
+          "checkedAt": "2026-11-14",
+          "note": "使用者提供，指定為此設計師作品照片；圖片取自指定 Threads 貼文。",
+          "id": "work-2e64d10d95ee4c959ebd866e69846608",
+          "originalUrl": "https://scontent-lax3-1.cdninstagram.com/v/t51.82787-15/886754955_17998350555109108_4051091106929999533_n.webp?_nc_cat=106&_nc_map=urlgen_bucketless&ig_cache_key=NDAyMjMzMjY4NjE0MzY5MDQ3OA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMTI3OC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=6D2Sc4sKPi8Q7kNvwG5d23F&_nc_oc=AdoKJzp0d9YuUgQocHBs7BE5xiR8b5rUl1apzo7kGD-SottYlnne2OyzJsd0Kzqw7Oo&_nc_zt=23&_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_gid=o5KwSC-CWGk2xzLSyD5NHg&_nc_ss=7920f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQQjFqpRJ0Dt-1F4arDX-wG_Dn4dKX5gH5nZVs1HOzOrKg&oe=6AFE266F"
+        },
+        {
+          "url": "/media/library/marskino0811/3.webp?v=3a254e059d4cb779",
+          "alt": "腦開作品照片 3",
+          "source": "https://www.threads.com/@marskino0811/post/De_3d2wk9Tt/media",
+          "checkedAt": "2026-11-14",
+          "note": "使用者提供，指定為此設計師作品照片；圖片取自指定 Threads 貼文。",
+          "id": "work-ccc5ab6f27204ab386650f4df6bb8632",
+          "originalUrl": "https://scontent-lax3-2.cdninstagram.com/v/t51.82787-15/861511099_17996929968109108_3399896271291103700_n.webp?_nc_cat=102&_nc_map=urlgen_bucketless&ig_cache_key=NDAxNzE3MzMzNjg1Nzc2MTAwNQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMTI0MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=-iOuqBGrf0gQ7kNvwHUTZ44&_nc_oc=AdrKnw5BjPgBk2off4ZAcnbKQPflUqqDWjpnHrPtoP2lerGFdvd0FURni-GnTxeYcw8&_nc_zt=23&_nc_ht=scontent-lax3-2.cdninstagram.com&_nc_gid=kbumyhbThIE0--nHs--zYQ&_nc_ss=7920f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQQy_RM_I5cuwMxpBv9tbo1p7mgLReqNNXadEOjU-OMLaQ&oe=6AFE095E"
+        },
+        {
+          "url": "/media/library/marskino0811/4.webp?v=5a25be86703c8fff",
+          "alt": "腦開作品照片 4",
+          "source": "https://www.threads.com/@marskino0811/post/De_UfV7E3ei/media",
+          "checkedAt": "2026-11-14",
+          "note": "使用者提供，指定為此設計師作品照片；圖片取自指定 Threads 貼文。",
+          "id": "work-aa096656371d4793bdbdf5621dcff19f",
+          "originalUrl": "https://scontent-lax7-1.cdninstagram.com/v/t51.82787-15/867534780_17996888847109108_5643849322061967220_n.webp?_nc_cat=100&_nc_map=urlgen_bucketless&ig_cache_key=NDAxNzAxOTUwNzQxMTQ4MjUzMA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMTI0MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=ov09rrExIIIQ7kNvwFGRGWm&_nc_oc=AdrwjrFas1u9URY5BCY04oLkY60Bnyz5sCpdfBX1h8ZarY13pZ5Ye6fPY2GuACQnwKI&_nc_zt=23&_nc_ht=scontent-lax7-1.cdninstagram.com&_nc_gid=W4JVCngR41m6LU1lj53gkg&_nc_ss=7920f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQTOUlUmQxgGRU1p4vZyxx_1kvTIySIktmXPlpzFwPEKfQ&oe=6AFE2ED1"
+        },
+        {
+          "url": "/media/library/marskino0811/5.webp?v=e44194d8594242fc",
+          "alt": "腦開作品照片 5",
+          "source": "https://www.threads.com/@marskino0811/post/De_HAVXE8TG/media",
+          "checkedAt": "2026-11-14",
+          "note": "使用者提供，指定為此設計師作品照片；圖片取自指定 Threads 貼文。",
+          "id": "work-b2d45458a0da43c18617289feee2d0f3",
+          "originalUrl": "https://scontent-lax3-2.cdninstagram.com/v/t51.82787-15/859682394_17996878344109108_6637802878510777141_n.webp?_nc_cat=111&_nc_map=urlgen_bucketless&ig_cache_key=NDAxNjk2MDIwMTg5OTA5OTMzNA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMTI0MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=bkJ15tfQKa0Q7kNvwE-0n5C&_nc_oc=AdqyoJH_5XiYQip7pu8OS8PP1cU8vcD4OedSyni_yPlLgXRXCqhmqXYmB4Ei_BbomIc&_nc_zt=23&_nc_ht=scontent-lax3-2.cdninstagram.com&_nc_gid=hw6yDgzlQcj45MYoPJzwzQ&_nc_ss=7920f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQRcDSbpDO_YQpEQLMu_v4XiM5w4Kn9AAmfYspg3fGL9tA&oe=6AFE2202"
         }
       ]
     }
