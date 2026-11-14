@@ -7,6 +7,7 @@ import { designerWorkPath } from '../../public/designers/js/work-links.js';
 
 const paths = [
   '/',
+  '/stores/',
   '/designers/periods/',
   '/designers/',
   ...hallPages.map(hall => hall.path),
