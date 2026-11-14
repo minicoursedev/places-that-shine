@@ -1,16 +1,35 @@
 ---
 import SiteLayout from '../../layouts/SiteLayout.astro';
+
+const title = '發光的店家';
+const description = '發光的店家（我們的洋流地圖）整理台灣各地的小店與生活服務，目前暫停服務。';
+const shareImage = new URL('/media/shining-stores-og.jpg', Astro.site);
+const shareImageAlt = '發光的店家。我相信光，是為了巷弄間的歡騰，不是為了墳前的孤寂。巷弄夜景與台灣夜間光點示意。';
 ---
 
 <SiteLayout
-  title="發光的店家｜我們的洋流地圖"
-  description="發光的店家（我們的洋流地圖）整理台灣各地的小店與生活服務，目前暫停服務。"
+  title={`${title}｜我們的洋流地圖`}
+  description={description}
   active="stores"
 >
+  <Fragment slot="head">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={new URL('/stores/', Astro.site)} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={shareImage} />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={shareImageAlt} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content={shareImage} />
+    <meta name="twitter:image:alt" content={shareImageAlt} />
+  </Fragment>
   <section class="directory page-width" aria-labelledby="stores-title">
     <div class="directory-header">
       <a class="back-link" href="/#explore"><span aria-hidden="true">←</span> 回探索首頁</a>
-      <h1 id="stores-title">發光的店家</h1>
+      <h1 id="stores-title">{title}</h1>
     </div>
     <p>發光的店家暫停服務。</p>
     <p>店家地圖原本用來查找台灣各地的在地小店與生活服務。</p>
