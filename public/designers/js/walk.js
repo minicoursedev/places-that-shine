@@ -187,12 +187,12 @@ export function createWalkView(canvas, { onNear = () => {}, onOpen = () => {}, o
   }
 
   // ---------- layout ----------
-  function signsOf(I) {
+  function signsOf(I, hallName) {
     const count = Math.max(1, Math.round(I.isl.booths.length / 3));
     const slot = I.isl.booths.length * BW / count;
     return Array.from({ length: count }, (_, i) => ({
-      cx: I.x0 + slot * (i + 0.5), maxW: Math.min(slot - 12, 250),
-      label: I.isl.zoneName || I.isl.zone || '',
+      cx: I.x0 + slot * (i + 0.5), maxW: clamp(slot - 12, 148, 250),
+      label: hallName,
     }));
   }
   function build(d) {
@@ -206,7 +206,7 @@ export function createWalkView(canvas, { onNear = () => {}, onOpen = () => {}, o
           const B = { b, side: 'N', x: x + i * BW, cx: x + i * BW + BW / 2, h: hash(b.id), I };
           booths.push(B); byId.set(b.id, B);
         });
-        I.signs = signsOf(I);
+        I.signs = signsOf(I, d.hallName);
         islands.push(I);
         x = I.x1 + (index < groups.length - 1 ? CROSS : 0);
       }
@@ -226,7 +226,7 @@ export function createWalkView(canvas, { onNear = () => {}, onOpen = () => {}, o
           const B = { b, side: isl.side, x: x + i * BW, cx: x + i * BW + BW / 2, h: hash(b.id), I };
           booths.push(B); byId.set(b.id, B);
         });
-        I.signs = signsOf(I);
+        I.signs = signsOf(I, d.hallName);
         islands.push(I);
       }
       x += n * BW;

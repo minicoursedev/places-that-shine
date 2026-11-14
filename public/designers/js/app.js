@@ -2,7 +2,7 @@
 import { state, on, emit, visitedCount, toast } from './state.js';
 import { loadIndex, aisleOfBooth, loadBoothForDesigner, isOshenHall } from './data.js?v=20261114-share-channels';
 import { goToAisle } from './nav.js?v=20261114-share-channels';
-import { createWalkView } from './walk.js?v=20261114-passer-click';
+import { createWalkView } from './walk.js?v=20261114-hall-sign';
 import { wireFloatingNav } from './floating-nav.js';
 import { openBooth } from './ui/booth.js?v=20261114-share-channels';
 import { mountMap } from './ui/map.js?v=20261114-share-channels';
