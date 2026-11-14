@@ -1,0 +1,31 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+---
+
+<SiteLayout title="找不到頁面" description="找不到這個網址的頁面。" errorPage>
+  <section class="directory page-width" aria-labelledby="missing-page-title">
+    <div class="directory-header">
+      <h1 id="missing-page-title">找不到頁面</h1>
+    </div>
+    <p id="missing-designer-message" hidden>這位設計師的攤位可能已下架。</p>
+    <p><a id="return-link" class="back-link" href="/">返回首頁</a></p>
+  </section>
+</SiteLayout>
+
+<script is:inline>
+  const path = location.pathname;
+  const isDesignerProfile =
+    /^\/designers\/(?:profiles\/[^/]+|[^/]+\/at\/[^/]+)\/?$/.test(path) ||
+    /^\/designers\/(?!halls(?:\/|$)|periods(?:\/|$)|profiles(?:\/|$))[a-z0-9]+(?:-[a-z0-9]+)*\/?$/i.test(path) ||
+    /^\/puma_oshen_wave\/designer\/profiles\/[^/]+\/?$/.test(path);
+
+  if (isDesignerProfile) {
+    const title = '找不到這位設計師';
+    document.title = title + ' | 發光的地方';
+    document.getElementById('missing-page-title').textContent = title;
+    document.getElementById('missing-designer-message').hidden = false;
+    const link = document.getElementById('return-link');
+    link.href = '/designers/periods/';
+    link.textContent = '返回發光的設計師';
+  }
+</script>
