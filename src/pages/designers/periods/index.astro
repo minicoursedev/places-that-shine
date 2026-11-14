@@ -1,12 +1,31 @@
 ---
 import SiteLayout from '../../../layouts/SiteLayout.astro';
+
+const title = '發光的設計師';
+const description = '按時期探索發光的設計師與作品。';
+const shareImage = new URL('/media/shining-designers-og.jpg', Astro.site);
+const shareImageAlt = '發光的設計師。我相信光，是為了巷弄間的歡騰，不是為了墳前的孤寂';
 ---
 
-<SiteLayout title="發光的設計師" description="按時期探索發光的設計師與作品。" active="designers">
+<SiteLayout title={title} description={description} active="designers">
+  <Fragment slot="head">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={new URL('/designers/periods/', Astro.site)} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={shareImage} />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={shareImageAlt} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content={shareImage} />
+    <meta name="twitter:image:alt" content={shareImageAlt} />
+  </Fragment>
   <section class="directory page-width" aria-labelledby="designer-period-title">
     <div class="directory-header">
       <a class="back-link" href="/#explore"><span aria-hidden="true">←</span> 回探索首頁</a>
-      <h1 id="designer-period-title">發光的設計師</h1>
+      <h1 id="designer-period-title">{title}</h1>
     </div>
     <nav class="period-menu" aria-label="設計師時期">
       <div class="period-with-intro">
