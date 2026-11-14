@@ -11,7 +11,11 @@ const { title, description, active } = Astro.props;
 const siteName = '發光的地方';
 const pageTitle = title === siteName ? title : `${title}｜${siteName}`;
 const canonical = new URL(Astro.url.pathname, Astro.site);
-const routes = [{ id: 'stores', label: '店家' }, { id: 'designers', label: '設計師' }, { id: 'stage', label: '舞台' }];
+const routes = [
+  { id: 'stores', href: '/stores/', label: '店家' },
+  { id: 'designers', href: '/designers/periods/', label: '設計師' },
+  { id: 'stage', href: '/stage/', label: '舞台' },
+];
 ---
 <!doctype html>
 <html lang="zh-Hant-TW">
@@ -32,7 +36,7 @@ const routes = [{ id: 'stores', label: '店家' }, { id: 'designers', label: '�
       <div class="site-header-inner page-width">
         <a class="brand" href="/"><span class="brand-mark" aria-hidden="true">✦</span>{siteName}</a>
         <nav class="site-nav" aria-label="網站導覽">
-          {routes.map(({ id, label }) => <a href={`/${id}/`} aria-current={active === id ? 'page' : undefined}>{label}</a>)}
+          {routes.map(({ id, href, label }) => <a href={href} aria-current={active === id ? 'page' : undefined}>{label}</a>)}
         </nav>
       </div>
     </header>

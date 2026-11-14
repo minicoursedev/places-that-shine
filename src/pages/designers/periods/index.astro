@@ -1,0 +1,25 @@
+---
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+---
+
+<SiteLayout title="發光的設計師" description="從2026洋流時期的市集探索設計師與作品。" active="designers">
+  <section class="directory page-width" aria-labelledby="designer-period-title">
+    <div class="directory-header">
+      <a class="back-link" href="/#explore"><span aria-hidden="true">←</span> 回探索首頁</a>
+      <h1 id="designer-period-title">發光的設計師</h1>
+    </div>
+    <nav class="period-menu" aria-label="設計師時期">
+      <a class="entry" href="/designers/">
+        <span class="entry-info">
+          <span>2026洋流時期</span>
+          <span class="entry-arrow" aria-hidden="true">→</span>
+        </span>
+      </a>
+    </nav>
+  </section>
+</SiteLayout>
+
+<style>
+  .period-menu { max-width: 28rem; }
+  .period-menu .entry-info { font: 800 1.3rem/1.35 var(--serif); }
+</style>
