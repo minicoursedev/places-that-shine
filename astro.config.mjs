@@ -1,7 +1,7 @@
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  site: 'https://places-that-shine.lmanliang.chatgpt.site',
+  site: 'https://minicourse.dev',
   output: 'static',
   outDir: './build',
   build: { format: 'directory' },
