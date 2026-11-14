@@ -11,7 +11,10 @@ import SiteLayout from '../../../layouts/SiteLayout.astro';
     <nav class="period-menu" aria-label="設計師時期">
       <a class="entry" href="/designers/">
         <span class="entry-info">
-          <span>2026洋流時期</span>
+          <span class="period-label">
+            <img class="period-logo" src="/media/oshen-2026-logo.webp" width="256" height="181" alt="" />
+            <span>2026洋流時期</span>
+          </span>
           <span class="entry-arrow" aria-hidden="true">→</span>
         </span>
       </a>
@@ -22,4 +25,6 @@ import SiteLayout from '../../../layouts/SiteLayout.astro';
 <style>
   .period-menu { max-width: 28rem; }
   .period-menu .entry-info { font: 800 1.3rem/1.35 var(--serif); }
+  .period-label { display: flex; align-items: center; gap: .75rem; }
+  .period-logo { display: block; flex: none; width: clamp(3.5rem, 17vw, 5.5rem); height: auto; border-radius: 3px; }
 </style>
