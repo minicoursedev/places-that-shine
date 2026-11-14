@@ -1,6 +1,6 @@
 import data from '../../public/data/oshen-designers.json';
 import ogImages from '../../public/designers/og-images.json';
-import { createCatalogue } from '../../public/designers/js/data.js';
+import { createCatalogue, designerHallCodes } from '../../public/designers/js/data.js';
 import { readProducts, PRODUCT_LIMIT } from '../../public/designers/js/products.js';
 import { validateWorkIds } from '../../public/designers/js/work-links.js';
 
@@ -70,7 +70,7 @@ export const designers = data.designers.filter(designer => designer.disabled !==
   return {
     id: designer.id,
     name: designer.name,
-    hallCode: aisle.hall,
+    hallCodes: designerHallCodes(designer),
     hallName: aisle.hallName,
     booth,
     store,

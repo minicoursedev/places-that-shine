@@ -7,7 +7,7 @@ import WorkShareDialog from '../components/WorkShareDialog.astro';
 interface Props { designerId?: string; hallCode?: string }
 const designer = designers.find(profile => profile.id === Astro.props.designerId);
 const hall = designer ? null : hallPageForCode(Astro.props.hallCode);
-const listedDesigners = hall ? designers.filter(profile => profile.hallCode === hall.code) : designers;
+const listedDesigners = hall ? designers.filter(profile => profile.hallCodes.includes(hall.code)) : designers;
 const metadata = designer && designerMetadata(designer.store);
 const title = metadata ? metadata.title : hall?.title || '發光的設計師｜發光的地方';
 const shareTitle = metadata ? metadata.shareTitle : title;
@@ -108,7 +108,7 @@ const shareImageAlt = designer?.og?.alt || hall?.alt || '洋流設計師展逛�
   </main>
 
   <main class="list-mode" id="stage-list" tabindex="-1"><div class="ls-wrap">
-  {designer ? <article id="static-designer-profile" aria-label={designer.name} set:html={boothHtml(designer.booth, designer.store, { profile: true, staticProfile: true })} /> : <><h1 class="ls-title">{hall?.name || '設計師列表'}</h1>{!listedDesigners.length && <p>{hall?.name}目前尚無攤位。</p>}<div class="ls-grid">{listedDesigners.map(profile => <article class="lc"><div class="lc-heading"><h3 class="lc-name"><a class="lc-open" href={designerPath(profile.id)}>{profile.name}</a></h3></div><p class="lc-owner">{profile.store.category} {profile.name}</p><p class="lc-zone">{profile.hallName}・{profile.store.category}</p><a class="btn btn-primary lc-go" href={designerPath(profile.id)}>{profile.works.length ? '看作品' : '看介紹'}</a></article>)}</div></>}
+  {designer ? <article id="static-designer-profile" aria-label={designer.name} set:html={boothHtml(designer.booth, designer.store, { profile: true, staticProfile: true })} /> : <><h1 class="ls-title">{hall?.name || '設計師列表'}</h1>{!listedDesigners.length && <p>{hall?.name}目前尚無攤位。</p>}<div class="ls-grid">{listedDesigners.map(profile => <article class="lc"><div class="lc-heading"><h3 class="lc-name"><a class="lc-open" href={designerPath(profile.id)}>{profile.name}</a></h3></div><p class="lc-owner">{profile.store.category} {profile.name}</p><p class="lc-zone">{hall?.name || profile.hallName}・{profile.store.category}</p><a class="btn btn-primary lc-go" href={designerPath(profile.id)}>{profile.works.length ? '看作品' : '看介紹'}</a></article>)}</div></>}
   </div></main>
   <main class="map-mode" id="stage-map" hidden></main>
   <footer class="app-footer">
@@ -131,6 +131,6 @@ const shareImageAlt = designer?.og?.alt || hall?.alt || '洋流設計師展逛�
 </dialog>
 
 <WorkShareDialog />
-<script is:inline type="module" src="/designers/js/app.js?v=20261114-period-halls"></script>
+<script is:inline type="module" src="/designers/js/app.js?v=20261114-shared-booth"></script>
 </body>
 </html>

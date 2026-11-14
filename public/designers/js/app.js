@@ -1,12 +1,12 @@
 // Boot and wiring: header, dock, walk view, dialogs, list and map pages, routes (#/walk/<aisle or booth>, #/list, #/map).
 import { state, on, emit, visitedCount, toast } from './state.js';
-import { loadIndex, aisleOfBooth, loadBoothForDesigner } from './data.js?v=20261114-period-halls';
-import { goToAisle } from './nav.js?v=20261114-period-halls';
+import { loadIndex, aisleOfBooth, loadBoothForDesigner } from './data.js?v=20261114-shared-booth';
+import { goToAisle } from './nav.js?v=20261114-shared-booth';
 import { createWalkView } from './walk.js?v=20261108-hall-signs';
 import { wireFloatingNav } from './floating-nav.js';
-import { openBooth } from './ui/booth.js?v=20261114-period-halls';
-import { mountMap } from './ui/map.js?v=20261114-period-halls';
-import { mountList } from './ui/list.js?v=20261114-period-halls';
+import { openBooth } from './ui/booth.js?v=20261114-shared-booth';
+import { mountMap } from './ui/map.js?v=20261114-shared-booth';
+import { mountList } from './ui/list.js?v=20261114-shared-booth';
 import { loadSchedule, isClosed, closeTagText, msLeft, lastOpenLabel } from './schedule.js?v=20261030-site-data';
 import { loadCats, loadChatter } from './cats.js?v=20261030-site-data';
 import { showClosed } from './ui/closed.js';
@@ -61,7 +61,7 @@ function updateStatus() {
   $('status-zone').textContent = zones.join('、') || '目前尚無攤位';
   for (const id of ['hint', 'btn-browse', 'btn-next', 'status-count']) $(id).hidden = !hasBooths;
   $('btn-next').disabled = !hasBooths;
-  $('status-count').textContent = `已逛 ${visitedCount()} / ${state.index.totals.designers} 攤`;
+  $('status-count').textContent = `已逛 ${visitedCount()} / ${state.index.totals.booths} 攤`;
 }
 
 function wireDialogs() {

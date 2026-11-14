@@ -10,10 +10,11 @@ const HALLS = [
 const PER_ISLAND = 8;
 const PER_AISLE = PER_ISLAND * 2;
 const pad2 = n => String(n).padStart(2, '0');
-const designerHall = designer => {
+const primaryHall = designer => {
   if (designer.hall === 'S') return 'S';
   return designer.category === '愛好者' ? 'A' : 'O';
 };
+export const designerHallCodes = designer => [primaryHall(designer), ...(designer.additionalHalls || [])];
 
 function externalUrl(value) {
   if (typeof value !== 'string' || !value.trim()) return '';
@@ -53,7 +54,7 @@ export function createCatalogue(data, { baseUrl = CONFIG.DESIGNERS_URL, ogImages
 
   for (const HALL of HALLS) {
     const ZONE = HALL.zone;
-    const hallDesigners = designers.filter(designer => designerHall(designer) === HALL.code);
+    const hallDesigners = designers.filter(designer => designerHallCodes(designer).includes(HALL.code));
     const summaries = [];
     // Keep one empty aisle in each hall, including before its first author is listed.
     for (let start = 0; start < Math.max(1, hallDesigners.length); start += PER_AISLE) {
@@ -63,7 +64,7 @@ export function createCatalogue(data, { baseUrl = CONFIG.DESIGNERS_URL, ogImages
       const booths = members.map((designer, pos) => {
         const id = `${code}-${pad2(pos + 1)}`;
         const category = ['設計師', '創作者', '愛好者'].includes(designer.category) ? designer.category : HALL.category;
-        designerBooths.set(designer.id, id);
+        if (HALL.code === primaryHall(designer)) designerBooths.set(designer.id, id);
         const social = Object.fromEntries(Object.entries(designer.social || {})
           .map(([key, value]) => [key, externalUrl(value)]));
         const works = (Array.isArray(designer.productImages) ? designer.productImages : [])
@@ -118,7 +119,7 @@ export function createCatalogue(data, { baseUrl = CONFIG.DESIGNERS_URL, ogImages
   return {
     index: {
       halls,
-      totals: { designers: designers.length },
+      totals: { designers: designers.length, booths: search.length },
     },
     aisles, search, designerBooths,
   };
