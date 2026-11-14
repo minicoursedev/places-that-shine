@@ -13,6 +13,7 @@ const paths = [
   ...designers.map(designer => designerPath(designer.id)),
   ...designerWorks.map(({ designer, work }) => designerWorkPath(designer.id, work.id)),
   '/stage/',
+  '/stories/',
   '/puma_oshen_wave/stage/',
   ...catalogue.halls.map(hall => hallPath(hall.id)),
   ...catalogue.stages.map(stage => stagePath(stage.id)),

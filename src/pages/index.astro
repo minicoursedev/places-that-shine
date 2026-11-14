@@ -46,5 +46,35 @@ const entries = [
         </a>
       ))}
     </div>
+    <a class="entry story-entry" href="/stories/">
+      <span class="story-cover" aria-hidden="true">✦</span>
+      <div class="entry-info">
+        <div><h3>努力發著光</h3><p>翻開故事書，遇見更多發光的人、事、物。</p></div>
+        <span class="entry-arrow" aria-hidden="true">↗</span>
+      </div>
+    </a>
   </section>
 </SiteLayout>
+
+<style>
+  .story-entry {
+    flex-direction: row;
+    align-items: center;
+    margin-top: clamp(1rem, 2.2vw, 1.8rem);
+  }
+
+  .story-cover {
+    display: grid;
+    place-items: center;
+    flex: 0 0 2.75rem;
+    height: 3.6rem;
+    margin: .85rem 0 .85rem 1.15rem;
+    border: 1px solid #413644;
+    border-left-width: 4px;
+    border-radius: 2px 4px 4px 2px;
+    box-shadow: 2px 1px #e6cda7;
+    color: #edc081;
+    background: #30293b;
+    font-size: 1.2rem;
+  }
+</style>
