@@ -1,5 +1,5 @@
 import { designerMetadata, designerStructuredData, serializeStructuredData, publicUrl } from './profile-seo.js?v=20261110-profile-share-title';
-import { hallPageForCode, hallPageForPath } from './hall-pages.js?v=20261114-period-halls';
+import { hallPageForCode, hallPageForPath } from './hall-pages.js?v=20261114-bluebird-hall';
 import { browserOrigin } from './config.js';
 
 export const designerRoot = '/designers/';
@@ -52,7 +52,7 @@ export function updateDesignerMetadata(designer = null, booth = {}) {
   }
   const avatar = publicUrl(designer?.avatar, canonical);
   const preview = designer?.og ? { ...designer.og, image: designer.og.url } : designer && initialPreview?.id === designer.id ? initialPreview : avatar
-    ? { image: avatar } : hall || { image: exhibitionImage, width: '2622', height: '1206', type: 'image/png' };
+    ? { image: avatar } : hall?.image ? hall : { image: exhibitionImage, width: '2622', height: '1206', type: 'image/png' };
   const image = publicUrl(preview.image, canonical) || new URL(exhibitionImage, canonical).href;
   const imageAlt = preview.alt || (designer && avatar ? `${designer.name}的頭像` : '發光的設計師市集逛攤畫面');
   document.querySelector('meta[name="twitter:card"]').content = hall ? 'summary_large_image' : 'summary';

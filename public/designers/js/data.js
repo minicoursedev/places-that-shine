@@ -6,15 +6,17 @@ const HALLS = [
   { code: 'O', name: '洋流設計師館', category: '設計師', zone: { code: 'DESIGNERS', name: '設計師' } },
   { code: 'A', name: '洋流愛好者館', category: '愛好者', zone: { code: 'AMATEURS', name: '愛好者' } },
   { code: 'S', name: '鏟子超人館', category: '設計師', zone: { code: 'SHOVEL-HEROES', name: '鏟子超人' } },
+  { code: 'B', name: '青鳥行動館', category: '設計師', zone: { code: 'BLUEBIRD-ACTION', name: '青鳥行動' } },
 ];
 const PER_ISLAND = 8;
 const PER_AISLE = PER_ISLAND * 2;
 const pad2 = n => String(n).padStart(2, '0');
 const primaryHall = designer => {
-  if (designer.hall === 'S') return 'S';
+  if (HALLS.some(hall => hall.code === designer.hall)) return designer.hall;
   return designer.category === '愛好者' ? 'A' : 'O';
 };
 export const designerHallCodes = designer => [primaryHall(designer), ...(designer.additionalHalls || [])];
+export const isOshenHall = code => code === 'O' || code === 'A';
 
 function externalUrl(value) {
   if (typeof value !== 'string' || !value.trim()) return '';

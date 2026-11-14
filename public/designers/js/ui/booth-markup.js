@@ -1,5 +1,5 @@
 import { thumbnailUrl } from '../images.js';
-import { designerPath } from '../routes.js?v=20261114-period-halls';
+import { designerPath } from '../routes.js?v=20261114-bluebird-hall';
 import { designerMetadata } from '../profile-seo.js?v=20261110-profile-share-title';
 import { designerWorkPath } from '../work-links.js';
 import { browserOrigin } from '../config.js';

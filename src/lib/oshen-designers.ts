@@ -70,6 +70,7 @@ export const designers = data.designers.filter(designer => designer.disabled !==
   return {
     id: designer.id,
     name: designer.name,
+    hallCode: aisle.hall,
     hallCodes: designerHallCodes(designer),
     hallName: aisle.hallName,
     booth,

@@ -1,4 +1,4 @@
-// Static share pages for halls with their own entry URL and preview image.
+// Static share pages for halls with their own entry URL.
 export const hallPages = [{
   code: 'A',
   name: '洋流愛好者館',
@@ -21,6 +21,12 @@ export const hallPages = [{
   width: 637,
   height: 800,
   type: 'image/webp',
+}, {
+  code: 'B',
+  name: '青鳥行動館',
+  path: '/designers/halls/bluebird-action/',
+  title: '2024 青鳥行動館｜發光的設計師',
+  description: '2024 青鳥行動的設計師展館。',
 }];
 
 export const hallPageForCode = code => hallPages.find(hall => hall.code === code) || null;
