@@ -4539,6 +4539,21 @@
           "url": "/media/library/boyealai/6.webp"
         }
       ]
+    },
+    {
+      "id": "wendy-tsai",
+      "name": "Wendy Tsai",
+      "hall": "B",
+      "category": "創作者",
+      "description": "青鳥行動館入口 Logo 的創作者。",
+      "productImages": [
+        {
+          "id": "wendy-tsai-bluebird-action-logo",
+          "alt": "Wendy Tsai 的青鳥行動插畫 Logo",
+          "caption": "青鳥行動館入口 Logo。插畫為 Wendy Tsai 創作。",
+          "url": "/media/bluebird-action-2024-logo.webp"
+        }
+      ]
     }
   ]
 }
