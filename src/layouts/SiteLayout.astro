@@ -4,7 +4,7 @@ import '../styles/site.css';
 interface Props {
   title: string;
   description: string;
-  active?: 'designers' | 'stage';
+  active?: 'stores' | 'designers' | 'stage';
 }
 
 const { title, description, active } = Astro.props;
@@ -12,6 +12,7 @@ const siteName = '發光的地方';
 const pageTitle = title === siteName ? title : `${title}｜${siteName}`;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const routes = [
+  { id: 'stores', href: '/stores/', label: '店家' },
   { id: 'designers', href: '/designers/periods/', label: '設計師' },
   { id: 'stage', href: '/stage/', label: '舞台' },
 ];
