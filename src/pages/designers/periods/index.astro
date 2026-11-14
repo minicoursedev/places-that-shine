@@ -9,15 +9,27 @@ import SiteLayout from '../../../layouts/SiteLayout.astro';
       <h1 id="designer-period-title">發光的設計師</h1>
     </div>
     <nav class="period-menu" aria-label="設計師時期">
-      <a class="entry" href="/designers/">
-        <span class="entry-info">
-          <span class="period-label">
-            <img class="period-logo" src="/media/oshen-2026-logo.webp" width="256" height="181" alt="" />
-            <span>2026洋流時期</span>
+      <div class="period-with-intro">
+        <a class="entry" href="/designers/">
+          <span class="entry-info">
+            <span class="period-label">
+              <img class="period-logo" src="/media/oshen-2026-logo.webp" width="256" height="181" alt="" />
+              <span>2026洋流時期</span>
+            </span>
+            <span class="entry-arrow" aria-hidden="true">→</span>
           </span>
-          <span class="entry-arrow" aria-hidden="true">→</span>
-        </span>
-      </a>
+        </a>
+        <details class="period-intro">
+          <summary>洋流時期簡介</summary>
+          <div class="period-intro-copy">
+            <p>「洋流」最早的視覺設計出自 Doctor Design 的 Ken 與許家綸。洋流運動開創了獨樹一格的選舉美學運動。</p>
+            <p>洋流運動源自台灣民主選舉長期累積的壓抑。我們迫切希望有一個看得到希望的未來。候選人沈伯洋主打正面選戰、談政策，帶動了全台選舉風氣的轉變。</p>
+            <p>Ken 與許家綸在民間推出「洋流」設計，於 2026 年 8 月 18 日在寧夏夜市首發 4 萬張「洋流海報」。沈伯洋競選總部在 2026 年 10 月 4 日成立，成立前已主動與 Ken、許家綸洽談授權。</p>
+            <p>多元的授權方式和洋流品牌的外溢效應，讓洋流運動在短時間內成為遍及全台的社會運動。</p>
+            <p>本篇收錄洋流時期的創作者，涵蓋台北、新北、台中等地各候選人的競選視覺設計，並以時期作為收錄範圍。</p>
+          </div>
+        </details>
+      </div>
       <a class="entry" href="/designers/halls/shovel-heroes/">
         <span class="entry-info">
           <span class="period-label">
@@ -46,4 +58,11 @@ import SiteLayout from '../../../layouts/SiteLayout.astro';
   .period-label { display: flex; align-items: center; justify-content: flex-start; gap: .75rem; }
   .period-logo { display: block; flex: none; width: clamp(3.5rem, 17vw, 5.5rem); height: auto; border-radius: 3px; }
   .period-logo-contained { aspect-ratio: 256 / 181; object-fit: contain; }
+  .period-with-intro > .entry { border-radius: 5px 5px 0 0; }
+  .period-intro { background: #fdf8ef; border: 1px solid var(--line); border-top: 0; border-radius: 0 0 5px 5px; }
+  .period-intro summary { padding: .65rem 1.15rem; color: var(--accent); font-weight: 600; cursor: pointer; }
+  .period-intro summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .period-intro-copy { padding: 0 1.15rem 1.15rem; line-height: 1.8; }
+  .period-intro-copy p { margin: 0; }
+  .period-intro-copy p + p { margin-top: .8rem; }
 </style>
