@@ -1,11 +1,12 @@
 import { defineConfig } from 'astro/config';
 import { createReadStream, existsSync } from 'node:fs';
-import { cp, mkdir, mkdtemp, rm } from 'node:fs/promises';
+import { copyFile, cp, mkdir, mkdtemp, readFile, rm } from 'node:fs/promises';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { generateDesignerOg } from './scripts/designer-og.mjs';
 
 let generatedOg;
+let legacyDesignerIds;
 const designerOg = {
   name: 'designer-og',
   hooks: {
@@ -13,6 +14,9 @@ const designerOg = {
       const root = fileURLToPath(config.root);
       let manifest = join(root, 'public/designers/og-images.json');
       if (command === 'build' || command === 'dev') {
+        if (command === 'build') {
+          legacyDesignerIds = Object.keys(JSON.parse(await readFile(manifest, 'utf8')));
+        }
         const cacheDir = join(root, '.astro');
         await mkdir(cacheDir, { recursive: true });
         generatedOg = await mkdtemp(join(cacheDir, 'designer-og-'));
@@ -24,7 +28,14 @@ const designerOg = {
       } } } });
     },
     'astro:build:done': async ({ dir }) => {
-      await cp(join(generatedOg, 'designers'), fileURLToPath(new URL('designers/', dir)), { recursive: true });
+      const designersDir = fileURLToPath(new URL('designers/', dir));
+      await cp(join(generatedOg, 'designers'), designersDir, { recursive: true });
+      // Keep the images already used by previews of the legacy designer URLs.
+      await Promise.all(legacyDesignerIds.map(async id => {
+        const legacyDir = fileURLToPath(new URL(`puma_oshen_wave/assets/${id}/`, dir));
+        await mkdir(legacyDir, { recursive: true });
+        await copyFile(join(designersDir, 'assets/og', `${id}.jpg`), join(legacyDir, 'og.jpg'));
+      }));
       await rm(generatedOg, { recursive: true, force: true });
     },
     'astro:server:setup': ({ server }) => {
