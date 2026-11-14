@@ -69,10 +69,11 @@ const shareImageAlt = designer?.og?.alt || hall?.alt || '洋流設計師展逛�
 <link rel="stylesheet" href="/designers/css/map.css">
 <link rel="stylesheet" href="/designers/css/list.css?v=20261112-designer-work-views">
 <link rel="stylesheet" href="/designers/css/closed.css">
-<link rel="stylesheet" href="/designers/css/floating-nav.css?v=20261101">
+<link rel="stylesheet" href="/designers/css/floating-nav.css?v=20261114-home">
 </head>
 <body>
-<div class="app">
+<div class="app designer-app">
+  <a class="btn designer-home" href="/">返回首頁</a>
   <details class="floating-nav" id="floating-nav">
     <summary class="floating-nav-toggle" aria-label="導覽選單"><span aria-hidden="true">☰</span> 選單</summary>
     <nav class="bar" aria-label="導覽選單">
@@ -86,8 +87,6 @@ const shareImageAlt = designer?.og?.alt || hall?.alt || '洋流設計師展逛�
     </div>
     <span class="tag close-tag" id="close-tag" hidden></span>
     <a class="link-btn" href="/stage/">發光的舞台</a>
-    <a class="link-btn" href="/">首頁</a>
-    <a class="link-btn back-to-map" href="/stores/">返回店家地圖</a>
     </nav>
   </details>
 
