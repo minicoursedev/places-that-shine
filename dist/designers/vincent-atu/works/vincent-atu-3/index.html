@@ -90,14 +90,16 @@
     </section>
 
     <section id="designers" class="view directory page-width" aria-labelledby="designers-title" hidden>
-      <div id="designers-header" class="directory-header">
-        <a class="back-link" href="#explore"><span aria-hidden="true">←</span> 回探索首頁</a>
-        <h1 id="designers-title" tabindex="-1">發光的設計師</h1>
+      <div class="designers-toolbar">
+        <div id="designers-header" class="directory-header">
+          <a class="back-link" href="#explore"><span aria-hidden="true">←</span> 回探索首頁</a>
+          <h1 id="designers-title" tabindex="-1">發光的設計師</h1>
+        </div>
+        <nav id="designers-views" class="directory-views" aria-label="設計師瀏覽方式">
+          <a href="#designers">逛市集</a>
+          <a href="#designers/list">攤位列表</a>
+        </nav>
       </div>
-      <nav id="designers-views" class="directory-views" aria-label="設計師瀏覽方式">
-        <a href="#designers">逛市集</a>
-        <a href="#designers/list">攤位列表</a>
-      </nav>
       <div id="designers-content" aria-label="設計師攤位"><p role="status">正在載入設計師攤位…</p></div>
       <div id="designers-walk" hidden></div>
       <dialog id="designer-booth-dialog" class="designer-booth-dialog" aria-label="設計師攤位">

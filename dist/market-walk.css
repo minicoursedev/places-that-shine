@@ -151,7 +151,8 @@
   outline-offset: -3px;
 }
 @media (max-width: 640px) {
-  .market-walk-scene { height: clamp(27rem, 68svh, 39rem); }
+  .market-walk { margin-block-start: 0; }
+  .market-walk-scene { height: clamp(19rem, min(70svh, 100svh - 8.5rem), 39rem); }
   .market-walk-choose { margin-inline-start: 0; }
   .market-walk-choose select { max-width: min(16rem, 57vw); }
 }

@@ -110,6 +110,7 @@ h1[tabindex]:focus { outline: none; }
 .directory-views a { padding: .5rem .9rem; color: var(--ink); border: 1px solid var(--line); border-radius: .35rem; font-size: .9rem; font-weight: 600; text-decoration: none; }
 .directory-views a:hover { border-color: var(--accent); }
 .directory-views a[aria-current="page"] { color: #fff8ef; background: var(--accent); border-color: var(--accent); }
+.designers-toolbar { display: contents; }
 .designer-booth-dialog {
   width: min(35rem, 100% - 1.5rem);
   max-width: none;
@@ -139,6 +140,34 @@ h1[tabindex]:focus { outline: none; }
   .entry-info h3 { font-size: 1.35rem; }
   .directory { padding-block: 2rem 3.25rem; }
   .designer-booth-dialog { inset-block: max(.75rem, env(safe-area-inset-top)) auto; margin-block: 0; max-height: calc(100dvh - max(.75rem, env(safe-area-inset-top)) - max(1.125rem, env(safe-area-inset-bottom))); }
+}
+
+@media (max-width: 640px) {
+  #designers { padding-block-start: 0; }
+  .designers-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .375rem;
+    padding-block: .25rem;
+  }
+  #designers-header { display: block; margin: 0; padding: 0; border: 0; }
+  #designers-header .back-link { display: none; }
+  #designers-title { font-size: clamp(.95rem, 4.65vw, 1.2rem); letter-spacing: 0; }
+  #designers-views { flex-wrap: nowrap; flex-shrink: 0; gap: 0; margin: 0; }
+  #designers-views a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.75rem;
+    padding: 0 clamp(.3rem, 1.7vw, .7rem);
+    border: 0;
+    border-radius: 0;
+    color: var(--muted);
+    font-size: .8125rem;
+    white-space: nowrap;
+  }
+  #designers-views a[aria-current="page"] { color: var(--accent); background: transparent; box-shadow: inset 0 -2px var(--accent); }
+  #designers-content { margin-block-start: .75rem; }
 }
 
 @media (max-width: 375px) {
