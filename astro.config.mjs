@@ -6,4 +6,10 @@ export default defineConfig({
   outDir: './build',
   build: { format: 'directory' },
   trailingSlash: 'always',
+  redirects: {
+    '/designers/wendy-tsai': '/designers/yuan-art-space/',
+    '/designers/profiles/wendy-tsai': '/designers/yuan-art-space/',
+    '/designers/wendy-tsai/works/wendy-tsai-bluebird-action-logo': '/designers/yuan-art-space/works/wendy-tsai-bluebird-action-logo/',
+    '/designers/profiles/wendy-tsai/works/wendy-tsai-bluebird-action-logo': '/designers/yuan-art-space/works/wendy-tsai-bluebird-action-logo/',
+  },
 });

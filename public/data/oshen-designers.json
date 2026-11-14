@@ -691,7 +691,7 @@
     {
       "id": "yuan-art-space",
       "name": "Yuan Art & Space | 沅藝術空間",
-      "additionalHalls": ["S"],
+      "additionalHalls": ["S", "B"],
       "description": "跌跌撞撞的初級大人🥲\n努力畫圖、場地租借",
       "social": {
         "fb": "https://www.facebook.com/profile.php?id=100051575187294",
@@ -725,6 +725,12 @@
           "id": "yuan-art-space-4",
           "alt": "Yuan Art & Space | 沅藝術空間作品照片 4",
           "url": "/media/library/yuan-art-space/4.webp"
+        },
+        {
+          "id": "wendy-tsai-bluebird-action-logo",
+          "alt": "Wendy Tsai 的青鳥行動插畫 Logo",
+          "caption": "青鳥行動館入口 Logo。插畫為 Wendy Tsai 創作。",
+          "url": "/media/bluebird-action-2024-logo.webp"
         }
       ]
     },
@@ -4537,21 +4543,6 @@
           "id": "work-f875f993ca7c4cc38b4fd9ff8da275e0",
           "alt": "新北活動視覺社群頭像設計",
           "url": "/media/library/boyealai/6.webp"
-        }
-      ]
-    },
-    {
-      "id": "wendy-tsai",
-      "name": "Wendy Tsai",
-      "hall": "B",
-      "category": "創作者",
-      "description": "青鳥行動館入口 Logo 的創作者。",
-      "productImages": [
-        {
-          "id": "wendy-tsai-bluebird-action-logo",
-          "alt": "Wendy Tsai 的青鳥行動插畫 Logo",
-          "caption": "青鳥行動館入口 Logo。插畫為 Wendy Tsai 創作。",
-          "url": "/media/bluebird-action-2024-logo.webp"
         }
       ]
     }
