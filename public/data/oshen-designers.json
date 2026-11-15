@@ -5175,22 +5175,13 @@
       },
       "productImages": [
         {
-          "url": "/media/library/neneko-ig/10.webp?v=121b3497a7c5e16b",
-          "alt": "Future Soon 奔來去投票",
-          "source": "https://www.threads.com/@neneko_ig/post/DfhWbgkEujQ",
+          "url": "/media/library/neneko-ig/1.webp?v=441d9b579cf40904",
+          "alt": "neneko 貓日 Future Soon 奔來去投票插畫",
+          "source": "https://minicourse.dev/media/library/neneko-ig/1.webp?v=441d9b579cf40904",
           "checkedAt": "2026-11-15",
-          "note": "使用者指定 Threads 作品貼文",
-          "id": "work-9cfb4e21e55b4d0a9816f3cb0b85b4c7",
-          "originalUrl": "https://scontent-lax3-1.cdninstagram.com/v/t51.82787-15/892836598_17997606153104654_4036994583394269574_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=110&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=tSzk0OqJVOgQ7kNvwF3WMwx&_nc_oc=AdqseraD_Ol3Za5KgrIP2_UWzo9hYAgQCCjXQMQS97eN0Esqk1Km5r11NobpkbwGFEA&_nc_zt=23&_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_gid=9bFhfYBhGX7JzdUjk5GncQ&_nc_ss=7920f&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQTZeAs54NM5XK7baXvygdgT_gKslM1b8W6pinh9bt0oDA&oe=6AFF582D"
-        },
-        {
-          "url": "/media/library/neneko-ig/11.webp?v=08485e2ecc33079f",
-          "alt": "Future Soon 動物插畫",
-          "source": "https://www.threads.com/@neneko_ig/post/DfhWbgkEujQ",
-          "checkedAt": "2026-11-15",
-          "note": "使用者指定 Threads 作品貼文",
-          "id": "work-00f63919c89949829101c71a10266a57",
-          "originalUrl": "https://scontent-lax3-2.cdninstagram.com/v/t51.82787-15/897478937_17997606180104654_3143375348301846946_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=105&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=nhGIXnXaKMQQ7kNvwFGYL7S&_nc_oc=AdqQNKoP6LS9daZf1nmH3nalXDKAJwToKC8i2AZ5sGjdkNXb6yXcKJ3RQJicLS9Zf0E&_nc_zt=23&_nc_ht=scontent-lax3-2.cdninstagram.com&_nc_gid=9bFhfYBhGX7JzdUjk5GncQ&_nc_ss=7920f&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQQQwGHuZkfwSud1txsF3DZFPA4voPYs13imRLZdQusovQ&oe=6AFF73CB"
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-ee91b2b2f4eb408983fb126b8308adc8",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571527739456888993/907329797_17998596555104654_1005073406966319981_n.png?ex=6afb0ec2&is=6af9bd42&hm=f7cbe2ae8e26e020bec9ff6db9fe48a7aa58852572ee99195b7e25034d0d8bb5&"
         },
         {
           "url": "/media/library/neneko-ig/7.webp?v=f28b7f2d43b37940",
@@ -5232,7 +5223,9 @@
       "retiredWorkIds": [
         "work-361a825994614e30aea378052c3bb16b",
         "work-36caabaffcd7457e84983eda6bffc046",
-        "work-c66b5c99cc334dacb3dea2240d0f70f9"
+        "work-c66b5c99cc334dacb3dea2240d0f70f9",
+        "work-00f63919c89949829101c71a10266a57",
+        "work-9cfb4e21e55b4d0a9816f3cb0b85b4c7"
       ]
     },
     {
