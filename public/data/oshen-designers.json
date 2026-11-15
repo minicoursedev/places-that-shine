@@ -4985,6 +4985,58 @@
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571408654027067402/556607830_1333474718146787_1007702591469781971_n.png?ex=6afa9fda&is=6af94e5a&hm=06df6254ca515dd534ba42bba79da0b0c22f927a05ecef44c8fc200fb580240e&"
         }
       ]
+    },
+    {
+      "id": "116537882210",
+      "name": "Carlos",
+      "category": "設計師",
+      "description": "",
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@116537882210_",
+        "ig": "",
+        "web": ""
+      },
+      "verification": true,
+      "disabled": false,
+      "logo": {
+        "url": "/media/library/116537882210/logo.webp?v=f278c29ebe467b7d",
+        "source": "https://www.threads.com/@116537882210_",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-15",
+        "note": "已核對官方 Threads 個人檔案頭像，HTTPS 圖片可讀取",
+        "originalUrl": "https://scontent-tpe1-1.cdninstagram.com/v/t51.82787-19/838743781_17955598440258014_6020818415724032371_n.jpg?stp=dst-jpg_s640x640_tt6&_nc_cat=106&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=b3fa00&_nc_ohc=4qT42_BHK8UQ7kNvwHpwnIv&_nc_oc=AdoH_fb1L0zG-eeHEDknXOYRwpJ9qtmjpmUH614mai6fxGbnwIvEn5LvQ1tHVrPRvao&_nc_zt=24&_nc_ht=scontent-tpe1-1.cdninstagram.com&_nc_gid=iwG7xpbkbdbyzmFUL2eTRQ&_nc_ss=7920f&oh=00_AQSTtbTZmz5Xh9QFIxycyNUHqTIjxw3HTBSymDI8hVIWSw&oe=6AFF3C84"
+      },
+      "productImages": [
+        {
+          "url": "/media/library/116537882210/1.webp?v=8f371e58b7e18c80",
+          "alt": "Carlos 作品照片 1",
+          "source": "https://minicourse.dev/media/library/116537882210/1.webp?v=8f371e58b7e18c80",
+          "checkedAt": "2026-11-15",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-0defe87e83104a06823bf4b74ae69160",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571428247495909437/841525356_17955846630258014_2668152717884588887_n.png?ex=6afab219&is=6af96099&hm=aabc7f6a3a2c3424af0b3a0ba6ebf3d33887b62389311a4f08c9c6ef09bc73b3&"
+        },
+        {
+          "url": "/media/library/116537882210/2.webp?v=ac435779a6043c84",
+          "alt": "Carlos 作品照片 2",
+          "source": "https://minicourse.dev/media/library/116537882210/2.webp?v=ac435779a6043c84",
+          "checkedAt": "2026-11-15",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-ea77d15997454844a1e0af4729b67ee2",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571428247978123284/839280659_17955552117258014_3792305786711457865_n.png?ex=6afab21a&is=6af9609a&hm=8823500424d367c43affbabe30f04341a2237f0d7351b06ddc39a242b3531792&"
+        },
+        {
+          "url": "/media/library/116537882210/3.webp?v=8c2c8e9c0358efad",
+          "alt": "Carlos 作品照片 3",
+          "source": "https://minicourse.dev/media/library/116537882210/3.webp?v=8c2c8e9c0358efad",
+          "checkedAt": "2026-11-15",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-b12f295187f7464782af2da866db35b8",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571428248494280844/835356425_17955428583258014_7219881612620360858_n.png?ex=6afab21a&is=6af9609a&hm=6a16d6916bd794b565d4ab1220ba54d2f13ecc04a0328dadd859b0c117f86005&"
+        }
+      ]
     }
   ]
 }
