@@ -4950,6 +4950,40 @@
           "url": "https://www.instagram.com/fishkuei_design"
         }
       ]
+    },
+    {
+      "id": "people2",
+      "name": "鏟子超人",
+      "category": "設計師",
+      "description": "",
+      "social": {
+        "fb": "https://www.facebook.com/people2",
+        "threads": "",
+        "ig": "https://www.instagram.com/people2planet/",
+        "web": ""
+      },
+      "verification": true,
+      "disabled": false,
+      "logo": {
+        "url": "/media/library/people2/logo.webp?v=053ea71f213b797a",
+        "source": "https://www.facebook.com/people2",
+        "platform": "facebook",
+        "status": "verified",
+        "checkedAt": "2026-11-15",
+        "note": "官方帳號 og:url 相符；個人頭像 CDN 路徑；人2 x People2",
+        "originalUrl": "https://scontent.fkhh1-1.fna.fbcdn.net/v/t39.30808-1/497462128_1228946895266237_6875322568868710092_n.jpg?stp=dst-jpg_tt6&cstp=mx1000x1000&ctp=s720x720&_nc_cat=1&ccb=1-7&_nc_sid=3ab345&_nc_ohc=gwpiY-oqXNIQ7kNvwGvUP6q&_nc_oc=AdqZBMQc9V_-DFQberAhG2pe-vZVnk6H89kGtc4ddWREBpgleiXr3BZE7vkr-nz7Be4&_nc_zt=24&_nc_ht=scontent.fkhh1-1.fna&_nc_gid=Is3curD7q1_Q_4gMexoBmA&_nc_ss=7920f&oh=00_AQS8GBoLQtUMIjqS6e_UfLk9y7S6rH8tJRhFCvEXYzLYxA&oe=6AFF0B89"
+      },
+      "productImages": [
+        {
+          "url": "/media/library/people2/1.webp?v=b41991b821fab25b",
+          "alt": "鏟子超人作品照片 1",
+          "source": "https://minicourse.dev/media/library/people2/1.webp?v=b41991b821fab25b",
+          "checkedAt": "2026-11-15",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-f7b3e59e9feb4c8881f3867916ce98cd",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571408654027067402/556607830_1333474718146787_1007702591469781971_n.png?ex=6afa9fda&is=6af94e5a&hm=06df6254ca515dd534ba42bba79da0b0c22f927a05ecef44c8fc200fb580240e&"
+        }
+      ]
     }
   ]
 }
