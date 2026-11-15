@@ -5089,6 +5089,67 @@
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571430385965989908/870065389_17977108320132742_1963984399441335971_n.png?ex=6afab417&is=6af96297&hm=81903558995ff1b0ddd22a5d9888212325768762104cad229dc872bebad934f1&"
         }
       ]
+    },
+    {
+      "id": "wang1xiu",
+      "name": "Wang Yi-Xiu",
+      "category": "設計師",
+      "description": "🫥",
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@wang1xiu",
+        "ig": "https://www.instagram.com/wang1xiu/",
+        "web": ""
+      },
+      "verification": true,
+      "disabled": false,
+      "logo": {
+        "url": "/media/library/wang1xiu/logo.webp?v=6bf787175a329c37",
+        "source": "https://www.threads.com/@wang1xiu",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-15",
+        "note": "已核對官方 Threads 個人檔案頭像，HTTPS 圖片可讀取",
+        "originalUrl": "https://scontent-tpe1-1.cdninstagram.com/v/t51.2885-19/358348326_1327702741513460_2673685839258420404_n.jpg?stp=dst-jpg_s640x640_tt6&_nc_cat=101&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=b3fa00&_nc_ohc=wn0x-O-bpZQQ7kNvwEpX3bK&_nc_oc=AdotflGSj_oWEn_nyl0SVUc9sUifzCgXDtEb56r_nY1hIG_0QctGA5fh54tMrB7OxMc&_nc_zt=24&_nc_ht=scontent-tpe1-1.cdninstagram.com&_nc_ss=7920f&oh=00_AQTv8qH-WSveUI0um8MVsT6VGrIQFx4JC04VzJ856CWL3Q&oe=6AFF548B"
+      },
+      "productImages": [
+        {
+          "url": "/media/library/wang1xiu/1.webp?v=4b3e3a01759aa9f0",
+          "alt": "Wang Yi-Xiu 作品照片 1",
+          "source": "https://minicourse.dev/media/library/wang1xiu/1.webp?v=4b3e3a01759aa9f0",
+          "checkedAt": "2026-11-15",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-03bb694fead34fbbbc2ec81aaa334f06",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571434009135816734/888601435_17992744104117650_5471681422974271701_n.png?ex=6afab777&is=6af965f7&hm=fec25e67f1245a53d8f3d5dc27ac8dc846e01a46869c2ebe4b88bade8377d1c7&"
+        },
+        {
+          "url": "/media/library/wang1xiu/2.webp?v=c6b32377af66bdfa",
+          "alt": "Wang Yi-Xiu 作品照片 2",
+          "source": "https://minicourse.dev/media/library/wang1xiu/2.webp?v=c6b32377af66bdfa",
+          "checkedAt": "2026-11-15",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-0b5d5efdcc534d55a254ee38775ae0a8",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571434009769283674/886743799_17992741302117650_5687735289201290334_n.png?ex=6afab777&is=6af965f7&hm=8a11ab358c7acee409346ce0cbffdab48e37d53d28e15cb54a57ef44a590ad18&"
+        },
+        {
+          "url": "/media/library/wang1xiu/3.webp?v=68a834339f5e635e",
+          "alt": "Wang Yi-Xiu 作品照片 3",
+          "source": "https://minicourse.dev/media/library/wang1xiu/3.webp?v=68a834339f5e635e",
+          "checkedAt": "2026-11-15",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-3fbb70d6187a4113980a2213b29c3f7c",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571434010188718140/879895932_17992360674117650_7258846668003504606_n.png?ex=6afab777&is=6af965f7&hm=4c4c337144a5746099344aaa2fce9b84419c8ca8cc1b892b75083b66a2bb49b4&"
+        },
+        {
+          "url": "/media/library/wang1xiu/4.webp?v=522d8d882fb79701",
+          "alt": "Wang Yi-Xiu 作品照片 4",
+          "source": "https://minicourse.dev/media/library/wang1xiu/4.webp?v=522d8d882fb79701",
+          "checkedAt": "2026-11-15",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-0765564b45e144f19ff509a09c2d1f55",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571434010616266762/640276885_17943889905117650_1415750621880522470_n.png?ex=6afab777&is=6af965f7&hm=b912c455bdeec3dab86b68a2d067a7732c3cd026817b372383fd5265c4df8c55&"
+        }
+      ]
     }
   ]
 }
