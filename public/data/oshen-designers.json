@@ -5234,6 +5234,85 @@
         "work-36caabaffcd7457e84983eda6bffc046",
         "work-c66b5c99cc334dacb3dea2240d0f70f9"
       ]
+    },
+    {
+      "id": "yisatsai",
+      "name": "蔡依珊",
+      "category": "設計師",
+      "description": "將台灣土地記憶轉化為視覺設計",
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@yisatsai",
+        "ig": "",
+        "web": ""
+      },
+      "verification": true,
+      "disabled": false,
+      "logo": {
+        "url": "/media/library/yisatsai/logo.webp?v=529b34ed2150b240",
+        "source": "https://www.threads.com/@yisatsai",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-15",
+        "note": "已核對官方 Threads 個人檔案頭像，HTTPS 圖片可讀取",
+        "originalUrl": "https://scontent-lax3-2.cdninstagram.com/v/t51.2885-19/419512072_1949037245489642_4420659533705284872_n.jpg?stp=dst-jpg_s640x640_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=b3fa00&_nc_ohc=0zevv1HeF6IQ7kNvwFSRIfQ&_nc_oc=AdpYNpIacYS78YRnFh9KoZyZgRiSYDErUI04JLeI6GbV68upO8WmpdyxCJVifoXyBlc&_nc_zt=24&_nc_ht=scontent-lax3-2.cdninstagram.com&_nc_ss=7920f&oh=00_AQQrmAN0dhKNC_62F3qKCIli56wNhgjmLuYhiQ-wHPBwmw&oe=6AFF8E3B"
+      },
+      "productImages": [
+        {
+          "url": "/media/library/yisatsai/1.webp?v=aebcb1ea55f3ef97",
+          "alt": "蔡依珊作品照片：理想青年人物與煎餃圖樣飄帶平面設計",
+          "source": "https://minicourse.dev/media/library/yisatsai/1.webp?v=aebcb1ea55f3ef97",
+          "checkedAt": "2026-11-15",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-91a6d5c81138497f85c9ba039fd4363d",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571505822649950349/902440245_17978939874155127_3754859133437836814_n.png?ex=6afafa59&is=6af9a8d9&hm=c8f30e97b99f8a0ab1b9f782ee5c2be70a7f2f432a2a37921c9624967f42cdeb&"
+        },
+        {
+          "url": "/media/library/yisatsai/2.webp?v=7b82e9107cc3b32f",
+          "alt": "蔡依珊作品照片：理想青年飄帶裁切示意",
+          "source": "https://minicourse.dev/media/library/yisatsai/2.webp?v=7b82e9107cc3b32f",
+          "checkedAt": "2026-11-15",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-7148a95498e54180a74c90e1e0f2f48d",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571505823509909614/902096059_17978943855155127_4016267516460886264_n.png?ex=6afafa59&is=6af9a8d9&hm=3bf2148cba1c7e46775696c3b03f256741c31d0d667c3c0c314b1f5517f2c71c&"
+        },
+        {
+          "url": "/media/library/yisatsai/3.webp?v=6fcf830683d704e4",
+          "alt": "蔡依珊作品照片：理想青年蝴蝶結鑰匙圈",
+          "source": "https://minicourse.dev/media/library/yisatsai/3.webp?v=6fcf830683d704e4",
+          "checkedAt": "2026-11-15",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-9dd1d4d5d5bd4904b90e78aec86aa429",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571505824205897828/905743567_17978943879155127_8392174950579919654_n.png?ex=6afafa59&is=6af9a8d9&hm=6f3e909a0ddbd2117cd24c0fc91b8d600d4ce3103e68fadc72046cf8e8e6b210&"
+        },
+        {
+          "url": "/media/library/yisatsai/4.webp?v=b600a0f47ca2cac9",
+          "alt": "蔡依珊作品照片：南洋海洋地圖與星辰圖樣飄帶",
+          "source": "https://minicourse.dev/media/library/yisatsai/4.webp?v=b600a0f47ca2cac9",
+          "checkedAt": "2026-11-15",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-c8b37a447782479881f4a6ec972f813f",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571505825791352922/894461575_17978502705155127_5132187526092317551_n.png?ex=6afafa5a&is=6af9a8da&hm=961a35320936d222e536477235bef19a7e258f5f9c0b642db84c25035ba42b65&"
+        },
+        {
+          "url": "/media/library/yisatsai/5.webp?v=804fe2c605bb500e",
+          "alt": "蔡依珊作品照片：海浪星辰圖樣羽織設計與版型",
+          "source": "https://minicourse.dev/media/library/yisatsai/5.webp?v=804fe2c605bb500e",
+          "checkedAt": "2026-11-15",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-5f9a9e6d2a604408a9695a5f271d4de2",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571505827318202520/892134693_17978152749155127_5330891956869748507_n.png?ex=6afafa5a&is=6af9a8da&hm=889a2833780b01d8d83808f9971d6b0d2bbd72e08171bd7c678abc87c2927680&"
+        },
+        {
+          "url": "/media/library/yisatsai/6.webp?v=b91094e163358452",
+          "alt": "蔡依珊作品照片：南洋海洋圖樣飄帶成品",
+          "source": "https://minicourse.dev/media/library/yisatsai/6.webp?v=b91094e163358452",
+          "checkedAt": "2026-11-15",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-b4a07f67c5e549b1967c59e6044516c1",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571505827913797823/889001588_10240315013846411_2636002246932027582_n.png?ex=6afafa5a&is=6af9a8da&hm=ec1ef48573794ffcb792d06899e3a27d0928fd69aafad2e8380015fd2560a0ac&"
+        }
+      ]
     }
   ]
 }
