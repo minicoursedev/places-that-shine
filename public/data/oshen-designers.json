@@ -5037,6 +5037,58 @@
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571428248494280844/835356425_17955428583258014_7219881612620360858_n.png?ex=6afab21a&is=6af9609a&hm=6a16d6916bd794b565d4ab1220ba54d2f13ecc04a0328dadd859b0c117f86005&"
         }
       ]
+    },
+    {
+      "id": "hannah-bbicc",
+      "name": "Hannah",
+      "category": "設計師",
+      "description": "Taiwan / 台派\nGraphic Designer",
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@hannah_bbicc",
+        "ig": "https://www.instagram.com/hannah_bbicc/",
+        "web": ""
+      },
+      "verification": true,
+      "disabled": false,
+      "logo": {
+        "url": "/media/library/hannah-bbicc/logo.webp?v=d0777fb390fe979f",
+        "source": "https://www.threads.com/@hannah_bbicc",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-15",
+        "note": "已核對官方 Threads 個人檔案頭像，HTTPS 圖片可讀取",
+        "originalUrl": "https://scontent-tpe1-1.cdninstagram.com/v/t51.82787-19/515544226_17914937241132742_8086817510485133804_n.jpg?stp=dst-jpg_s640x640_tt6&_nc_cat=102&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=b3fa00&_nc_ohc=DABncBppagMQ7kNvwEtihCI&_nc_oc=AdoIGzyyqAHupiUsqf0SDrUQh1Qq-R1sGDRei6sUbmFFrZzuwYLmu053xWwNHRo3mc0&_nc_zt=24&_nc_ht=scontent-tpe1-1.cdninstagram.com&_nc_gid=2e8opAmNNHZEEEstgKWDBg&_nc_ss=7920f&oh=00_AQTL03e3mzk7BTvaEja_HONvkARI1s882BpdUd4ODmfItQ&oe=6AFF27CF"
+      },
+      "productImages": [
+        {
+          "url": "/media/library/hannah-bbicc/1.webp?v=43d3660197e9d693",
+          "alt": "Hannah 作品照片 1",
+          "source": "https://minicourse.dev/media/library/hannah-bbicc/1.webp?v=43d3660197e9d693",
+          "checkedAt": "2026-11-15",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-cc2be956a5ee4fdf927cf970a0dbc906",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571430384313303171/890716638_17978016168132742_6494453144448649128_n.png?ex=6afab417&is=6af96297&hm=1141cd600c1a7951911b0dac94c9c93f20e429205cfc903d82c6b0b939ac9e13&"
+        },
+        {
+          "url": "/media/library/hannah-bbicc/2.webp?v=281f2116f9ec7115",
+          "alt": "Hannah 作品照片 2",
+          "source": "https://minicourse.dev/media/library/hannah-bbicc/2.webp?v=281f2116f9ec7115",
+          "checkedAt": "2026-11-15",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-0e48547e50104ba7afb19ac1931e104d",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571430385362018395/877167542_17977275423132742_5633926601845051817_n.png?ex=6afab417&is=6af96297&hm=5abbf2f20152caa7b262060b24a7a6d4e48af0108dad0f6a6046dcf38cb2fe20&"
+        },
+        {
+          "url": "/media/library/hannah-bbicc/3.webp?v=f9160817333a7012",
+          "alt": "Hannah 作品照片 3",
+          "source": "https://minicourse.dev/media/library/hannah-bbicc/3.webp?v=f9160817333a7012",
+          "checkedAt": "2026-11-15",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-8a8556a6b12447868b144816283f5029",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571430385965989908/870065389_17977108320132742_1963984399441335971_n.png?ex=6afab417&is=6af96297&hm=81903558995ff1b0ddd22a5d9888212325768762104cad229dc872bebad934f1&"
+        }
+      ]
     }
   ]
 }
