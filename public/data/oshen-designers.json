@@ -4953,8 +4953,9 @@
     },
     {
       "id": "people2",
-      "name": "鏟子超人",
+      "name": "人2 x People2",
       "category": "設計師",
+      "hall": "S",
       "description": "",
       "social": {
         "fb": "https://www.facebook.com/people2",
@@ -4976,7 +4977,7 @@
       "productImages": [
         {
           "url": "/media/library/people2/1.webp?v=b41991b821fab25b",
-          "alt": "鏟子超人作品照片 1",
+          "alt": "人2 x People2 作品照片 1",
           "source": "https://minicourse.dev/media/library/people2/1.webp?v=b41991b821fab25b",
           "checkedAt": "2026-11-15",
           "note": "使用者提供，指定為此設計師作品照片",
