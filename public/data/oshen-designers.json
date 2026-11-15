@@ -4783,6 +4783,48 @@
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571169172874862732/877218464_18637005355045325_8084904638335294986_n.png?ex=6af9c0d1&is=6af86f51&hm=3b94bae56fb9b1baa5e61248b888a2d4e25b5533acd5f7208cc868f6a403b76b&"
         }
       ]
+    },
+    {
+      "id": "jack55082003",
+      "name": "Chang",
+      "category": "設計師",
+      "description": "掛扣產品設計師",
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@jack55082003",
+        "ig": "",
+        "web": ""
+      },
+      "verification": true,
+      "disabled": false,
+      "logo": {
+        "url": "",
+        "source": "https://www.threads.com/@jack55082003",
+        "platform": "threads",
+        "status": "unverified",
+        "checkedAt": "2026-11-15",
+        "note": "Threads 無法確認可讀取的官方頭像"
+      },
+      "productImages": [
+        {
+          "url": "/media/library/jack55082003/1.webp?v=c08090764a73066e",
+          "alt": "Chang 掛扣作品照片 1：布條掛扣與不同顏色的掛扣展示",
+          "source": "https://minicourse.dev/media/library/jack55082003/1.webp?v=c08090764a73066e",
+          "checkedAt": "2026-11-15",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-dfbfe143d33748ae9b61be476710268d",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571350232472490125/895552090_17970588912206161_7191749084482079864_n.png?ex=6afa6971&is=6af917f1&hm=e75abaf9c43e1dda7a6bc837adeb7361773e831fe22182930745a67a6e186e08&"
+        },
+        {
+          "url": "/media/library/jack55082003/2.webp?v=8a3c72ec4603dba9",
+          "alt": "Chang 掛扣作品照片 2：紙盒內的灰色掛扣",
+          "source": "https://minicourse.dev/media/library/jack55082003/2.webp?v=8a3c72ec4603dba9",
+          "checkedAt": "2026-11-15",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-b44bbfa797554fcb97a987ccc12d3475",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571350233689100358/904610220_17970588939206161_5188839315055466864_n.png?ex=6afa6971&is=6af917f1&hm=6f16b4225ecc9f7e2c854d0dd06d6db339204e80d682889c4d36511dca76444c&"
+        }
+      ]
     }
   ]
 }
