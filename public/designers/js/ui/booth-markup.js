@@ -31,11 +31,17 @@ export function failHtml(boothId, text) {
     <div class="dlg-body"><p class="bo-note">${esc(text)}</p></div>`;
 }
 
-function coverHtml(src, label, width, height, eager = false) {
+function coverHtml(src, label, width, height, { eager, thumbnail } = {}) {
   const url = safeUrl(src);
   if (!url) return `<span class="bo-cover bo-cover-none" aria-hidden="true"></span>`;
   const dimensions = width > 0 && height > 0 ? ` width="${Number(width)}" height="${Number(height)}"` : '';
-  return `<span class="bo-cover"><img src="${esc(thumbnailUrl(url))}" data-original="${esc(url)}" alt="${esc(label)}"${dimensions} loading="${eager ? 'eager' : 'lazy'}"${eager ? ' fetchpriority="high"' : ''} decoding="async" data-label="${esc(label)}"></span>`;
+  const rotated = [90, -90].includes(thumbnail?.rotation)
+    && Number.isSafeInteger(thumbnail.width) && thumbnail.width > 0
+    && Number.isSafeInteger(thumbnail.height) && thumbnail.height > 0;
+  const frame = rotated
+    ? `class="bo-cover bo-cover-rotated" style="--thumbnail-ratio:${thumbnail.width}/${thumbnail.height};--thumbnail-rotation:${thumbnail.rotation}deg"`
+    : 'class="bo-cover"';
+  return `<span ${frame}><img src="${esc(thumbnailUrl(url))}" data-original="${esc(url)}" alt="${esc(label)}"${dimensions} loading="${eager ? 'eager' : 'lazy'}"${eager ? ' fetchpriority="high"' : ''} decoding="async" data-label="${esc(label)}"></span>`;
 }
 
 function workHtml(w, index, name, profile, booth) {
@@ -47,7 +53,8 @@ function workHtml(w, index, name, profile, booth) {
   if (video) return `<li><div class="bo-work"><video controls playsinline preload="metadata" poster="${esc(safeUrl(w.cover))}" aria-label="${esc(label)}" style="display:block;width:100%;max-height:400px" src="${esc(video)}"></video>${description}</div>${actions}</li>`;
   const url = safeUrl(w.url);
   // Image alternative text is not a display title; only explicit captions appear below works.
-  const inner = `${coverHtml(w.cover, label, w.width, w.height, profile && index === 0)}${description}`;
+  const cover = coverHtml(w.cover, label, w.width, w.height, { eager: profile && index === 0, thumbnail: w.thumbnail });
+  const inner = `${cover}${description}`;
   return url
     ? `<li><a class="bo-work" href="${esc(url)}" target="_blank" rel="noopener">${inner}</a>${actions}</li>`
     : `<li><span class="bo-work">${inner}</span>${actions}</li>`;

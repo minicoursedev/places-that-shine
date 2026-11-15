@@ -79,6 +79,7 @@ export function createCatalogue(data, { baseUrl = CONFIG.DESIGNERS_URL, ogImages
             name: typeof product?.alt === 'string' && product.alt.trim() ? product.alt : `${designer.name} 作品參考 ${i + 1}`,
             caption: typeof product?.caption === 'string' ? product.caption : '',
             cover: imageUrl(product?.url),
+            thumbnail: product?.thumbnail,
             video: imageUrl(product?.videoUrl),
             url: productLink(product),
           })).filter((work, i) => work.cover && designer.productImages[i]?.disabled !== true);

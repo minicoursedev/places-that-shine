@@ -1,8 +1,8 @@
 // 設計師列表模式 <main id="stage-list">: filter the search rows in memory, render 60 cards at a time,
 // Fill each card’s logo and works gallery as it scrolls into view.
 import { state, toast, findBoothIn } from '../state.js';
-import { loadSearch, loadAisle, aisleOfBooth } from '../data.js?v=20261114-share-channels';
-import { goToBooth } from '../nav.js?v=20261114-hall-share-images';
+import { loadSearch, loadAisle, aisleOfBooth } from '../data.js?v=20261115-landscape-work-thumbnail';
+import { goToBooth } from '../nav.js?v=20261115-landscape-work-thumbnail';
 import { openBooth } from './booth.js?v=20261114-hall-share-images';
 import { thumbnailUrl, retryOriginal } from '../images.js';
 import { loadProducts } from '../products.js?v=20261030-pinned-work';

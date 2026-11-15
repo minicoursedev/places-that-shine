@@ -49,6 +49,21 @@ span.bo-work { cursor: default; }
   transition: transform .08s, box-shadow .08s;
 }
 .bo-cover img { width: 100%; height: auto; display: block; }
+.bo-cover-rotated {
+  box-sizing: content-box;
+  width: auto;
+  container-type: inline-size;
+  aspect-ratio: var(--thumbnail-ratio);
+  background: #000;
+}
+.bo-cover-rotated img {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  width: auto;
+  height: 100cqw;
+  max-width: none;
+  transform: translate(-50%, -50%) rotate(var(--thumbnail-rotation));
+}
 .bo-cover-none { aspect-ratio: 3 / 4; background-color: var(--paper); background-image: var(--tone); }
 .bo-cover-none::after {
   content: ""; position: absolute; left: 22%; top: 30%; width: 56%; height: 22%;
