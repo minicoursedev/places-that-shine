@@ -5852,6 +5852,85 @@
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571758813428580493/900664761_17919882555531509_6146205921219144133_n.png?ex=6afbe5f6&is=6afa9476&hm=675c0276341e5b885228f917635c31d12d0f3a5ea775947360fa815d4891f07b&"
         }
       ]
+    },
+    {
+      "id": "jiho-studio",
+      "name": "jiho己合",
+      "description": "手作. 口金包/古著/配件\n海外可寄送",
+      "category": "設計師",
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@jiho_studio",
+        "ig": "https://www.instagram.com/jiho_studio/",
+        "web": ""
+      },
+      "verification": true,
+      "disabled": false,
+      "logo": {
+        "url": "/media/library/jiho-studio/logo.webp?v=7282ba304bc6a573",
+        "source": "https://www.threads.com/@jiho_studio",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-16",
+        "note": "已核對官方 Threads 個人頁的顯示名稱、og:url 與 og:image 頭像，HTTPS 圖片可讀取",
+        "originalUrl": "https://scontent-lax3-1.cdninstagram.com/v/t51.2885-19/358176561_1200088487335643_8085544030651425550_n.jpg?stp=dst-jpg_s640x640_tt6&_nc_cat=101&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=b3fa00&_nc_ohc=iKmTIfUBCocQ7kNvwG9Vnc1&_nc_oc=AdocpS-IroxmKSRJyGE0u-kt44Omjx70S7E3_ezNmXz0Q8lw_Bx9eGpw42cwz278QwA&_nc_zt=24&_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_ss=7920f&oh=00_AQS5TjMf3sRaRvkqkxnfQ0mOyMCLQ4cpAHtNRKnP_ul_vw&oe=6B00C821"
+      },
+      "productImages": [
+        {
+          "url": "/media/library/jiho-studio/1.webp?v=9536c89362e0cf3e",
+          "alt": "jiho己合作品照片 1",
+          "source": "https://minicourse.dev/media/library/jiho-studio/1.webp?v=9536c89362e0cf3e",
+          "checkedAt": "2026-11-16",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-080717b16dce4e748297b927b30e7ed0",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571870574144262245/883626789_17993365122108560_3763745873025040886_n.png?ex=6afc4e0c&is=6afafc8c&hm=b932abd7d800843112f698afd12c94bc95ce9f4b89a1a3c64291057e5968ef16&"
+        },
+        {
+          "url": "/media/library/jiho-studio/2.webp?v=572ab1ead65ddf26",
+          "alt": "jiho己合作品照片 2",
+          "source": "https://minicourse.dev/media/library/jiho-studio/2.webp?v=572ab1ead65ddf26",
+          "checkedAt": "2026-11-16",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-8e98bcfda552423d9402140893b4c4c7",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571870574802763886/883558433_17993365113108560_6335987596840467762_n.png?ex=6afc4e0c&is=6afafc8c&hm=c0ab65abc5bbd0ece5c0bb8758e5fb63d8bef8d20ce4f8deaaaca9bc6c60a8db&"
+        },
+        {
+          "url": "/media/library/jiho-studio/3.webp?v=cf348c7bc6562c6b",
+          "alt": "jiho己合作品照片 3",
+          "source": "https://minicourse.dev/media/library/jiho-studio/3.webp?v=cf348c7bc6562c6b",
+          "checkedAt": "2026-11-16",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-409fd369211e4ebca5290b8d303048a9",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571870575520129034/799440277_18627738016054042_3727243403029643329_n.png?ex=6afc4e0d&is=6afafc8d&hm=7a4e906e6d3045ca6c09a5449986b1dacef258f9d4a93c2b550bee3e9c516069&"
+        },
+        {
+          "url": "/media/library/jiho-studio/4.webp?v=d73bb554c3c67464",
+          "alt": "jiho己合作品照片 4",
+          "source": "https://minicourse.dev/media/library/jiho-studio/4.webp?v=d73bb554c3c67464",
+          "checkedAt": "2026-11-16",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-881e94222a7749168aa6fb7b1c384e73",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571870577185128608/907371282_18653248543054042_5601520989301613109_n.png?ex=6afc4e0d&is=6afafc8d&hm=57847f9630837bc81f1fe0b89523238f4c31ce85735282f685534a5c79e50d81&"
+        },
+        {
+          "url": "/media/library/jiho-studio/5.webp?v=4d2b7d588e2c5484",
+          "alt": "jiho己合作品照片 5",
+          "source": "https://minicourse.dev/media/library/jiho-studio/5.webp?v=4d2b7d588e2c5484",
+          "checkedAt": "2026-11-16",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-614f48c12eae4bfb8d1077a3f1e38676",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571870578703605801/907684017_18653248534054042_1951814598457368662_n.png?ex=6afc4e0d&is=6afafc8d&hm=7b307a69ef84c3fc0af41d23e46cd1d1db2da56be40f5f9a70cd32087011474a&"
+        },
+        {
+          "url": "/media/library/jiho-studio/6.webp?v=bf5950e90854d6c2",
+          "alt": "jiho己合作品照片 6",
+          "source": "https://minicourse.dev/media/library/jiho-studio/6.webp?v=bf5950e90854d6c2",
+          "checkedAt": "2026-11-16",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-9d362b2d92734bcf902371edbf25e532",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571870579638800454/899270266_18650757484054042_8913804704924476129_n.png?ex=6afc4e0e&is=6afafc8e&hm=60871c8a80f305bb1b9e2e6900acf5cf7f813dc2c085eb6966660bdedb0a5e53&"
+        }
+      ]
     }
   ]
 }
