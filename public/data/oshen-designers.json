@@ -5798,6 +5798,49 @@
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571752922096603226/7.jpg?ex=6afbe07a&is=6afa8efa&hm=57271ac362b18ffb285ec9846635fb800f7d01fb67f993eab68c44845fb009ed&"
         }
       ]
+    },
+    {
+      "id": "chemaowei",
+      "name": "宜蘭扯貓尾港式餐廳",
+      "description": "位於宜蘭市的港式小餐廳，香港夫妻經營，適合四人以下的小聚會。\n招牌人氣品項有 #蘋果肉桂卷 #太妃肉桂卷 #港式曲奇蛋塔 ＃海南雞腿排定食 等\n歡迎預約，預約請一天前FB訊息我們。\n當天不接受預約，現場有位置就可以了。\n位置有限，五人或以上恕不接待唷。",
+      "category": "設計師",
+      "social": {
+        "fb": "https://www.facebook.com/chemaowei",
+        "threads": "https://www.threads.com/@chemaowei",
+        "ig": "",
+        "web": ""
+      },
+      "verification": true,
+      "disabled": false,
+      "logo": {
+        "url": "/media/library/chemaowei/logo.webp?v=16feb1019b3f1378",
+        "source": "https://www.threads.com/@chemaowei",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-16",
+        "note": "已核對官方 Threads 個人頁的顯示名稱、og:url 與 og:image 頭像，HTTPS 圖片可讀取",
+        "originalUrl": "https://scontent-tpe1-1.cdninstagram.com/v/t51.82787-19/515857438_18391146271185271_6383948564984206625_n.jpg?stp=dst-jpg_s640x640_tt6&_nc_cat=101&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=b3fa00&_nc_ohc=khj0RhJx3AEQ7kNvwE0K6ud&_nc_oc=AdpjOrn8YQsrRp0KQccNIR3cOjkjqkPlhyKzTwXkfKB7sfQR6WRNj340zJC-dQj69gc&_nc_zt=24&_nc_ht=scontent-tpe1-1.cdninstagram.com&_nc_gid=88TZv0GNGD2aINA3ALu0pw&_nc_ss=7920f&oh=00_AQTABoo6Iz8vftMzWgCuHl7E5qxaKuaN_P-6_vkx3uy0Mg&oe=6B00670B"
+      },
+      "productImages": [
+        {
+          "url": "/media/library/chemaowei/1.webp?v=7c4510f2481b079c",
+          "alt": "宜蘭扯貓尾港式餐廳作品照片 1",
+          "source": "https://minicourse.dev/media/library/chemaowei/1.webp?v=7c4510f2481b079c",
+          "checkedAt": "2026-11-16",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-5bd15ee2d0bb4b2b88dadc642ed45e23",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571758813009420349/899588211_17919883305531509_448560485226065360_n.png?ex=6afbe5f6&is=6afa9476&hm=98a501876e3dd018cf5e397d7baa4dbf7b1d8e4f9a2cfe2bb8551c48e86e72bc&"
+        },
+        {
+          "url": "/media/library/chemaowei/2.webp?v=7c47a79859dafbd6",
+          "alt": "宜蘭扯貓尾港式餐廳作品照片 2",
+          "source": "https://minicourse.dev/media/library/chemaowei/2.webp?v=7c47a79859dafbd6",
+          "checkedAt": "2026-11-16",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-5c263ce5223c41ff8d6ff513c13db623",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571758813428580493/900664761_17919882555531509_6146205921219144133_n.png?ex=6afbe5f6&is=6afa9476&hm=675c0276341e5b885228f917635c31d12d0f3a5ea775947360fa815d4891f07b&"
+        }
+      ]
     }
   ]
 }
