@@ -5675,6 +5675,41 @@
         }
       ],
       "hall": "O"
+    },
+    {
+      "id": "yuncraft-o",
+      "name": "蘊茶語",
+      "description": "阿里山小茶農｜製臺灣的茶｜做台灣的人\n全產品皆由國家品茶師自產自銷\n臺中市大雅區民生路三段360號\n⬇賣場連結在這邊⬇",
+      "category": "設計師",
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@yuncraft.o",
+        "ig": "",
+        "web": "https://yuncraft.cashier.ecpay.com.tw/"
+      },
+      "verification": true,
+      "disabled": false,
+      "logo": {
+        "url": "/media/library/yuncraft-o/logo.webp?v=c350d74b1739ae79",
+        "source": "https://www.threads.com/@yuncraft.o",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-16",
+        "note": "已核對官方 Threads 個人頁的顯示名稱、og:url 與 og:image 頭像，HTTPS 圖片可讀取",
+        "originalUrl": "https://scontent.cdninstagram.com/v/t51.82787-19/517973384_17845932384523326_1092502961285563106_n.jpg?stp=dst-jpg_s640x640_tt6&_nc_cat=104&ccb=7-5&_nc_sid=b3fa00&_nc_ohc=gcfM4O937PUQ7kNvwGGQ_Fy&_nc_oc=Adqql3ZmO0B_bjzQuDp-mF5Rj4YXjHfdd2KdtGdSt9wnFJFgtX0Y9HTzsIFH35dGsIs&_nc_zt=24&_nc_ht=scontent.cdninstagram.com&_nc_gid=sKWDGk6ZDL1nc_VxlnRFtg&_nc_ss=7920f&oh=00_AQRcgo469uT0jWD-J0R1NBOOG1C5hiWJbJQa9ajwrKjvQw&oe=6B00748B"
+      },
+      "productImages": [
+        {
+          "url": "/media/library/yuncraft-o/1.webp?v=90f9754b7f536662",
+          "alt": "蘊茶語作品照片 1",
+          "source": "https://minicourse.dev/media/library/yuncraft-o/1.webp?v=90f9754b7f536662",
+          "checkedAt": "2026-11-16",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-13ca9ee7b584409f99109f09bb181219",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571750275037794365/905664657_17921066937525715_7133899557519473409_n.png?ex=6afbde03&is=6afa8c83&hm=670d6689f6f4f2da83707c4fe3fc2aa8453b2a81be866806f344325d4e4dbab6&"
+        }
+      ],
+      "hall": "A"
     }
   ]
 }
