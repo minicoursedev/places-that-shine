@@ -5710,6 +5710,94 @@
         }
       ],
       "hall": "A"
+    },
+    {
+      "id": "mygirlaiko",
+      "name": "aiko",
+      "description": "可以一起做什麼呢？\n這是aiko & blu 小女孩與貓的日常",
+      "category": "設計師",
+      "social": {
+        "fb": "https://www.facebook.com/mygirlaiko/",
+        "threads": "https://www.threads.com/@mygirlaiko",
+        "ig": "https://www.instagram.com/mygirlaiko/",
+        "web": "https://myship.7-11.com.tw/general/detail/GM2504106028982"
+      },
+      "verification": true,
+      "disabled": false,
+      "logo": {
+        "url": "/media/library/mygirlaiko/logo.webp?v=057fe78680952e77",
+        "source": "https://cdn.discordapp.com/attachments/1553247600935833680/1571752918959263794/1QqcnEe-5yB_zZRF22BeqmGWETyKrlhOmw2559-h1288-iv1.png?ex=6afbe079&is=6afa8ef9&hm=47fa781bacb23e3c3e1d5653198290988867e109d9545463f940fffa19408e7d&",
+        "platform": "discord",
+        "status": "verified",
+        "checkedAt": "2026-11-16",
+        "note": "使用者指定為此設計師 Logo",
+        "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571752918959263794/1QqcnEe-5yB_zZRF22BeqmGWETyKrlhOmw2559-h1288-iv1.png?ex=6afbe079&is=6afa8ef9&hm=47fa781bacb23e3c3e1d5653198290988867e109d9545463f940fffa19408e7d&"
+      },
+      "productImages": [
+        {
+          "url": "/media/library/mygirlaiko/1.webp?v=5065b4b2dfe314c5",
+          "alt": "aiko 作品照片 1",
+          "source": "https://minicourse.dev/media/library/mygirlaiko/1.webp?v=5065b4b2dfe314c5",
+          "checkedAt": "2026-11-16",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-3857b9361c5842f8bdcc88c82b2e58a0",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571752919433216000/1.jpg?ex=6afbe079&is=6afa8ef9&hm=c121995f3d8c19674cca7b1be3a1db6f82835e3b94e83ddcbf39b31cfd3f6a85&"
+        },
+        {
+          "url": "/media/library/mygirlaiko/2.webp?v=238788985d652da1",
+          "alt": "aiko 作品照片 2",
+          "source": "https://minicourse.dev/media/library/mygirlaiko/2.webp?v=238788985d652da1",
+          "checkedAt": "2026-11-16",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-2336c928b0894d22b31c45e2c012a36a",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571752919865495573/2.jpg?ex=6afbe079&is=6afa8ef9&hm=b5429d179deee03edfc8cd270239ea3d6abbdf280ffd5ee8a0d09dd527704379&"
+        },
+        {
+          "url": "/media/library/mygirlaiko/3.webp?v=12d6285ae999860e",
+          "alt": "aiko 作品照片 3",
+          "source": "https://minicourse.dev/media/library/mygirlaiko/3.webp?v=12d6285ae999860e",
+          "checkedAt": "2026-11-16",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-d2554291cdb14804a6e9b55133b5cb5a",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571752920251109436/3.jpg?ex=6afbe079&is=6afa8ef9&hm=14274b5b8ec1f75c92d756e2507890f75f77dba25b333d1969bd7dd49a0bf7a3&"
+        },
+        {
+          "url": "/media/library/mygirlaiko/4.webp?v=1850c76642c4436d",
+          "alt": "aiko 作品照片 4",
+          "source": "https://minicourse.dev/media/library/mygirlaiko/4.webp?v=1850c76642c4436d",
+          "checkedAt": "2026-11-16",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-5929f4423c0e4aef90995c92cd7121d6",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571752920603566130/4.jpg?ex=6afbe07a&is=6afa8efa&hm=e975494bbd6e8612e7e7b83373fa9399e644fc64afd092cf979bcc923309a73b&"
+        },
+        {
+          "url": "/media/library/mygirlaiko/5.webp?v=017e48209915abdb",
+          "alt": "aiko 作品照片 5",
+          "source": "https://minicourse.dev/media/library/mygirlaiko/5.webp?v=017e48209915abdb",
+          "checkedAt": "2026-11-16",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-15f8c9a6b2a14fa2bc0bad8152252977",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571752921136238613/5.jpg?ex=6afbe07a&is=6afa8efa&hm=451c723e5902aa0c7db0a8158e9cc9183e3b47380fb4597c5e50c95e5b4b63da&"
+        },
+        {
+          "url": "/media/library/mygirlaiko/6.webp?v=36db948cbdd5826b",
+          "alt": "aiko 作品照片 6",
+          "source": "https://minicourse.dev/media/library/mygirlaiko/6.webp?v=36db948cbdd5826b",
+          "checkedAt": "2026-11-16",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-72c0b06be4654c199e4f7f58d59fc1f6",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571752921601679400/6.jpg?ex=6afbe07a&is=6afa8efa&hm=337f9358176efc4d511e124baf6f253ab48a808f0866825b15cc42c5379ac24d&"
+        },
+        {
+          "url": "/media/library/mygirlaiko/7.webp?v=0eee3560069df0d9",
+          "alt": "aiko 作品照片 7",
+          "source": "https://minicourse.dev/media/library/mygirlaiko/7.webp?v=0eee3560069df0d9",
+          "checkedAt": "2026-11-16",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-4d9b0d93293f40c79a49cca2740e8bfb",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571752922096603226/7.jpg?ex=6afbe07a&is=6afa8efa&hm=57271ac362b18ffb285ec9846635fb800f7d01fb67f993eab68c44845fb009ed&"
+        }
+      ]
     }
   ]
 }
