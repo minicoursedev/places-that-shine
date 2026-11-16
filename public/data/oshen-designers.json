@@ -5532,6 +5532,47 @@
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571713166193201203/909503189_17976543879151110_6320260185608512786_n.png?ex=6afbbb73&is=6afa69f3&hm=5f2683c67d33e3be3795cbe34ee8d325b6344d2c722d269ad8093b988ec53764&"
         }
       ]
+    },
+    {
+      "id": "eziraros",
+      "name": "eziraros",
+      "description": "十九 / 劉乃廷\n末代 creative coder\n日常帳",
+      "category": "設計師",
+      "hall": "O",
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@eziraros",
+        "ig": "https://www.instagram.com/eziraros",
+        "web": "https://memoriesofthewind.tw/"
+      },
+      "verification": true,
+      "disabled": false,
+      "logo": {
+        "url": "/media/library/eziraros/logo.webp?v=0339bba7eccb61a9",
+        "source": "https://www.threads.com/@eziraros",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-16",
+        "note": "已核對 Threads 官方個人頁 og:url、顯示名稱及 og:image 頭像，HTTPS 圖片可讀取",
+        "originalUrl": "https://scontent.cdninstagram.com/v/t51.2885-19/407486699_348676627782846_1695781328407905248_n.jpg?stp=dst-jpg_s640x640_tt6&_nc_cat=100&ccb=7-5&_nc_sid=b3fa00&_nc_ohc=8a-KFz3jvkEQ7kNvwE0L7DR&_nc_oc=Adrim77QAxX8u1F3R8qFgRZCrvKC8iOO1xuNj2NJwmdlOPBqJDK7J3CIQ9E8U0BKAn0&_nc_zt=24&_nc_ht=scontent.cdninstagram.com&_nc_ss=7920f&oh=00_AQSJOg2bpEVU3OpDuOCgwqMd-z07YAsPrb9DuCc7JQ970w&oe=6B00329C"
+      },
+      "productImages": [
+        {
+          "url": "/media/library/eziraros/1.webp?v=69bfc668c4ba50db",
+          "alt": "eziraros《風的記憶 Memories of the Wind》網站預覽圖",
+          "source": "https://memoriesofthewind.tw/",
+          "checkedAt": "2026-11-16",
+          "note": "使用者指定作品網站的 og:image 預覽圖；網站首頁及關於頁均連結至 eziraros 的 Threads 帳號，HTTPS 圖片可讀取",
+          "id": "work-3c37584998d74879a440898389330d4a",
+          "originalUrl": "https://memoriesofthewind.tw/og-home.jpg"
+        }
+      ],
+      "links": [
+        {
+          "label": "風的記憶 Memories of the Wind",
+          "url": "https://memoriesofthewind.tw/"
+        }
+      ]
     }
   ]
 }
