@@ -5494,6 +5494,40 @@
           "originalUrl": "https://scontent-lax3-1.cdninstagram.com/v/t51.82787-15/902585976_17980360410158463_5400954814959009401_n.jpg?stp=cp6_dst-jpg_e35_tt6&_nc_cat=108&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMDY0MDk4NDgxNDc0MTI5OQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTU2Mi5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=TAzFLxn0EzAQ7kNvwF8Mp5m&_nc_oc=AdqvRjYUOyZlnyMCpIh8GBDiM-eDDUf7rZdibPPfDAVLBUdKl4kGBmkMtKT7QRxaTXw&_nc_zt=23&_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_gid=W18uZslgRc9zAwhrjreFnw&_nc_ss=7920f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQSdWe866tVjrmjxTHP7yyUB-7c7WMc-XwZGmdZ9LCYMYg&oe=6AFF80EA"
         }
       ]
+    },
+    {
+      "id": "csom26",
+      "name": "Chuang",
+      "description": "當一個不自責的人\n過一段記得的一生",
+      "category": "愛好者",
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@csom26_",
+        "ig": "",
+        "web": ""
+      },
+      "verification": true,
+      "disabled": false,
+      "logo": {
+        "url": "/media/library/csom26/logo.webp?v=311596ce3dfb1876",
+        "source": "https://www.threads.com/@csom26_",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-16",
+        "note": "已核對 Threads 官方個人頁頭像，HTTPS 圖片可讀取",
+        "originalUrl": "https://scontent-tpe1-1.cdninstagram.com/v/t51.82787-19/726621765_17954696094151110_3045138022617883774_n.jpg?stp=dst-jpg_s640x640_tt6&_nc_cat=108&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=b3fa00&_nc_ohc=CKfVmgY-BkYQ7kNvwHKzbcn&_nc_oc=AdqzEhktzmgJSpoHm7JlN-TOXqNBvPHZd3GAKtdxk814Tvu7tmxqTl0467KghPgPPwU&_nc_zt=24&_nc_ht=scontent-tpe1-1.cdninstagram.com&_nc_gid=8U5BPqwEgNCphwTLg9xhuQ&_nc_ss=7920f&oh=00_AQQvQ1JVS73-EQQzMKL4loh9GjcW_01Q1c0jDYIhvqy-JA&oe=6B005762"
+      },
+      "productImages": [
+        {
+          "url": "/media/library/csom26/1.webp?v=aede927f7199302a",
+          "alt": "Chuang 作品：黑色數字 5 造型與彩色人物",
+          "source": "https://minicourse.dev/media/library/csom26/1.webp?v=aede927f7199302a",
+          "checkedAt": "2026-11-16",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-88ca58534cc647f3a9a374fd5920e664",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571713166193201203/909503189_17976543879151110_6320260185608512786_n.png?ex=6afbbb73&is=6afa69f3&hm=5f2683c67d33e3be3795cbe34ee8d325b6344d2c722d269ad8093b988ec53764&"
+        }
+      ]
     }
   ]
 }
