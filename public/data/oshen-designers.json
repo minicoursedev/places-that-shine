@@ -5558,6 +5558,15 @@
       },
       "productImages": [
         {
+          "url": "/media/library/eziraros/2.webp?v=573009c5bf550a5e",
+          "alt": "eziraros《洋流 Ocean Current》作品預覽圖",
+          "source": "https://naiting-liu.tw/zh/works/ocean-current/",
+          "checkedAt": "2026-11-16",
+          "note": "作者官方作品頁提供的《洋流》作品預覽圖；官網關於頁連結至同一 Threads 與 Instagram 帳號，HTTPS 圖片可讀取",
+          "id": "work-6d4a7d7d885e4859b975b07ae7bb31ce",
+          "originalUrl": "https://naiting-liu.tw/_astro/ocean-current.XFioXyJC_1AjBO0.webp"
+        },
+        {
           "url": "/media/library/eziraros/1.webp?v=69bfc668c4ba50db",
           "alt": "eziraros《風的記憶 Memories of the Wind》網站預覽圖",
           "source": "https://memoriesofthewind.tw/",
@@ -5571,6 +5580,10 @@
         {
           "label": "風的記憶 Memories of the Wind",
           "url": "https://memoriesofthewind.tw/"
+        },
+        {
+          "label": "洋流",
+          "url": "https://naiting-liu.tw/zh/works/ocean-current/"
         }
       ]
     }
