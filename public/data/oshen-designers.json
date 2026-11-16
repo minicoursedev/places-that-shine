@@ -5432,6 +5432,10 @@
           "label": "台灣大洋流・台北順起來",
           "url": "https://tpe.taiwanwell.com"
         }
+      ],
+      "hall": "W",
+      "legacyShareHalls": [
+        "A"
       ]
     },
     {

@@ -11,6 +11,17 @@ export const hallPages = [{
   height: 630,
   type: 'image/jpeg',
 }, {
+  code: 'W',
+  name: '洋流網站館',
+  path: '/designers/halls/websites/',
+  title: '洋流網站館｜發光的設計師',
+  description: '瀏覽洋流時期的網站作品與創作者。',
+  image: '/media/library/andrew-wulala/10.webp?v=0fcd999a27a34e9d',
+  alt: '台灣味●TaiwanWell 的台灣大洋流・台北順起來網站作品',
+  width: 1024,
+  height: 576,
+  type: 'image/webp',
+}, {
   code: 'S',
   name: '鏟子超人館',
   path: '/designers/halls/shovel-heroes/',

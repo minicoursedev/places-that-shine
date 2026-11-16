@@ -1,5 +1,5 @@
 import { designerMetadata, designerStructuredData, serializeStructuredData, publicUrl } from './profile-seo.js?v=20261114-designer-title';
-import { hallPageForCode, hallPageForPath } from './hall-pages.js?v=20261114-hall-share-images';
+import { hallPageForCode, hallPageForPath } from './hall-pages.js?v=20261116-oshen-websites-hall';
 import { browserOrigin } from './config.js';
 
 export const designerRoot = '/designers/';

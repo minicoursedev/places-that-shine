@@ -3,9 +3,9 @@ import Layout from '../../../../../layouts/OshenDesignerLayout.astro';
 import { designers } from '../../../../../lib/oshen-designers';
 
 export function getStaticPaths() {
-  return designers.flatMap(designer => designer.booth.hallBooths.map(({ aisle }) => ({
-    params: { id: designer.id, hall: aisle[0] },
-    props: { designerId: designer.id, shareHall: aisle[0] },
+  return designers.flatMap(designer => designer.shareHallCodes.map(shareHall => ({
+    params: { id: designer.id, hall: shareHall },
+    props: { designerId: designer.id, shareHall },
   })));
 }
 

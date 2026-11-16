@@ -73,6 +73,10 @@ export const designers = data.designers.filter(designer => designer.disabled !==
     name: designer.name,
     hallCode: aisle.hall,
     hallCodes: designerHallCodes(designer),
+    shareHallCodes: [...new Set([
+      ...booth.hallBooths.map(({ aisle }) => aisle[0]),
+      ...('legacyShareHalls' in designer ? designer.legacyShareHalls : []),
+    ])],
     hallName: aisle.hallName,
     booth,
     store,
