@@ -1,7 +1,7 @@
 // Designer dialog: profile, catalogue images, social links and share link.
 import { state, markVisited, findBoothIn } from '../state.js';
-import { loadAisle, aisleOfBooth } from '../data.js?v=20261116-oshen-websites-hall';
-import { boothHtml, loadingHtml, failHtml } from './booth-markup.js?v=20261116-oshen-websites-hall';
+import { loadAisle, aisleOfBooth } from '../data.js?v=20261117-secondary-instagram';
+import { boothHtml, loadingHtml, failHtml } from './booth-markup.js?v=20261117-secondary-instagram';
 import { designerHallRoot, designerPath, designerSharePath, designerWalkPath, resolveDesignerRoute, updateDesignerMetadata } from '../routes.js?v=20261116-oshen-websites-hall';
 import { retryOriginal } from '../images.js';
 import { loadProducts, sampleProducts } from '../products.js?v=20261030-pinned-work';

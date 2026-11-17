@@ -60,14 +60,21 @@ function workHtml(w, index, name, profile, booth) {
     : `<li><span class="bo-work">${inner}</span>${actions}</li>`;
 }
 
+function socialButton(source, icon, label, title = label) {
+  const url = safeUrl(source);
+  return url ? `<a class="btn bo-social-button" href="${esc(url)}" target="_blank" rel="noopener noreferrer" aria-label="${esc(label)}" title="${esc(title)}"><img src="/designers/assets/buttons/${icon}" width="32" height="32" alt="" decoding="async"></a>` : '';
+}
+
 export function boothHtml(booth, store, { profile = false, staticProfile = false } = {}) {
   const storeUrl = safeUrl(store?.url);
-  const socialLinks = [['fb', 'Facebook', 'facebook.png'], ['threads', 'Threads', 'threads.svg'], ['ig', 'Instagram', 'instagram.svg'], ['web', '官網', 'website.svg']]
-    .map(([key, label, icon]) => {
-      const url = safeUrl(store?.social?.[key]);
-      return url ? `<a class="btn bo-social-button" href="${esc(url)}" target="_blank" rel="noopener noreferrer" aria-label="${esc(store?.name)}的${label}" title="${label}"><img src="/designers/assets/buttons/${icon}" width="32" height="32" alt="" decoding="async"></a>` : '';
-    }).join('');
-  const genericLinks = (store?.links || []).map(link => {
+  const links = store?.links || [];
+  const socialLinks = [
+    ...[['fb', 'Facebook', 'facebook.png'], ['threads', 'Threads', 'threads.svg'], ['ig', 'Instagram', 'instagram.svg'], ['web', '官網', 'website.svg']]
+      .map(([key, label, icon]) => socialButton(store?.social?.[key], icon, `${store?.name}的${label}`, label)),
+    ...links.filter(link => link.platform === 'ig')
+      .map(link => socialButton(link.url, 'instagram.svg', link.label)),
+  ].join('');
+  const genericLinks = links.filter(link => link.platform !== 'ig').map(link => {
     const url = safeUrl(link.url);
     return url ? `<a class="btn" href="${esc(url)}" target="_blank" rel="noopener noreferrer" title="${esc(url)}">${esc(link.label)} ↗</a>` : '';
   }).join('');

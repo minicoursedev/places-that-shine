@@ -1,7 +1,7 @@
 // Move between designer aisles and resolve share links.
 import { designerWalkPath, updateDesignerMetadata } from './routes.js?v=20261116-oshen-websites-hall';
 import { state, emit, toast } from './state.js';
-import { loadAisle, aisleOfBooth, hallOf, isOshenHall } from './data.js?v=20261116-oshen-websites-hall';
+import { loadAisle, aisleOfBooth, hallOf, isOshenHall } from './data.js?v=20261117-secondary-instagram';
 
 const hallOfIndex = code => state.index.halls.find(h => h.code === hallOf(code));
 
