@@ -6161,6 +6161,15 @@
       },
       "productImages": [
         {
+          "url": "/media/library/freedom-482/6.webp?v=6de174b11c2baa67",
+          "alt": "Freedom_482 作品照片：紫色臺灣字樣與工程車圖案圓形徽章",
+          "source": "https://minicourse.dev/media/library/freedom-482/6.webp?v=6de174b11c2baa67",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-99081bb5d47a4a19ae178883ba2bbc3e",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572213271040102471/902586135_17915513724559527_7968812524001585619_n.png?ex=6afd8d36&is=6afc3bb6&hm=6574940ed0019f4a8387e44a25101b00acd37175b0b762337cb7a28dcbaf8c3b&"
+        },
+        {
           "url": "/media/library/freedom-482/1.webp?v=22419ae1ddbd11e9",
           "alt": "Freedom_482 作品照片 1：手掌上的彩虹臺灣圓形徽章",
           "source": "https://minicourse.dev/media/library/freedom-482/1.webp?v=22419ae1ddbd11e9",
@@ -6205,6 +6214,10 @@
           "id": "work-3311452b42ad4e52998d925af8369730",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571918762242736268/902586108_17915504178559527_1957714115851855313_n.png?ex=6afc7aed&is=6afb296d&hm=b2be82421d8cbb5fa1843831a15dd54a0406add447adce375a005527713cd0cc&"
         }
+      ],
+      "hall": "S",
+      "additionalHalls": [
+        "O"
       ]
     },
     {
