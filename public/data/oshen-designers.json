@@ -6857,6 +6857,94 @@
           "originalUrl": "https://scontent-lax3-2.cdninstagram.com/v/t51.82787-15/843474378_17914613904539293_1109019596701433046_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=pgtfCoIvfokQ7kNvwGyjdjB&_nc_oc=Adp9ybePAUOA1o5yQFCWNXNlZvuEntQ50HdvhpvYOOiTOp7fMOGH1TI9GgyrhWUsm2s&_nc_zt=23&_nc_ht=scontent-lax3-2.cdninstagram.com&_nc_gid=Vx7w9IfxoZkLvHx-JuslDw&_nc_ss=7920f&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQRlHsn2O5o7Zm7aLE2sKKMpHwUBFyC92RIXeOlTk5_Vkw&oe=6B02446D"
         }
       ]
+    },
+    {
+      "id": "woody1993",
+      "name": "Woody無敵伍迪",
+      "description": "插畫家\n回家投票🗳️",
+      "category": "設計師",
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@woody1993",
+        "ig": "https://www.instagram.com/woody1993/",
+        "web": ""
+      },
+      "verification": true,
+      "disabled": false,
+      "logo": {
+        "url": "/media/library/woody1993/logo.webp?v=7cc560fc977b18b9",
+        "source": "https://www.threads.com/@woody1993",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-17",
+        "note": "已核對官方 Threads 個人檔案頭像，HTTPS 圖片可正常讀取",
+        "originalUrl": "https://scontent.cdninstagram.com/v/t51.82787-19/894543139_17965966137234572_3155663526270056774_n.jpg?stp=dst-jpg_s640x640_tt6&_nc_cat=105&ccb=7-5&_nc_sid=b3fa00&_nc_ohc=KeUVkaLa3HMQ7kNvwHo2Bcf&_nc_oc=AdqmOP1aSnhGWqH1hpiFzwo_RtibA2nRVVQZcvgBwkwbGH4niTiO3FKMgh6XI2zaJdI&_nc_zt=24&_nc_ht=scontent.cdninstagram.com&_nc_gid=KuoOudyENyUiPHoSyZeEZQ&_nc_ss=7920f&oh=00_AQTwcxQNSGzrIIX3ugZcuDfQF7v4pAJwa8gI4dY7OwCbdA&oe=6B02467F"
+      },
+      "productImages": [
+        {
+          "url": "/media/library/woody1993/1.webp?v=38ccfae7d4acc0cd",
+          "alt": "Woody無敵伍迪作品：橘白放射線背景的 FUTURE SOON 洋流圓形徽章",
+          "source": "https://minicourse.dev/media/library/woody1993/1.webp?v=38ccfae7d4acc0cd",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-9c96eb866038461d8fd151828636057c",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572275393073909840/897153696_17966033370234572_788963993742244688_n.png?ex=6afdc711&is=6afc7591&hm=3836527514b1da2977e8a324093d125dab3d8247cbd987b76225755e582efe40&"
+        },
+        {
+          "url": "/media/library/woody1993/2.webp?v=699ba384ce4e5617",
+          "alt": "Woody無敵伍迪作品：FUTURE SOON 洋流橘底人物與台北城市插畫",
+          "source": "https://minicourse.dev/media/library/woody1993/2.webp?v=699ba384ce4e5617",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-6212ebc01e9646788ccea7cde1d1cef0",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572275393787068598/900495703_17965955970234572_6800247268316881426_n.png?ex=6afdc711&is=6afc7591&hm=3b8632ba7c19c8839b892d95d9e2bd1bd79252ddc0b9a3c4f2e21a42b42debd0&"
+        },
+        {
+          "url": "/media/library/woody1993/3.webp?v=b36e59173c0799cf",
+          "alt": "Woody無敵伍迪作品：FUTURE SOON 洋流海報雙聯印刷版面",
+          "source": "https://minicourse.dev/media/library/woody1993/3.webp?v=b36e59173c0799cf",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-9d6720a14b4844b9abc399c5ee050e56",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572275395045367818/894460999_17966137641234572_7635921180115087126_n.png?ex=6afdc711&is=6afc7591&hm=50e105ac73223b3f6ddfc59fadaab442f108dfd00c9e72812466f54dae318b9b&"
+        },
+        {
+          "url": "/media/library/woody1993/4.webp?v=b363f616bc876f67",
+          "alt": "Woody無敵伍迪作品：店內陳列的 FUTURE SOON 洋流海報",
+          "source": "https://minicourse.dev/media/library/woody1993/4.webp?v=b363f616bc876f67",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-2423331e336e4d7cb7aa6722769fdd1f",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572275396110585956/904441448_17967325707234572_4681766870976828306_n.png?ex=6afdc711&is=6afc7591&hm=23db61a842120c0451d3d4dcfa7708dbd2ef90a5d645bfb02663d95d2e706b94&"
+        },
+        {
+          "url": "/media/library/woody1993/5.webp?v=5bba375aa18a8085",
+          "alt": "Woody無敵伍迪作品：手持的 FUTURE SOON 洋流活動卡片",
+          "source": "https://minicourse.dev/media/library/woody1993/5.webp?v=5bba375aa18a8085",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-0de04ffddc39465d8a435eb0319d1b10",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572275396857307248/903825535_17967325731234572_2930838711984743415_n.png?ex=6afdc712&is=6afc7592&hm=a4bba9b7d9c5754a4638ee52babe34f186af2901e3b1408a9cdd7d28aec4625c&"
+        },
+        {
+          "url": "/media/library/woody1993/6.webp?v=eb1748cbf6cd5b86",
+          "alt": "Woody無敵伍迪作品：天空中飄揚的 FUTURE SOON 洋流橘白長條布巾",
+          "source": "https://minicourse.dev/media/library/woody1993/6.webp?v=eb1748cbf6cd5b86",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-454e5ca422ba42ecafb1163ccd81cee3",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572275397716877443/902247353_17966938395234572_2759306163403938148_n.png?ex=6afdc712&is=6afc7592&hm=9c8fdb0fbe4b9e14342929d1e678bd445fc55bbcfa9db392d87cefa4d97a70a0&"
+        },
+        {
+          "url": "/media/library/woody1993/7.webp?v=c2457a7d0dc4c491",
+          "alt": "Woody無敵伍迪作品：張貼於水泥牆上的 FUTURE SOON 洋流活動海報",
+          "source": "https://minicourse.dev/media/library/woody1993/7.webp?v=c2457a7d0dc4c491",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-bfcb263fee794e9fa0e093f65b02354f",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572275398497145005/894035769_17966341812234572_284922442385471416_n.png?ex=6afdc712&is=6afc7592&hm=c498edeb6ba1f4e6172de2da70ffcd48b89a10f8ead95a8272d2ae5fd8e64571&"
+        }
+      ]
     }
   ]
 }
