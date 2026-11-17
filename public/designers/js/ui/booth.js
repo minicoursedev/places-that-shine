@@ -1,9 +1,8 @@
 // Designer dialog: profile, catalogue images, social links and share link.
 import { state, markVisited, findBoothIn } from '../state.js';
-import { loadAisle, aisleOfBooth } from '../data.js?v=20261114-profile-halls';
-import { designerBoothUrl } from '../nav.js?v=20261114-profile-halls';
-import { boothHtml, loadingHtml, failHtml } from './booth-markup.js?v=20261114-profile-halls';
-import { designerHallRoot, designerWalkPath, resolveDesignerRoute, updateDesignerMetadata } from '../routes.js?v=20261114-bluebird-hall';
+import { loadAisle, aisleOfBooth } from '../data.js?v=20261117-secondary-instagram';
+import { boothHtml, loadingHtml, failHtml } from './booth-markup.js?v=20261117-secondary-instagram';
+import { designerHallRoot, designerPath, designerSharePath, designerWalkPath, resolveDesignerRoute, updateDesignerMetadata } from '../routes.js?v=20261116-oshen-websites-hall';
 import { retryOriginal } from '../images.js';
 import { loadProducts, sampleProducts } from '../products.js?v=20261030-pinned-work';
 
@@ -33,7 +32,7 @@ async function getAisleFor(boothId) {
   return loadAisle(code);
 }
 
-export async function openBooth(boothId) {
+export async function openBooth(boothId, { keepHall = false } = {}) {
   const d = dlg();
   if (!d || !boothId) return;
   const token = ++openToken;
@@ -67,7 +66,10 @@ export async function openBooth(boothId) {
     if (token !== openToken) return;
   }
   current = { boothId, booth, aisle };
-  history.replaceState(null, '', designerBoothUrl(booth.store));
+  const path = keepHall || booth.id !== booth.hallBooths[0].id
+    ? designerSharePath(booth.store, aisle.hall)
+    : designerPath(booth.store);
+  history.replaceState(null, '', path);
   updateDesignerMetadata(store, booth);
   paint();
   if (!d.open) d.showModal();
@@ -75,48 +77,9 @@ export async function openBooth(boothId) {
   markVisited(boothId);
 }
 
-async function shareDesigner(button) {
-  const share = button.closest('.bo-share');
-  const link = new URL(button.dataset.shareDesigner, location.href).href;
-  const status = share.querySelector('[role="status"]');
-  button.disabled = true;
-  status.textContent = '';
-  try {
-    const { qrcode } = await import('../../../vendor/qrcode-generator/qrcode-2.0.4.mjs');
-    if (!button.isConnected || (!dlg().open && !button.closest('#static-designer-profile'))) return;
-    const qr = qrcode(0, 'M');
-    qr.addData(link);
-    qr.make();
-    const name = button.closest('dialog, article').querySelector('h1, h2').textContent;
-    const shareDialog = document.getElementById('designer-share-dialog');
-    document.getElementById('designer-share-title').textContent = name;
-    const image = document.getElementById('designer-share-qr');
-    image.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(qr.createSvgTag({ cellSize: 6, margin: 24, scalable: true }));
-    image.alt = `${name} QR Code，掃描開啟 ${link}`;
-    image.hidden = false;
-    const url = document.getElementById('designer-share-url');
-    url.href = link;
-    url.textContent = link;
-    document.getElementById('designer-share-status').textContent = '';
-    shareDialog.showModal();
-  } catch {
-    status.textContent = '暫時無法產生 QRCode，請稍後再試。';
-  } finally {
-    button.disabled = false;
-  }
-}
-
 function wire() {
   const d = dlg();
   if (!d) return;
-  document.getElementById('static-designer-profile')?.addEventListener('click', event => {
-    const button = event.target.closest('[data-share-designer]');
-    if (button) shareDesigner(button);
-  });
-  d.addEventListener('click', e => {
-    const share = e.target.closest('[data-share-designer]');
-    if (share) shareDesigner(share);
-  });
   // a cover that fails to load falls back to the halftone square
   d.addEventListener('error', e => {
     const img = e.target;
@@ -134,15 +97,6 @@ function wire() {
         : `${designerHallRoot(state.hallCode)}#/list`;
       history.replaceState(null, '', returnPath);
       updateDesignerMetadata();
-    }
-  });
-  document.getElementById('designer-share-copy').addEventListener('click', async () => {
-    const status = document.getElementById('designer-share-status');
-    try {
-      await navigator.clipboard.writeText(document.getElementById('designer-share-url').href);
-      status.textContent = '已複製連結';
-    } catch {
-      status.textContent = '無法自動複製，請長按或右鍵上方網址複製。';
     }
   });
 }

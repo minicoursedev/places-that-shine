@@ -5,8 +5,9 @@ import { inlineWorkId } from './work-links.js';
 const HALLS = [
   { code: 'O', name: '洋流設計師館', category: '設計師', zone: { code: 'DESIGNERS', name: '設計師' } },
   { code: 'A', name: '洋流愛好者館', category: '愛好者', zone: { code: 'AMATEURS', name: '愛好者' } },
+  { code: 'W', name: '洋流網站館', category: '設計師', zone: { code: 'WEBSITES', name: '網站' } },
   { code: 'S', name: '鏟子超人館', category: '設計師', zone: { code: 'SHOVEL-HEROES', name: '鏟子超人' } },
-  { code: 'B', name: '青鳥行動館', year: 2024, category: '設計師', zone: { code: 'BLUEBIRD-ACTION', name: '青鳥行動' } },
+  { code: 'B', name: '青鳥行動', year: 2024, category: '設計師', zone: { code: 'BLUEBIRD-ACTION', name: '青鳥行動' } },
 ];
 const PER_ISLAND = 8;
 const PER_AISLE = PER_ISLAND * 2;
@@ -79,6 +80,7 @@ export function createCatalogue(data, { baseUrl = CONFIG.DESIGNERS_URL, ogImages
             name: typeof product?.alt === 'string' && product.alt.trim() ? product.alt : `${designer.name} 作品參考 ${i + 1}`,
             caption: typeof product?.caption === 'string' ? product.caption : '',
             cover: imageUrl(product?.url),
+            thumbnail: product?.thumbnail,
             video: imageUrl(product?.videoUrl),
             url: productLink(product),
           })).filter((work, i) => work.cover && designer.productImages[i]?.disabled !== true);
@@ -93,6 +95,7 @@ export function createCatalogue(data, { baseUrl = CONFIG.DESIGNERS_URL, ogImages
           links: (Array.isArray(designer.links) ? designer.links : []).map((link, index) => ({
             url: externalUrl(typeof link === 'string' ? link : link?.url),
             label: typeof link?.label === 'string' && link.label.trim() ? link.label : `連結 ${index + 1}`,
+            ...(link?.platform === 'ig' && { platform: 'ig' }),
           })).filter(link => link.url),
           social, verification: designer.verification === true, booths: 1,
         };
@@ -127,7 +130,7 @@ export function createCatalogue(data, { baseUrl = CONFIG.DESIGNERS_URL, ogImages
       halls,
       totals: { designers: designers.length, booths: search.length },
     },
-    aisles, search, designerBooths,
+    aisles, search, designerBooths, hallBoothsByDesigner,
   };
 }
 
@@ -151,7 +154,12 @@ function loadCatalogue() {
 export const aisleOfBooth = boothId => boothId.split('-')[0];
 export const hallOf = code => code[0];
 export const loadIndex = async () => (await loadCatalogue()).index;
-export const loadBoothForDesigner = async id => (await loadCatalogue()).designerBooths.get(id) || null;
+export async function loadBoothForDesigner(id, hall) {
+  const { designerBooths, hallBoothsByDesigner } = await loadCatalogue();
+  if (!hall) return designerBooths.get(id) || null;
+  const booths = hallBoothsByDesigner.get(id) || [];
+  return (booths.find(booth => hallOf(booth.aisle) === hall) || booths[0])?.id || null;
+}
 export async function loadAisle(code) {
   const aisle = (await loadCatalogue()).aisles.get(code);
   if (!aisle) throw Object.assign(new Error('Aisle not found'), { status: 404 });

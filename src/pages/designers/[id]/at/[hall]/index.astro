@@ -1,0 +1,14 @@
+---
+import Layout from '../../../../../layouts/OshenDesignerLayout.astro';
+import { designers } from '../../../../../lib/oshen-designers';
+
+export function getStaticPaths() {
+  return designers.flatMap(designer => designer.shareHallCodes.map(shareHall => ({
+    params: { id: designer.id, hall: shareHall },
+    props: { designerId: designer.id, shareHall },
+  })));
+}
+
+const { designerId, shareHall } = Astro.props;
+---
+<Layout designerId={designerId} shareHall={shareHall} />

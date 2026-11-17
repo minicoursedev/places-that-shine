@@ -691,7 +691,10 @@
     {
       "id": "yuan-art-space",
       "name": "Yuan Art & Space | 沅藝術空間",
-      "additionalHalls": ["S", "B"],
+      "additionalHalls": [
+        "S",
+        "B"
+      ],
       "description": "跌跌撞撞的初級大人🥲\n努力畫圖、場地租借",
       "social": {
         "fb": "https://www.facebook.com/profile.php?id=100051575187294",
@@ -729,7 +732,7 @@
         {
           "id": "wendy-tsai-bluebird-action-logo",
           "alt": "Wendy Tsai 的青鳥行動插畫 Logo",
-          "caption": "青鳥行動館入口 Logo。插畫為 Wendy Tsai 創作。",
+          "caption": "青鳥行動入口 Logo。插畫為 Wendy Tsai 創作。",
           "url": "/media/bluebird-action-2024-logo.webp"
         }
       ]
@@ -3387,7 +3390,7 @@
     {
       "id": "kaede1623",
       "name": "子魚",
-      "category": "愛好者",
+      "category": "設計師",
       "description": "#Fishchuchu\n想做一隻快樂的🐟",
       "social": {
         "fb": "",
@@ -3640,7 +3643,9 @@
     {
       "id": "kewpiewu",
       "name": "吳奕裴",
-      "additionalHalls": ["B"],
+      "additionalHalls": [
+        "B"
+      ],
       "category": "設計師",
       "description": "",
       "entityType": "Person",
@@ -3894,7 +3899,7 @@
       "social": {
         "threads": "https://www.threads.com/@xiekamaoshi",
         "fb": "https://www.facebook.com/XiekaMaoshi",
-        "ig": "https://www.instagram.com/xiekamaoshi",
+        "ig": "https://www.instagram.com/xiekamaoshi/",
         "web": "https://myship.7-11.com.tw/general/detail/GM2602023247690"
       },
       "verification": true,
@@ -3905,15 +3910,91 @@
       },
       "productImages": [
         {
-          "id": "xiekamaoshi-1",
-          "alt": "諧咖貓室作品：四款貓咪插畫（第1張）",
-          "url": "/media/library/xiekamaoshi/1.webp"
+          "url": "/media/library/xiekamaoshi/3.webp?v=2efde62a0929a901",
+          "alt": "諧咖貓室貓咪貼紙：甜甜圈、AE86 與伸展姿勢",
+          "source": "https://minicourse.dev/media/library/xiekamaoshi/3.webp?v=2efde62a0929a901",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-0fcfcceb4d4a4f3bbda73ea09a1e54a5",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572146655820513280/4f4ba218ac1dbffb.jpg?ex=6afd4f2b&is=6afbfdab&hm=78f1288ee90f04efaa933abd2f2739100ad54918a85fcc83cf68cedb21e887de&"
         },
         {
-          "id": "xiekamaoshi-2",
-          "alt": "諧咖貓室作品：四款貓咪插畫（第2張）",
-          "url": "/media/library/xiekamaoshi/2.webp"
+          "url": "/media/library/xiekamaoshi/4.webp?v=9b5ca30e5d917394",
+          "alt": "諧咖貓室貓咪春聯：平安與健康",
+          "source": "https://minicourse.dev/media/library/xiekamaoshi/4.webp?v=9b5ca30e5d917394",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-7a7ddb6d9e324d8eb3d60cb06931c8ed",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572146656076632064/0cc99bfb675ccde9.jpg?ex=6afd4f2b&is=6afbfdab&hm=3caa4f3eaf7f7c77d08cd1d6e9b7cdd8af2de405a3a944bc0c7f2aa6593255cd&"
+        },
+        {
+          "url": "/media/library/xiekamaoshi/5.webp?v=79aefd0948d91cc3",
+          "alt": "諧咖貓室貓咪斗方春聯：錢進新年、福、樂與盆滿缽滿",
+          "source": "https://minicourse.dev/media/library/xiekamaoshi/5.webp?v=79aefd0948d91cc3",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-3ee74913fc8a45beabf753c5ca0eae0d",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572146656345063564/9963cba5d48401ac.jpg?ex=6afd4f2b&is=6afbfdab&hm=ec3c2559b71fd559aef7da4f6862875f6868aa4a575eddd13ddf82abe93027dd&"
+        },
+        {
+          "url": "/media/library/xiekamaoshi/6.webp?v=4a54effe02079dcc",
+          "alt": "諧咖貓室洋流貓咪插畫：橘貓、黑貓、白貓與玳瑁貓",
+          "source": "https://minicourse.dev/media/library/xiekamaoshi/6.webp?v=4a54effe02079dcc",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-448ffd105e2a42c499c47dabb7f8f2a7",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572146656646799451/-1.jpg?ex=6afd4f2c&is=6afbfdac&hm=d714a6a4e07f1a0fa9478fc7a8e39a78f66fc8d208fe7016d5ad419744bf9f5d&"
+        },
+        {
+          "url": "/media/library/xiekamaoshi/7.webp?v=544e710a56a8a68a",
+          "alt": "諧咖貓室洋流貓咪插畫：橘白貓、黑白貓、灰虎斑貓與三花貓",
+          "source": "https://minicourse.dev/media/library/xiekamaoshi/7.webp?v=544e710a56a8a68a",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-a4e781ec83af4b05800be60ba0fe0a71",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572146657036865546/72703ca9a3697392.jpg?ex=6afd4f2c&is=6afbfdac&hm=a75e3c85bc125327294e0d0d087fbd184fc2c1be805a3942830340df3a4f91ba&"
+        },
+        {
+          "url": "/media/library/xiekamaoshi/8.webp?v=d2ca21ee4e462e8e",
+          "alt": "諧咖貓室萬聖節插畫：巫師帽橘白貓、南瓜與披風黑貓",
+          "source": "https://minicourse.dev/media/library/xiekamaoshi/8.webp?v=d2ca21ee4e462e8e",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-10e1c69c3703454cbe2c2cea323bc387",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572146657603223662/a3a20ef4e380fd66.jpg?ex=6afd4f2c&is=6afbfdac&hm=16a0504fca9215c9672f1fe90248dca0a86a1ec18b0b2b94389e81d997216970&"
+        },
+        {
+          "url": "/media/library/xiekamaoshi/9.webp?v=1c86d028d18f0991",
+          "alt": "諧咖貓室慧聚貓咪插畫：白貓、灰白貓、黑白貓與橘白貓",
+          "source": "https://minicourse.dev/media/library/xiekamaoshi/9.webp?v=1c86d028d18f0991",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-1954c95c15ec4b7f91eb39fa07891459",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572146658135777471/-1.jpg?ex=6afd4f2c&is=6afbfdac&hm=69ef12f904babc7023dded3a7a313734a89398a705a490077c121858b19ac429&"
+        },
+        {
+          "url": "/media/library/xiekamaoshi/10.webp?v=3cfb822b8e624e9f",
+          "alt": "諧咖貓室慧聚貓咪插畫：黑貓、灰虎斑貓、橘貓與玳瑁貓",
+          "source": "https://minicourse.dev/media/library/xiekamaoshi/10.webp?v=3cfb822b8e624e9f",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-2b451ba6ae7643f6af25bb8cafa14800",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572146658463064115/b7d4f472d718b73d.jpg?ex=6afd4f2c&is=6afbfdac&hm=c5f53d22fd85cfaaad27309d724285b835aafa1936b5ad62a293d245131bee3b&"
         }
+      ],
+      "links": [
+        {
+          "label": "賣貨便",
+          "url": "https://myship.7-11.com.tw/general/detail/GM2602023247690"
+        },
+        {
+          "label": "蝦皮",
+          "url": "https://tw.shp.ee/Uq9fQYsB"
+        }
+      ],
+      "retiredWorkIds": [
+        "xiekamaoshi-1",
+        "xiekamaoshi-2"
       ]
     },
     {
@@ -4544,6 +4625,2351 @@
           "id": "work-f875f993ca7c4cc38b4fd9ff8da275e0",
           "alt": "新北活動視覺社群頭像設計",
           "url": "/media/library/boyealai/6.webp"
+        }
+      ]
+    },
+    {
+      "id": "marskino0811",
+      "name": "腦開",
+      "category": "設計師",
+      "description": "插畫、漫畫\n有需要的\n可到臉書搜尋【腦開】私訊洽談\n也歡迎支持者抖內贊助🤝",
+      "social": {
+        "fb": "https://www.facebook.com/profile.php?id=100083101641638",
+        "threads": "https://www.threads.com/@marskino0811",
+        "ig": "",
+        "web": "https://marskino0811.oen.tw/"
+      },
+      "verification": true,
+      "disabled": false,
+      "logo": {
+        "url": "/media/library/marskino0811/logo.webp?v=9e58432337621d74",
+        "source": "https://www.threads.com/@marskino0811",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-14",
+        "note": "官方 Threads 個人檔案頭像，已核對作者頭像並確認 HTTPS 圖片可讀取。",
+        "originalUrl": "https://scontent-lax3-1.cdninstagram.com/v/t51.2885-19/442678382_766522232322023_1612682398483134934_n.jpg?stp=dst-jpg_s640x640_tt6&_nc_cat=105&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=b3fa00&_nc_ohc=BhWwBDcvBkoQ7kNvwGjxNJf&_nc_oc=AdqfdrL4Nzyfg98KXFrZaxi8doXL-ioiHETwDB0edkdEb-o2mc4-DKnhELaMVnSPjL0&_nc_zt=24&_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_ss=7920f&oh=00_AQQf3-uE9AOx0plt0wvlxdcAKWNfMOYWMCGKWILnJHYFjg&oe=6AFE25AF"
+      },
+      "productImages": [
+        {
+          "url": "/media/library/marskino0811/1.webp?v=ded922a7b2fb90a8",
+          "alt": "腦開作品照片 1",
+          "source": "https://www.threads.com/@marskino0811/post/DftTSCVCW7B/media",
+          "checkedAt": "2026-11-14",
+          "note": "使用者提供，指定為此設計師作品照片；圖片取自指定 Threads 貼文。",
+          "id": "work-1dbfb0c3b44740daa2260bb0b20ed4fa",
+          "originalUrl": "https://scontent-lax3-2.cdninstagram.com/v/t51.82787-15/900765603_17999982066109108_1723833746895752926_n.webp?_nc_cat=105&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTk2MjA0MzkwMTE3NzUzNw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMTgwMC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=j7osfLCnW5oQ7kNvwHljR5E&_nc_oc=AdpUbgsYkzpcnZOEOOJuvcwcrySe5PgU-UMZyWmUMh26VVf53_Ch1TpAjiOexR_la-g&_nc_zt=23&_nc_ht=scontent-lax3-2.cdninstagram.com&_nc_gid=wzIoApXXw8c_KXUKXtMzzQ&_nc_ss=7920f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQQDW9fTG6oK6DQa0Wtk-wBPYxnVCrAYVHvzBN6HnCklDg&oe=6AFE087F"
+        },
+        {
+          "url": "/media/library/marskino0811/2.webp?v=2a676bbc62825759",
+          "alt": "腦開作品照片 2",
+          "source": "https://www.threads.com/@marskino0811/post/DfSMkROCZbu/media",
+          "checkedAt": "2026-11-14",
+          "note": "使用者提供，指定為此設計師作品照片；圖片取自指定 Threads 貼文。",
+          "id": "work-2e64d10d95ee4c959ebd866e69846608",
+          "originalUrl": "https://scontent-lax3-1.cdninstagram.com/v/t51.82787-15/886754955_17998350555109108_4051091106929999533_n.webp?_nc_cat=106&_nc_map=urlgen_bucketless&ig_cache_key=NDAyMjMzMjY4NjE0MzY5MDQ3OA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMTI3OC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=6D2Sc4sKPi8Q7kNvwG5d23F&_nc_oc=AdoKJzp0d9YuUgQocHBs7BE5xiR8b5rUl1apzo7kGD-SottYlnne2OyzJsd0Kzqw7Oo&_nc_zt=23&_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_gid=o5KwSC-CWGk2xzLSyD5NHg&_nc_ss=7920f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQQjFqpRJ0Dt-1F4arDX-wG_Dn4dKX5gH5nZVs1HOzOrKg&oe=6AFE266F"
+        },
+        {
+          "url": "/media/library/marskino0811/3.webp?v=3a254e059d4cb779",
+          "alt": "腦開作品照片 3",
+          "source": "https://www.threads.com/@marskino0811/post/De_3d2wk9Tt/media",
+          "checkedAt": "2026-11-14",
+          "note": "使用者提供，指定為此設計師作品照片；圖片取自指定 Threads 貼文。",
+          "id": "work-ccc5ab6f27204ab386650f4df6bb8632",
+          "originalUrl": "https://scontent-lax3-2.cdninstagram.com/v/t51.82787-15/861511099_17996929968109108_3399896271291103700_n.webp?_nc_cat=102&_nc_map=urlgen_bucketless&ig_cache_key=NDAxNzE3MzMzNjg1Nzc2MTAwNQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMTI0MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=-iOuqBGrf0gQ7kNvwHUTZ44&_nc_oc=AdrKnw5BjPgBk2off4ZAcnbKQPflUqqDWjpnHrPtoP2lerGFdvd0FURni-GnTxeYcw8&_nc_zt=23&_nc_ht=scontent-lax3-2.cdninstagram.com&_nc_gid=kbumyhbThIE0--nHs--zYQ&_nc_ss=7920f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQQy_RM_I5cuwMxpBv9tbo1p7mgLReqNNXadEOjU-OMLaQ&oe=6AFE095E"
+        },
+        {
+          "url": "/media/library/marskino0811/4.webp?v=5a25be86703c8fff",
+          "alt": "腦開作品照片 4",
+          "source": "https://www.threads.com/@marskino0811/post/De_UfV7E3ei/media",
+          "checkedAt": "2026-11-14",
+          "note": "使用者提供，指定為此設計師作品照片；圖片取自指定 Threads 貼文。",
+          "id": "work-aa096656371d4793bdbdf5621dcff19f",
+          "originalUrl": "https://scontent-lax7-1.cdninstagram.com/v/t51.82787-15/867534780_17996888847109108_5643849322061967220_n.webp?_nc_cat=100&_nc_map=urlgen_bucketless&ig_cache_key=NDAxNzAxOTUwNzQxMTQ4MjUzMA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMTI0MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=ov09rrExIIIQ7kNvwFGRGWm&_nc_oc=AdrwjrFas1u9URY5BCY04oLkY60Bnyz5sCpdfBX1h8ZarY13pZ5Ye6fPY2GuACQnwKI&_nc_zt=23&_nc_ht=scontent-lax7-1.cdninstagram.com&_nc_gid=W4JVCngR41m6LU1lj53gkg&_nc_ss=7920f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQTOUlUmQxgGRU1p4vZyxx_1kvTIySIktmXPlpzFwPEKfQ&oe=6AFE2ED1"
+        },
+        {
+          "url": "/media/library/marskino0811/5.webp?v=e44194d8594242fc",
+          "alt": "腦開作品照片 5",
+          "source": "https://www.threads.com/@marskino0811/post/De_HAVXE8TG/media",
+          "checkedAt": "2026-11-14",
+          "note": "使用者提供，指定為此設計師作品照片；圖片取自指定 Threads 貼文。",
+          "id": "work-b2d45458a0da43c18617289feee2d0f3",
+          "originalUrl": "https://scontent-lax3-2.cdninstagram.com/v/t51.82787-15/859682394_17996878344109108_6637802878510777141_n.webp?_nc_cat=111&_nc_map=urlgen_bucketless&ig_cache_key=NDAxNjk2MDIwMTg5OTA5OTMzNA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMTI0MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=bkJ15tfQKa0Q7kNvwE-0n5C&_nc_oc=AdqyoJH_5XiYQip7pu8OS8PP1cU8vcD4OedSyni_yPlLgXRXCqhmqXYmB4Ei_BbomIc&_nc_zt=23&_nc_ht=scontent-lax3-2.cdninstagram.com&_nc_gid=hw6yDgzlQcj45MYoPJzwzQ&_nc_ss=7920f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQRcDSbpDO_YQpEQLMu_v4XiM5w4Kn9AAmfYspg3fGL9tA&oe=6AFE2202"
+        }
+      ]
+    },
+    {
+      "id": "nninninninn",
+      "name": "NIN",
+      "category": "設計師",
+      "description": "臺灣漫畫家",
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@nninninninn",
+        "ig": "https://www.instagram.com/nninninninn/",
+        "web": ""
+      },
+      "verification": true,
+      "disabled": false,
+      "logo": {
+        "url": "/media/library/nninninninn/logo.webp?v=73ea24394fa64f7c",
+        "source": "https://www.threads.com/@nninninninn",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-14",
+        "note": "已核對 NIN 官方 Threads 個人檔案頭像，HTTPS 圖片可讀取",
+        "originalUrl": "https://scontent-lax3-1.cdninstagram.com/v/t51.82787-19/523406494_17915586291120031_4102358206678816153_n.jpg?stp=dst-jpg_s640x640_tt6&_nc_cat=101&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=b3fa00&_nc_ohc=4ZA9VBlSS6QQ7kNvwFTAYKW&_nc_oc=AdoM87dABVyylRakMMTpRohm_LmRwe48ofb-GL6lYETRcId61i-50TeHTAj-ckV1PSE&_nc_zt=24&_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_gid=tu-kGrZgYrMdDStI8wpfuw&_nc_ss=7920f&oh=00_AQQ855p2YjHwbHdadpRbUaRajDA-Oq8TkeM9byEVY9k0qA&oe=6AFE2624"
+      },
+      "productImages": [
+        {
+          "url": "/media/library/nninninninn/1.webp?v=e2d628674cf21ddc",
+          "alt": "NIN 作品照片 1",
+          "source": "https://www.threads.com/@nninninninn/post/Dfo3gfeD-Rf/media",
+          "checkedAt": "2026-11-14",
+          "note": "使用者提供，指定為此設計師作品照片；取自指定 Threads 貼文第 1 張圖片",
+          "id": "work-e566b9ecc2b748d798e65b82d6324078",
+          "originalUrl": "https://scontent-lax3-1.cdninstagram.com/v/t51.82787-15/902592020_17992600638120031_5065483804312614241_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&ig_cache_key=NDAyODcxMjcwMTgzMTAzMTMzNg%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNDA5NS5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=2mvehmY87wAQ7kNvwGJQHhM&_nc_oc=AdorDqmIPWsax-WUD5CvzpXbHATcSrs8XoFS_M0Fh_YxopJMIvB-fR_5Deu6AZUye1g&_nc_zt=23&_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_gid=jv-VjOiMhwhDvr6lISpMaA&_nc_ss=7b20f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQQBnt9CeFH7EkudHfQTK7WnUiHJYgPb2AV1Aqp9eV8t9w&oe=6AFE1C1D"
+        },
+        {
+          "url": "/media/library/nninninninn/2.webp?v=cc24219c2c75fcba",
+          "alt": "NIN 作品照片 2",
+          "source": "https://www.threads.com/@nninninninn/post/Dfo3gfeD-Rf/media",
+          "checkedAt": "2026-11-14",
+          "note": "使用者提供，指定為此設計師作品照片；取自指定 Threads 貼文第 2 張圖片",
+          "id": "work-38744b03f4804182a54cb8aaa199a95d",
+          "originalUrl": "https://scontent-lax3-2.cdninstagram.com/v/t51.82787-15/902591689_17992600662120031_4562145897315018231_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=106&_nc_map=urlgen_bucketless&ig_cache_key=NDAyODcxMjcyNTc3MjE5Njk0MA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA4MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=EytTTdWokaMQ7kNvwHPJ0v5&_nc_oc=AdoCO2LuJwuks9alVjkneXXJCqOvTa7JmBIwVPUi02oK6oaPP_RpwQNtCvrcIYkuCBU&_nc_zt=23&_nc_ht=scontent-lax3-2.cdninstagram.com&_nc_gid=jv-VjOiMhwhDvr6lISpMaA&_nc_ss=7b20f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQSa-xKg8yibt7K8C44KYojjsIqcDMk9Nahs144-4kA8pA&oe=6AFE1C0B"
+        },
+        {
+          "url": "/media/library/nninninninn/3.webp?v=b24849cab2c86e06",
+          "alt": "NIN 作品照片 3",
+          "source": "https://www.threads.com/@nninninninn/post/Dfkj4tKD9LI/media",
+          "checkedAt": "2026-11-14",
+          "note": "使用者提供，指定為此設計師作品照片；取自指定 Threads 貼文第 1 張圖片",
+          "id": "work-804cf706d8fb43bdb1368cf56480ea7c",
+          "originalUrl": "https://scontent-lax3-1.cdninstagram.com/v/t51.82787-15/901063510_17992309554120031_5053640102837813868_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=105&_nc_map=urlgen_bucketless&ig_cache_key=NDAyNzUwMDIwNDIyNjI4MTQ0Nw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNDA5NS5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=FFxqKUQERmwQ7kNvwFSXd3O&_nc_oc=AdrCrUPvdxdOiOOXpx042jN8e2GQYkoC8MxsLWA3WiHVNB3HVYsJU4SqLEs01x60rPQ&_nc_zt=23&_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_gid=N_Jk0541Z2qmxrbL2VwTBg&_nc_ss=7b20f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQRECqUZEUC84Yq7CbjKo3RUVIsDVomLKry6HVoD4q_CDQ&oe=6AFE0995"
+        },
+        {
+          "url": "/media/library/nninninninn/5.webp?v=01313a9dd0fd41af",
+          "alt": "NIN 作品照片 5",
+          "source": "https://www.threads.com/@nninninninn/post/Dfcn6YeDz1X/media",
+          "checkedAt": "2026-11-14",
+          "note": "使用者提供，指定為此設計師作品照片；取自指定 Threads 貼文第 1 張圖片",
+          "id": "work-69ca56d390fe48e5ae1af74829ec3a8c",
+          "originalUrl": "https://scontent-lax3-1.cdninstagram.com/v/t51.82787-15/893801976_17991836289120031_2848888981620558154_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&ig_cache_key=NDAyNTI2NTYxNjE4Mzk5MTY5Ng%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNDA5NS5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=pVlcW7MoYwgQ7kNvwFkUOfi&_nc_oc=AdpX92GSCTixNwuDXTQLVBU4Bmf5PcbYWE3xVifNFfRm1cqmqtkI05Ip2miABIjjlcw&_nc_zt=23&_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_gid=C5kA7s_75Vi7Ups3vrpgHw&_nc_ss=7b20f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQSHYdQ5ymrtUDKxvMz_iQIU6QHfrPBoC_Q6vvh8aSrxxA&oe=6AFE152B"
+        },
+        {
+          "url": "/media/library/nninninninn/6.webp?v=ec2b36b7a0568d7c",
+          "alt": "NIN 作品照片 6",
+          "source": "https://www.threads.com/@nninninninn/post/Dfcn6YeDz1X/media",
+          "checkedAt": "2026-11-14",
+          "note": "使用者提供，指定為此設計師作品照片；取自指定 Threads 貼文第 2 張圖片",
+          "id": "work-ae6e3b5cfdc2408898626e1773f77b85",
+          "originalUrl": "https://scontent-lax3-1.cdninstagram.com/v/t51.82787-15/892172071_17991836325120031_5698252446228561612_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=106&_nc_map=urlgen_bucketless&ig_cache_key=NDAyNTI2NTczMTc5NTg5MjgwNQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMjg5NS5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=EZaaywU8cZ0Q7kNvwHAzQmD&_nc_oc=AdrWco6T5BUvea5mtOUNZ69l_HmZLF9UmKMEP6OUy4upviZMef2IKuN7e3qxd2gdlfQ&_nc_zt=23&_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_gid=C5kA7s_75Vi7Ups3vrpgHw&_nc_ss=7b20f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQSKft2fb7N-x89ruM41LFC88CDV2HlFbPeL9zn2LQqZCg&oe=6AFE04C7"
+        }
+      ],
+      "retiredWorkIds": [
+        "work-8d73a1ca6c2442eabace25913a7dca39",
+        "work-8d8a3bd34ec5458ba6cce937044dda1e"
+      ]
+    },
+    {
+      "id": "paparaya",
+      "name": "PAPARAYA  |《虎爺實習中》",
+      "category": "設計師",
+      "description": "PAPARAYA這個人的東西：\n畫圖，生活，日常，什麼的之類的～\n目前經營「虎爺實習中」系列作品",
+      "social": {
+        "fb": "https://www.facebook.com/paparayafans/",
+        "threads": "https://www.threads.com/@paparaya",
+        "ig": "https://www.instagram.com/paparaya/",
+        "web": "https://portaly.cc/paparaya"
+      },
+      "verification": true,
+      "disabled": false,
+      "logo": {
+        "url": "/media/library/paparaya/logo.webp?v=1885b22effce611f",
+        "source": "https://www.threads.com/@paparaya",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-14",
+        "note": "官方 Threads 個人檔案頭像，已核對並確認 HTTPS 圖片可讀取。",
+        "originalUrl": "https://scontent-lax3-2.cdninstagram.com/v/t51.82787-19/778273542_18611603080045325_6258679668685498816_n.jpg?stp=dst-jpg_s640x640_tt6&_nc_cat=100&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=b3fa00&_nc_ohc=GvpO5jqFyMMQ7kNvwGwGbv_&_nc_oc=AdrfMzPUEZqpb4TBGlm0KyaYW4YWKOy8HdXWCsvmXeJxXocSFS0d7zwAIBqgqLm8gQ0&_nc_zt=24&_nc_ht=scontent-lax3-2.cdninstagram.com&_nc_gid=ETxPzZtaGSEezVWAfZRC5A&_nc_ss=7920f&oh=00_AQQGyMi6TI12XqaBiMGu6vB--9-5QzKlStzWjFoPFsMVrg&oe=6AFE4EBB"
+      },
+      "productImages": [
+        {
+          "url": "/media/library/paparaya/1.webp?v=17b92d75ea12bfca",
+          "alt": "PAPARAYA《虎爺實習中》作品照片 1",
+          "source": "https://minicourse.dev/media/library/paparaya/1.webp?v=17b92d75ea12bfca",
+          "checkedAt": "2026-11-14",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-fd097825846a40ea824bbd27ed65f5c5",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571169168957505750/904316002_18001554360115972_1198885400678351164_n.png?ex=6af9c0d0&is=6af86f50&hm=55d94b50d9e16141cd4a78a1a86df938e83ecaf095f470149467c2395fad4816&"
+        },
+        {
+          "url": "/media/library/paparaya/2.webp?v=d874c12b63426370",
+          "alt": "PAPARAYA《虎爺實習中》作品照片 2",
+          "source": "https://minicourse.dev/media/library/paparaya/2.webp?v=d874c12b63426370",
+          "checkedAt": "2026-11-14",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-7cfe7b714c2248a7b17bc85857c163d5",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571169169867800576/901617126_18001554351115972_8338018108428470059_n.png?ex=6af9c0d1&is=6af86f51&hm=a993c3e91c07cd91ff549d261437605af927f57d4dc42ca7d86affd93553631f&"
+        },
+        {
+          "url": "/media/library/paparaya/3.webp?v=4cd8d58271a1721b",
+          "alt": "PAPARAYA《虎爺實習中》作品照片 3",
+          "source": "https://minicourse.dev/media/library/paparaya/3.webp?v=4cd8d58271a1721b",
+          "checkedAt": "2026-11-14",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-cfe6c2bf09294e05a13ee9b86b127c76",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571169170433773609/902005832_18001097505115972_2444837875724646592_n.png?ex=6af9c0d1&is=6af86f51&hm=83a3fcc7e51cd0d124dd64f4d37ca233604cd3a3c306d8b3bb5edec2e6f04a9a&"
+        },
+        {
+          "url": "/media/library/paparaya/4.webp?v=f46450d07190efe2",
+          "alt": "PAPARAYA《虎爺實習中》作品照片 4",
+          "source": "https://minicourse.dev/media/library/paparaya/4.webp?v=f46450d07190efe2",
+          "checkedAt": "2026-11-14",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-083de108bc794a739e07f503b47ace54",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571169170752807053/902227088_18001097613115972_6800286184705392776_n.png?ex=6af9c0d1&is=6af86f51&hm=144bd768709ca89978208815717334b65d0c53473d7fe1859c38017be5b24e6e&"
+        },
+        {
+          "url": "/media/library/paparaya/5.webp?v=ba8576fca6283beb",
+          "alt": "PAPARAYA《虎爺實習中》作品照片 5",
+          "source": "https://minicourse.dev/media/library/paparaya/5.webp?v=ba8576fca6283beb",
+          "checkedAt": "2026-11-14",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-159b27319a244ab4aa79ba3d283262db",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571169171226624120/860339493_18000616443115972_8100970053206245343_n.png?ex=6af9c0d1&is=6af86f51&hm=69b7643e5afd1278e7354e914f950a9beb504088f0f0a0167a465f4d1e9fed7b&"
+        },
+        {
+          "url": "/media/library/paparaya/6.webp?v=15c2ba29a0ff6671",
+          "alt": "PAPARAYA《虎爺實習中》作品照片 6",
+          "source": "https://minicourse.dev/media/library/paparaya/6.webp?v=15c2ba29a0ff6671",
+          "checkedAt": "2026-11-14",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-3aab13ff57b34a9a8321fdfabf0e171d",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571169172052910254/883384248_18000401445115972_7317422774679536899_n.png?ex=6af9c0d1&is=6af86f51&hm=bd9af8c65783ae725dfd8c25e90f4997610a7d53bbff262876b2390e888e023d&"
+        },
+        {
+          "url": "/media/library/paparaya/7.webp?v=a190d4e119999ee5",
+          "alt": "PAPARAYA《虎爺實習中》作品照片 7",
+          "source": "https://minicourse.dev/media/library/paparaya/7.webp?v=a190d4e119999ee5",
+          "checkedAt": "2026-11-14",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-b2dc917b9cca49ec96026179f24f54d5",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571169172874862732/877218464_18637005355045325_8084904638335294986_n.png?ex=6af9c0d1&is=6af86f51&hm=3b94bae56fb9b1baa5e61248b888a2d4e25b5533acd5f7208cc868f6a403b76b&"
+        }
+      ]
+    },
+    {
+      "id": "jack55082003",
+      "name": "Chang",
+      "category": "設計師",
+      "description": "掛扣產品設計師",
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@jack55082003",
+        "ig": "",
+        "web": ""
+      },
+      "verification": true,
+      "disabled": false,
+      "logo": {
+        "url": "",
+        "source": "https://www.threads.com/@jack55082003",
+        "platform": "threads",
+        "status": "unverified",
+        "checkedAt": "2026-11-15",
+        "note": "Threads 無法確認可讀取的官方頭像"
+      },
+      "productImages": [
+        {
+          "url": "/media/library/jack55082003/1.webp?v=c08090764a73066e",
+          "alt": "Chang 掛扣作品照片 1：布條掛扣與不同顏色的掛扣展示",
+          "source": "https://minicourse.dev/media/library/jack55082003/1.webp?v=c08090764a73066e",
+          "checkedAt": "2026-11-15",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-dfbfe143d33748ae9b61be476710268d",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571350232472490125/895552090_17970588912206161_7191749084482079864_n.png?ex=6afa6971&is=6af917f1&hm=e75abaf9c43e1dda7a6bc837adeb7361773e831fe22182930745a67a6e186e08&"
+        },
+        {
+          "url": "/media/library/jack55082003/2.webp?v=8a3c72ec4603dba9",
+          "alt": "Chang 掛扣作品照片 2：紙盒內的灰色掛扣",
+          "source": "https://minicourse.dev/media/library/jack55082003/2.webp?v=8a3c72ec4603dba9",
+          "checkedAt": "2026-11-15",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-b44bbfa797554fcb97a987ccc12d3475",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571350233689100358/904610220_17970588939206161_5188839315055466864_n.png?ex=6afa6971&is=6af917f1&hm=6f16b4225ecc9f7e2c854d0dd06d6db339204e80d682889c4d36511dca76444c&"
+        }
+      ]
+    },
+    {
+      "id": "kalakala-oystershell-studio",
+      "name": "喀啦喀啦蚵蚵",
+      "category": "設計師",
+      "description": "用台灣在地廢棄蚵殼做成有的沒有的東西，讓廢棄物不再是廢棄物。\n合作、教學或訂製可以直接私訊或寄mail跟我們說\n蝦皮賣場",
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@kalakala_oystershell_studio",
+        "ig": "https://www.instagram.com/kalakala_oystershell_studio/",
+        "web": "https://lf11017.wixsite.com/kalakalaoystershell"
+      },
+      "verification": true,
+      "disabled": false,
+      "logo": {
+        "url": "/media/library/kalakala-oystershell-studio/logo.webp?v=895de450ed4c6785",
+        "source": "https://www.threads.com/@kalakala_oystershell_studio",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-15",
+        "note": "已核對官方 Threads 個人檔案頭像，HTTPS 圖片可讀取",
+        "originalUrl": "https://scontent-tpe5-1.cdninstagram.com/v/t51.75761-19/498171975_17845561326481072_7180565509376230211_n.jpg?stp=dst-jpg_s640x640_tt6&_nc_cat=104&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=b3fa00&_nc_ohc=eKgPIqRY4lQQ7kNvwFyeMij&_nc_oc=AdobPExwjrd9M-kzmEYW2p2V_jP4ECykIZtMYaNheULkOaPWC42zI057-3PtRYqGJlg&_nc_zt=24&_nc_ht=scontent-tpe5-1.cdninstagram.com&_nc_gid=zgdyM2hQDrnYYjCJPBPwMQ&_nc_ss=7920f&oh=00_AQTDmweBTnuktn3VU1Zq7ToyEMA4hoqb0s9FmpRRfE-VxQ&oe=6AFED335"
+      },
+      "productImages": [
+        {
+          "url": "/media/library/kalakala-oystershell-studio/6.webp?v=937e577ebc8f5831",
+          "alt": "喀啦喀啦蚵蚵作品照片 1",
+          "source": "https://minicourse.dev/media/library/kalakala-oystershell-studio/6.webp?v=937e577ebc8f5831",
+          "checkedAt": "2026-11-15",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-ecdf65789aaf494899c07a496d3af77b",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571353230573576322/903015637_968380069329547_7941582063925170588_n.png?ex=6afa6c3c&is=6af91abc&hm=366e4eb84443d3a6055cd97540f06f18abac9dbf68a756dff40ec1f9f39bcbb7&"
+        },
+        {
+          "url": "/media/library/kalakala-oystershell-studio/7.webp?v=96c04833ce269982",
+          "alt": "喀啦喀啦蚵蚵作品照片 2",
+          "source": "https://minicourse.dev/media/library/kalakala-oystershell-studio/7.webp?v=96c04833ce269982",
+          "checkedAt": "2026-11-15",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-6bc6489281e84ff5bb32fbe561628d41",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571353231223689266/906894252_1807379873738409_3397457242728288017_n.png?ex=6afa6c3c&is=6af91abc&hm=97575886cde684930bf5cc561015a87e4611f66bc8e9b8794d9b390fbd9c7759&"
+        },
+        {
+          "url": "/media/library/kalakala-oystershell-studio/8.webp?v=c894608709d82da8",
+          "alt": "喀啦喀啦蚵蚵作品照片 3",
+          "source": "https://minicourse.dev/media/library/kalakala-oystershell-studio/8.webp?v=c894608709d82da8",
+          "checkedAt": "2026-11-15",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-46638e94e63a4b66882579e6d98a174f",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571353232071205034/901472269_1714239876936310_5732496164948530298_n.png?ex=6afa6c3c&is=6af91abc&hm=a04c49d82904715e3ae1f5bbe815f0b6fd6be33b4e7c8468641c1ef06f222ba7&"
+        },
+        {
+          "url": "/media/library/kalakala-oystershell-studio/9.webp?v=8fa1c4578fc8d962",
+          "alt": "喀啦喀啦蚵蚵作品照片 4",
+          "source": "https://minicourse.dev/media/library/kalakala-oystershell-studio/9.webp?v=8fa1c4578fc8d962",
+          "checkedAt": "2026-11-15",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-85c2520bca7945f68c7154e7135ee26f",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571353232738091149/894974287_975880865168262_903377764733840588_n.png?ex=6afa6c3d&is=6af91abd&hm=b3ff928f67023101056a5c6c17f1bc4bcfea1806a1a73972e01f8b8a3a5707ec&"
+        },
+        {
+          "url": "/media/library/kalakala-oystershell-studio/10.webp?v=fcd92d8988ebdd13",
+          "alt": "喀啦喀啦蚵蚵作品照片 5",
+          "source": "https://minicourse.dev/media/library/kalakala-oystershell-studio/10.webp?v=fcd92d8988ebdd13",
+          "checkedAt": "2026-11-15",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-fbe63541e937462286f2816ca096f4d4",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571353233077571735/912030994_1132263486113173_2485596969687972175_n.png?ex=6afa6c3d&is=6af91abd&hm=671d42e4081215bec7b8beeb8e98729811c05eb8a921242163c6e189237d28be&"
+        },
+        {
+          "url": "/media/library/kalakala-oystershell-studio/11.webp?v=111d3074fd53435c",
+          "alt": "喀啦喀啦蚵蚵作品照片 6",
+          "source": "https://minicourse.dev/media/library/kalakala-oystershell-studio/11.webp?v=111d3074fd53435c",
+          "checkedAt": "2026-11-15",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-e82d6a9444f748bc8b268b8c187de572",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571353233400795136/903644824_1905301107514567_7347513283221428713_n.png?ex=6afa6c3d&is=6af91abd&hm=92e7ead780c9ac2e96cc2c8df26e2a1364ff51cbed192baeec710d64138ee36f&"
+        },
+        {
+          "url": "/media/library/kalakala-oystershell-studio/12.webp?v=d30bf0a0080c9f80",
+          "alt": "喀啦喀啦蚵蚵作品照片 7",
+          "source": "https://minicourse.dev/media/library/kalakala-oystershell-studio/12.webp?v=d30bf0a0080c9f80",
+          "checkedAt": "2026-11-15",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-5fef5d8167914fb59d0e0d1e74a2a7d8",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571353233820221561/903644824_2297234177723876_4248344816292903199_n.png?ex=6afa6c3d&is=6af91abd&hm=56371d378f336a08154b8625d825a650ee35b06f1e40c4afda61007f78f8edc5&"
+        },
+        {
+          "url": "/media/library/kalakala-oystershell-studio/13.webp?v=16b9b3b9f415e6ca",
+          "alt": "喀啦喀啦蚵蚵作品照片 8",
+          "source": "https://minicourse.dev/media/library/kalakala-oystershell-studio/13.webp?v=16b9b3b9f415e6ca",
+          "checkedAt": "2026-11-15",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-f218a8a2c4204f7987d89b11ffde5889",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571353234151448677/905348161_1157848730130326_3099867030620251785_n.png?ex=6afa6c3d&is=6af91abd&hm=7a59ef407788f8f706f4e236a5fe35061b742f001834b488eeda97204f5779da&"
+        },
+        {
+          "url": "/media/library/kalakala-oystershell-studio/14.webp?v=120cab1a9d734df2",
+          "alt": "喀啦喀啦蚵蚵作品照片 9",
+          "source": "https://minicourse.dev/media/library/kalakala-oystershell-studio/14.webp?v=120cab1a9d734df2",
+          "checkedAt": "2026-11-15",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-126553d8c54b44b48aee79be5300d5f8",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571353234683994122/907370254_2139065953377273_147927692629914182_n.png?ex=6afa6c3d&is=6af91abd&hm=b1507b4b74ceb0cf01f32272d0139af5b020ddb49aa492a346966e4cabe3e6e6&"
+        },
+        {
+          "url": "/media/library/kalakala-oystershell-studio/15.webp?v=16e2272b99ef1863",
+          "alt": "喀啦喀啦蚵蚵作品照片 10",
+          "source": "https://minicourse.dev/media/library/kalakala-oystershell-studio/15.webp?v=16e2272b99ef1863",
+          "checkedAt": "2026-11-15",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-edda0052b9a94d7f90923fd2e214710e",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571353235363467294/910049190_1769413701012377_5289132728715968362_n.png?ex=6afa6c3d&is=6af91abd&hm=36206cf4b6be5a2f447d3049f640e6ed5610703c2b5006b31a20bac2309eaa7f&"
+        }
+      ],
+      "links": [
+        {
+          "label": "蚵殼IG",
+          "url": "https://www.instagram.com/kalakala_oystershell_studio"
+        },
+        {
+          "label": "設計IG",
+          "url": "https://www.instagram.com/fishkuei_design"
+        }
+      ]
+    },
+    {
+      "id": "people2",
+      "name": "人2 x People2",
+      "category": "設計師",
+      "hall": "S",
+      "description": "",
+      "social": {
+        "fb": "https://www.facebook.com/people2",
+        "threads": "",
+        "ig": "https://www.instagram.com/people2planet/",
+        "web": ""
+      },
+      "verification": true,
+      "disabled": false,
+      "logo": {
+        "url": "/media/library/people2/logo.webp?v=053ea71f213b797a",
+        "source": "https://www.facebook.com/people2",
+        "platform": "facebook",
+        "status": "verified",
+        "checkedAt": "2026-11-15",
+        "note": "官方帳號 og:url 相符；個人頭像 CDN 路徑；人2 x People2",
+        "originalUrl": "https://scontent.fkhh1-1.fna.fbcdn.net/v/t39.30808-1/497462128_1228946895266237_6875322568868710092_n.jpg?stp=dst-jpg_tt6&cstp=mx1000x1000&ctp=s720x720&_nc_cat=1&ccb=1-7&_nc_sid=3ab345&_nc_ohc=gwpiY-oqXNIQ7kNvwGvUP6q&_nc_oc=AdqZBMQc9V_-DFQberAhG2pe-vZVnk6H89kGtc4ddWREBpgleiXr3BZE7vkr-nz7Be4&_nc_zt=24&_nc_ht=scontent.fkhh1-1.fna&_nc_gid=Is3curD7q1_Q_4gMexoBmA&_nc_ss=7920f&oh=00_AQS8GBoLQtUMIjqS6e_UfLk9y7S6rH8tJRhFCvEXYzLYxA&oe=6AFF0B89"
+      },
+      "productImages": [
+        {
+          "url": "/media/library/people2/1.webp?v=b41991b821fab25b",
+          "alt": "人2 x People2 作品照片 1",
+          "source": "https://minicourse.dev/media/library/people2/1.webp?v=b41991b821fab25b",
+          "checkedAt": "2026-11-15",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-f7b3e59e9feb4c8881f3867916ce98cd",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571408654027067402/556607830_1333474718146787_1007702591469781971_n.png?ex=6afa9fda&is=6af94e5a&hm=06df6254ca515dd534ba42bba79da0b0c22f927a05ecef44c8fc200fb580240e&"
+        }
+      ]
+    },
+    {
+      "id": "116537882210",
+      "name": "Carlos",
+      "category": "設計師",
+      "description": "",
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@116537882210_",
+        "ig": "",
+        "web": ""
+      },
+      "verification": true,
+      "disabled": false,
+      "logo": {
+        "url": "/media/library/116537882210/logo.webp?v=f278c29ebe467b7d",
+        "source": "https://www.threads.com/@116537882210_",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-15",
+        "note": "已核對官方 Threads 個人檔案頭像，HTTPS 圖片可讀取",
+        "originalUrl": "https://scontent-tpe1-1.cdninstagram.com/v/t51.82787-19/838743781_17955598440258014_6020818415724032371_n.jpg?stp=dst-jpg_s640x640_tt6&_nc_cat=106&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=b3fa00&_nc_ohc=4qT42_BHK8UQ7kNvwHpwnIv&_nc_oc=AdoH_fb1L0zG-eeHEDknXOYRwpJ9qtmjpmUH614mai6fxGbnwIvEn5LvQ1tHVrPRvao&_nc_zt=24&_nc_ht=scontent-tpe1-1.cdninstagram.com&_nc_gid=iwG7xpbkbdbyzmFUL2eTRQ&_nc_ss=7920f&oh=00_AQSTtbTZmz5Xh9QFIxycyNUHqTIjxw3HTBSymDI8hVIWSw&oe=6AFF3C84"
+      },
+      "productImages": [
+        {
+          "url": "/media/library/116537882210/1.webp?v=8f371e58b7e18c80",
+          "alt": "Carlos 作品照片 1",
+          "source": "https://minicourse.dev/media/library/116537882210/1.webp?v=8f371e58b7e18c80",
+          "checkedAt": "2026-11-15",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-0defe87e83104a06823bf4b74ae69160",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571428247495909437/841525356_17955846630258014_2668152717884588887_n.png?ex=6afab219&is=6af96099&hm=aabc7f6a3a2c3424af0b3a0ba6ebf3d33887b62389311a4f08c9c6ef09bc73b3&"
+        },
+        {
+          "url": "/media/library/116537882210/2.webp?v=ac435779a6043c84",
+          "alt": "Carlos 作品照片 2",
+          "source": "https://minicourse.dev/media/library/116537882210/2.webp?v=ac435779a6043c84",
+          "checkedAt": "2026-11-15",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-ea77d15997454844a1e0af4729b67ee2",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571428247978123284/839280659_17955552117258014_3792305786711457865_n.png?ex=6afab21a&is=6af9609a&hm=8823500424d367c43affbabe30f04341a2237f0d7351b06ddc39a242b3531792&"
+        },
+        {
+          "url": "/media/library/116537882210/3.webp?v=8c2c8e9c0358efad",
+          "alt": "Carlos 作品照片 3",
+          "source": "https://minicourse.dev/media/library/116537882210/3.webp?v=8c2c8e9c0358efad",
+          "checkedAt": "2026-11-15",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-b12f295187f7464782af2da866db35b8",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571428248494280844/835356425_17955428583258014_7219881612620360858_n.png?ex=6afab21a&is=6af9609a&hm=6a16d6916bd794b565d4ab1220ba54d2f13ecc04a0328dadd859b0c117f86005&"
+        }
+      ]
+    },
+    {
+      "id": "hannah-bbicc",
+      "name": "Hannah",
+      "category": "設計師",
+      "description": "Taiwan / 台派\nGraphic Designer",
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@hannah_bbicc",
+        "ig": "https://www.instagram.com/hannah_bbicc/",
+        "web": ""
+      },
+      "verification": true,
+      "disabled": false,
+      "logo": {
+        "url": "/media/library/hannah-bbicc/logo.webp?v=d0777fb390fe979f",
+        "source": "https://www.threads.com/@hannah_bbicc",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-15",
+        "note": "已核對官方 Threads 個人檔案頭像，HTTPS 圖片可讀取",
+        "originalUrl": "https://scontent-tpe1-1.cdninstagram.com/v/t51.82787-19/515544226_17914937241132742_8086817510485133804_n.jpg?stp=dst-jpg_s640x640_tt6&_nc_cat=102&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=b3fa00&_nc_ohc=DABncBppagMQ7kNvwEtihCI&_nc_oc=AdoIGzyyqAHupiUsqf0SDrUQh1Qq-R1sGDRei6sUbmFFrZzuwYLmu053xWwNHRo3mc0&_nc_zt=24&_nc_ht=scontent-tpe1-1.cdninstagram.com&_nc_gid=2e8opAmNNHZEEEstgKWDBg&_nc_ss=7920f&oh=00_AQTL03e3mzk7BTvaEja_HONvkARI1s882BpdUd4ODmfItQ&oe=6AFF27CF"
+      },
+      "productImages": [
+        {
+          "url": "/media/library/hannah-bbicc/1.webp?v=43d3660197e9d693",
+          "alt": "Hannah 作品照片 1",
+          "source": "https://minicourse.dev/media/library/hannah-bbicc/1.webp?v=43d3660197e9d693",
+          "checkedAt": "2026-11-15",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-cc2be956a5ee4fdf927cf970a0dbc906",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571430384313303171/890716638_17978016168132742_6494453144448649128_n.png?ex=6afab417&is=6af96297&hm=1141cd600c1a7951911b0dac94c9c93f20e429205cfc903d82c6b0b939ac9e13&"
+        },
+        {
+          "url": "/media/library/hannah-bbicc/2.webp?v=281f2116f9ec7115",
+          "alt": "Hannah 作品照片 2",
+          "source": "https://minicourse.dev/media/library/hannah-bbicc/2.webp?v=281f2116f9ec7115",
+          "checkedAt": "2026-11-15",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-0e48547e50104ba7afb19ac1931e104d",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571430385362018395/877167542_17977275423132742_5633926601845051817_n.png?ex=6afab417&is=6af96297&hm=5abbf2f20152caa7b262060b24a7a6d4e48af0108dad0f6a6046dcf38cb2fe20&"
+        },
+        {
+          "url": "/media/library/hannah-bbicc/3.webp?v=f9160817333a7012",
+          "alt": "Hannah 作品照片 3",
+          "source": "https://minicourse.dev/media/library/hannah-bbicc/3.webp?v=f9160817333a7012",
+          "checkedAt": "2026-11-15",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-8a8556a6b12447868b144816283f5029",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571430385965989908/870065389_17977108320132742_1963984399441335971_n.png?ex=6afab417&is=6af96297&hm=81903558995ff1b0ddd22a5d9888212325768762104cad229dc872bebad934f1&"
+        }
+      ]
+    },
+    {
+      "id": "wang1xiu",
+      "name": "Wang Yi-Xiu",
+      "category": "設計師",
+      "description": "🫥",
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@wang1xiu",
+        "ig": "https://www.instagram.com/wang1xiu/",
+        "web": ""
+      },
+      "verification": true,
+      "disabled": false,
+      "logo": {
+        "url": "/media/library/wang1xiu/logo.webp?v=6bf787175a329c37",
+        "source": "https://www.threads.com/@wang1xiu",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-15",
+        "note": "已核對官方 Threads 個人檔案頭像，HTTPS 圖片可讀取",
+        "originalUrl": "https://scontent-tpe1-1.cdninstagram.com/v/t51.2885-19/358348326_1327702741513460_2673685839258420404_n.jpg?stp=dst-jpg_s640x640_tt6&_nc_cat=101&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=b3fa00&_nc_ohc=wn0x-O-bpZQQ7kNvwEpX3bK&_nc_oc=AdotflGSj_oWEn_nyl0SVUc9sUifzCgXDtEb56r_nY1hIG_0QctGA5fh54tMrB7OxMc&_nc_zt=24&_nc_ht=scontent-tpe1-1.cdninstagram.com&_nc_ss=7920f&oh=00_AQTv8qH-WSveUI0um8MVsT6VGrIQFx4JC04VzJ856CWL3Q&oe=6AFF548B"
+      },
+      "productImages": [
+        {
+          "url": "/media/library/wang1xiu/1.webp?v=4b3e3a01759aa9f0",
+          "alt": "Wang Yi-Xiu 作品照片 1",
+          "source": "https://minicourse.dev/media/library/wang1xiu/1.webp?v=4b3e3a01759aa9f0",
+          "checkedAt": "2026-11-15",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-03bb694fead34fbbbc2ec81aaa334f06",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571434009135816734/888601435_17992744104117650_5471681422974271701_n.png?ex=6afab777&is=6af965f7&hm=fec25e67f1245a53d8f3d5dc27ac8dc846e01a46869c2ebe4b88bade8377d1c7&"
+        },
+        {
+          "url": "/media/library/wang1xiu/2.webp?v=c6b32377af66bdfa",
+          "alt": "Wang Yi-Xiu 作品照片 2",
+          "source": "https://minicourse.dev/media/library/wang1xiu/2.webp?v=c6b32377af66bdfa",
+          "checkedAt": "2026-11-15",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-0b5d5efdcc534d55a254ee38775ae0a8",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571434009769283674/886743799_17992741302117650_5687735289201290334_n.png?ex=6afab777&is=6af965f7&hm=8a11ab358c7acee409346ce0cbffdab48e37d53d28e15cb54a57ef44a590ad18&"
+        },
+        {
+          "url": "/media/library/wang1xiu/3.webp?v=68a834339f5e635e",
+          "alt": "Wang Yi-Xiu 作品照片 3",
+          "source": "https://minicourse.dev/media/library/wang1xiu/3.webp?v=68a834339f5e635e",
+          "checkedAt": "2026-11-15",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-3fbb70d6187a4113980a2213b29c3f7c",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571434010188718140/879895932_17992360674117650_7258846668003504606_n.png?ex=6afab777&is=6af965f7&hm=4c4c337144a5746099344aaa2fce9b84419c8ca8cc1b892b75083b66a2bb49b4&"
+        },
+        {
+          "url": "/media/library/wang1xiu/4.webp?v=522d8d882fb79701",
+          "alt": "Wang Yi-Xiu 作品照片 4",
+          "source": "https://minicourse.dev/media/library/wang1xiu/4.webp?v=522d8d882fb79701",
+          "checkedAt": "2026-11-15",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-0765564b45e144f19ff509a09c2d1f55",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571434010616266762/640276885_17943889905117650_1415750621880522470_n.png?ex=6afab777&is=6af965f7&hm=b912c455bdeec3dab86b68a2d067a7732c3cd026817b372383fd5265c4df8c55&"
+        }
+      ]
+    },
+    {
+      "id": "neneko-ig",
+      "name": "neneko 貓日",
+      "category": "設計師",
+      "description": "a.k.a.超激教主の奇幻漫畫. ฅ^ΦωΦ^ฅ 🇹🇼",
+      "social": {
+        "fb": "https://www.facebook.com/nenekoday",
+        "threads": "https://www.threads.com/@neneko_ig",
+        "ig": "https://www.instagram.com/neneko_ig/",
+        "web": "https://portaly.cc/neneko"
+      },
+      "verification": true,
+      "disabled": false,
+      "logo": {
+        "url": "/media/library/neneko-ig/logo.webp?v=18110c1ddfa6d9cb",
+        "source": "https://www.threads.com/@neneko_ig",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-15",
+        "note": "已核對官方 Threads 個人檔案頭像，HTTPS 圖片可讀取",
+        "originalUrl": "https://scontent-lax3-2.cdninstagram.com/v/t51.82787-19/751667462_17979898461104654_5347607278965306746_n.jpg?stp=dst-jpg_s640x640_tt6&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=b3fa00&_nc_ohc=UpVF-Asfi4AQ7kNvwFcIqGC&_nc_oc=Adpq6weET76JaQiWe-S-ztvAX3BL680Ru3sws0XIGg_73PN8w5vOOsb3G8NER3wf7tg&_nc_zt=24&_nc_ht=scontent-lax3-2.cdninstagram.com&_nc_gid=4oA_8uS4u0wnziPTPdyoAQ&_nc_ss=7920f&oh=00_AQSSrnH4_ta6UdEAXFy1dfPi9ah_puJj8lFeS426_lyhjA&oe=6AFF80C9"
+      },
+      "productImages": [
+        {
+          "url": "/media/library/neneko-ig/1.webp?v=441d9b579cf40904",
+          "alt": "neneko 貓日 Future Soon 奔來去投票插畫",
+          "source": "https://minicourse.dev/media/library/neneko-ig/1.webp?v=441d9b579cf40904",
+          "checkedAt": "2026-11-15",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-ee91b2b2f4eb408983fb126b8308adc8",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571527739456888993/907329797_17998596555104654_1005073406966319981_n.png?ex=6afb0ec2&is=6af9bd42&hm=f7cbe2ae8e26e020bec9ff6db9fe48a7aa58852572ee99195b7e25034d0d8bb5&"
+        },
+        {
+          "url": "/media/library/neneko-ig/7.webp?v=f28b7f2d43b37940",
+          "alt": "neneko 貓日作品照片 7",
+          "source": "https://www.threads.com/@neneko_ig/post/DeUC4FWCVHL",
+          "checkedAt": "2026-11-15",
+          "note": "使用者指定 Threads 作品貼文；已核對該作者官方貼文內的作品圖片，HTTPS 圖片可讀取",
+          "id": "work-42bb2c8367aa4b75b6895e0003725388",
+          "originalUrl": "https://scontent-lax7-1.cdninstagram.com/v/t51.82787-15/844417645_17992467156104654_5483459677419553351_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=104&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=nfwiI9Z-3W0Q7kNvwFX3Dir&_nc_oc=AdpbU30LjJNOn1LFSL3OzCw2zPRrDDNg6FegI1dHqOOYqTSdrXCKrJaK6E6vmHDhAU0&_nc_zt=23&_nc_ht=scontent-lax7-1.cdninstagram.com&_nc_gid=6GBE4bYEQwNPKneSixt_Rw&_nc_ss=7920f&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQRfYStevNuHxJ2FN-aHMOHLUnMa9aTgcLbFXVpbRYnxKg&oe=6AFF6B8E"
+        },
+        {
+          "url": "/media/library/neneko-ig/8.webp?v=7cdc2e0b7d4c7902",
+          "alt": "neneko 貓日作品照片 8",
+          "source": "https://www.threads.com/@neneko_ig/post/DeUC4FWCVHL",
+          "checkedAt": "2026-11-15",
+          "note": "使用者指定 Threads 作品貼文；已核對該作者官方貼文內的作品圖片，HTTPS 圖片可讀取",
+          "id": "work-412afa851bf0407da0d873656e280dd8",
+          "originalUrl": "https://scontent-lax3-1.cdninstagram.com/v/t51.82787-15/843278967_17992467174104654_4624440620453075807_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=RTUB9fICRbAQ7kNvwH8oE1E&_nc_oc=Adr8Qdg7biR8-VID1bg_dxQexW_xnfW-N77pu7VRLjFlSvwgzrk6VddmcUi2DLiZ0Vs&_nc_zt=23&_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_gid=6GBE4bYEQwNPKneSixt_Rw&_nc_ss=7920f&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQShoMPKhNhE3cvbT8r6H99_RwHaWMIVHJt_FxuDrt86VQ&oe=6AFF7C30"
+        },
+        {
+          "url": "/media/library/neneko-ig/12.webp?v=d1fe3759231c72f9",
+          "alt": "PUMA LANDS 2026",
+          "source": "https://www.threads.com/@neneko_ig/post/DeEPIWhCRqN",
+          "checkedAt": "2026-11-15",
+          "note": "使用者指定 Threads 作品貼文",
+          "id": "work-c92d6845a1314d4d8ddc6b9ee4fd3b7d",
+          "originalUrl": "https://scontent-lax3-1.cdninstagram.com/v/t51.82787-15/836635379_17991578898104654_343751463528435702_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=104&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=ZRcLNUESQ4QQ7kNvwHsqAUm&_nc_oc=Adq0ecc93pNORO3oA4_lNjuANLDdyQV571-iME2JI90wg-tLEJTmMmM3jSkh82JkQEg&_nc_zt=23&_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_gid=uLApUqtxHjPwCtYdTl0j1A&_nc_ss=7920f&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQRIoyDX5pueE4Qh4Pb_EgYPLn0FV-7GN-BtEFO3ja0L8Q&oe=6AFF83F2"
+        },
+        {
+          "url": "/media/library/neneko-ig/9.webp?v=dac24d53ffb395e6",
+          "alt": "neneko 貓日作品照片 9",
+          "source": "https://www.threads.com/@neneko_ig/post/Dc8nlH7iRDx",
+          "checkedAt": "2026-11-15",
+          "note": "使用者指定 Threads 作品貼文；已核對該作者官方貼文內的作品圖片，HTTPS 圖片可讀取",
+          "id": "work-711301d2a4c5492fa14f21d14737b706",
+          "originalUrl": "https://scontent-lax3-1.cdninstagram.com/v/t51.82787-15/799085031_17987648142104654_2939349181891382794_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=110&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=oEVCfqYdrO8Q7kNvwHuOp55&_nc_oc=Ado1YZnFYyKngh_75Ak4QagTYiVPTJDgNdDcVi6TyH7GfZ-I1pymnQi4VW1FT5sN8q0&_nc_zt=23&_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_gid=k_gyBClO30KhdzRHs648DA&_nc_ss=7920f&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQT2RtYeygdEZS7tNtkxSeOpopxhejt1z-DhT-59XjNvjw&oe=6AFF5006"
+        }
+      ],
+      "retiredWorkIds": [
+        "work-361a825994614e30aea378052c3bb16b",
+        "work-36caabaffcd7457e84983eda6bffc046",
+        "work-c66b5c99cc334dacb3dea2240d0f70f9",
+        "work-00f63919c89949829101c71a10266a57",
+        "work-9cfb4e21e55b4d0a9816f3cb0b85b4c7"
+      ]
+    },
+    {
+      "id": "yisatsai",
+      "name": "蔡依珊",
+      "category": "設計師",
+      "description": "將台灣土地記憶轉化為視覺設計",
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@yisatsai",
+        "ig": "",
+        "web": ""
+      },
+      "verification": true,
+      "disabled": false,
+      "logo": {
+        "url": "/media/library/yisatsai/logo.webp?v=529b34ed2150b240",
+        "source": "https://www.threads.com/@yisatsai",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-15",
+        "note": "已核對官方 Threads 個人檔案頭像，HTTPS 圖片可讀取",
+        "originalUrl": "https://scontent-lax3-2.cdninstagram.com/v/t51.2885-19/419512072_1949037245489642_4420659533705284872_n.jpg?stp=dst-jpg_s640x640_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=b3fa00&_nc_ohc=0zevv1HeF6IQ7kNvwFSRIfQ&_nc_oc=AdpYNpIacYS78YRnFh9KoZyZgRiSYDErUI04JLeI6GbV68upO8WmpdyxCJVifoXyBlc&_nc_zt=24&_nc_ht=scontent-lax3-2.cdninstagram.com&_nc_ss=7920f&oh=00_AQQrmAN0dhKNC_62F3qKCIli56wNhgjmLuYhiQ-wHPBwmw&oe=6AFF8E3B"
+      },
+      "productImages": [
+        {
+          "url": "/media/library/yisatsai/1.webp?v=aebcb1ea55f3ef97",
+          "alt": "蔡依珊作品照片：理想青年人物與煎餃圖樣飄帶平面設計",
+          "source": "https://minicourse.dev/media/library/yisatsai/1.webp?v=aebcb1ea55f3ef97",
+          "checkedAt": "2026-11-15",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-91a6d5c81138497f85c9ba039fd4363d",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571505822649950349/902440245_17978939874155127_3754859133437836814_n.png?ex=6afafa59&is=6af9a8d9&hm=c8f30e97b99f8a0ab1b9f782ee5c2be70a7f2f432a2a37921c9624967f42cdeb&"
+        },
+        {
+          "url": "/media/library/yisatsai/2.webp?v=7b82e9107cc3b32f",
+          "alt": "蔡依珊作品照片：理想青年飄帶裁切示意",
+          "source": "https://minicourse.dev/media/library/yisatsai/2.webp?v=7b82e9107cc3b32f",
+          "checkedAt": "2026-11-15",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-7148a95498e54180a74c90e1e0f2f48d",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571505823509909614/902096059_17978943855155127_4016267516460886264_n.png?ex=6afafa59&is=6af9a8d9&hm=3bf2148cba1c7e46775696c3b03f256741c31d0d667c3c0c314b1f5517f2c71c&"
+        },
+        {
+          "url": "/media/library/yisatsai/3.webp?v=6fcf830683d704e4",
+          "alt": "蔡依珊作品照片：理想青年蝴蝶結鑰匙圈",
+          "source": "https://minicourse.dev/media/library/yisatsai/3.webp?v=6fcf830683d704e4",
+          "checkedAt": "2026-11-15",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-9dd1d4d5d5bd4904b90e78aec86aa429",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571505824205897828/905743567_17978943879155127_8392174950579919654_n.png?ex=6afafa59&is=6af9a8d9&hm=6f3e909a0ddbd2117cd24c0fc91b8d600d4ce3103e68fadc72046cf8e8e6b210&"
+        },
+        {
+          "url": "/media/library/yisatsai/4.webp?v=b600a0f47ca2cac9",
+          "alt": "蔡依珊作品照片：南洋海洋地圖與星辰圖樣飄帶",
+          "source": "https://minicourse.dev/media/library/yisatsai/4.webp?v=b600a0f47ca2cac9",
+          "checkedAt": "2026-11-15",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-c8b37a447782479881f4a6ec972f813f",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571505825791352922/894461575_17978502705155127_5132187526092317551_n.png?ex=6afafa5a&is=6af9a8da&hm=961a35320936d222e536477235bef19a7e258f5f9c0b642db84c25035ba42b65&"
+        },
+        {
+          "url": "/media/library/yisatsai/5.webp?v=804fe2c605bb500e",
+          "alt": "蔡依珊作品照片：海浪星辰圖樣羽織設計與版型",
+          "source": "https://minicourse.dev/media/library/yisatsai/5.webp?v=804fe2c605bb500e",
+          "checkedAt": "2026-11-15",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-5f9a9e6d2a604408a9695a5f271d4de2",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571505827318202520/892134693_17978152749155127_5330891956869748507_n.png?ex=6afafa5a&is=6af9a8da&hm=889a2833780b01d8d83808f9971d6b0d2bbd72e08171bd7c678abc87c2927680&"
+        },
+        {
+          "url": "/media/library/yisatsai/6.webp?v=b91094e163358452",
+          "alt": "蔡依珊作品照片：南洋海洋圖樣飄帶成品",
+          "source": "https://minicourse.dev/media/library/yisatsai/6.webp?v=b91094e163358452",
+          "checkedAt": "2026-11-15",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-b4a07f67c5e549b1967c59e6044516c1",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571505827913797823/889001588_10240315013846411_2636002246932027582_n.png?ex=6afafa5a&is=6af9a8da&hm=ec1ef48573794ffcb792d06899e3a27d0928fd69aafad2e8380015fd2560a0ac&"
+        }
+      ]
+    },
+    {
+      "id": "andrew-wulala",
+      "name": "台灣味●TaiwanWell",
+      "category": "愛好者",
+      "description": "台灣順起來! Taiwan Well!\n一個用動畫說台灣故事的頻道",
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@andrew_wulala",
+        "ig": "",
+        "web": ""
+      },
+      "verification": true,
+      "disabled": false,
+      "logo": {
+        "url": "/media/library/andrew-wulala/logo.webp?v=44cc4a3556549aef",
+        "source": "https://www.threads.com/@andrew_wulala",
+        "checkedAt": "2026-11-15",
+        "status": "verified",
+        "platform": "threads",
+        "originalUrl": "https://scontent-lax3-1.cdninstagram.com/v/t51.82787-19/905812655_17956288011332551_1346866175638774894_n.jpg?stp=dst-jpg_s640x640_tt6&_nc_cat=108&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=b3fa00&_nc_ohc=LCVtWEPl3ogQ7kNvwFxCuH_&_nc_oc=Adpthx_xYXFLGGkWqBRwn422o_dXaG_WoV1mdIfXpEyzpxLvPV77fVTicPYXLMkyG2k&_nc_zt=24&_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_gid=bpFzp4zxXm6SVCzjF8UZlg&_nc_ss=7020f&oh=00_AQQF7E_AnytonG3Pj_rWcM9_qHjSBYyDqwEMzhh8OyQz1w&oe=6AFFABC5",
+        "note": "Threads 公開個人檔案 og:image"
+      },
+      "productImages": [
+        {
+          "id": "taiwanwell-puma-taipei-intro",
+          "url": "/media/library/andrew-wulala/10.webp?v=0fcd999a27a34e9d",
+          "alt": "沈伯洋參選台北市長的理念：不只貼 OK 繃，要給完整免疫系統｜臺北靠3就是你",
+          "caption": "《台灣大洋流・台北順起來》政見動畫解說",
+          "source": "https://www.youtube.com/watch?v=JKgthHScxUk",
+          "checkedAt": "2026-11-15",
+          "originalUrl": "https://i.ytimg.com/vi/JKgthHScxUk/maxresdefault.jpg",
+          "note": "作品網站連結的 TaiwanWell 台灣味影片；影片標題及作者由 YouTube oEmbed 核對"
+        },
+        {
+          "url": "/media/library/andrew-wulala/1.webp?v=9e3e1a7c343d5d3a",
+          "alt": "作品照片 1：綠色背景的短髮眼鏡人物插畫",
+          "source": "https://minicourse.dev/media/library/andrew-wulala/1.webp?v=9e3e1a7c343d5d3a",
+          "checkedAt": "2026-11-15",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-ffa8b20ad1ae463f9d29261702bcaeb3",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571524972332195911/904749021_17986077018104816_3726677743002835548_n.png?ex=6afb0c2e&is=6af9baae&hm=76e20c139328159074acefd0e606a99f12a0c7f06efcea990c24ed0fc4cc71a1&"
+        },
+        {
+          "url": "/media/library/andrew-wulala/2.webp?v=340e0e3c622cb913",
+          "alt": "作品照片 2：藍色背景的眼鏡人物插畫",
+          "source": "https://minicourse.dev/media/library/andrew-wulala/2.webp?v=340e0e3c622cb913",
+          "checkedAt": "2026-11-15",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-f844ad83eb884d13aba16cd23514489a",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571524972789104741/907333148_17986077042104816_813422569599303717_n.png?ex=6afb0c2f&is=6af9baaf&hm=c1bf4164a4a6c7e5e73086aaae0f258022a3b21a30bcc5c2fe3fecb1e8f3c868&"
+        },
+        {
+          "url": "/media/library/andrew-wulala/3.webp?v=51b76f845f5667a7",
+          "alt": "作品照片 3：粉紅背景的短髮人物插畫",
+          "source": "https://minicourse.dev/media/library/andrew-wulala/3.webp?v=51b76f845f5667a7",
+          "checkedAt": "2026-11-15",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-7dfae9856579472296b257ab92ecad67",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571524973091102725/903916393_17986077066104816_4612235838706685138_n.png?ex=6afb0c2f&is=6af9baaf&hm=3c18f6df76c93da2fe6cdbf56d6617a4ccb8dc09df1f62f2d1efab68710728d6&"
+        },
+        {
+          "url": "/media/library/andrew-wulala/4.webp?v=4c167f11b4ae6a56",
+          "alt": "作品照片 4：紅色背景的眼鏡人物比讚插畫",
+          "source": "https://minicourse.dev/media/library/andrew-wulala/4.webp?v=4c167f11b4ae6a56",
+          "checkedAt": "2026-11-15",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-70028f440ad844e7878b40d4f7301a68",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571524973607260160/902115098_17986077096104816_1521597650698452282_n.png?ex=6afb0c2f&is=6af9baaf&hm=97d16c6f9a03500a6612c9d4c7240579582c2b18c030a138fa0afef896a1f4b6&"
+        },
+        {
+          "url": "/media/library/andrew-wulala/5.webp?v=7e84f7883c5fc3d2",
+          "alt": "作品照片 5：黃色背景的短髮人物手持杯子插畫",
+          "source": "https://minicourse.dev/media/library/andrew-wulala/5.webp?v=7e84f7883c5fc3d2",
+          "checkedAt": "2026-11-15",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-72802f5ea3ad4abbbaafd6a99e48ebd7",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571524974253051984/902158908_17986077123104816_9069402393212159309_n.png?ex=6afb0c2f&is=6af9baaf&hm=e2df42eda2f92ad9db7cc46cf3c25af8d76d5d26c2e3f6587df733032364a2a3&"
+        },
+        {
+          "url": "/media/library/andrew-wulala/6.webp?v=834accdadc8b9f7f",
+          "alt": "作品照片 6：橘黑背景的眼鏡人物插畫",
+          "source": "https://minicourse.dev/media/library/andrew-wulala/6.webp?v=834accdadc8b9f7f",
+          "checkedAt": "2026-11-15",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-6bd63009495a4e16b0e7ef45e9853d3d",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571524974638923887/910384645_17986077147104816_983181593065376598_n.png?ex=6afb0c2f&is=6af9baaf&hm=123caf72c80647be1852efd1dc307aa2b5a53aa8c457c12b74520f289a282a06&"
+        },
+        {
+          "url": "/media/library/andrew-wulala/7.webp?v=aa2f9d9a27f53cf6",
+          "alt": "作品照片 7：三位人物圓形插畫與洋流線條排版",
+          "source": "https://minicourse.dev/media/library/andrew-wulala/7.webp?v=aa2f9d9a27f53cf6",
+          "checkedAt": "2026-11-15",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-cc7930f4a9f241369406b63fe2416804",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571524975209480222/904136209_17986077177104816_6530418720100267621_n.png?ex=6afb0c2f&is=6af9baaf&hm=b21aa4f4a1999d4e4cc026f72599d43e142eada38dcf28df389b01b3e3ded574&"
+        },
+        {
+          "url": "/media/library/andrew-wulala/8.webp?v=36351416d2d1a97b",
+          "alt": "作品照片 8：三位人物圓形插畫與洋流線條排版",
+          "source": "https://minicourse.dev/media/library/andrew-wulala/8.webp?v=36351416d2d1a97b",
+          "checkedAt": "2026-11-15",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-efbb3b7ab72d492a88958e9001299f9e",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571524975788036256/903878302_17986077201104816_8351310746622624410_n.png?ex=6afb0c2f&is=6af9baaf&hm=7408c7641c14bc5258dd4ebc84f22c2323324b97e9c4c2f22c31f1ccbae9654b&"
+        },
+        {
+          "url": "/media/library/andrew-wulala/9.webp?v=79fdcd3359e4bfaa",
+          "alt": "作品照片 9：台灣洋流大串聯長條設計全圖",
+          "source": "https://minicourse.dev/media/library/andrew-wulala/9.webp?v=79fdcd3359e4bfaa",
+          "checkedAt": "2026-11-15",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-72fccf610c464dc7b88270692c2797f4",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571524976581017620/901883999_17986076994104816_974227112684061835_n.png?ex=6afb0c2f&is=6af9baaf&hm=0a56e25ba12d86a6b013a6cb802c7d005089139d20826455a439621d53e06524&",
+          "thumbnail": {
+            "rotation": 90,
+            "width": 2220,
+            "height": 124
+          }
+        }
+      ],
+      "links": [
+        {
+          "label": "台灣大洋流・台北順起來",
+          "url": "https://tpe.taiwanwell.com"
+        }
+      ],
+      "hall": "W",
+      "legacyShareHalls": [
+        "A"
+      ]
+    },
+    {
+      "id": "306-678",
+      "name": "山G",
+      "category": "設計師",
+      "description": "數位遊民平面設計師\n透過高爾夫達成自我內耗及懷疑的人生失利組",
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@306_678",
+        "ig": "",
+        "web": ""
+      },
+      "verification": true,
+      "disabled": false,
+      "logo": {
+        "url": "/media/library/306-678/logo.webp?v=54f08bbd89ec4779",
+        "source": "https://www.threads.com/@306_678",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-15",
+        "note": "已核對官方 Threads 個人檔案頭像，HTTPS 圖片可讀取",
+        "originalUrl": "https://scontent-lax3-2.cdninstagram.com/v/t51.82787-19/906046000_17980266030158463_8480592973279839542_n.jpg?stp=dst-jpg_s640x640_tt6&_nc_cat=107&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=b3fa00&_nc_ohc=dt9fNCygqawQ7kNvwFFOIV4&_nc_oc=AdpHnqk2Lj-0HoJ9n65RnCnmk_vHpT9CAkZUWlPiFi5IjbaMlJQu0_ufWRFcmIeSdkY&_nc_zt=24&_nc_ht=scontent-lax3-2.cdninstagram.com&_nc_gid=KtNWuWCBWxKGZaxfVgixzA&_nc_ss=7920f&oh=00_AQQmfxq-eOuY0k2q0Gc99Q2QU24-4BlFWaXEMBzrjhuXxQ&oe=6AFFB4AE"
+      },
+      "productImages": [
+        {
+          "url": "/media/library/306-678/1.webp?v=9643f3c8d8b785b2",
+          "alt": "山G作品照片 1",
+          "source": "https://www.threads.com/@306_678/post/Dfw_R3Bk8V9/media",
+          "checkedAt": "2026-11-15",
+          "note": "使用者指定 Threads 作品貼文；已核對該作者官方貼文內的作品圖片，HTTPS 圖片可讀取",
+          "id": "work-15fe4f2c4c844d3084b3d7d0929efe7e",
+          "originalUrl": "https://scontent-lax3-2.cdninstagram.com/v/t51.82787-15/902586019_17980447692158463_2846986794415008795_n.jpg?stp=cp6_dst-jpg_e35_tt6&_nc_cat=106&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMDk5OTk3MDc0MDE1OTg2OQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuNTg0LnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=MmLUF2JUPuUQ7kNvwGJAJjg&_nc_oc=AdpPqL-cgkHLDwx8oxAbmZOZzQEVrXnp5grn4Q8JgCP0GyVU8yyeqDa-BAXt7IfR5o8&_nc_zt=23&_nc_ht=scontent-lax3-2.cdninstagram.com&_nc_gid=ETAcCx6xkd7hEd341mmmXA&_nc_ss=7920f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQS1GwoIwgfq-_who0_DRC-W82AwWrV54NLDP9GQxZ4wHg&oe=6AFF900C"
+        },
+        {
+          "url": "/media/library/306-678/2.webp?v=8a49e56f8da3b388",
+          "alt": "山G作品照片 2",
+          "source": "https://www.threads.com/@306_678/post/Dfvugl_k0oR",
+          "checkedAt": "2026-11-15",
+          "note": "使用者指定 Threads 作品貼文；已核對該作者官方貼文內的作品圖片，HTTPS 圖片可讀取",
+          "id": "work-900758a2214d4b44a6e931c18e34fafe",
+          "originalUrl": "https://scontent-lax3-1.cdninstagram.com/v/t51.82787-15/906611985_17980360401158463_6901823791390866412_n.jpg?stp=cp6_dst-jpg_e35_tt6&_nc_cat=107&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMDY0MDk4NDY0NzAwNTM5Ng%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTY2Mi5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=bfwMAvMuQWsQ7kNvwEU_ad7&_nc_oc=AdqU-IQbm2MVUTvqoQCa6FUJZv0DOlhDLRIOwS2yedWdEwgjOW8-Y2iPygj3wMpOU9c&_nc_zt=23&_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_gid=W18uZslgRc9zAwhrjreFnw&_nc_ss=7920f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQRYMT31DDlXVY5F4IOkviOY-jS0tE9ZM_C2QYVTJqUdDA&oe=6AFF96EA"
+        },
+        {
+          "url": "/media/library/306-678/3.webp?v=53da3a2f4052ac6d",
+          "alt": "山G作品照片 3",
+          "source": "https://www.threads.com/@306_678/post/Dfvugl_k0oR",
+          "checkedAt": "2026-11-15",
+          "note": "使用者指定 Threads 作品貼文；已核對該作者官方貼文內的作品圖片，HTTPS 圖片可讀取",
+          "id": "work-0ee7bf044b9d47c5811d3afcb725c336",
+          "originalUrl": "https://scontent-lax3-2.cdninstagram.com/v/t51.82787-15/902585925_17980360425158463_3740520586180650472_n.jpg?stp=cp6_dst-jpg_e35_tt6&_nc_cat=108&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMDY0MDk4NDk4MjUyMTU4MQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTU2MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=4ud9oFrmOt0Q7kNvwFrFUgJ&_nc_oc=AdqfHcAxnCSFJ0uzD7hHhfjHKmvrUWjb8tLAZFI5wok9vpsyN5yugHQIlmLaS3zwR14&_nc_zt=23&_nc_ht=scontent-lax3-2.cdninstagram.com&_nc_gid=W18uZslgRc9zAwhrjreFnw&_nc_ss=7920f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQRSxlzICuqdmUzbVUM_IQFF0c6si2rJ_nUfOjCHOWzWIg&oe=6AFFA26C"
+        },
+        {
+          "url": "/media/library/306-678/4.webp?v=902744ddb00abf5b",
+          "alt": "山G作品照片 4",
+          "source": "https://www.threads.com/@306_678/post/Dfvugl_k0oR",
+          "checkedAt": "2026-11-15",
+          "note": "使用者指定 Threads 作品貼文；已核對該作者官方貼文內的作品圖片，HTTPS 圖片可讀取",
+          "id": "work-753027f2b3bf4ab79beeeec3a053e44d",
+          "originalUrl": "https://scontent-lax3-1.cdninstagram.com/v/t51.82787-15/902585976_17980360410158463_5400954814959009401_n.jpg?stp=cp6_dst-jpg_e35_tt6&_nc_cat=108&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMDY0MDk4NDgxNDc0MTI5OQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTU2Mi5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=TAzFLxn0EzAQ7kNvwF8Mp5m&_nc_oc=AdqvRjYUOyZlnyMCpIh8GBDiM-eDDUf7rZdibPPfDAVLBUdKl4kGBmkMtKT7QRxaTXw&_nc_zt=23&_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_gid=W18uZslgRc9zAwhrjreFnw&_nc_ss=7920f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQSdWe866tVjrmjxTHP7yyUB-7c7WMc-XwZGmdZ9LCYMYg&oe=6AFF80EA"
+        }
+      ]
+    },
+    {
+      "id": "csom26",
+      "name": "Chuang",
+      "description": "當一個不自責的人\n過一段記得的一生",
+      "category": "愛好者",
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@csom26_",
+        "ig": "",
+        "web": ""
+      },
+      "verification": true,
+      "disabled": false,
+      "logo": {
+        "url": "/media/library/csom26/logo.webp?v=311596ce3dfb1876",
+        "source": "https://www.threads.com/@csom26_",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-16",
+        "note": "已核對 Threads 官方個人頁頭像，HTTPS 圖片可讀取",
+        "originalUrl": "https://scontent-tpe1-1.cdninstagram.com/v/t51.82787-19/726621765_17954696094151110_3045138022617883774_n.jpg?stp=dst-jpg_s640x640_tt6&_nc_cat=108&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=b3fa00&_nc_ohc=CKfVmgY-BkYQ7kNvwHKzbcn&_nc_oc=AdqzEhktzmgJSpoHm7JlN-TOXqNBvPHZd3GAKtdxk814Tvu7tmxqTl0467KghPgPPwU&_nc_zt=24&_nc_ht=scontent-tpe1-1.cdninstagram.com&_nc_gid=8U5BPqwEgNCphwTLg9xhuQ&_nc_ss=7920f&oh=00_AQQvQ1JVS73-EQQzMKL4loh9GjcW_01Q1c0jDYIhvqy-JA&oe=6B005762"
+      },
+      "productImages": [
+        {
+          "url": "/media/library/csom26/1.webp?v=aede927f7199302a",
+          "alt": "Chuang 作品：黑色數字 5 造型與彩色人物",
+          "source": "https://minicourse.dev/media/library/csom26/1.webp?v=aede927f7199302a",
+          "checkedAt": "2026-11-16",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-88ca58534cc647f3a9a374fd5920e664",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571713166193201203/909503189_17976543879151110_6320260185608512786_n.png?ex=6afbbb73&is=6afa69f3&hm=5f2683c67d33e3be3795cbe34ee8d325b6344d2c722d269ad8093b988ec53764&"
+        }
+      ]
+    },
+    {
+      "id": "eziraros",
+      "name": "eziraros",
+      "description": "十九 / 劉乃廷\n末代 creative coder\n日常帳",
+      "category": "設計師",
+      "hall": "W",
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@eziraros",
+        "ig": "https://www.instagram.com/eziraros",
+        "web": "https://memoriesofthewind.tw/"
+      },
+      "verification": true,
+      "disabled": false,
+      "logo": {
+        "url": "/media/library/eziraros/logo.webp?v=0339bba7eccb61a9",
+        "source": "https://www.threads.com/@eziraros",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-16",
+        "note": "已核對 Threads 官方個人頁 og:url、顯示名稱及 og:image 頭像，HTTPS 圖片可讀取",
+        "originalUrl": "https://scontent.cdninstagram.com/v/t51.2885-19/407486699_348676627782846_1695781328407905248_n.jpg?stp=dst-jpg_s640x640_tt6&_nc_cat=100&ccb=7-5&_nc_sid=b3fa00&_nc_ohc=8a-KFz3jvkEQ7kNvwE0L7DR&_nc_oc=Adrim77QAxX8u1F3R8qFgRZCrvKC8iOO1xuNj2NJwmdlOPBqJDK7J3CIQ9E8U0BKAn0&_nc_zt=24&_nc_ht=scontent.cdninstagram.com&_nc_ss=7920f&oh=00_AQSJOg2bpEVU3OpDuOCgwqMd-z07YAsPrb9DuCc7JQ970w&oe=6B00329C"
+      },
+      "productImages": [
+        {
+          "url": "/media/library/eziraros/2.webp?v=573009c5bf550a5e",
+          "alt": "eziraros《洋流 Ocean Current》作品預覽圖",
+          "source": "https://naiting-liu.tw/zh/works/ocean-current/",
+          "checkedAt": "2026-11-16",
+          "note": "作者官方作品頁提供的《洋流》作品預覽圖；官網關於頁連結至同一 Threads 與 Instagram 帳號，HTTPS 圖片可讀取",
+          "id": "work-6d4a7d7d885e4859b975b07ae7bb31ce",
+          "originalUrl": "https://naiting-liu.tw/_astro/ocean-current.XFioXyJC_1AjBO0.webp"
+        },
+        {
+          "url": "/media/library/eziraros/1.webp?v=69bfc668c4ba50db",
+          "alt": "eziraros《風的記憶 Memories of the Wind》網站預覽圖",
+          "source": "https://memoriesofthewind.tw/",
+          "checkedAt": "2026-11-16",
+          "note": "使用者指定作品網站的 og:image 預覽圖；網站首頁及關於頁均連結至 eziraros 的 Threads 帳號，HTTPS 圖片可讀取",
+          "id": "work-3c37584998d74879a440898389330d4a",
+          "originalUrl": "https://memoriesofthewind.tw/og-home.jpg"
+        }
+      ],
+      "links": [
+        {
+          "label": "風的記憶 Memories of the Wind",
+          "url": "https://memoriesofthewind.tw/"
+        },
+        {
+          "label": "洋流",
+          "url": "https://naiting-liu.tw/zh/works/ocean-current/"
+        }
+      ]
+    },
+    {
+      "id": "xiaru-art",
+      "name": "生如夏花｜Xia Ru · Art & Design",
+      "description": "生如夏花之絢爛——泰戈爾《飛鳥集》\n✨✨✨\n【 TAIWAN貼紙上架囉！】連結在下面👇\n-\n嗨，我是夏如Xia Ru\n讓我們在喧囂的世界裡，像夏花一樣\n盡情綻放屬於自己的色彩🌈",
+      "category": "設計師",
+      "social": {
+        "fb": "https://www.facebook.com/xiaru.art?mibextid=wwXIfr&rdid=8wPZFS9zRmd6ZHp8&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1KXvfJYZsi%2F%3Fmibextid%3DwwXIfr",
+        "threads": "https://www.threads.com/@xiaru_art",
+        "ig": "https://www.instagram.com/xiaru_art?dlrf=MWJneGZkbGY0bXlhMw%3D%3D&utm_source=qr",
+        "web": ""
+      },
+      "verification": true,
+      "disabled": false,
+      "logo": {
+        "url": "/media/library/xiaru-art/logo.webp?v=98632721b8c42b17",
+        "source": "https://www.threads.com/@xiaru_art",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-16",
+        "note": "已核對官方 Threads 個人頁頭像，並與官方貼文嵌入頁的帳號頭像比對，HTTPS 圖片可讀取",
+        "originalUrl": "https://scontent-tpe1-1.cdninstagram.com/v/t51.82787-19/670413288_18078693326207428_6978792632158550766_n.jpg?stp=dst-jpg_s640x640_tt6&_nc_cat=101&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=b3fa00&_nc_ohc=QByU_zu4jrEQ7kNvwF753Kg&_nc_oc=AdqLAxG2_QcX2Gkzaftucgi35SNeDTfMdtX5sXbLz1whipH66lZNSD1Sy9XNlswGtqk&_nc_zt=24&_nc_ht=scontent-tpe1-1.cdninstagram.com&_nc_gid=DuZNAsUi8tTyn-BNJk2CtA&_nc_ss=7920f&oh=00_AQQ61rXRNPYWXak8tAgJihRZlhDQJ776PtYDRkjU-kOzVQ&oe=6B007893"
+      },
+      "productImages": [
+        {
+          "url": "/media/library/xiaru-art/1.webp?v=939c0f01275084cf",
+          "alt": "生如夏花｜Xia Ru · Art & Design作品照片 1",
+          "source": "https://www.threads.com/@xiaru_art/post/DfPAAt6gfFI",
+          "checkedAt": "2026-11-16",
+          "note": "使用者提供，指定為此設計師作品照片；來源為使用者所提供的 Threads 貼文，已核對貼文作者為 @xiaru_art",
+          "id": "work-ac41d8c1870341569c9bdee7282f5b84",
+          "originalUrl": "https://scontent-tpe5-1.cdninstagram.com/v/t51.82787-15/882312565_18111462080207428_4334857069042466710_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=bVThyjdCv3kQ7kNvwGjvYas&_nc_oc=AdpFKNF8vhld2dPG3_W7llYPDRtHf08dLYTmpWJpwciJraj2rnH5LbObwzq23bpQXzg&_nc_zt=23&_nc_ht=scontent-tpe5-1.cdninstagram.com&_nc_gid=7o_klEKb72ZKJyC7rctpPQ&_nc_ss=7920f&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQQ91LD5AL8quaSkPRNsqWDvqY8QEpCPeiZ1Jiw0Thawmw&oe=6B005322"
+        },
+        {
+          "url": "/media/library/xiaru-art/8.webp?v=ccf0bffbb706f2f0",
+          "alt": "生如夏花｜Xia Ru · Art & Design－毛孩似顏繪油畫粉彩作品",
+          "source": "https://minicourse.dev/media/library/xiaru-art/8.webp?v=ccf0bffbb706f2f0",
+          "checkedAt": "2026-11-16",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-264b71e369a9454c9820e4e30e01e28f",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571818988629921842/900669251_18113554055207428_2011662810644795161_n.png?ex=6afc1e01&is=6afacc81&hm=be094161710bde3ad2ea9aecd51cb325cc9b3f285cd2cc0ce78ed70245119d4e&"
+        },
+        {
+          "url": "/media/library/xiaru-art/9.webp?v=a7cc7bee9d12d026",
+          "alt": "生如夏花｜Xia Ru · Art & Design－貓咪插畫明信片",
+          "source": "https://minicourse.dev/media/library/xiaru-art/9.webp?v=a7cc7bee9d12d026",
+          "checkedAt": "2026-11-16",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-406c9a1f622c4019a9fbca0bfe8a0ec0",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571818990253375558/910885018_18113554079207428_8903110382599121082_n.png?ex=6afc1e02&is=6afacc82&hm=d105ad57cb31283d40783c59a720757299ccb849b2e0fa0c59b08ad40daedb4b&"
+        },
+        {
+          "url": "/media/library/xiaru-art/10.webp?v=8904e98970921a5a",
+          "alt": "生如夏花｜Xia Ru · Art & Design－Sweet Time 甜點插畫貼紙",
+          "source": "https://minicourse.dev/media/library/xiaru-art/10.webp?v=8904e98970921a5a",
+          "checkedAt": "2026-11-16",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-4f56902679c643a9a25310e0ba6d5c36",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571818992090218526/906078873_18113554106207428_5973895318019224897_n.png?ex=6afc1e02&is=6afacc82&hm=19d3413b89c9221910e2ba75cc2832f2bb50ebfc7dad7213d2ea06dbe5c8fe7a&"
+        },
+        {
+          "url": "/media/library/xiaru-art/5.webp?v=e87ee8da377b8d22",
+          "alt": "生如夏花｜Xia Ru · Art & Design作品照片 5",
+          "source": "https://www.threads.com/@xiaru_art/post/Dfwz-esIHtg",
+          "checkedAt": "2026-11-16",
+          "note": "使用者提供，指定為此設計師作品照片；來源為使用者所提供的 Threads 貼文，已核對貼文作者為 @xiaru_art",
+          "id": "work-98303186da72452b82be3f108cabf511",
+          "originalUrl": "https://scontent-tpe1-1.cdninstagram.com/v/t51.82787-15/907608880_18113413778207428_4243237109525515615_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=107&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=7Uwb5nPo_NoQ7kNvwF-aJDM&_nc_oc=Adq77EZOv7a2-m5PsQAtJ_80kVeKfj7sR5la0A9qNF_6ksB517El45mRLI8VmXER80g&_nc_zt=23&_nc_ht=scontent-tpe1-1.cdninstagram.com&_nc_gid=byMqzZpUp2EaFAsGnCUQew&_nc_ss=7920f&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQQmZ7GQ6G7d3H7gNYnfmAmCtbaEIgWJDTOOMeTusT6mRg&oe=6B0054E7"
+        },
+        {
+          "url": "/media/library/xiaru-art/6.webp?v=9a1dce17206ad3ec",
+          "alt": "生如夏花｜Xia Ru · Art & Design作品照片 6",
+          "source": "https://www.threads.com/@xiaru_art/post/Dfwz-esIHtg",
+          "checkedAt": "2026-11-16",
+          "note": "使用者提供，指定為此設計師作品照片；來源為使用者所提供的 Threads 貼文，已核對貼文作者為 @xiaru_art",
+          "id": "work-3ab42c0c150840fe897c6554454eddaf",
+          "originalUrl": "https://scontent-tpe5-1.cdninstagram.com/v/t51.82787-15/901928966_18113413808207428_5920170348356657443_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=4pApyyAFUfkQ7kNvwH7jgji&_nc_oc=AdqWmQpRZKo-4Wh5n0nDAnCS3OW8smhI3sasGLt1SYCgd4BCUwVi36wteamB9IXJFWM&_nc_zt=23&_nc_ht=scontent-tpe5-1.cdninstagram.com&_nc_gid=byMqzZpUp2EaFAsGnCUQew&_nc_ss=7920f&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQQ-smiBrU6Mm7eS3ZthSPCIg3tX9q4ZVWC7mS55vZ_09g&oe=6B004255"
+        },
+        {
+          "url": "/media/library/xiaru-art/7.webp?v=3c2ec217dde293c6",
+          "alt": "生如夏花｜Xia Ru · Art & Design作品照片 7",
+          "source": "https://www.threads.com/@xiaru_art/post/Dfwz-esIHtg",
+          "checkedAt": "2026-11-16",
+          "note": "使用者提供，指定為此設計師作品照片；來源為使用者所提供的 Threads 貼文，已核對貼文作者為 @xiaru_art",
+          "id": "work-a780de2d22504490a11af529ec321749",
+          "originalUrl": "https://scontent-tpe1-1.cdninstagram.com/v/t51.82787-15/901826010_18113413835207428_4447774101147700537_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=108&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=I9qepSZoA3EQ7kNvwFMZzU1&_nc_oc=Adqj9NPLvFZ1bf5EodwReDqAddejWTeaxHELofnuTHmzWQrEIIrVaS5lQVrHy5f761s&_nc_zt=23&_nc_ht=scontent-tpe1-1.cdninstagram.com&_nc_gid=byMqzZpUp2EaFAsGnCUQew&_nc_ss=7920f&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQQ0iUaK6jC8_So6zpmRooCZoggT5g16GsBpwAD7sro6UQ&oe=6B006557"
+        }
+      ],
+      "hall": "O",
+      "links": [
+        {
+          "label": "賣場",
+          "url": "https://myship.7-11.com.tw/general/detail/GM2611079234553"
+        }
+      ],
+      "retiredWorkIds": [
+        "work-5fd0f483792844b1b0adf5d6404a0548",
+        "work-87f7f026db8f43f9b9a5fb6a8781ced2",
+        "work-a00a71b8148d4052a17dc351d3a23d77"
+      ]
+    },
+    {
+      "id": "yuncraft-o",
+      "name": "蘊茶語",
+      "description": "阿里山小茶農｜製臺灣的茶｜做台灣的人\n全產品皆由國家品茶師自產自銷\n臺中市大雅區民生路三段360號\n⬇賣場連結在這邊⬇",
+      "category": "設計師",
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@yuncraft.o",
+        "ig": "",
+        "web": "https://yuncraft.cashier.ecpay.com.tw/"
+      },
+      "verification": true,
+      "disabled": false,
+      "logo": {
+        "url": "/media/library/yuncraft-o/logo.webp?v=c350d74b1739ae79",
+        "source": "https://www.threads.com/@yuncraft.o",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-16",
+        "note": "已核對官方 Threads 個人頁的顯示名稱、og:url 與 og:image 頭像，HTTPS 圖片可讀取",
+        "originalUrl": "https://scontent.cdninstagram.com/v/t51.82787-19/517973384_17845932384523326_1092502961285563106_n.jpg?stp=dst-jpg_s640x640_tt6&_nc_cat=104&ccb=7-5&_nc_sid=b3fa00&_nc_ohc=gcfM4O937PUQ7kNvwGGQ_Fy&_nc_oc=Adqql3ZmO0B_bjzQuDp-mF5Rj4YXjHfdd2KdtGdSt9wnFJFgtX0Y9HTzsIFH35dGsIs&_nc_zt=24&_nc_ht=scontent.cdninstagram.com&_nc_gid=sKWDGk6ZDL1nc_VxlnRFtg&_nc_ss=7920f&oh=00_AQRcgo469uT0jWD-J0R1NBOOG1C5hiWJbJQa9ajwrKjvQw&oe=6B00748B"
+      },
+      "productImages": [
+        {
+          "url": "/media/library/yuncraft-o/1.webp?v=90f9754b7f536662",
+          "alt": "蘊茶語作品照片 1",
+          "source": "https://minicourse.dev/media/library/yuncraft-o/1.webp?v=90f9754b7f536662",
+          "checkedAt": "2026-11-16",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-13ca9ee7b584409f99109f09bb181219",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571750275037794365/905664657_17921066937525715_7133899557519473409_n.png?ex=6afbde03&is=6afa8c83&hm=670d6689f6f4f2da83707c4fe3fc2aa8453b2a81be866806f344325d4e4dbab6&"
+        }
+      ],
+      "hall": "A"
+    },
+    {
+      "id": "mygirlaiko",
+      "name": "aiko",
+      "description": "可以一起做什麼呢？\n這是aiko & blu 小女孩與貓的日常",
+      "category": "設計師",
+      "social": {
+        "fb": "https://www.facebook.com/mygirlaiko/",
+        "threads": "https://www.threads.com/@mygirlaiko",
+        "ig": "https://www.instagram.com/mygirlaiko/",
+        "web": "https://myship.7-11.com.tw/general/detail/GM2504106028982"
+      },
+      "verification": true,
+      "disabled": false,
+      "logo": {
+        "url": "/media/library/mygirlaiko/logo.webp?v=057fe78680952e77",
+        "source": "https://cdn.discordapp.com/attachments/1553247600935833680/1571752918959263794/1QqcnEe-5yB_zZRF22BeqmGWETyKrlhOmw2559-h1288-iv1.png?ex=6afbe079&is=6afa8ef9&hm=47fa781bacb23e3c3e1d5653198290988867e109d9545463f940fffa19408e7d&",
+        "platform": "discord",
+        "status": "verified",
+        "checkedAt": "2026-11-16",
+        "note": "使用者指定為此設計師 Logo",
+        "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571752918959263794/1QqcnEe-5yB_zZRF22BeqmGWETyKrlhOmw2559-h1288-iv1.png?ex=6afbe079&is=6afa8ef9&hm=47fa781bacb23e3c3e1d5653198290988867e109d9545463f940fffa19408e7d&"
+      },
+      "productImages": [
+        {
+          "url": "/media/library/mygirlaiko/1.webp?v=5065b4b2dfe314c5",
+          "alt": "aiko 作品照片 1",
+          "source": "https://minicourse.dev/media/library/mygirlaiko/1.webp?v=5065b4b2dfe314c5",
+          "checkedAt": "2026-11-16",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-3857b9361c5842f8bdcc88c82b2e58a0",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571752919433216000/1.jpg?ex=6afbe079&is=6afa8ef9&hm=c121995f3d8c19674cca7b1be3a1db6f82835e3b94e83ddcbf39b31cfd3f6a85&"
+        },
+        {
+          "url": "/media/library/mygirlaiko/2.webp?v=238788985d652da1",
+          "alt": "aiko 作品照片 2",
+          "source": "https://minicourse.dev/media/library/mygirlaiko/2.webp?v=238788985d652da1",
+          "checkedAt": "2026-11-16",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-2336c928b0894d22b31c45e2c012a36a",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571752919865495573/2.jpg?ex=6afbe079&is=6afa8ef9&hm=b5429d179deee03edfc8cd270239ea3d6abbdf280ffd5ee8a0d09dd527704379&"
+        },
+        {
+          "url": "/media/library/mygirlaiko/3.webp?v=12d6285ae999860e",
+          "alt": "aiko 作品照片 3",
+          "source": "https://minicourse.dev/media/library/mygirlaiko/3.webp?v=12d6285ae999860e",
+          "checkedAt": "2026-11-16",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-d2554291cdb14804a6e9b55133b5cb5a",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571752920251109436/3.jpg?ex=6afbe079&is=6afa8ef9&hm=14274b5b8ec1f75c92d756e2507890f75f77dba25b333d1969bd7dd49a0bf7a3&"
+        },
+        {
+          "url": "/media/library/mygirlaiko/4.webp?v=1850c76642c4436d",
+          "alt": "aiko 作品照片 4",
+          "source": "https://minicourse.dev/media/library/mygirlaiko/4.webp?v=1850c76642c4436d",
+          "checkedAt": "2026-11-16",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-5929f4423c0e4aef90995c92cd7121d6",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571752920603566130/4.jpg?ex=6afbe07a&is=6afa8efa&hm=e975494bbd6e8612e7e7b83373fa9399e644fc64afd092cf979bcc923309a73b&"
+        },
+        {
+          "url": "/media/library/mygirlaiko/5.webp?v=017e48209915abdb",
+          "alt": "aiko 作品照片 5",
+          "source": "https://minicourse.dev/media/library/mygirlaiko/5.webp?v=017e48209915abdb",
+          "checkedAt": "2026-11-16",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-15f8c9a6b2a14fa2bc0bad8152252977",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571752921136238613/5.jpg?ex=6afbe07a&is=6afa8efa&hm=451c723e5902aa0c7db0a8158e9cc9183e3b47380fb4597c5e50c95e5b4b63da&"
+        },
+        {
+          "url": "/media/library/mygirlaiko/6.webp?v=36db948cbdd5826b",
+          "alt": "aiko 作品照片 6",
+          "source": "https://minicourse.dev/media/library/mygirlaiko/6.webp?v=36db948cbdd5826b",
+          "checkedAt": "2026-11-16",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-72c0b06be4654c199e4f7f58d59fc1f6",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571752921601679400/6.jpg?ex=6afbe07a&is=6afa8efa&hm=337f9358176efc4d511e124baf6f253ab48a808f0866825b15cc42c5379ac24d&"
+        },
+        {
+          "url": "/media/library/mygirlaiko/7.webp?v=0eee3560069df0d9",
+          "alt": "aiko 作品照片 7",
+          "source": "https://minicourse.dev/media/library/mygirlaiko/7.webp?v=0eee3560069df0d9",
+          "checkedAt": "2026-11-16",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-4d9b0d93293f40c79a49cca2740e8bfb",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571752922096603226/7.jpg?ex=6afbe07a&is=6afa8efa&hm=57271ac362b18ffb285ec9846635fb800f7d01fb67f993eab68c44845fb009ed&"
+        }
+      ]
+    },
+    {
+      "id": "chemaowei",
+      "name": "宜蘭扯貓尾港式餐廳",
+      "description": "位於宜蘭市的港式小餐廳，香港夫妻經營，適合四人以下的小聚會。\n招牌人氣品項有 #蘋果肉桂卷 #太妃肉桂卷 #港式曲奇蛋塔 ＃海南雞腿排定食 等\n歡迎預約，預約請一天前FB訊息我們。\n當天不接受預約，現場有位置就可以了。\n位置有限，五人或以上恕不接待唷。",
+      "category": "設計師",
+      "social": {
+        "fb": "https://www.facebook.com/chemaowei",
+        "threads": "https://www.threads.com/@chemaowei",
+        "ig": "",
+        "web": ""
+      },
+      "verification": true,
+      "disabled": false,
+      "logo": {
+        "url": "/media/library/chemaowei/logo.webp?v=16feb1019b3f1378",
+        "source": "https://www.threads.com/@chemaowei",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-16",
+        "note": "已核對官方 Threads 個人頁的顯示名稱、og:url 與 og:image 頭像，HTTPS 圖片可讀取",
+        "originalUrl": "https://scontent-tpe1-1.cdninstagram.com/v/t51.82787-19/515857438_18391146271185271_6383948564984206625_n.jpg?stp=dst-jpg_s640x640_tt6&_nc_cat=101&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=b3fa00&_nc_ohc=khj0RhJx3AEQ7kNvwE0K6ud&_nc_oc=AdpjOrn8YQsrRp0KQccNIR3cOjkjqkPlhyKzTwXkfKB7sfQR6WRNj340zJC-dQj69gc&_nc_zt=24&_nc_ht=scontent-tpe1-1.cdninstagram.com&_nc_gid=88TZv0GNGD2aINA3ALu0pw&_nc_ss=7920f&oh=00_AQTABoo6Iz8vftMzWgCuHl7E5qxaKuaN_P-6_vkx3uy0Mg&oe=6B00670B"
+      },
+      "productImages": [
+        {
+          "url": "/media/library/chemaowei/1.webp?v=7c4510f2481b079c",
+          "alt": "宜蘭扯貓尾港式餐廳作品照片 1",
+          "source": "https://minicourse.dev/media/library/chemaowei/1.webp?v=7c4510f2481b079c",
+          "checkedAt": "2026-11-16",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-5bd15ee2d0bb4b2b88dadc642ed45e23",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571758813009420349/899588211_17919883305531509_448560485226065360_n.png?ex=6afbe5f6&is=6afa9476&hm=98a501876e3dd018cf5e397d7baa4dbf7b1d8e4f9a2cfe2bb8551c48e86e72bc&"
+        },
+        {
+          "url": "/media/library/chemaowei/2.webp?v=7c47a79859dafbd6",
+          "alt": "宜蘭扯貓尾港式餐廳作品照片 2",
+          "source": "https://minicourse.dev/media/library/chemaowei/2.webp?v=7c47a79859dafbd6",
+          "checkedAt": "2026-11-16",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-5c263ce5223c41ff8d6ff513c13db623",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571758813428580493/900664761_17919882555531509_6146205921219144133_n.png?ex=6afbe5f6&is=6afa9476&hm=675c0276341e5b885228f917635c31d12d0f3a5ea775947360fa815d4891f07b&"
+        }
+      ]
+    },
+    {
+      "id": "jiho-studio",
+      "name": "jiho己合",
+      "description": "手作. 口金包/古著/配件\n海外可寄送",
+      "category": "設計師",
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@jiho_studio",
+        "ig": "https://www.instagram.com/jiho_studio/",
+        "web": ""
+      },
+      "verification": true,
+      "disabled": false,
+      "logo": {
+        "url": "/media/library/jiho-studio/logo.webp?v=7282ba304bc6a573",
+        "source": "https://www.threads.com/@jiho_studio",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-16",
+        "note": "已核對官方 Threads 個人頁的顯示名稱、og:url 與 og:image 頭像，HTTPS 圖片可讀取",
+        "originalUrl": "https://scontent-lax3-1.cdninstagram.com/v/t51.2885-19/358176561_1200088487335643_8085544030651425550_n.jpg?stp=dst-jpg_s640x640_tt6&_nc_cat=101&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=b3fa00&_nc_ohc=iKmTIfUBCocQ7kNvwG9Vnc1&_nc_oc=AdocpS-IroxmKSRJyGE0u-kt44Omjx70S7E3_ezNmXz0Q8lw_Bx9eGpw42cwz278QwA&_nc_zt=24&_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_ss=7920f&oh=00_AQS5TjMf3sRaRvkqkxnfQ0mOyMCLQ4cpAHtNRKnP_ul_vw&oe=6B00C821"
+      },
+      "productImages": [
+        {
+          "url": "/media/library/jiho-studio/1.webp?v=9536c89362e0cf3e",
+          "alt": "jiho己合作品照片 1",
+          "source": "https://minicourse.dev/media/library/jiho-studio/1.webp?v=9536c89362e0cf3e",
+          "checkedAt": "2026-11-16",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-080717b16dce4e748297b927b30e7ed0",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571870574144262245/883626789_17993365122108560_3763745873025040886_n.png?ex=6afc4e0c&is=6afafc8c&hm=b932abd7d800843112f698afd12c94bc95ce9f4b89a1a3c64291057e5968ef16&"
+        },
+        {
+          "url": "/media/library/jiho-studio/2.webp?v=572ab1ead65ddf26",
+          "alt": "jiho己合作品照片 2",
+          "source": "https://minicourse.dev/media/library/jiho-studio/2.webp?v=572ab1ead65ddf26",
+          "checkedAt": "2026-11-16",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-8e98bcfda552423d9402140893b4c4c7",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571870574802763886/883558433_17993365113108560_6335987596840467762_n.png?ex=6afc4e0c&is=6afafc8c&hm=c0ab65abc5bbd0ece5c0bb8758e5fb63d8bef8d20ce4f8deaaaca9bc6c60a8db&"
+        },
+        {
+          "url": "/media/library/jiho-studio/3.webp?v=cf348c7bc6562c6b",
+          "alt": "jiho己合作品照片 3",
+          "source": "https://minicourse.dev/media/library/jiho-studio/3.webp?v=cf348c7bc6562c6b",
+          "checkedAt": "2026-11-16",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-409fd369211e4ebca5290b8d303048a9",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571870575520129034/799440277_18627738016054042_3727243403029643329_n.png?ex=6afc4e0d&is=6afafc8d&hm=7a4e906e6d3045ca6c09a5449986b1dacef258f9d4a93c2b550bee3e9c516069&"
+        },
+        {
+          "url": "/media/library/jiho-studio/4.webp?v=d73bb554c3c67464",
+          "alt": "jiho己合作品照片 4",
+          "source": "https://minicourse.dev/media/library/jiho-studio/4.webp?v=d73bb554c3c67464",
+          "checkedAt": "2026-11-16",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-881e94222a7749168aa6fb7b1c384e73",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571870577185128608/907371282_18653248543054042_5601520989301613109_n.png?ex=6afc4e0d&is=6afafc8d&hm=57847f9630837bc81f1fe0b89523238f4c31ce85735282f685534a5c79e50d81&"
+        },
+        {
+          "url": "/media/library/jiho-studio/5.webp?v=4d2b7d588e2c5484",
+          "alt": "jiho己合作品照片 5",
+          "source": "https://minicourse.dev/media/library/jiho-studio/5.webp?v=4d2b7d588e2c5484",
+          "checkedAt": "2026-11-16",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-614f48c12eae4bfb8d1077a3f1e38676",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571870578703605801/907684017_18653248534054042_1951814598457368662_n.png?ex=6afc4e0d&is=6afafc8d&hm=7b307a69ef84c3fc0af41d23e46cd1d1db2da56be40f5f9a70cd32087011474a&"
+        },
+        {
+          "url": "/media/library/jiho-studio/6.webp?v=bf5950e90854d6c2",
+          "alt": "jiho己合作品照片 6",
+          "source": "https://minicourse.dev/media/library/jiho-studio/6.webp?v=bf5950e90854d6c2",
+          "checkedAt": "2026-11-16",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-9d362b2d92734bcf902371edbf25e532",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571870579638800454/899270266_18650757484054042_8913804704924476129_n.png?ex=6afc4e0e&is=6afafc8e&hm=60871c8a80f305bb1b9e2e6900acf5cf7f813dc2c085eb6966660bdedb0a5e53&"
+        }
+      ],
+      "links": [
+        {
+          "label": "EasyStore",
+          "url": "https://jihoybsd0811.easy.co/"
+        },
+        {
+          "label": "Instagram",
+          "url": "https://www.instagram.com/littleladygallery?igsh=MTQ1OGp1YXliNzFqbA%3D%3D&utm_source=qr"
+        },
+        {
+          "label": "Pinkoi",
+          "url": "https://www.pinkoi.com/store/arsonstudio"
+        }
+      ]
+    },
+    {
+      "id": "aduen",
+      "name": "aduen",
+      "description": "台派，畫一些彩色的貓",
+      "category": "設計師",
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@aduen",
+        "ig": "https://www.instagram.com/aduen/",
+        "web": "https://cara.app/aduen"
+      },
+      "verification": true,
+      "disabled": false,
+      "logo": {
+        "url": "/media/library/aduen/logo.webp?v=e495de678c50aaad",
+        "source": "https://drive.google.com/file/d/1a5c4WZyyEBcEg5CN7nx-PaUjHPPlyaHu/view",
+        "platform": "google-drive",
+        "status": "verified",
+        "checkedAt": "2026-11-16",
+        "note": "使用者指定為此設計師 Logo",
+        "originalUrl": "https://drive.usercontent.google.com/download?id=1a5c4WZyyEBcEg5CN7nx-PaUjHPPlyaHu&export=download"
+      },
+      "productImages": [
+        {
+          "url": "/media/library/aduen/1.webp?v=b387bdb84425c580",
+          "alt": "aduen yu 作品：橘白背景、藍色奔跑貓咪與回家投票標語的橫式海報",
+          "source": "https://www.threads.com/@aduen/post/DfmAs03GNew",
+          "checkedAt": "2026-11-16",
+          "note": "使用者提供，指定為此設計師作品照片\n作品對照連結：https://www.threads.com/@aduen/post/DfmAs03GNew",
+          "id": "work-ae3f209f71224968afd2a34405b66586",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571897414959370432/1.png?ex=6afc670c&is=6afb158c&hm=acdaeeeb0da0fe702285fbc9af98fe1a39da80b7c5d3fb5841d9da0e361355ca&"
+        },
+        {
+          "url": "/media/library/aduen/2.webp?v=0e6ddae41195c68b",
+          "alt": "aduen yu 作品：手繪字體、藍色奔跑貓咪與回家投票標語的橫式海報",
+          "source": "https://www.threads.com/@aduen/post/DftYFTjGJVx",
+          "checkedAt": "2026-11-16",
+          "note": "使用者提供，指定為此設計師作品照片\n作品對照連結：https://www.threads.com/@aduen/post/DftYFTjGJVx",
+          "id": "work-1699fc4b52c845ec9b5e5596dc66f63a",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571897415852630059/2.png?ex=6afc670c&is=6afb158c&hm=734219e42b96b26b28877d943235a46cd464c470609ff2a2f45ec9e75f5008d4&"
+        },
+        {
+          "url": "/media/library/aduen/3.webp?v=4d3baaa01a1c87f3",
+          "alt": "aduen yu 作品：藍色奔跑貓咪與回家投票標語的直式海報",
+          "source": "https://www.threads.com/@aduen/post/DfzT8bqmFe2",
+          "checkedAt": "2026-11-16",
+          "note": "使用者提供，指定為此設計師作品照片\n作品對照連結：https://www.threads.com/@aduen/post/DfzT8bqmFe2",
+          "id": "work-4126db4bd85e4805af770a570966c3b2",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571897416943403098/3.png?ex=6afc670c&is=6afb158c&hm=1ffec1603a78c58c055dbbeae2cd3bc082b777ef5118ee205c80711dd95b26e2&"
+        },
+        {
+          "url": "/media/library/aduen/4.webp?v=2df9445cfeebdcab",
+          "alt": "aduen yu 作品：多隻藍色奔跑貓咪與 Future Soon 字樣的直式海報",
+          "source": "https://www.threads.com/@aduen/post/DfzT8bqmFe2",
+          "checkedAt": "2026-11-16",
+          "note": "使用者提供，指定為此設計師作品照片\n作品對照連結：https://www.threads.com/@aduen/post/DfzT8bqmFe2",
+          "id": "work-16b026eab2bb4462851a2a96d9542539",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571897417761165342/4.png?ex=6afc670c&is=6afb158c&hm=0b38a6b384136ea5a9139598662894c7363a36176078bc8247593fc922355bdb&"
+        },
+        {
+          "url": "/media/library/aduen/5.webp?v=1c08be974ae9e1eb",
+          "alt": "aduen yu 作品照片：黑色畫框中的藍白色伸懶腰貓咪插畫",
+          "source": "https://www.threads.com/@aduen/post/DevwPDWG8B2",
+          "checkedAt": "2026-11-16",
+          "note": "使用者提供，指定為此設計師作品照片\n作品對照連結：https://www.threads.com/@aduen/post/DevwPDWG8B2",
+          "id": "work-b29f09b5fdfe4958990fdf3ed13141fb",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571897418738303036/5.png?ex=6afc670d&is=6afb158d&hm=30319425263e2330ac2bce7d35cfad2dadfbd5bc2bd07fe542960c733fd4b967&"
+        },
+        {
+          "url": "/media/library/aduen/6.webp?v=b7f7ddc5feebb7b6",
+          "alt": "aduen yu 作品照片：木色畫框中的棕色虎斑貓插畫",
+          "source": "https://www.threads.com/@aduen/post/DbkSq9sm6xd",
+          "checkedAt": "2026-11-16",
+          "note": "使用者提供，指定為此設計師作品照片\n作品對照連結：https://www.threads.com/@aduen/post/DbkSq9sm6xd",
+          "id": "work-f0b0b8dee9544e60ab46605a81c7bd04",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571897419262726236/6.png?ex=6afc670d&is=6afb158d&hm=9277e7a86757bbeae8730473dbd3b6d5f93c66608823acd6ca5414363d9d3e8b&"
+        },
+        {
+          "url": "/media/library/aduen/7.webp?v=fcef9baaac500147",
+          "alt": "aduen yu 作品照片：淺木色橫式畫框中的藍色貓咪插畫",
+          "source": "https://www.threads.com/@aduen/post/Db9tY3CG5-9",
+          "checkedAt": "2026-11-16",
+          "note": "使用者提供，指定為此設計師作品照片\n作品對照連結：https://www.threads.com/@aduen/post/Db9tY3CG5-9",
+          "id": "work-204a50a2ef974dd0b000e9fe1c45c5d6",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571897419874967622/7.png?ex=6afc670d&is=6afb158d&hm=451c21db275a8ee495195097116de4636de6bd1fb520ea0f45ff204868959f0f&"
+        },
+        {
+          "url": "/media/library/aduen/8.webp?v=a863d8567f55b4d8",
+          "alt": "aduen yu 作品照片：木色畫框中躺臥並舉起後腳的虎斑貓插畫",
+          "source": "https://www.threads.com/@aduen/post/DeYh0y4G3L6",
+          "checkedAt": "2026-11-16",
+          "note": "使用者提供，指定為此設計師作品照片\n作品對照連結：https://www.threads.com/@aduen/post/DeYh0y4G3L6",
+          "id": "work-aa6a88d36493489aa55c582584b9aaf4",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571897420332400680/8.png?ex=6afc670d&is=6afb158d&hm=26b6ef5760e1ccaf44ca6bbdd5075e1b7636f9470e1269744f8201d7c0710fb5&"
+        },
+        {
+          "url": "/media/library/aduen/9.webp?v=d000d2d14e3056d5",
+          "alt": "aduen yu 作品照片：淺色畫框中橘色背景、綠色條紋貓咪的插畫",
+          "source": "https://www.threads.com/@aduen/post/Dbh0BFom-yN",
+          "checkedAt": "2026-11-16",
+          "note": "使用者提供，指定為此設計師作品照片\n作品對照連結：https://www.threads.com/@aduen/post/Dbh0BFom-yN",
+          "id": "work-d6317d7ab1d34c5d9e8917559f9531f8",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571897421221466226/9.png?ex=6afc670d&is=6afb158d&hm=0e9ec644cb1d180bde23bb56c0195d6a7f6b5b87669ed5a615cc49bbe6eb5506&"
+        },
+        {
+          "url": "/media/library/aduen/10.webp?v=c6dc2920df19965c",
+          "alt": "aduen yu 作品照片：黑色畫框中仰躺伸展的紫色虎斑貓插畫",
+          "source": "https://www.threads.com/@aduen/post/DbfBTtVG-c4",
+          "checkedAt": "2026-11-16",
+          "note": "使用者提供，指定為此設計師作品照片\n作品對照連結：https://www.threads.com/@aduen/post/DbfBTtVG-c4",
+          "id": "work-00d287ae97ef44b2b38449ecfc0f119c",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571897422513184899/10.png?ex=6afc670d&is=6afb158d&hm=d72a6db21f184f19d1fbbef3d3fe6f8fabb4a8153f7c09bad030a5760b3bd6fd&"
+        }
+      ]
+    },
+    {
+      "id": "freedom-482",
+      "name": "Freedom_482",
+      "category": "設計師",
+      "description": "植物系 貓派  高敏 I 人  INFJ\n反共 愛國 是 人人必須的社會責任\n手中的權利 是守護國家的戰力 團結一致\n社群媒體管理策略整合工程師\n↓↓↓連結網址↓↓↓",
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@freedom_482",
+        "ig": "",
+        "web": ""
+      },
+      "verification": true,
+      "disabled": false,
+      "logo": {
+        "url": "/media/library/freedom-482/logo.webp?v=350b67d7d77b65e0",
+        "source": "https://www.threads.com/@freedom_482",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-16",
+        "note": "已核對官方 Threads 個人檔案頭像，HTTPS 圖片可讀取",
+        "originalUrl": "https://scontent-tpe5-1.cdninstagram.com/v/t51.82787-19/605469878_17861048397559527_7131580296627146946_n.jpg?stp=dst-jpg_s640x640_tt6&_nc_cat=104&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=b3fa00&_nc_ohc=UuSWUK22PjUQ7kNvwH7V-lr&_nc_oc=AdoICII0OaQoB6-B_AWBBygRuTyE669iylErSmWmwPHW6dHw2VIbZi8ujsaFLSEgVJU&_nc_zt=24&_nc_ht=scontent-tpe5-1.cdninstagram.com&_nc_gid=_AoirE4h4g2N6Phh67KmGA&_nc_ss=7920f&oh=00_AQRunp2YL2Kcv5hGn9ldF931GPmZMRawoJ2BqnT5FwsCbw&oe=6B00E8D4"
+      },
+      "productImages": [
+        {
+          "url": "/media/library/freedom-482/6.webp?v=6de174b11c2baa67",
+          "alt": "Freedom_482 作品照片：紫色臺灣字樣與工程車圖案圓形徽章",
+          "source": "https://minicourse.dev/media/library/freedom-482/6.webp?v=6de174b11c2baa67",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-99081bb5d47a4a19ae178883ba2bbc3e",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572213271040102471/902586135_17915513724559527_7968812524001585619_n.png?ex=6afd8d36&is=6afc3bb6&hm=6574940ed0019f4a8387e44a25101b00acd37175b0b762337cb7a28dcbaf8c3b&"
+        },
+        {
+          "url": "/media/library/freedom-482/1.webp?v=22419ae1ddbd11e9",
+          "alt": "Freedom_482 作品照片 1：手掌上的彩虹臺灣圓形徽章",
+          "source": "https://minicourse.dev/media/library/freedom-482/1.webp?v=22419ae1ddbd11e9",
+          "checkedAt": "2026-11-16",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-c1117c87963c4e63a88ecd34bd26a996",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571918759772430638/773918626_17899968963559527_6597838222151533266_n.png?ex=6afc7aed&is=6afb296d&hm=459dd8058db1fc7650ce25911ce2ee67c7ff81ad75cccf127e7bdbe82454f140&"
+        },
+        {
+          "url": "/media/library/freedom-482/2.webp?v=5acb3ba33ee90e3e",
+          "alt": "Freedom_482 作品照片 2：石虎、山椒魚與星空臺灣圖案徽章",
+          "source": "https://minicourse.dev/media/library/freedom-482/2.webp?v=5acb3ba33ee90e3e",
+          "checkedAt": "2026-11-16",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-ca55a998ca8d449eba4ef4efd9b07728",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571918760548503552/774863041_17899968897559527_8490154832471230893_n.png?ex=6afc7aed&is=6afb296d&hm=e840db0427faf60bc09203ad92974a0b6046a63b52d6ad650bb1d74f56183edc&"
+        },
+        {
+          "url": "/media/library/freedom-482/3.webp?v=ae0aa14b96b18ff6",
+          "alt": "Freedom_482 作品照片 3：書法文字與彩虹臺灣徽章展示",
+          "source": "https://minicourse.dev/media/library/freedom-482/3.webp?v=ae0aa14b96b18ff6",
+          "checkedAt": "2026-11-16",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-3cba32eb3ff049d185dff6d95bc571dc",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571918761051553912/774406025_17899968936559527_6208086612984793459_n.png?ex=6afc7aed&is=6afb296d&hm=af0ab3a9a4c24cefa872ad4d1f428eea496531fa7bbc80d051b365c82a2848d4&"
+        },
+        {
+          "url": "/media/library/freedom-482/4.webp?v=8e6a3c46ee32f2e0",
+          "alt": "Freedom_482 作品照片 4：紅底金字臺灣字樣與大小徽章",
+          "source": "https://minicourse.dev/media/library/freedom-482/4.webp?v=8e6a3c46ee32f2e0",
+          "checkedAt": "2026-11-16",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-ddd7334b1a7447cab70f142390e7453c",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571918761592750121/775775752_17899968954559527_6787696793347862324_n.png?ex=6afc7aed&is=6afb296d&hm=544160eb70b8caaaae0a1554b7de3b274b9adb45a06e6ebb6ffd0da3ffe7feef&"
+        },
+        {
+          "url": "/media/library/freedom-482/5.webp?v=8e0e51623cf48be4",
+          "alt": "Freedom_482 作品照片 5：好生活投好票文字徽章",
+          "source": "https://minicourse.dev/media/library/freedom-482/5.webp?v=8e0e51623cf48be4",
+          "checkedAt": "2026-11-16",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-3311452b42ad4e52998d925af8369730",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571918762242736268/902586108_17915504178559527_1957714115851855313_n.png?ex=6afc7aed&is=6afb296d&hm=b2be82421d8cbb5fa1843831a15dd54a0406add447adce375a005527713cd0cc&"
+        }
+      ],
+      "hall": "S",
+      "additionalHalls": [
+        "O"
+      ]
+    },
+    {
+      "id": "rabby-wang",
+      "name": "rabby wang",
+      "category": "設計師",
+      "description": "TAIWAN 台灣人\n/35年經驗隨便亂畫家\n/15年經驗工業設計師\n/2年經驗產品經理\n*嚴重中二病，總是想著可以改變世界\n*孩子是國家的未來\nDAYU SPORTS天母代表\n#artist\n#industrialdesigner\n#productmanager",
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@rabby_wang",
+        "ig": "",
+        "web": ""
+      },
+      "verification": true,
+      "disabled": false,
+      "logo": {
+        "url": "/media/library/rabby-wang/logo.webp?v=d56d1478da06daf0",
+        "source": "https://www.threads.com/@rabby_wang",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-17",
+        "note": "已核對官方 Threads 個人檔案頭像，HTTPS 圖片可讀取",
+        "originalUrl": "https://scontent.cdninstagram.com/v/t51.82787-19/809201834_17967374937173275_2156654970289936221_n.jpg?stp=dst-jpg_s640x640_tt6&_nc_cat=102&ccb=7-5&_nc_sid=b3fa00&_nc_ohc=RXylTYCbTJUQ7kNvwHZjsq9&_nc_oc=AdrDBrLkGgDltkVFN-8hRHJNbrjatxpaorGZ54-waQ-1Nt9kks9_9caigWj1YtF3bJE&_nc_zt=24&_nc_ht=scontent.cdninstagram.com&_nc_gid=ua7Q9jgDCLf4zQwf24ZH5w&_nc_ss=7920f&oh=00_AQQfAcMTnsRXsTPn7HeIF2TP53MaIbJTHlppCTJkZLOJ0w&oe=6B01AA8A"
+      },
+      "productImages": [
+        {
+          "url": "/media/library/rabby-wang/1.webp?v=552f72c3760dbfa4",
+          "alt": "rabby wang 作品照片 1：洋流圖騰字體與橘色紋樣設計",
+          "source": "https://minicourse.dev/media/library/rabby-wang/1.webp?v=552f72c3760dbfa4",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-6e339df030b949aeb2d212f9c46be2bc",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572105008021774366/911496486_1645006930416746_3641607495528367953_n.png?ex=6afd2862&is=6afbd6e2&hm=dbdb88b47c2e6f9df8e6008bbd160f6cc857b5ddc89f96bd2bf9609e181866a3&"
+        },
+        {
+          "url": "/media/library/rabby-wang/2.webp?v=fda33732fb7d9149",
+          "alt": "rabby wang 作品照片 2：圖騰字體配色與長條連續圖樣",
+          "source": "https://minicourse.dev/media/library/rabby-wang/2.webp?v=fda33732fb7d9149",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-cb8958901ca24034a6ba7dc3d57d0b95",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572105008571220100/912160518_2312542956190105_2456376836372195263_n.png?ex=6afd2862&is=6afbd6e2&hm=3e89f27091155e0e7f01378483292546f231a1da1322ee0a1dab32b7f4cc3972&"
+        },
+        {
+          "url": "/media/library/rabby-wang/3.webp?v=8e5d30a95a715e90",
+          "alt": "rabby wang 作品照片 3：橘白波紋背景中的人物插畫",
+          "source": "https://minicourse.dev/media/library/rabby-wang/3.webp?v=8e5d30a95a715e90",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-5efeecdc606c481a975c4c4c37d27706",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572105009082929152/910879299_2022721882487850_603446506937441404_n.png?ex=6afd2862&is=6afbd6e2&hm=b2873944c26b4ea0c0ca0944598f32a7105b91634d9ee9a62a66e97f0d1a2502&"
+        },
+        {
+          "url": "/media/library/rabby-wang/4.webp?v=6cf03627b5d50820",
+          "alt": "rabby wang 作品照片 4：橘色捲髮角色海報",
+          "source": "https://minicourse.dev/media/library/rabby-wang/4.webp?v=6cf03627b5d50820",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-8a5332c5fc0949ccbf88c4de31ada609",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572105015806656583/912147333_29676903081913770_6169088751552500003_n.png?ex=6afd2864&is=6afbd6e4&hm=c8309c04b263423e92dd11a9acb7a015ed70aa5d1375f026d6bc99672731c479&"
+        },
+        {
+          "url": "/media/library/rabby-wang/5.webp?v=b80c2cb9131e48a2",
+          "alt": "rabby wang 作品照片 5：粉紅水獺角色海報",
+          "source": "https://minicourse.dev/media/library/rabby-wang/5.webp?v=b80c2cb9131e48a2",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-02b4a679c58042ec8cc02f164bbd3ff1",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572105016351920259/912538034_3147485562309503_5505429435920126388_n.png?ex=6afd2864&is=6afbd6e4&hm=137320bf6e65828c3d844bb4045c0738f0cb97efd1ed6488072005592409f352&"
+        },
+        {
+          "url": "/media/library/rabby-wang/6.webp?v=87ac92be41b688d3",
+          "alt": "rabby wang 作品照片 6：戴帽眼鏡男子人物插畫",
+          "source": "https://minicourse.dev/media/library/rabby-wang/6.webp?v=87ac92be41b688d3",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-3a4c64c199724e2eae9a22f93bbaa268",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572105016683008050/910302592_3735433199965994_2938958157767077146_n.png?ex=6afd2864&is=6afbd6e4&hm=fb8ec9da09b1dd6f8c7d5346e4d6ff22765fb032c1645d1b22ca1e2298b13ae0&"
+        },
+        {
+          "url": "/media/library/rabby-wang/7.webp?v=c6b674bad913bc30",
+          "alt": "rabby wang 作品照片 7：藍色雲朵中的兔子插畫",
+          "source": "https://minicourse.dev/media/library/rabby-wang/7.webp?v=c6b674bad913bc30",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-7fdd6e7b664f4997b0c7292d9a590ab9",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572105017039659089/906678514_1898551111576949_7710121969073618815_n.png?ex=6afd2864&is=6afbd6e4&hm=880ed91b62c7ce3013c5d5c20e390c7930d0cddebff1d6c45d35bf8bceea6ec1&"
+        },
+        {
+          "url": "/media/library/rabby-wang/8.webp?v=3693ac58a4a130ac",
+          "alt": "rabby wang 作品照片 8：籃球人物與紅色塗鴉文字插畫",
+          "source": "https://minicourse.dev/media/library/rabby-wang/8.webp?v=3693ac58a4a130ac",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-8cbcfd103dd146d78c66baddeba01d7e",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572105017303769160/907577767_1151991990626222_8617764318673759424_n.png?ex=6afd2864&is=6afbd6e4&hm=e60a29cea85861905706a8fef743d5f34f3a2d7e74f5752c83d71e7058e92e8a&"
+        },
+        {
+          "url": "/media/library/rabby-wang/9.webp?v=af2fb5e716c7a5f3",
+          "alt": "rabby wang 作品照片 9：機器人角色與紅色帽衫造型",
+          "source": "https://minicourse.dev/media/library/rabby-wang/9.webp?v=af2fb5e716c7a5f3",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-5503da6b4c984f8fa8fbfc1baece7e10",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572105017639436368/907273342_2190725224848558_7243742219905978228_n.png?ex=6afd2864&is=6afbd6e4&hm=869c8e5da0e4801547269ed890cc04ced84a12c3c04d3c871b69a52feb58b7eb&"
+        },
+        {
+          "url": "/media/library/rabby-wang/10.webp?v=0ecb1f22dd71dd67",
+          "alt": "rabby wang 作品照片 10：黑白兩款桌上型麥克風產品設計",
+          "source": "https://minicourse.dev/media/library/rabby-wang/10.webp?v=0ecb1f22dd71dd67",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-1a1cabf997544c1ca0f245607cc2c5f4",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572105018109337631/913792817_984547880934120_6339756046492242889_n.png?ex=6afd2864&is=6afbd6e4&hm=2215c522fdc399eb91a0c88d0dae014978a5cc326eeddf080e1fec41e35ec8de&"
+        },
+        {
+          "url": "/media/library/rabby-wang/11.webp?v=7f9a3331d3beb777",
+          "alt": "rabby wang 作品照片 11：機器人角色設計草圖",
+          "source": "https://minicourse.dev/media/library/rabby-wang/11.webp?v=7f9a3331d3beb777",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-117df274b3604b69b4300851b198a193",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572105356916555876/906838410_2224144564857427_3867880290718884437_n.png?ex=6afd28b5&is=6afbd735&hm=73eef1ed5d75c4c646632768f8e07dab2fc92b7809c6ea39ceb5d9cfa1130533&"
+        },
+        {
+          "url": "/media/library/rabby-wang/12.webp?v=c4b6b2df7111be34",
+          "alt": "rabby wang 作品照片 12：建築空間三維模型",
+          "source": "https://minicourse.dev/media/library/rabby-wang/12.webp?v=c4b6b2df7111be34",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-cddbfeddd51e470fbbf879929318f9c2",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572105357470466148/910903958_3628303034017397_424988126066820126_n.png?ex=6afd28b5&is=6afbd735&hm=de2654fb12cfda9b4a41aedfcaad7310239117dc9e073a78e8d2dbf171ce6a61&"
+        },
+        {
+          "url": "/media/library/rabby-wang/13.webp?v=0d6bfe0b96fde0e6",
+          "alt": "rabby wang 作品照片 13：骷髏圖案滑板設計",
+          "source": "https://minicourse.dev/media/library/rabby-wang/13.webp?v=0d6bfe0b96fde0e6",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-b1e189bc21e04e06a65a2fe614f5d8c7",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572105358040760331/907538150_1655080916108912_5725773553337322798_n.png?ex=6afd28b5&is=6afbd735&hm=f4f19d552bed5a726547a6ec91519a6ddac48dc664ca5a304b6b765cc8e6e266&"
+        },
+        {
+          "url": "/media/library/rabby-wang/14.webp?v=d7cdd356f3b11bcf",
+          "alt": "rabby wang 作品照片 14：藍黑配色兔子角色手繪",
+          "source": "https://minicourse.dev/media/library/rabby-wang/14.webp?v=d7cdd356f3b11bcf",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-f611a19c71564864a25fbb6dc87a76d6",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572105358829293589/907538150_1698772748331060_5630376263731834283_n.png?ex=6afd28b5&is=6afbd735&hm=97eab528d56729050c5bb2e66252ac5af1be38a7aadd461187a0a69a36152df9&"
+        },
+        {
+          "url": "/media/library/rabby-wang/15.webp?v=c750283456aeb8c0",
+          "alt": "rabby wang 作品照片 15：霓虹場景中的電腦機殼",
+          "source": "https://minicourse.dev/media/library/rabby-wang/15.webp?v=c750283456aeb8c0",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-b3b136db8e6b48019b9695a81407719e",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572105359416500244/907054014_1135644808958813_6347481655839160847_n.png?ex=6afd28b5&is=6afbd735&hm=928df85a96ac5692c4fd3767c61fc035078a7f4132117879430bef69bb586497&"
+        },
+        {
+          "url": "/media/library/rabby-wang/16.webp?v=2e7382660add4220",
+          "alt": "rabby wang 作品照片 16：RGB 背光鍵盤產品圖",
+          "source": "https://minicourse.dev/media/library/rabby-wang/16.webp?v=2e7382660add4220",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-772878b6aef94492b0ed49ff29b405f7",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572105359680602173/912467997_2021025148809037_7461098360575804750_n.png?ex=6afd28b6&is=6afbd736&hm=32e644cdffb0803a6273f23da21b4a424aa919da515841f6fc0efa97a862f529&"
+        },
+        {
+          "url": "/media/library/rabby-wang/17.webp?v=5bd5d06722ef98ae",
+          "alt": "rabby wang 作品照片 17：RGB 燈效滑鼠產品圖",
+          "source": "https://minicourse.dev/media/library/rabby-wang/17.webp?v=5bd5d06722ef98ae",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-bd1d8fde8af4424085b69a530198fbdb",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572105359999373412/906894227_1907666053539700_3832654904620782438_n.png?ex=6afd28b6&is=6afbd736&hm=d5f63097c29d13c2b115ac734868771fbe4dc686d4ddf695b956a5a898a9ab81&"
+        },
+        {
+          "url": "/media/library/rabby-wang/18.webp?v=2a301ed440fb7c2d",
+          "alt": "rabby wang 作品照片 18：ASUS TUF GAMING T500 電腦機殼",
+          "source": "https://minicourse.dev/media/library/rabby-wang/18.webp?v=2a301ed440fb7c2d",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-024967acfed14d7a8981f37900f87c0a",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572105360402288730/913083840_1673181220843375_6443738031206108487_n.png?ex=6afd28b6&is=6afbd736&hm=8372e800fe437fce24283fd19cd4cf9e1b235d7b0c805ff4dcbbeef3061c5271&"
+        },
+        {
+          "url": "/media/library/rabby-wang/19.webp?v=0ac0907349485708",
+          "alt": "rabby wang 作品照片 19：ROG STRIX 電腦機殼",
+          "source": "https://minicourse.dev/media/library/rabby-wang/19.webp?v=0ac0907349485708",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-bb7223ddc9da4ca381248d5ebc1f9322",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572105360783712419/913149961_981290287937599_2193777068634506036_n.png?ex=6afd28b6&is=6afbd736&hm=73233e2b3307d5ece11bf934c97ce8cce37d77ec7ca3a90b0e6be15469659056&"
+        }
+      ]
+    },
+    {
+      "id": "agi-huang",
+      "name": "A-gi Huang",
+      "description": "遊戲界走跳20年的美術原畫創作者\n老UC迷、星戰老粉、頑固台獨份子\nTeam Taiwan 、資深爪迷、台派",
+      "category": "設計師",
+      "social": {
+        "fb": "https://www.facebook.com/share/1d5vVaNABN/?mibextid=wwXIfr",
+        "threads": "https://www.threads.com/@agi_huang",
+        "ig": "https://www.instagram.com/agi_huang/",
+        "web": ""
+      },
+      "verification": true,
+      "disabled": false,
+      "logo": {
+        "url": "/media/library/agi-huang/logo.webp?v=fce164db18b42788",
+        "source": "https://www.threads.com/@agi_huang",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-17",
+        "note": "已核對 Threads 官方個人頁頭像，HTTPS 圖片可讀取",
+        "originalUrl": "https://scontent-tpe1-1.cdninstagram.com/v/t51.82787-19/832588684_17950400742296184_5081263329624887764_n.jpg?stp=dst-jpg_s640x640_tt6&_nc_cat=101&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=b3fa00&_nc_ohc=M_0M3i14urYQ7kNvwHGMv0_&_nc_oc=Adq0vTsd0Qo8Rul1zJDLhdsOWPkMoqoML9o5tR4XaMlsFlAAK1FryoXyGKVgi8BP9hA&_nc_zt=24&_nc_ht=scontent-tpe1-1.cdninstagram.com&_nc_gid=Irae70W8Oe5DJFXP9QWbZg&_nc_ss=7b20f&oh=00_AQSBJmMBJbiZbbSV7yS5OBm9R_oo5EB7YXPquYvQp76FNQ&oe=6B019286"
+      },
+      "productImages": [
+        {
+          "url": "/media/library/agi-huang/11.webp?v=1da920fa72b00e24",
+          "alt": "A-gi Huang 作品：洋流襲來船長角色橘色橫式海報",
+          "source": "https://minicourse.dev/media/library/agi-huang/11.webp?v=1da920fa72b00e24",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-7545009f82d246afa9b8c9320a3779a1",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572130653527347221/913588033_4624114114490098_6432990830201140970_n.png?ex=6afd4044&is=6afbeec4&hm=6e256356366ac4a449f6d91dd6a521547b2d4cd1f217326949d07eb02f3ee9f6&"
+        },
+        {
+          "url": "/media/library/agi-huang/12.webp?v=4b94afe959baf34a",
+          "alt": "A-gi Huang 作品：洋流 SOON 汽車與披風角色直式海報",
+          "source": "https://minicourse.dev/media/library/agi-huang/12.webp?v=4b94afe959baf34a",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-fb2f7ec793c841fd987420ed210f5b26",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572130653959356516/909929197_2400395544106276_6863652061432446608_n.png?ex=6afd4044&is=6afbeec4&hm=0c163ec8e004a47e49be021afb12296211bd53d4ced3b5ea179c151990c01e58&"
+        },
+        {
+          "url": "/media/library/agi-huang/13.webp?v=ad9e79581b06b755",
+          "alt": "A-gi Huang 作品：出來投票船長角色橘白橫式海報",
+          "source": "https://minicourse.dev/media/library/agi-huang/13.webp?v=ad9e79581b06b755",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-822be693322e42e1b3a992e14d9ee0cd",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572130654378795050/912264978_1452082510423875_4388122353169390845_n.png?ex=6afd4044&is=6afbeec4&hm=f6b156142e3a6dad636c9deab2c8c7163d8c3d2b06bbbb705f7b850e911c123d&"
+        },
+        {
+          "url": "/media/library/agi-huang/10.webp?v=0906e55eb0dd5e79",
+          "alt": "A-gi Huang 作品：洋流襲來船長角色直式海報",
+          "source": "https://minicourse.dev/media/library/agi-huang/10.webp?v=0906e55eb0dd5e79",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-947bd81b99c64616918327285d3e7b53",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572107047162613760/869628222_17954836107296184_688332363054381684_n.png?ex=6afd2a48&is=6afbd8c8&hm=4296d87ab6997b9352d51dc2dc1ba0cceda4066a7dba8d6abb9f7ef64af8115e&"
+        },
+        {
+          "url": "/media/library/agi-huang/1.webp?v=e3b902c4b692ac36",
+          "alt": "A-gi Huang 作品：台北大洋流船長角色橫式海報",
+          "source": "https://minicourse.dev/media/library/agi-huang/1.webp?v=e3b902c4b692ac36",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-0f655592e27c4a5cac8c35148d7cf7e9",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572106773072969788/831354407_17950452285296184_401974454426682995_n.png?ex=6afd2a07&is=6afbd887&hm=48a8989ea49f9737ebde75689425daff97327cf1cc6f8cb684479ba56003edd0&"
+        },
+        {
+          "url": "/media/library/agi-huang/2.webp?v=6d804855283b5c87",
+          "alt": "A-gi Huang 作品：台北大洋流汽車角色橫式海報",
+          "source": "https://minicourse.dev/media/library/agi-huang/2.webp?v=6d804855283b5c87",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-8dfcf040d78c47f1868e6472a30418cc",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572106773651922954/830116183_17950783896296184_2588092217986851061_n.png?ex=6afd2a07&is=6afbd887&hm=36565c52a0eb92528a480d4015983c3f0a3d7552da2b53ebfccb0b9badad6e85&"
+        },
+        {
+          "url": "/media/library/agi-huang/3.webp?v=5ebdaf95b6e90a93",
+          "alt": "A-gi Huang 作品：台北大洋流橘色直式海報",
+          "source": "https://minicourse.dev/media/library/agi-huang/3.webp?v=5ebdaf95b6e90a93",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-e833dac2b26842baaffd41abed0dc6e5",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572106774213951560/833374985_17950786911296184_5573646853909290599_n.png?ex=6afd2a07&is=6afbd887&hm=e724cb6d783592e4f28ba8bec71d0faa85652adac4aac617dc70aaaf2afdfa30&"
+        },
+        {
+          "url": "/media/library/agi-huang/4.webp?v=be4bb6a01fde7f84",
+          "alt": "A-gi Huang 作品：洋流 SOON 藍色直式海報",
+          "source": "https://minicourse.dev/media/library/agi-huang/4.webp?v=be4bb6a01fde7f84",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-030affdf4046471abb6b16e0a44b7f4f",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572106775459659898/835721679_17951367309296184_2640499717945855422_n.png?ex=6afd2a07&is=6afbd887&hm=8243597edabee8cc63e906ec1dea0e4f80a56134fadedc74a0aa28ebf2ad8bed&"
+        },
+        {
+          "url": "/media/library/agi-huang/5.webp?v=5981f225aec2c7ba",
+          "alt": "A-gi Huang 作品：台北大洋流海報印刷實品",
+          "source": "https://minicourse.dev/media/library/agi-huang/5.webp?v=5981f225aec2c7ba",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-28a3ec64e5214f5297c8a67d66d4047f",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572106775883161741/845977214_17952197448296184_4192336675486405917_n.png?ex=6afd2a07&is=6afbd887&hm=03a9c7e0a1fdc7a1b8a52c8a05affbefa476325a573851f09dd2edb92295beeb&"
+        },
+        {
+          "url": "/media/library/agi-huang/6.webp?v=419af2623d028d00",
+          "alt": "A-gi Huang 作品：內湖南港艦隊船長與臺灣藍鵲圓形圖案",
+          "source": "https://minicourse.dev/media/library/agi-huang/6.webp?v=419af2623d028d00",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-d31b80e2784c4397b08fa1048374778b",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572106776189603950/852558657_17952804822296184_7300054943218952122_n.png?ex=6afd2a07&is=6afbd887&hm=8d565ec91800f8dc3b2d59f7deb66b2d0380027f45ba45ef8347a73636a39c0a&"
+        },
+        {
+          "url": "/media/library/agi-huang/7.webp?v=2efe6a91e69d1e15",
+          "alt": "A-gi Huang 作品：內湖南港艦隊汽車角色圓形圖案",
+          "source": "https://minicourse.dev/media/library/agi-huang/7.webp?v=2efe6a91e69d1e15",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-a47de7e17d0e4c4db3446184b4360dad",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572106776508240052/849771954_17952804846296184_41450134910797372_n.png?ex=6afd2a07&is=6afbd887&hm=0aeb347674e9028176e792d5771ce427ecd9d8513d80d3249181beb88a72a518&"
+        },
+        {
+          "url": "/media/library/agi-huang/8.webp?v=8512b63511ef7e22",
+          "alt": "A-gi Huang 作品：洋流童在雙人角色直式插畫",
+          "source": "https://minicourse.dev/media/library/agi-huang/8.webp?v=8512b63511ef7e22",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-2e931cad7f7643dc9e7cfbb1cbb2adfa",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572106783261065286/864960612_17953833327296184_3108073588757265865_n.png?ex=6afd2a09&is=6afbd889&hm=e249d8894f214c8262caecb239394a96f61f03ddf92f00e319a8d04eac83530b&"
+        },
+        {
+          "url": "/media/library/agi-huang/9.webp?v=da6ef4a98f207e50",
+          "alt": "A-gi Huang 作品：士林北投艦隊人物與鳥圓形圖案",
+          "source": "https://minicourse.dev/media/library/agi-huang/9.webp?v=da6ef4a98f207e50",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-5f4a425394a04d69a3eaeb84bdf3594c",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572106783881957446/867837553_17954445285296184_7165112224515815758_n.png?ex=6afd2a09&is=6afbd889&hm=6ab069ab1ec3ade20ccd67aa060c8778d6407a6b027317bff06dda0047f516b5&"
+        }
+      ]
+    },
+    {
+      "id": "alulu1223",
+      "name": "嚕比(Luby) _神明攤",
+      "description": "🇹🇼TW🇹🇼\n🔥盜圖侵權訴諸法律\n❌ DON’T DOWNLOAD OR REPOST\n平日上班，空檔創作",
+      "category": "設計師",
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@alulu1223",
+        "ig": "https://www.instagram.com/alulu1223/",
+        "web": ""
+      },
+      "verification": true,
+      "disabled": false,
+      "logo": {
+        "url": "/media/library/alulu1223/logo.webp?v=bdeebc334cf6d5ad",
+        "source": "https://www.threads.com/@alulu1223",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-17",
+        "note": "已核對官方 Threads 個人檔案頭像，HTTPS 圖片可讀取",
+        "originalUrl": "https://scontent-tpe1-1.cdninstagram.com/v/t51.2885-19/358162505_1482430125627383_6081765123463224098_n.jpg?stp=dst-jpg_s640x640_tt6&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=b3fa00&_nc_ohc=ILvqZyyteBMQ7kNvwHUbuLz&_nc_oc=AdqGGf_GyLrtVqx6t2f1MIW5qEWe09Hoo0E9UPrmJvU9xxwMShvPHXIypGdXBgkU7bM&_nc_zt=24&_nc_ht=scontent-tpe1-1.cdninstagram.com&_nc_ss=7920f&oh=00_AQSTqGF5kv2BMlaM1D1b90-b3nyAHLhLoSee_SVTV_vLiA&oe=6B01AD72"
+      },
+      "productImages": [
+        {
+          "url": "/media/library/alulu1223/1.webp?v=5cbc699f6252f7de",
+          "alt": "嚕比(Luby) _神明攤作品照片 1：黑白虎爺插畫",
+          "source": "https://minicourse.dev/media/library/alulu1223/1.webp?v=5cbc699f6252f7de",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-880fa8e12cfb43d89020df9c520fd3a0",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572134241578254446/902591853_17993444718116777_6503031064327399288_n.png?ex=6afd439c&is=6afbf21c&hm=0e864f133737a04d9e0e3c2de4b3851d22242067f0b3b717fe1398364e12ae9d&"
+        },
+        {
+          "url": "/media/library/alulu1223/2.webp?v=dcf62e08bfb80f7d",
+          "alt": "嚕比(Luby) _神明攤作品照片 2：手持閃光虎爺造型貼紙",
+          "source": "https://minicourse.dev/media/library/alulu1223/2.webp?v=dcf62e08bfb80f7d",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-28904fcecbaa48ff801bc0cdfc731cd7",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572134242555531406/902591992_17993444667116777_6912044117923391086_n.png?ex=6afd439c&is=6afbf21c&hm=88c47ffe366a3dc560cabd0ebf06b57e597feaf94d140a1d4f6a4ec277191c6e&"
+        },
+        {
+          "url": "/media/library/alulu1223/3.webp?v=27ef315d01f56dae",
+          "alt": "嚕比(Luby) _神明攤作品照片 3：虎爺刺繡香火袋正面",
+          "source": "https://minicourse.dev/media/library/alulu1223/3.webp?v=27ef315d01f56dae",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-3d9c46c4778b48b9858dcf75d19a3984",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572134243289661460/778340511_17980424142116777_1391180231959829783_n.png?ex=6afd439c&is=6afbf21c&hm=da5f6bc849345c913545760ebf8b12dc072d424dc82b2372dd32ae3eb1bdbac5&"
+        },
+        {
+          "url": "/media/library/alulu1223/4.webp?v=54bd78c63ddbd23b",
+          "alt": "嚕比(Luby) _神明攤作品照片 4：虎爺刺繡香火袋背面",
+          "source": "https://minicourse.dev/media/library/alulu1223/4.webp?v=54bd78c63ddbd23b",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-6f6176fe594e43be94302de9c1b70535",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572134243860090952/780074704_17980424151116777_8184531126855775420_n.png?ex=6afd439c&is=6afbf21c&hm=30c7884f10aa8bb9b95a4638b7ff3026371db5ffacd16c8a6ebb9aeaa7d7abd4&"
+        },
+        {
+          "url": "/media/library/alulu1223/5.webp?v=2b5bdc6f0251751d",
+          "alt": "虎爺香火袋",
+          "caption": "虎爺香火袋",
+          "source": "https://www.threads.com/@alulu1223/post/DcOg-nRj-BT",
+          "checkedAt": "2026-11-17",
+          "note": "使用者指定 Threads 作品貼文",
+          "id": "work-9795dcc672624c8bb143899245d268f7",
+          "originalUrl": "https://scontent-tpe1-1.cdninstagram.com/v/t51.82787-15/778061022_17980421202116777_4972956566728266062_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=108&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=K9CggqUNYFYQ7kNvwFTleBf&_nc_oc=AdryInICJNGJw6OoQzsqrQvHoR0rTp8thBt_aa7uQ5yth8GtGXVxVt0NBJtXx_CuLN4&_nc_zt=23&_nc_ht=scontent-tpe1-1.cdninstagram.com&_nc_gid=R_4OP0F0YLyLEYGwKM4Fnw&_nc_ss=7020f&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQTH1NxD8lL_C6yKSGqTfnz-bqKBZD1g9zyn8IopxVOw_A&oe=6B01D86A"
+        },
+        {
+          "url": "/media/library/alulu1223/6.webp?v=d2c70f42558182a0",
+          "alt": "下壇虎 小畫",
+          "caption": "下壇虎 小畫",
+          "source": "https://www.threads.com/@alulu1223/post/Db7VwZgj4TQ",
+          "checkedAt": "2026-11-17",
+          "note": "使用者指定 Threads 作品貼文",
+          "id": "work-5915dd050db8478a9322c5b89c8cdada",
+          "originalUrl": "https://scontent-tpe1-1.cdninstagram.com/v/t51.82787-15/771573490_17979077496116777_3156961242792588898_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=104&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=0lYXeXQuHrwQ7kNvwH2kPlE&_nc_oc=AdrcDnFEQ9UHj8qeoGFvEueaYWtIxg39f14y4Rn-wmM1T_AnDf9Z_BWNbi23LMHtyXg&_nc_zt=23&_nc_ht=scontent-tpe1-1.cdninstagram.com&_nc_gid=raU_6pZ3DZfvZT4hpXWDyQ&_nc_ss=7020f&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQQ1Z_1J_FgKPhEHvRBqSIJNwBYi7JgJEMtzqvy2_xZ4kQ&oe=6B01DB2E"
+        },
+        {
+          "url": "/media/library/alulu1223/7.webp?v=72fe0a3c4d01ac73",
+          "alt": "青山王暗訪",
+          "caption": "青山王暗訪",
+          "source": "https://www.threads.com/@alulu1223/post/Dfq4TqvD_vt",
+          "checkedAt": "2026-11-17",
+          "note": "使用者指定 Threads 作品貼文",
+          "id": "work-614e321753a44cf68545d77abfd3425b",
+          "originalUrl": "https://scontent-tpe1-1.cdninstagram.com/v/t51.82787-15/901114536_18289029310290575_1840320891616727412_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=104&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=UPg35sBO7KUQ7kNvwFK4vS-&_nc_oc=Adq7XrZC2EiDLBldUnX_i3FSr7TWaOQdi-hFJqIjcQZqCkzC5sEhGSJIUlMoBNxxo94&_nc_zt=23&_nc_ht=scontent-tpe1-1.cdninstagram.com&_nc_gid=cwOQs5IRr7D2AhxCvxt6tg&_nc_ss=7020f&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQTG0vU5Jd6SdChz7lxN0ImgayovswpXskkyCeJwkswiSw&oe=6B01DE69&dl=1"
+        }
+      ],
+      "links": [
+        {
+          "label": "賣貨便",
+          "url": "https://myship.7-11.com.tw/general/detail/GM2112281462487"
+        },
+        {
+          "label": "Pinkoi",
+          "url": "https://www.pinkoi.com/store/godsvendor"
+        },
+        {
+          "label": "壽桃仙人 Instagram",
+          "url": "https://www.instagram.com/shoutao_longevitypeach/",
+          "platform": "ig"
+        }
+      ]
+    },
+    {
+      "id": "pon-pon-bao",
+      "name": "香菜包",
+      "description": "我是你，你是我\n世界上的人這麼多，總會有一個和你一樣的人",
+      "category": "設計師",
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@pon_pon_bao",
+        "ig": "https://www.instagram.com/pon_pon_bao/",
+        "web": "https://linktr.ee/ponponbao"
+      },
+      "verification": true,
+      "disabled": false,
+      "logo": {
+        "url": "/media/library/pon-pon-bao/logo.webp?v=0ceafd7816f2d542",
+        "source": "https://www.threads.com/@pon_pon_bao",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-17",
+        "note": "已核對官方 Threads 個人檔案頭像，HTTPS 圖片可讀取",
+        "originalUrl": "https://scontent-itm1-1.cdninstagram.com/v/t51.2885-19/431029519_746814410853231_2615432925092206790_n.jpg?stp=dst-jpg_s640x640_tt6&_nc_cat=101&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=b3fa00&_nc_ohc=6MY065O-EpEQ7kNvwHaudA3&_nc_oc=AdrfkkfSEMXoNZN9g2mCw4Oi95Iuep8SiS4Vbmk7gHlu9GpwssW8pHcxMzCQCcYdYi4&_nc_zt=24&_nc_ht=scontent-itm1-1.cdninstagram.com&_nc_ss=7920f&oh=00_AQQoqN_bdSDn4wbfIsomYWjVCzToX9hRHVY8QF-f0SEI1Q&oe=6B023633"
+      },
+      "productImages": [
+        {
+          "url": "/media/library/pon-pon-bao/5.webp?v=2ae37eb22e7d8d80",
+          "alt": "香菜包作品：冬日店鋪前的女孩與白色角色插畫",
+          "source": "https://minicourse.dev/media/library/pon-pon-bao/5.webp?v=2ae37eb22e7d8d80",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-8379bccd02b54c39982b73c9b326065c",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572251302828974151/604660123_17927505498174684_5418539334750994473_n.png?ex=6afdb0a1&is=6afc5f21&hm=56823ae45e1f3c943e90148754fd4ff67d9d6e931a3ae70a0c1c3e0501f5bd39&"
+        },
+        {
+          "url": "/media/library/pon-pon-bao/6.webp?v=5aba4f1fd2f29a80",
+          "alt": "香菜包作品：番茄造型角色與 PONPONBAO 字樣海報",
+          "source": "https://minicourse.dev/media/library/pon-pon-bao/6.webp?v=5aba4f1fd2f29a80",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-257c65c13aa0499a8c4de9734ebef15c",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572251303550259210/560095904_17918829585174684_2895892653927190546_n.png?ex=6afdb0a1&is=6afc5f21&hm=845c1240eaf8595888e2de457a04a596578fc6527e20e3d2787107010bb70631&"
+        },
+        {
+          "url": "/media/library/pon-pon-bao/7.webp?v=622552f907dec08b",
+          "alt": "香菜包作品：草地上的女孩、綿羊與白色雲朵角色插畫",
+          "source": "https://minicourse.dev/media/library/pon-pon-bao/7.webp?v=622552f907dec08b",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-0ec11ae921ba4462b839677d39ecc8d8",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572251304158302299/535172754_17913260298174684_6930920550976944350_n.png?ex=6afdb0a1&is=6afc5f21&hm=c2c5ca38588e4d1b7d00ca1dff5df0959e0045ce8d8b04248f3609ca5a8e8803&"
+        },
+        {
+          "url": "/media/library/pon-pon-bao/1.webp?v=3638ab9c16fc3175",
+          "alt": "香菜包作品：何欣純角色插畫與心存大台中文字",
+          "source": "https://www.threads.com/@pon_pon_bao/post/Df2B5PaGkQL",
+          "checkedAt": "2026-11-17",
+          "note": "取自官方 Threads 帳號 @pon_pon_bao 的公開作品貼文，HTTPS 圖片可讀取",
+          "id": "work-8373c4512932445d91e71752572282ca",
+          "originalUrl": "https://scontent-itm1-1.cdninstagram.com/v/t51.82787-15/907464925_17975879652174684_3819515820553672779_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=111&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMjQxNjc4NjIwODU1MjkzMQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTM3OC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=chBkkuSr57kQ7kNvwEY2Ind&_nc_oc=AdrINOOHNhAsT7W8aNbxHzbfmMsS7cSCb--mY89guArx4yb7qj-iXlp6M3bEvE8Zzzc&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-itm1-1.cdninstagram.com&_nc_gid=W41LVYlxbJ10JCO3sgPTtg&_nc_ss=7a20f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQSij8Wed0BSyDZLswFknH-ITSzqcsadHJk-ElvCT3hkqg&oe=6B022FE1"
+        },
+        {
+          "url": "/media/library/pon-pon-bao/2.webp?v=d493f29daa606440",
+          "alt": "香菜包作品：選票與白色角色黑白漫畫",
+          "source": "https://www.threads.com/@pon_pon_bao/post/Df18mmImqGM",
+          "checkedAt": "2026-11-17",
+          "note": "取自官方 Threads 帳號 @pon_pon_bao 的公開作品貼文，HTTPS 圖片可讀取",
+          "id": "work-f0989dda86504ee680edbfcee9d80564",
+          "originalUrl": "https://scontent-lax7-1.cdninstagram.com/v/t51.82787-15/907684029_17975875074174684_4667404337030737231_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=106&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMjM5NDE4NDI2MjAxNTk4NQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTE4MS5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=L4OePieGwq8Q7kNvwGybK4z&_nc_oc=AdrhWi_5udRYWPU0jmpGa89zwpQh0vRwvuhtz-SOxXvxW0D7NKrTdfZ85P824B5Ekpw&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-lax7-1.cdninstagram.com&_nc_gid=W41LVYlxbJ10JCO3sgPTtg&_nc_ss=7a20f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQS2cRMwyqR-QE9zEtHz85jbDugirN4ShE6je1KBKQe2Pg&oe=6B0240DB"
+        },
+        {
+          "url": "/media/library/pon-pon-bao/3.webp?v=d7ea02c278742399",
+          "alt": "香菜包作品：一起去投票吧藍粉色插畫",
+          "source": "https://www.threads.com/@pon_pon_bao/post/Df18mmImqGM",
+          "checkedAt": "2026-11-17",
+          "note": "取自官方 Threads 帳號 @pon_pon_bao 的公開作品貼文，HTTPS 圖片可讀取",
+          "id": "work-2f1855c73e4e4b18abb8de905fdd18a9",
+          "originalUrl": "https://scontent-lax3-2.cdninstagram.com/v/t51.82787-15/896705765_17975875101174684_1059426782162220242_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=101&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMjM5NDIwNDEzNDc0NjY0NQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTE4MS5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=I-9lFLV3h40Q7kNvwEOmS3e&_nc_oc=AdreZtXuorM16MWVq6VcwpQ6JEtN154LLPrQKZHozHH1gIoYtQt5iNrWaDENNZYgWws&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-lax3-2.cdninstagram.com&_nc_gid=W41LVYlxbJ10JCO3sgPTtg&_nc_ss=7a20f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQTvGMBV8mQM1v72aj4m0qeeIZS0ovwYJ5US-v45CUzlzQ&oe=6B023387"
+        },
+        {
+          "url": "/media/library/pon-pon-bao/4.webp?v=9874f2d3c2da7825",
+          "alt": "香菜包作品：粉紅服裝角色舉旗與心存大台中文字",
+          "source": "https://minicourse.dev/media/library/pon-pon-bao/4.webp?v=9874f2d3c2da7825",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-a9ea0825859343c8badda56bde2c3479",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572251301989974046/842767859_17969826792174684_158268851542510600_n.png?ex=6afdb0a1&is=6afc5f21&hm=f1806911eb7e2712155e11259de7bbb1ded8767f45228002b5fcbcf491df7114&"
+        }
+      ]
+    },
+    {
+      "id": "sigmeow",
+      "name": "西格吸個貓",
+      "description": "Hi~我西格啦 ˋ⁽ ᵕ̈⁾ ́\n▾ 委託開放：快來了✨\n▾ 寵物似顏繪|插畫設計\n。。。。。✧ ✧ ✧ ദ്ദി(⩌ᴗ⩌ )\n。。。。。\n🚫禁止轉載使用與AI學習",
+      "category": "設計師",
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@_.sigmeow._",
+        "ig": "",
+        "web": "https://myship.7-11.com.tw/general/detail/GM2610077622031"
+      },
+      "verification": true,
+      "disabled": false,
+      "logo": {
+        "url": "/media/library/sigmeow/logo.webp?v=00ab0ad85761efe1",
+        "source": "https://www.threads.com/@_.sigmeow._",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-17",
+        "note": "已核對官方 Threads 個人檔案頭像，HTTPS 圖片可正常讀取",
+        "originalUrl": "https://scontent-lax3-1.cdninstagram.com/v/t51.82787-19/894059048_17919902883539293_1629004113690975803_n.jpg?stp=dst-jpg_s640x640_tt6&_nc_cat=104&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=b3fa00&_nc_ohc=5Gcdj2GKqDgQ7kNvwERyQ6L&_nc_oc=AdpFQuiA9k-qxyk05omwJpCIfAgAZBWs2xebelpad6UyXMV5of_e3qRkrqZ6EtrdlPY&_nc_zt=24&_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_gid=swwUSv20CexdAn5Vl8yuEQ&_nc_ss=7920f&oh=00_AQR5l9PI5L_oBxyRWrpLbx0AEwD_6QVseF46kJ8z9TaMeg&oe=6B023910"
+      },
+      "productImages": [
+        {
+          "url": "/media/library/sigmeow/1.webp?v=f52ecd86dbc4d420",
+          "alt": "西格吸個貓作品照片（使用者提供第 1 張）",
+          "source": "https://minicourse.dev/media/library/sigmeow/1.webp?v=f52ecd86dbc4d420",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-a211c145d0b54b10bb54735a0622f96e",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572260602997375017/907603329_17921067219539293_8515562830658834053_n.png?ex=6afdb94a&is=6afc67ca&hm=7dcddde6b9c9a61e52aec3af3059c82db65636b124127080644789d3168aeb86&"
+        },
+        {
+          "url": "/media/library/sigmeow/2.webp?v=f77e803324f18969",
+          "alt": "西格吸個貓作品照片（第 1 則 Threads 貼文第 1 張）",
+          "source": "https://www.threads.com/@_.sigmeow._/post/Df096T_krM4",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片；圖片取自指定的官方 Threads 貼文",
+          "id": "work-6e1534766dd84e39a5428a2816e07b0e",
+          "originalUrl": "https://scontent-lax3-1.cdninstagram.com/v/t51.82787-15/907515589_17921005770539293_5425534987816121879_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=106&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=DxpoG4dzeoMQ7kNvwE5IsBG&_nc_oc=AdqtuX9IY-5qV5epC3vE6lhWUTy2XUo-psBraaE3FzYz3sllgmH2HA6eYWgsDbfphl8&_nc_zt=23&_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_gid=1lJAb1quXZV6tZ4TJ3Rd4Q&_nc_ss=7920f&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQRUsCGNQF5YJ4_YMOluokE_JT1Qiu0bcLQHrDVjqF3axw&oe=6B023F1C"
+        },
+        {
+          "url": "/media/library/sigmeow/3.webp?v=d3a3a85be1766148",
+          "alt": "西格吸個貓作品照片（第 1 則 Threads 貼文第 2 張）",
+          "source": "https://www.threads.com/@_.sigmeow._/post/Df096T_krM4",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片；圖片取自指定的官方 Threads 貼文",
+          "id": "work-7510203272e249a9a0686d43dd7157a8",
+          "originalUrl": "https://scontent-lax7-1.cdninstagram.com/v/t51.82787-15/907515589_17921005797539293_286695556511034064_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=106&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=_-1_TC6rOXAQ7kNvwHzc_KH&_nc_oc=AdoFouwAo2_vBvOOzOyfVJU9D0kqXGCKH44GNFqi138vsgTvId1fb8spf_XIU_hRO5o&_nc_zt=23&_nc_ht=scontent-lax7-1.cdninstagram.com&_nc_gid=1lJAb1quXZV6tZ4TJ3Rd4Q&_nc_ss=7920f&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQQLZprbQMggIjj-hYj4-JEFW2-b1ICzw9HdkzirMsAKaA&oe=6B02429E"
+        },
+        {
+          "url": "/media/library/sigmeow/4.webp?v=d403e980ced39b32",
+          "alt": "西格吸個貓作品照片（第 2 則 Threads 貼文第 1 張）",
+          "source": "https://www.threads.com/@_.sigmeow._/post/DfmLKc6kiF5",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片；圖片取自指定的官方 Threads 貼文",
+          "id": "work-7e7a82331e134352ba5c2de9af89ddcf",
+          "originalUrl": "https://scontent-lax3-1.cdninstagram.com/v/t51.82787-15/899626632_17919935442539293_7404913380800679520_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=105&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=Gm-LsidiAY0Q7kNvwHqqtlO&_nc_oc=Adob35K9KEvzkUZ-Gh0s-XFRki7ozmA8xIQuP0jVNn2CO_0Ej5GqP0MX4BeqAWYrtVY&_nc_zt=23&_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_gid=UGAZ6qwevQqpmPv_B71t-A&_nc_ss=7920f&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQTZwXaj9Lww56fcYTNKM1vT0Jdc8q2UdSx_zsLvhNU46w&oe=6B02277E"
+        },
+        {
+          "url": "/media/library/sigmeow/5.webp?v=5bce1f2801cedf02",
+          "alt": "西格吸個貓作品照片（第 2 則 Threads 貼文第 2 張）",
+          "source": "https://www.threads.com/@_.sigmeow._/post/DfmLKc6kiF5",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片；圖片取自指定的官方 Threads 貼文",
+          "id": "work-1745db00a95b40cbaafbdbc65f03d038",
+          "originalUrl": "https://scontent-lax3-2.cdninstagram.com/v/t51.82787-15/902081256_17919935469539293_2687178853029859293_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=110&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=6kYPBP7jbTAQ7kNvwGB2LBF&_nc_oc=Adq-DTMIDrur9XZR4_AB6PU3xN1K5KLoFg57xGLhNWEpRHFWLxKf90-Zov9RsqF-EbM&_nc_zt=23&_nc_ht=scontent-lax3-2.cdninstagram.com&_nc_gid=UGAZ6qwevQqpmPv_B71t-A&_nc_ss=7920f&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQR4IJSAElmfkJ2YLDaMvi4GtGodJhrLvicwX7TVjvW5yw&oe=6B023695"
+        },
+        {
+          "url": "/media/library/sigmeow/6.webp?v=e53cdd4fd237af53",
+          "alt": "西格吸個貓作品照片（第 3 則 Threads 貼文第 1 張）",
+          "source": "https://www.threads.com/@_.sigmeow._/post/Debj2Erkhtp",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片；圖片取自指定的官方 Threads 貼文",
+          "id": "work-29385a0cf5e4431e8d153cdb0cbd2b63",
+          "originalUrl": "https://scontent-itm1-1.cdninstagram.com/v/t51.82787-15/846136942_17914613913539293_8753239833556258349_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=aEzVCCY9nDgQ7kNvwHrtoHC&_nc_oc=AdpT-Mkklk6aDBlUMXbNNVV0J8PMZS6wVs36iltO5Sr_X2w0x507WTm_zv00q38vlKw&_nc_zt=23&_nc_ht=scontent-itm1-1.cdninstagram.com&_nc_gid=Vx7w9IfxoZkLvHx-JuslDw&_nc_ss=7920f&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQS4UhSIGrKH40_C8PdwFlVLDO-YIiD8B8tAKTKeOTPvQA&oe=6B022CD4"
+        },
+        {
+          "url": "/media/library/sigmeow/7.webp?v=f1ffe9e01ebf1d46",
+          "alt": "西格吸個貓作品照片（第 3 則 Threads 貼文第 2 張）",
+          "source": "https://www.threads.com/@_.sigmeow._/post/Debj2Erkhtp",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片；圖片取自指定的官方 Threads 貼文",
+          "id": "work-2e886660f03645538d17fbe10035887e",
+          "originalUrl": "https://scontent-lax7-1.cdninstagram.com/v/t51.82787-15/846485754_17914613937539293_4531492293315818377_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=111&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=3RORp4Az26sQ7kNvwEDL383&_nc_oc=AdoMMRJ2D6RB1Btew1Cw2AW0jPFHLfJGgLpOg34CmcxHOqh2SRsNYvDapOwvwIE6bB4&_nc_zt=23&_nc_ht=scontent-lax7-1.cdninstagram.com&_nc_gid=Vx7w9IfxoZkLvHx-JuslDw&_nc_ss=7920f&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQROi7mPLxXtaoLR-IGA0eF1qwR_fXO9sYbjhATEaAvxRg&oe=6B0256C7"
+        },
+        {
+          "url": "/media/library/sigmeow/8.webp?v=f5c930e15fd4122e",
+          "alt": "西格吸個貓作品照片（第 3 則 Threads 貼文第 3 張）",
+          "source": "https://www.threads.com/@_.sigmeow._/post/Debj2Erkhtp",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片；圖片取自指定的官方 Threads 貼文",
+          "id": "work-0cac497bbb604cf3bd2804ea39391877",
+          "originalUrl": "https://scontent-lax3-2.cdninstagram.com/v/t51.82787-15/846087061_17914613901539293_4569279334608845539_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=vXNTyo9vNcoQ7kNvwHLpQAC&_nc_oc=AdruQDs2SiDRWn05zMNtRqnI58Rwb1wgnVfF_bRAOve17rX2dlELX8ITWyDcO-mUCyo&_nc_zt=23&_nc_ht=scontent-lax3-2.cdninstagram.com&_nc_gid=Vx7w9IfxoZkLvHx-JuslDw&_nc_ss=7920f&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQSO5Qq1i9qP5PfLjZ07QeBEJbdaltMc3HK_Adb2YtAQNQ&oe=6B024323"
+        },
+        {
+          "url": "/media/library/sigmeow/9.webp?v=dde6a916b41398a5",
+          "alt": "西格吸個貓作品照片（第 3 則 Threads 貼文第 4 張）",
+          "source": "https://www.threads.com/@_.sigmeow._/post/Debj2Erkhtp",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片；圖片取自指定的官方 Threads 貼文",
+          "id": "work-e7f8e87dd87949418f72d9d79d1cfcf9",
+          "originalUrl": "https://scontent-lax3-2.cdninstagram.com/v/t51.82787-15/843474378_17914613904539293_1109019596701433046_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=pgtfCoIvfokQ7kNvwGyjdjB&_nc_oc=Adp9ybePAUOA1o5yQFCWNXNlZvuEntQ50HdvhpvYOOiTOp7fMOGH1TI9GgyrhWUsm2s&_nc_zt=23&_nc_ht=scontent-lax3-2.cdninstagram.com&_nc_gid=Vx7w9IfxoZkLvHx-JuslDw&_nc_ss=7920f&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQRlHsn2O5o7Zm7aLE2sKKMpHwUBFyC92RIXeOlTk5_Vkw&oe=6B02446D"
+        }
+      ]
+    },
+    {
+      "id": "woody1993",
+      "name": "Woody無敵伍迪",
+      "description": "插畫家\n回家投票🗳️",
+      "category": "設計師",
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@woody1993",
+        "ig": "https://www.instagram.com/woody1993/",
+        "web": ""
+      },
+      "verification": true,
+      "disabled": false,
+      "logo": {
+        "url": "/media/library/woody1993/logo.webp?v=7cc560fc977b18b9",
+        "source": "https://www.threads.com/@woody1993",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-17",
+        "note": "已核對官方 Threads 個人檔案頭像，HTTPS 圖片可正常讀取",
+        "originalUrl": "https://scontent.cdninstagram.com/v/t51.82787-19/894543139_17965966137234572_3155663526270056774_n.jpg?stp=dst-jpg_s640x640_tt6&_nc_cat=105&ccb=7-5&_nc_sid=b3fa00&_nc_ohc=KeUVkaLa3HMQ7kNvwHo2Bcf&_nc_oc=AdqmOP1aSnhGWqH1hpiFzwo_RtibA2nRVVQZcvgBwkwbGH4niTiO3FKMgh6XI2zaJdI&_nc_zt=24&_nc_ht=scontent.cdninstagram.com&_nc_gid=KuoOudyENyUiPHoSyZeEZQ&_nc_ss=7920f&oh=00_AQTwcxQNSGzrIIX3ugZcuDfQF7v4pAJwa8gI4dY7OwCbdA&oe=6B02467F"
+      },
+      "productImages": [
+        {
+          "url": "/media/library/woody1993/8.webp?v=1ff41cba9d9d1303",
+          "alt": "Woody無敵伍迪作品：JUNE CAFE 十週年插畫",
+          "source": "https://www.instagram.com/p/Day8V5Lj4as/?img_index=1",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-93d84bdff1504dce8a7671e210b1355c",
+          "originalUrl": "https://scontent-tpe1-1.cdninstagram.com/v/t39.30808-6/748343762_1498168328991353_2246415069178811990_n.jpg?stp=c0.67.960.1066a_dst-jpg_e35_sh2.08_tt6&_nc_cat=100&_nc_map=urlgen_bucketless&ig_cache_key=Mzk0MTQ3Nzk5MTQ5NDY1NDQ0MQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuOTYwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=P9ImeraNApcQ7kNvwHn3Dui&_nc_oc=Adr3Wtx8Q3e-_bd9VW4EeMi9OfHGzK2TpySAdaolhLqZzDkWcYAOg6TZyBFiPbnMUPY&_nc_zt=23&_nc_ht=scontent-tpe1-1.cdninstagram.com&_nc_gid=FZGT_KZjBtL12pNQ1jy_Jw&_nc_ss=79500&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQTEQWnmFIzskM_Ssrkvz4cQnQeeXwzZOzmLrei9_fUPgQ&oe=6B023D8B"
+        },
+        {
+          "url": "/media/library/woody1993/9.webp?v=ac0002893aabf98b",
+          "alt": "Woody無敵伍迪作品：紐西蘭萬聖節插畫",
+          "source": "https://www.instagram.com/p/DBxzp80vuWY/?img_index=1",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-7db760efddf84b8fa36324804846ae84",
+          "originalUrl": "https://scontent-tpe1-1.cdninstagram.com/v/t51.82787-15/655245947_18098907458474975_1000512404340811629_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=108&_nc_map=urlgen_bucketless&ig_cache_key=MzQ5MDc5ODM2MzIxOTk0MDM1OA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTQ0MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=6mjk2Z1rdc0Q7kNvwESA7Rc&_nc_oc=AdpKeHhdyTMo2v7GF2U9d4DD9hUegbpk4Vh1KkpSJLtYsjezZwXubBV8l5XtFULVy0o&_nc_zt=23&_nc_ht=scontent-tpe1-1.cdninstagram.com&_nc_gid=VBwIzmpF8D6kNZ96z7Crng&_nc_ss=79500&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQRukUOcfV5H9-FESgXWUghAsudnnmpDIHIlAXEB7Wy9Xw&oe=6B0266C6"
+        },
+        {
+          "url": "/media/library/woody1993/10.webp?v=829b48b8053f21e4",
+          "alt": "Woody無敵伍迪作品：酪梨、番茄醬與吐司早餐插畫",
+          "source": "https://www.instagram.com/p/CuMF1H9vwZq/",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-9954c03bf6b84a87803a43cc22c81e61",
+          "originalUrl": "https://scontent-tpe1-1.cdninstagram.com/v/t51.82787-15/623791718_18079668077463890_6444904815476013187_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&ig_cache_key=MzEzNzkwODY4MTI4NzMzNzU3OA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMTQ0MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=JwzmN7CiT9gQ7kNvwFM0zvM&_nc_oc=AdoIqesPGhkb0OLn8BN_UL-JyHolL7M8oRZU0yXhKYDVWSiyf3xCDOWX95KkUKdhHDY&_nc_zt=23&_nc_ht=scontent-tpe1-1.cdninstagram.com&_nc_gid=IV-0bk6Y120ae7jke1ztjw&_nc_ss=79500&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQRYYZBRdK6Vh1EsweLKVzLK-YnHjBPAFYmcfcJxKU3UZg&oe=6B024FDE"
+        },
+        {
+          "url": "/media/library/woody1993/1.webp?v=38ccfae7d4acc0cd",
+          "alt": "Woody無敵伍迪作品：橘白放射線背景的 FUTURE SOON 洋流圓形徽章",
+          "source": "https://minicourse.dev/media/library/woody1993/1.webp?v=38ccfae7d4acc0cd",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-9c96eb866038461d8fd151828636057c",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572275393073909840/897153696_17966033370234572_788963993742244688_n.png?ex=6afdc711&is=6afc7591&hm=3836527514b1da2977e8a324093d125dab3d8247cbd987b76225755e582efe40&"
+        },
+        {
+          "url": "/media/library/woody1993/2.webp?v=699ba384ce4e5617",
+          "alt": "Woody無敵伍迪作品：FUTURE SOON 洋流橘底人物與台北城市插畫",
+          "source": "https://minicourse.dev/media/library/woody1993/2.webp?v=699ba384ce4e5617",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-6212ebc01e9646788ccea7cde1d1cef0",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572275393787068598/900495703_17965955970234572_6800247268316881426_n.png?ex=6afdc711&is=6afc7591&hm=3b8632ba7c19c8839b892d95d9e2bd1bd79252ddc0b9a3c4f2e21a42b42debd0&"
+        },
+        {
+          "url": "/media/library/woody1993/3.webp?v=b36e59173c0799cf",
+          "alt": "Woody無敵伍迪作品：FUTURE SOON 洋流海報雙聯印刷版面",
+          "source": "https://minicourse.dev/media/library/woody1993/3.webp?v=b36e59173c0799cf",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-9d6720a14b4844b9abc399c5ee050e56",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572275395045367818/894460999_17966137641234572_7635921180115087126_n.png?ex=6afdc711&is=6afc7591&hm=50e105ac73223b3f6ddfc59fadaab442f108dfd00c9e72812466f54dae318b9b&"
+        },
+        {
+          "url": "/media/library/woody1993/4.webp?v=b363f616bc876f67",
+          "alt": "Woody無敵伍迪作品：店內陳列的 FUTURE SOON 洋流海報",
+          "source": "https://minicourse.dev/media/library/woody1993/4.webp?v=b363f616bc876f67",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-2423331e336e4d7cb7aa6722769fdd1f",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572275396110585956/904441448_17967325707234572_4681766870976828306_n.png?ex=6afdc711&is=6afc7591&hm=23db61a842120c0451d3d4dcfa7708dbd2ef90a5d645bfb02663d95d2e706b94&"
+        },
+        {
+          "url": "/media/library/woody1993/5.webp?v=5bba375aa18a8085",
+          "alt": "Woody無敵伍迪作品：手持的 FUTURE SOON 洋流活動卡片",
+          "source": "https://minicourse.dev/media/library/woody1993/5.webp?v=5bba375aa18a8085",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-0de04ffddc39465d8a435eb0319d1b10",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572275396857307248/903825535_17967325731234572_2930838711984743415_n.png?ex=6afdc712&is=6afc7592&hm=a4bba9b7d9c5754a4638ee52babe34f186af2901e3b1408a9cdd7d28aec4625c&"
+        },
+        {
+          "url": "/media/library/woody1993/6.webp?v=eb1748cbf6cd5b86",
+          "alt": "Woody無敵伍迪作品：天空中飄揚的 FUTURE SOON 洋流橘白長條布巾",
+          "source": "https://minicourse.dev/media/library/woody1993/6.webp?v=eb1748cbf6cd5b86",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-454e5ca422ba42ecafb1163ccd81cee3",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572275397716877443/902247353_17966938395234572_2759306163403938148_n.png?ex=6afdc712&is=6afc7592&hm=9c8fdb0fbe4b9e14342929d1e678bd445fc55bbcfa9db392d87cefa4d97a70a0&"
+        },
+        {
+          "url": "/media/library/woody1993/7.webp?v=c2457a7d0dc4c491",
+          "alt": "Woody無敵伍迪作品：張貼於水泥牆上的 FUTURE SOON 洋流活動海報",
+          "source": "https://minicourse.dev/media/library/woody1993/7.webp?v=c2457a7d0dc4c491",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-bfcb263fee794e9fa0e093f65b02354f",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572275398497145005/894035769_17966341812234572_284922442385471416_n.png?ex=6afdc712&is=6afc7592&hm=c498edeb6ba1f4e6172de2da70ffcd48b89a10f8ead95a8272d2ae5fd8e64571&"
         }
       ]
     }

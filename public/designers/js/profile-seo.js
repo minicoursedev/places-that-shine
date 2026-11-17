@@ -23,12 +23,11 @@ export function officialLinks(store) {
 
 export function designerMetadata(store) {
   const name = text(store.name);
-  const category = text(store.category) || '設計師';
+  const title = `${name} | 發光的地方`;
   // A missing biography stays empty in visible content and metadata.
   const introduction = text(store.description);
   const description = shorten(introduction);
-  const shareTitle = `${name} 設計師`;
-  return { title: `${name}｜${category}介紹與作品｜發光的設計師`, shareTitle, description, introduction };
+  return { title, shareTitle: title, description, introduction };
 }
 
 export function designerStructuredData(store, booth, canonical, directoryUrl) {

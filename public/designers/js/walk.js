@@ -187,12 +187,12 @@ export function createWalkView(canvas, { onNear = () => {}, onOpen = () => {}, o
   }
 
   // ---------- layout ----------
-  function signsOf(I) {
+  function signsOf(I, hallName) {
     const count = Math.max(1, Math.round(I.isl.booths.length / 3));
     const slot = I.isl.booths.length * BW / count;
     return Array.from({ length: count }, (_, i) => ({
-      cx: I.x0 + slot * (i + 0.5), maxW: Math.min(slot - 12, 250),
-      label: I.isl.zoneName || I.isl.zone || '',
+      cx: I.x0 + slot * (i + 0.5), maxW: clamp(slot - 12, 148, 250),
+      label: hallName.replace(/館$/, ''),
     }));
   }
   function build(d) {
@@ -206,7 +206,7 @@ export function createWalkView(canvas, { onNear = () => {}, onOpen = () => {}, o
           const B = { b, side: 'N', x: x + i * BW, cx: x + i * BW + BW / 2, h: hash(b.id), I };
           booths.push(B); byId.set(b.id, B);
         });
-        I.signs = signsOf(I);
+        I.signs = signsOf(I, d.hallName);
         islands.push(I);
         x = I.x1 + (index < groups.length - 1 ? CROSS : 0);
       }
@@ -226,7 +226,7 @@ export function createWalkView(canvas, { onNear = () => {}, onOpen = () => {}, o
           const B = { b, side: isl.side, x: x + i * BW, cx: x + i * BW + BW / 2, h: hash(b.id), I };
           booths.push(B); byId.set(b.id, B);
         });
-        I.signs = signsOf(I);
+        I.signs = signsOf(I, d.hallName);
         islands.push(I);
       }
       x += n * BW;
@@ -772,33 +772,19 @@ export function createWalkView(canvas, { onNear = () => {}, onOpen = () => {}, o
     k.face = player.x > k.x ? 1 : -1;
   }
   // a cat speaks when the player comes close, and goes quiet once the player walks away
-  function talk() {
+  function talkCats() {
     const r = catCfg?.radius || 90;
     for (const k of cats) {
       const d = Math.hypot(k.x - player.x, (k.y - player.y) * 1.4);
       if (d < r) { if (!k.line) say(k); } else if (d > r * 1.35) k.line = null;
     }
-    if (!chatter) return;
-    // only the closest passer-by speaks, so the aisle does not turn into a crowd of balloons
-    const rn = chatter.radius || 70;
-    const dist = n => Math.hypot(n.x - player.x, (n.y - player.y) * 1.4);
-    let near = null;
-    for (const n of npcs) if (!near || dist(n) < dist(near)) near = n;
-    for (const n of npcs) {
-      const distance = dist(n);
-      if (distance > rn * 1.35) {
-        n.line = null;
-        n.muted = false;
-      } else if (n === near && distance < rn && !n.line && !n.muted) {
-        praise(n);
-      }
-    }
   }
   // A passer-by mentions a designer from the booths on screen.
   function praise(n) {
     const vw = cssW / scale;
-    const onScreen = L.booths.filter(B => B.x + BW >= camX && B.x <= camX + vw).map(B => B.b);
-    n.line = praiseLine(chatter, onScreen, data.stores, n.last) || n.line;
+    const onScreen = L.booths.filter(B => B.x + BW >= camX && B.x <= camX + vw);
+    const booths = (onScreen.length ? onScreen : L.booths).map(B => B.b);
+    n.line = praiseLine(chatter, booths, data.stores, n.last) || n.last;
     n.last = n.line;
   }
   function passerAt({ x, y }, slop) {
@@ -813,8 +799,8 @@ export function createWalkView(canvas, { onNear = () => {}, onOpen = () => {}, o
       return Math.abs(x - passer.x) <= bagWidth * passer.s + extra
         && y >= passer.y - 38 * passer.s - extra && y <= passer.y + 4 + extra;
     };
-    return npcs.findLast(passer => passer.line && hitsBody(passer, slop))
-      || npcs.findLast(passer => hitsBody(passer, 0));
+    return npcs.findLast(passer => hitsBody(passer, 0))
+      || npcs.findLast(passer => hitsBody(passer, slop));
   }
   const catAt = (wx, wy) => cats.find(k => Math.abs(wx - k.x) < 22 && wy > k.y - CAT_H - 4 && wy < k.y + 8) || null;
 
@@ -862,6 +848,10 @@ export function createWalkView(canvas, { onNear = () => {}, onOpen = () => {}, o
     for (const k of cats) if (k.line) speech(k.x, k.y - CAT_H - 2, k.line, x0, x1);
     for (const passer of npcs) {
       if (!passer.line) continue;
+      if (passer.x < x0 || passer.x > x1) {
+        passer.line = null;
+        continue;
+      }
       const bounds = speech(passer.x, passer.y - 36 * passer.s - 2, passer.line, x0, x1);
       passerBalloons.push({ passer, ...bounds });
     }
@@ -969,7 +959,7 @@ export function createWalkView(canvas, { onNear = () => {}, onOpen = () => {}, o
       player.x = nx; player.y = ny;
       if (!reduce.matches) stepNpcs(dt);
     }
-    if (player.moving || arrived) { updateNear(false); checkExits(); talk(); }
+    if (player.moving || arrived) { updateNear(false); checkExits(); talkCats(); }
     if (arrived) {
       target = null;
       if (pending) { const id = pending; pending = null; onOpen(id); }
@@ -1029,8 +1019,9 @@ export function createWalkView(canvas, { onNear = () => {}, onOpen = () => {}, o
     ptr = null;
     if (tap) {
       if (passer) {
-        passer.line = null;
-        passer.muted = true;
+        const wasSpeaking = Boolean(passer.line);
+        for (const npc of npcs) npc.line = null;
+        if (!wasSpeaking) praise(passer);
         kick();
         return;
       }
@@ -1218,7 +1209,7 @@ export function createWalkView(canvas, { onNear = () => {}, onOpen = () => {}, o
     setCats(cfg) {
       catCfg = cfg;
       // Cat pictures load on demand when drawCat renders them in view.
-      if (data) { initCats(data.code); talk(); }
+      if (data) { initCats(data.code); talkCats(); }
       kick();
     },
     setChatter(cfg) { chatter = cfg; kick(); },

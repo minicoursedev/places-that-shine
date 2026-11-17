@@ -2,7 +2,7 @@
 import WorkShareDialog from '../components/WorkShareDialog.astro';
 import { designerWorks, designerPath } from '../lib/oshen-designers';
 import { designerWorkPath, designerWorkSharePath } from '../../public/designers/js/work-links.js';
-import { designerHallRoot, designerWalkPath } from '../../public/designers/js/routes.js';
+import { designerHallRoot, designerSharePath } from '../../public/designers/js/routes.js';
 import { serializeStructuredData } from '../../public/designers/js/profile-seo.js';
 interface Props { designerId: string; workId: string; shareHall?: string }
 const entry = designerWorks.find(({ designer, work }) => designer.id === Astro.props.designerId && work.id === Astro.props.workId)!;
@@ -11,14 +11,19 @@ const shareTitle = `${designer.name} 設計師`;
 const title = `${designer.name}的作品｜發光的地方`;
 const description = work.caption?.trim() || designer.store.description;
 const label = work.name || `${designer.name}的作品`;
-const workPath = designerWorkPath(designer.id, work.id);
-const canonical = new URL(workPath, Astro.site).href;
-const hall = designer.booth.hallBooths.find(({ aisle }) => aisle[0] === Astro.props.shareHall);
-const boothPath = hall ? `${designerWalkPath(hall.aisle, hall.id)}/open` : designerPath(designer.id);
-const marketPath = designerHallRoot(hall?.aisle[0] ?? designer.hallCode);
-const sharePath = hall ? designerWorkSharePath(designer.id, work.id, hall.aisle[0]) : workPath;
-const shareUrl = new URL(sharePath, Astro.site).href;
+const canonical = new URL(designerWorkPath(designer.id, work.id), Astro.site).href;
+const shareUrl = Astro.props.shareHall
+  ? new URL(designerWorkSharePath(designer.id, work.id, Astro.props.shareHall), Astro.site).href
+  : canonical;
 const workImage = new URL(work.cover, Astro.site).href;
+const halls = designer.booth.hallBooths.map(({ aisle, hall }) => ({
+  code: aisle[0],
+  name: hall,
+  marketPath: designerHallRoot(aisle[0]),
+  boothPath: designerSharePath(designer.id, aisle[0]),
+  sharePath: designerWorkSharePath(designer.id, work.id, aisle[0]),
+}));
+const firstHall = halls.find(hall => hall.code === Astro.props.shareHall) || halls[0];
 const structuredData = {
   '@context': 'https://schema.org', '@type': 'WebPage', url: canonical, name: title, inLanguage: 'zh-Hant-TW',
   ...(description ? { description } : {}),
@@ -32,7 +37,7 @@ const structuredData = {
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>{title}</title>
-  {hall ? <meta name="robots" content="noindex,follow" /> : <link rel="canonical" href={canonical} />}
+  {Astro.props.shareHall ? <meta name="robots" content="noindex,follow" /> : <link rel="canonical" href={canonical} />}
   <meta name="theme-color" content="#f82970" />
   <link rel="icon" href="data:," />
   {description && <meta name="description" content={description} />}
@@ -54,16 +59,16 @@ const structuredData = {
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" />
   <link rel="stylesheet" href="/designers/css/market.css" />
-  <link rel="stylesheet" href="/designers/css/booth.css?v=20261110-work-mobile" />
-  <link rel="stylesheet" href="/designers/css/work.css?v=20261110-social-share" />
+  <link rel="stylesheet" href="/designers/css/booth.css?v=20261114-share-channels" />
+  <link rel="stylesheet" href="/designers/css/work.css?v=20261114-share-channels" />
 </head>
 <body class="work-page">
   <header class="work-header">
     <h1 class="work-title" id="work-title">{designer.name}</h1>
-    <a class="work-close" href={boothPath} aria-label={`關閉作品，回到${designer.name}`} title="回到設計師攤位"><span aria-hidden="true">×</span></a>
+    <a class="work-close" data-work-booth href={firstHall.boothPath} aria-label={`關閉作品，回到${designer.name}`} title="回到設計師攤位"><span aria-hidden="true">×</span></a>
   </header>
   <main class="work-main">
-    <nav class="work-breadcrumbs" aria-label="麵包屑導覽"><a href={marketPath}>{hall?.hall ?? designer.hallName}</a><span aria-hidden="true">›</span><a href={boothPath}>{designer.name}</a><span aria-hidden="true">›</span><span aria-current="page">作品</span></nav>
+    <nav class="work-breadcrumbs" aria-label="麵包屑導覽"><a data-work-hall href={firstHall.marketPath}>{firstHall.name}</a><span aria-hidden="true">›</span><a data-work-booth href={firstHall.boothPath}>{designer.name}</a><span aria-hidden="true">›</span><span aria-current="page">作品</span></nav>
     <article class="work-grid" aria-labelledby="work-title">
       <figure class="work-figure">
         <div class="work-media">
@@ -73,22 +78,34 @@ const structuredData = {
       </figure>
       <div class="work-info">
         <section class="work-author" aria-labelledby="work-author-name">
-          <a class="work-author-link" href={boothPath}>
+          <a class="work-author-link" data-work-booth href={firstHall.boothPath}>
             {designer.store.avatar && <span class:list={['bo-avatar', { 'bo-avatar-contain': designer.store.avatarFit === 'contain' }]}><img src={designer.store.avatar} alt="" decoding="async" /></span>}
             <div><span class="work-author-category">{designer.store.category}</span><h2 class="work-author-name" id="work-author-name">{designer.name}</h2></div>
           </a>
           {designer.store.description && <p class="work-author-bio">{designer.store.description}</p>}
         </section>
         <div class="work-actions">
-          <a class="btn btn-primary" href={boothPath}>逛他的攤位 →</a>
-          <button class="btn" type="button" data-share-work={sharePath} data-work-designer={designer.name} data-work-image={work.cover} data-work-label={label} aria-haspopup="dialog" aria-controls="work-share-dialog">分享這件作品</button>
+          <a class="btn btn-primary" data-work-booth href={firstHall.boothPath}>逛他的攤位 →</a>
+          <button class="btn" type="button" data-share-work={firstHall.sharePath} data-work-designer={designer.name} data-work-image={work.cover} data-work-label={label} aria-haspopup="dialog" aria-controls="work-share-dialog">分享這件作品</button>
         </div>
         {work.url && <a class="work-source" href={work.url} target="_blank" rel="noopener noreferrer">查看原始連結 ↗</a>}
-        <div class="work-more"><a class="work-market-link" href={marketPath}>繼續逛市集 →</a></div>
+        <div class="work-more"><a class="work-market-link" href={firstHall.marketPath}>繼續逛市集 →</a></div>
       </div>
     </article>
   </main>
   <footer class="work-footer"><small>© 2026 發光的地方｜收錄之作品與商標，其權利歸各設計師或原權利人所有。</small></footer>
+  {!Astro.props.shareHall && <script define:vars={{ halls }}>
+    const hallCode = new URLSearchParams(location.search).get('hall');
+    const hall = halls.find(entry => entry.code === hallCode);
+    if (hall) {
+      for (const link of document.querySelectorAll('[data-work-booth]')) link.href = hall.boothPath;
+      const breadcrumb = document.querySelector('[data-work-hall]');
+      breadcrumb.href = hall.marketPath;
+      breadcrumb.textContent = hall.name;
+      document.querySelector('.work-market-link').href = hall.marketPath;
+      document.querySelector('[data-share-work]').dataset.shareWork = hall.sharePath;
+    }
+  </script>}
   <WorkShareDialog />
 </body>
 </html>

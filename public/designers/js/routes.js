@@ -1,9 +1,11 @@
-import { designerMetadata, designerStructuredData, serializeStructuredData, publicUrl } from './profile-seo.js?v=20261110-profile-share-title';
-import { hallPageForCode, hallPageForPath } from './hall-pages.js?v=20261114-bluebird-hall';
+import { designerMetadata, designerStructuredData, serializeStructuredData, publicUrl } from './profile-seo.js?v=20261114-designer-title';
+import { hallPageForCode, hallPageForPath } from './hall-pages.js?v=20261116-oshen-websites-hall';
 import { browserOrigin } from './config.js';
 
 export const designerRoot = '/designers/';
-export const designerPath = id => `${designerRoot}${encodeURIComponent(id)}/`;
+export const designerPath = (id, hall) =>
+  `${designerRoot}${encodeURIComponent(id)}/${hall ? `?hall=${encodeURIComponent(hall)}` : ''}`;
+export const designerSharePath = (id, hall) => `${designerPath(id)}at/${encodeURIComponent(hall)}/`;
 export const designerHallRoot = code => hallPageForCode(code)?.path || designerRoot;
 export { hallPageForPath };
 export function designerWalkPath(code, boothId = null) {
@@ -17,14 +19,22 @@ export function designerBoothUrl(id, base = browserOrigin()) {
 // A shared profile URL owns the initial view, even with a stale walk hash.
 export function resolveDesignerRoute(url, { boot = false } = {}) {
   const [mode, target, then] = url.hash.replace(/^#\/?/, '').split('/');
-  const profile = url.pathname.match(/^\/designers\/([a-z0-9]+(?:-[a-z0-9]+)*)\/?$/);
+  const profile = url.pathname.match(/^\/designers\/([a-z0-9]+(?:-[a-z0-9]+)*)(?:\/at\/([A-Z]))?\/?$/);
   if (profile && (boot || !mode)) {
-    return { mode: 'designer', target: decodeURIComponent(profile[1]) };
+    const hall = profile[2] || url.searchParams.get('hall');
+    return { mode: 'designer', target: decodeURIComponent(profile[1]), ...(hall && { hall }) };
   }
   const hall = hallPageForPath(url.pathname);
   if (hall && !mode) return { mode: 'walk', target: `${hall.code}01`, then: undefined };
   return { mode, target, then };
 }
+export const designerMarketPreview = {
+  image: '/designers/assets/oshen-hall-o01-og.jpg',
+  alt: '洋流設計師館 O01 的第 05 至 09 攤：Koi Design Studio 扣乙図設、駱 乃康 Lo NaiKang、GIKO 吉可小賣部、顧紫蝶與阿猛、皮皮手作',
+  width: 1200,
+  height: 630,
+  type: 'image/jpeg',
+};
 const exhibitionImage = '/designers/assets/exhibition-og.png';
 const initialPreview = typeof document === 'undefined' ? null : {
   id: document.documentElement.dataset.designerProfile,
@@ -42,20 +52,24 @@ export function updateDesignerMetadata(designer = null, booth = {}) {
   const shareTitle = metadata ? metadata.shareTitle : title;
   const description = metadata ? metadata.description : hall?.description || '走進發光的設計師線上市集，瀏覽設計師介紹、創作作品與官方社群。透過設計師列表、地圖與互動攤位，找到喜歡的創作者。';
   const canonical = new URL(designer ? designerPath(designer.id) : hall?.path || designerRoot, browserOrigin()).href;
+  const canonicalLink = document.querySelector('link[rel="canonical"]');
+  const onSharePath = designer && location.pathname.startsWith(`${designerPath(designer.id)}at/`);
+  const socialUrl = onSharePath ? new URL(location.pathname, browserOrigin()).href : canonical;
   document.title = title;
-  document.querySelector('link[rel="canonical"]').href = canonical;
-  for (const [attribute, key, value] of [['name', 'description', description], ['property', 'og:title', shareTitle], ['property', 'og:description', description], ['property', 'og:url', canonical], ['name', 'twitter:title', shareTitle], ['name', 'twitter:description', description]]) {
+  if (canonicalLink) canonicalLink.href = canonical;
+  for (const [attribute, key, value] of [['name', 'description', description], ['property', 'og:title', shareTitle], ['property', 'og:description', description], ['property', 'og:url', socialUrl], ['name', 'twitter:title', shareTitle], ['name', 'twitter:description', description]]) {
     let tag = document.querySelector(`meta[${attribute}="${key}"]`);
     if (!value) { tag?.remove(); continue; }
     if (!tag) { tag = document.createElement('meta'); tag.setAttribute(attribute, key); document.head.append(tag); }
     tag.content = value;
   }
   const avatar = publicUrl(designer?.avatar, canonical);
-  const preview = designer?.og ? { ...designer.og, image: designer.og.url } : designer && initialPreview?.id === designer.id ? initialPreview : avatar
+  const preview = !designer && !hall ? designerMarketPreview
+    : designer?.og ? { ...designer.og, image: designer.og.url } : designer && initialPreview?.id === designer.id ? initialPreview : avatar
     ? { image: avatar } : hall?.image ? hall : { image: exhibitionImage, width: '2622', height: '1206', type: 'image/png' };
   const image = publicUrl(preview.image, canonical) || new URL(exhibitionImage, canonical).href;
   const imageAlt = preview.alt || (designer && avatar ? `${designer.name}的頭像` : '發光的設計師市集逛攤畫面');
-  document.querySelector('meta[name="twitter:card"]').content = hall ? 'summary_large_image' : 'summary';
+  document.querySelector('meta[name="twitter:card"]').content = designer ? 'summary' : 'summary_large_image';
   for (const selector of ['meta[property="og:image"]', 'meta[name="twitter:image"]']) document.querySelector(selector).content = image;
   for (const selector of ['meta[property="og:image:alt"]', 'meta[name="twitter:image:alt"]']) document.querySelector(selector).content = imageAlt;
   for (const key of ['width', 'height', 'type']) {

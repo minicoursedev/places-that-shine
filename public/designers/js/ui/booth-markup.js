@@ -1,7 +1,7 @@
 import { thumbnailUrl } from '../images.js';
-import { designerPath, designerWalkPath } from '../routes.js?v=20261114-bluebird-hall';
-import { designerMetadata } from '../profile-seo.js?v=20261110-profile-share-title';
-import { designerWorkPath } from '../work-links.js';
+import { designerSharePath, designerWalkPath } from '../routes.js?v=20261116-oshen-websites-hall';
+import { designerMetadata } from '../profile-seo.js?v=20261114-designer-title';
+import { designerWorkSharePath } from '../work-links.js?v=20261114-share-channels';
 import { browserOrigin } from '../config.js';
 
 const ESC = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' };
@@ -31,36 +31,50 @@ export function failHtml(boothId, text) {
     <div class="dlg-body"><p class="bo-note">${esc(text)}</p></div>`;
 }
 
-function coverHtml(src, label, width, height, eager = false) {
+function coverHtml(src, label, width, height, { eager, thumbnail } = {}) {
   const url = safeUrl(src);
   if (!url) return `<span class="bo-cover bo-cover-none" aria-hidden="true"></span>`;
   const dimensions = width > 0 && height > 0 ? ` width="${Number(width)}" height="${Number(height)}"` : '';
-  return `<span class="bo-cover"><img src="${esc(thumbnailUrl(url))}" data-original="${esc(url)}" alt="${esc(label)}"${dimensions} loading="${eager ? 'eager' : 'lazy'}"${eager ? ' fetchpriority="high"' : ''} decoding="async" data-label="${esc(label)}"></span>`;
+  const rotated = [90, -90].includes(thumbnail?.rotation)
+    && Number.isSafeInteger(thumbnail.width) && thumbnail.width > 0
+    && Number.isSafeInteger(thumbnail.height) && thumbnail.height > 0;
+  const frame = rotated
+    ? `class="bo-cover bo-cover-rotated" style="--thumbnail-ratio:${thumbnail.width}/${thumbnail.height};--thumbnail-rotation:${thumbnail.rotation}deg"`
+    : 'class="bo-cover"';
+  return `<span ${frame}><img src="${esc(thumbnailUrl(url))}" data-original="${esc(url)}" alt="${esc(label)}"${dimensions} loading="${eager ? 'eager' : 'lazy'}"${eager ? ' fetchpriority="high"' : ''} decoding="async" data-label="${esc(label)}"></span>`;
 }
 
-function workHtml(w, index, name, profile, designerId) {
+function workHtml(w, index, name, profile, booth) {
   const label = w.name?.trim() || w.caption?.trim() || `${name}作品圖片 ${index + 1}`;
   const video = safeUrl(w.video);
   const description = w.caption ? `<span class="bo-caption">${esc(w.caption)}</span>` : '';
-  const path = designerWorkPath(designerId, w.id);
+  const path = designerWorkSharePath(booth.store, w.id, booth.id[0]);
   const actions = `<div class="bo-work-actions"><a class="bo-work-detail" href="${esc(path)}">查看作品</a><button type="button" class="btn" data-share-work="${esc(path)}" data-work-designer="${esc(name)}" data-work-image="${esc(safeUrl(w.cover))}" data-work-label="${esc(label)}" aria-label="分享${esc(label)}" aria-haspopup="dialog" aria-controls="work-share-dialog">分享作品</button></div>`;
   if (video) return `<li><div class="bo-work"><video controls playsinline preload="metadata" poster="${esc(safeUrl(w.cover))}" aria-label="${esc(label)}" style="display:block;width:100%;max-height:400px" src="${esc(video)}"></video>${description}</div>${actions}</li>`;
   const url = safeUrl(w.url);
   // Image alternative text is not a display title; only explicit captions appear below works.
-  const inner = `${coverHtml(w.cover, label, w.width, w.height, profile && index === 0)}${description}`;
+  const cover = coverHtml(w.cover, label, w.width, w.height, { eager: profile && index === 0, thumbnail: w.thumbnail });
+  const inner = `${cover}${description}`;
   return url
     ? `<li><a class="bo-work" href="${esc(url)}" target="_blank" rel="noopener">${inner}</a>${actions}</li>`
     : `<li><span class="bo-work">${inner}</span>${actions}</li>`;
 }
 
+function socialButton(source, icon, label, title = label) {
+  const url = safeUrl(source);
+  return url ? `<a class="btn bo-social-button" href="${esc(url)}" target="_blank" rel="noopener noreferrer" aria-label="${esc(label)}" title="${esc(title)}"><img src="/designers/assets/buttons/${icon}" width="32" height="32" alt="" decoding="async"></a>` : '';
+}
+
 export function boothHtml(booth, store, { profile = false, staticProfile = false } = {}) {
   const storeUrl = safeUrl(store?.url);
-  const socialLinks = [['fb', 'Facebook', 'facebook.png'], ['threads', 'Threads', 'threads.svg'], ['ig', 'Instagram', 'instagram.svg'], ['web', '官網', 'website.svg']]
-    .map(([key, label, icon]) => {
-      const url = safeUrl(store?.social?.[key]);
-      return url ? `<a class="btn bo-social-button" href="${esc(url)}" target="_blank" rel="noopener noreferrer" aria-label="${esc(store?.name)}的${label}" title="${label}"><img src="/designers/assets/buttons/${icon}" width="32" height="32" alt="" decoding="async"></a>` : '';
-    }).join('');
-  const genericLinks = (store?.links || []).map(link => {
+  const links = store?.links || [];
+  const socialLinks = [
+    ...[['fb', 'Facebook', 'facebook.png'], ['threads', 'Threads', 'threads.svg'], ['ig', 'Instagram', 'instagram.svg'], ['web', '官網', 'website.svg']]
+      .map(([key, label, icon]) => socialButton(store?.social?.[key], icon, `${store?.name}的${label}`, label)),
+    ...links.filter(link => link.platform === 'ig')
+      .map(link => socialButton(link.url, 'instagram.svg', link.label)),
+  ].join('');
+  const genericLinks = links.filter(link => link.platform !== 'ig').map(link => {
     const url = safeUrl(link.url);
     return url ? `<a class="btn" href="${esc(url)}" target="_blank" rel="noopener noreferrer" title="${esc(url)}">${esc(link.label)} ↗</a>` : '';
   }).join('');
@@ -109,7 +123,7 @@ export function boothHtml(booth, store, { profile = false, staticProfile = false
       <${subheading} class="bo-section-title">作品選集</${subheading}>
       ${booth.productsError ? '<p class="bo-note" role="status">產品清單暫時無法載入，目前顯示預覽圖片，請稍後重新開啟。</p>' : ''}
       ${works.length ? `<ul class="bo-works">
-        ${works.map((work, index) => workHtml(work, index, name, profile, booth.store)).join('')}
+        ${works.map((work, index) => workHtml(work, index, name, profile, booth)).join('')}
         ${more > 0 ? `<li>${storeUrl
           ? `<a class="bo-work bo-more" href="${esc(storeUrl)}" target="_blank" rel="noopener"><span class="bo-more-n">還有 ${more} 部</span><span>看設計師</span></a>`
           : `<span class="bo-work bo-more"><span class="bo-more-n">還有 ${more} 部</span></span>`}</li>` : ''}
@@ -120,8 +134,7 @@ export function boothHtml(booth, store, { profile = false, staticProfile = false
       ${genericLinks ? `<div class="bo-share bo-links" aria-label="通用連結">${genericLinks}</div>` : ''}
       <div class="bo-share">
         ${storeUrl ? `<a class="btn btn-primary" href="${esc(storeUrl)}" target="_blank" rel="noopener">看設計師</a>` : ''}
-        <button type="button" class="btn" data-share-designer="${esc(designerPath(booth.store))}" aria-haspopup="dialog" aria-controls="designer-share-dialog">分享設計師</button>
-        <span class="bo-share-status muted" role="status"></span>
+        <button type="button" class="btn" data-share-designer="${esc(designerSharePath(booth.store, booth.id[0]))}" aria-haspopup="dialog" aria-controls="designer-share-dialog">分享設計師</button>
       </div>
     </div>`;
 }

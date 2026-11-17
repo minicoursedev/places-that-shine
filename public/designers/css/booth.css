@@ -49,6 +49,21 @@ span.bo-work { cursor: default; }
   transition: transform .08s, box-shadow .08s;
 }
 .bo-cover img { width: 100%; height: auto; display: block; }
+.bo-cover-rotated {
+  box-sizing: content-box;
+  width: auto;
+  container-type: inline-size;
+  aspect-ratio: var(--thumbnail-ratio);
+  background: #000;
+}
+.bo-cover-rotated img {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  width: auto;
+  height: 100cqw;
+  max-width: none;
+  transform: translate(-50%, -50%) rotate(var(--thumbnail-rotation));
+}
 .bo-cover-none { aspect-ratio: 3 / 4; background-color: var(--paper); background-image: var(--tone); }
 .bo-cover-none::after {
   content: ""; position: absolute; left: 22%; top: 30%; width: 56%; height: 22%;
@@ -104,20 +119,7 @@ a.bo-more:focus-visible { outline: 3px solid var(--pink); outline-offset: 2px; }
 .bo-count { margin-left: auto; font-size: 13px; }
 .bo-share { flex-basis: 100%; display: grid; align-items: center; grid-template-columns: max-content max-content; gap: 6px 8px; }
 .bo-share .btn { padding-inline: clamp(4px, 2vw, 16px); }
-.bo-share-status { grid-column: 1 / -1; font-size: 13px; }
-.bo-share-status:empty { display: none; }
 
-.designer-share-dialog { width: min(360px, calc(100vw - 32px)); max-height: calc(100dvh - 32px); }
-#designer-share-title { overflow-wrap: anywhere; }
-#designer-share-description { margin: 0 0 16px; font-size: 14px; line-height: 1.7; }
-#designer-share-qr { display: block; width: 220px; max-width: 100%; height: auto; margin: 0 auto 16px; }
-#designer-share-qr[hidden] { display: none; }
-#designer-share-url { display: block; margin-bottom: 16px; overflow-wrap: anywhere; font-size: 13px; line-height: 1.7; color: var(--green-deep); }
-.designer-share-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-.designer-share-actions form { margin: 0; }
-.designer-share-actions .btn { width: 100%; }
-#designer-share-status { margin: 12px 0 0; font-size: 13px; line-height: 1.7; }
-#designer-share-status:empty { display: none; }
 
 @media (max-width: 560px) {
   /* Keep controls inside Safari's visible area when its bars or text size change. */
