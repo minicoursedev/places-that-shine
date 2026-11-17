@@ -1,17 +1,23 @@
 ---
 import WorkShareDialog from '../components/WorkShareDialog.astro';
 import { designerWorks, designerPath } from '../lib/oshen-designers';
-import { designerWorkPath } from '../../public/designers/js/work-links.js';
-import { designerHallRoot } from '../../public/designers/js/routes.js';
+import { designerWorkPath, designerWorkSharePath } from '../../public/designers/js/work-links.js';
+import { designerHallRoot, designerWalkPath } from '../../public/designers/js/routes.js';
 import { serializeStructuredData } from '../../public/designers/js/profile-seo.js';
-interface Props { designerId: string; workId: string }
+interface Props { designerId: string; workId: string; shareHall?: string }
 const entry = designerWorks.find(({ designer, work }) => designer.id === Astro.props.designerId && work.id === Astro.props.workId)!;
 const { designer, work } = entry;
 const shareTitle = `${designer.name} 設計師`;
 const title = `${designer.name}的作品｜發光的地方`;
 const description = work.caption?.trim() || designer.store.description;
 const label = work.name || `${designer.name}的作品`;
-const canonical = new URL(designerWorkPath(designer.id, work.id), Astro.site).href;
+const workPath = designerWorkPath(designer.id, work.id);
+const canonical = new URL(workPath, Astro.site).href;
+const hall = designer.booth.hallBooths.find(({ aisle }) => aisle[0] === Astro.props.shareHall);
+const boothPath = hall ? `${designerWalkPath(hall.aisle, hall.id)}/open` : designerPath(designer.id);
+const marketPath = designerHallRoot(hall?.aisle[0] ?? designer.hallCode);
+const sharePath = hall ? designerWorkSharePath(designer.id, work.id, hall.aisle[0]) : workPath;
+const shareUrl = new URL(sharePath, Astro.site).href;
 const workImage = new URL(work.cover, Astro.site).href;
 const structuredData = {
   '@context': 'https://schema.org', '@type': 'WebPage', url: canonical, name: title, inLanguage: 'zh-Hant-TW',
@@ -26,12 +32,12 @@ const structuredData = {
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>{title}</title>
-  <link rel="canonical" href={canonical} />
+  {hall ? <meta name="robots" content="noindex,follow" /> : <link rel="canonical" href={canonical} />}
   <meta name="theme-color" content="#f82970" />
   <link rel="icon" href="data:," />
   {description && <meta name="description" content={description} />}
   <meta property="og:type" content="website" />
-  <meta property="og:url" content={canonical} />
+  <meta property="og:url" content={shareUrl} />
   <meta property="og:site_name" content="發光的地方" />
   <meta property="og:locale" content="zh_TW" />
   <meta property="og:title" content={shareTitle} />
@@ -54,10 +60,10 @@ const structuredData = {
 <body class="work-page">
   <header class="work-header">
     <h1 class="work-title" id="work-title">{designer.name}</h1>
-    <a class="work-close" href={designerPath(designer.id)} aria-label={`關閉作品，回到${designer.name}`} title="回到設計師攤位"><span aria-hidden="true">×</span></a>
+    <a class="work-close" href={boothPath} aria-label={`關閉作品，回到${designer.name}`} title="回到設計師攤位"><span aria-hidden="true">×</span></a>
   </header>
   <main class="work-main">
-    <nav class="work-breadcrumbs" aria-label="麵包屑導覽"><a href={designerHallRoot(designer.hallCode)}>{designer.hallName}</a><span aria-hidden="true">›</span><a href={designerPath(designer.id)}>{designer.name}</a><span aria-hidden="true">›</span><span aria-current="page">作品</span></nav>
+    <nav class="work-breadcrumbs" aria-label="麵包屑導覽"><a href={marketPath}>{hall?.hall ?? designer.hallName}</a><span aria-hidden="true">›</span><a href={boothPath}>{designer.name}</a><span aria-hidden="true">›</span><span aria-current="page">作品</span></nav>
     <article class="work-grid" aria-labelledby="work-title">
       <figure class="work-figure">
         <div class="work-media">
@@ -67,18 +73,18 @@ const structuredData = {
       </figure>
       <div class="work-info">
         <section class="work-author" aria-labelledby="work-author-name">
-          <a class="work-author-link" href={designerPath(designer.id)}>
+          <a class="work-author-link" href={boothPath}>
             {designer.store.avatar && <span class:list={['bo-avatar', { 'bo-avatar-contain': designer.store.avatarFit === 'contain' }]}><img src={designer.store.avatar} alt="" decoding="async" /></span>}
             <div><span class="work-author-category">{designer.store.category}</span><h2 class="work-author-name" id="work-author-name">{designer.name}</h2></div>
           </a>
           {designer.store.description && <p class="work-author-bio">{designer.store.description}</p>}
         </section>
         <div class="work-actions">
-          <a class="btn btn-primary" href={designerPath(designer.id)}>逛他的攤位 →</a>
-          <button class="btn" type="button" data-share-work={designerWorkPath(designer.id, work.id)} data-work-designer={designer.name} data-work-image={work.cover} data-work-label={label} aria-haspopup="dialog" aria-controls="work-share-dialog">分享這件作品</button>
+          <a class="btn btn-primary" href={boothPath}>逛他的攤位 →</a>
+          <button class="btn" type="button" data-share-work={sharePath} data-work-designer={designer.name} data-work-image={work.cover} data-work-label={label} aria-haspopup="dialog" aria-controls="work-share-dialog">分享這件作品</button>
         </div>
         {work.url && <a class="work-source" href={work.url} target="_blank" rel="noopener noreferrer">查看原始連結 ↗</a>}
-        <div class="work-more"><a class="work-market-link" href={designerHallRoot(designer.hallCode)}>繼續逛市集 →</a></div>
+        <div class="work-more"><a class="work-market-link" href={marketPath}>繼續逛市集 →</a></div>
       </div>
     </article>
   </main>

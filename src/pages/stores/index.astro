@@ -1,15 +1,48 @@
 ---
 import SiteLayout from '../../layouts/SiteLayout.astro';
+import { designerWorks } from '../../lib/oshen-designers';
+import { designerWorkSharePath } from '../../../public/designers/js/work-links.js';
 import '../../styles/stores.css';
+
+const workPreviews = designerWorks.flatMap(({ designer, work }) => {
+  const booth = designer.booth.hallBooths.find(({ aisle }) => aisle[0] !== 'A');
+  if (!booth || work.id === 'yang-liu-avatar') return [];
+  return [{
+    designerName: designer.name,
+    label: work.name.trim() || `${designer.name}的作品`,
+    href: designerWorkSharePath(designer.id, work.id, booth.aisle[0]),
+    image: work.cover,
+    width: work.width,
+    height: work.height,
+  }];
+});
 ---
 
-<SiteLayout title="發光的店家" description="搜尋店家，查看到訪資訊與地圖位置。" active="stores">
-  <section class="directory page-width" aria-labelledby="stores-title">
+<SiteLayout title="發光的店家｜我們的洋流地圖" description="發光的店家（我們的洋流地圖）整理台灣各地的小店與生活服務，可搜尋店家並查看到訪資訊與地圖位置。" active="stores">
+  <section class="stores-directory directory page-width" aria-labelledby="stores-title">
     <div class="directory-header">
       <a class="back-link" href="/#explore"><span aria-hidden="true">←</span> 回探索首頁</a>
       <h1 id="stores-title">發光的店家</h1>
     </div>
-    <div id="stores-content" aria-label="店家目錄"><p role="status">正在載入店家資料…</p></div>
+    <div id="stores-content" aria-label="店家目錄" data-work-previews={JSON.stringify(workPreviews)}><p role="status">正在載入店家資料…</p></div>
+    <dialog id="store-share-dialog" class="store-share-dialog" aria-labelledby="store-share-title" aria-describedby="store-share-name">
+      <h2 id="store-share-title">分享店家</h2>
+      <p id="store-share-name"></p>
+      <img id="store-share-qr" class="store-share-qr" width="192" height="192" alt="店家連結 QR Code" hidden />
+      <p id="store-share-qr-status" class="store-share-status" role="status"></p>
+      <a id="store-share-url" class="store-share-url" target="_blank" rel="noopener"></a>
+      <div class="store-share-actions">
+        <button id="store-share-copy" class="store-action" type="button" autofocus>複製店家連結</button>
+        <form method="dialog"><button class="store-action" type="submit">關閉</button></form>
+      </div>
+      <p id="store-share-status" class="store-share-status" role="status"></p>
+    </dialog>
+    <dialog id="store-photo-viewer" class="store-photo-viewer" aria-label="全螢幕店家照片">
+      <div class="store-photo-track" aria-label="店家照片"></div>
+      <button class="store-photo-control store-photo-close" type="button" aria-label="關閉照片" autofocus>×</button>
+      <button class="store-photo-control store-photo-previous" type="button" aria-label="上一張照片" data-photo-previous>‹</button>
+      <button class="store-photo-control store-photo-next" type="button" aria-label="下一張照片" data-photo-next>›</button>
+    </dialog>
     <noscript><p>請開啟 JavaScript 以在本站瀏覽目錄。</p></noscript>
   </section>
 </SiteLayout>
@@ -18,5 +51,5 @@ import '../../styles/stores.css';
   import { mountStores } from '../../features/stores.js';
 
   const directory = document.querySelector<HTMLElement>('#stores-content');
-  if (directory) void mountStores(directory);
+  if (directory) void mountStores(directory, JSON.parse(directory.dataset.workPreviews || '[]'));
 </script>

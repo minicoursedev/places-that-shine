@@ -1,12 +1,15 @@
+import { storeCategoryIcon } from './store-marker-icons.js';
+
 const STORE_FEED = '/data/stores.json';
+const QR_GENERATOR = '/vendor/qrcode-generator/qrcode-2.0.4.mjs';
 const PAGE_SIZE = 12;
 const CITY_PREFIX = /^(?:\d{3}(?:-?\d{2,3})?\s*)?([\p{Script=Han}]{2}[縣市])/u;
 const MAP_TILES = 'https://tile.openstreetmap.org/{z}/{x}/{y}.png';
 const TAIWAN_BOUNDS = [[21.88, 117.97], [26.42, 122.05]];
 const SOCIALS = [
-  ['instagram', 'Instagram'],
-  ['facebook', 'Facebook'],
-  ['threads', 'Threads'],
+  ['instagram', 'Instagram', 'instagram.svg'],
+  ['facebook', 'Facebook', 'facebook.png'],
+  ['threads', 'Threads', 'threads.svg'],
 ];
 const compareText = new Intl.Collator('zh-Hant-TW').compare;
 
@@ -50,7 +53,144 @@ function externalLink(label, url, name) {
   return link;
 }
 
-function renderStore({ name, address, category, serviceType, shopPhoto, social, openingHours, visitNote, productImages }, tag = 'li') {
+function createStoreShare(dialog) {
+  const shopName = dialog.querySelector('#store-share-name');
+  const image = dialog.querySelector('#store-share-qr');
+  const qrStatus = dialog.querySelector('#store-share-qr-status');
+  const link = dialog.querySelector('#store-share-url');
+  const copy = dialog.querySelector('#store-share-copy');
+  const status = dialog.querySelector('#store-share-status');
+  let generation = 0;
+
+  copy.addEventListener('click', async () => {
+    const current = generation;
+    let message = '已複製店家連結';
+    try {
+      await navigator.clipboard.writeText(link.href);
+    } catch {
+      message = '請長按或右鍵上方網址複製連結。';
+    }
+    if (dialog.open && current === generation) status.textContent = message;
+  });
+
+  return async ({ id, name }) => {
+    const current = ++generation;
+    const url = new URL('/stores/', location.origin);
+    url.searchParams.set('shop', id);
+    shopName.textContent = name;
+    link.href = link.textContent = url.href;
+    status.textContent = qrStatus.textContent = '';
+    image.hidden = true;
+    if (!dialog.open) dialog.showModal();
+
+    try {
+      const { qrcode } = await import(/* @vite-ignore */ QR_GENERATOR);
+      if (!dialog.open || current !== generation) return;
+      const qr = qrcode(0, 'M');
+      qr.addData(url.href);
+      qr.make();
+      image.src = `data:image/svg+xml;charset=utf-8,${encodeURIComponent(qr.createSvgTag({ cellSize: 4, margin: 16, scalable: true }))}`;
+      image.hidden = false;
+    } catch {
+      if (dialog.open && current === generation) qrStatus.textContent = '暫時無法產生 QR Code，仍可複製店家連結。';
+    }
+  };
+}
+
+function connectPhotoControls(track, previous, next) {
+  function move(direction) {
+    const first = track.firstElementChild;
+    const second = first?.nextElementSibling;
+    if (!second) return;
+    const step = second.offsetLeft - first.offsetLeft;
+    const behavior = matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth';
+    track.scrollBy({ left: step * direction, behavior });
+  }
+
+  function sync() {
+    previous.disabled = track.scrollLeft <= 1;
+    next.disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 1;
+  }
+
+  previous.addEventListener('click', () => move(-1));
+  next.addEventListener('click', () => move(1));
+  track.addEventListener('scroll', sync, { passive: true });
+  return sync;
+}
+
+function createStorePhotoViewer(dialog) {
+  const track = dialog.querySelector('.store-photo-track');
+  const previous = dialog.querySelector('[data-photo-previous]');
+  const next = dialog.querySelector('[data-photo-next]');
+  const sync = connectPhotoControls(track, previous, next);
+  dialog.querySelector('.store-photo-close').addEventListener('click', () => dialog.close());
+  dialog.addEventListener('keydown', event => {
+    if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
+    event.preventDefault();
+    (event.key === 'ArrowLeft' ? previous : next).click();
+  });
+
+  return (photos, selected) => {
+    track.replaceChildren(...photos.map((photo, index) => {
+      const slide = element('figure', 'store-photo-slide');
+      const image = element('img');
+      image.alt = photo.alt;
+      image.draggable = false;
+      image.loading = index === selected ? 'eager' : 'lazy';
+      image.decoding = 'async';
+      image.src = photo.url;
+      slide.append(image, element('figcaption', 'store-photo-caption', photo.caption));
+      return slide;
+    }));
+    previous.hidden = next.hidden = photos.length < 2;
+    dialog.showModal();
+    track.scrollLeft = selected * track.clientWidth;
+    sync();
+  };
+}
+
+function renderStoreGallery(photos, openPhotos) {
+  const gallery = element('section', 'store-gallery');
+  gallery.setAttribute('aria-label', '店家照片');
+  const header = element('div', 'store-gallery-heading');
+  header.append(element('h4', '', '店家照片'));
+  const track = element('div', 'store-gallery-track');
+
+  for (const [index, photo] of photos.entries()) {
+    const thumb = element('button', 'store-gallery-thumb');
+    thumb.type = 'button';
+    thumb.setAttribute('aria-label', `放大${photo.alt}`);
+    thumb.setAttribute('aria-haspopup', 'dialog');
+    thumb.setAttribute('aria-controls', 'store-photo-viewer');
+    const image = element('img');
+    image.alt = photo.alt;
+    image.loading = 'lazy';
+    image.decoding = 'async';
+    image.draggable = false;
+    image.src = photo.url;
+    thumb.append(image, element('span', 'store-gallery-caption', photo.caption));
+    thumb.addEventListener('click', () => openPhotos(photos, index));
+    track.append(thumb);
+  }
+
+  if (photos.length > 1) {
+    const controls = element('div', 'store-gallery-controls');
+    const previous = element('button', 'store-gallery-arrow store-gallery-previous');
+    const next = element('button', 'store-gallery-arrow');
+    previous.type = next.type = 'button';
+    previous.setAttribute('aria-label', '上一張照片');
+    next.setAttribute('aria-label', '下一張照片');
+    previous.disabled = true;
+    connectPhotoControls(track, previous, next);
+    controls.append(previous, next);
+    header.append(controls);
+  }
+
+  gallery.append(header, track);
+  return gallery;
+}
+
+function renderStore({ id, name, address, category, serviceType, shopPhoto, social, openingHours, visitNote, visitUrl, productImages }, openShare, openPhotos, tag = 'li') {
   const card = element(tag, 'store-card');
   const summary = element('div', 'store-summary');
   const text = element('div', 'store-text');
@@ -75,33 +215,49 @@ function renderStore({ name, address, category, serviceType, shopPhoto, social, 
     summary.append(img);
   }
 
-  const links = element('div', 'store-links');
   const directions = new URL('https://www.google.com/maps/dir/');
   directions.searchParams.set('api', '1');
   directions.searchParams.set('destination', `${address} ${name}`);
-  links.append(externalLink('導航', directions, name));
-  for (const [field, label] of SOCIALS) {
+  const navigation = externalLink('導航', directions, name);
+  navigation.className = 'store-navigation';
+  const actions = element('div', 'store-card-actions');
+  if (typeof id === 'string' && id) {
+    const share = element('button', 'store-action', '分享');
+    share.type = 'button';
+    share.setAttribute('aria-label', '分享店家');
+    share.setAttribute('aria-haspopup', 'dialog');
+    share.setAttribute('aria-controls', 'store-share-dialog');
+    share.addEventListener('click', () => openShare({ id, name }));
+    actions.append(share);
+  }
+  const visit = safeUrl(visitUrl);
+  if (visit) {
+    const link = externalLink('探店', visit, name);
+    link.className = 'store-action store-visit';
+    actions.append(link);
+  }
+  actions.append(navigation);
+  const links = element('div', 'store-links');
+  for (const [field, label, file] of SOCIALS) {
     const url = safeUrl(social?.[field]);
-    if (url) links.append(externalLink(label, url, name));
+    if (!url) continue;
+    const link = externalLink(label, url, name);
+    link.title = label;
+    const icon = element('img');
+    icon.alt = '';
+    icon.width = icon.height = 20;
+    icon.decoding = 'async';
+    icon.loading = 'lazy';
+    icon.src = `/designers/assets/buttons/${file}`;
+    link.replaceChildren(icon);
+    links.append(link);
   }
 
-  card.append(summary);
+  card.append(summary, actions);
   const hours = openingHours?.text;
   const hasHours = typeof hours === 'string' && hours.trim()
     && ['verified', 'reference', 'appointment'].includes(openingHours.status);
-  const photos = element('div', 'store-gallery');
-  for (const product of Array.isArray(productImages) ? productImages : []) {
-    const url = localPhotoUrl(product?.url);
-    if (!url) continue;
-    const image = element('img', 'store-gallery-image');
-    image.alt = product.alt || `${name}的店家照片`;
-    image.loading = 'lazy';
-    image.decoding = 'async';
-    image.addEventListener('error', () => image.remove(), { once: true });
-    image.src = url.href;
-    photos.append(image);
-  }
-  if (hasHours || visitNote || photos.childElementCount) {
+  if (hasHours || visitNote) {
     const details = element('details', 'store-details');
     details.append(element('summary', '', '到訪資訊'));
     if (hasHours) {
@@ -110,10 +266,17 @@ function renderStore({ name, address, category, serviceType, shopPhoto, social, 
       if (openingHours.note) details.append(element('p', 'store-visit-note', openingHours.note));
     }
     if (visitNote) details.append(element('p', 'store-visit-note', visitNote));
-    if (photos.childElementCount) details.append(photos);
     card.append(details);
   }
-  card.append(links);
+  if (links.childElementCount) card.append(links);
+  const photos = (Array.isArray(productImages) ? productImages : []).flatMap(product => {
+    const url = localPhotoUrl(product?.url);
+    if (!url) return [];
+    const alt = typeof product.alt === 'string' && product.alt.trim() || `${name}的店家照片`;
+    const caption = typeof product.caption === 'string' ? product.caption.trim() : '';
+    return [{ url: url.href, alt, caption: caption || alt }];
+  });
+  if (photos.length) card.append(renderStoreGallery(photos, openPhotos));
   return card;
 }
 
@@ -148,7 +311,166 @@ function loadAsset(tag, url) {
   });
 }
 
-async function createStoreMap(container, message) {
+function createStorePin(L, shop, largeServiceMarkers) {
+  const artwork = shop.mapMarker;
+  const photo = largeServiceMarkers ? localPhotoUrl(artwork?.image) : null;
+  const isArtwork = Boolean(photo && artwork.artwork);
+  const badgeClass = photo ? (isArtwork ? 'store-artwork-pin' : 'store-portrait-pin') : 'store-category-pin';
+  const badge = element('div', badgeClass);
+  badge.classList.toggle('is-unverified', shop.verification === false);
+
+  const width = photo ? artwork.width : 34;
+  const height = photo ? artwork.height : 40;
+  const scale = isArtwork ? .56 : 1;
+  const size = [width * scale, height * scale];
+  badge.style.width = `${size[0]}px`;
+  badge.style.height = `${size[1]}px`;
+
+  if (photo) {
+    const img = element('img');
+    img.src = photo.href;
+    img.alt = '';
+    badge.append(img);
+    if (isArtwork && artwork.type) {
+      const role = element('span', 'store-artwork-type', artwork.type);
+      role.style.fontSize = `${Math.min(size[0] * .14, size[0] * .74 / [...artwork.type].length)}px`;
+      if (artwork.blankTypeFooter) role.style.background = 'transparent';
+      badge.append(role);
+    }
+  } else {
+    badge.append(storeCategoryIcon(shop.category, shop.verification));
+  }
+  return {
+    badge,
+    icon: L.divIcon({ html: badge, className: 'store-marker', iconSize: size, iconAnchor: [size[0] / 2, size[1]] }),
+  };
+}
+
+function createStoreSheet(panel, container, renderStoreDetails) {
+  const sheet = element('section', 'store-sheet');
+  sheet.hidden = true;
+  sheet.setAttribute('aria-labelledby', 'store-sheet-title');
+  const toolbar = element('div', 'store-sheet-toolbar');
+  const handle = element('button', 'store-sheet-handle');
+  handle.type = 'button';
+  handle.setAttribute('aria-controls', 'store-sheet-content');
+  const closeButton = element('button', 'store-sheet-close', '×');
+  closeButton.type = 'button';
+  closeButton.setAttribute('aria-label', '關閉店家資訊');
+  const content = element('div', 'store-sheet-content');
+  content.id = 'store-sheet-content';
+  toolbar.append(handle, closeButton);
+  sheet.append(toolbar, content);
+  panel.append(sheet);
+  let selected;
+  let expanded = false;
+  let drag;
+  let dragged = false;
+  const blocked = [];
+
+  function setExpanded(value) {
+    expanded = value;
+    sheet.classList.toggle('is-expanded', value);
+    handle.setAttribute('aria-expanded', String(value));
+    handle.setAttribute('aria-label', value ? '縮回店家資訊' : '全螢幕觀看店家資訊');
+    if (value) {
+      sheet.setAttribute('role', 'dialog');
+      sheet.setAttribute('aria-modal', 'true');
+      // The full-height sheet covers its ancestors' sibling content.
+      for (let node = sheet; node !== document.body; node = node.parentElement) {
+        for (const sibling of node.parentElement.children) {
+          if (sibling !== node && sibling instanceof HTMLElement && !sibling.inert && !(sibling instanceof HTMLDialogElement)) {
+            sibling.inert = true;
+            blocked.push(sibling);
+          }
+        }
+      }
+    } else {
+      sheet.removeAttribute('role');
+      sheet.removeAttribute('aria-modal');
+      for (const sibling of blocked.splice(0)) sibling.inert = false;
+    }
+  }
+
+  function finishDrag() {
+    drag = null;
+    sheet.classList.remove('is-dragging');
+    sheet.style.removeProperty('--store-sheet-drag-height');
+  }
+
+  handle.addEventListener('pointerdown', event => {
+    if (!event.isPrimary || event.button !== 0) return;
+    dragged = false;
+    drag = { id: event.pointerId, start: event.clientY, height: sheet.getBoundingClientRect().height };
+    handle.setPointerCapture(event.pointerId);
+  });
+  handle.addEventListener('pointermove', event => {
+    if (drag?.id !== event.pointerId) return;
+    const distance = drag.start - event.clientY;
+    if (!dragged && Math.abs(distance) < 8) return;
+    dragged = true;
+    sheet.classList.add('is-dragging');
+    sheet.style.setProperty('--store-sheet-drag-height', `${drag.height + distance}px`);
+  });
+  handle.addEventListener('pointerup', event => {
+    if (drag?.id !== event.pointerId) return;
+    const distance = drag.start - event.clientY;
+    finishDrag();
+    if (Math.abs(distance) >= 40) {
+      dragged = true;
+      setExpanded(distance > 0);
+    }
+  });
+  handle.addEventListener('lostpointercapture', finishDrag);
+  handle.addEventListener('click', event => {
+    if (event.detail === 0 || !dragged) setExpanded(!expanded);
+  });
+  setExpanded(false);
+
+  function close(restoreFocus = false) {
+    if (!selected) return;
+    selected.badge.classList.remove('is-selected');
+    sheet.hidden = true;
+    finishDrag();
+    setExpanded(false);
+    container.style.removeProperty('--store-map-top');
+    container.classList.remove('has-store-sheet');
+    content.replaceChildren();
+    if (restoreFocus) selected.marker.getElement()?.focus({ preventScroll: true });
+    selected = null;
+  }
+
+  closeButton.addEventListener('click', () => close(true));
+  sheet.addEventListener('keydown', event => {
+    if (event.key === 'Escape') close(true);
+  });
+
+  function syncMapTop() {
+    if (!selected) return;
+    const top = container.getBoundingClientRect().top + window.scrollY;
+    container.style.setProperty('--store-map-top', `${top}px`);
+  }
+
+  return {
+    open(shop, marker, badge) {
+      selected?.badge.classList.remove('is-selected');
+      selected = { marker, badge };
+      badge.classList.add('is-selected');
+      const card = renderStoreDetails(shop);
+      card.querySelector('.store-name').id = 'store-sheet-title';
+      content.replaceChildren(card);
+      content.scrollTop = 0;
+      sheet.hidden = false;
+      syncMapTop();
+      container.classList.add('has-store-sheet');
+      closeButton.focus({ preventScroll: true });
+    },
+    close,
+    syncMapTop,
+  };
+}
+
+async function createStoreMap(container, message, locateButton, sheet, renderStoreDetails, onSelectMobileStore) {
   await Promise.all([
     loadAsset('link', '/vendor/leaflet/leaflet.css'),
     loadAsset('link', '/vendor/leaflet-markercluster/MarkerCluster.css'),
@@ -157,8 +479,22 @@ async function createStoreMap(container, message) {
   await loadAsset('script', '/vendor/leaflet-markercluster/leaflet.markercluster.js');
   const L = globalThis.L;
   const map = L.map(container, { scrollWheelZoom: false, maxZoom: 19 });
+  const mobile = window.matchMedia('(max-width: 560px)');
+  let userMarker;
+  function closeDetails() {
+    sheet.close();
+    map.closePopup();
+  }
+  mobile.addEventListener('change', closeDetails);
   map.zoomControl.getContainer().querySelector('.leaflet-control-zoom-in').setAttribute('aria-label', '放大地圖');
   map.zoomControl.getContainer().querySelector('.leaflet-control-zoom-out').setAttribute('aria-label', '縮小地圖');
+  const locateControl = L.control({ position: 'bottomright' });
+  locateControl.onAdd = () => {
+    const control = element('div', 'store-locate-control');
+    control.append(locateButton);
+    L.DomEvent.disableClickPropagation(control);
+    return control;
+  };
 
   let tileLoaded = false;
   const tiles = L.tileLayer(MAP_TILES, {
@@ -173,43 +509,135 @@ async function createStoreMap(container, message) {
     message.hidden = tileLoaded;
   });
   tiles.addTo(map);
+  locateControl.addTo(map);
 
   const markers = L.markerClusterGroup({
-    maxClusterRadius: 48,
+    maxClusterRadius: 45,
     showCoverageOnHover: false,
+    spiderfyDistanceMultiplier: 1.8,
     iconCreateFunction(cluster) {
+      const count = cluster.getChildCount();
+      const label = element('span', '', String(count));
+      label.setAttribute('aria-label', `${count} 間店家，點擊展開`);
+      label.title = `${count} 間店家，點擊展開`;
       return L.divIcon({
         className: 'store-cluster',
-        html: String(cluster.getChildCount()),
-        iconSize: [40, 40],
+        html: label,
+        iconSize: [44, 44],
       });
     },
   }).addTo(map);
 
   return {
+    closeDetails,
+    locate({ latitude, longitude }) {
+      const position = [latitude, longitude];
+      closeDetails();
+      map.invalidateSize({ pan: false });
+      if (userMarker) userMarker.setLatLng(position);
+      else {
+        userMarker = L.circleMarker(position, {
+          radius: 8, color: '#fff', weight: 3, fillColor: '#009a50', fillOpacity: 1,
+          className: 'store-user-location',
+        }).addTo(map).bindTooltip('我的位置');
+      }
+      map.setView(position, 16, { animate: false });
+    },
     resize() {
       map.invalidateSize({ pan: false });
     },
-    refresh(stores) {
+    openStore(id) {
+      const marker = markers.getLayers().find(pin => pin.options.storeId === id);
+      if (!marker) return false;
+      map.setView(marker.getLatLng(), 16, { animate: false });
+      markers.zoomToShowLayer(marker, () => {
+        if (container.offsetWidth && markers.hasLayer(marker)) marker.fire('click');
+      });
+      return true;
+    },
+    refresh(stores, category) {
+      closeDetails();
       map.invalidateSize({ pan: false });
+      map.removeLayer(markers);
       markers.clearLayers();
       const pins = [];
       for (const shop of stores) {
         const { lat, lng } = shop.latlng || {};
         if (!Number.isFinite(lat) || !Number.isFinite(lng) || Math.abs(lat) > 90 || Math.abs(lng) > 180) continue;
-        const marker = L.marker([lat, lng], { title: shop.name, alt: shop.name });
-        marker.bindPopup(() => renderStore(shop, 'article'), { maxWidth: 290, maxHeight: 350 });
+        const { badge, icon } = createStorePin(L, shop, category === '洋流服務站');
+        const marker = L.marker([lat, lng], { title: shop.name, alt: shop.name, icon, storeId: shop.id });
+        marker.on('add', () => {
+          const button = marker.getElement();
+          button.setAttribute('aria-label', shop.name);
+          button.onkeydown = event => {
+            if (event.key !== 'Enter' && event.key !== ' ') return;
+            event.preventDefault();
+            button.click();
+          };
+        });
+        const popup = L.popup({ maxWidth: 290, offset: [0, -icon.options.iconSize[1]] }, marker);
+        popup.on('add', () => badge.classList.add('is-selected'));
+        popup.on('remove', () => badge.classList.remove('is-selected'));
+        marker.on('click', () => {
+          if (mobile.matches) {
+            onSelectMobileStore();
+            sheet.open(shop, marker, badge);
+            map.invalidateSize({ pan: false });
+            map.panInside(marker.getLatLng(), { paddingTopLeft: [35, 58], paddingBottomRight: [35, 35], animate: false });
+          } else if (map.hasLayer(popup)) {
+            map.closePopup(popup);
+          } else {
+            popup.setLatLng(marker.getLatLng()).setContent(renderStoreDetails(shop)).openOn(map);
+          }
+        });
         pins.push(marker);
       }
-      markers.addLayers(pins);
-      const bounds = pins.length ? markers.getBounds() : TAIWAN_BOUNDS;
+      const bounds = pins.length ? L.latLngBounds(pins.map(pin => pin.getLatLng())) : TAIWAN_BOUNDS;
       map.fitBounds(bounds, { animate: false, padding: [28, 28], maxZoom: 15 });
+      markers.addLayers(pins);
+      markers.addTo(map);
       return pins.length;
     },
   };
 }
 
-export async function mountStores(root) {
+export async function mountStores(root, workPreviews = []) {
+  const openShare = createStoreShare(document.getElementById('store-share-dialog'));
+  const openPhotos = createStorePhotoViewer(document.getElementById('store-photo-viewer'));
+  const sharedStoreId = new URLSearchParams(location.search).get('shop');
+  let previousWork = -1;
+
+  function renderStoreDetails(shop) {
+    const card = renderStore(shop, openShare, openPhotos, 'article');
+    if (workPreviews.length) {
+      const avoidRepeat = previousWork >= 0 && workPreviews.length > 1;
+      const index = Math.floor(Math.random() * (workPreviews.length - Number(avoidRepeat)));
+      previousWork = avoidRepeat && index >= previousWork ? index + 1 : index;
+      const work = workPreviews[previousWork];
+      const link = element('a', 'store-work-preview-link');
+      link.href = work.href;
+      link.target = '_blank';
+      link.rel = 'noopener';
+      link.setAttribute('aria-label', `查看${work.designerName}的作品「${work.label}」（在新分頁開啟）`);
+      const image = element('img');
+      image.alt = work.label;
+      if (work.width && work.height) {
+        image.width = work.width;
+        image.height = work.height;
+      }
+      image.loading = 'lazy';
+      image.decoding = 'async';
+      image.src = work.image;
+      const cover = element('span', 'store-work-preview-cover');
+      cover.append(image, element('span', 'store-work-preview-designer', work.designerName));
+      link.append(cover);
+      const divider = element('h4', 'store-work-preview-divider', '✦');
+      divider.setAttribute('aria-label', '分享設計師');
+      card.append(divider, link);
+    }
+    return card;
+  }
+
   const controls = element('div', 'store-controls');
   const search = element('input', 'store-input');
   search.type = 'search';
@@ -219,7 +647,14 @@ export async function mountStores(root) {
   const category = element('select', 'store-input');
   setOptions(city, '全部縣市', []);
   setOptions(category, '全部店別', []);
-  controls.append(labelField('搜尋', search), labelField('縣市', city), labelField('店別', category));
+  const filterToggle = element('button', 'store-action store-filter-toggle', '篩選');
+  filterToggle.type = 'button';
+  filterToggle.setAttribute('aria-controls', 'store-filters');
+  filterToggle.setAttribute('aria-expanded', 'false');
+  const filters = element('div', 'store-filters');
+  filters.id = 'store-filters';
+  filters.append(labelField('縣市', city), labelField('店別', category));
+  controls.append(labelField('搜尋', search), filterToggle, filters);
 
   const status = element('p', 'store-status');
   status.setAttribute('role', 'status');
@@ -229,31 +664,70 @@ export async function mountStores(root) {
   const listMode = element('button', 'store-action', '店家清單');
   const mapMode = element('button', 'store-action', '店家地圖');
   listMode.type = mapMode.type = 'button';
-  listMode.setAttribute('aria-pressed', 'true');
-  mapMode.setAttribute('aria-pressed', 'false');
+  listMode.setAttribute('aria-pressed', 'false');
+  mapMode.setAttribute('aria-pressed', 'true');
   modes.append(listMode, mapMode);
+  const viewBar = element('div', 'store-view-bar');
+  viewBar.append(modes, status);
+  const tools = element('div', 'store-tools');
+  tools.id = 'store-tools';
+  tools.append(controls, viewBar);
+  const toolsToggle = element('button', 'back-link store-tools-toggle');
+  toolsToggle.type = 'button';
+  toolsToggle.setAttribute('aria-controls', tools.id);
+  toolsToggle.setAttribute('aria-expanded', 'true');
+  toolsToggle.textContent = '收合工具';
+  root.closest('.stores-directory').querySelector('.directory-header').append(toolsToggle);
   const retry = element('button', 'store-action', '重新載入');
   const more = element('button', 'store-action store-more', '顯示更多店家');
   retry.type = more.type = 'button';
   retry.hidden = more.hidden = true;
   const list = element('ul', 'store-results');
   list.setAttribute('role', 'list');
+  list.hidden = true;
   const mapPanel = element('div', 'store-map-panel');
+  const locateButton = element('button', 'store-action store-locate');
+  locateButton.type = 'button';
+  locateButton.disabled = true;
+  locateButton.setAttribute('aria-label', '我的位置');
+  locateButton.title = '我的位置';
+  const locateIcon = element('span', 'store-locate-icon');
+  locateIcon.setAttribute('aria-hidden', 'true');
+  locateButton.append(locateIcon);
+  const locationStatus = element('p', 'store-location-status');
+  locationStatus.setAttribute('role', 'status');
   const mapElement = element('div', 'store-map');
   mapElement.setAttribute('aria-label', '店家位置');
   const mapMessage = element('p', 'store-map-status');
   mapMessage.setAttribute('role', 'status');
   mapPanel.hidden = mapElement.hidden = mapMessage.hidden = true;
-  mapPanel.append(mapMessage, mapElement);
-  root.replaceChildren(controls, modes, status, retry, list, more, mapPanel);
+  mapPanel.append(locationStatus, mapMessage, mapElement);
+  const storeSheet = createStoreSheet(mapPanel, mapElement, renderStoreDetails);
+  root.replaceChildren(tools, retry, list, more, mapPanel);
 
   let stores = [];
   let matches = [];
   let shown = 0;
   let map = null;
   let mapTask = null;
-  let showingMap = false;
+  let showingMap = true;
   let mapNeedsRefresh = true;
+  let locating = false;
+  let firstMobileStoreSelected = false;
+
+  function setToolsExpanded(expanded) {
+    tools.classList.toggle('is-collapsed', !expanded);
+    toolsToggle.setAttribute('aria-expanded', String(expanded));
+    toolsToggle.textContent = expanded ? '收合工具' : '展開工具';
+    storeSheet.syncMapTop();
+    updateMap();
+  }
+
+  function collapseOnFirstSelection() {
+    if (firstMobileStoreSelected) return;
+    firstMobileStoreSelected = true;
+    setToolsExpanded(false);
+  }
 
   function updateStatus() {
     if (!matches.length) {
@@ -271,7 +745,7 @@ export async function mountStores(root) {
       map.resize();
       return;
     }
-    const located = map.refresh(matches);
+    const located = map.refresh(matches, category.value);
     mapNeedsRefresh = false;
     if (located < matches.length) {
       status.textContent = `共 ${matches.length} 家，其中 ${located} 家可在地圖查看。`;
@@ -288,7 +762,7 @@ export async function mountStores(root) {
     if (!mapTask) {
       mapMessage.textContent = '正在載入地圖…';
       mapMessage.hidden = false;
-      mapTask = createStoreMap(mapElement, mapMessage);
+      mapTask = createStoreMap(mapElement, mapMessage, locateButton, storeSheet, renderStoreDetails, collapseOnFirstSelection);
     }
     try {
       if (!map) {
@@ -298,6 +772,7 @@ export async function mountStores(root) {
       if (!showingMap) return;
       mapElement.hidden = false;
       updateMap();
+      locateButton.disabled = locating;
     } catch {
       mapTask = null;
       mapMessage.textContent = '地圖暫時無法載入。可再選一次「店家地圖」重試，或切換回清單。';
@@ -305,8 +780,53 @@ export async function mountStores(root) {
     }
   }
 
+  function locateMe() {
+    if (!navigator.geolocation) {
+      locationStatus.textContent = '此瀏覽器無法定位，請使用支援定位的瀏覽器。';
+      return;
+    }
+
+    locating = locateButton.disabled = true;
+    locateButton.setAttribute('aria-busy', 'true');
+    locationStatus.textContent = '正在取得你的位置…';
+    let finished = false;
+    function finish(message = '') {
+      if (finished) return;
+      finished = true;
+      clearTimeout(watchdog);
+      locationStatus.textContent = message;
+      locating = locateButton.disabled = false;
+      locateButton.removeAttribute('aria-busy');
+    }
+
+    const watchdog = setTimeout(() => {
+      finish('定位等待逾時，請確認已允許位置存取後再試。');
+    }, 20000);
+    try {
+      navigator.geolocation.getCurrentPosition(({ coords }) => {
+        if (finished) return;
+        try {
+          if (showingMap) map.locate(coords);
+          finish();
+        } catch {
+          finish('定位結果無法顯示，請再試一次。');
+        }
+      }, ({ code }) => {
+        const messages = {
+          1: '尚未允許定位，請在瀏覽器或手機設定中允許位置存取後再試。',
+          2: '暫時無法取得位置，請確認手機定位服務已開啟後再試。',
+          3: '定位逾時，請移到訊號較佳的位置後再試。',
+        };
+        finish(messages[code] || '定位失敗，請稍後再試。');
+      }, { enableHighAccuracy: false, timeout: 15000, maximumAge: 60000 });
+    } catch {
+      finish('此瀏覽器無法啟動定位，請確認位置權限後再試。');
+    }
+  }
+
   function showList() {
     showingMap = false;
+    map?.closeDetails();
     listMode.setAttribute('aria-pressed', 'true');
     mapMode.setAttribute('aria-pressed', 'false');
     mapPanel.hidden = true;
@@ -316,7 +836,7 @@ export async function mountStores(root) {
   }
 
   function showMore() {
-    const batch = matches.slice(shown, shown + PAGE_SIZE).map(shop => renderStore(shop));
+    const batch = matches.slice(shown, shown + PAGE_SIZE).map(shop => renderStore(shop, openShare, openPhotos));
     list.append(...batch);
     shown += batch.length;
     updateStatus();
@@ -325,6 +845,8 @@ export async function mountStores(root) {
   }
 
   function filterStores() {
+    const activeFilters = Number(Boolean(city.value)) + Number(Boolean(category.value));
+    filterToggle.textContent = activeFilters ? `篩選（${activeFilters}）` : '篩選';
     const terms = normalize(search.value).split(/\s+/).filter(Boolean);
     matches = stores.filter(shop => (
       (!city.value || shop.city === city.value)
@@ -340,10 +862,11 @@ export async function mountStores(root) {
 
   async function loadStores() {
     search.disabled = city.disabled = category.disabled = listMode.disabled = mapMode.disabled = true;
+    filterToggle.disabled = true;
     retry.hidden = true;
     status.textContent = '正在載入店家資料…';
     try {
-      const response = await fetch(STORE_FEED);
+      const response = await fetch(STORE_FEED, { cache: 'no-cache' });
       if (!response.ok) throw new Error(`店家資料回傳 ${response.status}`);
       const data = await response.json();
       if (!Array.isArray(data?.stores)) throw new Error('店家資料格式不正確');
@@ -361,18 +884,39 @@ export async function mountStores(root) {
       setOptions(city, '全部縣市', stores.map(shop => shop.city));
       setOptions(category, '全部店別', stores.map(shop => shop.category));
       search.disabled = city.disabled = category.disabled = listMode.disabled = mapMode.disabled = false;
+      filterToggle.disabled = false;
       filterStores();
+      if (showingMap) await showMap();
+      const sharedStore = stores.find(shop => shop.id === sharedStoreId);
+      if (sharedStore && !map?.openStore(sharedStore.id)) {
+        matches = [sharedStore];
+        list.replaceChildren();
+        shown = 0;
+        showMore();
+        showList();
+        mapNeedsRefresh = true;
+      }
     } catch {
       status.textContent = '目前無法載入店家資料。請稍後重試。';
       retry.hidden = false;
     }
   }
 
+  toolsToggle.addEventListener('click', () => {
+    setToolsExpanded(toolsToggle.getAttribute('aria-expanded') !== 'true');
+  });
+  filterToggle.addEventListener('click', () => {
+    const expanded = filterToggle.getAttribute('aria-expanded') === 'true';
+    filterToggle.setAttribute('aria-expanded', String(!expanded));
+    storeSheet.syncMapTop();
+    updateMap();
+  });
   search.addEventListener('input', filterStores);
   city.addEventListener('change', filterStores);
   category.addEventListener('change', filterStores);
   listMode.addEventListener('click', showList);
   mapMode.addEventListener('click', showMap);
+  locateButton.addEventListener('click', locateMe);
   new ResizeObserver(updateMap).observe(mapElement);
   more.addEventListener('click', () => {
     const [first] = showMore();
