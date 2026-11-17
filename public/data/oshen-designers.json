@@ -6688,15 +6688,6 @@
       },
       "productImages": [
         {
-          "url": "/media/library/pon-pon-bao/4.webp?v=9874f2d3c2da7825",
-          "alt": "香菜包作品：粉紅服裝角色舉旗與心存大台中文字",
-          "source": "https://minicourse.dev/media/library/pon-pon-bao/4.webp?v=9874f2d3c2da7825",
-          "checkedAt": "2026-11-17",
-          "note": "使用者提供，指定為此設計師作品照片",
-          "id": "work-a9ea0825859343c8badda56bde2c3479",
-          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572251301989974046/842767859_17969826792174684_158268851542510600_n.png?ex=6afdb0a1&is=6afc5f21&hm=f1806911eb7e2712155e11259de7bbb1ded8767f45228002b5fcbcf491df7114&"
-        },
-        {
           "url": "/media/library/pon-pon-bao/5.webp?v=2ae37eb22e7d8d80",
           "alt": "香菜包作品：冬日店鋪前的女孩與白色角色插畫",
           "source": "https://minicourse.dev/media/library/pon-pon-bao/5.webp?v=2ae37eb22e7d8d80",
@@ -6749,6 +6740,15 @@
           "note": "取自官方 Threads 帳號 @pon_pon_bao 的公開作品貼文，HTTPS 圖片可讀取",
           "id": "work-2f1855c73e4e4b18abb8de905fdd18a9",
           "originalUrl": "https://scontent-lax3-2.cdninstagram.com/v/t51.82787-15/896705765_17975875101174684_1059426782162220242_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=101&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMjM5NDIwNDEzNDc0NjY0NQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTE4MS5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=I-9lFLV3h40Q7kNvwEOmS3e&_nc_oc=AdreZtXuorM16MWVq6VcwpQ6JEtN154LLPrQKZHozHH1gIoYtQt5iNrWaDENNZYgWws&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-lax3-2.cdninstagram.com&_nc_gid=W41LVYlxbJ10JCO3sgPTtg&_nc_ss=7a20f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQTvGMBV8mQM1v72aj4m0qeeIZS0ovwYJ5US-v45CUzlzQ&oe=6B023387"
+        },
+        {
+          "url": "/media/library/pon-pon-bao/4.webp?v=9874f2d3c2da7825",
+          "alt": "香菜包作品：粉紅服裝角色舉旗與心存大台中文字",
+          "source": "https://minicourse.dev/media/library/pon-pon-bao/4.webp?v=9874f2d3c2da7825",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-a9ea0825859343c8badda56bde2c3479",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572251301989974046/842767859_17969826792174684_158268851542510600_n.png?ex=6afdb0a1&is=6afc5f21&hm=f1806911eb7e2712155e11259de7bbb1ded8767f45228002b5fcbcf491df7114&"
         }
       ]
     }
