@@ -6326,6 +6326,112 @@
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572105360783712419/913149961_981290287937599_2193777068634506036_n.png?ex=6afd28b6&is=6afbd736&hm=73233e2b3307d5ece11bf934c97ce8cce37d77ec7ca3a90b0e6be15469659056&"
         }
       ]
+    },
+    {
+      "id": "agi-huang",
+      "name": "A-gi Huang",
+      "description": "遊戲界走跳20年的美術原畫創作者\n老UC迷、星戰老粉、頑固台獨份子\nTeam Taiwan 、資深爪迷、台派",
+      "category": "設計師",
+      "social": {
+        "fb": "https://www.facebook.com/share/1d5vVaNABN/?mibextid=wwXIfr",
+        "threads": "https://www.threads.com/@agi_huang",
+        "ig": "https://www.instagram.com/agi_huang/",
+        "web": ""
+      },
+      "verification": true,
+      "disabled": false,
+      "logo": {
+        "url": "/media/library/agi-huang/logo.webp?v=fce164db18b42788",
+        "source": "https://www.threads.com/@agi_huang",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-17",
+        "note": "已核對 Threads 官方個人頁頭像，HTTPS 圖片可讀取",
+        "originalUrl": "https://scontent-tpe1-1.cdninstagram.com/v/t51.82787-19/832588684_17950400742296184_5081263329624887764_n.jpg?stp=dst-jpg_s640x640_tt6&_nc_cat=101&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=b3fa00&_nc_ohc=M_0M3i14urYQ7kNvwHGMv0_&_nc_oc=Adq0vTsd0Qo8Rul1zJDLhdsOWPkMoqoML9o5tR4XaMlsFlAAK1FryoXyGKVgi8BP9hA&_nc_zt=24&_nc_ht=scontent-tpe1-1.cdninstagram.com&_nc_gid=Irae70W8Oe5DJFXP9QWbZg&_nc_ss=7b20f&oh=00_AQSBJmMBJbiZbbSV7yS5OBm9R_oo5EB7YXPquYvQp76FNQ&oe=6B019286"
+      },
+      "productImages": [
+        {
+          "url": "/media/library/agi-huang/1.webp?v=e3b902c4b692ac36",
+          "alt": "A-gi Huang 作品：台北大洋流船長角色橫式海報",
+          "source": "https://minicourse.dev/media/library/agi-huang/1.webp?v=e3b902c4b692ac36",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-0f655592e27c4a5cac8c35148d7cf7e9",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572106773072969788/831354407_17950452285296184_401974454426682995_n.png?ex=6afd2a07&is=6afbd887&hm=48a8989ea49f9737ebde75689425daff97327cf1cc6f8cb684479ba56003edd0&"
+        },
+        {
+          "url": "/media/library/agi-huang/2.webp?v=6d804855283b5c87",
+          "alt": "A-gi Huang 作品：台北大洋流汽車角色橫式海報",
+          "source": "https://minicourse.dev/media/library/agi-huang/2.webp?v=6d804855283b5c87",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-8dfcf040d78c47f1868e6472a30418cc",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572106773651922954/830116183_17950783896296184_2588092217986851061_n.png?ex=6afd2a07&is=6afbd887&hm=36565c52a0eb92528a480d4015983c3f0a3d7552da2b53ebfccb0b9badad6e85&"
+        },
+        {
+          "url": "/media/library/agi-huang/3.webp?v=5ebdaf95b6e90a93",
+          "alt": "A-gi Huang 作品：台北大洋流橘色直式海報",
+          "source": "https://minicourse.dev/media/library/agi-huang/3.webp?v=5ebdaf95b6e90a93",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-e833dac2b26842baaffd41abed0dc6e5",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572106774213951560/833374985_17950786911296184_5573646853909290599_n.png?ex=6afd2a07&is=6afbd887&hm=e724cb6d783592e4f28ba8bec71d0faa85652adac4aac617dc70aaaf2afdfa30&"
+        },
+        {
+          "url": "/media/library/agi-huang/4.webp?v=be4bb6a01fde7f84",
+          "alt": "A-gi Huang 作品：洋流 SOON 藍色直式海報",
+          "source": "https://minicourse.dev/media/library/agi-huang/4.webp?v=be4bb6a01fde7f84",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-030affdf4046471abb6b16e0a44b7f4f",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572106775459659898/835721679_17951367309296184_2640499717945855422_n.png?ex=6afd2a07&is=6afbd887&hm=8243597edabee8cc63e906ec1dea0e4f80a56134fadedc74a0aa28ebf2ad8bed&"
+        },
+        {
+          "url": "/media/library/agi-huang/5.webp?v=5981f225aec2c7ba",
+          "alt": "A-gi Huang 作品：台北大洋流海報印刷實品",
+          "source": "https://minicourse.dev/media/library/agi-huang/5.webp?v=5981f225aec2c7ba",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-28a3ec64e5214f5297c8a67d66d4047f",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572106775883161741/845977214_17952197448296184_4192336675486405917_n.png?ex=6afd2a07&is=6afbd887&hm=03a9c7e0a1fdc7a1b8a52c8a05affbefa476325a573851f09dd2edb92295beeb&"
+        },
+        {
+          "url": "/media/library/agi-huang/6.webp?v=419af2623d028d00",
+          "alt": "A-gi Huang 作品：內湖南港艦隊船長與臺灣藍鵲圓形圖案",
+          "source": "https://minicourse.dev/media/library/agi-huang/6.webp?v=419af2623d028d00",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-d31b80e2784c4397b08fa1048374778b",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572106776189603950/852558657_17952804822296184_7300054943218952122_n.png?ex=6afd2a07&is=6afbd887&hm=8d565ec91800f8dc3b2d59f7deb66b2d0380027f45ba45ef8347a73636a39c0a&"
+        },
+        {
+          "url": "/media/library/agi-huang/7.webp?v=2efe6a91e69d1e15",
+          "alt": "A-gi Huang 作品：內湖南港艦隊汽車角色圓形圖案",
+          "source": "https://minicourse.dev/media/library/agi-huang/7.webp?v=2efe6a91e69d1e15",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-a47de7e17d0e4c4db3446184b4360dad",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572106776508240052/849771954_17952804846296184_41450134910797372_n.png?ex=6afd2a07&is=6afbd887&hm=0aeb347674e9028176e792d5771ce427ecd9d8513d80d3249181beb88a72a518&"
+        },
+        {
+          "url": "/media/library/agi-huang/8.webp?v=8512b63511ef7e22",
+          "alt": "A-gi Huang 作品：洋流童在雙人角色直式插畫",
+          "source": "https://minicourse.dev/media/library/agi-huang/8.webp?v=8512b63511ef7e22",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-2e931cad7f7643dc9e7cfbb1cbb2adfa",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572106783261065286/864960612_17953833327296184_3108073588757265865_n.png?ex=6afd2a09&is=6afbd889&hm=e249d8894f214c8262caecb239394a96f61f03ddf92f00e319a8d04eac83530b&"
+        },
+        {
+          "url": "/media/library/agi-huang/9.webp?v=da6ef4a98f207e50",
+          "alt": "A-gi Huang 作品：士林北投艦隊人物與鳥圓形圖案",
+          "source": "https://minicourse.dev/media/library/agi-huang/9.webp?v=da6ef4a98f207e50",
+          "checkedAt": "2026-11-17",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-5f4a425394a04d69a3eaeb84bdf3594c",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572106783881957446/867837553_17954445285296184_7165112224515815758_n.png?ex=6afd2a09&is=6afbd889&hm=6ab069ab1ec3ade20ccd67aa060c8778d6407a6b027317bff06dda0047f516b5&"
+        }
+      ]
     }
   ]
 }
