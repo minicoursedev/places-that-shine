@@ -4682,6 +4682,38 @@
       "giftStatus": "可能有小物",
       "verification": false,
       "disabled": false
+    },
+    {
+      "id": "ongacoffee",
+      "name": "王甲咖啡 ONGA Coffee",
+      "address": "臺中市沙鹿區中山路163號",
+      "category": "咖啡廳",
+      "latlng": {
+        "lat": 24.2370443,
+        "lng": 120.5657342
+      },
+      "coordinateSource": "https://www.google.com.tw/maps/place/%E7%8E%8B%E7%94%B2%E5%92%96%E5%95%A1%2BONGA%2BCAFE/data=!4m7!3m6!1s0x346915a2747a055b:0xb9115d78f0172dc0!8m2!3d24.2370443!4d120.5657342!16s%2Fg%2F11gnpr5mz9!19sChIJWwV6dKIVaTQRwC0X8HhdEbk?authuser=0&hl=zh-TW&rclk=1",
+      "coordinateNote": "採用 Google Maps 王甲咖啡地點網址的 !3d24.2370443 與 !4d120.5657342，非地圖視窗中心。以同一 Place ID 核對沙鹿區中山路163號。",
+      "openingHours": {
+        "status": "verified",
+        "text": "週一、週三至週日 10:30–17:00；週二公休。臨時調整以店家公告及 Google Maps 為準。"
+      },
+      "shopPhoto": {
+        "url": "",
+        "source": "https://www.threads.com/@ongacoffee",
+        "platform": "threads",
+        "status": "unverified",
+        "checkedAt": "2026-11-18",
+        "note": "此 Threads 網址由使用者提供，頁面回傳 HTTP 429；同址店家報導所連的 Facebook 頁也無法讀取，未能確認個人檔案頭像或圖片回應。"
+      },
+      "social": {
+        "facebook": "https://www.facebook.com/ongacoffee",
+        "threads": "https://www.threads.com/@ongacoffee"
+      },
+      "visitNote": "供應義式咖啡、手沖咖啡及甜點，不接受訂位；電話 0972-460-210。Threads 網址由使用者提供。",
+      "giftStatus": "可能有小物",
+      "verification": false,
+      "disabled": false
     }
   ]
 }
