@@ -2917,7 +2917,7 @@
       },
       "openingHours": {
         "status": "verified",
-        "text": "10:00–20:00；實際營業日與時間以官方Instagram／Facebook每月行事曆為準。"
+        "text": "通常每日 10:00–20:00；實際營業日與時間以官方 Instagram／Facebook 每月行事曆為準。"
       },
       "shopPhoto": {
         "url": "./media/library/2663space/logo.webp",
@@ -2928,7 +2928,8 @@
         "instagram": "https://www.instagram.com/2663space/",
         "threads": "https://www.threads.com/@2663space"
       },
-      "verification": false
+      "verification": false,
+      "visitNote": "由阿里山世界遺產協會經營的複合式共享空間，供應咖啡與輕食，也提供場地租借及小型展演。電話：05-276-2663。"
     },
     {
       "id": "thisishopein",
