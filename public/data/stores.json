@@ -4649,6 +4649,39 @@
       "giftStatus": "可能有小物",
       "verification": false,
       "disabled": false
+    },
+    {
+      "id": "9anfayfay-coffeemakeup",
+      "name": "玖安飛飛 Coffee & Makeup",
+      "address": "臺中市北區五常街263號1樓",
+      "category": "咖啡廳",
+      "latlng": {
+        "lat": 24.161243,
+        "lng": 120.6799024
+      },
+      "coordinateSource": "https://www.google.com.tw/maps/place/%E7%8E%96%E5%AE%89%E9%A3%9B%E9%A3%9B%2BCoffee%2B%26%2BMakeup/data=!4m7!3m6!1s0x34693d62fa3341d1:0x75f2c15798b57b05!8m2!3d24.161243!4d120.6799024!16s%2Fg%2F11f1v60q55!19sChIJ0UEz-mI9aTQRBXu1mFfB8nU?authuser=0&hl=zh-TW&rclk=1",
+      "coordinateNote": "OpenStreetMap 門牌查詢未能取得可核對結果。採用 Eaters 同名、同門牌店家頁所連 Google Maps 地點網址中的 !3d24.161243 與 !4d120.6799024，亦與店家報導的地圖轉址一致，未使用地圖視窗中心。",
+      "openingHours": {
+        "status": "unverified",
+        "text": "公開來源對週二是否營業及週三開店時間的記載不一致。出發前請查看店家 Facebook 或 Instagram 公告，或致電 04-2203-0311 確認。"
+      },
+      "shopPhoto": {
+        "url": "",
+        "source": "https://www.instagram.com/9anfayfay_coffeemakeup/",
+        "platform": "instagram",
+        "status": "unverified",
+        "checkedAt": "2026-11-18",
+        "note": "咖啡豆合作夥伴 Coffee Stopover 的店家介紹連至此 Instagram 帳號，但個人頁無法讀取；使用者提供的 Threads 回傳 HTTP 429，Facebook 亦限制存取，未能核對頭像及圖片回應。"
+      },
+      "social": {
+        "facebook": "https://www.facebook.com/9anfayfay.coffeemakeup/",
+        "instagram": "https://www.instagram.com/9anfayfay_coffeemakeup/",
+        "threads": "https://www.threads.com/@9anfayfay_coffeemakeup"
+      },
+      "visitNote": "結合咖啡、手作甜點與彩妝服務；電話 04-2203-0311。Threads 連結由使用者提供。",
+      "giftStatus": "可能有小物",
+      "verification": false,
+      "disabled": false
     }
   ]
 }
