@@ -4617,6 +4617,38 @@
       "giftStatus": "可能有小物",
       "verification": false,
       "disabled": false
+    },
+    {
+      "id": "zancoffee2018",
+      "name": "真咖啡 ZANcoffee",
+      "address": "臺中市南屯區大墩路811號1樓",
+      "category": "咖啡廳",
+      "latlng": {
+        "lat": 24.155034739043,
+        "lng": 120.64953577443
+      },
+      "coordinateSource": "https://raw.githubusercontent.com/zhengda/taiwan-address-data/master/roads/66-%E5%A4%A7%E5%A2%A9%E8%B7%AF.csv",
+      "coordinateNote": "採用標示來自 TGOS 的公開門牌資料；CSV 明列臺中市南屯區溝墘里大墩路811號的 X（經度）與 Y（緯度），非路段中心。",
+      "openingHours": {
+        "status": "reference",
+        "text": "公開店家資料列週一至週五及週日 13:00–19:00、週六公休；現行時段請先向店家確認。"
+      },
+      "shopPhoto": {
+        "url": "",
+        "source": "https://www.facebook.com/zancoffee2018/",
+        "platform": "facebook",
+        "status": "unverified",
+        "checkedAt": "2026-11-18",
+        "note": "FooTinder 的同址店家頁連至此 Facebook 粉專，但未能讀取可驗證的個人檔案頭像；使用者提供的 Threads 頁也未能讀取。"
+      },
+      "social": {
+        "facebook": "https://www.facebook.com/zancoffee2018/",
+        "threads": "https://www.threads.com/@zancoffee2018"
+      },
+      "visitNote": "虹吸咖啡專門店，亦提供咖啡沖煮課程。Threads 網址由使用者提供。",
+      "giftStatus": "可能有小物",
+      "verification": false,
+      "disabled": false
     }
   ]
 }
