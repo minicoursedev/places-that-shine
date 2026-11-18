@@ -4584,6 +4584,39 @@
       "giftStatus": "可能有小物",
       "verification": false,
       "disabled": false
+    },
+    {
+      "id": "iamagirl-brunch",
+      "name": "人家是女生",
+      "address": "臺中市西屯區上仁街113號",
+      "category": "正餐",
+      "latlng": {
+        "lat": 24.1713112,
+        "lng": 120.6414859
+      },
+      "coordinateSource": "https://maps.google.com/?f=q&ie=UTF8&ll=24.171311%2C120.641486&marker=24.171311%2C120.641486&mrt=loc&q=loc%3A24.1713112%2C+120.6414859+%28407%E5%8F%B0%E7%81%A3%E5%8F%B0%E4%B8%AD%E5%B8%82%E8%A5%BF%E5%B1%AF%E5%8D%80%E4%B8%8A%E4%BB%81%E8%A1%97113%E8%99%9F%29&sll=24.169598%2C120.639206&source=embed&source=s_q&t=m&z=17",
+      "coordinateNote": "窩客島店家報導（https://www.walkerland.com.tw/article/view/346505）所附的 Google 地圖連結以 q=loc 明示西屯區上仁街113號的定位座標；未採用地圖視窗中心。",
+      "openingHours": {
+        "status": "unverified",
+        "text": "公開來源對平日營業日的說法不一。前往前請查看店家社群公告，或致電 04-2452-4780 確認營業時間及公休日。"
+      },
+      "shopPhoto": {
+        "url": "",
+        "source": "https://www.instagram.com/iamagirl_brunch/",
+        "platform": "instagram",
+        "status": "unverified",
+        "checkedAt": "2026-11-18",
+        "note": "店家報導（https://2hyperlife.com/iamagirlbrunch/）列出此 Instagram 帳號；個人頁未能讀取，無法確認頭像及圖片回應，故留空。"
+      },
+      "social": {
+        "facebook": "https://www.facebook.com/iamagirlbrunch/",
+        "instagram": "https://www.instagram.com/iamagirl_brunch/",
+        "threads": "https://www.threads.com/@iamagirl_brunch"
+      },
+      "visitNote": "老宅早午餐店，供應吐司及早午餐套餐；電話 04-2452-4780。Threads 網址由使用者提供。",
+      "giftStatus": "可能有小物",
+      "verification": false,
+      "disabled": false
     }
   ]
 }
