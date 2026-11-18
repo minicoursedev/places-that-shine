@@ -4715,6 +4715,39 @@
       "giftStatus": "可能有小物",
       "verification": false,
       "disabled": false
+    },
+    {
+      "id": "the-alley-no11-tainan",
+      "name": "小巷裡的拾壹號",
+      "address": "臺南市中西區衛民街143巷11號",
+      "category": "咖啡廳",
+      "latlng": {
+        "lat": 22.993119,
+        "lng": 120.207614
+      },
+      "coordinateSource": "https://www.google.com/maps/place/@22.993119,120.207614,17z/data=!4m10!3m9!1s0x346e7689a8ab4f15:0xec039c66cef522cb!5m2!4m1!1i2!8m2!3d22.993119!4d120.207614!9m1!1b1",
+      "coordinateNote": "OpenStreetMap 門牌查詢未能取得可核對結果。採用 Wanderlog 同名同址店家頁所連 Google Maps 店家地點資料中的 !3d22.993119 與 !4d120.207614，非地圖視窗中心。",
+      "openingHours": {
+        "status": "unverified",
+        "text": "多個公開來源列週三、週四公休，但開店及打烊時段記載不一；前往前請查看店家社群公告，或致電 06-220-3779 確認。"
+      },
+      "shopPhoto": {
+        "url": "",
+        "source": "https://www.instagram.com/thealleyno.11/",
+        "platform": "instagram",
+        "status": "unverified",
+        "checkedAt": "2026-11-18",
+        "note": "食尚玩家同名同址店家頁連至此 Instagram 帳號，但個人頁無法讀取；Facebook 亦限制存取，使用者提供的 Threads 回傳 HTTP 429。未能核對個人檔案頭像或確認圖片可存取。"
+      },
+      "social": {
+        "facebook": "https://www.facebook.com/thealleyno.11/",
+        "instagram": "https://www.instagram.com/thealleyno.11/",
+        "threads": "https://www.threads.com/@thealleyno.11"
+      },
+      "visitNote": "巷內老宅咖啡廳，供應自家烘焙咖啡、早午餐及手作甜點；可致電 06-220-3779 詢問訂位。Threads 網址由使用者提供。",
+      "giftStatus": "可能有小物",
+      "verification": false,
+      "disabled": false
     }
   ]
 }
