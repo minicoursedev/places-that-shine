@@ -4551,6 +4551,39 @@
       "giftStatus": "可能有小物",
       "verification": false,
       "disabled": false
+    },
+    {
+      "id": "bighero-burger",
+      "name": "大俠漢堡包",
+      "address": "臺中市西屯區國安一路128號",
+      "category": "正餐",
+      "latlng": {
+        "lat": 24.1917056,
+        "lng": 120.6130456
+      },
+      "coordinateSource": "https://www.openstreetmap.org/node/5032286062",
+      "coordinateNote": "採用 OpenStreetMap 全聯台中國安店的同門牌座標，非漢堡店入口實測點。店家在 Uber Eats 菜單公告確認門市位於國安一路128號的全聯樓梯入口。",
+      "visitNote": "原為行動餐車，現為固定店面，位於全聯台中國安店的樓梯入口。",
+      "openingHours": {
+        "status": "unverified",
+        "text": "門市營業時間及公休日待確認。店家公告請以 Google 地圖更新為準；Uber Eats 供餐時段僅供參考。"
+      },
+      "shopPhoto": {
+        "url": "",
+        "source": "https://www.threads.com/@bighero.burger",
+        "platform": "threads",
+        "status": "unverified",
+        "checkedAt": "2026-11-18",
+        "note": "Threads 帳號由使用者指定；個人頁回傳 HTTP 429，未能核對頭像原圖或確認圖片可存取。"
+      },
+      "social": {
+        "facebook": "https://www.facebook.com/BigHero.Burger/",
+        "instagram": "https://www.instagram.com/bighero.burger/",
+        "threads": "https://www.threads.com/@bighero.burger"
+      },
+      "giftStatus": "可能有小物",
+      "verification": false,
+      "disabled": false
     }
   ]
 }
