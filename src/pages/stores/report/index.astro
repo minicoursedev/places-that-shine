@@ -1,0 +1,61 @@
+---
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+import '../../../styles/stores.css';
+
+const siteKey = import.meta.env.PUBLIC_STORE_REPORT_TURNSTILE_SITE_KEY
+  || (import.meta.env.PROD ? '0x4AAAAAAGHFHIqtc1Zv1b1F' : undefined);
+---
+
+<SiteLayout title="推薦店家｜發光的店家" description="提供店家連結、地址或照片，推薦你想讓更多人認識的店家。" active="stores">
+  <section class="directory page-width" aria-labelledby="report-title">
+    <div class="directory-header">
+      <a class="back-link" href="/stores/">← 回發光的店家</a>
+      <h1 id="report-title">推薦店家</h1>
+    </div>
+    {siteKey ? (
+      <form id="store-report" data-sitekey={siteKey} method="post" action="/api/reports" enctype="multipart/form-data">
+        <fieldset class="choices">
+          <legend>選一種推薦方式</legend>
+          <label><input name="kind" type="radio" value="url" checked /> 店家連結</label>
+          <label><input name="kind" type="radio" value="address" /> 店名＋地址</label>
+          <label><input name="kind" type="radio" value="photo" /> 店名＋照片</label>
+        </fieldset>
+        <label data-field="url">Google Maps 或店家社群連結
+          <input name="sourceUrl" type="url" maxlength="2048" placeholder="https://" required />
+        </label>
+        <label data-field="name" hidden>店名
+          <input name="name" type="text" maxlength="120" disabled />
+        </label>
+        <label data-field="address" hidden>地址
+          <input name="address" type="text" maxlength="300" disabled />
+        </label>
+        <label data-field="photo" hidden>店家的招牌、店面或門牌照片
+          <input name="photo" type="file" accept="image/*" disabled />
+          <small>照片供人工查證，審閱完成後會刪除。請避開可辨認的路人。</small>
+        </label>
+        <div data-turnstile></div>
+        <button class="store-action" type="submit" disabled>送出推薦</button>
+        <p role="status" aria-live="polite"></p>
+      </form>
+    ) : <p>目前尚未開放線上推薦。</p>}
+  </section>
+</SiteLayout>
+
+<style>
+  form { display: grid; gap: 1rem; max-width: 37rem; }
+  .choices { border: 1px solid var(--line); border-radius: .5rem; display: flex; flex-wrap: wrap; gap: .75rem 1.5rem; margin: 0; padding: .85rem; }
+  legend { font-weight: 700; padding: 0 .25rem; }
+  form > label { display: grid; gap: .35rem; font-weight: 600; }
+  form > label[hidden] { display: none; }
+  input:not([type="radio"]) { border: 1px solid var(--line); border-radius: .35rem; font: inherit; padding: .65rem; min-width: 0; width: 100%; }
+  small { font-weight: 400; }
+  button { justify-self: start; }
+  button:disabled { opacity: .6; cursor: wait; }
+  [role="status"] { margin: 0; }
+</style>
+
+<script>
+  import { mountStoreReport } from '../../../features/store-report.js';
+  const form = document.querySelector('#store-report');
+  if (form instanceof HTMLFormElement) mountStoreReport(form);
+</script>

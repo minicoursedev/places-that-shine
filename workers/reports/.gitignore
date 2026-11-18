@@ -1,0 +1,6 @@
+.dev.vars*
+.env*
+.wrangler/
+.cloudflare/
+node_modules/
+dist/
