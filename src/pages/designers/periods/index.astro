@@ -3,6 +3,7 @@ import SiteLayout from '../../../layouts/SiteLayout.astro';
 import { hallPageForCode } from '../../../../public/designers/js/hall-pages.js';
 
 const websiteHall = hallPageForCode('W')!;
+const recallHall = hallPageForCode('R')!;
 
 const title = '發光的設計師';
 const description = '按時期探索發光的設計師與作品。';
@@ -75,6 +76,15 @@ const shareImageAlt = '發光的設計師。我相信光，是為了巷弄間的
           </div>
         </details>
       </div>
+      <a class="entry" href={recallHall.path}>
+        <span class="entry-info">
+          <span class="period-label">
+            <img class="period-logo period-logo-contained" src={recallHall.image} width={recallHall.width} height={recallHall.height} alt="" />
+            <span>{recallHall.name}</span>
+          </span>
+          <span class="entry-arrow" aria-hidden="true">→</span>
+        </span>
+      </a>
       <div class="period-with-intro">
         <a class="entry" href="/designers/halls/bluebird-action/">
           <span class="entry-info">

@@ -7418,6 +7418,10 @@
         "work-effbf0b0ab18434091912745d24b8754",
         "work-c1c74d919256481fad5d738a3dcf93d3",
         "work-60fcf7d91ea24a09bedc5645cf3da01b"
+      ],
+      "additionalHalls": [
+        "O",
+        "R"
       ]
     }
   ]

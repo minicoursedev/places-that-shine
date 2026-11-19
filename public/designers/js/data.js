@@ -7,6 +7,7 @@ const HALLS = [
   { code: 'A', name: '洋流愛好者館', category: '愛好者', zone: { code: 'AMATEURS', name: '愛好者' } },
   { code: 'W', name: '洋流網站館', category: '設計師', zone: { code: 'WEBSITES', name: '網站' } },
   { code: 'S', name: '鏟子超人館', category: '設計師', zone: { code: 'SHOVEL-HEROES', name: '鏟子超人' } },
+  { code: 'R', name: '大罷免', category: '設計師', zone: { code: 'RECALL', name: '大罷免' } },
   { code: 'B', name: '青鳥行動', year: 2024, category: '設計師', zone: { code: 'BLUEBIRD-ACTION', name: '青鳥行動' } },
 ];
 const PER_ISLAND = 8;

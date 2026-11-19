@@ -33,6 +33,17 @@ export const hallPages = [{
   height: 630,
   type: 'image/jpeg',
 }, {
+  code: 'R',
+  name: '大罷免',
+  path: '/designers/halls/recall/',
+  title: '大罷免｜發光的設計師',
+  description: '大罷免時期的設計師展館。',
+  image: '/media/library/enokriisfer/22.webp?v=f157e4b298316a00',
+  alt: '鐵雄 KENO 的罷免擁護未來作品',
+  width: 886,
+  height: 886,
+  type: 'image/webp',
+}, {
   code: 'B',
   name: '青鳥行動',
   path: '/designers/halls/bluebird-action/',
