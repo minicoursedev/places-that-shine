@@ -7808,6 +7808,30 @@
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1573326137201786930/915083916_17895358890479615_3146528509860548429_n.png?ex=6b0199a6&is=6b004826&hm=1b6fbd1a7f97e7aa42aa3da68e0b2ed71e49eddaf7ba57db946d37d6ea0f3752&"
         }
       ]
+    },
+    {
+      "id": "neko-kaeru-studio",
+      "name": "@neko.kaeru_studio",
+      "description": "貓與青蛙工作室\n動物插畫from Taiwan",
+      "category": "設計師",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@neko.kaeru_studio",
+        "ig": "",
+        "web": ""
+      },
+      "logo": {
+        "url": "/media/library/neko-kaeru-studio/logo.webp?v=274458c49847145d",
+        "source": "https://www.threads.com/@neko.kaeru_studio",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-20",
+        "note": "官方帳號 og:url 相符；個人頭像 CDN 路徑；Neko & Kaeru (@neko.kaeru_studio) • Threads, Say more；相同帳號公開資料 hd_profile_pic_versions",
+        "originalUrl": "https://instagram.fkhh1-1.fna.fbcdn.net/v/t51.2885-19/476801984_1257830721955146_435957744407621743_n.jpg?stp=dst-jpg_s320x320_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby45MDAuYzIifQ&_nc_ht=instagram.fkhh1-1.fna.fbcdn.net&_nc_cat=106&_nc_oc=Q6cZ2gFdYfVcVRlr626Zym2RM60WzGGh0OeZiwF61LKnrGRLfMx1vAaWOK0lEyRY4aqDtUA&_nc_ohc=1YQ76201YzwQ7kNvwHObajc&_nc_gid=9wlzEk99czB9alnQfPnlzA&edm=APs17CUBAAAA&ccb=7-5&_nc_ct=RQAsPBUCFQIAAAA&oh=00_AQRIssvpBL35dqh5MsZvpFf1u1RyZgjCupzzsKJMnuEfuA&oe=6B063598&_nc_sid=10d13b"
+      },
+      "productImages": []
     }
   ]
 }
