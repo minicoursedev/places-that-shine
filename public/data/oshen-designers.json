@@ -7538,6 +7538,121 @@
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1573141115320795236/513fc0066c7ff095.png?ex=6b00ed55&is=6aff9bd5&hm=c532deb1ab6920efb0a7c6785143b88743e28a1b264bf6d5bcc8666281155cae&"
         }
       ]
+    },
+    {
+      "id": "hot-write",
+      "name": "熱血｜熱寫",
+      "description": "熱血 #熱寫\n就寫字 / 備份 。\nMV手寫字幕、刺青文字設計、品牌手寫字體",
+      "category": "設計師",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@hot_write",
+        "ig": "https://www.instagram.com/hot_write/",
+        "web": ""
+      },
+      "logo": {
+        "url": "/media/library/hot-write/logo.webp?v=f8d84cf8bce63bcc",
+        "source": "https://www.threads.com/@hot_write",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-20",
+        "note": "官方帳號 og:url 相符；個人頭像 CDN 路徑；熱血｜熱寫 (@hot_write) • Threads, Say more；相同帳號公開資料 hd_profile_pic_versions",
+        "originalUrl": "https://instagram.fkhh1-2.fna.fbcdn.net/v/t51.2885-19/358408980_1623585854791624_755318830606518774_n.jpg?stp=dst-jpg_s320x320_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDgwLmMyIn0&_nc_ht=instagram.fkhh1-2.fna.fbcdn.net&_nc_cat=104&_nc_oc=Q6cZ2gEXi211hJgjcUXz0k5AaTrq2F0QfR1AslNDTOZj-7FjT6Qjff-apzNpfiuml49EILQ&_nc_ohc=1FVim4o3vgcQ7kNvwH0Acyq&_nc_gid=yvsvSpDN8wP5cF2uvg4iqA&edm=APs17CUBAAAA&ccb=7-5&_nc_ct=RQAsPBUCFQIAAAA&oh=00_AQS5G3sFr79e-jZjEqhA2jsUaCrMvnl9Orq-ff7V3uAn0Q&oe=6B058445&_nc_sid=10d13b"
+      },
+      "productImages": [
+        {
+          "url": "/media/library/hot-write/1.webp?v=08e793b1a1fd3b86",
+          "alt": "深色木框中的「大濛」墨書，背景鋪有多張墨稿",
+          "source": "https://minicourse.dev/media/library/hot-write/1.webp?v=08e793b1a1fd3b86",
+          "checkedAt": "2026-11-20",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-804050c1906f411787dc7472e81dd982",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1573150479897067560/890644369_18659351458023193_9177899681640837710_n.png?ex=6b00f60e&is=6affa48e&hm=a26fa41f575848c36209d11038f8b8f73dad14e7c61aa9237048b07e21c770a4&"
+        },
+        {
+          "url": "/media/library/hot-write/2.webp?v=85abed3c27166832",
+          "alt": "木桌上七款白色圓形書法杯墊，包含「臺灣順起來」及「愛 Taiwan」",
+          "source": "https://minicourse.dev/media/library/hot-write/2.webp?v=85abed3c27166832",
+          "checkedAt": "2026-11-20",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-68667fe640004abb89c3618c8574f63c",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1573150480899510383/890344287_17993308770118401_6008131859128647690_n.png?ex=6b00f60e&is=6affa48e&hm=e4f799eab29b0a6a5ac43a69c2b8a3e0db27e3df90438ceb32aa6bf43c62971a&"
+        },
+        {
+          "url": "/media/library/hot-write/3.webp?v=5f3dc0cb948ec1d6",
+          "alt": "灰底兩行書法：「你在民主中睡著，就會在獨裁中醒來」",
+          "source": "https://minicourse.dev/media/library/hot-write/3.webp?v=5f3dc0cb948ec1d6",
+          "checkedAt": "2026-11-20",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-5d372e1cd6ab462d972692638da14f13",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1573150481486979113/886743792_17993159367118401_8112583373043853751_n.png?ex=6b00f60e&is=6affa48e&hm=6bf047f04f3214364de033ac538ad287d679c50e4ce0152f0c421ed9ddccb10b&"
+        },
+        {
+          "url": "/media/library/hot-write/4.webp?v=994de8eebcff4fc8",
+          "alt": "灰底粗筆「戒慎恐懼」四字書法，下方有紅色圓印",
+          "source": "https://minicourse.dev/media/library/hot-write/4.webp?v=994de8eebcff4fc8",
+          "checkedAt": "2026-11-20",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-581d73e247e54cff89ac11aac3ade7c4",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1573150482007064616/867571449_17991324942118401_4949929088022980924_n.png?ex=6b00f60e&is=6affa48e&hm=fb6708b5a1ad3de94abf93a1384a525dc3caaaec87eaea7e246b1adfe87e5ca6&"
+        },
+        {
+          "url": "/media/library/hot-write/5.webp?v=d09d20d2de0afd8b",
+          "alt": "淺灰底直式四字書法，末字筆畫向下延伸至紅色圓印上方",
+          "source": "https://minicourse.dev/media/library/hot-write/5.webp?v=d09d20d2de0afd8b",
+          "checkedAt": "2026-11-20",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-385066d9f132401388b4558200cd7be0",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1573150482493481001/753248099_18620461375023193_8844589219493832671_n.png?ex=6b00f60e&is=6affa48e&hm=cf98d1d9288ba4202ed22d865f6862f31a931ba72c5608915d739a62d5f414b9&"
+        },
+        {
+          "url": "/media/library/hot-write/6.webp?v=6663fda809758058",
+          "alt": "兩個粗筆墨字上下排列，筆鋒帶飛白，下方有紅色圓印",
+          "source": "https://minicourse.dev/media/library/hot-write/6.webp?v=6663fda809758058",
+          "checkedAt": "2026-11-20",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-7af4b76092d04fbf91895ae1f6ea1e43",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1573150482942267554/725237376_17971037934118401_8130387810740800773_n.png?ex=6b00f60e&is=6affa48e&hm=906c13f3eb0a75dc23502b8508ad93aff1482e7c891f030f84d6da068411e089&"
+        },
+        {
+          "url": "/media/library/hot-write/7.webp?v=c28cee0ca43258db",
+          "alt": "白底黑字「難看到好好看」橫式書法",
+          "source": "https://minicourse.dev/media/library/hot-write/7.webp?v=c28cee0ca43258db",
+          "checkedAt": "2026-11-20",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-725e9110649447aa80a7fd895a80698e",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1573150483638526012/657949716_17951591433118401_7302890885233093993_n.png?ex=6b00f60f&is=6affa48f&hm=e5d5658df280ff7f75398fb8f6389c48756784b3613a3362a1873da4bdbea83c&"
+        },
+        {
+          "url": "/media/library/hot-write/8.webp?v=38bf68e81e7a3b3a",
+          "alt": "三疊米白色臺灣主題書法卡片，中間一款寫著「莫忘臺灣」",
+          "source": "https://minicourse.dev/media/library/hot-write/8.webp?v=38bf68e81e7a3b3a",
+          "checkedAt": "2026-11-20",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-efa38828665146758683f8b68fcf08db",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1573150484183650375/527482585_17916888921118401_6627783090411916830_n.png?ex=6b00f60f&is=6affa48f&hm=41d6951c0c0473d0fa7b1e9fa3c8d6b0a65bf1eb734f307cc46a321930907ae5&"
+        },
+        {
+          "url": "/media/library/hot-write/9.webp?v=d08473ec4c9189eb",
+          "alt": "灰底直式書法「臺灣獨立音樂萬歲」",
+          "source": "https://minicourse.dev/media/library/hot-write/9.webp?v=d08473ec4c9189eb",
+          "checkedAt": "2026-11-20",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-50a1d10c20234152a783798a3958baaa",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1573150484737429515/513952225_17912659806118401_2124630532172163918_n.png?ex=6b00f60f&is=6affa48f&hm=3321c8c5de572f847b93b4ca117adb83faffd3cf29d4e7f7ded9ffa81f63b0b5&"
+        },
+        {
+          "url": "/media/library/hot-write/10.webp?v=9e64d7fd3a9b850e",
+          "alt": "黑底白字「我那小小多山的國家」，底部以彩色直線排出山形",
+          "source": "https://minicourse.dev/media/library/hot-write/10.webp?v=9e64d7fd3a9b850e",
+          "checkedAt": "2026-11-20",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-a0f08d4f0034412fb017edda4d7ba75f",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1573150485194739823/491453902_17904917037118401_2565238156756025466_n.png?ex=6b00f60f&is=6affa48f&hm=cb746d06a3e5b4f747b94bf85cdc45d06e4ce8aae5420ad3445fb32da58dade1&"
+        }
+      ]
     }
   ]
 }
