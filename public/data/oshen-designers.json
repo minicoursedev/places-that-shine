@@ -7423,6 +7423,121 @@
         "O",
         "R"
       ]
+    },
+    {
+      "id": "mjscattw",
+      "name": "Rebecca Miao",
+      "description": "ISFP-T / Bird / Movie / Music / Cat\n奇怪的設計師\n喜歡把圖變成商品😎",
+      "category": "設計師",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "https://www.facebook.com/rebecca.miao",
+        "threads": "https://www.threads.com/@mjscattw",
+        "ig": "",
+        "web": "https://mjscat.pixnet.net/blog"
+      },
+      "logo": {
+        "url": "/media/library/mjscattw/logo.webp?v=ff6dc97e8635d714",
+        "source": "https://www.threads.com/@mjscattw",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-20",
+        "note": "官方帳號 og:url 相符；個人頭像 CDN 路徑；Rebecca Miao (@mjscattw) • Threads, Say more；相同帳號公開資料 hd_profile_pic_versions",
+        "originalUrl": "https://instagram.fkhh1-2.fna.fbcdn.net/v/t51.82787-19/917425138_17957394378314740_112405393237601664_n.jpg?stp=dst-jpg_s320x320_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDgwLmMyIn0&_nc_ht=instagram.fkhh1-2.fna.fbcdn.net&_nc_cat=104&_nc_oc=Q6cZ2gHr6q-yq2cULsYwF92nGw0KbAZM42khWk_SFISYEqy20Wu3aPTxXa7awySskMGKICs&_nc_ohc=00bMFgqLvGcQ7kNvwHOLygb&_nc_gid=wyEWzQxq1djaWL8HIRMRRA&edm=APs17CUBAAAA&ccb=7-5&_nc_ct=RQAsPBUCFQIAAAA&oh=00_AQQWYZM3qhlNEOvTbKs76gWLbK92y_NLzPOJw1JmuR4wlg&oe=6B056210&_nc_sid=10d13b"
+      },
+      "productImages": [
+        {
+          "url": "/media/library/mjscattw/1.webp?v=49ef51b0fb72012f",
+          "alt": "EUROPE《Walk the Earth》淺藍色 T 恤造型壓克力鑰匙圈",
+          "source": "https://minicourse.dev/media/library/mjscattw/1.webp?v=49ef51b0fb72012f",
+          "checkedAt": "2026-11-20",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-2c0e3aad0be74d47b7753136a090140b",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1573141111105523814/Europe-1.webp?ex=6b00ed54&is=6aff9bd4&hm=96569943782a680dac083ef727a6d119f9160d5702298529b4f88ff0bae61867&"
+        },
+        {
+          "url": "/media/library/mjscattw/2.webp?v=7b33805dde13a2ed",
+          "alt": "EUROPE《Walk the Earth》黑色帆布袋與彩色團員圖案的印刷細節",
+          "source": "https://minicourse.dev/media/library/mjscattw/2.webp?v=7b33805dde13a2ed",
+          "checkedAt": "2026-11-20",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-9bcbb29bc7bf4c51bcde203404df8079",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1573141111583543306/Europe2.jpg?ex=6b00ed54&is=6aff9bd4&hm=189af359e542a7c07da3fa2344818cb62bb8cc2b907ded8d392114fe68c1df29&"
+        },
+        {
+          "url": "/media/library/mjscattw/3.webp?v=4c6ac6918230eafd",
+          "alt": "多個印有 EUROPE 團員圖案與 2019 巡迴字樣的黑色帆布袋",
+          "source": "https://minicourse.dev/media/library/mjscattw/3.webp?v=4c6ac6918230eafd",
+          "checkedAt": "2026-11-20",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-2333b0d8e229458d8021f02b45fc02fa",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1573141111986331708/Europe1.jpg?ex=6b00ed54&is=6aff9bd4&hm=2fffc1c353b31a4ba7c81dc06878b4215158b94db095a247c828d31970342e61&"
+        },
+        {
+          "url": "/media/library/mjscattw/4.webp?v=4dac9fe4c01855fd",
+          "alt": "EUROPE《Time Capsule》40 週年巡迴新北場周邊商品海報",
+          "source": "https://minicourse.dev/media/library/mjscattw/4.webp?v=4dac9fe4c01855fd",
+          "checkedAt": "2026-11-20",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-bb58fbdd15e345ad82cf4eefea48fa5d",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1573141112632246384/Europe2024.jpg?ex=6b00ed54&is=6aff9bd4&hm=1e849d831a2800dfa24a22a014ce2deca54aecc1f3a73f3f0e56ecd692bb75ef&"
+        },
+        {
+          "url": "/media/library/mjscattw/5.webp?v=32feca68c43c520b",
+          "alt": "清淨母語端午預購海報，展示五款粽子",
+          "source": "https://minicourse.dev/media/library/mjscattw/5.webp?v=32feca68c43c520b",
+          "checkedAt": "2026-11-20",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-fa506b2cee0e4b089001137ae77537b6",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1573141113210933298/556c0a81488b6625.png?ex=6b00ed54&is=6aff9bd4&hm=2f7e214aa737e41d5fa88b3cec182336eed00826b75cf73852651aef766b2273&"
+        },
+        {
+          "url": "/media/library/mjscattw/6.webp?v=3101ab1317207d6f",
+          "alt": "清淨母語 Summer Party 鳳梨主題活動海報",
+          "source": "https://minicourse.dev/media/library/mjscattw/6.webp?v=3101ab1317207d6f",
+          "checkedAt": "2026-11-20",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-d4912dcca7224a8c82a18ef2c0907996",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1573141113680957470/-20180530-3.jpg?ex=6b00ed55&is=6aff9bd5&hm=05085a2461cf1a466b84de9dc8f768386c3d6edcd70efb1f2c900067a7f0f8e7&"
+        },
+        {
+          "url": "/media/library/mjscattw/7.webp?v=5b0d9b5b8b77787c",
+          "alt": "疾病管制署安全注射宣導海報，以六組圖示呈現重點",
+          "source": "https://minicourse.dev/media/library/mjscattw/7.webp?v=5b0d9b5b8b77787c",
+          "checkedAt": "2026-11-20",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-20b5e5d7177a4974bcef27777f7a8fd4",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1573141114087538788/---01.jpg?ex=6b00ed55&is=6aff9bd5&hm=4b528137a790e5757f0e2872b80f97c6ce8f3a0aba6884415a57cd615f948c9a&"
+        },
+        {
+          "url": "/media/library/mjscattw/8.webp?v=425ec177a5c75f49",
+          "alt": "疾病管制署勤洗手宣導海報，包含孩童插畫及七個洗手步驟圖解",
+          "source": "https://minicourse.dev/media/library/mjscattw/8.webp?v=425ec177a5c75f49",
+          "checkedAt": "2026-11-20",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-f02ca913c615443f8fa2ed4130fc533f",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1573141114578542622/--.jpg?ex=6b00ed55&is=6aff9bd5&hm=f47850921d472d1bbc0dc7e80d7ff219bced8ea1e6d405a29a72296209533d17&"
+        },
+        {
+          "url": "/media/library/mjscattw/9.webp?v=889db838ac2923cb",
+          "alt": "清淨母語回春露產品海報，畫面有雙手捧著桑葚及瓶裝飲品",
+          "source": "https://minicourse.dev/media/library/mjscattw/9.webp?v=889db838ac2923cb",
+          "checkedAt": "2026-11-20",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-246cb77394d243e3b00215bf53908bd7",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1573141115010424842/-.jpg?ex=6b00ed55&is=6aff9bd5&hm=099af9627f6889bbed412823f7f90fa15e7d0352f1d8139d60f848ff3ee9d2c0&"
+        },
+        {
+          "url": "/media/library/mjscattw/10.webp?v=b36fa58779234cd2",
+          "alt": "臺灣豬標誌設計：黑色書法字、粉紅豬、綠色臺灣輪廓及紅色愛心",
+          "source": "https://minicourse.dev/media/library/mjscattw/10.webp?v=b36fa58779234cd2",
+          "checkedAt": "2026-11-20",
+          "note": "使用者提供，指定為此設計師作品照片",
+          "id": "work-9b69a3e184be4a58ac4f4a0f1d510f1f",
+          "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1573141115320795236/513fc0066c7ff095.png?ex=6b00ed55&is=6aff9bd5&hm=c532deb1ab6920efb0a7c6785143b88743e28a1b264bf6d5bcc8666281155cae&"
+        }
+      ]
     }
   ]
 }
