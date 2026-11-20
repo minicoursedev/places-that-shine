@@ -7854,13 +7854,6 @@
           "checkedAt": "2026-11-20"
         },
         {
-          "id": "work-395507452a9352f3becbe4ac2dd3d9e9",
-          "url": "/media/library/neko-kaeru-studio/4.webp?v=8dc683df5d417fd9",
-          "alt": "頭綁藍色布條的虎斑貓在廚房舉起兩支麵漏",
-          "source": "https://www.threads.com/@neko.kaeru_studio/post/Dc5clpsk1HO",
-          "checkedAt": "2026-11-20"
-        },
-        {
           "id": "work-373ab472701650a381c1c49e7ee6168f",
           "url": "/media/library/neko-kaeru-studio/5.webp?v=abef37accdcded5e",
           "alt": "《跟貓生活後的驚悚故事》漫畫，貓與青蛙坐在綠色沙發上",
@@ -7874,6 +7867,9 @@
           "source": "https://www.threads.com/@neko.kaeru_studio/post/DbnbqGXkblf",
           "checkedAt": "2026-11-20"
         }
+      ],
+      "retiredWorkIds": [
+        "work-395507452a9352f3becbe4ac2dd3d9e9"
       ]
     }
   ]
