@@ -4826,12 +4826,12 @@
       "coordinateNote": "OpenStreetMap 未能取得可核對的門牌結果。採用標示源自 TGOS 的公開門牌資料，取嘉義縣民雄鄉興南村4鄰建國路三段177號的 X（經度）與 Y（緯度）。門牌與文化部文化幣所列店址一致。",
       "visitNote": "民雄頭橋的在地書店，販售書籍與文具；電話 05-221-2430。Threads 網址由使用者提供。",
       "shopPhoto": {
-        "url": "",
-        "source": "https://www.facebook.com/runway177/",
-        "platform": "facebook",
-        "status": "unverified",
-        "checkedAt": "2026-11-21",
-        "note": "文化部文化幣的仁偉書局頁面（https://twcp.moc.gov.tw/prec-u/project/content/5b38f0fbe3af4fd8bed4fc1df5c5fc90）連至此 Facebook 粉專，但粉專限制存取；使用者指定的 Threads 頁面回傳 HTTP 429，未能確認個人檔案頭像及圖片回應。"
+        "url": "./media/library/renwei-bookstore-minxiong/logo.webp?v=4cd8dd357c2ffced",
+        "source": "https://www.threads.com/@book052212430",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-22",
+        "note": "官方帳號 og:url 相符；個人頭像 CDN 路徑；仁偉書局 (@book052212430) • Threads, Say more；相同帳號公開資料 hd_profile_pic_versions"
       },
       "social": {
         "facebook": "https://www.facebook.com/runway177/",
