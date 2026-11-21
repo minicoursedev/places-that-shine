@@ -4869,6 +4869,34 @@
       "giftStatus": "可能有小物",
       "verification": true,
       "disabled": false
+    },
+    {
+      "id": "yuan-coffee",
+      "name": "圓珈琲",
+      "address": "嘉義市西區遠東街2號",
+      "category": "咖啡廳",
+      "latlng": {
+        "lat": 23.4886114,
+        "lng": 120.4409793
+      },
+      "coordinateSource": "https://maps.app.goo.gl/GzPh7kC5nxTDKxiL8",
+      "coordinateNote": "OpenStreetMap 未取得可核對的門牌結果。FooTinder 的同名店家頁列址為嘉義市西區遠東街2號，所連 Google Maps CID 3545869344124052552 與分享連結轉址中的店家識別碼相符。採用轉址中的 !3d23.4886114 與 !4d120.4409793，未採用地圖視窗中心。",
+      "visitNote": "供應自家烘焙咖啡；可透過店家官方 LINE（@uxg1929y）聯繫。",
+      "shopPhoto": {
+        "url": "./media/library/yuan-coffee/logo.webp?v=c0d3bdeb072a5505",
+        "source": "https://www.threads.com/@yuan.coffee",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-22",
+        "note": "官方帳號 og:url 相符；個人頭像 CDN 路徑；圓珈琲 (@yuan.coffee) • Threads, Say more；相同帳號公開資料 hd_profile_pic_versions"
+      },
+      "social": {
+        "facebook": "https://www.facebook.com/yuan.coffee/",
+        "threads": "https://www.threads.com/@yuan.coffee"
+      },
+      "giftStatus": "可能有小物",
+      "verification": true,
+      "disabled": false
     }
   ]
 }
