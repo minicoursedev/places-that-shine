@@ -4748,6 +4748,35 @@
       "giftStatus": "可能有小物",
       "verification": false,
       "disabled": false
+    },
+    {
+      "id": "dnd-city-beauty",
+      "name": "城市美文創刺繡 DND city beauty",
+      "address": "臺南市中西區國華街三段26號（北25攤）",
+      "category": "選物雜貨",
+      "latlng": {
+        "lat": 22.993929,
+        "lng": 120.197858
+      },
+      "coordinateSource": "https://tcmb.culture.tw/zh-tw/detail?id=275257&indexCode=Culture_Place",
+      "coordinateNote": "文化部文化幣藝文消費點名錄將品牌列在國華街三段26號北25，採此對外消費點，而非一卡通另列的特店地址。OpenStreetMap 未取得可核對結果；採用國家文化記憶庫中由臺南市政府文化局建檔、明列同門牌的西門淺草青春新天地座標，非北25攤位實測位置。",
+      "visitNote": "販售立體刺繡貼紙、杯套及零錢包。文化幣名錄所列攤位為北25；到訪前可致電 0929-018-430 向店家確認。",
+      "shopPhoto": {
+        "url": "",
+        "source": "https://www.instagram.com/dnd_45678/",
+        "platform": "instagram",
+        "status": "unverified",
+        "checkedAt": "2026-11-21",
+        "note": "品牌官網連至此 Instagram 帳號，但 Instagram 與 Facebook 個人頁均未能讀取；使用者提供的 Threads 個人頁回傳 HTTP 429，未能核對頭像原圖及圖片回應。"
+      },
+      "social": {
+        "facebook": "https://www.facebook.com/DND.city.beauty/",
+        "instagram": "https://www.instagram.com/dnd_45678/",
+        "threads": "https://www.threads.com/@dnd_45678"
+      },
+      "giftStatus": "可能有小物",
+      "verification": true,
+      "disabled": false
     }
   ]
 }
