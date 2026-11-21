@@ -4839,6 +4839,36 @@
       "giftStatus": "可能有小物",
       "verification": true,
       "disabled": false
+    },
+    {
+      "id": "trippertea",
+      "name": "旅人茶濃 Tripper Tea（山角鐵茶屋）",
+      "address": "嘉義縣梅山鄉太和村樟樹湖27號",
+      "category": "甜點飲料",
+      "latlng": {
+        "lat": 23.522949,
+        "lng": 120.7068939
+      },
+      "coordinateSource": "https://ezgo.ardswc.gov.tw/zh-tw/spot/6322/",
+      "coordinateNote": "OpenStreetMap 未取得可核對的門牌結果。採用農業部農業易遊網同名店家頁的門牌連結所明示的 Google Maps 定位座標；非地圖視窗中心，也非入口實測點。",
+      "visitNote": "供應樟樹湖高山茶與茶點，提供半自助泡茶體驗。到訪前請透過官方表單預約；品茶的山角鐵茶屋與用餐的山角鐵文藝空間是不同場地。",
+      "visitUrl": "https://tryngoal-booking-info.vercel.app/",
+      "shopPhoto": {
+        "url": "",
+        "source": "https://www.instagram.com/trippertea/",
+        "platform": "instagram",
+        "status": "unverified",
+        "checkedAt": "2026-11-21",
+        "note": "農業易遊網的同名同址店家頁連至此 Instagram 帳號，但個人頁無法讀取；品牌官網連結的 Facebook 頁限制存取，使用者指定的 Threads 頁回傳 HTTP 429，未能確認個人檔案頭像或驗證圖片回應。"
+      },
+      "social": {
+        "facebook": "https://www.facebook.com/trippertea/",
+        "instagram": "https://www.instagram.com/trippertea/",
+        "threads": "https://www.threads.com/@trippertea"
+      },
+      "giftStatus": "可能有小物",
+      "verification": true,
+      "disabled": false
     }
   ]
 }
