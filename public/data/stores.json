@@ -4897,6 +4897,36 @@
       "giftStatus": "可能有小物",
       "verification": true,
       "disabled": false
+    },
+    {
+      "id": "fu-day-minxiong",
+      "name": "福日小売所",
+      "address": "嘉義縣民雄鄉文化路26-40號",
+      "category": "正餐",
+      "latlng": {
+        "lat": 23.5518037,
+        "lng": 120.4292263
+      },
+      "coordinateSource": "https://maps.google.com/?f=q&ie=UTF8&ll=23.551804%2C120.429226&marker=23.551804%2C120.429226&mrt=loc&q=loc%3A23.5518037%2C+120.4292263+%28%E5%8F%B0%E7%81%A3%E5%98%89%E7%BE%A9%E7%B8%A3%E6%B0%91%E9%9B%84%E9%84%89%E6%96%87%E5%8C%96%E8%B7%AF%E7%A6%8F%E6%97%A5%E5%B0%8F%E5%A3%B2%E6%89%80%29&sll=23.544919%2C120.420107&source=embed&source=s_q&t=m&z=15",
+      "coordinateNote": "OpenStreetMap 未取得可核對的門牌座標。採用同名同址店家報導（https://yingoyingo.pixnet.net/blog/posts/1034115756）所附 Google 地圖連結中 q=loc 明示的店家定位點，未採用地圖視窗中心。門牌與店家官方預約表單及嘉義縣親子旅一致。",
+      "visitNote": "供應早午餐拼盤、義大利麵及咖啡。金工銀戒手作體驗請先透過店家表單預約；電話 05-226-4573。",
+      "visitUrl": "https://portaly.cc/fuday",
+      "shopPhoto": {
+        "url": "./media/library/fu-day-minxiong/logo.webp?v=dfcaed31318cf592",
+        "source": "https://www.threads.com/@fu_day_",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-22",
+        "note": "官方帳號 og:url 相符；個人頭像 CDN 路徑；福日小売所 | 金工 • 輕食 (@fu_day_) • Threads, Say more；相同帳號公開資料 hd_profile_pic_versions"
+      },
+      "social": {
+        "facebook": "https://www.facebook.com/p/%E7%A6%8F%E6%97%A5%E5%B0%8F%E5%A3%B2%E6%89%80-61562879728879/",
+        "instagram": "https://www.instagram.com/fu_day_/",
+        "threads": "https://www.threads.com/@fu_day_"
+      },
+      "giftStatus": "可能有小物",
+      "verification": true,
+      "disabled": false
     }
   ]
 }
