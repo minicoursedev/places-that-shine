@@ -4854,12 +4854,12 @@
       "visitNote": "供應樟樹湖高山茶與茶點，提供半自助泡茶體驗。到訪前請透過官方表單預約；品茶的山角鐵茶屋與用餐的山角鐵文藝空間是不同場地。",
       "visitUrl": "https://tryngoal-booking-info.vercel.app/",
       "shopPhoto": {
-        "url": "",
-        "source": "https://www.instagram.com/trippertea/",
-        "platform": "instagram",
-        "status": "unverified",
-        "checkedAt": "2026-11-21",
-        "note": "農業易遊網的同名同址店家頁連至此 Instagram 帳號，但個人頁無法讀取；品牌官網連結的 Facebook 頁限制存取，使用者指定的 Threads 頁回傳 HTTP 429，未能確認個人檔案頭像或驗證圖片回應。"
+        "url": "./media/library/trippertea/logo.webp?v=e5fea84df5575e12",
+        "source": "https://www.threads.com/@trippertea",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-22",
+        "note": "官方帳號 og:url 相符；個人頭像 CDN 路徑；旅人茶濃 Tripper Tea。山角鐵茶屋（預約制） (@trippertea) • Threads, Say more；相同帳號公開資料 hd_profile_pic_versions"
       },
       "social": {
         "facebook": "https://www.facebook.com/trippertea/",
