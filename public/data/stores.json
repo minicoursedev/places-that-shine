@@ -4782,6 +4782,35 @@
       "giftStatus": "可能有小物",
       "verification": true,
       "disabled": false
+    },
+    {
+      "id": "yuyantoast",
+      "name": "飛魚・魚雁商號碳烤吐司專賣店",
+      "address": "嘉義市東區安樂街105號",
+      "category": "正餐",
+      "latlng": {
+        "lat": 23.482800004611,
+        "lng": 120.45911999727
+      },
+      "coordinateSource": "https://raw.githubusercontent.com/zhengda/taiwan-address-data/master/roads/10020-%E5%AE%89%E6%A8%82%E8%A1%97.csv",
+      "coordinateNote": "OpenStreetMap 未取得可核對的門牌結果。採用標示來自 TGOS 的公開門牌資料，CSV 明列嘉義市東區中山里6鄰安樂街105號的 X（經度）與 Y（緯度）；門牌與店家搬遷公告相符，未採用舊址或地圖視窗中心。",
+      "visitNote": "供應碳烤吐司等早午餐。店家已從西區成功街搬至東區安樂街，電話 0966-435-353。",
+      "shopPhoto": {
+        "url": "",
+        "source": "https://www.instagram.com/yuyantoast/",
+        "platform": "instagram",
+        "status": "unverified",
+        "checkedAt": "2026-11-21",
+        "note": "店家 Linktree（https://linktr.ee/yuyantoast）連至此 Instagram 及官方 Facebook。Instagram 未能讀取，Facebook 未顯示可核對的頭像，使用者提供的 Threads 頁回傳 HTTP 429，官方 LINE 連結亦無法讀取；未能驗證所需頭像原圖，故留空。"
+      },
+      "social": {
+        "facebook": "https://www.facebook.com/yuyantoast/",
+        "instagram": "https://www.instagram.com/yuyantoast/",
+        "threads": "https://www.threads.com/@yuyantoast"
+      },
+      "giftStatus": "可能有小物",
+      "verification": true,
+      "disabled": false
     }
   ]
 }
