@@ -477,6 +477,12 @@ function createStoreSheet(panel, container, renderStoreDetails, mobile) {
   };
 }
 
+function storeCoordinates(shop) {
+  const { lat, lng } = shop.latlng || {};
+  if (!Number.isFinite(lat) || !Number.isFinite(lng) || Math.abs(lat) > 90 || Math.abs(lng) > 180) return null;
+  return [lat, lng];
+}
+
 async function createStoreMap(container, message, locateButton, sheet, mobile, onSelectMobileStore) {
   await Promise.all([
     loadAsset('link', '/vendor/leaflet/leaflet.css'),
@@ -552,6 +558,13 @@ async function createStoreMap(container, message, locateButton, sheet, mobile, o
       }
       map.setView(position, 16, { animate: false });
     },
+    sortByDistance(stores, { latitude, longitude }) {
+      const origin = L.latLng(latitude, longitude);
+      return stores.map(shop => {
+        const position = storeCoordinates(shop);
+        return { shop, distance: position ? origin.distanceTo(L.latLng(position)) : Number.MAX_VALUE };
+      }).sort((a, b) => a.distance - b.distance).map(({ shop }) => shop);
+    },
     resize() {
       map.invalidateSize({ pan: false });
     },
@@ -574,10 +587,10 @@ async function createStoreMap(container, message, locateButton, sheet, mobile, o
       markers.clearLayers();
       const pins = [];
       for (const shop of stores) {
-        const { lat, lng } = shop.latlng || {};
-        if (!Number.isFinite(lat) || !Number.isFinite(lng) || Math.abs(lat) > 90 || Math.abs(lng) > 180) continue;
+        const position = storeCoordinates(shop);
+        if (!position) continue;
         const { badge, icon } = createStorePin(L, shop, category === '洋流服務站');
-        const marker = L.marker([lat, lng], { title: shop.name, alt: shop.name, icon, storeId: shop.id });
+        const marker = L.marker(position, { title: shop.name, alt: shop.name, icon, storeId: shop.id });
         marker.on('add', () => {
           const button = marker.getElement();
           button.setAttribute('aria-label', shop.name);
@@ -717,6 +730,8 @@ export async function mountStores(root, workPreviews = []) {
 
   let stores = [];
   let matches = [];
+  let listMatches = [];
+  let userPosition = null;
   let shown = 0;
   let map = null;
   let mapTask = null;
@@ -744,9 +759,10 @@ export async function mountStores(root, workPreviews = []) {
       status.textContent = '找不到符合條件的店家。試試其他店名、地址或篩選條件。';
       return;
     }
+    const order = userPosition ? '，由近到遠排序' : '';
     status.textContent = (mobile.matches && showingMap)
       ? `共 ${matches.length} 家`
-      : `共 ${matches.length} 家，已顯示 ${shown} 家`;
+      : `共 ${matches.length} 家，已顯示 ${shown} 家${order}`;
   }
 
   function updateMap() {
@@ -825,6 +841,9 @@ export async function mountStores(root, workPreviews = []) {
         if (finished) return;
         try {
           if (showingMap) map.locate(coords);
+          const { latitude, longitude } = coords;
+          userPosition = { latitude, longitude };
+          renderList();
           finish();
         } catch {
           finish('定位結果無法顯示，請再試一次。');
@@ -853,7 +872,7 @@ export async function mountStores(root, workPreviews = []) {
   }
 
   function showMore() {
-    const batch = matches.slice(shown, shown + PAGE_SIZE).map(shop =>
+    const batch = listMatches.slice(shown, shown + PAGE_SIZE).map(shop =>
       renderStore(shop, openShare, openPhotos, 'li', event => {
         if (mobile.matches || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
         event.preventDefault();
@@ -868,6 +887,14 @@ export async function mountStores(root, workPreviews = []) {
     return batch;
   }
 
+  function renderList() {
+    listMatches = userPosition ? map.sortByDistance(matches, userPosition) : matches;
+    list.replaceChildren();
+    listPanel.scrollTop = 0;
+    shown = 0;
+    showMore();
+  }
+
   function filterStores() {
     storeSheet.close();
     const activeFilters = Number(Boolean(city.value)) + Number(Boolean(category.value));
@@ -878,9 +905,7 @@ export async function mountStores(root, workPreviews = []) {
       && (!category.value || shop.category === category.value)
       && terms.every(term => shop.searchText.includes(term))
     ));
-    list.replaceChildren();
-    shown = 0;
-    showMore();
+    renderList();
     mapNeedsRefresh = true;
     updateMap();
   }
