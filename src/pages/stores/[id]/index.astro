@@ -166,13 +166,17 @@ const structuredData = {
     <nav class="store-actions" aria-label="店家連結">
       <a href={mapUrl}>回到地圖</a>
       <a class="store-directions" href={directions.href} target="_blank" rel="noopener noreferrer">開啟導航</a>
-      {socialLinks.map(({ label, icon, url }) => (
-        <a class="store-social-link" href={url.href} target="_blank" rel="noopener noreferrer"
-          aria-label={`${name}的${label}（在新分頁開啟）`} title={label}>
-          <img src={`/designers/assets/buttons/${icon}`} width="20" height="20" alt="" />
-        </a>
-      ))}
       {visitUrl && <a href={visitUrl.href} target="_blank" rel="noopener noreferrer">探店文章</a>}
+      {socialLinks.length > 0 && (
+        <div class="store-social-links">
+          {socialLinks.map(({ label, icon, url }) => (
+            <a class="store-social-link" href={url.href} target="_blank" rel="noopener noreferrer"
+              aria-label={`${name}的${label}（在新分頁開啟）`} title={label}>
+              <img src={`/designers/assets/buttons/${icon}`} width="20" height="20" alt="" />
+            </a>
+          ))}
+        </div>
+      )}
     </nav>
 
     {(openingHours || visitNote) && (
@@ -247,9 +251,13 @@ const structuredData = {
   .store-actions { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1.55rem; }
   .store-actions a { display: inline-flex; align-items: center; min-height: 2.75rem; padding: .4rem .9rem; border: 1px solid var(--line); border-radius: .3rem; text-decoration: none; font-weight: 600; color: var(--accent); }
   .store-actions a:hover { border-color: var(--accent); }
+  .store-social-links { display: flex; flex-wrap: wrap; flex-basis: 100%; gap: inherit; }
   .store-actions .store-social-link { justify-content: center; width: 2.75rem; padding: 0; border-radius: 50%; }
   .store-actions .store-directions { border-color: var(--accent); color: #fffaf0; background: var(--accent); }
   .store-actions .store-directions:hover { background: #793816; }
+  @media (max-width: 360px) {
+    .store-actions > a { padding-inline: .6rem; }
+  }
   .store-section { margin-top: clamp(1.75rem, 4.5vw, 3.25rem); padding-top: clamp(1.25rem, 3vw, 2rem); border-top: 1px solid var(--line); }
   h2 { margin: 0 0 .85rem; font: 800 clamp(1.5rem, 3vw, 2rem)/1.25 var(--serif); }
   h3 { margin: 0 0 .35rem; font-size: 1rem; }
