@@ -189,7 +189,7 @@ function renderStoreGallery(photos, openPhotos) {
   return gallery;
 }
 
-function renderStore({ id, name, address, category, serviceType, shopPhoto, social, openingHours, visitNote, visitUrl, productImages }, openShare, openPhotos, tag = 'li') {
+function renderStore({ id, name, address, category, serviceType, shopPhoto, social, openingHours, visitNote, visitUrl, productImages }, openShare, openPhotos, tag = 'li', onSelect) {
   const card = element(tag, 'store-card');
   const summary = element('div', 'store-summary');
   const text = element('div', 'store-text');
@@ -199,6 +199,7 @@ function renderStore({ id, name, address, category, serviceType, shopPhoto, soci
   const heading = element('h3', 'store-name');
   const profile = element('a', '', name);
   profile.href = storePath(id);
+  if (onSelect) profile.addEventListener('click', onSelect);
   heading.append(profile);
   text.append(element('p', 'store-category', type), heading);
   text.append(element('p', 'store-address', address));
@@ -349,7 +350,7 @@ function createStorePin(L, shop, largeServiceMarkers) {
   };
 }
 
-function createStoreSheet(panel, container, renderStoreDetails) {
+function createStoreSheet(panel, container, renderStoreDetails, mobile) {
   const sheet = element('section', 'store-sheet');
   sheet.hidden = true;
   sheet.setAttribute('aria-labelledby', 'store-sheet-title');
@@ -360,9 +361,11 @@ function createStoreSheet(panel, container, renderStoreDetails) {
   const closeButton = element('button', 'store-sheet-close', '×');
   closeButton.type = 'button';
   closeButton.setAttribute('aria-label', '關閉店家資訊');
+  const backButton = element('button', 'store-action store-sheet-back', '返回店家清單');
+  backButton.type = 'button';
   const content = element('div', 'store-sheet-content');
   content.id = 'store-sheet-content';
-  toolbar.append(handle, closeButton);
+  toolbar.append(backButton, handle, closeButton);
   sheet.append(toolbar, content);
   panel.append(sheet);
   let selected;
@@ -432,33 +435,34 @@ function createStoreSheet(panel, container, renderStoreDetails) {
 
   function close(restoreFocus = false) {
     if (!selected) return;
-    selected.badge.classList.remove('is-selected');
+    selected.badge?.classList.remove('is-selected');
     sheet.hidden = true;
     finishDrag();
     setExpanded(false);
     container.style.removeProperty('--store-map-top');
     container.classList.remove('has-store-sheet');
     content.replaceChildren();
-    if (restoreFocus) selected.marker.getElement()?.focus({ preventScroll: true });
+    if (restoreFocus) (selected.trigger || selected.marker?.getElement())?.focus({ preventScroll: true });
     selected = null;
   }
 
   closeButton.addEventListener('click', () => close(true));
+  backButton.addEventListener('click', () => close(true));
   sheet.addEventListener('keydown', event => {
     if (event.key === 'Escape') close(true);
   });
 
   function syncMapTop() {
-    if (!selected) return;
+    if (!selected || !mobile.matches) return;
     const top = container.getBoundingClientRect().top + window.scrollY;
     container.style.setProperty('--store-map-top', `${top}px`);
   }
 
   return {
-    open(shop, marker, badge) {
-      selected?.badge.classList.remove('is-selected');
-      selected = { marker, badge };
-      badge.classList.add('is-selected');
+    open(shop, marker, badge, trigger) {
+      selected?.badge?.classList.remove('is-selected');
+      selected = { marker, badge, trigger };
+      badge?.classList.add('is-selected');
       const card = renderStoreDetails(shop);
       card.querySelector('.store-name').id = 'store-sheet-title';
       content.replaceChildren(card);
@@ -466,14 +470,14 @@ function createStoreSheet(panel, container, renderStoreDetails) {
       sheet.hidden = false;
       syncMapTop();
       container.classList.add('has-store-sheet');
-      closeButton.focus({ preventScroll: true });
+      (mobile.matches ? closeButton : backButton).focus({ preventScroll: true });
     },
     close,
     syncMapTop,
   };
 }
 
-async function createStoreMap(container, message, locateButton, sheet, onSelectMobileStore) {
+async function createStoreMap(container, message, locateButton, sheet, mobile, onSelectMobileStore) {
   await Promise.all([
     loadAsset('link', '/vendor/leaflet/leaflet.css'),
     loadAsset('link', '/vendor/leaflet-markercluster/MarkerCluster.css'),
@@ -482,11 +486,14 @@ async function createStoreMap(container, message, locateButton, sheet, onSelectM
   await loadAsset('script', '/vendor/leaflet-markercluster/leaflet.markercluster.js');
   const L = globalThis.L;
   const map = L.map(container, { scrollWheelZoom: false, maxZoom: 19 });
-  const mobile = window.matchMedia('(max-width: 560px)');
   let userMarker;
-  mobile.addEventListener('change', () => sheet.close());
+  let pendingFocus;
+  function closeDetails() {
+    pendingFocus = null;
+    sheet.close();
+  }
   map.on('click', () => {
-    if (!mobile.matches) sheet.close();
+    if (!mobile.matches) closeDetails();
   });
   map.zoomControl.getContainer().querySelector('.leaflet-control-zoom-in').setAttribute('aria-label', '放大地圖');
   map.zoomControl.getContainer().querySelector('.leaflet-control-zoom-out').setAttribute('aria-label', '縮小地圖');
@@ -531,10 +538,10 @@ async function createStoreMap(container, message, locateButton, sheet, onSelectM
   }).addTo(map);
 
   return {
-    closeDetails: sheet.close,
+    closeDetails,
     locate({ latitude, longitude }) {
       const position = [latitude, longitude];
-      sheet.close();
+      closeDetails();
       map.invalidateSize({ pan: false });
       if (userMarker) userMarker.setLatLng(position);
       else {
@@ -548,17 +555,20 @@ async function createStoreMap(container, message, locateButton, sheet, onSelectM
     resize() {
       map.invalidateSize({ pan: false });
     },
-    focusStore(id) {
+    focusStore(id, trigger) {
       const marker = markers.getLayers().find(pin => pin.options.storeId === id);
-      if (!marker) return;
+      if (!marker) return false;
+      const selection = pendingFocus = { marker };
       container.scrollIntoView({ block: 'nearest' });
       map.setView(marker.getLatLng(), 16, { animate: false });
       markers.zoomToShowLayer(marker, () => {
-        if (container.offsetWidth && markers.hasLayer(marker)) marker.fire('click');
+        if (pendingFocus !== selection) return;
+        pendingFocus = null;
+        if (container.offsetWidth && markers.hasLayer(marker)) marker.fire('click', { trigger });
       });
+      return true;
     },
     refresh(stores, category) {
-      sheet.close();
       map.invalidateSize({ pan: false });
       map.removeLayer(markers);
       markers.clearLayers();
@@ -577,13 +587,11 @@ async function createStoreMap(container, message, locateButton, sheet, onSelectM
             button.click();
           };
         });
-        marker.on('click', () => {
-          if (!mobile.matches && badge.classList.contains('is-selected')) {
-            sheet.close();
-            return;
-          }
+        marker.on('click', ({ trigger }) => {
+          pendingFocus = null;
+          if (!mobile.matches && badge.classList.contains('is-selected')) return;
           if (mobile.matches) onSelectMobileStore();
-          sheet.open(shop, marker, badge);
+          sheet.open(shop, marker, badge, trigger);
           map.invalidateSize({ pan: false });
           map.panInside(marker.getLatLng(), { paddingTopLeft: [35, 58], paddingBottomRight: [35, 35], animate: false });
         });
@@ -599,6 +607,7 @@ async function createStoreMap(container, message, locateButton, sheet, onSelectM
 }
 
 export async function mountStores(root, workPreviews = []) {
+  const mobile = window.matchMedia('(max-width: 560px)');
   const openShare = createStoreShare(document.getElementById('store-share-dialog'));
   const openPhotos = createStorePhotoViewer(document.getElementById('store-photo-viewer'));
   let previousWork = -1;
@@ -681,7 +690,8 @@ export async function mountStores(root, workPreviews = []) {
   retry.hidden = more.hidden = true;
   const list = element('ul', 'store-results');
   list.setAttribute('role', 'list');
-  list.hidden = true;
+  const listPanel = element('div', 'store-list-panel');
+  listPanel.append(list, more);
   const mapPanel = element('div', 'store-map-panel');
   const locateButton = element('button', 'store-action store-locate');
   locateButton.type = 'button';
@@ -698,11 +708,12 @@ export async function mountStores(root, workPreviews = []) {
   const mapMessage = element('p', 'store-map-status');
   mapMessage.setAttribute('role', 'status');
   mapPanel.hidden = mapElement.hidden = mapMessage.hidden = true;
-  const mapLayout = element('div', 'store-map-layout');
-  mapLayout.append(mapElement);
-  mapPanel.append(locationStatus, mapMessage, mapLayout);
-  const storeSheet = createStoreSheet(mapLayout, mapElement, renderStoreDetails);
-  root.replaceChildren(tools, retry, list, more, mapPanel);
+  const mapLayout = element('div', 'store-map-layout is-showing-map');
+  mapPanel.append(locationStatus, mapMessage, mapElement);
+  mapLayout.append(listPanel);
+  const storeSheet = createStoreSheet(mapLayout, mapElement, renderStoreDetails, mobile);
+  mapLayout.append(mapPanel);
+  root.replaceChildren(tools, retry, mapLayout);
 
   let stores = [];
   let matches = [];
@@ -733,7 +744,7 @@ export async function mountStores(root, workPreviews = []) {
       status.textContent = '找不到符合條件的店家。試試其他店名、地址或篩選條件。';
       return;
     }
-    status.textContent = showingMap
+    status.textContent = (mobile.matches && showingMap)
       ? `共 ${matches.length} 家`
       : `共 ${matches.length} 家，已顯示 ${shown} 家`;
   }
@@ -755,13 +766,13 @@ export async function mountStores(root, workPreviews = []) {
     showingMap = true;
     listMode.setAttribute('aria-pressed', 'false');
     mapMode.setAttribute('aria-pressed', 'true');
-    list.hidden = more.hidden = true;
+    mapLayout.classList.add('is-showing-map');
     mapPanel.hidden = false;
     updateStatus();
     if (!mapTask) {
       mapMessage.textContent = '正在載入地圖…';
       mapMessage.hidden = false;
-      mapTask = createStoreMap(mapElement, mapMessage, locateButton, storeSheet, collapseOnFirstSelection);
+      mapTask = createStoreMap(mapElement, mapMessage, locateButton, storeSheet, mobile, collapseOnFirstSelection);
     }
     try {
       if (!map) {
@@ -779,7 +790,10 @@ export async function mountStores(root, workPreviews = []) {
       }
     } catch {
       mapTask = null;
-      mapMessage.textContent = '地圖暫時無法載入。可再選一次「店家地圖」重試，或切換回清單。';
+      const retryMap = element('button', 'store-action', '重新載入地圖');
+      retryMap.type = 'button';
+      retryMap.addEventListener('click', showMap);
+      mapMessage.replaceChildren('地圖暫時無法載入。 ', retryMap);
       mapMessage.hidden = false;
     }
   }
@@ -834,21 +848,28 @@ export async function mountStores(root, workPreviews = []) {
     listMode.setAttribute('aria-pressed', 'true');
     mapMode.setAttribute('aria-pressed', 'false');
     mapPanel.hidden = true;
-    list.hidden = false;
-    more.hidden = shown >= matches.length;
+    mapLayout.classList.remove('is-showing-map');
     updateStatus();
   }
 
   function showMore() {
-    const batch = matches.slice(shown, shown + PAGE_SIZE).map(shop => renderStore(shop, openShare, openPhotos));
+    const batch = matches.slice(shown, shown + PAGE_SIZE).map(shop =>
+      renderStore(shop, openShare, openPhotos, 'li', event => {
+        if (mobile.matches || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+        event.preventDefault();
+        const trigger = event.currentTarget;
+        if (!map?.focusStore(shop.id, trigger)) storeSheet.open(shop, undefined, undefined, trigger);
+      }));
+
     list.append(...batch);
     shown += batch.length;
     updateStatus();
-    more.hidden = showingMap || shown >= matches.length;
+    more.hidden = shown >= matches.length;
     return batch;
   }
 
   function filterStores() {
+    storeSheet.close();
     const activeFilters = Number(Boolean(city.value)) + Number(Boolean(category.value));
     filterToggle.textContent = activeFilters ? `篩選（${activeFilters}）` : '篩選';
     const terms = normalize(search.value).split(/\s+/).filter(Boolean);
@@ -906,6 +927,11 @@ export async function mountStores(root, workPreviews = []) {
   search.addEventListener('input', filterStores);
   city.addEventListener('change', filterStores);
   category.addEventListener('change', filterStores);
+  mobile.addEventListener('change', () => {
+    storeSheet.close();
+    if (!mobile.matches && !showingMap) void showMap();
+    updateStatus();
+  });
   listMode.addEventListener('click', showList);
   mapMode.addEventListener('click', showMap);
   locateButton.addEventListener('click', locateMe);
