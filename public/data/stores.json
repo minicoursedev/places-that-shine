@@ -5253,6 +5253,2355 @@
       "giftStatus": "可能有小物",
       "verification": true,
       "disabled": false
+    },
+    {
+      "id": "achun-2410",
+      "name": "周記私房",
+      "address": "臺中市北屯區松美路188號",
+      "category": "小吃",
+      "latlng": {
+        "lat": 24.1894444,
+        "lng": 120.6932573
+      },
+      "coordinateSource": "https://maps.app.goo.gl/zySomYbrtGdh2JQR6",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：老醋手撕雞、老醋拌豆包、蔥油文昌雞、紅燒豬腳、花生豬腳。"
+    },
+    {
+      "id": "achun-2408",
+      "name": "眉毛小姐",
+      "address": "臺中市北屯區東光路724巷11號",
+      "category": "日常生活",
+      "latlng": {
+        "lat": 24.1658319,
+        "lng": 120.7010878
+      },
+      "coordinateSource": "https://maps.app.goo.gl/XD11WYu6JgiBTukTA",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：霧眉。"
+    },
+    {
+      "id": "achun-2397",
+      "name": "建國肉圓",
+      "address": "臺中市太平區東平里中和街3號",
+      "category": "小吃",
+      "latlng": {
+        "lat": 24.1340896,
+        "lng": 120.7213179
+      },
+      "coordinateSource": "https://maps.app.goo.gl/XvgX8zvjhQev9pjC7",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：肉圓、乾麵、餛飩麵、麻醬麵、綜合湯。"
+    },
+    {
+      "id": "achun-2395",
+      "name": "人生照相館",
+      "address": "臺中市北區新北里一中街150-29號",
+      "category": "日常生活",
+      "latlng": {
+        "lat": 24.1535354,
+        "lng": 120.687507
+      },
+      "coordinateSource": "https://maps.app.goo.gl/NJBbChg5EM7ttvYc9",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：人像攝影。"
+    },
+    {
+      "id": "achun-2393",
+      "name": "hinneni 攝影器材租賃",
+      "address": "台中市南區大慶街一段243號 14樓之 6",
+      "category": "其它",
+      "latlng": {
+        "lat": 24.1134704,
+        "lng": 120.6555154
+      },
+      "coordinateSource": "https://maps.app.goo.gl/diyQ2XKHxvMssVx69",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」"
+    },
+    {
+      "id": "achun-2391",
+      "name": "三隻傻雞大里店",
+      "address": "臺中市大里區新里里德芳路二段21號",
+      "category": "正餐",
+      "latlng": {
+        "lat": 24.104466,
+        "lng": 120.6802108
+      },
+      "coordinateSource": "https://maps.app.goo.gl/vx4yHDtWebUbT1eo6",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：招牌海南雞飯。"
+    },
+    {
+      "id": "achun-2389",
+      "name": "早日早點",
+      "address": "臺中市豐原區葫蘆里府前街190號",
+      "category": "小吃",
+      "latlng": {
+        "lat": 24.2494354,
+        "lng": 120.7153141
+      },
+      "coordinateSource": "https://maps.app.goo.gl/REUiY7xYk3G6TvUW8",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：總匯三明治、招牌漢堡、早日奶茶、黑胡椒里肌蛋吐司、培根蛋餅。"
+    },
+    {
+      "id": "achun-2387",
+      "name": "六樓早午食",
+      "address": "臺中市北屯區平和里安順東四街14號",
+      "category": "小吃",
+      "latlng": {
+        "lat": 24.1736764,
+        "lng": 120.6809413
+      },
+      "coordinateSource": "https://maps.app.goo.gl/muXRYUJaxk9yPkWx7",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：五十下肉排 2.0 漢堡。"
+    },
+    {
+      "id": "achun-2385",
+      "name": "杏日製茶",
+      "address": "新北市板橋區文化路一段343號",
+      "category": "甜點飲料",
+      "latlng": {
+        "lat": 25.02092,
+        "lng": 121.466496
+      },
+      "coordinateSource": "https://maps.app.goo.gl/s9ptgqjLNRUrVhZz6",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：拾春青、蓮霧拾春青。"
+    },
+    {
+      "id": "achun-2383",
+      "name": "詠欣生技有限公司",
+      "address": "台中市西屯區台灣大道四段771號 9樓",
+      "category": "其它",
+      "latlng": {
+        "lat": 24.1806668,
+        "lng": 120.6194124
+      },
+      "coordinateSource": "https://maps.app.goo.gl/4NUn4GKiFDoPDGau9",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：愛綠抗蘿蔔硫素、汝樂舒 PS128 快樂益生菌。"
+    },
+    {
+      "id": "achun-2381",
+      "name": "I.C.E 實驗室 Hair salon",
+      "address": "台中市西區金山路12-4號",
+      "category": "美髮",
+      "latlng": {
+        "lat": 24.1415179,
+        "lng": 120.6708948
+      },
+      "coordinateSource": "https://maps.app.goo.gl/P4XBgTWCEj9Dejmn8",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：剪、燙、染、護 （短髮 + 染髮專門）。"
+    },
+    {
+      "id": "achun-2379",
+      "name": "椛島花島日式美甲專門店",
+      "address": "南投縣南投市中興路28號 2樓",
+      "category": "日常生活",
+      "latlng": {
+        "lat": 23.9388651,
+        "lng": 120.696884
+      },
+      "coordinateSource": "https://maps.app.goo.gl/731hPcQqQVhCfrVF9",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：手足護理保養。"
+    },
+    {
+      "id": "achun-2377",
+      "name": "The Bird Coffee",
+      "address": "臺中市西區和龍里西屯路一段113號",
+      "category": "咖啡廳",
+      "latlng": {
+        "lat": 24.1508328,
+        "lng": 120.6723113
+      },
+      "coordinateSource": "https://maps.app.goo.gl/bmge8kK7foEbHq458",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：冬瓜檸檬咖啡、甘蔗咖啡、甘蔗拿鐵、布丁、提拉米蘇。"
+    },
+    {
+      "id": "achun-2375",
+      "name": "MADO 雞蛋糕",
+      "address": "臺中市南區福順里復興路二段90號",
+      "category": "甜點飲料",
+      "latlng": {
+        "lat": 24.1227098,
+        "lng": 120.6625418
+      },
+      "coordinateSource": "https://maps.app.goo.gl/fZr991KvkzEFeANLA",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：牽絲起司雞蛋糕、奶油卡士達雞蛋糕。"
+    },
+    {
+      "id": "achun-2369",
+      "name": "蒸神女 台中清水店",
+      "address": "臺中市清水區中華路426號",
+      "category": "小吃",
+      "latlng": {
+        "lat": 24.2725478,
+        "lng": 120.5689436
+      },
+      "coordinateSource": "https://maps.app.goo.gl/fyFqZC2Ch1QPU64D7",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：麻奶鴨血臭豆腐、肉蛋鴨血臭豆腐、椒麻肉燥飯、紅麴雞爪。"
+    },
+    {
+      "id": "achun-2363",
+      "name": "慶樺鋼製家具有限公司",
+      "address": "臺中市東區東勢里進化路201-2號",
+      "category": "日常生活",
+      "latlng": {
+        "lat": 24.1488659,
+        "lng": 120.6942077
+      },
+      "coordinateSource": "https://maps.app.goo.gl/AESap38D1Cti2CXcA",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：角鋼架，前來討論規畫也很推薦唷~。"
+    },
+    {
+      "id": "achun-2361",
+      "name": "劉大爺北平店",
+      "address": "臺中市北屯區平德里河北路二段84號",
+      "category": "甜點飲料",
+      "latlng": {
+        "lat": 24.1708111,
+        "lng": 120.683492
+      },
+      "coordinateSource": "https://maps.app.goo.gl/MYc8TSNk4jzSVpZw7",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：有機黃豆製作的豆花及手工熬製的配料。"
+    },
+    {
+      "id": "achun-2359",
+      "name": "YYL 悅研生活",
+      "address": "臺中市北區育德里篤行路388號",
+      "category": "正餐",
+      "latlng": {
+        "lat": 24.1578581,
+        "lng": 120.6737155
+      },
+      "coordinateSource": "https://maps.app.goo.gl/R1fA4NQQoWKg7at57",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：黯然銷魂飯、沙嗲牛肉麵、韓式玻璃肌療程。"
+    },
+    {
+      "id": "achun-2355",
+      "name": "Saola cafè 騷啦咖啡",
+      "address": "臺中市南區新榮里學府路135巷2弄9號",
+      "category": "咖啡廳",
+      "latlng": {
+        "lat": 24.1286311,
+        "lng": 120.6736993
+      },
+      "coordinateSource": "https://maps.app.goo.gl/T3AGoGPEVY21htC89",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：冷壓咖啡、虹吸咖啡、蘋果肉桂起司蛋糕。"
+    },
+    {
+      "id": "achun-2348",
+      "name": "貪吃鬼咖啡 kuishinbou cafe",
+      "address": "臺中市中區繼光里綠川西街175巷27-1號",
+      "category": "咖啡廳",
+      "latlng": {
+        "lat": 24.140133,
+        "lng": 120.6843097
+      },
+      "coordinateSource": "https://maps.app.goo.gl/TMX7HbKtnKqcg2Fd8",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：西西里、豬里肌蘋果三明治、伯爵乳酪。"
+    },
+    {
+      "id": "achun-2345",
+      "name": "名鎂便利商店",
+      "address": "台中市北屯區太和東街191號",
+      "category": "日常生活",
+      "latlng": {
+        "lat": 24.1659835,
+        "lng": 120.7242305
+      },
+      "coordinateSource": "https://maps.app.goo.gl/JcPWRuZH5P4orcd7A",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：競選小物、飄帶、購物袋。"
+    },
+    {
+      "id": "achun-2343",
+      "name": "A Dress A Day",
+      "address": "臺中市西區忠明里中美街363巷6號",
+      "category": "服飾鞋店",
+      "latlng": {
+        "lat": 24.1515914,
+        "lng": 120.6599237
+      },
+      "coordinateSource": "https://maps.app.goo.gl/Txqdg3p6zt64z1Xt7",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：韓國可愛周邊小物、韓國服飾。"
+    },
+    {
+      "id": "achun-2337",
+      "name": "Kichi_Pancake",
+      "address": "臺中市北屯區水湳里大連路一段27巷30號",
+      "category": "甜點飲料",
+      "latlng": {
+        "lat": 24.176111,
+        "lng": 120.671601
+      },
+      "coordinateSource": "https://maps.app.goo.gl/WG2U26DQtk9RKx2M9",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：厚鬆餅、咖啡。"
+    },
+    {
+      "id": "achun-2335",
+      "name": "919 數位相機維修網 台中店",
+      "address": "台中市北屯區天津路四段110號",
+      "category": "3C 通訊",
+      "latlng": {
+        "lat": 24.169126,
+        "lng": 120.6884648
+      },
+      "coordinateSource": "https://maps.app.goo.gl/o963Z18XYz3Y96VA9",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：維修保養。"
+    },
+    {
+      "id": "achun-2333",
+      "name": "SSS 六星集車體美研",
+      "address": "新北市永和區永貞里永亨路43號",
+      "category": "其它",
+      "latlng": {
+        "lat": 25.0063771,
+        "lng": 121.5200114
+      },
+      "coordinateSource": "https://maps.app.goo.gl/7omCNAzKdgNK3udU8",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：歡迎來聊天。"
+    },
+    {
+      "id": "achun-2327",
+      "name": "Treasures Of Q 燈工琉璃工作室",
+      "address": "臺中市西區公正里向上南路一段188號",
+      "category": "選物雜貨",
+      "latlng": {
+        "lat": 24.1450709,
+        "lng": 120.6524409
+      },
+      "coordinateSource": "https://maps.app.goo.gl/2vchohhSEHHgeawE9",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：毛髮琉璃/母乳琉璃訂製、燈工玻璃體驗、結合 3D 設計的客製紀念作品。\n參觀、訂製諮詢與體驗課程需預約。"
+    },
+    {
+      "id": "achun-2325",
+      "name": "畫惹髮刻男士理髮",
+      "address": "臺中市北區建成里東成三街182號",
+      "category": "美髮",
+      "latlng": {
+        "lat": 24.1554714,
+        "lng": 120.7011777
+      },
+      "coordinateSource": "https://maps.app.goo.gl/VxxX5PYYXRMXZQ7F8",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：男士髮型、髮雕刻藝術造型。"
+    },
+    {
+      "id": "achun-2323",
+      "name": "盈溢洋酒商行",
+      "address": "臺中市東區台中路163號",
+      "category": "日常生活",
+      "latlng": {
+        "lat": 24.1305599,
+        "lng": 120.685114
+      },
+      "coordinateSource": "https://maps.app.goo.gl/hPG5s88raeSiiCB97",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：洋酒。"
+    },
+    {
+      "id": "achun-2321",
+      "name": "張福醬食物所",
+      "address": "臺中市南屯區黎明里干城街145巷4弄15號",
+      "category": "烘焙",
+      "latlng": {
+        "lat": 24.1539997,
+        "lng": 120.6289959
+      },
+      "coordinateSource": "https://maps.app.goo.gl/WaG8s8peLZbhCjno8",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：裸麥麵包、肉桂捲、司康。"
+    },
+    {
+      "id": "achun-2319",
+      "name": "華妍時尚造型館",
+      "address": "臺中市大里區仁德里仁化路815號",
+      "category": "美髮",
+      "latlng": {
+        "lat": 24.092572,
+        "lng": 120.692172
+      },
+      "coordinateSource": "https://maps.app.goo.gl/w2zkxx4GGBq1UpJ6A",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：髮型造型。"
+    },
+    {
+      "id": "achun-2317",
+      "name": "有緣人早餐",
+      "address": "臺中市北屯區松強里松美路188號",
+      "category": "小吃",
+      "latlng": {
+        "lat": 24.1895527,
+        "lng": 120.6926538
+      },
+      "coordinateSource": "https://maps.app.goo.gl/qKJ6AbiEVZ3b9jQp6",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：選你所愛，擇你所想。"
+    },
+    {
+      "id": "achun-2315",
+      "name": "日月梵心瑜伽 × 器械皮拉提斯教室",
+      "address": "臺中市西屯區何德里寧夏西七街二號",
+      "category": "日常生活",
+      "latlng": {
+        "lat": 24.1649383,
+        "lng": 120.6602081
+      },
+      "coordinateSource": "https://maps.app.goo.gl/SWvb4FUrKMZXsYJ39",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：器械皮拉提斯、瑜珈、DNS 核心結構訓練。"
+    },
+    {
+      "id": "achun-2310",
+      "name": "官田菱角蒸氣花生－昌平",
+      "address": "臺中市北屯區松和里昌平路二段2-12號",
+      "category": "小吃",
+      "latlng": {
+        "lat": 24.177353,
+        "lng": 120.690605
+      },
+      "coordinateSource": "https://maps.app.goo.gl/ZZeX45Aks2TSZcuF8",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：官田產地直送菱角跟蒸氣花生。\n菱角與蒸氣花生為季節限定。"
+    },
+    {
+      "id": "achun-2280",
+      "name": "艦隊街咖啡",
+      "address": "臺中市中區繼光里民族路24號",
+      "category": "咖啡廳",
+      "latlng": {
+        "lat": 24.1377602,
+        "lng": 120.6820134
+      },
+      "coordinateSource": "https://maps.app.goo.gl/7Up5V59uznoegDtd6",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：咖啡、提拉米蘇。"
+    },
+    {
+      "id": "achun-2278",
+      "name": "飛聲音響電器商行",
+      "address": "臺中市西屯區大鵬里長安路二段119號",
+      "category": "日常生活",
+      "latlng": {
+        "lat": 24.1736389,
+        "lng": 120.6642893
+      },
+      "coordinateSource": "https://maps.app.goo.gl/cNeoPEJM8wFj5z6d7",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：冷氣 & RO 淨水。"
+    },
+    {
+      "id": "achun-2276",
+      "name": "甜菓蒔鮮果",
+      "address": "臺中市北屯區平興里遼寧路一段376號新一點利黃昏市場 B168 攤位（在市場正中央鵝房宮附近，新一路上）",
+      "category": "甜點飲料",
+      "latlng": {
+        "lat": 24.1769192,
+        "lng": 120.6973868
+      },
+      "coordinateSource": "https://maps.app.goo.gl/Gf7rCykd1vgver7EA",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：木瓜牛奶、酪梨牛奶、綜合果汁、養生黑/白銀耳燉系列。時令季節鮮果。"
+    },
+    {
+      "id": "achun-2274",
+      "name": "藝間工作室",
+      "address": "臺中市潭子區栗林里潭豐路二段870號",
+      "category": "其它",
+      "latlng": {
+        "lat": 24.2343932,
+        "lng": 120.7108991
+      },
+      "coordinateSource": "https://maps.app.goo.gl/uFdr3gke3P5yFtx68",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：藝術繪畫工作室，藝術創作與教學為主。"
+    },
+    {
+      "id": "achun-2272",
+      "name": "宏勵電腦",
+      "address": "臺中市大里區仁德里中興路1 段382巷43號",
+      "category": "3C 通訊",
+      "latlng": {
+        "lat": 24.0921696,
+        "lng": 120.6928052
+      },
+      "coordinateSource": "https://maps.app.goo.gl/TSJRgRbEGzQYAWsQ6",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：電腦 3C 買賣、監視器安裝、弱電施工。"
+    },
+    {
+      "id": "achun-2270",
+      "name": "梅厝，沒錯！",
+      "address": "南投縣國姓鄉北港村長北路5號",
+      "category": "正餐",
+      "latlng": {
+        "lat": 24.06118,
+        "lng": 120.9096021
+      },
+      "coordinateSource": "https://maps.app.goo.gl/28qVxyZ5xouMRnHp6",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：清蒸破布子虱目魚肚定食。"
+    },
+    {
+      "id": "achun-2268",
+      "name": "晨香早餐",
+      "address": "臺中市南屯區中和里和成巷97號",
+      "category": "小吃",
+      "latlng": {
+        "lat": 24.1142959,
+        "lng": 120.6232677
+      },
+      "coordinateSource": "https://maps.app.goo.gl/MWvKVa37dfMHQrKU9",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：選你愛吃的。"
+    },
+    {
+      "id": "achun-2266",
+      "name": "春茂輪胎有限公司",
+      "address": "臺中市大甲區武曲里經國路565號",
+      "category": "其它",
+      "latlng": {
+        "lat": 24.3523105,
+        "lng": 120.6176986
+      },
+      "coordinateSource": "https://maps.app.goo.gl/fQLiuyFGK5G2GE8p8",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：各種輪胎買賣及裝修業務。"
+    },
+    {
+      "id": "achun-2264",
+      "name": "氫鬆 66",
+      "address": "臺中市豐原區中山里信義街66號",
+      "category": "其它",
+      "latlng": {
+        "lat": 24.2498426,
+        "lng": 120.7189178
+      },
+      "coordinateSource": "https://maps.app.goo.gl/X2wytwoUGLusA57H9",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：氫機。"
+    },
+    {
+      "id": "achun-2262",
+      "name": "SHU the BODY LAB 樹 • 整復工作室",
+      "address": "臺中市西屯區何南里大墩二十街61號",
+      "category": "日常生活",
+      "latlng": {
+        "lat": 24.1585979,
+        "lng": 120.6541559
+      },
+      "coordinateSource": "https://maps.app.goo.gl/U5tRnNsMoatdpcuy9",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：肌肉骨骼調理。"
+    },
+    {
+      "id": "achun-2257",
+      "name": "林登山人製鞋所",
+      "address": "臺中市南屯區黎明里懷德街104號",
+      "category": "服飾鞋店",
+      "latlng": {
+        "lat": 24.1524258,
+        "lng": 120.6304175
+      },
+      "coordinateSource": "https://maps.app.goo.gl/nSasyqang1v9XSUs7",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：訂製傳統及登山鞋靴、訂製運動鞋墊、登山鞋及攀岩鞋維修。"
+    },
+    {
+      "id": "achun-2255",
+      "name": "依舊愛咖啡",
+      "address": "南投縣南投市光明里光明一路45號",
+      "category": "咖啡廳",
+      "latlng": {
+        "lat": 23.9422742,
+        "lng": 120.7001632
+      },
+      "coordinateSource": "https://maps.app.goo.gl/jTZqKXDZv5vfscsN9",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：真柑願柳橙冰咖啡。"
+    },
+    {
+      "id": "achun-2253",
+      "name": "雞百分-無麩質雞蛋糕·燒-台中潭子甘蔗店",
+      "address": "臺中市潭子區興華一路279號",
+      "category": "甜點飲料",
+      "latlng": {
+        "lat": 24.2103312,
+        "lng": 120.7032728
+      },
+      "coordinateSource": "https://maps.app.goo.gl/TC2h2ZS7QTn4jYkk7",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：無麩質雞蛋糕、雞蛋燒。"
+    },
+    {
+      "id": "achun-2251",
+      "name": "樂趣購商行",
+      "address": "臺中市烏日區榮泉里健行南路108號",
+      "category": "選物雜貨",
+      "latlng": {
+        "lat": 24.110267,
+        "lng": 120.5956105
+      },
+      "coordinateSource": "https://maps.app.goo.gl/9P3o6TUFokwG6zBD7",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：團購商品。\n店家提供的實際營業位置在三榮十五路早餐店旁。"
+    },
+    {
+      "id": "achun-2245",
+      "name": "雜冊書店",
+      "address": "臺中市中區中山路131號",
+      "category": "書店",
+      "latlng": {
+        "lat": 24.1401256,
+        "lng": 120.6803534
+      },
+      "coordinateSource": "https://maps.app.goo.gl/MCWZJjVfgz3AJgQW7",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：新書與二手書、陶藝品、冰滴咖啡、歐蕾、地方茶、蜂蜜檸檬、鬆餅、水餃。"
+    },
+    {
+      "id": "achun-2183",
+      "name": "霹靂神犬寵物沙龍",
+      "address": "臺中市大里區仁化里仁化路560號",
+      "category": "寵物",
+      "latlng": {
+        "lat": 24.096415,
+        "lng": 120.700805
+      },
+      "coordinateSource": "https://maps.app.goo.gl/VgztribrLAUMcSM88",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：專業寵物美容。"
+    },
+    {
+      "id": "achun-2181",
+      "name": "自在平衡全人身心療育工作室",
+      "address": "台中市西屯區西屯路二段284-5號 4F-2",
+      "category": "日常生活",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：平衡調理。"
+    },
+    {
+      "id": "achun-2179",
+      "name": "庄稼狼麻豆文旦",
+      "address": "臺南市麻豆區139之 30號",
+      "category": "農業",
+      "latlng": {
+        "lat": 23.1745645,
+        "lng": 120.2441691
+      },
+      "coordinateSource": "https://maps.app.goo.gl/FBR8AvMqn9aVmGU98",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：文旦、紅柚。"
+    },
+    {
+      "id": "achun-2176",
+      "name": "琉璃漫舍",
+      "address": "臺中市北區新興里太平路19巷3弄24號台水宿舍商場 2樓",
+      "category": "選物雜貨",
+      "latlng": {
+        "lat": 24.1472419,
+        "lng": 120.6845947
+      },
+      "coordinateSource": "https://maps.app.goo.gl/hupF3QKdSxvoqqUa9",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：景品公仔、盲盒、動漫周邊、扭蛋、一番賞等。"
+    },
+    {
+      "id": "achun-2174",
+      "name": "港頌",
+      "address": "臺中市西屯區何成里大墩路921號",
+      "category": "小吃",
+      "latlng": {
+        "lat": 24.15784,
+        "lng": 120.6510411
+      },
+      "coordinateSource": "https://maps.app.goo.gl/y6TYQWAT7JMi424n7",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：叉燒滑蛋鹽可頌、西多士。"
+    },
+    {
+      "id": "achun-2172",
+      "name": "里好餐桌 Li-Ho Table",
+      "address": "臺中市烏日區仁德里中山路一段319號",
+      "category": "正餐",
+      "latlng": {
+        "lat": 24.1087254,
+        "lng": 120.6415919
+      },
+      "coordinateSource": "https://maps.app.goo.gl/SjhKbgucDcZKyXDa8",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：自選健康餐盒、自選沙拉。"
+    },
+    {
+      "id": "achun-2134",
+      "name": "舒視眼鏡",
+      "address": "臺中市潭子區潭秀里雅潭路一段16號",
+      "category": "日常生活",
+      "latlng": {
+        "lat": 24.2159169,
+        "lng": 120.7047239
+      },
+      "coordinateSource": "https://maps.app.goo.gl/T2sFX4XJ7Gf1HgRj8",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：客製化調整、配鏡諮詢、眼鏡顧問、多焦點眼鏡。"
+    },
+    {
+      "id": "achun-2132",
+      "name": "日進貴金屬 銀樓",
+      "address": "臺中市大里區中興路二段401號",
+      "category": "選物雜貨",
+      "latlng": {
+        "lat": 24.1124252,
+        "lng": 120.6897817
+      },
+      "coordinateSource": "https://maps.app.goo.gl/LaZVevjCTxaKe4LJ7",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：黃金/白金。"
+    },
+    {
+      "id": "achun-2130",
+      "name": "國王的茶-金山店",
+      "address": "臺中市西區平和里金山路3-1號",
+      "category": "甜點飲料",
+      "latlng": {
+        "lat": 24.1418134,
+        "lng": 120.6715362
+      },
+      "coordinateSource": "https://maps.app.goo.gl/5aA2taE8NEHwuMQm6",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：好喝的飲料。"
+    },
+    {
+      "id": "achun-2106",
+      "name": "Play or Die / 遊空 玩樂研究所",
+      "address": "臺中市西區永成街95號 2樓",
+      "category": "桌遊",
+      "latlng": {
+        "lat": 24.130989,
+        "lng": 120.6625557
+      },
+      "coordinateSource": "https://maps.app.goo.gl/LvnzUPMieutBm1RU8",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：來店裡享受一段和朋友充滿歡笑的時光，建立一場回顧十年的回憶。"
+    },
+    {
+      "id": "achun-2104",
+      "name": "明興洗衣店",
+      "address": "臺中市東區東勢里進德路16號",
+      "category": "日常生活",
+      "latlng": {
+        "lat": 24.147331,
+        "lng": 120.692287
+      },
+      "coordinateSource": "https://maps.app.goo.gl/x4H7Kv8a4wPB7VVS7",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：一般洗衣、洗棉被、乾洗、特殊衣物處理與熨燙服務。"
+    },
+    {
+      "id": "achun-2097",
+      "name": "Brewsome Coffee",
+      "address": "臺中市北區梅亭街438號",
+      "category": "咖啡廳",
+      "latlng": {
+        "lat": 24.1604608,
+        "lng": 120.6777661
+      },
+      "coordinateSource": "https://maps.app.goo.gl/3WT4cGJTrVwVFLxs9",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：美術館店的法國吐司、梅亭店的焦糖蘋果派、肉桂捲、千層、各式咖啡品項。"
+    },
+    {
+      "id": "achun-2091",
+      "name": "大鯨魚氣球工作室",
+      "address": "臺中市北區錦祥里錦祥街8號 3F-1",
+      "category": "其它",
+      "latlng": {
+        "lat": 24.1566069,
+        "lng": 120.6934822
+      },
+      "coordinateSource": "https://maps.app.goo.gl/pJeB53h176djC9AF9",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：氣球佈置、現場折氣球、氣球特效、客製化氣球、Logo 印刷氣球。"
+    },
+    {
+      "id": "achun-2089",
+      "name": "艾客手機維修",
+      "address": "臺中市北屯區水湳里中清路二段20號",
+      "category": "3C 通訊",
+      "latlng": {
+        "lat": 24.174314,
+        "lng": 120.6714209
+      },
+      "coordinateSource": "https://maps.app.goo.gl/k7LY6yrbojUedpLT9",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：手機維修、Mac 電腦、平板維修、各項產品快速維修。"
+    },
+    {
+      "id": "achun-2081",
+      "name": "咖啡·溢 Coffee Yet?",
+      "address": "臺中市南屯區三厝里惠中路三段60號",
+      "category": "正餐",
+      "latlng": {
+        "lat": 24.1483239,
+        "lng": 120.64037
+      },
+      "coordinateSource": "https://maps.app.goo.gl/FFYquwMJMFr9zCQJ8",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：港式咖哩魚蛋撈麵、咖哩牛腩飯、叉燒煎蛋飯、花生醬西多士、港式奶茶。"
+    },
+    {
+      "id": "achun-2079",
+      "name": "旺梨屋 in 海線選物社",
+      "address": "臺中市梧棲區頂寮里八德路75號",
+      "category": "選物雜貨",
+      "latlng": {
+        "lat": 24.2622747,
+        "lng": 120.5320053
+      },
+      "coordinateSource": "https://maps.app.goo.gl/2vx4wQXBEf21YSYT9",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：日韓歐美食品、服飾、生活用品、雞蛋自取。"
+    },
+    {
+      "id": "achun-1998",
+      "name": "胖媽水餃",
+      "address": "臺中市西屯區上德里上石路12號",
+      "category": "小吃",
+      "latlng": {
+        "lat": 24.1668899,
+        "lng": 120.6438496
+      },
+      "coordinateSource": "https://maps.app.goo.gl/fVVrbeKjPQ55L1Bz5",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：各式口味水餃。"
+    },
+    {
+      "id": "achun-1992",
+      "name": "花繹職所",
+      "address": "臺中市西區忠誠里精誠路21-3號",
+      "category": "花店",
+      "latlng": {
+        "lat": 24.1549701,
+        "lng": 120.6558839
+      },
+      "coordinateSource": "https://maps.app.goo.gl/vvPZms5TKxdcp5oU6",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：鮮花花禮、永生花花禮、婚禮佈置、空間花藝規劃。"
+    },
+    {
+      "id": "achun-1989",
+      "name": "勝昌中藥行",
+      "address": "臺中市北區健行里西屯路一段376號",
+      "category": "日常生活",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：傳統生藥材、科學中藥與成藥、保健食品、醫療耗材與衛生用品。"
+    },
+    {
+      "id": "achun-1986",
+      "name": "大屯書局",
+      "address": "臺中市太平區太平里太平二十二街1號",
+      "category": "選物雜貨",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：各式辦公用品以及文具。"
+    },
+    {
+      "id": "achun-1980",
+      "name": "和文堂文具行",
+      "address": "臺中市東勢區東安里豐勢路423號",
+      "category": "選物雜貨",
+      "latlng": {
+        "lat": 24.2564892,
+        "lng": 120.8285473
+      },
+      "coordinateSource": "https://maps.app.goo.gl/jubCfmMD1eAGymPE7",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：各式辦公用品以及文具。"
+    },
+    {
+      "id": "achun-1978",
+      "name": "肆食巷，嶼",
+      "address": "臺中市北區金華里錦華街40巷2號",
+      "category": "小吃",
+      "latlng": {
+        "lat": 24.156071,
+        "lng": 120.6889928
+      },
+      "coordinateSource": "https://maps.app.goo.gl/qvHfoeiPVnETMuLK7",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：手工蛋餅、義大利麵、自家烘焙陶甕咖啡。"
+    },
+    {
+      "id": "achun-1974",
+      "name": "喫茶月滿・月滿小書店",
+      "address": "臺中市中區公園里中山路123號",
+      "category": "書店",
+      "latlng": {
+        "lat": 24.139842,
+        "lng": 120.6807363
+      },
+      "coordinateSource": "https://maps.app.goo.gl/QrU2PFxAocoYrYrU8",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：文學、哲學、飲食與臺灣主題選書、厚鬆餅、自家烘焙咖啡。"
+    },
+    {
+      "id": "achun-1972",
+      "name": "永綺影印中心",
+      "address": "臺中市太平區勤益里中山路一段215巷20號",
+      "category": "其它",
+      "latlng": {
+        "lat": 24.1430503,
+        "lng": 120.732965
+      },
+      "coordinateSource": "https://maps.app.goo.gl/e7sDzRay5b6QsdgC7",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：大圖海報影印及輸出、論文精裝、文件印製及裝訂。"
+    },
+    {
+      "id": "achun-1970",
+      "name": "小多山咖啡",
+      "address": "臺中市北屯區大連西路67號",
+      "category": "咖啡廳",
+      "latlng": {
+        "lat": 24.1739799,
+        "lng": 120.6691909
+      },
+      "coordinateSource": "https://maps.app.goo.gl/DtViin1xza3bhKjP6",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：咖啡拿鐵、手沖單品、提拉米蘇、奶酥厚片。"
+    },
+    {
+      "id": "achun-1968",
+      "name": "蘊茶語",
+      "address": "臺中市大雅區大楓里民生路三段360號",
+      "category": "甜點飲料",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：熟成金萱紅茶、金萱萃紅冷泡茶、原片茶包系列。"
+    },
+    {
+      "id": "achun-1960",
+      "name": "梓書房",
+      "address": "臺中市西區土庫里福人街89號",
+      "category": "書店",
+      "latlng": {
+        "lat": 24.1427629,
+        "lng": 120.6592598
+      },
+      "coordinateSource": "https://maps.app.goo.gl/9eW1HGGCdEHUgmpB6",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：書書書。"
+    },
+    {
+      "id": "achun-1958",
+      "name": "Folk Gathering",
+      "address": "臺中市西區土庫里五權西六街136巷6之 1號",
+      "category": "咖啡廳",
+      "latlng": {
+        "lat": 24.136257,
+        "lng": 120.658478
+      },
+      "coordinateSource": "https://maps.app.goo.gl/MfXcn4ARMJWcq5x89",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：咖啡飲品、胡蘿蔔蛋糕、手作甜點。"
+    },
+    {
+      "id": "achun-1956",
+      "name": "此木二水 Shiba Kori",
+      "address": "臺中市西區忠誠里長春街49號",
+      "category": "甜點飲料",
+      "latlng": {
+        "lat": 24.1551921,
+        "lng": 120.6587625
+      },
+      "coordinateSource": "https://maps.app.goo.gl/ssaQXi6QrofjdkKQ9",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：白葡萄多多雪花冰、泰式奶茶雪花冰、提拉米蘇格子可頌、巴斯克乳酪蛋糕、蜂蜜柚子氣泡飲。"
+    },
+    {
+      "id": "achun-1951",
+      "name": "丹尼先生自己喝茶飲",
+      "address": "臺中市西屯區福聯里福聯街28號",
+      "category": "甜點飲料",
+      "latlng": {
+        "lat": 24.1851582,
+        "lng": 120.607848
+      },
+      "coordinateSource": "https://maps.app.goo.gl/dkh1LbJpdVeBZwsE6",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：焙香青茶、小芋圓鮮奶茶、荔香青檸寒天凍飲、蜜桃果粒紅茶、嫩仙草。"
+    },
+    {
+      "id": "achun-1949",
+      "name": "野人讀冊店",
+      "address": "臺中市大甲區頂店里大智街10號",
+      "category": "書店",
+      "latlng": {
+        "lat": 24.3556865,
+        "lng": 120.6318143
+      },
+      "coordinateSource": "https://maps.app.goo.gl/vKEAhpzju5pzCtHM6",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：老派約會咖啡 37 元／包，1,000 元／30 包。"
+    },
+    {
+      "id": "achun-1913",
+      "name": "融 手工冰淇淋",
+      "address": "臺中市霧峰區本堂里樹仁二街12號",
+      "category": "甜點飲料",
+      "latlng": {
+        "lat": 24.0641866,
+        "lng": 120.6965509
+      },
+      "coordinateSource": "https://maps.app.goo.gl/czKEt4cceGYNx1gb7",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：山刺番荔枝、巧克力、酪梨牛奶。"
+    },
+    {
+      "id": "achun-1909",
+      "name": "老頭音樂",
+      "address": "臺中市中區光復里民族路92號 7樓",
+      "category": "選物雜貨",
+      "latlng": {
+        "lat": 24.1399395,
+        "lng": 120.6794161
+      },
+      "coordinateSource": "https://maps.app.goo.gl/MP15fq3s7oTZ2LEZ9",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：臺灣獨立音樂製作。"
+    },
+    {
+      "id": "achun-1905",
+      "name": "小室花滿",
+      "address": "臺中市北屯區廍子里太和二街6號 7-3",
+      "category": "花店",
+      "latlng": {
+        "lat": 24.1634265,
+        "lng": 120.7273771
+      },
+      "coordinateSource": "https://maps.app.goo.gl/RnUMUpGRxWNStaYc6",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：花藝課程、客製花禮。\n花藝工作室採預約制。"
+    },
+    {
+      "id": "achun-1903",
+      "name": "小樹苗生活雜貨",
+      "address": "臺中市南屯區新生里龍富路四段135號",
+      "category": "選物雜貨",
+      "latlng": {
+        "lat": 24.1435628,
+        "lng": 120.6256972
+      },
+      "coordinateSource": "https://maps.app.goo.gl/SAMHvmw31wzqssVVA",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：生活道具。"
+    },
+    {
+      "id": "achun-1865",
+      "name": "KICKBONE COFFEE",
+      "address": "臺中市北區健行里忠太西路37號",
+      "category": "咖啡廳",
+      "latlng": {
+        "lat": 24.1618166,
+        "lng": 120.6677657
+      },
+      "coordinateSource": "https://maps.app.goo.gl/1JUTPd8fXdwrWyEs7",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：髒髒咖啡、手沖咖啡、義式咖啡。"
+    },
+    {
+      "id": "achun-1863",
+      "name": "小森湯咖哩",
+      "address": "臺中市南屯區文心里大英街9號",
+      "category": "正餐",
+      "latlng": {
+        "lat": 24.1413128,
+        "lng": 120.6487098
+      },
+      "coordinateSource": "https://maps.app.goo.gl/cjkvkCSFSMDFfFAf9",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：湯咖哩、布丁、冰品都好吃。"
+    },
+    {
+      "id": "achun-1857",
+      "name": "植作茶",
+      "address": "臺中市西區民生里民權路51號",
+      "category": "甜點飲料",
+      "latlng": {
+        "lat": 24.1366188,
+        "lng": 120.6810961
+      },
+      "coordinateSource": "https://maps.app.goo.gl/nrU6uZHkSUWscZXy8",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：決明子鮮奶、寒露、紫米鮮奶。"
+    },
+    {
+      "id": "achun-1855",
+      "name": "任性創意潛艇堡",
+      "address": "臺中市西區公益里向上北路217號",
+      "category": "正餐",
+      "latlng": {
+        "lat": 24.1477469,
+        "lng": 120.6598378
+      },
+      "coordinateSource": "https://maps.app.goo.gl/N5fy2BNtEokoA2UNA",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：經典蛋沙拉、薑汁燒肉堡、肉醬熱狗堡。"
+    },
+    {
+      "id": "achun-1853",
+      "name": "肆月捌 × DaKuaiDai 甜室",
+      "address": "臺中市大里區日新里中興路二段654巷43號",
+      "category": "正餐",
+      "latlng": {
+        "lat": 24.1161492,
+        "lng": 120.6901162
+      },
+      "coordinateSource": "https://maps.app.goo.gl/duaTX2va8oJFBeoy8",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：味噌奶油燒豬肉燉飯、黑松露牛排義大利麵、司康、古早味布丁。\n營業時間以店家 Instagram 公告為準，請在公告時段前往。"
+    },
+    {
+      "id": "achun-1798",
+      "name": "Puppy Moon i 廚房",
+      "address": "臺中市西區土庫里福人街47巷3號",
+      "category": "烘焙",
+      "latlng": {
+        "lat": 24.1425934,
+        "lng": 120.6603548
+      },
+      "coordinateSource": "https://maps.app.goo.gl/tXuD7UkbrcQhLeUu8",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：香醇的重乳酪蛋糕、產地限定的奶油手工餅乾。"
+    },
+    {
+      "id": "achun-1637",
+      "name": "大吉餐飲本部",
+      "address": "臺中市西屯區何南里大墩二十街51之 1號",
+      "category": "正餐",
+      "latlng": {
+        "lat": 24.1584232,
+        "lng": 120.6544637
+      },
+      "coordinateSource": "https://maps.app.goo.gl/KrHGQEY9ackWhGYX8",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：花蓮剝皮辣椒肉丸、炒泡麵、Orion 生啤酒。"
+    },
+    {
+      "id": "achun-1635",
+      "name": "as soon as pasta",
+      "address": "臺中市西區忠明里中美街363巷14號",
+      "category": "正餐",
+      "latlng": {
+        "lat": 24.1514875,
+        "lng": 120.6597363
+      },
+      "coordinateSource": "https://maps.app.goo.gl/H79nTJkRFM2rLacZ6",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：草蝦辣奶油寬麵。"
+    },
+    {
+      "id": "achun-1633",
+      "name": "黃記藥膳豬腳",
+      "address": "臺中市潭子區潭秀里中山路二段416號",
+      "category": "小吃",
+      "latlng": {
+        "lat": 24.2154379,
+        "lng": 120.7053615
+      },
+      "coordinateSource": "https://maps.app.goo.gl/nqi8YhQig5DEpTXy7",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：當歸豬腳麵線、豬心麵線、鴨肉飯、鮮蝦餛飩。"
+    },
+    {
+      "id": "achun-1621",
+      "name": "Flora Caffè",
+      "address": "臺中市西區廣民里大明街10號",
+      "category": "咖啡廳",
+      "latlng": {
+        "lat": 24.1391694,
+        "lng": 120.6746235
+      },
+      "coordinateSource": "https://maps.app.goo.gl/Fo696jVGg1yygwEg8",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：冰拿鐵。"
+    },
+    {
+      "id": "achun-1619",
+      "name": "工工買取工作室",
+      "address": "臺中市南區南門里興大路59號",
+      "category": "服飾鞋店",
+      "latlng": {
+        "lat": 24.1235245,
+        "lng": 120.6822356
+      },
+      "coordinateSource": "https://maps.app.goo.gl/PJFhdb7eTvNTH7sUA",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：各種酷酷的服飾。\n工作室可預約試穿。"
+    },
+    {
+      "id": "achun-1617",
+      "name": "大叔理髮俱樂部",
+      "address": "臺中市北區中達里梅川西路三段211號 2樓",
+      "category": "美髮",
+      "latlng": {
+        "lat": 24.1550809,
+        "lng": 120.6748252
+      },
+      "coordinateSource": "https://maps.app.goo.gl/hDirzxsLKPttXeGq7",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：剪、燙、染服務都很推薦。"
+    },
+    {
+      "id": "achun-1612",
+      "name": "冠美寢俱窗簾生活館",
+      "address": "臺中市大里區新仁里新仁路一段172號",
+      "category": "日常生活",
+      "latlng": {
+        "lat": 24.1112795,
+        "lng": 120.7031244
+      },
+      "coordinateSource": "https://maps.app.goo.gl/5p3DTJpJXqMw6FHPA",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：傳統手工被、窗簾、拉門。"
+    },
+    {
+      "id": "achun-1607",
+      "name": "武藏日式燒肉丼",
+      "address": "臺中市東區合作里自強街4巷32號",
+      "category": "正餐",
+      "latlng": {
+        "lat": 24.1505019,
+        "lng": 120.6966663
+      },
+      "coordinateSource": "https://maps.app.goo.gl/Xu11N2SdCf8YkVn28",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：燒肉丼（臺灣豚）。"
+    },
+    {
+      "id": "achun-1602",
+      "name": "莯蓉寵物店",
+      "address": "臺中市北屯區瀋陽北路20號",
+      "category": "寵物",
+      "latlng": {
+        "lat": 24.1765684,
+        "lng": 120.672773
+      },
+      "coordinateSource": "https://maps.app.goo.gl/ZhH8NuzyVjFMmQHz7",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：寵物美容、住宿。"
+    },
+    {
+      "id": "achun-1526",
+      "name": "A.U.C.B.",
+      "address": "臺中市北區新興里太平路19巷5弄7號",
+      "category": "服飾鞋店",
+      "latlng": {
+        "lat": 24.1469069,
+        "lng": 120.6847336
+      },
+      "coordinateSource": "https://maps.app.goo.gl/U15dh2cZ9iWQ4bep9",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：AUCB 自主品牌服飾配件。"
+    },
+    {
+      "id": "achun-1525",
+      "name": "Hako Nail 日系美甲",
+      "address": "臺中市西屯區何成里大容西街31號",
+      "category": "日常生活",
+      "latlng": {
+        "lat": 24.1562154,
+        "lng": 120.6473679
+      },
+      "coordinateSource": "https://maps.app.goo.gl/je9xy1ERafxLaa1f8",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：美甲。"
+    },
+    {
+      "id": "achun-1523",
+      "name": "吞舌頭",
+      "address": "臺中市西區昇平里昇平街82號",
+      "category": "烘焙",
+      "latlng": {
+        "lat": 24.1456191,
+        "lng": 120.6613447
+      },
+      "coordinateSource": "https://maps.app.goo.gl/wA8AwQgpB9vm7a2B6",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：鹹奶油菠蘿麵包、手工果醬奶油吐司、香草鹽之花蛋黃酥、剝皮辣椒綠豆碰。"
+    },
+    {
+      "id": "achun-1522",
+      "name": "極樂鳥",
+      "address": "臺中市北區新北里太平路4-1號",
+      "category": "服飾鞋店",
+      "latlng": {
+        "lat": 24.1475997,
+        "lng": 120.6862094
+      },
+      "coordinateSource": "https://maps.app.goo.gl/xGZxD47WPPj4N9H7A",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：極樂鳥自家設計全系列一級棒👍🏼。"
+    },
+    {
+      "id": "achun-1521",
+      "name": "青食光輕食沙拉",
+      "address": "臺中市西屯區何成里大容西街23號",
+      "category": "正餐",
+      "latlng": {
+        "lat": 24.1560202,
+        "lng": 120.6474599
+      },
+      "coordinateSource": "https://maps.app.goo.gl/xKKhWkd4h5XofAW58",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：自選沙拉系列。"
+    },
+    {
+      "id": "achun-1520",
+      "name": "圓夢翔 X 圓夢咖啡館",
+      "address": "臺中市沙鹿區竹林里光華路528號",
+      "category": "咖啡廳",
+      "latlng": {
+        "lat": 24.2433853,
+        "lng": 120.5703072
+      },
+      "coordinateSource": "https://maps.app.goo.gl/Y41DPXsjxMJd6oec8",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：竹炭拿鐵、檸檬冰咖啡、提拉米蘇。"
+    },
+    {
+      "id": "achun-1519",
+      "name": "回甘 AFTERTASTE",
+      "address": "臺中市南屯區黎明里干城街136號",
+      "category": "書店",
+      "latlng": {
+        "lat": 24.1555289,
+        "lng": 120.6301808
+      },
+      "coordinateSource": "https://maps.app.goo.gl/QhchC87xDf8Z3VLT7",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：回甘選書。"
+    },
+    {
+      "id": "achun-1518",
+      "name": "川井機車",
+      "address": "臺中市大里區仁化里宏巨一巷17號",
+      "category": "其它",
+      "latlng": {
+        "lat": 24.1007646,
+        "lng": 120.7172528
+      },
+      "coordinateSource": "https://maps.app.goo.gl/FayQtWn53XWEdDah8",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：服務第一。"
+    },
+    {
+      "id": "achun-1517",
+      "name": "MangaZine 漫格誌書店",
+      "address": "臺中市西屯區上德里杏林路15號",
+      "category": "書店",
+      "latlng": {
+        "lat": 24.16772,
+        "lng": 120.6418187
+      },
+      "coordinateSource": "https://maps.app.goo.gl/rCSjMwrgrbBfnL3b8",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：店內的台灣漫畫。"
+    },
+    {
+      "id": "achun-1516",
+      "name": "港口豆花-大里本舖",
+      "address": "臺中市大里區大明路245號",
+      "category": "甜點飲料",
+      "latlng": {
+        "lat": 24.1149703,
+        "lng": 120.6820779
+      },
+      "coordinateSource": "https://maps.app.goo.gl/nDkKo1oEwZohvUGz8",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：綜合豆花、綠豆湯、杏仁豆腐冰。"
+    },
+    {
+      "id": "achun-1515",
+      "name": "台中佰德車業",
+      "address": "臺中市東區旱溪里旱溪西路一段432號",
+      "category": "其它",
+      "latlng": {
+        "lat": 24.140693,
+        "lng": 120.7000184
+      },
+      "coordinateSource": "https://maps.app.goo.gl/xUmCke6T5kEe5fkk8",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：車。"
+    },
+    {
+      "id": "achun-1514",
+      "name": "廣皮咖啡",
+      "address": "新北市五股區民義里工商路151號",
+      "category": "咖啡廳",
+      "latlng": {
+        "lat": 25.0864472,
+        "lng": 121.4350119
+      },
+      "coordinateSource": "https://maps.app.goo.gl/gUirWNdvFR4U32RH8",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：澳式小白、墨爾本魔術、提拉米蘇跟巴斯克。"
+    },
+    {
+      "id": "achun-1512",
+      "name": "COFFEE L&J",
+      "address": "臺中市南區新榮里信義南街85號",
+      "category": "咖啡廳",
+      "latlng": {
+        "lat": 24.127837,
+        "lng": 120.67385
+      },
+      "coordinateSource": "https://maps.app.goo.gl/JedAUSaTVHLfMY4P9",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：咖啡、手作甜點。"
+    },
+    {
+      "id": "achun-1511",
+      "name": "狗貝絲寵物美容工作室",
+      "address": "臺中市清水區中華路617號",
+      "category": "寵物",
+      "latlng": {
+        "lat": 24.2776788,
+        "lng": 120.5742127
+      },
+      "coordinateSource": "https://maps.app.goo.gl/PSnEx58p6PKgR6YaA",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：狗狗美容。"
+    },
+    {
+      "id": "achun-1510",
+      "name": "李家麵包屋",
+      "address": "臺中市西區公益里向上北路217號",
+      "category": "烘焙",
+      "latlng": {
+        "lat": 24.147793,
+        "lng": 120.6598532
+      },
+      "coordinateSource": "https://maps.app.goo.gl/hVGTYNqb3kqpz7Ro6",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：元氣堅果、菠蘿奶酥、爆漿巧克力。"
+    },
+    {
+      "id": "achun-1509",
+      "name": "宮崎日式咖喱",
+      "address": "臺中市北屯區北京里北屯路193號",
+      "category": "正餐",
+      "latlng": {
+        "lat": 24.1640638,
+        "lng": 120.693427
+      },
+      "coordinateSource": "https://maps.app.goo.gl/qj4mTXaDFcXYFrPz6",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：超厚炸豬排。"
+    },
+    {
+      "id": "achun-1508",
+      "name": "豆吉小舖豆漿早午餐專賣店",
+      "address": "臺中市北區淡溝里博館一街31號",
+      "category": "正餐",
+      "latlng": {
+        "lat": 24.154699,
+        "lng": 120.667854
+      },
+      "coordinateSource": "https://maps.app.goo.gl/E8DHrcppx9rBN8fX6",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：不濾渣豆漿跟蔬菜爆多早午餐。"
+    },
+    {
+      "id": "achun-1507",
+      "name": "風葉鳥 ─ 植感之禮",
+      "address": "臺中市沙鹿區鹿寮里光榮街83巷48號",
+      "category": "甜點飲料",
+      "latlng": {
+        "lat": 24.2437429,
+        "lng": 120.5648565
+      },
+      "coordinateSource": "https://maps.app.goo.gl/gLtseM3n7LJ4MqycA",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：嫣紅花火天然低糖綜合果乾眠雪酥、絕美風呂敷花插吉運包裝、多款常溫綜合天然茶食禮盒。"
+    },
+    {
+      "id": "achun-1506",
+      "name": "一分之一工作室",
+      "address": "臺中市北屯區平心里安順東八街1號",
+      "category": "選物雜貨",
+      "latlng": {
+        "lat": 24.1733466,
+        "lng": 120.68895
+      },
+      "coordinateSource": "https://maps.app.goo.gl/H7SVXy7bhGukZUfA8",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：各式日本文具紙筆墨貼紙。"
+    },
+    {
+      "id": "achun-1505",
+      "name": "有筆 x 鋼筆工作室",
+      "address": "臺中市西區長春街14號",
+      "category": "選物雜貨",
+      "latlng": {
+        "lat": 24.1541424,
+        "lng": 120.6611408
+      },
+      "coordinateSource": "https://maps.app.goo.gl/sLoKYR5otn38j3Qg6",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：日本文具各式紙筆墨。"
+    },
+    {
+      "id": "achun-1504",
+      "name": "就要醬滷 漢口店",
+      "address": "臺中市西屯區何源里漢口路二段328號",
+      "category": "小吃",
+      "latlng": {
+        "lat": 24.166658,
+        "lng": 120.6650253
+      },
+      "coordinateSource": "https://maps.app.goo.gl/M5Ap9AmZTCgeJmKp8",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：大黑豆干、水晶餃。"
+    },
+    {
+      "id": "achun-1503",
+      "name": "橋頭阿珍",
+      "address": "臺中市北區光大里五權路318-1號",
+      "category": "小吃",
+      "latlng": {
+        "lat": 24.1519204,
+        "lng": 120.6794279
+      },
+      "coordinateSource": "https://maps.app.goo.gl/bKDddug5ReKrKck28",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：大麵羹、梅干扣肉、手工餛飩。"
+    },
+    {
+      "id": "achun-1502",
+      "name": "阿三哥牛肉麵",
+      "address": "臺中市大里區立仁里立仁路42-3號",
+      "category": "正餐",
+      "latlng": {
+        "lat": 24.1099899,
+        "lng": 120.7022396
+      },
+      "coordinateSource": "https://maps.app.goo.gl/HqAQ5ZQPn9fQt5N96",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：水餃、榨菜肉絲麵。"
+    },
+    {
+      "id": "achun-1501",
+      "name": "洪伍家",
+      "address": "臺中市北屯區平心里瀋陽路三段196號",
+      "category": "小吃",
+      "latlng": {
+        "lat": 24.1727005,
+        "lng": 120.6909939
+      },
+      "coordinateSource": "https://maps.app.goo.gl/1qnn59ke5Vrmej8DA",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：腿庫套餐、滷大腸頭、豬腳切盤。"
+    },
+    {
+      "id": "achun-1500",
+      "name": "明賢行",
+      "address": "臺中市北區大湖里大誠街162號",
+      "category": "小吃",
+      "latlng": {
+        "lat": 24.148009,
+        "lng": 120.6814158
+      },
+      "coordinateSource": "https://maps.app.goo.gl/dPearYVNYRQyWxsUA",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：慢燉肉燥飯。"
+    },
+    {
+      "id": "achun-1499",
+      "name": "拾年咖啡",
+      "address": "臺中市西區昇平里向上路一段289巷2號",
+      "category": "咖啡廳",
+      "latlng": {
+        "lat": 24.1464905,
+        "lng": 120.6582395
+      },
+      "coordinateSource": "https://maps.app.goo.gl/wxT9UDL5bobg4HE18",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：提拉米蘇、檸檬冰咖啡。"
+    },
+    {
+      "id": "achun-1497",
+      "name": "惦記粉漿蛋餅 台中十甲東店",
+      "address": "臺中市東區東英里十甲東路746號",
+      "category": "正餐",
+      "latlng": {
+        "lat": 24.1475666,
+        "lng": 120.7102237
+      },
+      "coordinateSource": "https://maps.app.goo.gl/5eNE5vQCHeyHmtVK6",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：擂椒皮蛋拌麵、擂椒皮蛋蛋餅。"
+    },
+    {
+      "id": "achun-1496",
+      "name": "默契咖啡",
+      "address": "臺中市西屯區臺灣大道二段902號",
+      "category": "咖啡廳",
+      "latlng": {
+        "lat": 24.161639,
+        "lng": 120.6520644
+      },
+      "coordinateSource": "https://maps.app.goo.gl/agW4Yv3BhXXgYWi27",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：溪底遙拿鐵、檸檬美式、經典提拉米蘇。"
+    },
+    {
+      "id": "achun-1495",
+      "name": "汐止阿惠麵線",
+      "address": "臺中市大雅區中清東路217號",
+      "category": "小吃",
+      "latlng": {
+        "lat": 24.224341,
+        "lng": 120.6471791
+      },
+      "coordinateSource": "https://maps.app.goo.gl/3Awk8HmKRCqPuDV57",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：麵線、高麗菜飯。"
+    },
+    {
+      "id": "achun-1493",
+      "name": "郭冰",
+      "address": "臺中市西區忠明里中美街408號",
+      "category": "甜點飲料",
+      "latlng": {
+        "lat": 24.1528815,
+        "lng": 120.660376
+      },
+      "coordinateSource": "https://maps.app.goo.gl/HpLVhuRU5nyvFoRy8",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：剉冰、豆花、現打果汁。"
+    },
+    {
+      "id": "achun-1492",
+      "name": "阿祥鮮魚行",
+      "address": "臺中市霧峰區本堂里中正路873號",
+      "category": "日常生活",
+      "latlng": {
+        "lat": 24.0639519,
+        "lng": 120.6984807
+      },
+      "coordinateSource": "https://maps.app.goo.gl/TF53uwygvFiVvTv28",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：各式各樣新鮮的魚類海鮮。"
+    },
+    {
+      "id": "achun-1491",
+      "name": "綠森林手創蛋糕餅乾店",
+      "address": "臺中市大甲區平安里忠孝街82巷9號",
+      "category": "烘焙",
+      "latlng": {
+        "lat": 24.3497648,
+        "lng": 120.6188265
+      },
+      "coordinateSource": "https://maps.app.goo.gl/LWhcbmT5SELFf44x5",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：生日蛋糕小甜點。"
+    },
+    {
+      "id": "achun-1490",
+      "name": "美軍豆乳冰",
+      "address": "臺中市西區昇平里民生路380-2號",
+      "category": "甜點飲料",
+      "latlng": {
+        "lat": 24.1444241,
+        "lng": 120.6613304
+      },
+      "coordinateSource": "https://maps.app.goo.gl/7FJYVH1YQqWjeyUm8",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：豆漿豆花、豆乳冰。"
+    },
+    {
+      "id": "achun-1489",
+      "name": "Dolf Ru Cucina 多福祿小館",
+      "address": "臺中市沙鹿區北勢里北勢東路714巷29號",
+      "category": "正餐",
+      "latlng": {
+        "lat": 24.2305452,
+        "lng": 120.5715901
+      },
+      "coordinateSource": "https://maps.app.goo.gl/mTFvVY1pWcw9Mksv7",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：明太子鮮蝦義大利麵。"
+    },
+    {
+      "id": "achun-1488",
+      "name": "安珞亞｜伽潤養匯",
+      "address": "臺中市太平區新城里環中東路三段205號",
+      "category": "日常生活",
+      "latlng": {
+        "lat": 24.1559712,
+        "lng": 120.7175924
+      },
+      "coordinateSource": "https://maps.app.goo.gl/rtJfc3NKqvqBo7qA6",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：ANOAH 毛囊清潔液、ANOAH 保濕洗髮精、頭部全方位養護服務。"
+    },
+    {
+      "id": "achun-1487",
+      "name": "和康中西藥局",
+      "address": "臺中市太平區新城里樹孝路131號",
+      "category": "日常生活",
+      "latlng": {
+        "lat": 24.1530334,
+        "lng": 120.7176886
+      },
+      "coordinateSource": "https://maps.app.goo.gl/ttjBiEGxXaK4327V6",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：藥品與保健食品、慢性病處方箋調劑、處方箋調劑。"
+    },
+    {
+      "id": "achun-1486",
+      "name": "煲底 bodium",
+      "address": "臺中市南區積善里興大路350巷11號",
+      "category": "正餐",
+      "latlng": {
+        "lat": 24.1180295,
+        "lng": 120.6712563
+      },
+      "coordinateSource": "https://maps.app.goo.gl/rAAZ9NJqQqLspyqJ6",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：黯然銷魂飯、星洲炒米、脆皮燒肉飯、絲襪奶茶。"
+    },
+    {
+      "id": "achun-1485",
+      "name": "泰寶 泰式料理",
+      "address": "臺中市沙鹿區北勢里北英路125號",
+      "category": "正餐",
+      "latlng": {
+        "lat": 24.2273836,
+        "lng": 120.5744905
+      },
+      "coordinateSource": "https://maps.app.goo.gl/nBCXj67LddryJbHt8",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：打拋牛肉飯、打拋茄子、老酒鬼炒泡麵、泰式咖哩系列、蒜香炒雞、泰式鮮蝦麵。"
+    },
+    {
+      "id": "achun-1484",
+      "name": "濡沫麵包",
+      "address": "臺中市潭子區潭陽里興華一路367號",
+      "category": "烘焙",
+      "latlng": {
+        "lat": 24.2125888,
+        "lng": 120.7034874
+      },
+      "coordinateSource": "https://maps.app.goo.gl/5jPy1j1oGQju7vRx9",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：招牌白吐司、明太子法國、酸種麵包、蛋黃酥。"
+    },
+    {
+      "id": "achun-1483",
+      "name": "56 咖啡",
+      "address": "臺中市大雅區二和里學府路120巷47號",
+      "category": "咖啡廳",
+      "latlng": {
+        "lat": 24.2195948,
+        "lng": 120.6516463
+      },
+      "coordinateSource": "https://maps.app.goo.gl/9R2gQPPPRtqVkHZX6",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：檸檬氣泡咖啡、手沖咖啡、提拉米蘇、檸檬塔。"
+    },
+    {
+      "id": "achun-1482",
+      "name": "幸福灶咖 23",
+      "address": "臺中市北區博館二街21號",
+      "category": "正餐",
+      "latlng": {
+        "lat": 24.1549018,
+        "lng": 120.666473
+      },
+      "coordinateSource": "https://maps.app.goo.gl/vBfjST9vQYbTsgwP8",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：櫛瓜燒肉蛋吐司、櫛瓜玉米蛋餅、櫛瓜燒肉飯。"
+    },
+    {
+      "id": "achun-1481",
+      "name": "壹野餐桌",
+      "address": "臺中市南屯區文山里寶山六街17號",
+      "category": "正餐",
+      "latlng": {
+        "lat": 24.1513991,
+        "lng": 120.61271
+      },
+      "coordinateSource": "https://maps.app.goo.gl/sEVVUQd4Aux87UeV6",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：慢烤手撕豬酸種三明治、清炒鮮蝦細扁麵。"
+    },
+    {
+      "id": "achun-1480",
+      "name": "青島物語",
+      "address": "臺中市北區青島路一段41號",
+      "category": "小吃",
+      "latlng": {
+        "lat": 24.1717963,
+        "lng": 120.6745106
+      },
+      "coordinateSource": "https://maps.app.goo.gl/p3HXRXVyeRQoS2MQ6",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：刈包、控肉飯、各種咖啡。"
+    },
+    {
+      "id": "achun-1479",
+      "name": "肆柒 預約制料理食堂",
+      "address": "臺中市西區吉龍里五權六街79-2號",
+      "category": "正餐",
+      "latlng": {
+        "lat": 24.135617,
+        "lng": 120.6606
+      },
+      "coordinateSource": "https://maps.app.goo.gl/E8eTHeo8rD3e2Mo6A",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：蕃茄雞肉馬薩拉、紅酒燉牛肉、阿嬤欸紅燒肉。\n採預約制，營業時段為週六、週日晚餐。"
+    },
+    {
+      "id": "achun-1478",
+      "name": "夫妻臉甜點",
+      "address": "臺中市南屯區惠中里惠文路580號",
+      "category": "甜點飲料",
+      "latlng": {
+        "lat": 24.1490787,
+        "lng": 120.6439761
+      },
+      "coordinateSource": "https://maps.app.goo.gl/mr1gdFtcDatTj7MC6",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：原味蔓越莓司康、毬果提拉米蘇、寶島檸檬塔、抹茶甘那許。"
+    },
+    {
+      "id": "achun-1477",
+      "name": "秉峯鍋燒店",
+      "address": "臺中市霧峰區本堂里樹仁路7號",
+      "category": "正餐",
+      "latlng": {
+        "lat": 24.0645259,
+        "lng": 120.6972309
+      },
+      "coordinateSource": "https://maps.app.goo.gl/o955kCNxqjTh9Zhe7",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：牛奶豆腐鍋燒、韓式泡菜豆腐鍋燒、日式豆腐鍋燒。"
+    },
+    {
+      "id": "achun-1476",
+      "name": "民主豆花",
+      "address": "臺中市北區建興里崇德路一段133巷15號",
+      "category": "甜點飲料",
+      "latlng": {
+        "lat": 24.1610188,
+        "lng": 120.6842881
+      },
+      "coordinateSource": "https://maps.app.goo.gl/2wkVtTsLPFxmQyLG9",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：麻薏粉粿、蜂蜜菊花豆花、無糖豆漿。"
+    },
+    {
+      "id": "achun-1475",
+      "name": "好事 157",
+      "address": "臺中市北屯區平福里安順東七街157號",
+      "category": "咖啡廳",
+      "latlng": {
+        "lat": 24.174962,
+        "lng": 120.6900096
+      },
+      "coordinateSource": "https://maps.app.goo.gl/NFjqF8h21q8fMe7u5",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：堅果雞肉粉紅醬義大利麵、泰式酸辣鮮蝦義大利麵、增肌減脂餐 水煮馬鈴薯+香煎雞腿肉、桑椹奶酪、百香果蜂蜜美式。"
+    },
+    {
+      "id": "achun-1474",
+      "name": "太陽貝果",
+      "address": "臺中市太平區中山路三段6-1號",
+      "category": "烘焙",
+      "latlng": {
+        "lat": 24.1493622,
+        "lng": 120.7218795
+      },
+      "coordinateSource": "https://maps.app.goo.gl/GRLz7csfPVxSpfCw5",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：招牌貝果、起司巴克牛可頌。"
+    },
+    {
+      "id": "achun-1473",
+      "name": "蔡氏炸雞",
+      "address": "臺中市北區五常里五常街47號",
+      "category": "小吃",
+      "latlng": {
+        "lat": 24.1538775,
+        "lng": 120.6807456
+      },
+      "coordinateSource": "https://maps.app.goo.gl/1u9vSECQyzRpLFFy7",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：三角骨、雞腿、無骨雞丁、米雞。"
+    },
+    {
+      "id": "achun-1472",
+      "name": "秀畑早餐店",
+      "address": "臺中市新社區新社里東新路二段36-2號",
+      "category": "小吃",
+      "latlng": {
+        "lat": 24.2495409,
+        "lng": 120.8092706
+      },
+      "coordinateSource": "https://maps.app.goo.gl/gnm7L9u1WDqyzs1D9",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：豬血湯炒麵、膈間肉湯。"
+    },
+    {
+      "id": "achun-1469",
+      "name": "時代劇啤酒吧",
+      "address": "臺中市后里區后里里復興街80號1樓",
+      "category": "酒吧",
+      "latlng": {
+        "lat": 24.3079869,
+        "lng": 120.7209911
+      },
+      "coordinateSource": "https://maps.app.goo.gl/zGyB4EdoQMdTy6oA8",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：鹹豬肉、香腸拼盤、金牌康普茶。"
+    },
+    {
+      "id": "achun-1468",
+      "name": "約呷蛋",
+      "address": "臺中市太平區新高里市民大道一段521號",
+      "category": "小吃",
+      "latlng": {
+        "lat": 24.1482915,
+        "lng": 120.7116768
+      },
+      "coordinateSource": "https://maps.app.goo.gl/fWbBdCF4CdGhit3s7",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：日式玉子燒、低卡Q彈滷蛋白、蜂蜜蛋糕冰淇淋。"
+    },
+    {
+      "id": "achun-1467",
+      "name": "南方咖啡",
+      "address": "台中市大里區新里里大里路410-1號",
+      "category": "咖啡廳",
+      "latlng": {
+        "lat": 24.0979639,
+        "lng": 120.6758482
+      },
+      "coordinateSource": "https://maps.app.goo.gl/H6eXaQrNrycnbyxV9",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：費南雪、焦糖香草布丁、手沖咖啡。"
+    },
+    {
+      "id": "achun-1462",
+      "name": "麵麵雞蛋糕",
+      "address": "台中市西區中興里中興街128巷6號",
+      "category": "甜點飲料",
+      "latlng": {
+        "lat": 24.1485588,
+        "lng": 120.6637532
+      },
+      "coordinateSource": "https://maps.app.goo.gl/vgkCSayy1N2Fnxbq8",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：雞蛋糕愛（牽絲起司）、（原味奶酥）、桂花烏龍茶。"
+    },
+    {
+      "id": "achun-1461",
+      "name": "弎食",
+      "address": "台中市潭子區潭陽里潭子街二段50號",
+      "category": "咖啡廳",
+      "latlng": {
+        "lat": 24.2122708,
+        "lng": 120.7070468
+      },
+      "coordinateSource": "https://maps.app.goo.gl/yxzACavCfC4CmMYi7",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：手沖咖啡、巴斯克蛋糕、幸福套餐。"
+    },
+    {
+      "id": "achun-1460",
+      "name": "程安滾滾咖啡",
+      "address": "台中市大甲區龍潭路65-1號",
+      "category": "咖啡廳",
+      "latlng": {
+        "lat": 24.3414784,
+        "lng": 120.6243263
+      },
+      "coordinateSource": "https://maps.app.goo.gl/tSyBvZzBUaGpvAJv6",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：酪梨咖啡拿鐵、焦糖蘋果肉桂捲。"
+    },
+    {
+      "id": "achun-1459",
+      "name": "街仔尾冊店",
+      "address": "台中市梧棲區安仁里民生街91巷4號",
+      "category": "書店",
+      "latlng": {
+        "lat": 24.2542034,
+        "lng": 120.5290296
+      },
+      "coordinateSource": "https://maps.app.goo.gl/3YdvJMyRGY7n9m2b7",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：炒米仔、精品豆熱美式、南非果寶茶。"
+    },
+    {
+      "id": "achun-1458",
+      "name": "初咖啡",
+      "address": "台中市沙鹿區興仁里四平街43-1號",
+      "category": "咖啡廳",
+      "latlng": {
+        "lat": 24.2337386,
+        "lng": 120.5600125
+      },
+      "coordinateSource": "https://maps.app.goo.gl/g6UZp6ukGwMxnFtd9",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：鹽奶油烤土司佐楓糖漿、鹽可頌麵包。"
+    },
+    {
+      "id": "achun-1457",
+      "name": "梁辰云云",
+      "address": "台中市清水區菁埔路157巷5號",
+      "category": "咖啡廳",
+      "latlng": {
+        "lat": 24.2975172,
+        "lng": 120.5891778
+      },
+      "coordinateSource": "https://maps.app.goo.gl/abfE7iG55fhALFM26",
+      "social": {},
+      "verification": false,
+      "verificationNote": "收錄自「欣好店家-1122」",
+      "visitNote": "推薦品項：雪藏紅豆鬆餅、柚韻茶敘。"
     }
   ]
 }
