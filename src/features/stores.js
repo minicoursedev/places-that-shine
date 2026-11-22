@@ -1,9 +1,9 @@
 import { readStores } from '../lib/oshen-store-data';
 import { storeCity, storeMapCenterParam, storeMapId, storePath } from '../lib/oshen-store-links.mjs';
 import { storeCategoryIcon } from './store-marker-icons.js';
+import { createStoreShare } from './store-share.js';
 
 const STORE_FEED = '/data/stores.json';
-const QR_GENERATOR = '/vendor/qrcode-generator/qrcode-2.0.4.mjs';
 const PAGE_SIZE = 12;
 const MAP_TILES = 'https://tile.openstreetmap.org/{z}/{x}/{y}.png';
 const TAIWAN_BOUNDS = [[21.88, 117.97], [26.42, 122.05]];
@@ -37,49 +37,6 @@ function externalLink(label, url, name) {
   link.rel = 'noopener noreferrer';
   link.setAttribute('aria-label', `${name}的${label}（在新分頁開啟）`);
   return link;
-}
-
-function createStoreShare(dialog) {
-  const shopName = dialog.querySelector('#store-share-name');
-  const image = dialog.querySelector('#store-share-qr');
-  const qrStatus = dialog.querySelector('#store-share-qr-status');
-  const link = dialog.querySelector('#store-share-url');
-  const copy = dialog.querySelector('#store-share-copy');
-  const status = dialog.querySelector('#store-share-status');
-  let generation = 0;
-
-  copy.addEventListener('click', async () => {
-    const current = generation;
-    let message = '已複製店家連結';
-    try {
-      await navigator.clipboard.writeText(link.href);
-    } catch {
-      message = '請長按或右鍵上方網址複製連結。';
-    }
-    if (dialog.open && current === generation) status.textContent = message;
-  });
-
-  return async ({ id, name }) => {
-    const current = ++generation;
-    const url = new URL(storePath(id), location.origin);
-    shopName.textContent = name;
-    link.href = link.textContent = url.href;
-    status.textContent = qrStatus.textContent = '';
-    image.hidden = true;
-    if (!dialog.open) dialog.showModal();
-
-    try {
-      const { qrcode } = await import(/* @vite-ignore */ QR_GENERATOR);
-      if (!dialog.open || current !== generation) return;
-      const qr = qrcode(0, 'M');
-      qr.addData(url.href);
-      qr.make();
-      image.src = `data:image/svg+xml;charset=utf-8,${encodeURIComponent(qr.createSvgTag({ cellSize: 4, margin: 16, scalable: true }))}`;
-      image.hidden = false;
-    } catch {
-      if (dialog.open && current === generation) qrStatus.textContent = '暫時無法產生 QR Code，仍可複製店家連結。';
-    }
-  };
 }
 
 function connectPhotoControls(track, previous, next) {

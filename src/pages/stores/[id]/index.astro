@@ -2,6 +2,7 @@
 import { existsSync } from 'node:fs';
 import { resolve } from 'node:path';
 import sharp from 'sharp';
+import StoreShareDialog from '../../../components/StoreShareDialog.astro';
 import SiteLayout from '../../../layouts/SiteLayout.astro';
 import { storeMapPath } from '../../../lib/oshen-store-links.mjs';
 import { storeWorkPreviews } from '../../../lib/oshen-store-work-previews';
@@ -166,6 +167,8 @@ const structuredData = {
     <nav class="store-actions" aria-label="店家連結">
       <a href={mapUrl}>回到地圖</a>
       <a class="store-directions" href={directions.href} target="_blank" rel="noopener noreferrer">開啟導航</a>
+      <button class="store-share-button" type="button" aria-haspopup="dialog" aria-controls="store-share-dialog"
+        data-store-share-id={store.id} data-store-share-name={name} hidden>分享店家</button>
       {socialLinks.length > 0 && (
         <div class="store-social-links">
           {socialLinks.map(({ label, icon, url }) => (
@@ -235,7 +238,23 @@ const structuredData = {
       </section>
     )}
   </article>
+  <StoreShareDialog />
 </SiteLayout>
+
+<script>
+  import { createStoreShare } from '../../../features/store-share.js';
+
+  const button = document.querySelector<HTMLButtonElement>('[data-store-share-id]');
+  const dialog = document.querySelector<HTMLDialogElement>('#store-share-dialog');
+  if (button && dialog) {
+    const { storeShareId: id, storeShareName: name } = button.dataset;
+    if (id && name) {
+      const openShare = createStoreShare(dialog);
+      button.addEventListener('click', () => void openShare({ id, name }));
+      button.hidden = false;
+    }
+  }
+</script>
 
 <style>
   .store-profile { max-width: 58rem; min-height: 70vh; padding-block: clamp(2rem, 6vw, 4.75rem) 5rem; }
@@ -247,12 +266,16 @@ const structuredData = {
   .store-address { margin: .85rem 0 0; color: var(--muted); font-size: 1.05rem; overflow-wrap: anywhere; }
   .store-logo { display: block; flex: none; width: clamp(3.75rem, 18vw, 9rem); height: auto; aspect-ratio: 1; border: 1px solid var(--line); border-radius: .7rem; background: #fffaf0; object-fit: contain; }
   .store-actions { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1.55rem; }
-  .store-actions a { display: inline-flex; align-items: center; min-height: 2.75rem; padding: .4rem .9rem; border: 1px solid var(--line); border-radius: .3rem; text-decoration: none; font-weight: 600; color: var(--accent); }
-  .store-actions a:hover { border-color: var(--accent); }
+  .store-actions a, .store-share-button { display: inline-flex; align-items: center; min-height: 2.75rem; padding: .4rem .9rem; border: 1px solid var(--line); border-radius: .3rem; text-decoration: none; font-weight: 600; color: var(--accent); }
+  .store-share-button { background: transparent; cursor: pointer; }
+  .store-actions a:hover, .store-share-button:hover { border-color: var(--accent); }
   .store-social-links { display: flex; flex-wrap: wrap; flex-basis: 100%; gap: inherit; }
   .store-actions .store-social-link { justify-content: center; width: 2.75rem; padding: 0; border-radius: 50%; }
   .store-actions .store-directions { border-color: var(--accent); color: #fffaf0; background: var(--accent); }
   .store-actions .store-directions:hover { background: #793816; }
+  @media (max-width: 360px) {
+    .store-actions > a, .store-share-button { padding-inline: .5rem; }
+  }
   .store-section { margin-top: clamp(1.75rem, 4.5vw, 3.25rem); padding-top: clamp(1.25rem, 3vw, 2rem); border-top: 1px solid var(--line); }
   h2 { margin: 0 0 .85rem; font: 800 clamp(1.5rem, 3vw, 2rem)/1.25 var(--serif); }
   h3 { margin: 0 0 .35rem; font-size: 1rem; }

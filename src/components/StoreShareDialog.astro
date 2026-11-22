@@ -1,0 +1,79 @@
+<dialog id="store-share-dialog" class="store-share-dialog" aria-labelledby="store-share-title" aria-describedby="store-share-name">
+  <h2 id="store-share-title">分享店家</h2>
+  <p id="store-share-name"></p>
+  <img id="store-share-qr" class="store-share-qr" width="192" height="192" alt="店家連結 QR Code" hidden />
+  <p id="store-share-qr-status" class="store-share-status" role="status"></p>
+  <a id="store-share-url" class="store-share-url" target="_blank" rel="noopener"></a>
+  <div class="store-share-actions">
+    <button id="store-share-copy" type="button" autofocus>複製店家連結</button>
+    <form method="dialog"><button type="submit">關閉</button></form>
+  </div>
+  <p id="store-share-status" class="store-share-status" role="status"></p>
+</dialog>
+
+<style>
+  .store-share-dialog {
+    width: min(25rem, calc(100% - 2rem));
+    max-height: calc(100dvh - 2rem);
+    padding: 1.25rem;
+    border: 1px solid var(--line);
+    border-radius: .75rem;
+    background: var(--paper);
+    color: var(--ink);
+    overscroll-behavior: contain;
+  }
+
+  .store-share-dialog::backdrop {
+    background: rgb(33 25 18 / .55);
+  }
+
+  .store-share-dialog h2 {
+    margin: 0 0 .25rem;
+    font-size: 1.25rem;
+  }
+
+  .store-share-dialog p {
+    margin: 0;
+  }
+
+  .store-share-qr:not([hidden]) {
+    display: block;
+    width: min(12rem, 100%);
+    height: auto;
+    margin: .8rem auto;
+    background: #fff;
+  }
+
+  .store-share-url {
+    display: block;
+    margin: .8rem 0;
+    overflow-wrap: anywhere;
+  }
+
+  .store-share-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+  }
+
+  .store-share-actions button {
+    min-height: 44px;
+    padding: .55rem 1rem;
+    border: 1px solid var(--line, #dcd2c4);
+    border-radius: .4rem;
+    background: var(--paper, #fffaf1);
+    color: var(--ink, #211912);
+    font: inherit;
+    font-weight: 650;
+    cursor: pointer;
+  }
+
+  .store-share-actions button:hover {
+    border-color: var(--accent, #9e461c);
+  }
+
+  .store-share-dialog .store-share-status:not(:empty) {
+    margin-top: .5rem;
+    font-size: .875rem;
+  }
+</style>
