@@ -4907,7 +4907,19 @@
       },
       "giftStatus": "可能有小物",
       "verification": true,
-      "disabled": false
+      "disabled": false,
+      "visitRecords": [
+        {
+          "author": "梁楓",
+          "source": "Threads",
+          "url": "https://www.threads.com/@lmanliang/post/DgAUPYvAZ_4",
+          "excerpt": "當你下手\n你支持了一個店家\n同時，你也支持了一個創作者\n因為，他們的產品，是跟創作者合作\n有合法版權的！",
+          "photo": {
+            "url": "/media/library/dnd-city-beauty/visit-dgaupyvaz-4-03.webp",
+            "alt": "木製展示架上的動物與台灣造型刺繡貼布。"
+          }
+        }
+      ]
     },
     {
       "id": "yuyantoast",
