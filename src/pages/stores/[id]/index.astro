@@ -166,9 +166,9 @@ const structuredData = {
 
     <nav class="store-actions" aria-label="店家連結">
       <a href={mapUrl}>回到地圖</a>
-      <a class="store-directions" href={directions.href} target="_blank" rel="noopener noreferrer">開啟導航</a>
       <button class="store-share-button" type="button" aria-haspopup="dialog" aria-controls="store-share-dialog"
         data-store-share-id={store.id} data-store-share-name={name} hidden>分享店家</button>
+      <a class="store-directions" href={directions.href} target="_blank" rel="noopener noreferrer">開啟導航</a>
       {socialLinks.length > 0 && (
         <div class="store-social-links">
           {socialLinks.map(({ label, icon, url }) => (
@@ -271,7 +271,7 @@ const structuredData = {
   .store-actions a:hover, .store-share-button:hover { border-color: var(--accent); }
   .store-social-links { display: flex; flex-wrap: wrap; flex-basis: 100%; gap: inherit; }
   .store-actions .store-social-link { justify-content: center; width: 2.75rem; padding: 0; border-radius: 50%; }
-  .store-actions .store-directions { border-color: var(--accent); color: #fffaf0; background: var(--accent); }
+  .store-actions .store-directions { margin-inline-start: auto; border-color: var(--accent); color: #fffaf0; background: var(--accent); }
   .store-actions .store-directions:hover { background: #793816; }
   @media (max-width: 360px) {
     .store-actions > a, .store-share-button { padding-inline: .5rem; }
