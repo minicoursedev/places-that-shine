@@ -21,7 +21,7 @@ for (const character of store.id) previewHash = Math.imul(previewHash, 31) + cha
 const workPreview = storeWorkPreviews.length
   ? storeWorkPreviews[(previewHash >>> 0) % storeWorkPreviews.length]
   : undefined;
-const { name, address, category, serviceType, openingHours, visitNote, visitUrl, socialLinks, latlng } = store;
+const { name, address, category, serviceType, openingHours, visitNote, socialLinks, latlng } = store;
 const directoryUrl = new URL('/stores/', Astro.site);
 const mapUrl = storeMapPath(store.id);
 const canonical = new URL(storePath(store.id), Astro.site);
@@ -166,7 +166,6 @@ const structuredData = {
     <nav class="store-actions" aria-label="店家連結">
       <a href={mapUrl}>回到地圖</a>
       <a class="store-directions" href={directions.href} target="_blank" rel="noopener noreferrer">開啟導航</a>
-      {visitUrl && <a href={visitUrl.href} target="_blank" rel="noopener noreferrer">探店文章</a>}
       {socialLinks.length > 0 && (
         <div class="store-social-links">
           {socialLinks.map(({ label, icon, url }) => (
@@ -255,9 +254,6 @@ const structuredData = {
   .store-actions .store-social-link { justify-content: center; width: 2.75rem; padding: 0; border-radius: 50%; }
   .store-actions .store-directions { border-color: var(--accent); color: #fffaf0; background: var(--accent); }
   .store-actions .store-directions:hover { background: #793816; }
-  @media (max-width: 360px) {
-    .store-actions > a { padding-inline: .6rem; }
-  }
   .store-section { margin-top: clamp(1.75rem, 4.5vw, 3.25rem); padding-top: clamp(1.25rem, 3vw, 2rem); border-top: 1px solid var(--line); }
   h2 { margin: 0 0 .85rem; font: 800 clamp(1.5rem, 3vw, 2rem)/1.25 var(--serif); }
   h3 { margin: 0 0 .35rem; font-size: 1rem; }
