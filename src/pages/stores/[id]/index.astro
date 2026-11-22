@@ -1,0 +1,263 @@
+---
+import { existsSync } from 'node:fs';
+import { resolve } from 'node:path';
+import sharp from 'sharp';
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+import { storeMapPath } from '../../../lib/oshen-store-links.mjs';
+import { storeWorkPreviews } from '../../../lib/oshen-store-work-previews';
+import { stores, storePath } from '../../../lib/oshen-stores';
+import { serializeStructuredData } from '../../../../public/designers/js/profile-seo.js';
+import '../../../styles/store-work-preview.css';
+
+interface Props { store: (typeof stores)[number] }
+
+export function getStaticPaths() {
+  return stores.map(store => ({ params: { id: store.id }, props: { store } }));
+}
+
+const { store } = Astro.props;
+let previewHash = 0;
+for (const character of store.id) previewHash = Math.imul(previewHash, 31) + character.charCodeAt(0);
+const workPreview = storeWorkPreviews.length
+  ? storeWorkPreviews[(previewHash >>> 0) % storeWorkPreviews.length]
+  : undefined;
+const { name, address, category, serviceType, openingHours, visitNote, visitUrl, socialLinks, latlng } = store;
+const directoryUrl = new URL('/stores/', Astro.site);
+const mapUrl = storeMapPath(store.id);
+const canonical = new URL(storePath(store.id), Astro.site);
+const type = category === '洋流服務站' && serviceType ? `${category}・${serviceType}` : category;
+const [, postalCode, region, localAddress] = address.match(/^(?:(\d{3,6})\s*)?([\p{Script=Han}]{2}[縣市])(.+)$/u) ?? [];
+const locality = localAddress?.match(region?.endsWith('縣') ? /^[\p{Script=Han}]{1,4}?[鄉鎮市]/u : /^[\p{Script=Han}]{1,4}?區/u)?.[0];
+const area = [region, locality].filter(Boolean).join('');
+const streetAddress = localAddress?.slice(locality?.length ?? 0).trim() || address;
+const title = `${name}｜${area ? `${area}${category}` : category}`;
+const summary = [`${name}位於${address}。`, visitNote?.trim() || openingHours?.text.trim()]
+  .filter(Boolean).join(' ').replace(/\s+/g, ' ');
+const description = Array.from(summary).length > 155 ? Array.from(summary).slice(0, 154).join('') + '…' : summary;
+const geo = latlng ? { '@type': 'GeoCoordinates', latitude: latlng.lat, longitude: latlng.lng } : undefined;
+
+function publicPhoto<T extends { url: URL }>(photo: T | undefined) {
+  if (!photo) return;
+  const { pathname, search } = photo.url;
+  const file = resolve('public', `.${pathname}`);
+  if (existsSync(file)) return { ...photo, file, src: pathname + search };
+}
+
+const photos = store.photos.flatMap(photo => {
+  const local = publicPhoto(photo);
+  return local ? [local] : [];
+});
+const visits = store.visitRecords.map(record => ({ ...record, photo: publicPhoto(record.photo) }));
+const logo = publicPhoto(store.logo);
+const imageOptions = [
+  ...photos,
+  ...(logo ? [{ ...logo, alt: `${name}的頭像` }] : []),
+];
+let shareImage = {
+  url: new URL('/media/shining-stores-og-shadow-50.jpg', Astro.site),
+  alt: '發光的店家',
+  width: 1200,
+  height: 630,
+  mime: 'image/jpeg',
+  large: true,
+};
+for (const photo of imageOptions) {
+  try {
+    const { width, height, format } = await sharp(photo.file).metadata();
+    if (!width || !height || width < 200 || height < 200 || !format) continue;
+    shareImage = { url: photo.url, alt: photo.alt, width, height, mime: `image/${format}`, large: width >= height * 1.5 };
+    break;
+  } catch {
+    // Try the next photo or keep the directory share image.
+  }
+}
+
+const directions = new URL('https://www.google.com/maps/dir/');
+directions.searchParams.set('api', '1');
+directions.searchParams.set('destination', `${address} ${name}`);
+
+const businessTypes: Record<string, string> = {
+  咖啡廳: 'CafeOrCoffeeShop',
+  正餐: 'Restaurant',
+  烘焙: 'Bakery',
+  書店: 'BookStore',
+  花店: 'Florist',
+  服飾鞋店: 'ClothingStore',
+  酒吧: 'BarOrPub',
+  美髮: 'HairSalon',
+};
+const entityId = `${canonical.href}#store`;
+const breadcrumbId = `${canonical.href}#breadcrumb`;
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebPage', '@id': `${canonical.href}#webpage`,
+      url: canonical.href, name: title, description, inLanguage: 'zh-Hant-TW',
+      about: { '@id': entityId },
+      breadcrumb: { '@id': breadcrumbId },
+    },
+    {
+      '@id': entityId,
+      '@type': businessTypes[category] || 'LocalBusiness',
+      name, url: canonical.href,
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress,
+        addressCountry: 'TW',
+        ...(postalCode ? { postalCode } : {}),
+        ...(region ? { addressRegion: region } : {}),
+        ...(locality ? { addressLocality: locality } : {}),
+      },
+      ...(geo ? { geo } : {}),
+      ...(visitNote ? { description: visitNote } : {}),
+      ...(logo ? { logo: logo.url.href } : {}),
+      ...(photos.length ? { image: photos.map(photo => photo.url.href) } : logo ? { image: logo.url.href } : {}),
+      ...(socialLinks.length ? { sameAs: [...new Set(socialLinks.map(({ url }) => url.href))] } : {}),
+    },
+    {
+      '@type': 'BreadcrumbList', '@id': breadcrumbId,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: '發光的店家', item: directoryUrl.href },
+        { '@type': 'ListItem', position: 2, name, item: canonical.href },
+      ],
+    },
+  ],
+};
+---
+
+<SiteLayout title={title} description={description} active="stores">
+  <Fragment slot="head">
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="發光的地方" />
+    <meta property="og:locale" content="zh_TW" />
+    <meta property="og:url" content={canonical.href} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={shareImage.url.href} />
+    <meta property="og:image:type" content={shareImage.mime} />
+    <meta property="og:image:width" content={shareImage.width} />
+    <meta property="og:image:height" content={shareImage.height} />
+    <meta property="og:image:alt" content={shareImage.alt} />
+    <meta name="twitter:card" content={shareImage.large ? 'summary_large_image' : 'summary'} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={shareImage.url.href} />
+    <meta name="twitter:image:alt" content={shareImage.alt} />
+    <script is:inline type="application/ld+json" set:html={serializeStructuredData(structuredData)} />
+  </Fragment>
+
+  <article class="store-profile page-width" aria-labelledby="shop-name">
+    <nav class="store-breadcrumb" aria-label="麵包屑導覽">
+      <a href={mapUrl}><span aria-hidden="true">←</span> 回到地圖</a>
+      <span aria-hidden="true">/</span>
+      <span aria-current="page">{name}</span>
+    </nav>
+
+    <header class="store-overview">
+      <div class="store-heading">
+        <p class="store-category">{type}</p>
+        <h1 id="shop-name">{name}</h1>
+        <p class="store-address">{address}</p>
+      </div>
+      {logo && <img class="store-logo" src={logo.src} width="144" height="144" alt={`${name}的頭像`} decoding="async" />}
+    </header>
+
+    <nav class="store-actions" aria-label="店家連結">
+      <a href={mapUrl}>回到地圖</a>
+      <a class="store-directions" href={directions.href} target="_blank" rel="noopener noreferrer">開啟導航</a>
+      {socialLinks.map(({ label, url }) => <a href={url.href} target="_blank" rel="noopener noreferrer">{label}</a>)}
+      {visitUrl && <a href={visitUrl.href} target="_blank" rel="noopener noreferrer">探店文章</a>}
+    </nav>
+
+    {(openingHours || visitNote) && (
+      <section class="store-section" aria-labelledby="store-visit">
+        <h2 id="store-visit">到訪資訊</h2>
+        {openingHours && (
+          <>
+            <h3>{openingHours.label}</h3>
+            <p class="store-prose">{openingHours.text}</p>
+            {openingHours.note && <p class="store-prose">{openingHours.note}</p>}
+          </>
+        )}
+        {visitNote && <p class="store-prose">{visitNote}</p>}
+      </section>
+    )}
+
+    {photos.length > 0 && (
+      <section class="store-section" aria-labelledby="store-photos">
+        <h2 id="store-photos">店家照片</h2>
+        <div class="store-gallery">
+          {photos.map(photo => (
+            <figure>
+              <img src={photo.src} alt={photo.alt} loading="lazy" decoding="async" />
+              {photo.caption && <figcaption>{photo.caption}</figcaption>}
+            </figure>
+          ))}
+        </div>
+      </section>
+    )}
+
+    {visits.length > 0 && (
+      <section class="store-section" aria-labelledby="store-records">
+        <h2 id="store-records">探店紀錄</h2>
+        {visits.map(visit => (
+          <div class="store-record">
+            <div>
+              <p class="store-byline">{[visit.author, visit.source].filter(Boolean).join('・')}</p>
+              <blockquote class="store-prose">{visit.excerpt}</blockquote>
+              {visit.url && <a href={visit.url.href} target="_blank" rel="noopener noreferrer">閱讀原文</a>}
+            </div>
+            {visit.photo && <img src={visit.photo.src} alt={visit.photo.alt ?? ''} loading="lazy" decoding="async" />}
+          </div>
+        ))}
+      </section>
+    )}
+
+    {workPreview && (
+      <section class="store-work-feature" aria-label="設計師作品">
+        <div class="store-work-preview-divider" aria-hidden="true">✦</div>
+        <a class="store-work-preview-link" href={workPreview.href} target="_blank" rel="noopener"
+          aria-label={`查看${workPreview.designerName}的作品「${workPreview.label}」（在新分頁開啟）`}>
+          <span class="store-work-preview-cover">
+            <img src={workPreview.image} alt={workPreview.label} width={workPreview.width} height={workPreview.height} loading="lazy" decoding="async" />
+            <span class="store-work-preview-designer">{workPreview.designerName}</span>
+          </span>
+        </a>
+      </section>
+    )}
+  </article>
+</SiteLayout>
+
+<style>
+  .store-profile { max-width: 58rem; min-height: 70vh; padding-block: clamp(2rem, 6vw, 4.75rem) 5rem; }
+  .store-breadcrumb { display: flex; flex-wrap: wrap; gap: .35rem .65rem; margin-bottom: clamp(1.5rem, 3.5vw, 3rem); color: var(--muted); font-size: .875rem; }
+  .store-breadcrumb a, .store-record a { color: var(--accent); text-underline-offset: .2em; }
+  .store-overview { display: flex; flex-wrap: wrap-reverse; align-items: center; justify-content: space-between; gap: 1.4rem clamp(1.4rem, 4vw, 3rem); }
+  .store-heading { flex: 1 1 15rem; min-width: 0; }
+  .store-category { margin: 0 0 .5rem; color: var(--accent); font-weight: 700; letter-spacing: .08em; }
+  h1 { margin: 0; font: 800 clamp(2.25rem, 5.2vw, 4.5rem)/1.2 var(--serif); overflow-wrap: anywhere; }
+  .store-address { margin: .85rem 0 0; color: var(--muted); font-size: 1.05rem; overflow-wrap: anywhere; }
+  .store-logo { display: block; width: clamp(6rem, 18vw, 9rem); height: auto; aspect-ratio: 1; border: 1px solid var(--line); border-radius: .7rem; background: #fffaf0; object-fit: contain; }
+  .store-actions { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1.55rem; }
+  .store-actions a { display: inline-flex; align-items: center; min-height: 2.75rem; padding: .4rem .9rem; border: 1px solid var(--line); border-radius: .3rem; text-decoration: none; font-weight: 600; color: var(--accent); }
+  .store-actions a:hover { border-color: var(--accent); }
+  .store-actions .store-directions { border-color: var(--accent); color: #fffaf0; background: var(--accent); }
+  .store-actions .store-directions:hover { background: #793816; }
+  .store-section { margin-top: clamp(1.75rem, 4.5vw, 3.25rem); padding-top: clamp(1.25rem, 3vw, 2rem); border-top: 1px solid var(--line); }
+  h2 { margin: 0 0 .85rem; font: 800 clamp(1.5rem, 3vw, 2rem)/1.25 var(--serif); }
+  h3 { margin: 0 0 .35rem; font-size: 1rem; }
+  .store-prose { max-width: 67ch; margin: 0; white-space: pre-line; overflow-wrap: anywhere; line-height: 1.75; }
+  .store-prose + .store-prose { margin-top: .9rem; }
+  .store-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(12rem, 100%), 1fr)); gap: 1rem; }
+  figure { margin: 0; }
+  .store-gallery img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: contain; border: 1px solid var(--line); border-radius: .4rem; background: #fffaf0; }
+  figcaption { margin-top: .4rem; color: var(--muted); }
+  .store-record { display: flex; flex-wrap: wrap; align-items: start; gap: 1rem; margin-top: 1.25rem; }
+  .store-record > div { flex: 1 1 min(20rem, 100%); }
+  .store-byline { margin: 0 0 .4rem; color: var(--muted); font-size: .875rem; font-weight: 700; }
+  blockquote { padding-inline-start: .95rem; border-inline-start: 2px solid var(--line); }
+  .store-record a { display: inline-block; margin-top: .6rem; }
+  .store-record img { width: min(13rem, 100%); height: auto; border-radius: .4rem; }
+  .store-work-feature { max-width: 20rem; margin: clamp(1.75rem, 4.5vw, 3.25rem) auto 0; }
+</style>

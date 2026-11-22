@@ -1,17 +1,25 @@
 ---
 import SiteLayout from '../../layouts/SiteLayout.astro';
+import { storeWorkPreviews } from '../../lib/oshen-store-work-previews';
+import { stores, storeCity, storePath } from '../../lib/oshen-stores';
+import '../../styles/stores.css';
+import '../../styles/store-work-preview.css';
 
 const title = '發光的店家';
-const description = '發光的店家（我們的洋流地圖）整理台灣各地的小店與生活服務，目前暫停服務。';
+const description = '發光的店家（我們的洋流地圖）整理台灣各地的小店與生活服務，可搜尋店家並查看到訪資訊與地圖位置。';
 const shareImage = new URL('/media/shining-stores-og-shadow-50.jpg', Astro.site);
 const shareImageAlt = '發光的店家。我相信光，是為了巷弄間的歡騰，不是為了墳前的孤寂。巷弄夜景與台灣夜間光點示意。';
+const compareText = new Intl.Collator('zh-Hant-TW').compare;
+const byCity = new Map<string, (typeof stores)[number][]>();
+for (const store of stores) {
+  const city = storeCity(store.address) || '其他地區';
+  if (!byCity.has(city)) byCity.set(city, []);
+  byCity.get(city)!.push(store);
+}
+const storesByCity = [...byCity].sort(([a], [b]) => compareText(a, b));
 ---
 
-<SiteLayout
-  title={`${title}｜我們的洋流地圖`}
-  description={description}
-  active="stores"
->
+<SiteLayout title={`${title}｜我們的洋流地圖`} description={description} active="stores">
   <Fragment slot="head">
     <meta property="og:type" content="website" />
     <meta property="og:url" content={new URL('/stores/', Astro.site)} />
@@ -26,13 +34,71 @@ const shareImageAlt = '發光的店家。我相信光，是為了巷弄間的歡
     <meta name="twitter:image" content={shareImage} />
     <meta name="twitter:image:alt" content={shareImageAlt} />
   </Fragment>
-  <section class="directory page-width" aria-labelledby="stores-title">
+  <section class="stores-directory directory page-width" aria-labelledby="stores-title">
     <div class="directory-header">
       <a class="back-link" href="/#explore"><span aria-hidden="true">←</span> 回探索首頁</a>
       <h1 id="stores-title">{title}</h1>
       <a class="store-action" href="/stores/report/">推薦店家</a>
     </div>
-    <p>發光的店家暫停服務。</p>
-    <p>店家地圖原本用來查找台灣各地的在地小店與生活服務。</p>
+    <div id="stores-content" aria-label="店家目錄" data-work-previews={JSON.stringify(storeWorkPreviews)}><p role="status">正在載入店家資料…</p></div>
+    <dialog id="store-share-dialog" class="store-share-dialog" aria-labelledby="store-share-title" aria-describedby="store-share-name">
+      <h2 id="store-share-title">分享店家</h2>
+      <p id="store-share-name"></p>
+      <img id="store-share-qr" class="store-share-qr" width="192" height="192" alt="店家連結 QR Code" hidden />
+      <p id="store-share-qr-status" class="store-share-status" role="status"></p>
+      <a id="store-share-url" class="store-share-url" target="_blank" rel="noopener"></a>
+      <div class="store-share-actions">
+        <button id="store-share-copy" class="store-action" type="button" autofocus>複製店家連結</button>
+        <form method="dialog"><button class="store-action" type="submit">關閉</button></form>
+      </div>
+      <p id="store-share-status" class="store-share-status" role="status"></p>
+    </dialog>
+    <dialog id="store-photo-viewer" class="store-photo-viewer" aria-label="全螢幕店家照片">
+      <div class="store-photo-track" aria-label="店家照片"></div>
+      <button class="store-photo-control store-photo-close" type="button" aria-label="關閉照片" autofocus>×</button>
+      <button class="store-photo-control store-photo-previous" type="button" aria-label="上一張照片" data-photo-previous>‹</button>
+      <button class="store-photo-control store-photo-next" type="button" aria-label="下一張照片" data-photo-next>›</button>
+    </dialog>
+    <noscript>
+      <p>搜尋、篩選與地圖需要 JavaScript。</p>
+      <nav aria-label="店家目錄" class="stores-by-city-groups">
+        {storesByCity.map(([city, cityStores]) => (
+          <section>
+            <h2>{city}</h2>
+            <ul>
+              {cityStores.sort((a, b) => compareText(a.name, b.name)).map(store => (
+                <li><a href={storePath(store.id)}>{store.name}</a></li>
+              ))}
+            </ul>
+          </section>
+        ))}
+      </nav>
+    </noscript>
   </section>
 </SiteLayout>
+
+<script>
+  import { mountStores } from '../../features/stores.js';
+
+  const directory = document.querySelector<HTMLElement>('#stores-content');
+  if (directory) void mountStores(directory, JSON.parse(directory.dataset.workPreviews || '[]'));
+</script>
+
+<style>
+  .stores-by-city-groups {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr));
+    align-items: start;
+    gap: 1rem 1.75rem;
+    padding-bottom: 1rem;
+  }
+  .stores-by-city-groups h2 { margin: .4rem 0; font-size: 1rem; }
+  .stores-by-city-groups ul { margin: 0; padding: 0; list-style: none; }
+  .stores-by-city-groups a { display: inline-block; padding-block: .25rem; }
+  .stores-by-city-groups a, :global(.store-name a) { text-underline-offset: .2em; }
+  :global(.store-name a) { text-decoration-color: var(--line); }
+  .stores-by-city-groups a:hover, :global(.store-name a:hover) {
+    color: var(--accent);
+    text-decoration-color: currentColor;
+  }
+</style>
