@@ -133,8 +133,8 @@ function renderStoreGallery(photos, openPhotos) {
 }
 
 function renderVisitRecords(records, name) {
-  const details = element('details', 'store-details');
-  details.append(element('summary', '', `探店紀錄（${records.length}）`));
+  const section = element('section', 'store-details');
+  section.append(element('h4', 'store-visit-heading', `探店紀錄（${records.length}）`));
 
   for (const { author, source, excerpt, url, photo } of records) {
     const entry = element('div', 'store-visit-entry');
@@ -160,9 +160,9 @@ function renderVisitRecords(records, name) {
       image.src = photo.url.href;
       entry.append(image);
     }
-    details.append(entry);
+    section.append(entry);
   }
-  return details;
+  return section;
 }
 
 function renderStore(shop, openShare, openPhotos, tag = 'li', onSelect) {
