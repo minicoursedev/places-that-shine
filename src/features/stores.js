@@ -133,8 +133,9 @@ function renderStoreGallery(photos, openPhotos) {
 }
 
 function renderVisitRecords(records, name) {
-  const section = element('section', 'store-details');
-  section.append(element('h4', 'store-visit-heading', `探店紀錄（${records.length}）`));
+  const details = element('details', 'store-details');
+  details.open = true;
+  details.append(element('summary', '', `探店紀錄（${records.length}）`));
 
   for (const { author, source, excerpt, url, photo } of records) {
     const entry = element('div', 'store-visit-entry');
@@ -160,9 +161,9 @@ function renderVisitRecords(records, name) {
       image.src = photo.url.href;
       entry.append(image);
     }
-    section.append(entry);
+    details.append(entry);
   }
-  return section;
+  return details;
 }
 
 function renderStore(shop, openShare, openPhotos, tag = 'li', onSelect) {
@@ -233,6 +234,7 @@ function renderStore(shop, openShare, openPhotos, tag = 'li', onSelect) {
   card.append(summary, actions);
   if (openingHours || visitNote) {
     const details = element('details', 'store-details');
+    details.open = true;
     details.append(element('summary', '', '店家簡介'));
     if (openingHours) {
       details.append(element('strong', '', openingHours.label), element('p', 'store-hours', openingHours.text));
