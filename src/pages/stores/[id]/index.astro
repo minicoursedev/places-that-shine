@@ -155,12 +155,12 @@ const structuredData = {
     </nav>
 
     <header class="store-overview">
+      <p class="store-category">{type}</p>
       <div class="store-heading">
-        <p class="store-category">{type}</p>
         <h1 id="shop-name">{name}</h1>
-        <p class="store-address">{address}</p>
+        {logo && <img class="store-logo" src={logo.src} width="144" height="144" alt={`${name}的頭像`} decoding="async" />}
       </div>
-      {logo && <img class="store-logo" src={logo.src} width="144" height="144" alt={`${name}的頭像`} decoding="async" />}
+      <p class="store-address">{address}</p>
     </header>
 
     <nav class="store-actions" aria-label="店家連結">
@@ -241,12 +241,11 @@ const structuredData = {
   .store-profile { max-width: 58rem; min-height: 70vh; padding-block: clamp(2rem, 6vw, 4.75rem) 5rem; }
   .store-breadcrumb { display: flex; flex-wrap: wrap; gap: .35rem .65rem; margin-bottom: clamp(1.5rem, 3.5vw, 3rem); color: var(--muted); font-size: .875rem; }
   .store-breadcrumb a, .store-record a { color: var(--accent); text-underline-offset: .2em; }
-  .store-overview { display: flex; flex-wrap: wrap-reverse; align-items: center; justify-content: space-between; gap: 1.4rem clamp(1.4rem, 4vw, 3rem); }
-  .store-heading { flex: 1 1 15rem; min-width: 0; }
+  .store-heading { display: flex; align-items: center; justify-content: space-between; gap: clamp(.75rem, 4vw, 3rem); }
   .store-category { margin: 0 0 .5rem; color: var(--accent); font-weight: 700; letter-spacing: .08em; }
-  h1 { margin: 0; font: 800 clamp(2.25rem, 5.2vw, 4.5rem)/1.2 var(--serif); overflow-wrap: anywhere; }
+  h1 { min-width: 0; margin: 0; font: 800 clamp(2.25rem, 5.2vw, 4.5rem)/1.2 var(--serif); overflow-wrap: anywhere; }
   .store-address { margin: .85rem 0 0; color: var(--muted); font-size: 1.05rem; overflow-wrap: anywhere; }
-  .store-logo { display: block; width: clamp(6rem, 18vw, 9rem); height: auto; aspect-ratio: 1; border: 1px solid var(--line); border-radius: .7rem; background: #fffaf0; object-fit: contain; }
+  .store-logo { display: block; flex: none; width: clamp(3.75rem, 18vw, 9rem); height: auto; aspect-ratio: 1; border: 1px solid var(--line); border-radius: .7rem; background: #fffaf0; object-fit: contain; }
   .store-actions { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1.55rem; }
   .store-actions a { display: inline-flex; align-items: center; min-height: 2.75rem; padding: .4rem .9rem; border: 1px solid var(--line); border-radius: .3rem; text-decoration: none; font-weight: 600; color: var(--accent); }
   .store-actions a:hover { border-color: var(--accent); }
