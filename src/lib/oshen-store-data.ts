@@ -5,6 +5,7 @@ const SOCIALS = [
   { key: 'instagram', label: 'Instagram', icon: 'instagram.svg' },
   { key: 'facebook', label: 'Facebook', icon: 'facebook.png' },
   { key: 'threads', label: 'Threads', icon: 'threads.svg' },
+  { key: 'website', label: '官網', icon: 'website.svg' },
 ];
 
 function asRecord(value: unknown) {
