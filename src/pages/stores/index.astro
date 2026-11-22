@@ -1,35 +1,22 @@
 ---
 import SiteLayout from '../../layouts/SiteLayout.astro';
-import { designerWorks } from '../../lib/oshen-designers';
-import { stores } from '../../lib/oshen-stores';
-import { storeCity, storePath } from '../../lib/oshen-store-links.mjs';
-import { designerWorkSharePath } from '../../../public/designers/js/work-links.js';
+import { storeWorkPreviews } from '../../lib/oshen-store-work-previews';
+import { stores, storeCity, storePath } from '../../lib/oshen-stores';
 import '../../styles/stores.css';
+import '../../styles/store-work-preview.css';
 
 const title = '發光的店家';
 const description = '發光的店家（我們的洋流地圖）整理台灣各地的小店與生活服務，可搜尋店家並查看到訪資訊與地圖位置。';
 const shareImage = new URL('/media/shining-stores-og-shadow-50.jpg', Astro.site);
 const shareImageAlt = '發光的店家。我相信光，是為了巷弄間的歡騰，不是為了墳前的孤寂。巷弄夜景與台灣夜間光點示意。';
 const compareText = new Intl.Collator('zh-Hant-TW').compare;
-const storeGroups = new Map<string, (typeof stores)[number][]>();
+const byCity = new Map<string, (typeof stores)[number][]>();
 for (const store of stores) {
   const city = storeCity(store.address) || '其他地區';
-  if (!storeGroups.has(city)) storeGroups.set(city, []);
-  storeGroups.get(city)!.push(store);
+  if (!byCity.has(city)) byCity.set(city, []);
+  byCity.get(city)!.push(store);
 }
-const storesByCity = [...storeGroups].sort(([a], [b]) => compareText(a, b));
-const workPreviews = designerWorks.flatMap(({ designer, work }) => {
-  const booth = designer.booth.hallBooths.find(({ aisle }) => aisle[0] !== 'A');
-  if (!booth || work.id === 'yang-liu-avatar') return [];
-  return [{
-    designerName: designer.name,
-    label: work.name.trim() || `${designer.name}的作品`,
-    href: designerWorkSharePath(designer.id, work.id, booth.aisle[0]),
-    image: work.cover,
-    width: work.width,
-    height: work.height,
-  }];
-});
+const storesByCity = [...byCity].sort(([a], [b]) => compareText(a, b));
 ---
 
 <SiteLayout title={`${title}｜我們的洋流地圖`} description={description} active="stores">
@@ -51,7 +38,7 @@ const workPreviews = designerWorks.flatMap(({ designer, work }) => {
       <a class="back-link" href="/#explore"><span aria-hidden="true">←</span> 回探索首頁</a>
       <h1 id="stores-title">{title}</h1>
     </div>
-    <div id="stores-content" aria-label="店家目錄" data-work-previews={JSON.stringify(workPreviews)}></div>
+    <div id="stores-content" aria-label="店家目錄" data-work-previews={JSON.stringify(storeWorkPreviews)}><p role="status">正在載入店家資料…</p></div>
     <dialog id="store-share-dialog" class="store-share-dialog" aria-labelledby="store-share-title" aria-describedby="store-share-name">
       <h2 id="store-share-title">分享店家</h2>
       <p id="store-share-name"></p>

@@ -4,8 +4,10 @@ import { resolve } from 'node:path';
 import sharp from 'sharp';
 import SiteLayout from '../../../layouts/SiteLayout.astro';
 import { storeMapPath } from '../../../lib/oshen-store-links.mjs';
+import { storeWorkPreviews } from '../../../lib/oshen-store-work-previews';
 import { stores, storePath } from '../../../lib/oshen-stores';
 import { serializeStructuredData } from '../../../../public/designers/js/profile-seo.js';
+import '../../../styles/store-work-preview.css';
 
 interface Props { store: (typeof stores)[number] }
 
@@ -14,8 +16,14 @@ export function getStaticPaths() {
 }
 
 const { store } = Astro.props;
-const { name, address, category, serviceType, openingHours, visitNote } = store;
+let previewHash = 0;
+for (const character of store.id) previewHash = Math.imul(previewHash, 31) + character.charCodeAt(0);
+const workPreview = storeWorkPreviews.length
+  ? storeWorkPreviews[(previewHash >>> 0) % storeWorkPreviews.length]
+  : undefined;
+const { name, address, category, serviceType, openingHours, visitNote, visitUrl, socialLinks, latlng } = store;
 const directoryUrl = new URL('/stores/', Astro.site);
+const mapUrl = storeMapPath(store.id);
 const canonical = new URL(storePath(store.id), Astro.site);
 const type = category === '洋流服務站' && serviceType ? `${category}・${serviceType}` : category;
 const [, postalCode, region, localAddress] = address.match(/^(?:(\d{3,6})\s*)?([\p{Script=Han}]{2}[縣市])(.+)$/u) ?? [];
@@ -23,53 +31,24 @@ const locality = localAddress?.match(region?.endsWith('縣') ? /^[\p{Script=Han}
 const area = [region, locality].filter(Boolean).join('');
 const streetAddress = localAddress?.slice(locality?.length ?? 0).trim() || address;
 const title = `${name}｜${area ? `${area}${category}` : category}`;
-const hasHours = Boolean(openingHours?.text?.trim() && ['verified', 'reference', 'appointment'].includes(openingHours.status ?? ''));
-const summary = [`${name}位於${address}。`, visitNote?.trim() || (hasHours ? openingHours?.text?.trim() : '')]
+const summary = [`${name}位於${address}。`, visitNote?.trim() || openingHours?.text.trim()]
   .filter(Boolean).join(' ').replace(/\s+/g, ' ');
 const description = Array.from(summary).length > 155 ? Array.from(summary).slice(0, 154).join('') + '…' : summary;
-const latitude = store.latlng?.lat;
-const longitude = store.latlng?.lng;
-const geo = typeof latitude === 'number' && typeof longitude === 'number'
-  && Math.abs(latitude) <= 90 && Math.abs(longitude) <= 180
-  ? { '@type': 'GeoCoordinates', latitude, longitude } : undefined;
+const geo = latlng ? { '@type': 'GeoCoordinates', latitude: latlng.lat, longitude: latlng.lng } : undefined;
 
-function httpsUrl(value?: string) {
-  if (!value) return undefined;
-  try {
-    const url = new URL(value);
-    if (url.protocol === 'https:' && !url.username && !url.password) return url;
-  } catch { return undefined; }
+function publicPhoto<T extends { url: URL }>(photo: T | undefined) {
+  if (!photo) return;
+  const { pathname, search } = photo.url;
+  const file = resolve('public', `.${pathname}`);
+  if (existsSync(file)) return { ...photo, file, src: pathname + search };
 }
 
-function publicPhoto(value?: string) {
-  if (!value) return undefined;
-  try {
-    const url = new URL(value, new URL('/', Astro.site));
-    if (url.origin !== canonical.origin || url.username || url.password) return undefined;
-    if (!/^\/media\/library\/[a-z0-9-]+\/[\w.-]+\.(?:avif|gif|jpe?g|png|webp)$/i.test(url.pathname)) return undefined;
-    const file = resolve('public', `.${url.pathname}`);
-    if (existsSync(file)) return { url, file, src: url.pathname + url.search };
-  } catch { return undefined; }
-}
-
-const networks = [
-  { key: 'instagram', label: 'Instagram' },
-  { key: 'facebook', label: 'Facebook' },
-  { key: 'threads', label: 'Threads' },
-] as const;
-const social = networks.flatMap(({ key, label }) => {
-  const url = httpsUrl(store.social?.[key]);
-  return url ? [{ label, url: url.href }] : [];
+const photos = store.photos.flatMap(photo => {
+  const local = publicPhoto(photo);
+  return local ? [local] : [];
 });
-const visitUrl = httpsUrl(store.visitUrl);
-const photos = (store.productImages ?? []).flatMap(({ url, alt, caption }) => {
-  const photo = publicPhoto(url);
-  return photo ? [{ ...photo, alt: alt || `${name}的店家照片`, caption }] : [];
-});
-const visits = (store.visitRecords ?? []).filter(record => record.excerpt).map(record => ({
-  ...record, photo: publicPhoto(record.photo?.url), alt: record.photo?.alt, url: httpsUrl(record.url),
-}));
-const logo = store.shopPhoto?.status === 'verified' ? publicPhoto(store.shopPhoto.url) : undefined;
+const visits = store.visitRecords.map(record => ({ ...record, photo: publicPhoto(record.photo) }));
+const logo = publicPhoto(store.logo);
 const imageOptions = [
   ...photos,
   ...(logo ? [{ ...logo, alt: `${name}的頭像` }] : []),
@@ -83,10 +62,14 @@ let shareImage = {
   large: true,
 };
 for (const photo of imageOptions) {
-  const { width, height, format } = await sharp(photo.file).metadata();
-  if (width < 200 || height < 200 || !format) continue;
-  shareImage = { url: photo.url, alt: photo.alt, width, height, mime: `image/${format}`, large: width >= height * 1.5 };
-  break;
+  try {
+    const { width, height, format } = await sharp(photo.file).metadata();
+    if (!width || !height || width < 200 || height < 200 || !format) continue;
+    shareImage = { url: photo.url, alt: photo.alt, width, height, mime: `image/${format}`, large: width >= height * 1.5 };
+    break;
+  } catch {
+    // Try the next photo or keep the directory share image.
+  }
 }
 
 const directions = new URL('https://www.google.com/maps/dir/');
@@ -130,7 +113,7 @@ const structuredData = {
       ...(visitNote ? { description: visitNote } : {}),
       ...(logo ? { logo: logo.url.href } : {}),
       ...(photos.length ? { image: photos.map(photo => photo.url.href) } : logo ? { image: logo.url.href } : {}),
-      ...(social.length ? { sameAs: [...new Set(social.map(({ url }) => url))] } : {}),
+      ...(socialLinks.length ? { sameAs: [...new Set(socialLinks.map(({ url }) => url.href))] } : {}),
     },
     {
       '@type': 'BreadcrumbList', '@id': breadcrumbId,
@@ -166,7 +149,7 @@ const structuredData = {
 
   <article class="store-profile page-width" aria-labelledby="shop-name">
     <nav class="store-breadcrumb" aria-label="麵包屑導覽">
-      <a href="/stores/">發光的店家</a>
+      <a href={mapUrl}><span aria-hidden="true">←</span> 回到地圖</a>
       <span aria-hidden="true">/</span>
       <span aria-current="page">{name}</span>
     </nav>
@@ -181,20 +164,20 @@ const structuredData = {
     </header>
 
     <nav class="store-actions" aria-label="店家連結">
-      <a href={storeMapPath(store.id)}>回到地圖</a>
+      <a href={mapUrl}>回到地圖</a>
       <a class="store-directions" href={directions.href} target="_blank" rel="noopener noreferrer">開啟導航</a>
-      {social.map(({ label, url }) => <a href={url} target="_blank" rel="noopener noreferrer">{label}</a>)}
+      {socialLinks.map(({ label, url }) => <a href={url.href} target="_blank" rel="noopener noreferrer">{label}</a>)}
       {visitUrl && <a href={visitUrl.href} target="_blank" rel="noopener noreferrer">探店文章</a>}
     </nav>
 
-    {(hasHours || visitNote) && (
+    {(openingHours || visitNote) && (
       <section class="store-section" aria-labelledby="store-visit">
         <h2 id="store-visit">到訪資訊</h2>
-        {hasHours && (
+        {openingHours && (
           <>
-            <h3>{openingHours?.status === 'reference' ? '營業時間（參考）' : '營業時間與預約'}</h3>
-            <p class="store-prose">{openingHours?.text}</p>
-            {openingHours?.note && <p class="store-prose">{openingHours.note}</p>}
+            <h3>{openingHours.label}</h3>
+            <p class="store-prose">{openingHours.text}</p>
+            {openingHours.note && <p class="store-prose">{openingHours.note}</p>}
           </>
         )}
         {visitNote && <p class="store-prose">{visitNote}</p>}
@@ -225,9 +208,22 @@ const structuredData = {
               <blockquote class="store-prose">{visit.excerpt}</blockquote>
               {visit.url && <a href={visit.url.href} target="_blank" rel="noopener noreferrer">閱讀原文</a>}
             </div>
-            {visit.photo && <img src={visit.photo.src} alt={visit.alt ?? ''} loading="lazy" decoding="async" />}
+            {visit.photo && <img src={visit.photo.src} alt={visit.photo.alt ?? ''} loading="lazy" decoding="async" />}
           </div>
         ))}
+      </section>
+    )}
+
+    {workPreview && (
+      <section class="store-work-feature" aria-label="設計師作品">
+        <div class="store-work-preview-divider" aria-hidden="true">✦</div>
+        <a class="store-work-preview-link" href={workPreview.href} target="_blank" rel="noopener"
+          aria-label={`查看${workPreview.designerName}的作品「${workPreview.label}」（在新分頁開啟）`}>
+          <span class="store-work-preview-cover">
+            <img src={workPreview.image} alt={workPreview.label} width={workPreview.width} height={workPreview.height} loading="lazy" decoding="async" />
+            <span class="store-work-preview-designer">{workPreview.designerName}</span>
+          </span>
+        </a>
       </section>
     )}
   </article>
@@ -263,4 +259,5 @@ const structuredData = {
   blockquote { padding-inline-start: .95rem; border-inline-start: 2px solid var(--line); }
   .store-record a { display: inline-block; margin-top: .6rem; }
   .store-record img { width: min(13rem, 100%); height: auto; border-radius: .4rem; }
+  .store-work-feature { max-width: 20rem; margin: clamp(1.75rem, 4.5vw, 3.25rem) auto 0; }
 </style>
