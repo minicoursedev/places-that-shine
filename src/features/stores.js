@@ -487,7 +487,7 @@ function storeCoordinates(shop) {
   return shop.latlng ? [shop.latlng.lat, shop.latlng.lng] : null;
 }
 
-async function createStoreMap(container, message, locateButton, sheet, mobile, onSelectMobileStore) {
+async function createStoreMap(container, message, mapButtons, sheet, mobile, onSelectMobileStore) {
   await Promise.all([
     loadAsset('link', '/vendor/leaflet/leaflet.css'),
     loadAsset('link', '/vendor/leaflet-markercluster/MarkerCluster.css'),
@@ -507,10 +507,10 @@ async function createStoreMap(container, message, locateButton, sheet, mobile, o
   });
   map.zoomControl.getContainer().querySelector('.leaflet-control-zoom-in').setAttribute('aria-label', '放大地圖');
   map.zoomControl.getContainer().querySelector('.leaflet-control-zoom-out').setAttribute('aria-label', '縮小地圖');
-  const locateControl = L.control({ position: 'bottomright' });
-  locateControl.onAdd = () => {
-    const control = element('div', 'store-locate-control');
-    control.append(locateButton);
+  const actions = L.control({ position: 'bottomright' });
+  actions.onAdd = () => {
+    const control = element('div', 'store-map-actions');
+    control.append(...mapButtons);
     L.DomEvent.disableClickPropagation(control);
     return control;
   };
@@ -528,7 +528,7 @@ async function createStoreMap(container, message, locateButton, sheet, mobile, o
     message.hidden = tileLoaded;
   });
   tiles.addTo(map);
-  locateControl.addTo(map);
+  actions.addTo(map);
 
   const markers = L.markerClusterGroup({
     maxClusterRadius: 45,
@@ -549,6 +549,10 @@ async function createStoreMap(container, message, locateButton, sheet, mobile, o
 
   return {
     closeDetails,
+    centerPosition() {
+      const { lat, lng } = map.getCenter();
+      return { latitude: lat, longitude: lng };
+    },
     locate({ latitude, longitude }) {
       const position = [latitude, longitude];
       closeDetails();
@@ -715,6 +719,9 @@ export async function mountStores(root, workPreviews = []) {
   const listPanel = element('div', 'store-list-panel');
   listPanel.append(list, more);
   const mapPanel = element('div', 'store-map-panel');
+  const sortCenterButton = element('button', 'store-action store-sort-center', '依地圖中心排序');
+  sortCenterButton.type = 'button';
+  sortCenterButton.disabled = true;
   const locateButton = element('button', 'store-action store-locate');
   locateButton.type = 'button';
   locateButton.disabled = true;
@@ -742,6 +749,7 @@ export async function mountStores(root, workPreviews = []) {
   let listMatches = [];
   let userPosition = null;
   let userPositionNeedsUpdate = false;
+  let sortPosition = null;
   let shown = 0;
   let map = null;
   let mapTask = null;
@@ -792,7 +800,7 @@ export async function mountStores(root, workPreviews = []) {
     if (!mapTask) {
       mapMessage.textContent = '正在載入地圖…';
       mapMessage.hidden = false;
-      mapTask = createStoreMap(mapElement, mapMessage, locateButton, storeSheet, mobile, collapseOnFirstSelection);
+      mapTask = createStoreMap(mapElement, mapMessage, [sortCenterButton, locateButton], storeSheet, mobile, collapseOnFirstSelection);
     }
     try {
       if (!map) {
@@ -802,6 +810,7 @@ export async function mountStores(root, workPreviews = []) {
       if (!showingMap) return;
       mapElement.hidden = false;
       updateMap();
+      sortCenterButton.disabled = false;
       locateButton.disabled = locating;
     } catch {
       mapTask = null;
@@ -819,6 +828,7 @@ export async function mountStores(root, workPreviews = []) {
       return;
     }
 
+    const sortPositionAtRequest = sortPosition;
     locating = locateButton.disabled = true;
     locateButton.setAttribute('aria-busy', 'true');
     locationStatus.textContent = '正在取得你的位置…';
@@ -841,6 +851,7 @@ export async function mountStores(root, workPreviews = []) {
         try {
           const { latitude, longitude } = coords;
           userPosition = { latitude, longitude };
+          if (sortPosition === sortPositionAtRequest) sortPosition = userPosition;
           userPositionNeedsUpdate = true;
           renderList();
           updateMap();
@@ -886,7 +897,7 @@ export async function mountStores(root, workPreviews = []) {
   }
 
   function renderList() {
-    listMatches = userPosition ? map.sortByDistance(matches, userPosition) : matches;
+    listMatches = sortPosition ? map.sortByDistance(matches, sortPosition) : matches;
     list.replaceChildren();
     listPanel.scrollTop = 0;
     shown = 0;
@@ -959,6 +970,11 @@ export async function mountStores(root, workPreviews = []) {
   });
   listMode.addEventListener('click', showList);
   mapMode.addEventListener('click', showMap);
+  sortCenterButton.addEventListener('click', () => {
+    sortPosition = map.centerPosition();
+    map.closeDetails();
+    renderList();
+  });
   locateButton.addEventListener('click', locateMe);
   new ResizeObserver(updateMap).observe(mapElement);
   more.addEventListener('click', () => {
