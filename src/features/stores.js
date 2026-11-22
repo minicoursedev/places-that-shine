@@ -473,7 +473,7 @@ function createStoreSheet(panel, container, renderStoreDetails) {
   };
 }
 
-async function createStoreMap(container, message, locateButton, sheet, renderStoreDetails, onSelectMobileStore) {
+async function createStoreMap(container, message, locateButton, sheet, onSelectMobileStore) {
   await Promise.all([
     loadAsset('link', '/vendor/leaflet/leaflet.css'),
     loadAsset('link', '/vendor/leaflet-markercluster/MarkerCluster.css'),
@@ -484,11 +484,10 @@ async function createStoreMap(container, message, locateButton, sheet, renderSto
   const map = L.map(container, { scrollWheelZoom: false, maxZoom: 19 });
   const mobile = window.matchMedia('(max-width: 560px)');
   let userMarker;
-  function closeDetails() {
-    sheet.close();
-    map.closePopup();
-  }
-  mobile.addEventListener('change', closeDetails);
+  mobile.addEventListener('change', () => sheet.close());
+  map.on('click', () => {
+    if (!mobile.matches) sheet.close();
+  });
   map.zoomControl.getContainer().querySelector('.leaflet-control-zoom-in').setAttribute('aria-label', '放大地圖');
   map.zoomControl.getContainer().querySelector('.leaflet-control-zoom-out').setAttribute('aria-label', '縮小地圖');
   const locateControl = L.control({ position: 'bottomright' });
@@ -532,10 +531,10 @@ async function createStoreMap(container, message, locateButton, sheet, renderSto
   }).addTo(map);
 
   return {
-    closeDetails,
+    closeDetails: sheet.close,
     locate({ latitude, longitude }) {
       const position = [latitude, longitude];
-      closeDetails();
+      sheet.close();
       map.invalidateSize({ pan: false });
       if (userMarker) userMarker.setLatLng(position);
       else {
@@ -559,7 +558,7 @@ async function createStoreMap(container, message, locateButton, sheet, renderSto
       });
     },
     refresh(stores, category) {
-      closeDetails();
+      sheet.close();
       map.invalidateSize({ pan: false });
       map.removeLayer(markers);
       markers.clearLayers();
@@ -578,20 +577,15 @@ async function createStoreMap(container, message, locateButton, sheet, renderSto
             button.click();
           };
         });
-        const popup = L.popup({ maxWidth: 290, offset: [0, -icon.options.iconSize[1]] }, marker);
-        popup.on('add', () => badge.classList.add('is-selected'));
-        popup.on('remove', () => badge.classList.remove('is-selected'));
         marker.on('click', () => {
-          if (mobile.matches) {
-            onSelectMobileStore();
-            sheet.open(shop, marker, badge);
-            map.invalidateSize({ pan: false });
-            map.panInside(marker.getLatLng(), { paddingTopLeft: [35, 58], paddingBottomRight: [35, 35], animate: false });
-          } else if (map.hasLayer(popup)) {
-            map.closePopup(popup);
-          } else {
-            popup.setLatLng(marker.getLatLng()).setContent(renderStoreDetails(shop)).openOn(map);
+          if (!mobile.matches && badge.classList.contains('is-selected')) {
+            sheet.close();
+            return;
           }
+          if (mobile.matches) onSelectMobileStore();
+          sheet.open(shop, marker, badge);
+          map.invalidateSize({ pan: false });
+          map.panInside(marker.getLatLng(), { paddingTopLeft: [35, 58], paddingBottomRight: [35, 35], animate: false });
         });
         pins.push(marker);
       }
@@ -704,8 +698,10 @@ export async function mountStores(root, workPreviews = []) {
   const mapMessage = element('p', 'store-map-status');
   mapMessage.setAttribute('role', 'status');
   mapPanel.hidden = mapElement.hidden = mapMessage.hidden = true;
-  mapPanel.append(locationStatus, mapMessage, mapElement);
-  const storeSheet = createStoreSheet(mapPanel, mapElement, renderStoreDetails);
+  const mapLayout = element('div', 'store-map-layout');
+  mapLayout.append(mapElement);
+  mapPanel.append(locationStatus, mapMessage, mapLayout);
+  const storeSheet = createStoreSheet(mapLayout, mapElement, renderStoreDetails);
   root.replaceChildren(tools, retry, list, more, mapPanel);
 
   let stores = [];
@@ -765,7 +761,7 @@ export async function mountStores(root, workPreviews = []) {
     if (!mapTask) {
       mapMessage.textContent = '正在載入地圖…';
       mapMessage.hidden = false;
-      mapTask = createStoreMap(mapElement, mapMessage, locateButton, storeSheet, renderStoreDetails, collapseOnFirstSelection);
+      mapTask = createStoreMap(mapElement, mapMessage, locateButton, storeSheet, collapseOnFirstSelection);
     }
     try {
       if (!map) {
