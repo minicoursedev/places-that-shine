@@ -47,6 +47,10 @@
   font-size: .87rem;
 }
 
+.store-status:empty {
+  display: none;
+}
+
 .store-results {
   display: grid;
   gap: .85rem;

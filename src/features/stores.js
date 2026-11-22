@@ -614,7 +614,6 @@ async function createStoreMap(container, message, locateButton, sheet, mobile, o
       map.fitBounds(bounds, { animate: false, padding: [28, 28], maxZoom: 15 });
       markers.addLayers(pins);
       markers.addTo(map);
-      return pins.length;
     },
   };
 }
@@ -754,28 +753,14 @@ export async function mountStores(root, workPreviews = []) {
     setToolsExpanded(false);
   }
 
-  function updateStatus() {
-    if (!matches.length) {
-      status.textContent = '找不到符合條件的店家。試試其他店名、地址或篩選條件。';
-      return;
-    }
-    const order = userPosition ? '，由近到遠排序' : '';
-    status.textContent = (mobile.matches && showingMap)
-      ? `共 ${matches.length} 家`
-      : `共 ${matches.length} 家，已顯示 ${shown} 家${order}`;
-  }
-
   function updateMap() {
     if (!map || !showingMap || !mapElement.offsetWidth) return;
     if (!mapNeedsRefresh) {
       map.resize();
       return;
     }
-    const located = map.refresh(matches, category.value);
+    map.refresh(matches, category.value);
     mapNeedsRefresh = false;
-    if (located < matches.length) {
-      status.textContent = `共 ${matches.length} 家，其中 ${located} 家可在地圖查看。`;
-    }
   }
 
   async function showMap() {
@@ -784,7 +769,6 @@ export async function mountStores(root, workPreviews = []) {
     mapMode.setAttribute('aria-pressed', 'true');
     mapLayout.classList.add('is-showing-map');
     mapPanel.hidden = false;
-    updateStatus();
     if (!mapTask) {
       mapMessage.textContent = '正在載入地圖…';
       mapMessage.hidden = false;
@@ -868,7 +852,6 @@ export async function mountStores(root, workPreviews = []) {
     mapMode.setAttribute('aria-pressed', 'false');
     mapPanel.hidden = true;
     mapLayout.classList.remove('is-showing-map');
-    updateStatus();
   }
 
   function showMore() {
@@ -882,7 +865,6 @@ export async function mountStores(root, workPreviews = []) {
 
     list.append(...batch);
     shown += batch.length;
-    updateStatus();
     more.hidden = shown >= matches.length;
     return batch;
   }
@@ -905,6 +887,7 @@ export async function mountStores(root, workPreviews = []) {
       && (!category.value || shop.category === category.value)
       && terms.every(term => shop.searchText.includes(term))
     ));
+    status.textContent = matches.length ? '' : '找不到符合條件的店家。試試其他店名、地址或篩選條件。';
     renderList();
     mapNeedsRefresh = true;
     updateMap();
@@ -955,7 +938,6 @@ export async function mountStores(root, workPreviews = []) {
   mobile.addEventListener('change', () => {
     storeSheet.close();
     if (!mobile.matches && !showingMap) void showMap();
-    updateStatus();
   });
   listMode.addEventListener('click', showList);
   mapMode.addEventListener('click', showMap);
