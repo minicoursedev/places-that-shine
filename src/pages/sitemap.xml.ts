@@ -1,4 +1,5 @@
 import type { APIRoute } from 'astro';
+import { stores, storePath } from '../lib/oshen-stores';
 import { designers, designerPath, designerWorks } from '../lib/oshen-designers';
 import { catalogue, hallPath, stagePath } from '../lib/oshen-stage';
 import { designers as yilanDesigners, designerPath as yilanDesignerPath } from '../lib/yilan-market';
@@ -8,6 +9,7 @@ import { designerWorkPath } from '../../public/designers/js/work-links.js';
 const paths = [
   '/',
   '/stores/',
+  ...stores.map(({ id }) => storePath(id)),
   '/designers/periods/',
   '/designers/',
   ...hallPages.map(hall => hall.path),

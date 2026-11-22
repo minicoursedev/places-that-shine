@@ -1,16 +1,12 @@
+import { readStores } from '../lib/oshen-store-data';
+import { storeCity, storePath } from '../lib/oshen-store-links.mjs';
 import { storeCategoryIcon } from './store-marker-icons.js';
 
 const STORE_FEED = '/data/stores.json';
 const QR_GENERATOR = '/vendor/qrcode-generator/qrcode-2.0.4.mjs';
 const PAGE_SIZE = 12;
-const CITY_PREFIX = /^(?:\d{3}(?:-?\d{2,3})?\s*)?([\p{Script=Han}]{2}[縣市])/u;
 const MAP_TILES = 'https://tile.openstreetmap.org/{z}/{x}/{y}.png';
 const TAIWAN_BOUNDS = [[21.88, 117.97], [26.42, 122.05]];
-const SOCIALS = [
-  ['instagram', 'Instagram', 'instagram.svg'],
-  ['facebook', 'Facebook', 'facebook.png'],
-  ['threads', 'Threads', 'threads.svg'],
-];
 const compareText = new Intl.Collator('zh-Hant-TW').compare;
 
 function element(tag, className, text) {
@@ -22,16 +18,6 @@ function element(tag, className, text) {
 
 function normalize(text) {
   return text.normalize('NFKC').replaceAll('台', '臺').toLowerCase().trim();
-}
-
-function safeUrl(value) {
-  if (typeof value !== 'string') return null;
-  try {
-    const url = new URL(value);
-    return url.protocol === 'https:' && !url.username && !url.password ? url : null;
-  } catch {
-    return null;
-  }
 }
 
 function localPhotoUrl(value) {
@@ -75,8 +61,7 @@ function createStoreShare(dialog) {
 
   return async ({ id, name }) => {
     const current = ++generation;
-    const url = new URL('/stores/', location.origin);
-    url.searchParams.set('shop', id);
+    const url = new URL(storePath(id), location.origin);
     shopName.textContent = name;
     link.href = link.textContent = url.href;
     status.textContent = qrStatus.textContent = '';
@@ -138,8 +123,8 @@ function createStorePhotoViewer(dialog) {
       image.draggable = false;
       image.loading = index === selected ? 'eager' : 'lazy';
       image.decoding = 'async';
-      image.src = photo.url;
-      slide.append(image, element('figcaption', 'store-photo-caption', photo.caption));
+      image.src = photo.url.href;
+      slide.append(image, element('figcaption', 'store-photo-caption', photo.caption ?? photo.alt));
       return slide;
     }));
     previous.hidden = next.hidden = photos.length < 2;
@@ -167,8 +152,8 @@ function renderStoreGallery(photos, openPhotos) {
     image.loading = 'lazy';
     image.decoding = 'async';
     image.draggable = false;
-    image.src = photo.url;
-    thumb.append(image, element('span', 'store-gallery-caption', photo.caption));
+    image.src = photo.url.href;
+    thumb.append(image, element('span', 'store-gallery-caption', photo.caption ?? photo.alt));
     thumb.addEventListener('click', () => openPhotos(photos, index));
     track.append(thumb);
   }
@@ -190,19 +175,56 @@ function renderStoreGallery(photos, openPhotos) {
   return gallery;
 }
 
-function renderStore({ id, name, address, category, serviceType, shopPhoto, social, openingHours, visitNote, visitUrl, productImages }, openShare, openPhotos, tag = 'li') {
+function renderVisitRecords(records, name) {
+  const details = element('details', 'store-details');
+  details.append(element('summary', '', `探店紀錄（${records.length}）`));
+
+  for (const { author, source, excerpt, url, photo } of records) {
+    const entry = element('div', 'store-visit-entry');
+    const text = element('div', 'store-visit-text');
+    if (author || source) {
+      const byline = element('p', 'store-visit-byline');
+      if (author) byline.append(element('strong', '', author));
+      if (source) byline.append(author ? ` · ${source}` : source);
+      text.append(byline);
+    }
+    text.append(element('blockquote', 'store-visit-excerpt', excerpt));
+    if (url) {
+      const link = externalLink(source ? `閱讀 ${source} 原文` : '閱讀原文', url, name);
+      link.className = 'store-visit-source';
+      text.append(link);
+    }
+    entry.append(text);
+    if (photo) {
+      const image = element('img', 'store-visit-photo');
+      image.alt = photo.alt ?? '';
+      image.loading = 'lazy';
+      image.decoding = 'async';
+      image.src = photo.url.href;
+      entry.append(image);
+    }
+    details.append(entry);
+  }
+  return details;
+}
+
+function renderStore(shop, openShare, openPhotos, tag = 'li') {
+  const { id, name, address, category, serviceType, logo, socialLinks, openingHours, visitNote, visitUrl, visitRecords, photos } = shop;
   const card = element(tag, 'store-card');
   const summary = element('div', 'store-summary');
   const text = element('div', 'store-text');
   const type = category === '洋流服務站' && serviceType
     ? `${category}・${serviceType}`
     : category;
-  text.append(element('p', 'store-category', type), element('h3', 'store-name', name));
+  const heading = element('h3', 'store-name');
+  const profile = element('a', '', name);
+  profile.href = storePath(id);
+  heading.append(profile);
+  text.append(element('p', 'store-category', type), heading);
   text.append(element('p', 'store-address', address));
   summary.append(text);
 
-  const photo = shopPhoto?.status === 'verified' && localPhotoUrl(shopPhoto.url);
-  if (photo) {
+  if (logo) {
     const img = element('img', 'store-photo');
     img.alt = '';
     img.width = 54;
@@ -211,7 +233,7 @@ function renderStore({ id, name, address, category, serviceType, shopPhoto, soci
     img.decoding = 'async';
     img.referrerPolicy = 'no-referrer';
     img.addEventListener('error', () => img.remove(), { once: true });
-    img.src = photo.href;
+    img.src = logo.url.href;
     summary.append(img);
   }
 
@@ -230,17 +252,14 @@ function renderStore({ id, name, address, category, serviceType, shopPhoto, soci
     share.addEventListener('click', () => openShare({ id, name }));
     actions.append(share);
   }
-  const visit = safeUrl(visitUrl);
-  if (visit) {
-    const link = externalLink('探店', visit, name);
+  if (visitUrl) {
+    const link = externalLink('探店', visitUrl, name);
     link.className = 'store-action store-visit';
     actions.append(link);
   }
   actions.append(navigation);
   const links = element('div', 'store-links');
-  for (const [field, label, file] of SOCIALS) {
-    const url = safeUrl(social?.[field]);
-    if (!url) continue;
+  for (const { label, icon: file, url } of socialLinks) {
     const link = externalLink(label, url, name);
     link.title = label;
     const icon = element('img');
@@ -254,28 +273,18 @@ function renderStore({ id, name, address, category, serviceType, shopPhoto, soci
   }
 
   card.append(summary, actions);
-  const hours = openingHours?.text;
-  const hasHours = typeof hours === 'string' && hours.trim()
-    && ['verified', 'reference', 'appointment'].includes(openingHours.status);
-  if (hasHours || visitNote) {
+  if (openingHours || visitNote) {
     const details = element('details', 'store-details');
     details.append(element('summary', '', '到訪資訊'));
-    if (hasHours) {
-      const heading = openingHours.status === 'reference' ? '營業時間（參考）' : '營業時間與預約';
-      details.append(element('strong', '', heading), element('p', 'store-hours', hours));
+    if (openingHours) {
+      details.append(element('strong', '', openingHours.label), element('p', 'store-hours', openingHours.text));
       if (openingHours.note) details.append(element('p', 'store-visit-note', openingHours.note));
     }
     if (visitNote) details.append(element('p', 'store-visit-note', visitNote));
     card.append(details);
   }
+  if (visitRecords.length) card.append(renderVisitRecords(visitRecords, name));
   if (links.childElementCount) card.append(links);
-  const photos = (Array.isArray(productImages) ? productImages : []).flatMap(product => {
-    const url = localPhotoUrl(product?.url);
-    if (!url) return [];
-    const alt = typeof product.alt === 'string' && product.alt.trim() || `${name}的店家照片`;
-    const caption = typeof product.caption === 'string' ? product.caption.trim() : '';
-    return [{ url: url.href, alt, caption: caption || alt }];
-  });
   if (photos.length) card.append(renderStoreGallery(photos, openPhotos));
   return card;
 }
@@ -546,15 +555,6 @@ async function createStoreMap(container, message, locateButton, sheet, renderSto
     resize() {
       map.invalidateSize({ pan: false });
     },
-    openStore(id) {
-      const marker = markers.getLayers().find(pin => pin.options.storeId === id);
-      if (!marker) return false;
-      map.setView(marker.getLatLng(), 16, { animate: false });
-      markers.zoomToShowLayer(marker, () => {
-        if (container.offsetWidth && markers.hasLayer(marker)) marker.fire('click');
-      });
-      return true;
-    },
     refresh(stores, category) {
       closeDetails();
       map.invalidateSize({ pan: false });
@@ -565,7 +565,7 @@ async function createStoreMap(container, message, locateButton, sheet, renderSto
         const { lat, lng } = shop.latlng || {};
         if (!Number.isFinite(lat) || !Number.isFinite(lng) || Math.abs(lat) > 90 || Math.abs(lng) > 180) continue;
         const { badge, icon } = createStorePin(L, shop, category === '洋流服務站');
-        const marker = L.marker([lat, lng], { title: shop.name, alt: shop.name, icon, storeId: shop.id });
+        const marker = L.marker([lat, lng], { title: shop.name, alt: shop.name, icon });
         marker.on('add', () => {
           const button = marker.getElement();
           button.setAttribute('aria-label', shop.name);
@@ -604,7 +604,6 @@ async function createStoreMap(container, message, locateButton, sheet, renderSto
 export async function mountStores(root, workPreviews = []) {
   const openShare = createStoreShare(document.getElementById('store-share-dialog'));
   const openPhotos = createStorePhotoViewer(document.getElementById('store-photo-viewer'));
-  const sharedStoreId = new URLSearchParams(location.search).get('shop');
   let previousWork = -1;
 
   function renderStoreDetails(shop) {
@@ -868,16 +867,11 @@ export async function mountStores(root, workPreviews = []) {
     try {
       const response = await fetch(STORE_FEED, { cache: 'no-cache' });
       if (!response.ok) throw new Error(`店家資料回傳 ${response.status}`);
-      const data = await response.json();
-      if (!Array.isArray(data?.stores)) throw new Error('店家資料格式不正確');
-      stores = data.stores.filter(shop => (
-        shop?.disabled !== true
-        && ['name', 'address', 'category'].every(key => typeof shop?.[key] === 'string' && shop[key].trim())
-      )).map(shop => {
+      stores = readStores(await response.json(), location.origin).map(shop => {
         const address = normalize(shop.address);
         return {
           ...shop,
-          city: address.match(CITY_PREFIX)?.[1] || '',
+          city: storeCity(shop.address),
           searchText: `${normalize(shop.name)} ${address}`,
         };
       });
@@ -887,15 +881,6 @@ export async function mountStores(root, workPreviews = []) {
       filterToggle.disabled = false;
       filterStores();
       if (showingMap) await showMap();
-      const sharedStore = stores.find(shop => shop.id === sharedStoreId);
-      if (sharedStore && !map?.openStore(sharedStore.id)) {
-        matches = [sharedStore];
-        list.replaceChildren();
-        shown = 0;
-        showMore();
-        showList();
-        mapNeedsRefresh = true;
-      }
     } catch {
       status.textContent = '目前無法載入店家資料。請稍後重試。';
       retry.hidden = false;
