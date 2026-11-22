@@ -5066,6 +5066,194 @@
       "giftStatus": "可能有小物",
       "verification": true,
       "disabled": false
+    },
+    {
+      "id": "happy-kitchen-yilan",
+      "name": "幸芙ㄨㄟˋ廚房",
+      "address": "宜蘭縣宜蘭市擺厘里嵐峰路一段290號",
+      "category": "正餐",
+      "latlng": {
+        "lat": 24.742126,
+        "lng": 121.7484857
+      },
+      "coordinateSource": "https://www.google.com/maps?cid=15846943380897112020",
+      "addressSource": "https://www.ubereats.com/tw/store/%E5%B9%B8%E8%8A%99%E3%84%A8%E3%84%9F%CB%8B%E5%BB%9A%E6%88%BF/yIuRNsgWWDqm5WPVzFFLkA",
+      "verification": false,
+      "disabled": false
+    },
+    {
+      "id": "spring-rain-grain-sweet-yilan",
+      "name": "春雨粮甜",
+      "address": "宜蘭縣宜蘭市新生里慈安路241號2樓",
+      "category": "甜點飲料",
+      "latlng": {
+        "lat": 24.7655653,
+        "lng": 121.7671066
+      },
+      "coordinateSource": "https://www.google.com/maps?cid=13439872844252414821",
+      "social": {
+        "facebook": "https://www.facebook.com/100088828471674/",
+        "instagram": "https://www.instagram.com/spring.rain.grain.sweet/"
+      },
+      "verification": false,
+      "disabled": false
+    },
+    {
+      "id": "qqballs-yilan",
+      "name": "泉哥QQ蛋",
+      "address": "宜蘭縣宜蘭市和睦路（東門夜市）",
+      "category": "小吃",
+      "latlng": {
+        "lat": 24.7579743,
+        "lng": 121.7578541
+      },
+      "coordinateSource": "https://www.google.com/maps?cid=8667439625945289172",
+      "coordinateNote": "使用東門夜市「泉哥QQ蛋（非橋下）」的店家圖釘，對應和睦路攤位。",
+      "social": {
+        "facebook": "https://www.facebook.com/qqballsyilan",
+        "instagram": "https://www.instagram.com/qqballs_yilan/"
+      },
+      "verification": false,
+      "disabled": false
+    },
+    {
+      "id": "yilan-20261107-42",
+      "name": "老頭家海鮮館（老頭家小吃部）",
+      "address": "宜蘭縣宜蘭市泰山路50號",
+      "category": "正餐",
+      "latlng": {
+        "lat": 24.7552783,
+        "lng": 121.7482626
+      },
+      "coordinateSource": "https://www.google.com/maps?cid=8987023900504299997",
+      "addressSource": "https://openchat.line.me/tw/cover/D0HRzniYf7gxVtbubPS-0OTuPA0I7Q4P2Ta109SElsZ63LIpvQKBm8H5mGw",
+      "coordinateNote": "店家取餐資訊與老頭家海鮮館圖釘均指向泰山路50號，各來源樓層不同，採門牌。",
+      "verification": false,
+      "disabled": false
+    },
+    {
+      "id": "dococo-dessert-yilan",
+      "name": "逗可可：甜點研究室",
+      "address": "宜蘭縣宜蘭市復興路一段38巷21號",
+      "category": "甜點飲料",
+      "latlng": {
+        "lat": 24.7497216,
+        "lng": 121.7523642
+      },
+      "coordinateSource": "https://www.google.com/maps?cid=3242350609447920577",
+      "social": {
+        "facebook": "https://www.facebook.com/dococo.dessert/",
+        "instagram": "https://www.instagram.com/dococo.dessert/",
+        "website": "https://www.dococodessert.com/"
+      },
+      "verification": false,
+      "disabled": false
+    },
+    {
+      "id": "yilan-20261107-45",
+      "name": "豬大嬸碳烤香腸",
+      "address": "宜蘭縣宜蘭市新東里東港路二段323號",
+      "category": "小吃",
+      "latlng": {
+        "lat": 24.7538953,
+        "lng": 121.7632741
+      },
+      "coordinateSource": "https://www.google.com/maps?cid=11963094013885123038",
+      "social": {
+        "facebook": "https://www.facebook.com/100063985457813/"
+      },
+      "verification": false,
+      "disabled": false
+    },
+    {
+      "id": "yilan-20261107-43",
+      "name": "樂生田",
+      "address": "宜蘭縣員山鄉深溝村思源路97巷",
+      "category": "農業",
+      "latlng": {
+        "lat": 24.7216505,
+        "lng": 121.711791
+      },
+      "coordinateSource": "https://www.google.com/maps/place/%E6%A8%82%E7%94%9F%E7%94%B0/data=!4m2!3m1!1s0x3467e38e84ee0add:0xd88c87017fefeba8",
+      "addressSource": "https://www.friendlyseed.com.tw/service/portfolio/1107",
+      "coordinateNote": "採樂生田的具名農場圖釘，地圖門牌格式有疑義，地址保留至巷名。",
+      "visitNote": "樂生田共耕地點；參訪或購買請先與樂生田聯絡。",
+      "social": {
+        "facebook": "https://www.facebook.com/loksengtshan/"
+      },
+      "verification": false,
+      "disabled": false
+    },
+    {
+      "id": "daily-hands-feet-yilan",
+      "name": "手腳日常",
+      "address": "宜蘭縣五結鄉中正路二段6之8號（中興文創園區13號倉庫／興工二場）",
+      "category": "日常生活",
+      "latlng": {
+        "lat": 24.6935768,
+        "lng": 121.772406
+      },
+      "coordinateSource": "https://dailyhandsandfeet.rezio.shop/zh-TW/product/LXMDZB",
+      "coordinateNote": "使用工作室官方預約頁連出的教室位置。",
+      "visitNote": "陶藝課程及手作體驗請依工作室的預約頁安排。",
+      "social": {
+        "facebook": "https://www.facebook.com/%E6%89%8B%E8%85%B3%E6%97%A5%E5%B8%B8-Daily-Hands-and-Feet-1944800369148104/",
+        "instagram": "https://www.instagram.com/daily_hands_feet/",
+        "website": "https://dailyhandsandfeet.rezio.shop/zh-TW/product/LXMDZB"
+      },
+      "verification": false,
+      "disabled": false
+    },
+    {
+      "id": "guangsheng-herb-yilan",
+      "name": "廣生藥房",
+      "address": "宜蘭縣宜蘭市東門里中山路三段138號",
+      "category": "日常生活",
+      "latlng": {
+        "lat": 24.7587115,
+        "lng": 121.7530112
+      },
+      "coordinateSource": "https://www.google.com/maps/place/%E5%BB%A3%E7%94%9F%E8%97%A5%E6%88%BF/data=!4m2!3m1!1s0x3467e4c5507c6637:0xc01c990162db837",
+      "addressSource": "https://shopee.tw/valerie1109",
+      "social": {
+        "facebook": "https://www.facebook.com/GuangShengHerb/",
+        "instagram": "https://www.instagram.com/guangsheng1917/",
+        "website": "https://www.guangshengherb.com/"
+      },
+      "verification": false,
+      "disabled": false
+    },
+    {
+      "id": "no3-noodlebar-suao",
+      "name": "三號麵館",
+      "address": "宜蘭縣蘇澳鎮聖愛里聖愛路3號",
+      "category": "正餐",
+      "latlng": {
+        "lat": 24.5967042,
+        "lng": 121.8362762
+      },
+      "coordinateSource": "https://www.google.com/maps?cid=11625619627914596751",
+      "coordinateNote": "Google 店家圖釘顯示聖愛路3號，列有內用營業時段。",
+      "visitNote": "當週營業與出攤資訊可先向店家確認。",
+      "social": {
+        "instagram": "https://www.instagram.com/no3.noodlebar/"
+      },
+      "verification": false,
+      "disabled": false
+    },
+    {
+      "id": "yingjun-vietnamese-pancake-yilan",
+      "name": "英俊越式烤餅",
+      "address": "宜蘭縣宜蘭市大新里新民路42號（東門夜市）",
+      "category": "小吃",
+      "latlng": {
+        "lat": 24.7566943,
+        "lng": 121.7572476
+      },
+      "coordinateSource": "https://www.google.com/maps/place/%E8%8B%B1%E4%BF%8A%E8%B6%8A%E5%BC%8F%E7%83%A4%E9%A4%85/data=!4m2!3m1!1s0x3467e506672e0423:0x9476996f29f7c4da",
+      "addressSource": "https://www.ubereats.com/tw-en/store/%E8%8B%B1%E4%BF%8A%E8%B6%8A%E5%BC%8F%E7%83%A4%E9%A4%85-%E6%9D%B1%E9%96%80%E5%A4%9C%E5%B8%82%E5%BA%97/oR1vYI65X5-Pws7Mz5J43A",
+      "verification": false,
+      "disabled": false
     }
   ]
 }
