@@ -1,9 +1,9 @@
+import { isVisibleStore, storeCity, storePath } from '../lib/oshen-store-links.mjs';
 import { storeCategoryIcon } from './store-marker-icons.js';
 
 const STORE_FEED = '/data/stores.json';
 const QR_GENERATOR = '/vendor/qrcode-generator/qrcode-2.0.4.mjs';
 const PAGE_SIZE = 12;
-const CITY_PREFIX = /^(?:\d{3}(?:-?\d{2,3})?\s*)?([\p{Script=Han}]{2}[縣市])/u;
 const MAP_TILES = 'https://tile.openstreetmap.org/{z}/{x}/{y}.png';
 const TAIWAN_BOUNDS = [[21.88, 117.97], [26.42, 122.05]];
 const SOCIALS = [
@@ -75,8 +75,7 @@ function createStoreShare(dialog) {
 
   return async ({ id, name }) => {
     const current = ++generation;
-    const url = new URL('/stores/', location.origin);
-    url.searchParams.set('shop', id);
+    const url = new URL(storePath(id), location.origin);
     shopName.textContent = name;
     link.href = link.textContent = url.href;
     status.textContent = qrStatus.textContent = '';
@@ -197,7 +196,11 @@ function renderStore({ id, name, address, category, serviceType, shopPhoto, soci
   const type = category === '洋流服務站' && serviceType
     ? `${category}・${serviceType}`
     : category;
-  text.append(element('p', 'store-category', type), element('h3', 'store-name', name));
+  const heading = element('h3', 'store-name');
+  const profile = element('a', '', name);
+  profile.href = storePath(id);
+  heading.append(profile);
+  text.append(element('p', 'store-category', type), heading);
   text.append(element('p', 'store-address', address));
   summary.append(text);
 
@@ -546,15 +549,6 @@ async function createStoreMap(container, message, locateButton, sheet, renderSto
     resize() {
       map.invalidateSize({ pan: false });
     },
-    openStore(id) {
-      const marker = markers.getLayers().find(pin => pin.options.storeId === id);
-      if (!marker) return false;
-      map.setView(marker.getLatLng(), 16, { animate: false });
-      markers.zoomToShowLayer(marker, () => {
-        if (container.offsetWidth && markers.hasLayer(marker)) marker.fire('click');
-      });
-      return true;
-    },
     refresh(stores, category) {
       closeDetails();
       map.invalidateSize({ pan: false });
@@ -565,7 +559,7 @@ async function createStoreMap(container, message, locateButton, sheet, renderSto
         const { lat, lng } = shop.latlng || {};
         if (!Number.isFinite(lat) || !Number.isFinite(lng) || Math.abs(lat) > 90 || Math.abs(lng) > 180) continue;
         const { badge, icon } = createStorePin(L, shop, category === '洋流服務站');
-        const marker = L.marker([lat, lng], { title: shop.name, alt: shop.name, icon, storeId: shop.id });
+        const marker = L.marker([lat, lng], { title: shop.name, alt: shop.name, icon });
         marker.on('add', () => {
           const button = marker.getElement();
           button.setAttribute('aria-label', shop.name);
@@ -604,7 +598,6 @@ async function createStoreMap(container, message, locateButton, sheet, renderSto
 export async function mountStores(root, workPreviews = []) {
   const openShare = createStoreShare(document.getElementById('store-share-dialog'));
   const openPhotos = createStorePhotoViewer(document.getElementById('store-photo-viewer'));
-  const sharedStoreId = new URLSearchParams(location.search).get('shop');
   let previousWork = -1;
 
   function renderStoreDetails(shop) {
@@ -870,14 +863,11 @@ export async function mountStores(root, workPreviews = []) {
       if (!response.ok) throw new Error(`店家資料回傳 ${response.status}`);
       const data = await response.json();
       if (!Array.isArray(data?.stores)) throw new Error('店家資料格式不正確');
-      stores = data.stores.filter(shop => (
-        shop?.disabled !== true
-        && ['name', 'address', 'category'].every(key => typeof shop?.[key] === 'string' && shop[key].trim())
-      )).map(shop => {
+      stores = data.stores.filter(isVisibleStore).map(shop => {
         const address = normalize(shop.address);
         return {
           ...shop,
-          city: address.match(CITY_PREFIX)?.[1] || '',
+          city: storeCity(shop.address),
           searchText: `${normalize(shop.name)} ${address}`,
         };
       });
@@ -887,15 +877,6 @@ export async function mountStores(root, workPreviews = []) {
       filterToggle.disabled = false;
       filterStores();
       if (showingMap) await showMap();
-      const sharedStore = stores.find(shop => shop.id === sharedStoreId);
-      if (sharedStore && !map?.openStore(sharedStore.id)) {
-        matches = [sharedStore];
-        list.replaceChildren();
-        shown = 0;
-        showMore();
-        showList();
-        mapNeedsRefresh = true;
-      }
     } catch {
       status.textContent = '目前無法載入店家資料。請稍後重試。';
       retry.hidden = false;

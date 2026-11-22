@@ -1,6 +1,8 @@
 ---
 import SiteLayout from '../../layouts/SiteLayout.astro';
 import { designerWorks } from '../../lib/oshen-designers';
+import { stores } from '../../lib/oshen-stores';
+import { storeCity, storePath } from '../../lib/oshen-store-links.mjs';
 import { designerWorkSharePath } from '../../../public/designers/js/work-links.js';
 import '../../styles/stores.css';
 
@@ -8,6 +10,14 @@ const title = '發光的店家';
 const description = '發光的店家（我們的洋流地圖）整理台灣各地的小店與生活服務，可搜尋店家並查看到訪資訊與地圖位置。';
 const shareImage = new URL('/media/shining-stores-og-shadow-50.jpg', Astro.site);
 const shareImageAlt = '發光的店家。我相信光，是為了巷弄間的歡騰，不是為了墳前的孤寂。巷弄夜景與台灣夜間光點示意。';
+const compareText = new Intl.Collator('zh-Hant-TW').compare;
+const storeGroups = new Map<string, (typeof stores)[number][]>();
+for (const store of stores) {
+  const city = storeCity(store.address) || '其他地區';
+  if (!storeGroups.has(city)) storeGroups.set(city, []);
+  storeGroups.get(city)!.push(store);
+}
+const storesByCity = [...storeGroups].sort(([a], [b]) => compareText(a, b));
 const workPreviews = designerWorks.flatMap(({ designer, work }) => {
   const booth = designer.booth.hallBooths.find(({ aisle }) => aisle[0] !== 'A');
   if (!booth || work.id === 'yang-liu-avatar') return [];
@@ -41,6 +51,21 @@ const workPreviews = designerWorks.flatMap(({ designer, work }) => {
       <a class="back-link" href="/#explore"><span aria-hidden="true">←</span> 回探索首頁</a>
       <h1 id="stores-title">{title}</h1>
     </div>
+    <details class="stores-by-city">
+      <summary>按縣市瀏覽所有店家</summary>
+      <nav aria-label="按縣市瀏覽店家" class="stores-by-city-groups">
+        {storesByCity.map(([city, cityStores]) => (
+          <section>
+            <h2>{city}</h2>
+            <ul>
+              {cityStores.sort((a, b) => compareText(a.name, b.name)).map(store => (
+                <li><a href={storePath(store.id)}>{store.name}</a></li>
+              ))}
+            </ul>
+          </section>
+        ))}
+      </nav>
+    </details>
     <div id="stores-content" aria-label="店家目錄" data-work-previews={JSON.stringify(workPreviews)}><p role="status">正在載入店家資料…</p></div>
     <dialog id="store-share-dialog" class="store-share-dialog" aria-labelledby="store-share-title" aria-describedby="store-share-name">
       <h2 id="store-share-title">分享店家</h2>
@@ -60,7 +85,7 @@ const workPreviews = designerWorks.flatMap(({ designer, work }) => {
       <button class="store-photo-control store-photo-previous" type="button" aria-label="上一張照片" data-photo-previous>‹</button>
       <button class="store-photo-control store-photo-next" type="button" aria-label="下一張照片" data-photo-next>›</button>
     </dialog>
-    <noscript><p>請開啟 JavaScript 以在本站瀏覽目錄。</p></noscript>
+    <noscript><p>搜尋、篩選與地圖需要 JavaScript。上方的縣市清單可直接開啟單店頁。</p></noscript>
   </section>
 </SiteLayout>
 
@@ -70,3 +95,35 @@ const workPreviews = designerWorks.flatMap(({ designer, work }) => {
   const directory = document.querySelector<HTMLElement>('#stores-content');
   if (directory) void mountStores(directory, JSON.parse(directory.dataset.workPreviews || '[]'));
 </script>
+
+<style>
+  .stores-by-city {
+    margin-bottom: 1rem;
+    border: 1px solid var(--line);
+    border-radius: .5rem;
+    background: var(--paper);
+  }
+  .stores-by-city summary {
+    min-height: 44px;
+    align-content: center;
+    padding: .65rem 1rem;
+    cursor: pointer;
+    font-weight: 650;
+  }
+  .stores-by-city-groups {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr));
+    align-items: start;
+    gap: 1rem 1.75rem;
+    padding: 0 1rem 1rem;
+  }
+  .stores-by-city h2 { margin: .4rem 0; font-size: 1rem; }
+  .stores-by-city ul { margin: 0; padding: 0; list-style: none; }
+  .stores-by-city a { display: inline-block; padding-block: .25rem; }
+  .stores-by-city a, :global(.store-name a) { text-underline-offset: .2em; }
+  :global(.store-name a) { text-decoration-color: var(--line); }
+  .stores-by-city a:hover, :global(.store-name a:hover) {
+    color: var(--accent);
+    text-decoration-color: currentColor;
+  }
+</style>
