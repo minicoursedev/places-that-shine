@@ -3791,6 +3791,18 @@
         "lng": 120.2283696
       },
       "visitNote": "老屋咖啡廳，供應咖啡與法式甜點；官方公告低消每人一杯飲品。電話06-2085211，店休日請先查看官方公告。",
+      "visitRecords": [
+        {
+          "author": "梁楓",
+          "source": "Threads",
+          "url": "https://www.threads.com/@lmanliang/post/Df6q-vKAbMk",
+          "excerpt": "坐下來\n喝喝看咖啡告訴你什麼\n看看，這些小東西，告訴你什麼",
+          "photo": {
+            "url": "/media/library/cat-traveller-cafe/visit-entrance.webp",
+            "alt": "穿牆貓的深綠色店門，兩旁放著盆栽，門前立著小黑板。"
+          }
+        }
+      ],
       "openingHours": {
         "status": "verified",
         "text": "13:00–18:00；每月店休日請見 Facebook 置頂公告。"
