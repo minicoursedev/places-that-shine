@@ -276,7 +276,7 @@ function renderStore(shop, openShare, openPhotos, tag = 'li', onSelect) {
   card.append(summary, actions);
   if (openingHours || visitNote) {
     const details = element('details', 'store-details');
-    details.append(element('summary', '', '到訪資訊'));
+    details.append(element('summary', '', '店家簡介'));
     if (openingHours) {
       details.append(element('strong', '', openingHours.label), element('p', 'store-hours', openingHours.text));
       if (openingHours.note) details.append(element('p', 'store-visit-note', openingHours.note));
