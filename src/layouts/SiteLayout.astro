@@ -6,9 +6,10 @@ interface Props {
   description: string;
   active?: 'stores' | 'designers' | 'stage';
   errorPage?: boolean;
+  analytics?: boolean;
 }
 
-const { title, description, active, errorPage } = Astro.props;
+const { title, description, active, errorPage, analytics = true } = Astro.props;
 const siteName = '發光的地方';
 const pageTitle = title === siteName ? title : `${title}｜${siteName}`;
 const canonical = new URL(Astro.url.pathname, Astro.site);
@@ -31,6 +32,7 @@ const routes = [
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;600;700&family=Noto+Serif+TC:wght@500;600;700;800&display=swap" rel="stylesheet" />
     <slot name="head" />
+    {analytics && <script is:inline defer src="/assets/analytics.js?v=20261019-content-group"></script>}
   </head>
   <body>
     <header class="site-header">

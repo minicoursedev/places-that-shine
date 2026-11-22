@@ -9,11 +9,14 @@ const directions = new URL('https://www.google.com/maps/search/?api=1');
 directions.searchParams.set('query', address);
 ---
 
-<SiteLayout title="宜蘭暖流・台派市集地點" description="宜蘭暖流・台派市集在羅東後火車站旁廣場。">
+<SiteLayout title="宜蘭暖流・台派市集地點" description="宜蘭暖流・台派市集在羅東後火車站旁廣場。" analytics={false}>
   <script slot="head" define:vars={{ designerIds }}>
     const params = new URLSearchParams(location.search);
     if (params.get('place') === 'yilan-20261107') {
       document.documentElement.dataset.yilanLocation = '';
+      const analytics = document.createElement('script');
+      analytics.src = '/assets/analytics.js?v=20261019-content-group';
+      document.head.appendChild(analytics);
     } else {
       const id = params.get('designer');
       if (designerIds.includes(id)) location.replace(`/designers/${id}/`);

@@ -14,7 +14,7 @@ const entries = [
   { href: '/stage/', title: '發光的舞台', description: '聽一首歌，看一場演出', cover: 'stage.webp', width: 320, height: 180 },
 ];
 ---
-<SiteLayout title={title} description={description}>
+<SiteLayout title={title} description={description} analytics={false}>
   <Fragment slot="head">
     <meta property="og:type" content="website" />
     <meta property="og:url" content={Astro.site} />
@@ -43,6 +43,10 @@ const entries = [
         }
       }
       location.replace(target);
+    } else {
+      const analytics = document.createElement('script');
+      analytics.src = '/assets/analytics.js?v=20261019-content-group';
+      document.head.appendChild(analytics);
     }
   </script>
   <section id="home" class="hero" aria-labelledby="home-title">
