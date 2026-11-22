@@ -1,4 +1,4 @@
-import { isVisibleStore, storeCity, storePath } from '../lib/oshen-store-links.mjs';
+import { isVisibleStore, storeCity, storeMapId, storePath } from '../lib/oshen-store-links.mjs';
 import { storeCategoryIcon } from './store-marker-icons.js';
 
 const STORE_FEED = '/data/stores.json';
@@ -549,6 +549,15 @@ async function createStoreMap(container, message, locateButton, sheet, renderSto
     resize() {
       map.invalidateSize({ pan: false });
     },
+    focusStore(id) {
+      const marker = markers.getLayers().find(pin => pin.options.storeId === id);
+      if (!marker) return;
+      container.scrollIntoView({ block: 'nearest' });
+      map.setView(marker.getLatLng(), 16, { animate: false });
+      markers.zoomToShowLayer(marker, () => {
+        if (container.offsetWidth && markers.hasLayer(marker)) marker.fire('click');
+      });
+    },
     refresh(stores, category) {
       closeDetails();
       map.invalidateSize({ pan: false });
@@ -559,7 +568,7 @@ async function createStoreMap(container, message, locateButton, sheet, renderSto
         const { lat, lng } = shop.latlng || {};
         if (!Number.isFinite(lat) || !Number.isFinite(lng) || Math.abs(lat) > 90 || Math.abs(lng) > 180) continue;
         const { badge, icon } = createStorePin(L, shop, category === '洋流服務站');
-        const marker = L.marker([lat, lng], { title: shop.name, alt: shop.name, icon });
+        const marker = L.marker([lat, lng], { title: shop.name, alt: shop.name, icon, storeId: shop.id });
         marker.on('add', () => {
           const button = marker.getElement();
           button.setAttribute('aria-label', shop.name);
@@ -599,6 +608,7 @@ export async function mountStores(root, workPreviews = []) {
   const openShare = createStoreShare(document.getElementById('store-share-dialog'));
   const openPhotos = createStorePhotoViewer(document.getElementById('store-photo-viewer'));
   let previousWork = -1;
+  let pendingStoreId = storeMapId(location.hash);
 
   function renderStoreDetails(shop) {
     const card = renderStore(shop, openShare, openPhotos, 'article');
@@ -766,6 +776,11 @@ export async function mountStores(root, workPreviews = []) {
       mapElement.hidden = false;
       updateMap();
       locateButton.disabled = locating;
+      if (pendingStoreId) {
+        const id = pendingStoreId;
+        pendingStoreId = null;
+        map.focusStore(id);
+      }
     } catch {
       mapTask = null;
       mapMessage.textContent = '地圖暫時無法載入。可再選一次「店家地圖」重試，或切換回清單。';

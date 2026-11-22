@@ -3,6 +3,7 @@ import { existsSync } from 'node:fs';
 import { resolve } from 'node:path';
 import sharp from 'sharp';
 import SiteLayout from '../../../layouts/SiteLayout.astro';
+import { storeMapPath } from '../../../lib/oshen-store-links.mjs';
 import { stores, storePath } from '../../../lib/oshen-stores';
 import { serializeStructuredData } from '../../../../public/designers/js/profile-seo.js';
 
@@ -180,6 +181,7 @@ const structuredData = {
     </header>
 
     <nav class="store-actions" aria-label="店家連結">
+      <a href={storeMapPath(store.id)}>回到地圖</a>
       <a class="store-directions" href={directions.href} target="_blank" rel="noopener noreferrer">開啟導航</a>
       {social.map(({ label, url }) => <a href={url} target="_blank" rel="noopener noreferrer">{label}</a>)}
       {visitUrl && <a href={visitUrl.href} target="_blank" rel="noopener noreferrer">探店文章</a>}
