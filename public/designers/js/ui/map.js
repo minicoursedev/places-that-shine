@@ -1,6 +1,6 @@
 // 設計師地圖 page (<main id="stage-map">): hall overview, and a hall plan with one compact row per aisle.
 import { state, on, isVisited } from '../state.js';
-import { goToAisle, goToBooth } from '../nav.js?v=20261117-secondary-instagram';
+import { goToAisle, goToBooth } from '../nav.js?v=20261123-webp';
 
 const ZONES_SHOWN = 8;
 

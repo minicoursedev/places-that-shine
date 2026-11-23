@@ -1,5 +1,5 @@
 import { designerMetadata, designerStructuredData, serializeStructuredData, publicUrl } from './profile-seo.js?v=20261114-designer-title';
-import { hallPageForCode, hallPageForPath } from './hall-pages.js?v=20261116-oshen-websites-hall';
+import { hallPageForCode, hallPageForPath } from './hall-pages.js?v=20261123-webp';
 import { browserOrigin } from './config.js';
 
 export const designerRoot = '/designers/';
@@ -29,13 +29,13 @@ export function resolveDesignerRoute(url, { boot = false } = {}) {
   return { mode, target, then };
 }
 export const designerMarketPreview = {
-  image: '/designers/assets/oshen-hall-o01-og.jpg',
+  image: '/designers/assets/oshen-hall-o01-og.webp',
   alt: '洋流設計師館 O01 的第 05 至 09 攤：Koi Design Studio 扣乙図設、駱 乃康 Lo NaiKang、GIKO 吉可小賣部、顧紫蝶與阿猛、皮皮手作',
   width: 1200,
   height: 630,
-  type: 'image/jpeg',
+  type: 'image/webp',
 };
-const exhibitionImage = '/designers/assets/exhibition-og.png';
+const exhibitionImage = '/designers/assets/exhibition-og.webp';
 const initialPreview = typeof document === 'undefined' ? null : {
   id: document.documentElement.dataset.designerProfile,
   image: document.querySelector('meta[property="og:image"]')?.content,
@@ -66,7 +66,7 @@ export function updateDesignerMetadata(designer = null, booth = {}) {
   const avatar = publicUrl(designer?.avatar, canonical);
   const preview = !designer && !hall ? designerMarketPreview
     : designer?.og ? { ...designer.og, image: designer.og.url } : designer && initialPreview?.id === designer.id ? initialPreview : avatar
-    ? { image: avatar } : hall?.image ? hall : { image: exhibitionImage, width: '2622', height: '1206', type: 'image/png' };
+    ? { image: avatar } : hall?.image ? hall : { image: exhibitionImage, width: '2622', height: '1206', type: 'image/webp' };
   const image = publicUrl(preview.image, canonical) || new URL(exhibitionImage, canonical).href;
   const imageAlt = preview.alt || (designer && avatar ? `${designer.name}的頭像` : '發光的設計師市集逛攤畫面');
   document.querySelector('meta[name="twitter:card"]').content = designer ? 'summary' : 'summary_large_image';

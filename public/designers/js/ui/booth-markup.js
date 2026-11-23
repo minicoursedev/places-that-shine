@@ -1,5 +1,5 @@
 import { thumbnailUrl } from '../images.js';
-import { designerSharePath, designerWalkPath } from '../routes.js?v=20261116-oshen-websites-hall';
+import { designerSharePath, designerWalkPath } from '../routes.js?v=20261123-webp';
 import { designerMetadata } from '../profile-seo.js?v=20261114-designer-title';
 import { designerWorkSharePath } from '../work-links.js?v=20261114-share-channels';
 import { browserOrigin } from '../config.js';
@@ -69,7 +69,7 @@ export function boothHtml(booth, store, { profile = false, staticProfile = false
   const storeUrl = safeUrl(store?.url);
   const links = store?.links || [];
   const socialLinks = [
-    ...[['fb', 'Facebook', 'facebook.png'], ['threads', 'Threads', 'threads.svg'], ['ig', 'Instagram', 'instagram.svg'], ['web', '官網', 'website.svg']]
+    ...[['fb', 'Facebook', 'facebook.webp'], ['threads', 'Threads', 'threads.svg'], ['ig', 'Instagram', 'instagram.svg'], ['web', '官網', 'website.svg']]
       .map(([key, label, icon]) => socialButton(store?.social?.[key], icon, `${store?.name}的${label}`, label)),
     ...links.filter(link => link.platform === 'ig')
       .map(link => socialButton(link.url, 'instagram.svg', link.label)),

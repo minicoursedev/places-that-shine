@@ -38,7 +38,7 @@
 .bo-foot .yl-social-button, .yl-links .yl-social-button {
   flex: none; width: 44px; height: 44px; min-height: 44px; padding: 12px;
   border: 0; border-radius: 8px; box-shadow: none;
-  background: #fff url('./assets/buttons/button-background.png') center / 100% 100% no-repeat;
+  background: #fff url('./assets/buttons/button-background.webp') center / 100% 100% no-repeat;
 }
 .yl-social-button img { display: block; width: 20px; height: 20px; object-fit: contain; }
 .yl-social-button:active:not(:disabled) { transform: none; box-shadow: none; }

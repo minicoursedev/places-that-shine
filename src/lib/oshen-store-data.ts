@@ -3,7 +3,7 @@ import { STORE_ID } from './oshen-store-links.mjs';
 const PHOTO_PATH = /^\/media\/library\/[a-z0-9-]+\/[\w.-]+\.(?:avif|gif|jpe?g|png|webp)$/i;
 const SOCIALS = [
   { key: 'instagram', label: 'Instagram', icon: 'instagram.svg' },
-  { key: 'facebook', label: 'Facebook', icon: 'facebook.png' },
+  { key: 'facebook', label: 'Facebook', icon: 'facebook.webp' },
   { key: 'threads', label: 'Threads', icon: 'threads.svg' },
 ];
 
