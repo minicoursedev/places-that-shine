@@ -1,0 +1,15 @@
+---
+import type { GetStaticPaths, InferGetStaticPropsType } from 'astro';
+import StoryIndex from '../../components/StoryIndex.astro';
+import { storyCategories, type StoryCategory } from '../../lib/stories';
+
+export const getStaticPaths = (() => {
+  const categories = Object.keys(storyCategories) as StoryCategory[];
+  return categories.map(category => ({ params: { category }, props: { category } }));
+}) satisfies GetStaticPaths;
+
+type Props = InferGetStaticPropsType<typeof getStaticPaths>;
+const { category } = Astro.props;
+---
+
+<StoryIndex category={category} />
