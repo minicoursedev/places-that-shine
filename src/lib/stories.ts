@@ -28,6 +28,16 @@ interface StoryEntry {
 
 const eventEntries: (StoryEntry & { category: 'events'; eventDate: string })[] = [
   {
+    id: '2025-recall-movement',
+    category: 'events',
+    eventDate: '2025-02-03',
+    type: '歷史事件',
+    title: '2025 年大罷免',
+    source: '中央社｜2025 罷免暨公投專題',
+    description: '2025 年 2 月 3 日，各地罷免團體向中選會送交首批提案。7 月 26 日及 8 月 23 日兩波投票涉及 31 名立委與新竹市長，32 案均未通過。',
+    href: 'https://www.cna.com.tw/topic/newstopic/4751.aspx',
+  },
+  {
     id: 'wild-lily-movement',
     category: 'events',
     eventDate: '1990-03-16',
