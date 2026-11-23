@@ -1,5 +1,6 @@
 ---
 import SiteLayout from '../layouts/SiteLayout.astro';
+import { storyEventPath } from '../lib/story-events';
 import { storyCategories, storyEntries, type StoryCategory } from '../lib/stories';
 
 interface Props {
@@ -33,7 +34,7 @@ const entries = category ? storyEntries.filter(entry => entry.category === categ
             <p class="index-kind">
               {entry.category !== 'media' && <span class="index-category">{storyCategories[entry.category]}</span>}
               {entry.type}
-              {entry.party && <span class="index-party">{entry.party}</span>}
+              {entry.category === 'people' && entry.party && <span class="index-party">{entry.party}</span>}
             </p>
             <div class="index-copy">
               <h2 id={`${entry.id}-title`}>{entry.title}</h2>
@@ -47,14 +48,18 @@ const entries = category ? storyEntries.filter(entry => entry.category === categ
                 </p>
               )}
               <p>{entry.description}</p>
-              {entry.movement && (
+              {entry.category === 'people' && entry.movement && (
                 <p class="index-movement">
                   <span>社運脈絡</span>
                   {entry.movement.description}
                   <a href={entry.movement.href} aria-label={`${entry.title}的社運資料來源`}>資料來源</a>
                 </p>
               )}
-              <a href={entry.href} aria-label={`${entry.source ?? '前往原站'} ${entry.title}`}>{entry.source ?? '前往原站'}</a>
+              {entry.category === 'events' ? (
+                <a href={storyEventPath(entry.id)} aria-label={`查看專頁 ${entry.title}`}>查看專頁</a>
+              ) : (
+                <a href={entry.href} aria-label={`${entry.source ?? '前往原站'} ${entry.title}`}>{entry.source ?? '前往原站'}</a>
+              )}
             </div>
           </article>
         ))}

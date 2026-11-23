@@ -3,6 +3,7 @@ import { stores, storePath } from '../lib/oshen-stores';
 import { designers, designerPath, designerWorks } from '../lib/oshen-designers';
 import { catalogue, hallPath, stagePath } from '../lib/oshen-stage';
 import { designers as yilanDesigners, designerPath as yilanDesignerPath } from '../lib/yilan-market';
+import { eventEntries, storyEventPath } from '../lib/story-events';
 import { hallPages } from '../../public/designers/js/hall-pages.js';
 import { designerWorkPath } from '../../public/designers/js/work-links.js';
 
@@ -17,6 +18,8 @@ const paths = [
   ...designerWorks.map(({ designer, work }) => designerWorkPath(designer.id, work.id)),
   '/stage/',
   '/stories/',
+  '/stories/events/',
+  ...eventEntries.map(({ id }) => storyEventPath(id)),
   '/puma_oshen_wave/stage/',
   ...catalogue.halls.map(hall => hallPath(hall.id)),
   ...catalogue.stages.map(stage => stagePath(stage.id)),

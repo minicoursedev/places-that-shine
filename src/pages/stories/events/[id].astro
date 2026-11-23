@@ -1,0 +1,123 @@
+---
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+import { eventEntries, type StoryEvent } from '../../../lib/story-events';
+
+interface Props {
+  event: StoryEvent;
+}
+
+export function getStaticPaths() {
+  return eventEntries.map(event => ({ params: { id: event.id }, props: { event } }));
+}
+
+const { event } = Astro.props;
+---
+
+<SiteLayout title={`${event.title}｜努力發著光`} description={event.description}>
+  <article class="story-event" aria-labelledby="event-title">
+    <nav class="event-breadcrumb" aria-label="所在位置">
+      <a href="/stories/">努力發著光</a>
+      <span aria-hidden="true">/</span>
+      <a href={`/stories/events/#${event.id}`}>事</a>
+    </nav>
+
+    <header class="event-header">
+      <h1 id="event-title">{event.title}</h1>
+      <p>{event.description}</p>
+    </header>
+
+    <section class="event-resources" aria-labelledby="resources-title">
+      <h2 id="resources-title">相關連結</h2>
+      <ul role="list">
+        {event.resources.map(resource => (
+          <li>
+            <span class="resource-kind">{resource.kind}</span>
+            <div class="resource-copy">
+              <a href={resource.href}>{resource.title}</a>
+              <p>{resource.description}</p>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </section>
+  </article>
+</SiteLayout>
+
+<style>
+  .story-event {
+    width: min(100% - 2 * var(--gutter), 54rem);
+    margin-inline: auto;
+    padding-block: clamp(2rem, 5vw, 4.75rem) clamp(3rem, 7vw, 6rem);
+  }
+
+  .event-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: .65rem;
+    margin-block-end: clamp(1.25rem, 5vw, 2.8rem);
+    color: var(--muted);
+    font-weight: 650;
+    font-size: .875rem;
+  }
+  .event-breadcrumb a,
+  .resource-copy a { text-underline-offset: .22em; }
+  .event-breadcrumb a:hover,
+  .resource-copy a:hover { color: var(--accent); }
+
+  .event-header h1 {
+    margin: 0;
+    overflow-wrap: anywhere;
+    font: 800 clamp(2.2rem, 5.6vw, 4.1rem)/1.28 var(--serif);
+    letter-spacing: .025em;
+  }
+  .event-header p {
+    max-width: 36em;
+    margin: 1rem 0 0;
+    color: var(--muted);
+    font: 550 clamp(1.0625rem, 2vw, 1.2rem)/1.9 var(--serif);
+    overflow-wrap: anywhere;
+  }
+
+  .event-resources { margin-block-start: clamp(2.25rem, 6vw, 4rem); }
+  .event-resources h2 {
+    margin: 0 0 .65rem;
+    font: 800 clamp(1.4rem, 3vw, 1.9rem)/1.45 var(--serif);
+  }
+  .event-resources ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-block-start: 1px solid var(--line);
+  }
+  .event-resources li {
+    display: grid;
+    grid-template-columns: minmax(6rem, .25fr) minmax(0, 1fr);
+    gap: .45rem clamp(.8rem, 3vw, 2rem);
+    padding-block: clamp(1rem, 2.5vw, 1.55rem);
+    border-block-end: 1px solid var(--line);
+  }
+  .resource-kind {
+    margin-block-start: .12rem;
+    color: var(--muted);
+    font-size: .875rem;
+    font-weight: 650;
+  }
+  .resource-copy a {
+    color: var(--ink);
+    font: 750 1.125rem/1.55 var(--serif);
+    overflow-wrap: anywhere;
+  }
+  .resource-copy p {
+    margin: .35rem 0 0;
+    color: var(--muted);
+    font-size: 1rem;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+  }
+
+  @media (max-width: 550px) {
+    .story-event { width: min(100% - 2rem, 54rem); }
+    .event-resources li { grid-template-columns: minmax(0, 1fr); }
+    .resource-kind { margin: 0; }
+  }
+</style>

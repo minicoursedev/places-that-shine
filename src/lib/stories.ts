@@ -1,3 +1,5 @@
+import { eventEntries, type StoryEvent } from './story-events';
+
 export const storyCategories = {
   people: '人',
   events: '事',
@@ -9,7 +11,7 @@ export type StoryCategory = keyof typeof storyCategories;
 
 interface StoryEntry {
   id: string;
-  category: StoryCategory;
+  category: Exclude<StoryCategory, 'events'>;
   type: string;
   title: string;
   description: string;
@@ -26,109 +28,7 @@ interface StoryEntry {
   };
 }
 
-const eventEntries: (StoryEntry & { category: 'events'; eventDate: string })[] = [
-  {
-    id: '2025-recall-movement',
-    category: 'events',
-    eventDate: '2025-02-03',
-    type: '歷史事件',
-    title: '2025 年大罷免',
-    source: '中央社｜2025 罷免暨公投專題',
-    description: '2025 年 2 月 3 日，各地罷免團體向中選會送交首批提案。7 月 26 日及 8 月 23 日兩波投票涉及 31 名立委與新竹市長，32 案均未通過。',
-    href: 'https://www.cna.com.tw/topic/newstopic/4751.aspx',
-  },
-  {
-    id: 'wild-lily-movement',
-    category: 'events',
-    eventDate: '1990-03-16',
-    type: '歷史事件',
-    title: '野百合學運',
-    source: '中研院《學動．運生》線上展',
-    description: '回顧 1990 年 3 月 16 至 22 日的學生靜坐、各校串連、四大訴求與退場，收錄現場照片、傳單和《廣場通訊》。',
-    href: 'https://ios20.ascdc.tw/e2_wildlily/',
-  },
-  {
-    id: 'democracy-at-4am',
-    category: 'events',
-    eventDate: '2014-03-18',
-    type: '歷史事件',
-    title: '太陽花學運',
-    source: '在凌晨4點的民主',
-    description: '透過時間軸、照片、影片與報導，記錄 2014 年太陽花學運的經過與現場聲音。',
-    href: 'https://4am-tw.maylogger.com/tw/',
-  },
-  {
-    id: 'taiwan1947',
-    category: 'events',
-    eventDate: '1947-02-28',
-    type: '線上筆記',
-    title: '二二八台灣史補課筆記（2026）',
-    description: '由 @gratitude.drops 整理二二八事件、白色恐怖與台灣民主化的公開資料，收錄附有來源的歷史編年、事件地圖與互動式學習內容。',
-    href: 'https://taiwan1947.org/',
-  },
-  {
-    id: 'bluebird-movement',
-    category: 'events',
-    eventDate: '2024-05-17',
-    type: '歷史事件',
-    title: '青鳥行動',
-    source: '巷仔口社會學｜青鳥現場調查',
-    description: '2024 年 5 月，民眾在立法院外集結，抗議國會職權修法及其審議程序。這份現場調查記錄參與者的背景與看法。',
-    href: 'https://twstreetcorner.org/2024/06/18/2024legislative-yuan-investigation/',
-  },
-  {
-    id: 'wild-strawberry-movement',
-    category: 'events',
-    eventDate: '2008-11-06',
-    type: '歷史事件',
-    title: '野草莓學運',
-    source: '國家文化記憶庫｜野草莓學運旗幟',
-    description: '2008 年 11 月，學生以靜坐抗議陳雲林訪臺期間的警方執法，並要求修正《集會遊行法》。',
-    href: 'https://tcmb.culture.tw/zh-tw/detail?id=685273&indexCode=Culture_Object',
-  },
-  {
-    id: 'action-100-alliance',
-    category: 'events',
-    eventDate: '1991-09-21',
-    type: '歷史事件',
-    title: '一〇〇行動聯盟',
-    source: '100 行動聯盟三十週年線上影像展',
-    description: '1991 年，一〇〇行動聯盟以「反閱兵、廢惡法」為訴求，要求廢除當時箝制言論自由的《刑法》第一百條。',
-    href: 'https://www.100action.tw/',
-  },
-  {
-    id: 'may-19-green-action',
-    category: 'events',
-    eventDate: '1986-05-19',
-    type: '歷史事件',
-    title: '五一九綠色行動',
-    source: '臺史博《點集臺灣史》',
-    description: '1986 年 5 月 19 日，鄭南榕等人在艋舺龍山寺發起反戒嚴行動，公開要求解除戒嚴。',
-    href: 'https://the.nmth.gov.tw/nmth/zh-TW/Special/SpecialItemDetail/4ea765d6-1a61-48e5-bd38-aed47d4c6c45?exhibitionId=76fd9bb3-9f89-4d38-9cdc-29551378c897',
-  },
-  {
-    id: 'formosa-incident',
-    category: 'events',
-    eventDate: '1979-12-10',
-    type: '歷史事件',
-    title: '美麗島事件',
-    source: '檔案管理局｜美麗島事件專題',
-    description: '1979 年 12 月 10 日，高雄的國際人權日集會爆發衝突。政府隨後逮捕多位黨外人士，並展開軍法審判。',
-    href: 'https://art.archives.gov.tw/tw/art/1553.html',
-  },
-  {
-    id: 'taiwan-parliament-petition',
-    category: 'events',
-    eventDate: '1921-01-30',
-    type: '歷史事件',
-    title: '臺灣議會設置請願運動',
-    source: '立法院議政博物館｜百年展',
-    description: '1921 至 1934 年，林獻堂等人先後向日本帝國議會提出十五次請願，爭取設置民選的臺灣議會。',
-    href: 'https://aam.ly.gov.tw/P000023_02.do/1890',
-  },
-];
-
-export const storyEntries: StoryEntry[] = [
+export const storyEntries: (StoryEntry | StoryEvent)[] = [
   {
     id: 'wu-pei-yi',
     category: 'people',
