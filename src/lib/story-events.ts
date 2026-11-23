@@ -26,8 +26,14 @@ export const eventEntries: StoryEvent[] = [
     eventDate: '2025-02-03',
     type: '歷史事件',
     title: '2025 年大罷免',
-    description: '2025 年 2 月 3 日，各地罷免團體向中選會送交首批提案。7 月 26 日及 8 月 23 日兩波投票涉及 31 名立委與新竹市長，32 案均未通過。',
+    description: '2024 年國會職權修法引發青鳥行動，部分參與者也在各選區籌備罷免立委。2025 年 2 月 3 日，中選會收到首批提議。這一波共有 33 案進入投票，全數未通過。',
     resources: [
+      {
+        kind: '官方逐案紀錄',
+        title: '中選會｜2025 年公職人員罷免案受理情形',
+        description: '立法院業務報告附表一，逐案記載 64 次一階送件及各案結果。',
+        href: 'https://lis.ly.gov.tw/lydbmeetr/uploadn/114/1141008/101.pdf',
+      },
       {
         kind: '新聞專題',
         title: '中央社｜2025 罷免暨公投',

@@ -1,0 +1,384 @@
+---
+import { recallCases, recallOutcomes } from '../lib/story-recall-cases';
+import { storyEventPath } from '../lib/story-events';
+
+const backgroundTimeline = [
+  {
+    period: '2024 年 1 月 13 日',
+    title: '總統大選後，立法院三黨均未過半',
+    description: '民進黨賴清德當選總統。立法院 113 席中，國民黨取得 52 席、民進黨 51 席、民眾黨 8 席，無黨籍 2 席。國民黨與民眾黨合作即可在院會取得多數。',
+    sources: [
+      { title: '中選會總統選舉結果', href: 'https://db.cec.gov.tw/Visual/?type=President' },
+      { title: '中選會立委席次統計', href: 'https://vote.nccu.edu.tw/cec/B2024006.PDF' },
+    ],
+  },
+  {
+    period: '2024 年 5 至 7 月',
+    title: '青鳥行動與地方罷免籌備',
+    description: '5 月，國民黨與民眾黨推動國會職權修法，民眾在立法院外抗議審議程序及修法內容，形成青鳥行動。部分參與者後來把串聯延伸到各選區。「微光花蓮」表示，5 月 28 日修法通過後，團隊開始籌備罷免傅崐萁，6 月建立粉絲專頁。「山除薇害」7 月已公開招募罷免王鴻薇的志工。',
+    sources: [
+      { title: '青鳥行動專頁', href: storyEventPath('bluebird-movement') },
+      { title: '花蓮罷團紀錄', href: 'https://www.cna.com.tw/news/aipl/202501030334.aspx' },
+      { title: '王鴻薇案早期招募', href: 'https://sport.ftvnews.com.tw/news/detail/2024709W0027' },
+      { title: '各地罷團串聯訪談', href: 'https://www.twreporter.org/a/recall-movement-analysis' },
+    ],
+  },
+  {
+    period: '2024 年 10 月 25 日',
+    title: '憲法法庭宣告部分國會職權修法違憲',
+    description: '憲法法庭認定立法程序有瑕疵，未達使修法整體無效的程度。判決另就條文實質內容，宣告涉及總統國情報告、調查與聽證等部分規定違憲，並宣告俗稱「藐視國會罪」的刑法條文違憲。',
+    sources: [{ title: '憲法法庭判決摘要', href: 'https://cons.judicial.gov.tw/docdata.aspx?fid=77&id=354002' }],
+  },
+  {
+    period: '2024 年 12 月 20 日至 23 日',
+    title: '三項修法通過，冬季青鳥在地方串聯',
+    description: '立法院 20 日三讀通過《公職人員選舉罷免法》、《憲法訴訟法》和《財政收支劃分法》的修正案，分別涉及罷免提議與連署須附身分證影本、憲法法庭的評議及裁判門檻、中央與地方的財源分配。23 日，台灣公民陣線與台灣經濟民主連合在桃園舉辦冬季青鳥，現場有團體募集罷免當地國民黨立委的提議書。',
+    sources: [
+      { title: '立法院院會紀錄', href: 'https://ppg.ly.gov.tw/ppg/publications/official-gazettes/114/05/01/details' },
+      { title: '冬季青鳥主辦方紀錄', href: 'https://www.edunion.org.tw/newsrelease/%E7%A9%B6%E8%B2%AC%E3%80%81%E8%90%BD%E9%81%B8%E8%88%87%E6%8A%B5%E6%8A%97%EF%BC%8C%E4%B8%89%E5%A4%A7%E5%85%AC%E6%B0%91%E9%81%8B%E5%8B%95%E5%B0%8D%E6%8A%97%E5%82%85%E5%B4%90%E8%90%81%E9%9B%86%E5%9C%98/' },
+      { title: '桃園活動現場', href: 'https://www.ly.gov.tw/Pages/Detail.aspx?nodeid=54301&pid=247773' },
+    ],
+  },
+  {
+    period: '2025 年 1 月 4 日至 20 日',
+    title: '立院黨團公開倡議與反制',
+    description: '民進黨立院黨團總召柯建銘 4 日公開倡議罷免國民黨區域立委。國民黨立院黨團 7 日決議以罷免民進黨立委反制。20 日，藍營青年組成的團隊舉辦記者會，宣布將設站徵集吳思瑤、吳沛憶罷免案的意向書。',
+    sources: [
+      { title: '柯建銘記者會', href: 'https://www.cna.com.tw/news/aipl/202501040093.aspx' },
+      { title: '國民黨團反制決議', href: 'https://news.pts.org.tw/article/732469' },
+      { title: '吳思瑤、吳沛憶案募集', href: 'https://www.cna.com.tw/news/aipl/202501200241.aspx' },
+    ],
+  },
+  {
+    period: '2025 年 1 月 21 日至 22 日',
+    title: '總預算刪凍爭議，各地罷團擴大串聯',
+    description: '立法院 21 日三讀通過中央政府總預算，歲出刪減及部分預算凍結引發爭議。22 日，曹興誠與多個民間團體成立「反共護台志工聯盟」，聲援各地罷免行動。部分罷團也把國會修法和預算刪減列入罷免理由，洪孟楷案的理由書與答辯書記錄了雙方對這些議題的說法。',
+    sources: [
+      { title: '總預算審議結果', href: 'https://www.cna.com.tw/news/aipl/202501230200.aspx' },
+      { title: '志工聯盟成立記者會', href: 'https://www.cna.com.tw/news/aipl/202501220087.aspx' },
+      { title: '中選會｜洪孟楷案理由書與答辯書', href: 'https://web.cec.gov.tw/api/file/5c2bc93c-f516-4910-b3b3-e06ae261f4b9.pdf' },
+    ],
+  },
+  {
+    period: '2025 年 2 月 1 日至 3 日',
+    title: '立委就職滿一年，首批提議正式送件',
+    description: '依《公職人員選舉罷免法》，就職未滿一年不得提出罷免。第 11 屆立委在 2 月 1 日就職滿一年。2 月 3 日，中選會收到首批 20 案，涉及 19 位國民黨立委及新竹市長高虹安。',
+    sources: [
+      { title: '公職人員選舉罷免法第 75 條', href: 'https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=D0020010&flno=75' },
+      { title: '首批提議送件報導', href: 'https://www.cna.com.tw/news/aipl/202502030280.aspx' },
+    ],
+  },
+];
+
+const totals = [
+  { label: '一階送件對象', count: 61 },
+  { label: '進入二階', count: 59 },
+  { label: '二階未完成送件', count: 24 },
+  { label: '進入投票', count: 33 },
+];
+
+const stageColumns = [
+  { key: 'first', label: '第一階段' },
+  { key: 'second', label: '第二階段' },
+  { key: 'result', label: '結果' },
+] as const;
+---
+
+<nav class="recall-nav" aria-label="大罷免專頁段落">
+  <a href="#background">事件前因</a>
+  <a href="#recall-overview">罷免案總覽</a>
+  <a href="#case-list">逐案比較</a>
+  <a href="#resources-title">相關連結</a>
+</nav>
+
+<section class="recall-section" aria-labelledby="background">
+  <h2 id="background">事件前因</h2>
+  <ol class="recall-list">
+    {backgroundTimeline.map(({ period, title, description, sources }) => (
+      <li>
+        <span class="recall-period">{period}</span>
+        <h3>{title}</h3>
+        <p>{description}</p>
+        <p class="recall-sources">{sources.map(({ title, href }) => <a href={href}>{title}</a>)}</p>
+      </li>
+    ))}
+  </ol>
+</section>
+
+<section class="recall-overview" aria-labelledby="recall-overview">
+  <h2 id="recall-overview">罷免案總覽</h2>
+  <dl class="recall-totals">
+    {totals.map(({ label, count }) => (
+      <div>
+        <dt>{label}</dt>
+        <dd>{count}</dd>
+      </div>
+    ))}
+  </dl>
+  <p>2 月 3 日至 19 日，中選會收到 64 次一階送件。吳沛憶、吳琪銘、張之豪各有一次因領銜或備補領銜資格不符而不受理，同一對象各另有一次送件。61 位對象包括 52 位立委、1 位市長和 8 位縣市議員。</p>
+  <p>61 位對象依當時黨籍計算，有 34 位國民黨、24 位民進黨、3 位無黨籍。常見的「35 位泛藍立委」包含 34 位國民黨立委和參加國民黨團的無黨籍立委陳超明。下方名單也標示無黨籍個案可查證的陣營或反罷聲援。</p>
+  <p>一階提議門檻為原選區選舉人總數的 1%，二階連署為 10%。2 月 20 日起，新提出的罷免案須在提議及連署時附上身分證正反面影本。</p>
+  <p class="recall-sources">
+    <a href="https://lis.ly.gov.tw/lydbmeetr/uploadn/114/1141008/101.pdf">中選會逐案統計</a>
+    <a href="https://www.cna.com.tw/news/aipl/202508230205.aspx">修法與收件時間</a>
+  </p>
+</section>
+
+<section class="recall-section" aria-labelledby="case-list">
+  <div class="recall-anchor-aliases" aria-hidden="true">
+    <span id="first-stage"></span>
+    <span id="second-stage"></span>
+    <span id="after-filing"></span>
+    <span id="votes"></span>
+    <span id="local-cases"></span>
+  </div>
+  <h2 id="case-list">逐案比較</h2>
+  <p>點姓名查看選區、說明與來源。</p>
+  <table class="recall-table" aria-labelledby="case-list" aria-describedby="case-list-scope">
+    <thead>
+      <tr>
+        <th scope="col">政黨</th>
+        <th scope="col">被罷免人</th>
+        {stageColumns.map(({ label }) => <th scope="col">{label}</th>)}
+      </tr>
+    </thead>
+    <tbody>
+      {recallCases.map(({ affiliation, name, office, outcome, note, sources, local }, index) => {
+        const stages = recallOutcomes[outcome];
+        const detailId = `recall-case-${index + 1}`;
+        const detailLabel = stageColumns.find(({ key }) => key === stages.detailColumn)?.label;
+        return (
+          <>
+            <tr class:list={['recall-case-summary', { 'party-start': index > 0 && affiliation.order !== recallCases[index - 1].affiliation.order }]}>
+              <td>{affiliation.party}</td>
+              <th scope="row">
+                <button class="recall-case-toggle" type="button" aria-controls={detailId} aria-expanded="false">
+                  {name}<span aria-hidden="true"></span>
+                </button>
+              </th>
+              {stageColumns.map(({ key }) => <td class:list={{ 'recall-status-inactive': stages[key] === '未進入' }}>{stages[key]}</td>)}
+            </tr>
+            <tr id={detailId} class="recall-case-detail" hidden>
+              <td colspan={5}>
+                <p class="recall-case-office">
+                  <strong>{office}</strong>
+                  {'context' in affiliation && <span>{affiliation.context}</span>}
+                  {local && <span>同期地方個案</span>}
+                </p>
+                <p><strong>{detailLabel}</strong>　{note}</p>
+                <p class="recall-sources">
+                  {sources.map(({ title, href }) => <a href={href} aria-label={`${name}案 ${title}`}>{title}</a>)}
+                </p>
+              </td>
+            </tr>
+          </>
+        );
+      })}
+    </tbody>
+  </table>
+  <p id="case-list-scope">收錄 61 位正式送件對象、5 位可查證的一階未送件對象及 2 件同期地方個案。</p>
+</section>
+
+<script>
+  document.querySelector('.recall-table')?.addEventListener('click', event => {
+    if (!(event.target instanceof Element)) return;
+    const toggle = event.target.closest<HTMLButtonElement>('.recall-case-toggle');
+    if (!toggle) return;
+    const detail = document.getElementById(toggle.getAttribute('aria-controls') ?? '');
+    if (!detail) return;
+    detail.hidden = !detail.hidden;
+    toggle.setAttribute('aria-expanded', String(!detail.hidden));
+  });
+</script>
+
+<style>
+  .recall-overview,
+  .recall-section {
+    margin-block-start: clamp(2.25rem, 6vw, 4rem);
+  }
+
+  h2 {
+    margin: 0 0 .65rem;
+    font: 800 clamp(1.4rem, 3vw, 1.9rem)/1.45 var(--serif);
+    scroll-margin-top: 2rem;
+  }
+
+  .recall-totals {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: .75rem 1rem;
+    margin: .9rem 0 1rem;
+    padding-block: .9rem;
+    border-block: 1px solid var(--line);
+  }
+
+  .recall-totals > div {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  dt {
+    color: var(--muted);
+    font-size: .875rem;
+    font-weight: 650;
+  }
+
+  dd {
+    margin: 0 0 .15rem;
+    font: 800 clamp(1.7rem, 4vw, 2.3rem)/1.15 var(--serif);
+    font-variant-numeric: tabular-nums;
+  }
+
+  p {
+    margin: .5rem 0 0;
+    line-height: 1.8;
+  }
+
+  .recall-nav,
+  .recall-sources {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .25rem 1.1rem;
+    font-size: .875rem;
+    font-weight: 650;
+  }
+
+  .recall-nav {
+    margin-block-start: 1.5rem;
+    padding-block: .75rem;
+    border-block: 1px solid var(--line);
+  }
+
+  a {
+    padding-block: .2rem;
+    text-underline-offset: .22em;
+  }
+
+  a:hover { color: var(--accent); }
+
+  .recall-list {
+    margin: 1rem 0 0;
+    padding-inline-start: 1.65rem;
+    border-block-start: 1px solid var(--line);
+  }
+
+  .recall-list li {
+    padding: .95rem 0 .95rem .25rem;
+    border-block-end: 1px solid var(--line);
+  }
+
+  .recall-list li::marker {
+    color: var(--muted);
+    font-size: .875rem;
+    font-variant-numeric: tabular-nums;
+  }
+
+  h3 {
+    margin: 0;
+    font: 750 1.125rem/1.6 var(--serif);
+  }
+
+  .recall-period {
+    display: block;
+    margin-block-end: .2rem;
+    color: var(--muted);
+    font-size: .875rem;
+    font-weight: 650;
+  }
+
+  .recall-anchor-aliases { position: relative; }
+  .recall-anchor-aliases span {
+    position: absolute;
+    inset-block-start: 0;
+    scroll-margin-top: 2rem;
+  }
+
+  .recall-table {
+    width: 100%;
+    margin-block-start: 1rem;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-block-start: 1px solid var(--line);
+    table-layout: fixed;
+    font-size: clamp(.8125rem, 2.3vw, 1rem);
+    line-height: 1.4;
+  }
+
+  .recall-table th,
+  .recall-table td {
+    padding: .48rem clamp(.16rem, .95vw, .7rem);
+    border-block-end: 1px solid var(--line);
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .recall-table thead th {
+    position: sticky;
+    inset-block-start: var(--header-height);
+    z-index: 1;
+    background: color-mix(in srgb, var(--paper), var(--line) 35%);
+  }
+
+  .recall-table thead th:first-child { width: 16%; }
+  .recall-table thead th:nth-child(2) { width: 21%; }
+  .recall-table tbody th { font-weight: 700; }
+  .recall-table .party-start > * { border-block-start: 2px solid var(--line); }
+
+  .recall-status-inactive,
+  #case-list-scope {
+    color: var(--muted);
+  }
+
+  .recall-case-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: .28em;
+    min-height: 1.5rem;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    font-weight: inherit;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+
+  .recall-case-toggle:hover,
+  .recall-case-toggle[aria-expanded="true"] { color: var(--accent); }
+
+  .recall-case-toggle > span {
+    width: .36em;
+    height: .36em;
+    border: solid currentColor;
+    border-width: 0 1px 1px 0;
+    transform: rotate(45deg);
+  }
+
+  .recall-case-toggle[aria-expanded="true"] > span { transform: rotate(225deg); }
+
+  .recall-case-detail td {
+    padding: .65rem clamp(.6rem, 2.3vw, 1.25rem);
+    background: color-mix(in srgb, var(--paper), var(--line) 16%);
+    text-align: start;
+    overflow-wrap: anywhere;
+  }
+
+  .recall-case-office {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 1rem;
+    margin-block-start: 0;
+  }
+
+  #case-list-scope { font-size: .875rem; }
+
+  @media (max-width: 550px) {
+    .recall-totals { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+
+  @media (max-width: 360px) {
+    .recall-table th,
+    .recall-table td { padding-inline: .125rem; }
+    .recall-case-detail td { padding-inline: .6rem; }
+  }
+</style>

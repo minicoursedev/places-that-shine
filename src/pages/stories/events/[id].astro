@@ -1,5 +1,6 @@
 ---
 import SiteLayout from '../../../layouts/SiteLayout.astro';
+import StoryRecallDetails from '../../../components/StoryRecallDetails.astro';
 import { eventEntries, type StoryEvent } from '../../../lib/story-events';
 
 interface Props {
@@ -25,6 +26,8 @@ const { event } = Astro.props;
       <h1 id="event-title">{event.title}</h1>
       <p>{event.description}</p>
     </header>
+
+    {event.id === '2025-recall-movement' && <StoryRecallDetails />}
 
     <section class="event-resources" aria-labelledby="resources-title">
       <h2 id="resources-title">相關連結</h2>
