@@ -1,11 +1,35 @@
 ---
 import SiteLayout from '../../layouts/SiteLayout.astro';
+
+const pages = [
+  {
+    id: 'story-front-matter',
+    title: '卷首',
+    description: '這本故事書，留給店家、設計師與舞台之外，仍在努力發光的人、事與物。',
+  },
+  { id: 'story-contents', title: '篇目' },
+  {
+    id: 'taiwan1947',
+    title: '二二八台灣史補課筆記（2026）',
+    description: '由 @gratitude.drops 整理二二八事件、白色恐怖與台灣民主化的公開資料，收錄附有來源的歷史編年、事件地圖與互動式學習內容。',
+    href: 'https://taiwan1947.org/',
+  },
+  {
+    id: 'democracy-at-4am',
+    title: '在凌晨4點的民主',
+    subtitle: '關於太陽花學運',
+    description: '透過時間軸、照片、影片與報導，記錄 2014 年太陽花學運的經過與現場聲音。',
+    href: 'https://4am-tw.maylogger.com/tw/',
+  },
+].map((page, index) => ({ ...page, number: index + 1 }));
+
+const stories = pages.slice(2);
 ---
 
 <SiteLayout title="努力發著光" description="收錄店家、設計師與舞台之外，仍在努力發光的人、事與物。">
   <section class="story-shelf page-width" aria-labelledby="story-title">
     <h1 id="story-title" class="visually-hidden">努力發著光</h1>
-    <details class="storybook">
+    <details class="storybook" data-storybook>
       <summary>
         <span class="book-cover">
           <span class="cover-star" aria-hidden="true">✦</span>
@@ -15,18 +39,87 @@ import SiteLayout from '../../layouts/SiteLayout.astro';
         <span class="close-book"><span aria-hidden="true">←</span> 闔上故事書</span>
       </summary>
       <div class="book-spread">
-        <section class="book-page front-matter" aria-labelledby="front-matter-title">
-          <h2 id="front-matter-title">卷首</h2>
-          <p>這本故事書，留給店家、設計師與舞台之外，仍在努力發光的人、事與物。</p>
-        </section>
-        <section class="book-page contents" aria-labelledby="story-contents-title">
-          <h2 id="story-contents-title">篇目</h2>
-          <p>目前尚未收錄故事。</p>
-        </section>
+        {pages.map(page => (
+          <section class="book-page" id={page.id} data-book-page aria-labelledby={`${page.id}-title`}>
+            <header class="book-page-heading">
+              <h2 id={`${page.id}-title`} tabindex="-1">{page.title}</h2>
+              {page.subtitle && <p class="book-page-subtitle">{page.subtitle}</p>}
+            </header>
+            {page.id === 'story-contents' && (
+              <ul class="book-contents">
+                {stories.map(story => (
+                  <li>
+                    <a href={`#${story.id}`}>
+                      {story.title}<span>第 {story.number} 頁</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            )}
+            {page.description && <p>{page.description}</p>}
+            {page.href && <a class="story-source" href={page.href} aria-label={`前往原站 ${page.title}`}>前往原站</a>}
+            <footer class="page-number">第 {page.number} 頁</footer>
+          </section>
+        ))}
       </div>
+      <nav class="book-pagination" aria-label="書頁導覽" data-book-pagination hidden>
+        <button type="button" data-book-previous>上一頁</button>
+        <div class="book-page-links">
+          {pages.map(page => (
+            <a href={`#${page.id}`} data-book-page-link aria-label={`第 ${page.number} 頁 ${page.title}`}>{page.number}</a>
+          ))}
+        </div>
+        <button type="button" data-book-next>下一頁</button>
+      </nav>
     </details>
   </section>
 </SiteLayout>
+
+<script>
+  const book = document.querySelector<HTMLDetailsElement>('[data-storybook]');
+  const pagination = book?.querySelector<HTMLElement>('[data-book-pagination]');
+  const previous = pagination?.querySelector<HTMLButtonElement>('[data-book-previous]');
+  const next = pagination?.querySelector<HTMLButtonElement>('[data-book-next]');
+
+  if (book && pagination && previous && next) {
+    const pages = Array.from(book.querySelectorAll<HTMLElement>('[data-book-page]'));
+    const links = Array.from(pagination.querySelectorAll<HTMLAnchorElement>('[data-book-page-link]'));
+    const narrow = window.matchMedia('(max-width: 620px)');
+
+    const showPages = (moveFocus = false) => {
+      const targetIndex = pages.findIndex(page => `#${page.id}` === window.location.hash);
+      const pageIndex = Math.max(targetIndex, 0);
+      const pagesPerSpread = narrow.matches ? 1 : 2;
+      const firstIndex = pageIndex - pageIndex % pagesPerSpread;
+      const endIndex = firstIndex + pagesPerSpread;
+
+      pages.forEach((page, index) => {
+        page.hidden = index < firstIndex || index >= endIndex;
+      });
+      links.forEach((link, index) => {
+        link.toggleAttribute('data-visible-page', !pages[index].hidden);
+        if (index === pageIndex) link.setAttribute('aria-current', 'page');
+        else link.removeAttribute('aria-current');
+      });
+
+      previous.value = pages[firstIndex - pagesPerSpread]?.id ?? '';
+      next.value = pages[endIndex]?.id ?? '';
+      previous.disabled = !previous.value;
+      next.disabled = !next.value;
+
+      if (targetIndex >= 0 && !book.open && (moveFocus || pagination.hidden)) book.open = true;
+      if (moveFocus && book.open) pages[pageIndex].querySelector('h2')?.focus();
+    };
+
+    previous.addEventListener('click', () => { window.location.hash = previous.value; });
+    next.addEventListener('click', () => { window.location.hash = next.value; });
+    window.addEventListener('hashchange', () => showPages(true));
+    narrow.addEventListener('change', () => showPages());
+
+    showPages();
+    pagination.hidden = false;
+  }
+</script>
 
 <style>
   .story-shelf {
@@ -102,38 +195,99 @@ import SiteLayout from '../../layouts/SiteLayout.astro';
   }
 
   .book-page {
+    display: flex;
+    flex-direction: column;
     min-height: clamp(19rem, 38vw, 25rem);
     padding: clamp(2rem, 6vw, 4rem) clamp(1.5rem, 4.75vw, 3.8rem);
+    padding-block-end: clamp(1.25rem, 3vw, 2rem);
     background: #fff9ed;
   }
 
-  .front-matter {
+  .book-page:nth-child(odd) {
     background-image: linear-gradient(90deg, transparent 87%, #bba58724);
     border-radius: .4rem 0 0 .4rem;
   }
 
-  .contents {
+  .book-page:nth-child(even) {
     background-image: linear-gradient(90deg, #bba58730, transparent 13%);
     border-inline-start: 1px solid #c9b79e;
     border-radius: 0 .4rem .4rem 0;
   }
 
-  .book-page h2 {
+  .book-page-heading {
     margin: 0 0 1.25rem;
     padding-bottom: .65rem;
     border-bottom: 1px solid var(--line);
+  }
+
+  .book-page-heading h2 {
+    margin: 0;
     color: var(--accent);
     font: 800 clamp(1.45rem, 4.5vw, 2rem)/1.25 var(--serif);
     letter-spacing: .12em;
   }
 
   .book-page p { margin: 0; font: 600 1rem/1.9 var(--serif); }
-  .contents p { color: var(--muted); }
+  .book-page-heading .book-page-subtitle { margin-block-start: .35rem; color: var(--muted); }
+
+  .book-contents { display: grid; gap: 1rem; margin: 0; padding: 0; list-style: none; }
+  .book-contents a {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: .75rem;
+    color: var(--accent);
+    font: 700 1rem/1.65 var(--serif);
+    text-underline-offset: .2em;
+  }
+  .book-contents span { flex: none; color: var(--muted); font-size: .875rem; }
+  .story-source { align-self: start; margin-block-start: 1rem; color: var(--accent); font-weight: 700; text-underline-offset: .2em; }
+
+  .page-number {
+    margin-block-start: auto;
+    padding-block-start: 1.5rem;
+    color: var(--muted);
+    font: 600 .875rem/1.5 var(--serif);
+    text-align: center;
+  }
+
+  .book-pagination {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: .5rem;
+    margin-block-start: 1.25rem;
+  }
+  .book-pagination button, .book-page-links a {
+    display: grid;
+    min-height: 2.75rem;
+    place-items: center;
+    padding: .35rem .65rem;
+    border: 1px solid var(--line);
+    border-radius: .25rem;
+    color: var(--accent);
+    background: transparent;
+    font-weight: 700;
+  }
+  .book-pagination button { cursor: pointer; }
+  .book-pagination button:disabled { cursor: default; color: var(--muted); opacity: .65; }
+  .book-pagination button:first-child { justify-self: start; }
+  .book-pagination button:last-child { justify-self: end; }
+  .book-page-links { display: flex; flex-wrap: wrap; justify-content: center; gap: .35rem; }
+  .book-page-links a { min-width: 2.75rem; text-decoration: none; }
+  .book-page-links a[data-visible-page] { border-color: var(--accent); background: #fff9ed; }
+  .book-page-links a[aria-current="page"] { color: #fff9ed; background: var(--accent); }
+  .book-page-links a:hover, .book-pagination button:enabled:hover { text-decoration: underline; text-underline-offset: .2em; }
 
   @media (max-width: 620px) {
     .book-spread { grid-template-columns: minmax(0, 1fr); }
-    .book-page { min-height: 0; }
-    .front-matter { border-radius: .4rem .4rem 0 0; background-image: linear-gradient(0deg, #bba58722, transparent 18%); }
-    .contents { border: 0; border-top: 1px solid #c9b79e; border-radius: 0 0 .4rem .4rem; background-image: linear-gradient(180deg, #bba58722, transparent 18%); }
+    .book-page:nth-child(n) {
+      min-height: min(21rem, 58svh);
+      border: 0;
+      border-radius: .4rem;
+      background-image: linear-gradient(0deg, #bba58722, transparent 18%);
+    }
+    .book-pagination { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .book-page-links { grid-row: 1; grid-column: 1 / -1; }
   }
 </style>
