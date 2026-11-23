@@ -3,7 +3,8 @@ import SiteLayout from '../../layouts/SiteLayout.astro';
 
 const title = '努力發著光';
 const description = '收錄店家、設計師與舞台之外，仍在努力發光的人、事與物。';
-const categories = ['全部', '人', '事', '物', 'threads'];
+const socialCategory = '社交媒體';
+const categories = ['全部', '人', '事', '物', socialCategory];
 const entries = [
   {
     id: 'democracy-at-4am',
@@ -32,19 +33,19 @@ const entries = [
   },
   {
     id: 'southvolunteerproject',
-    category: 'threads',
+    category: socialCategory,
     type: '志工團隊',
     title: '南方工作小組',
-    source: '南方工作小組 Threads',
+    source: 'Threads',
     description: '從臺南出發的志工團隊，參與街頭志工行動與跨區支援，也整理並串聯在地友善店家。',
     href: 'https://www.threads.com/@southvolunteerproject',
   },
   {
     id: 'taiwan-bb',
-    category: 'threads',
+    category: socialCategory,
     type: '創作團隊',
     title: '台派寶寶 Taiwan b.b.',
-    source: '台派寶寶 Threads',
+    source: 'Threads',
     description: '以原創角色分享台灣文化，推出貼紙與 LINE 貼圖，也串連在地店家並舉辦展覽與活動。',
     href: 'https://www.threads.com/@taiwan_bb',
   },
@@ -68,11 +69,14 @@ const entries = [
       <div class="story-list" id="story-list">
         {entries.map(entry => (
           <article class="index-entry" id={entry.id} aria-labelledby={`${entry.id}-title`} data-story-category={entry.category}>
-            <p class="index-kind"><span>{entry.category}</span> {entry.type}</p>
+            <p class="index-kind">
+              {entry.category !== socialCategory && <span>{entry.category}</span>}
+              {entry.type}
+            </p>
             <div class="index-copy">
               <h2 id={`${entry.id}-title`}>{entry.title}</h2>
               <p>{entry.description}</p>
-              <a href={entry.href} aria-label={`前往原站 ${entry.source ?? entry.title}`}>{entry.source ?? '前往原站'}</a>
+              <a href={entry.href} aria-label={`${entry.source ?? '前往原站'} ${entry.title}`}>{entry.source ?? '前往原站'}</a>
             </div>
           </article>
         ))}
