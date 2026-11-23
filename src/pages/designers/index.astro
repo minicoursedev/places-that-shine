@@ -11,8 +11,7 @@ const hallPaths = Object.fromEntries(hallPages.map(({ code, path }) => [code, pa
 const title = '發光的設計師';
 const overviewTitle = `${title}展館總覽`;
 const description = '按時期探索洋流設計師、洋流愛好者、洋流網站、鏟子超人、大罷免與青鳥行動六個展館，瀏覽創作者與作品。';
-const shareImage = new URL('/media/shining-designers-og.webp', Astro.site);
-const shareImageAlt = '發光的設計師。我相信光，是為了巷弄間的歡騰，不是為了墳前的孤寂';
+const shareImage = new URL(oshenHall.image, Astro.site);
 ---
 
 <SiteLayout title={overviewTitle} description={description} active="designers" analytics={false}>
@@ -22,13 +21,13 @@ const shareImageAlt = '發光的設計師。我相信光，是為了巷弄間的
     <meta property="og:title" content={overviewTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={shareImage} />
-    <meta property="og:image:type" content="image/webp" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content={shareImageAlt} />
+    <meta property="og:image:type" content={oshenHall.type} />
+    <meta property="og:image:width" content={oshenHall.width} />
+    <meta property="og:image:height" content={oshenHall.height} />
+    <meta property="og:image:alt" content={oshenHall.alt} />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image" content={shareImage} />
-    <meta name="twitter:image:alt" content={shareImageAlt} />
+    <meta name="twitter:image:alt" content={oshenHall.alt} />
   </Fragment>
   <script slot="head" define:vars={{ hallPaths }}>
     function redirectLegacyMarket() {
