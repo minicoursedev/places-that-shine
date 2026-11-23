@@ -36,8 +36,15 @@ const pages = [
     id: 'story-front-matter',
     title: '卷首',
     description: '這本故事書，留給店家、設計師與舞台之外，仍在努力發光的人、事與物。',
+    indexCategories: ['人', '事'],
+    facingIndex: { id: 'story-contents', label: '第 2 頁 · 物' },
   },
-  { id: 'story-contents', title: '篇目' },
+  {
+    id: 'story-contents',
+    title: '篇目',
+    indexCategories: ['物'],
+    facingIndex: { id: 'story-front-matter', label: '第 1 頁 · 人、事' },
+  },
   ...categories.flatMap(category => entries.filter(entry => entry.category === category)),
 ].map((page, index) => ({ ...page, number: index + 1 }));
 
@@ -67,17 +74,19 @@ const contents = categories.map(category => ({
               <h2 id={`${page.id}-title`} tabindex="-1">{page.title}</h2>
               {page.subtitle && <p class="book-page-subtitle">{page.subtitle}</p>}
             </header>
-            {page.id === 'story-contents' && (
+            {page.description && <p>{page.description}</p>}
+            {page.indexCategories && (
               <div class="book-contents">
-                {contents.map(({ category, entries }) => (
+                {contents.filter(({ category }) => page.indexCategories?.includes(category)).map(({ category, entries }) => (
                   <section>
                     <h3>{category}</h3>
                     {entries.length ? (
                       <ul>
                         {entries.map(story => (
                           <li>
-                            <a href={`#${story.id}`}>
-                              {story.tocTitle ?? story.title}<span>第 {story.number} 頁</span>
+                            <a href={`#${story.id}`} aria-label={`${story.tocTitle ?? story.title} 第 ${story.number} 頁`}>
+                              <span class="book-contents-title">{story.tocTitle ?? story.title}</span>
+                              <span class="book-contents-folio" aria-hidden="true">{story.number}</span>
                             </a>
                           </li>
                         ))}
@@ -87,7 +96,7 @@ const contents = categories.map(category => ({
                 ))}
               </div>
             )}
-            {page.description && <p>{page.description}</p>}
+            {page.facingIndex && <a class="facing-index" href={`#${page.facingIndex.id}`}>{page.facingIndex.label}</a>}
             {page.href && <a class="story-source" href={page.href} aria-label={`前往原站 ${page.title}`}>前往原站</a>}
             <footer class="page-number">第 {page.number} 頁</footer>
           </section>
@@ -230,7 +239,7 @@ const contents = categories.map(category => ({
     display: flex;
     flex-direction: column;
     min-height: clamp(19rem, 38vw, 25rem);
-    padding: clamp(2rem, 6vw, 4rem) clamp(1.5rem, 4.75vw, 3.8rem);
+    padding: clamp(1.65rem, 4.5vw, 3.5rem) clamp(1rem, 3.4vw, 3.2rem);
     padding-block-end: clamp(1.25rem, 3vw, 2rem);
     background: #fff9ed;
   }
@@ -248,37 +257,43 @@ const contents = categories.map(category => ({
   .book-page[hidden] + .book-endpaper { display: none; }
 
   .book-page-heading {
-    margin: 0 0 1.25rem;
+    margin: 0 0 1.05rem;
     padding-bottom: .65rem;
     border-bottom: 1px solid var(--line);
   }
 
   .book-page-heading h2 {
+    width: fit-content;
     margin: 0;
-    color: var(--accent);
-    font: 800 clamp(1.45rem, 4.5vw, 2rem)/1.25 var(--serif);
-    letter-spacing: .12em;
+    color: var(--ink);
+    font: 800 clamp(1.4rem, 3.75vw, 2rem)/1.35 var(--serif);
+    letter-spacing: .035em;
   }
+  .book-page-heading h2:focus-visible { outline: 1px solid var(--accent); outline-offset: .18em; }
 
   .book-page p { margin: 0; font: 600 1rem/1.9 var(--serif); }
   .book-page-heading .book-page-category { margin-block-end: .35rem; color: var(--muted); font-size: .875rem; }
   .book-page-heading .book-page-subtitle { margin-block-start: .35rem; color: var(--muted); }
 
-  .book-contents { display: grid; gap: .8rem; }
-  .book-contents section + section { border-block-start: 1px solid var(--line); padding-block-start: .8rem; }
-  .book-contents h3 { margin: 0 0 .35rem; color: var(--accent); font: 800 1.125rem/1.4 var(--serif); }
-  .book-contents ul { display: grid; gap: .45rem; margin: 0; padding: 0; list-style: none; }
+  .book-contents { display: grid; gap: 1rem; }
+  .book-page > p + .book-contents { margin-block-start: 1.25rem; }
+  .book-contents h3 { margin: 0 0 .35rem; color: var(--accent); font: 800 1rem/1.4 var(--serif); }
+  .book-contents ul { display: grid; gap: .5rem; margin: 0; padding: 0; list-style: none; }
   .book-contents .book-contents-empty { color: var(--muted); font-size: .875rem; }
   .book-contents a {
     display: flex;
     align-items: baseline;
-    justify-content: space-between;
-    gap: .75rem;
-    color: var(--accent);
-    font: 700 1rem/1.65 var(--serif);
+    gap: .4rem;
+    color: var(--ink);
+    font: 650 1rem/1.6 var(--serif);
+    text-decoration-color: #bda994;
     text-underline-offset: .2em;
   }
-  .book-contents span { flex: none; color: var(--muted); font-size: .875rem; }
+  .book-contents a::after { content: ''; order: 1; flex: 1 0 .5rem; border-block-end: 1px dotted #c3b39e; }
+  .book-contents-title { min-width: 0; overflow-wrap: anywhere; }
+  .book-contents-folio { order: 2; flex: none; color: var(--muted); font: 600 .875rem/1.5 var(--sans); }
+  .book-contents a:hover { color: var(--accent); text-decoration-color: currentColor; }
+  .facing-index { display: none; }
   .story-source { align-self: start; margin-block-start: 1rem; color: var(--accent); font-weight: 700; text-underline-offset: .2em; }
 
   .page-number {
@@ -294,18 +309,18 @@ const contents = categories.map(category => ({
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
     gap: .5rem;
-    margin-block-start: 1.25rem;
+    margin-block-start: .95rem;
   }
   .book-pagination button, .book-page-links a {
     display: grid;
     min-height: 2.75rem;
     place-items: center;
     padding: .35rem .65rem;
-    border: 1px solid var(--line);
+    border: 0;
     border-radius: .25rem;
     color: var(--accent);
     background: transparent;
-    font-weight: 700;
+    font: 650 .875rem/1.4 var(--sans);
   }
   .book-pagination button { cursor: pointer; }
   .book-pagination button:disabled { cursor: default; color: var(--muted); opacity: .65; }
@@ -313,8 +328,8 @@ const contents = categories.map(category => ({
   .book-pagination button:last-child { justify-self: end; }
   .book-page-links { display: flex; flex-wrap: wrap; justify-content: center; gap: .35rem; }
   .book-page-links a { min-width: 2.75rem; text-decoration: none; }
-  .book-page-links a[data-visible-page] { border-color: var(--accent); background: #fff9ed; }
-  .book-page-links a[aria-current="page"] { color: #fff9ed; background: var(--accent); }
+  .book-page-links a[data-visible-page] { background: #f1e6d6; }
+  .book-page-links a[aria-current="page"] { box-shadow: inset 0 -2px var(--accent); }
   .book-page-links a:hover, .book-pagination button:enabled:hover { text-decoration: underline; text-underline-offset: .2em; }
 
   @media (max-width: 620px) {
@@ -325,6 +340,16 @@ const contents = categories.map(category => ({
       border: 0;
       border-radius: .4rem;
       background-image: linear-gradient(0deg, #bba58722, transparent 18%);
+    }
+    .facing-index {
+      display: inline-flex;
+      align-self: flex-start;
+      align-items: center;
+      min-height: 2.75rem;
+      margin-block-start: 1rem;
+      color: var(--accent);
+      font-size: .875rem;
+      text-underline-offset: .2em;
     }
     .book-pagination { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .book-page-links { grid-row: 1; grid-column: 1 / -1; }
