@@ -361,6 +361,20 @@ export const storyEntries: StoryEntry[] = [
     },
     href: 'https://www.threads.com/@miaopoyatw',
   },
+  {
+    id: 'liang-wen-chieh',
+    category: 'people',
+    type: '政治人物',
+    title: '梁文傑',
+    party: '民主進步黨',
+    source: 'Threads',
+    description: '陸委會政務副主任委員兼發言人，曾任第 11 至 13 屆臺北市議員。',
+    movement: {
+      description: '學生時期參與 1990 年野百合學運。',
+      href: 'https://politics.ntu.edu.tw/alumni/epaper/no13/no13_7.htm',
+    },
+    href: 'https://www.threads.com/@wenchiehliang',
+  },
   ...eventEntries.sort((a, b) => b.eventDate.localeCompare(a.eventDate)),
   {
     id: 'national-human-rights-museum',
