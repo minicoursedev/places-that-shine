@@ -242,6 +242,20 @@ export const storyEntries: StoryEntry[] = [
     href: 'https://www.threads.com/@sabrinalim.tw',
   },
   {
+    id: 'miao-po-ya',
+    category: 'people',
+    type: '政治人物',
+    title: '苗博雅',
+    party: '社會民主黨',
+    source: 'Threads',
+    description: '第 14 屆臺北市大安、文山選舉區市議員。',
+    movement: {
+      description: '大一參與同志遊行，後任台灣廢除死刑推動聯盟法務主任，參與死刑冤案救援。2014 年擔任太陽花學運志工，這段經歷促使她投入選舉。',
+      href: 'https://lawdata.com.tw/File/DC/Journal/J1364/A07350089_053.pdf',
+    },
+    href: 'https://www.threads.com/@miaopoyatw',
+  },
+  {
     id: 'democracy-at-4am',
     category: 'events',
     type: '歷史事件',
