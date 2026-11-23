@@ -298,4 +298,13 @@ export const storyEntries: StoryEntry[] = [
     description: '以原創角色分享台灣文化，推出貼紙與 LINE 貼圖，也串連在地店家並舉辦展覽與活動。',
     href: 'https://www.threads.com/@taiwan_bb',
   },
+  {
+    id: 'watchout',
+    category: 'media',
+    type: '獨立媒體',
+    title: '沃草 Watchout',
+    source: 'Threads',
+    description: '從國會監督起步，透過新聞報導與專題追蹤立法院、選舉及其他臺灣公共議題。',
+    href: 'https://www.threads.com/@watchout.tw',
+  },
 ];
