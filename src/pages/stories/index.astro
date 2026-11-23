@@ -1,134 +1,205 @@
 ---
 import SiteLayout from '../../layouts/SiteLayout.astro';
 
-const pages = [
+const title = '努力發著光';
+const description = '收錄店家、設計師與舞台之外，仍在努力發光的人、事與物。';
+const socialCategory = '社交媒體';
+const categories = ['全部', '人', '事', '物', socialCategory];
+const entries = [
   {
-    id: 'story-front-matter',
-    title: '卷首',
-    description: '這本故事書，留給店家、設計師與舞台之外，仍在努力發光的人、事與物。',
+    id: 'democracy-at-4am',
+    category: '事',
+    type: '歷史事件',
+    title: '太陽花學運',
+    source: '在凌晨4點的民主',
+    description: '透過時間軸、照片、影片與報導，記錄 2014 年太陽花學運的經過與現場聲音。',
+    href: 'https://4am-tw.maylogger.com/tw/',
   },
-  { id: 'story-contents', title: '篇目' },
   {
     id: 'taiwan1947',
+    category: '事',
+    type: '線上筆記',
     title: '二二八台灣史補課筆記（2026）',
     description: '由 @gratitude.drops 整理二二八事件、白色恐怖與台灣民主化的公開資料，收錄附有來源的歷史編年、事件地圖與互動式學習內容。',
     href: 'https://taiwan1947.org/',
   },
   {
-    id: 'democracy-at-4am',
-    title: '在凌晨4點的民主',
-    tocTitle: '太陽花學運',
-    subtitle: '關於太陽花學運',
-    description: '透過時間軸、照片、影片與報導，記錄 2014 年太陽花學運的經過與現場聲音。',
-    href: 'https://4am-tw.maylogger.com/tw/',
+    id: 'national-human-rights-museum',
+    category: '物',
+    type: '場館',
+    title: '國家人權博物館',
+    description: '國家人權博物館保存白色恐怖景美紀念園區與白色恐怖綠島紀念園區，透過展覽、導覽與教育活動，讓公眾認識臺灣的人權歷史。',
+    href: 'https://www.nhrm.gov.tw/',
   },
-].map((page, index) => ({ ...page, number: index + 1 }));
-
-const stories = pages.slice(2);
+  {
+    id: 'southvolunteerproject',
+    category: socialCategory,
+    type: '志工團隊',
+    title: '南方工作小組',
+    source: 'Threads',
+    description: '從臺南出發的志工團隊，參與街頭志工行動與跨區支援，也整理並串聯在地友善店家。',
+    href: 'https://www.threads.com/@southvolunteerproject',
+  },
+  {
+    id: 'taiwan-bb',
+    category: socialCategory,
+    type: '創作團隊',
+    title: '台派寶寶 Taiwan b.b.',
+    source: 'Threads',
+    description: '以原創角色分享台灣文化，推出貼紙與 LINE 貼圖，也串連在地店家並舉辦展覽與活動。',
+    href: 'https://www.threads.com/@taiwan_bb',
+  },
+];
 ---
 
-<SiteLayout title="努力發著光" description="收錄店家、設計師與舞台之外，仍在努力發光的人、事與物。">
-  <section class="story-shelf page-width" aria-labelledby="story-title">
-    <h1 id="story-title" class="visually-hidden">努力發著光</h1>
-    <details class="storybook" data-storybook>
-      <summary>
-        <span class="book-cover">
-          <span class="cover-star" aria-hidden="true">✦</span>
-          <span class="cover-title" aria-hidden="true">努力發著光</span>
-          <span class="open-book">翻開故事書 <span aria-hidden="true">→</span></span>
-        </span>
-        <span class="close-book"><span aria-hidden="true">←</span> 闔上故事書</span>
-      </summary>
-      <div class="book-spread">
-        {pages.map(page => (
-          <section class="book-page" id={page.id} data-book-page aria-labelledby={`${page.id}-title`}>
-            <header class="book-page-heading">
-              <h2 id={`${page.id}-title`} tabindex="-1">{page.title}</h2>
-              {page.subtitle && <p class="book-page-subtitle">{page.subtitle}</p>}
-            </header>
-            {page.id === 'story-contents' && (
-              <ul class="book-contents">
-                {stories.map(story => (
-                  <li>
-                    <a href={`#${story.id}`}>
-                      {story.tocTitle ?? story.title}<span>第 {story.number} 頁</span>
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            )}
-            {page.description && <p>{page.description}</p>}
-            {page.href && <a class="story-source" href={page.href} aria-label={`前往原站 ${page.title}`}>前往原站</a>}
-            <footer class="page-number">第 {page.number} 頁</footer>
-          </section>
+<SiteLayout title={title} description={description}>
+  <section class="story-index" aria-labelledby="story-title">
+    <header class="index-heading" id="story-front-matter">
+      <h1 id="story-title">{title}</h1>
+      <p>{description}</p>
+    </header>
+
+    <section id="story-contents" aria-label="收錄篇目">
+      <div class="index-filters" role="group" aria-label="依類別篩選" data-story-filters hidden>
+        {categories.map(category => (
+          <button type="button" value={category} aria-pressed={category === '全部'} aria-controls="story-list">{category}</button>
         ))}
       </div>
-      <nav class="book-pagination" aria-label="書頁導覽" data-book-pagination hidden>
-        <button type="button" data-book-previous>上一頁</button>
-        <div class="book-page-links">
-          {pages.map(page => (
-            <a href={`#${page.id}`} data-book-page-link aria-label={`第 ${page.number} 頁 ${page.title}`}>{page.number}</a>
-          ))}
-        </div>
-        <button type="button" data-book-next>下一頁</button>
-      </nav>
-    </details>
+      <p class="visually-hidden" data-story-status role="status"></p>
+      <div class="story-list" id="story-list">
+        {entries.map(entry => (
+          <article class="index-entry" id={entry.id} aria-labelledby={`${entry.id}-title`} data-story-category={entry.category}>
+            <p class="index-kind">
+              {entry.category !== socialCategory && <span>{entry.category}</span>}
+              {entry.type}
+            </p>
+            <div class="index-copy">
+              <h2 id={`${entry.id}-title`}>{entry.title}</h2>
+              <p>{entry.description}</p>
+              <a href={entry.href} aria-label={`${entry.source ?? '前往原站'} ${entry.title}`}>{entry.source ?? '前往原站'}</a>
+            </div>
+          </article>
+        ))}
+        <p class="index-empty" data-story-empty hidden>尚未收錄。</p>
+      </div>
+    </section>
   </section>
 </SiteLayout>
 
 <script>
-  const book = document.querySelector<HTMLDetailsElement>('[data-storybook]');
-  const pagination = book?.querySelector<HTMLElement>('[data-book-pagination]');
-  const previous = pagination?.querySelector<HTMLButtonElement>('[data-book-previous]');
-  const next = pagination?.querySelector<HTMLButtonElement>('[data-book-next]');
+  const controls = document.querySelector<HTMLElement>('[data-story-filters]');
+  const empty = document.querySelector<HTMLElement>('[data-story-empty]');
+  const status = document.querySelector<HTMLElement>('[data-story-status]');
 
-  if (book && pagination && previous && next) {
-    const pages = Array.from(book.querySelectorAll<HTMLElement>('[data-book-page]'));
-    const links = Array.from(pagination.querySelectorAll<HTMLAnchorElement>('[data-book-page-link]'));
-    const narrow = window.matchMedia('(max-width: 620px)');
+  if (controls && empty && status) {
+    const buttons = Array.from(controls.querySelectorAll('button'));
+    const entries = Array.from(document.querySelectorAll<HTMLElement>('[data-story-category]'));
 
-    const showPages = (moveFocus = false) => {
-      const targetIndex = pages.findIndex(page => `#${page.id}` === window.location.hash);
-      const pageIndex = Math.max(targetIndex, 0);
-      const pagesPerSpread = narrow.matches ? 1 : 2;
-      const firstIndex = pageIndex - pageIndex % pagesPerSpread;
-      const endIndex = firstIndex + pagesPerSpread;
-
-      pages.forEach((page, index) => {
-        page.hidden = index < firstIndex || index >= endIndex;
-      });
-      links.forEach((link, index) => {
-        link.toggleAttribute('data-visible-page', !pages[index].hidden);
-        if (index === pageIndex) link.setAttribute('aria-current', 'page');
-        else link.removeAttribute('aria-current');
-      });
-
-      previous.value = pages[firstIndex - pagesPerSpread]?.id ?? '';
-      next.value = pages[endIndex]?.id ?? '';
-      previous.disabled = !previous.value;
-      next.disabled = !next.value;
-
-      if (targetIndex >= 0 && !book.open && (moveFocus || pagination.hidden)) book.open = true;
-      if (moveFocus && book.open) pages[pageIndex].querySelector('h2')?.focus();
+    const showCategory = (category: string) => {
+      let visibleCount = 0;
+      for (const entry of entries) {
+        entry.hidden = category !== '全部' && entry.dataset.storyCategory !== category;
+        if (!entry.hidden) visibleCount++;
+      }
+      for (const button of buttons) {
+        button.setAttribute('aria-pressed', String(button.value === category));
+      }
+      empty.hidden = visibleCount > 0;
+      status.textContent = visibleCount > 0 ? `顯示 ${visibleCount} 筆收錄。` : empty.textContent;
     };
 
-    previous.addEventListener('click', () => { window.location.hash = previous.value; });
-    next.addEventListener('click', () => { window.location.hash = next.value; });
-    window.addEventListener('hashchange', () => showPages(true));
-    narrow.addEventListener('change', () => showPages());
+    for (const button of buttons) {
+      button.addEventListener('click', () => showCategory(button.value));
+    }
 
-    showPages();
-    pagination.hidden = false;
+    window.addEventListener('hashchange', () => {
+      const target = entries.find(entry => `#${entry.id}` === window.location.hash);
+      if (target?.hidden) {
+        showCategory('全部');
+        target.scrollIntoView();
+      }
+    });
+
+    controls.hidden = false;
   }
 </script>
 
 <style>
-  .story-shelf {
-    display: grid;
-    align-items: center;
-    min-height: 72vh;
-    padding-block: clamp(2rem, 6vw, 5rem);
+  .story-index {
+    width: min(100% - 2 * var(--gutter), 56rem);
+    min-height: 68vh;
+    margin-inline: auto;
+    padding-block: clamp(2.75rem, 7vw, 6.25rem) clamp(3.25rem, 7vw, 6rem);
   }
+
+  .index-heading { margin-block-end: clamp(1.5rem, 3.8vw, 3rem); }
+  .index-heading h1 {
+    margin: 0 0 .7rem;
+    font: 800 clamp(2.35rem, 6.4vw, 5rem)/1.21 var(--serif);
+    letter-spacing: .04em;
+  }
+  .index-heading p {
+    max-width: 33em;
+    margin: 0;
+    color: var(--muted);
+    font: 550 1rem/1.85 var(--serif);
+  }
+
+  .index-filters { display: flex; flex-wrap: wrap; gap: clamp(.3rem, 1.8vw, 1rem); }
+  .index-filters button {
+    min-width: 2.75rem;
+    min-height: 2.75rem;
+    padding: .4rem .5rem .55rem;
+    border: 0;
+    border-block-end: 2px solid transparent;
+    color: var(--muted);
+    background: transparent;
+    font: 700 .9375rem/1.5 var(--sans);
+    cursor: pointer;
+  }
+  .index-filters button:hover { color: var(--ink); }
+  .index-filters button[aria-pressed='true'] { border-block-end-color: var(--accent); color: var(--ink); }
+
+  .story-list { border-block-start: 1px solid var(--line); }
+  .index-entry {
+    display: grid;
+    grid-template-columns: minmax(6.5rem, .25fr) minmax(0, 1fr);
+    gap: clamp(1rem, 3vw, 2rem);
+    padding-block: clamp(1.35rem, 3vw, 2.45rem);
+    border-block-end: 1px solid var(--line);
+  }
+  .index-kind {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    align-self: start;
+    gap: .25rem .55rem;
+    margin: .35rem 0 0;
+    color: var(--muted);
+    font: 650 .875rem/1.5 var(--sans);
+  }
+  .index-kind span { color: var(--accent); font: 800 1rem/1.5 var(--serif); }
+  .index-copy { max-width: 39rem; }
+  .index-entry h2 {
+    margin: 0;
+    font: 800 clamp(1.35rem, 2.9vw, 2rem)/1.4 var(--serif);
+    letter-spacing: .018em;
+  }
+  .index-entry:target h2 { color: var(--accent); }
+  .index-copy p {
+    margin: .45rem 0 .65rem;
+    color: var(--muted);
+    font: 550 1rem/1.8 var(--serif);
+    overflow-wrap: anywhere;
+  }
+  .index-copy a {
+    color: var(--accent);
+    font: 700 .875rem/1.5 var(--sans);
+    text-decoration-thickness: 1px;
+    text-underline-offset: .23em;
+  }
+  .index-copy a:hover { color: var(--ink); }
+  .index-empty { margin: 0; padding-block: 1.8rem; color: var(--muted); }
 
   .visually-hidden {
     position: absolute;
@@ -141,154 +212,9 @@ const stories = pages.slice(2);
     white-space: nowrap;
   }
 
-  .storybook { margin-inline: auto; width: min(100%, 23rem); }
-  .storybook[open] { width: min(100%, 52rem); }
-  .storybook summary { display: block; list-style: none; cursor: pointer; }
-  .storybook summary::-webkit-details-marker { display: none; }
-  .storybook summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
-
-  .book-cover {
-    position: relative;
-    isolation: isolate;
-    display: grid;
-    justify-items: center;
-    align-content: center;
-    gap: 1.15rem;
-    min-height: clamp(20rem, 41vw, 29rem);
-    padding: 2.4rem 1.6rem 2.4rem 2.2rem;
-    color: #f5e0b7;
-    background:
-      linear-gradient(90deg, #242032, #413644 5%, transparent 7%),
-      radial-gradient(ellipse at 53% 32%, #473a4b, #2b2638 67%);
-    border: 1px solid #332731;
-    border-radius: 4px 13px 13px 4px;
-    box-shadow: 4px 2px #f3dec1, 8px 4px #594435, 9px 10px 22px #30221733;
-    text-align: center;
-  }
-
-  .book-cover::before {
-    content: '';
-    position: absolute;
-    z-index: -1;
-    inset: .95rem .85rem .95rem 1.35rem;
-    border: 1px solid #dbb97c77;
-    border-radius: 2px 8px 8px 2px;
-  }
-
-  .cover-star { color: #edc081; font-size: 2.2rem; line-height: 1; }
-  .cover-title { font: 800 clamp(1.65rem, 7vw, 3rem)/1.3 var(--serif); letter-spacing: .1em; }
-  .open-book, .close-book { display: inline-flex; align-items: center; gap: .55rem; font-size: .875rem; font-weight: 700; }
-  .open-book { padding: .55rem .8rem; border: 1px solid #dbb97c88; border-radius: 3px; }
-  .storybook summary:hover .open-book { color: #302539; background: #f5e0b7; }
-  .storybook:not([open]) .close-book,
-  .storybook:not([open]) .book-spread,
-  .storybook[open] .book-cover { display: none; }
-  .storybook[open] summary { width: fit-content; margin: 0 0 .9rem auto; }
-  .close-book { min-height: 2.75rem; padding-inline: .75rem; color: var(--accent); }
-  .storybook summary:hover .close-book { text-decoration: underline; text-underline-offset: .25em; }
-
-  .book-spread {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    border: 1px solid #c9b79e;
-    border-radius: .45rem;
-    box-shadow: 0 5px #e0d0b7, 0 7px #998167, 0 12px 22px #30221722;
-  }
-
-  .book-page {
-    display: flex;
-    flex-direction: column;
-    min-height: clamp(19rem, 38vw, 25rem);
-    padding: clamp(2rem, 6vw, 4rem) clamp(1.5rem, 4.75vw, 3.8rem);
-    padding-block-end: clamp(1.25rem, 3vw, 2rem);
-    background: #fff9ed;
-  }
-
-  .book-page:nth-child(odd) {
-    background-image: linear-gradient(90deg, transparent 87%, #bba58724);
-    border-radius: .4rem 0 0 .4rem;
-  }
-
-  .book-page:nth-child(even) {
-    background-image: linear-gradient(90deg, #bba58730, transparent 13%);
-    border-inline-start: 1px solid #c9b79e;
-    border-radius: 0 .4rem .4rem 0;
-  }
-
-  .book-page-heading {
-    margin: 0 0 1.25rem;
-    padding-bottom: .65rem;
-    border-bottom: 1px solid var(--line);
-  }
-
-  .book-page-heading h2 {
-    margin: 0;
-    color: var(--accent);
-    font: 800 clamp(1.45rem, 4.5vw, 2rem)/1.25 var(--serif);
-    letter-spacing: .12em;
-  }
-
-  .book-page p { margin: 0; font: 600 1rem/1.9 var(--serif); }
-  .book-page-heading .book-page-subtitle { margin-block-start: .35rem; color: var(--muted); }
-
-  .book-contents { display: grid; gap: 1rem; margin: 0; padding: 0; list-style: none; }
-  .book-contents a {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    gap: .75rem;
-    color: var(--accent);
-    font: 700 1rem/1.65 var(--serif);
-    text-underline-offset: .2em;
-  }
-  .book-contents span { flex: none; color: var(--muted); font-size: .875rem; }
-  .story-source { align-self: start; margin-block-start: 1rem; color: var(--accent); font-weight: 700; text-underline-offset: .2em; }
-
-  .page-number {
-    margin-block-start: auto;
-    padding-block-start: 1.5rem;
-    color: var(--muted);
-    font: 600 .875rem/1.5 var(--serif);
-    text-align: center;
-  }
-
-  .book-pagination {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    align-items: center;
-    gap: .5rem;
-    margin-block-start: 1.25rem;
-  }
-  .book-pagination button, .book-page-links a {
-    display: grid;
-    min-height: 2.75rem;
-    place-items: center;
-    padding: .35rem .65rem;
-    border: 1px solid var(--line);
-    border-radius: .25rem;
-    color: var(--accent);
-    background: transparent;
-    font-weight: 700;
-  }
-  .book-pagination button { cursor: pointer; }
-  .book-pagination button:disabled { cursor: default; color: var(--muted); opacity: .65; }
-  .book-pagination button:first-child { justify-self: start; }
-  .book-pagination button:last-child { justify-self: end; }
-  .book-page-links { display: flex; flex-wrap: wrap; justify-content: center; gap: .35rem; }
-  .book-page-links a { min-width: 2.75rem; text-decoration: none; }
-  .book-page-links a[data-visible-page] { border-color: var(--accent); background: #fff9ed; }
-  .book-page-links a[aria-current="page"] { color: #fff9ed; background: var(--accent); }
-  .book-page-links a:hover, .book-pagination button:enabled:hover { text-decoration: underline; text-underline-offset: .2em; }
-
-  @media (max-width: 620px) {
-    .book-spread { grid-template-columns: minmax(0, 1fr); }
-    .book-page:nth-child(n) {
-      min-height: min(21rem, 58svh);
-      border: 0;
-      border-radius: .4rem;
-      background-image: linear-gradient(0deg, #bba58722, transparent 18%);
-    }
-    .book-pagination { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .book-page-links { grid-row: 1; grid-column: 1 / -1; }
+  @media (max-width: 550px) {
+    .story-index { width: min(100% - 2rem, 56rem); padding-block-start: 2.4rem; }
+    .index-entry { grid-template-columns: minmax(0, 1fr); gap: .45rem; }
+    .index-kind { margin-block-start: 0; }
   }
 </style>
