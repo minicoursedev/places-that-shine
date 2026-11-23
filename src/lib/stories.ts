@@ -26,6 +26,38 @@ interface StoryEntry {
   };
 }
 
+const eventEntries: (StoryEntry & { category: 'events'; eventDate: string })[] = [
+  {
+    id: 'wild-lily-movement',
+    category: 'events',
+    eventDate: '1990-03-16',
+    type: '歷史事件',
+    title: '野百合學運',
+    source: '中研院《學動．運生》線上展',
+    description: '回顧 1990 年 3 月 16 至 22 日的學生靜坐、各校串連、四大訴求與退場，收錄現場照片、傳單和《廣場通訊》。',
+    href: 'https://ios20.ascdc.tw/e2_wildlily/',
+  },
+  {
+    id: 'democracy-at-4am',
+    category: 'events',
+    eventDate: '2014-03-18',
+    type: '歷史事件',
+    title: '太陽花學運',
+    source: '在凌晨4點的民主',
+    description: '透過時間軸、照片、影片與報導，記錄 2014 年太陽花學運的經過與現場聲音。',
+    href: 'https://4am-tw.maylogger.com/tw/',
+  },
+  {
+    id: 'taiwan1947',
+    category: 'events',
+    eventDate: '1947-02-28',
+    type: '線上筆記',
+    title: '二二八台灣史補課筆記（2026）',
+    description: '由 @gratitude.drops 整理二二八事件、白色恐怖與台灣民主化的公開資料，收錄附有來源的歷史編年、事件地圖與互動式學習內容。',
+    href: 'https://taiwan1947.org/',
+  },
+];
+
 export const storyEntries: StoryEntry[] = [
   {
     id: 'wu-pei-yi',
@@ -259,32 +291,7 @@ export const storyEntries: StoryEntry[] = [
     },
     href: 'https://www.threads.com/@miaopoyatw',
   },
-  {
-    id: 'wild-lily-movement',
-    category: 'events',
-    type: '歷史事件',
-    title: '野百合學運',
-    source: '中研院《學動．運生》線上展',
-    description: '回顧 1990 年 3 月 16 至 22 日的學生靜坐、各校串連、四大訴求與退場，收錄現場照片、傳單和《廣場通訊》。',
-    href: 'https://ios20.ascdc.tw/e2_wildlily/',
-  },
-  {
-    id: 'democracy-at-4am',
-    category: 'events',
-    type: '歷史事件',
-    title: '太陽花學運',
-    source: '在凌晨4點的民主',
-    description: '透過時間軸、照片、影片與報導，記錄 2014 年太陽花學運的經過與現場聲音。',
-    href: 'https://4am-tw.maylogger.com/tw/',
-  },
-  {
-    id: 'taiwan1947',
-    category: 'events',
-    type: '線上筆記',
-    title: '二二八台灣史補課筆記（2026）',
-    description: '由 @gratitude.drops 整理二二八事件、白色恐怖與台灣民主化的公開資料，收錄附有來源的歷史編年、事件地圖與互動式學習內容。',
-    href: 'https://taiwan1947.org/',
-  },
+  ...eventEntries.sort((a, b) => b.eventDate.localeCompare(a.eventDate)),
   {
     id: 'national-human-rights-museum',
     category: 'objects',
