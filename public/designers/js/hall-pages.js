@@ -5,11 +5,11 @@ export const hallPages = [{
   path: '/designers/halls/amateurs/',
   title: '洋流愛好者館｜發光的設計師',
   description: '走進洋流愛好者館，瀏覽愛好者的作品、介紹與社群連結。',
-  image: '/designers/assets/amateur-hall-a01-og.jpg',
+  image: '/designers/assets/amateur-hall-a01-og.webp',
   alt: '洋流愛好者館 A01 的前五攤：LiAn、Kyle Kuo、花花、Dizzy Duzz、chuck8031',
   width: 1200,
   height: 630,
-  type: 'image/jpeg',
+  type: 'image/webp',
 }, {
   code: 'W',
   name: '洋流網站館',
@@ -27,11 +27,11 @@ export const hallPages = [{
   path: '/designers/halls/shovel-heroes/',
   title: '鏟子超人館｜發光的設計師',
   description: '2025 鏟子超人時期的設計師展館。',
-  image: '/designers/assets/shovel-heroes-hall-og.jpg',
+  image: '/designers/assets/shovel-heroes-hall-og.webp',
   alt: '鏟子超人館 S01 的沅藝術空間攤位',
   width: 1200,
   height: 630,
-  type: 'image/jpeg',
+  type: 'image/webp',
 }, {
   code: 'R',
   name: '大罷免',
@@ -49,11 +49,11 @@ export const hallPages = [{
   path: '/designers/halls/bluebird-action/',
   title: '2024 青鳥行動｜發光的設計師',
   description: '2024 青鳥行動的設計師展館。',
-  image: '/designers/assets/bluebird-action-hall-og.jpg',
+  image: '/designers/assets/bluebird-action-hall-og.webp',
   alt: '青鳥行動 B01 的沅藝術空間與吳奕裴攤位',
   width: 1200,
   height: 630,
-  type: 'image/jpeg',
+  type: 'image/webp',
 }];
 
 export const hallPageForCode = code => hallPages.find(hall => hall.code === code) || null;

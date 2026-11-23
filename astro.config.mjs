@@ -30,23 +30,23 @@ const designerOg = {
     'astro:build:done': async ({ dir }) => {
       const designersDir = fileURLToPath(new URL('designers/', dir));
       await cp(join(generatedOg, 'designers'), designersDir, { recursive: true });
-      // Keep the images already used by previews of the legacy designer URLs.
+      // Publish WebP previews in the legacy designer asset directories as well.
       await Promise.all(legacyDesignerIds.map(async id => {
         const legacyDir = fileURLToPath(new URL(`puma_oshen_wave/assets/${id}/`, dir));
         await mkdir(legacyDir, { recursive: true });
-        await copyFile(join(designersDir, 'assets/og', `${id}.jpg`), join(legacyDir, 'og.jpg'));
+        await copyFile(join(designersDir, 'assets/og', `${id}.webp`), join(legacyDir, 'og.webp'));
       }));
       await rm(generatedOg, { recursive: true, force: true });
     },
     'astro:server:setup': ({ server }) => {
       server.middlewares.use((request, response, next) => {
         const path = request.url?.split('?')[0];
-        if (path !== '/designers/og-images.json' && !/^\/designers\/assets\/og\/[a-z0-9-]+\.jpg$/.test(path || '')) {
+        if (path !== '/designers/og-images.json' && !/^\/designers\/assets\/og\/[a-z0-9-]+\.webp$/.test(path || '')) {
           return next();
         }
         const file = join(generatedOg, path);
         if (!existsSync(file)) return next();
-        response.setHeader('Content-Type', path.endsWith('.json') ? 'application/json' : 'image/jpeg');
+        response.setHeader('Content-Type', path.endsWith('.json') ? 'application/json' : 'image/webp');
         createReadStream(file).on('error', next).pipe(response);
       });
     },

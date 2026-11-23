@@ -55,11 +55,11 @@ const imageOptions = [
   ...(logo ? [{ ...logo, alt: `${name}的頭像` }] : []),
 ];
 let shareImage = {
-  url: new URL('/media/shining-stores-og-shadow-50.jpg', Astro.site),
+  url: new URL('/media/shining-stores-og-shadow-50.webp', Astro.site),
   alt: '發光的店家',
   width: 1200,
   height: 630,
-  mime: 'image/jpeg',
+  mime: 'image/webp',
   large: true,
 };
 for (const photo of imageOptions) {
