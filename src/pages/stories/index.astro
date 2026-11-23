@@ -17,6 +17,7 @@ const pages = [
   {
     id: 'democracy-at-4am',
     title: '在凌晨4點的民主',
+    tocTitle: '太陽花學運',
     subtitle: '關於太陽花學運',
     description: '透過時間軸、照片、影片與報導，記錄 2014 年太陽花學運的經過與現場聲音。',
     href: 'https://4am-tw.maylogger.com/tw/',
@@ -50,7 +51,7 @@ const stories = pages.slice(2);
                 {stories.map(story => (
                   <li>
                     <a href={`#${story.id}`}>
-                      {story.title}<span>第 {story.number} 頁</span>
+                      {story.tocTitle ?? story.title}<span>第 {story.number} 頁</span>
                     </a>
                   </li>
                 ))}
