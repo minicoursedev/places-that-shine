@@ -11,7 +11,6 @@ const paths = [
   '/',
   '/stores/',
   ...stores.map(({ id }) => storePath(id)),
-  '/designers/periods/',
   '/designers/',
   ...hallPages.map(hall => hall.path),
   ...designers.map(designer => designerPath(designer.id)),

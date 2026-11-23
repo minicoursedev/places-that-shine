@@ -1,5 +1,6 @@
 ---
 import SiteLayout from '../layouts/SiteLayout.astro';
+import { designerHallRoot } from '../../public/designers/js/routes.js';
 
 const title = '發光的地方';
 const description = '在發光的地方，逛設計師的作品、看舞台演出。';
@@ -10,7 +11,7 @@ const shareImageAlt = `${title}。 ${quoteLead}，${quoteLine}`;
 
 const entries = [
   { href: '/stores/', title: '發光的店家', description: '找一間想走進去的店', cover: 'store.webp', width: 600, height: 400 },
-  { href: '/designers/periods/', title: '發光的設計師', description: '逛逛設計師與他們的作品', cover: 'designer.webp', width: 600, height: 400 },
+  { href: '/designers/', title: '發光的設計師', description: '逛逛設計師與他們的作品', cover: 'designer.webp', width: 600, height: 400 },
   { href: '/stage/', title: '發光的舞台', description: '聽一首歌，看一場演出', cover: 'stage.webp', width: 320, height: 180 },
 ];
 ---
@@ -29,13 +30,14 @@ const entries = [
     <meta name="twitter:image" content={shareImage} />
     <meta name="twitter:image:alt" content={shareImageAlt} />
   </Fragment>
-  <script is:inline slot="head">
+  <script slot="head" define:vars={{ designerHallPath: designerHallRoot('O') }}>
     const oldLocation = /^#(stores|designers|stage)(?:\/([a-z0-9-]+)(?:\/([a-z0-9-]+))?)?$/.exec(location.hash);
     if (oldLocation) {
       const [, section, detail, work] = oldLocation;
       let target = `/${section}/`;
       if (section === 'designers' && detail) {
         if (!work && ['walk', 'list', 'map'].includes(detail)) {
+          target = designerHallPath;
           if (detail !== 'walk') target += `#/${detail}`;
         } else {
           target += `${detail}/`;

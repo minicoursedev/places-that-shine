@@ -1,8 +1,8 @@
 // Designer dialog: profile, catalogue images, social links and share link.
 import { state, markVisited, findBoothIn } from '../state.js';
 import { loadAisle, aisleOfBooth } from '../data.js?v=20261119-recall-hall';
-import { boothHtml, loadingHtml, failHtml } from './booth-markup.js?v=20261123-webp';
-import { designerHallRoot, designerPath, designerSharePath, designerWalkPath, resolveDesignerRoute, updateDesignerMetadata } from '../routes.js?v=20261123-webp';
+import { boothHtml, loadingHtml, failHtml } from './booth-markup.js?v=20261124-oshen-entry';
+import { designerHallRoot, designerPath, designerSharePath, designerWalkPath, resolveDesignerRoute, updateDesignerMetadata } from '../routes.js?v=20261124-oshen-entry';
 import { retryOriginal } from '../images.js';
 import { loadProducts, sampleProducts } from '../products.js?v=20261030-pinned-work';
 

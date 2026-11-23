@@ -1,5 +1,5 @@
 import { thumbnailUrl } from '../images.js';
-import { designerSharePath, designerWalkPath } from '../routes.js?v=20261123-webp';
+import { designerSharePath, designerWalkPath } from '../routes.js?v=20261124-oshen-entry';
 import { designerMetadata } from '../profile-seo.js?v=20261114-designer-title';
 import { designerWorkSharePath } from '../work-links.js?v=20261114-share-channels';
 import { browserOrigin } from '../config.js';

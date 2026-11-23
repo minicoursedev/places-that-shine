@@ -3,23 +3,23 @@ import { designers, designerRoot, designerPath } from '../lib/oshen-designers';
 import { boothHtml } from '../../public/designers/js/ui/booth-markup.js';
 import { designerMetadata, designerStructuredData, serializeStructuredData } from '../../public/designers/js/profile-seo.js';
 import { hallPageForCode } from '../../public/designers/js/hall-pages.js';
-import { designerSharePath, designerMarketPreview } from '../../public/designers/js/routes.js';
+import { designerSharePath } from '../../public/designers/js/routes.js';
 import WorkShareDialog from '../components/WorkShareDialog.astro';
 interface Props { designerId?: string; hallCode?: string; shareHall?: string }
 const designer = designers.find(profile => profile.id === Astro.props.designerId);
 const shareHall = designer && Astro.props.shareHall;
 const shareBooth = shareHall && designer?.booth.hallBooths.find(booth => booth.aisle[0] === shareHall);
-const hall = designer ? null : hallPageForCode(Astro.props.hallCode);
-const listedDesigners = hall ? designers.filter(profile => profile.hallCodes.includes(hall.code)) : designers;
+const hall = hallPageForCode(Astro.props.hallCode || shareHall || designer?.hallCode) || hallPageForCode('O')!;
+const listedDesigners = designer ? [] : designers.filter(profile => profile.hallCodes.includes(hall.code));
 const metadata = designer && designerMetadata(designer.store);
-const title = metadata ? metadata.title : hall?.title || '發光的設計師｜發光的地方';
+const title = metadata ? metadata.title : hall.title;
 const shareTitle = metadata ? metadata.shareTitle : title;
-const description = metadata ? metadata.description : hall?.description || '逛發光的設計師市集，瀏覽設計師介紹、創作作品與官方社群。透過設計師列表、地圖與互動攤位，找到喜歡的創作者。';
-const canonical = new URL(designer ? designerPath(designer.id) : hall?.path || designerRoot, Astro.site).href;
+const description = metadata ? metadata.description : hall.description;
+const canonical = new URL(designer ? designerPath(designer.id) : hall.path, Astro.site).href;
 const shareUrl = designer && shareHall ? new URL(designerSharePath(designer.id, shareHall), Astro.site).href : canonical;
 const structuredData = designer && designerStructuredData(designer.store, designer.booth, canonical, new URL(designerRoot, Astro.site).href);
 const exhibitionImage = new URL('/designers/assets/exhibition-og.webp?v=20261123-webp', Astro.site).href;
-const preview = designer?.og || hall || (!designer ? designerMarketPreview : null);
+const preview = designer ? designer.og : hall;
 const shareImage = new URL(designer?.og?.url || preview?.image || exhibitionImage, Astro.site).href;
 const shareImageAlt = preview?.alt || '洋流設計師展逛攤畫面';
 ---
@@ -73,17 +73,17 @@ const shareImageAlt = preview?.alt || '洋流設計師展逛攤畫面';
 <link rel="stylesheet" href="/designers/css/booth.css?v=20261123-webp">
 <link rel="stylesheet" href="/designers/css/work.css?v=20261114-share-channels">
 <link rel="stylesheet" href="/designers/css/map.css?v=20261114-bluebird-hall">
-<link rel="stylesheet" href="/designers/css/list.css?v=20261112-designer-work-views">
+<link rel="stylesheet" href="/designers/css/list.css?v=20261124-hall-seo">
 <link rel="stylesheet" href="/designers/css/closed.css">
 <link rel="stylesheet" href="/designers/css/floating-nav.css?v=20261114-home">
 </head>
 <body>
 <div class="app designer-app">
-  <a class="btn designer-home" href="/designers/periods/">上一頁</a>
+  <a class="btn designer-home" href="/designers/">上一頁</a>
   <details class="floating-nav" id="floating-nav">
     <summary class="floating-nav-toggle" aria-label="導覽選單"><span aria-hidden="true">☰</span> 選單</summary>
     <nav class="bar" aria-label="導覽選單">
-    <a class="plaque" href="#/walk" aria-label="發光的設計師">
+    <a class="plaque" href={hall.path} aria-label="發光的設計師">
       <span>發光的設計師</span>
     </a>
     <div class="modes" role="group" aria-label="逛法">
@@ -103,7 +103,7 @@ const shareImageAlt = preview?.alt || '洋流設計師展逛攤畫面';
   </main>
   <main class="stage" id="stage-walk" hidden>
     <canvas id="walk-canvas" tabindex="0" aria-label="逛場子畫面：按住拖著小人走，點設計師即可查看介紹"></canvas>
-    <button type="button" class="where" id="btn-where"><b id="where-hall">{hall?.name || designer?.hallName || '洋流設計師館'}</b><span id="where-aisle"></span><span class="where-switch">換館</span></button>
+    <button type="button" class="where" id="btn-where"><b id="where-hall">{hall.name}</b><span id="where-aisle"></span><span class="where-switch">換館</span></button>
     <div class="status"><span class="tag tag-zone" id="status-zone"></span><span class="tag" id="status-count"></span></div>
     <p class="hint" id="hint">按住畫面拖著小人走，點一下就走過去，點設計師查看介紹，點路人或對話框可收聲。電腦可以用方向鍵。</p>
     <div class="dock">
@@ -113,9 +113,29 @@ const shareImageAlt = preview?.alt || '洋流設計師展逛攤畫面';
     </div>
   </main>
 
-  <main class="list-mode" id="stage-list" tabindex="-1"><div class="ls-wrap">
-  {designer ? <article id="static-designer-profile" aria-label={designer.name} set:html={boothHtml(shareBooth ? { ...designer.booth, id: shareBooth.id } : designer.booth, designer.store, { profile: true, staticProfile: true })} /> : <><h1 class="ls-title">{hall?.name || '設計師列表'}</h1>{!listedDesigners.length && <p>{hall?.name}目前尚無攤位。</p>}<div class="ls-grid">{listedDesigners.map(profile => <article class="lc"><div class="lc-heading"><h3 class="lc-name"><a class="lc-open" href={designerPath(profile.id)}>{profile.name}</a></h3></div><p class="lc-owner">{profile.store.category} {profile.name}</p><p class="lc-zone">{hall?.name || profile.hallName}・{profile.store.category}</p><a class="btn btn-primary lc-go" href={designerPath(profile.id)}>{profile.works.length ? '看作品' : '看介紹'}</a></article>)}</div></>}
-  </div></main>
+  <main class="list-mode" id="stage-list" tabindex="-1">
+    <div class="ls-wrap">
+      {designer ? (
+        <article id="static-designer-profile" aria-label={designer.name} set:html={boothHtml(shareBooth ? { ...designer.booth, id: shareBooth.id } : designer.booth, designer.store, { profile: true, staticProfile: true })} />
+      ) : (
+        <>
+          <h1 class="ls-title">{hall.heading || hall.name}</h1>
+          <p class="ls-intro">{hall.description}</p>
+          {!listedDesigners.length && <p>{hall.name}目前尚無攤位。</p>}
+          <div class="ls-grid">
+            {listedDesigners.map(profile => (
+              <article class="lc">
+                <div class="lc-heading"><h2 class="lc-name"><a class="lc-open" href={designerPath(profile.id)}>{profile.name}</a></h2></div>
+                <p class="lc-owner">{profile.store.category} {profile.name}</p>
+                <p class="lc-zone">{hall.name}・{profile.store.category}</p>
+                <a class="btn btn-primary lc-go" href={designerPath(profile.id)}>{profile.works.length ? '看作品' : '看介紹'}</a>
+              </article>
+            ))}
+          </div>
+        </>
+      )}
+    </div>
+  </main>
   <main class="map-mode" id="stage-map" hidden></main>
   <footer class="app-footer">
     <small class="footer-full">© 2026 發光的地方｜收錄之設計師資料、作品與商標，其權利歸各設計師或原權利人所有。</small>
@@ -127,6 +147,6 @@ const shareImageAlt = preview?.alt || '洋流設計師展逛攤畫面';
 <dialog id="dlg-booth" class="dlg" aria-labelledby="booth-title"></dialog>
 <WorkShareDialog kind="designer" />
 <WorkShareDialog />
-<script is:inline type="module" src="/designers/js/app.js?v=20261123-webp"></script>
+<script is:inline type="module" src="/designers/js/app.js?v=20261124-oshen-entry"></script>
 </body>
 </html>

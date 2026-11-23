@@ -1,6 +1,7 @@
 ---
 import { designers, designerRoot, designerPath } from '../lib/yilan-market';
 import { hideOshenStores } from '../lib/oshen-store-visibility.mjs';
+import { designerHallRoot } from '../../public/designers/js/routes.js';
 import { boothHtml } from '../../public/puma_oshen_wave/yilan_taiwan_11_07/js/ui/booth-markup.js';
 import market from '../../public/puma_oshen_wave/yilan_taiwan_11_07.json';
 interface Props { designerId?: string }
@@ -56,7 +57,7 @@ const canonical = new URL(designer ? designerPath(designer.id) : designerRoot, A
       <button type="button" data-mode="map" aria-pressed="false">市集地圖</button>
     </div>
     <span class="tag close-tag" id="close-tag" hidden></span>
-    <a class="link-btn" href="/puma_oshen_wave/designer/">洋流設計師</a>
+    <a class="link-btn" href={designerHallRoot('O')}>洋流設計師</a>
     <a class="link-btn" href="/puma_oshen_wave/stage/">洋流舞台</a>
     <a class="link-btn back-to-map" href="/puma_oshen_wave/">返回地圖</a>
     </nav>

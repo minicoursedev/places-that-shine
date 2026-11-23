@@ -1,17 +1,19 @@
 import { designerMetadata, designerStructuredData, serializeStructuredData, publicUrl } from './profile-seo.js?v=20261114-designer-title';
-import { hallPageForCode, hallPageForPath } from './hall-pages.js?v=20261123-webp';
+import { hallPageForCode, hallPageForPath } from './hall-pages.js?v=20261124-hall-seo';
 import { browserOrigin } from './config.js';
 
 export const designerRoot = '/designers/';
 export const designerPath = (id, hall) =>
   `${designerRoot}${encodeURIComponent(id)}/${hall ? `?hall=${encodeURIComponent(hall)}` : ''}`;
 export const designerSharePath = (id, hall) => `${designerPath(id)}at/${encodeURIComponent(hall)}/`;
-export const designerHallRoot = code => hallPageForCode(code)?.path || designerRoot;
+const defaultHall = hallPageForCode('O');
+export const designerHallRoot = code => (hallPageForCode(code) || defaultHall).path;
 export { hallPageForPath };
 export function designerWalkPath(code, boothId = null) {
-  const hall = hallPageForCode(code?.[0]);
-  const root = hall?.path || designerRoot;
-  return hall && code === `${hall.code}01` && !boothId ? root : `${root}#/walk/${boothId || code || ''}`;
+  const hall = hallPageForCode(code?.[0]) || defaultHall;
+  const target = boothId || code;
+  if (!target || (!boothId && code === `${hall.code}01`)) return hall.path;
+  return `${hall.path}#/walk/${target}`;
 }
 export function designerBoothUrl(id, base = browserOrigin()) {
   return new URL(designerPath(id), base).href;
@@ -28,13 +30,6 @@ export function resolveDesignerRoute(url, { boot = false } = {}) {
   if (hall && !mode) return { mode: 'walk', target: `${hall.code}01`, then: undefined };
   return { mode, target, then };
 }
-export const designerMarketPreview = {
-  image: '/designers/assets/oshen-hall-o01-og.webp',
-  alt: '洋流設計師館 O01 的第 05 至 09 攤：Koi Design Studio 扣乙図設、駱 乃康 Lo NaiKang、GIKO 吉可小賣部、顧紫蝶與阿猛、皮皮手作',
-  width: 1200,
-  height: 630,
-  type: 'image/webp',
-};
 const exhibitionImage = '/designers/assets/exhibition-og.webp';
 const initialPreview = typeof document === 'undefined' ? null : {
   id: document.documentElement.dataset.designerProfile,
@@ -46,12 +41,12 @@ const initialPreview = typeof document === 'undefined' ? null : {
 };
 
 export function updateDesignerMetadata(designer = null, booth = {}) {
+  const hall = hallPageForPath(location.pathname) || defaultHall;
   const metadata = designer && designerMetadata(designer);
-  const hall = designer ? null : hallPageForPath(location.pathname);
-  const title = metadata ? metadata.title : hall?.title || '發光的設計師｜探索設計師、創作作品與線上市集';
+  const title = metadata ? metadata.title : hall.title;
   const shareTitle = metadata ? metadata.shareTitle : title;
-  const description = metadata ? metadata.description : hall?.description || '走進發光的設計師線上市集，瀏覽設計師介紹、創作作品與官方社群。透過設計師列表、地圖與互動攤位，找到喜歡的創作者。';
-  const canonical = new URL(designer ? designerPath(designer.id) : hall?.path || designerRoot, browserOrigin()).href;
+  const description = metadata ? metadata.description : hall.description;
+  const canonical = new URL(designer ? designerPath(designer.id) : hall.path, browserOrigin()).href;
   const canonicalLink = document.querySelector('link[rel="canonical"]');
   const onSharePath = designer && location.pathname.startsWith(`${designerPath(designer.id)}at/`);
   const socialUrl = onSharePath ? new URL(location.pathname, browserOrigin()).href : canonical;
@@ -64,9 +59,13 @@ export function updateDesignerMetadata(designer = null, booth = {}) {
     tag.content = value;
   }
   const avatar = publicUrl(designer?.avatar, canonical);
-  const preview = !designer && !hall ? designerMarketPreview
-    : designer?.og ? { ...designer.og, image: designer.og.url } : designer && initialPreview?.id === designer.id ? initialPreview : avatar
-    ? { image: avatar } : hall?.image ? hall : { image: exhibitionImage, width: '2622', height: '1206', type: 'image/webp' };
+  let preview = hall;
+  if (designer) {
+    if (designer.og) preview = { ...designer.og, image: designer.og.url };
+    else if (initialPreview?.id === designer.id) preview = initialPreview;
+    else if (avatar) preview = { image: avatar };
+    else preview = { image: exhibitionImage, width: '2622', height: '1206', type: 'image/webp' };
+  }
   const image = publicUrl(preview.image, canonical) || new URL(exhibitionImage, canonical).href;
   const imageAlt = preview.alt || (designer && avatar ? `${designer.name}的頭像` : '發光的設計師市集逛攤畫面');
   document.querySelector('meta[name="twitter:card"]').content = designer ? 'summary' : 'summary_large_image';

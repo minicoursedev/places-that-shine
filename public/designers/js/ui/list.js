@@ -2,11 +2,11 @@
 // Fill each card’s logo and works gallery as it scrolls into view.
 import { state, toast, findBoothIn } from '../state.js';
 import { loadSearch, loadAisle, aisleOfBooth } from '../data.js?v=20261119-recall-hall';
-import { goToBooth } from '../nav.js?v=20261123-webp';
-import { openBooth } from './booth.js?v=20261123-webp';
+import { goToBooth } from '../nav.js?v=20261124-oshen-entry';
+import { openBooth } from './booth.js?v=20261124-oshen-entry';
 import { thumbnailUrl, retryOriginal } from '../images.js';
 import { loadProducts } from '../products.js?v=20261030-pinned-work';
-import { designerPath, designerWalkPath } from '../routes.js?v=20261123-webp';
+import { designerPath, designerWalkPath } from '../routes.js?v=20261124-oshen-entry';
 
 const PAGE = 60;
 const TYPES = ['漫畫', '插圖', '小說', '攝影', '有聲'];
@@ -30,6 +30,7 @@ export function mountList(container) {
   container.innerHTML = `
     <div class="ls-wrap">
       <h1 class="ls-title">設計師列表</h1>
+      <p class="ls-intro" hidden></p>
       <form class="ls-filters" role="search">
         <label class="ls-search"><span class="ls-sr">搜尋</span>
           <input type="search" name="q" placeholder="搜尋設計師名稱、攤位編號" autocomplete="off" enterkeyhint="search"></label>
@@ -320,7 +321,11 @@ export function mountList(container) {
 
   zoneSel.addEventListener('change', () => { f.zone = zoneSel.value; refresh(); });
   return {
-    show({ hall } = {}) {
+    show({ hall, page } = {}) {
+      $('.ls-title').textContent = page?.heading || page?.name || '設計師列表';
+      const intro = $('.ls-intro');
+      intro.textContent = page?.description || '';
+      intro.hidden = !intro.textContent;
       const nextHall = halls().some(item => item.code === hall) ? hall : '';
       const filterChanged = nextHall !== entryHall && (nextHall !== '' || f.hall === entryHall);
       if (filterChanged) selectHall(nextHall);

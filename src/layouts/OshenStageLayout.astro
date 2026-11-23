@@ -1,5 +1,6 @@
 ---
 import { catalogue, stageBase, stagePath, hallPath } from '../lib/oshen-stage';
+import { designerHallRoot } from '../../public/designers/js/routes.js';
 interface Props { hallId?: string; videoId?: string }
 const { hallId, videoId } = Astro.props;
 const video = catalogue.stages.find(stage => stage.id === videoId);
@@ -43,7 +44,7 @@ const canonical = new URL(video ? stagePath(video.id) : hall ? hallPath(hall.id)
       <button type="button" data-mode="list" aria-pressed="false">影片列表</button>
       <button type="button" data-mode="map" aria-pressed="false">舞台地圖</button>
     </div>
-    <nav class="stage-links" aria-label="洋流網站"><a class="link-btn" href="/puma_oshen_wave/designer/">洋流設計師</a><a class="link-btn" href="/puma_oshen_wave/">返回地圖</a></nav>
+    <nav class="stage-links" aria-label="洋流網站"><a class="link-btn" href={designerHallRoot('O')}>洋流設計師</a><a class="link-btn" href="/puma_oshen_wave/">返回地圖</a></nav>
     </nav>
   </details>
   <main class="stage" id="stage-walk" hidden>

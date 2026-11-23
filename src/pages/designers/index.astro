@@ -1,4 +1,151 @@
 ---
-import Layout from '../../layouts/OshenDesignerLayout.astro';
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import { hallPageForCode, hallPages } from '../../../public/designers/js/hall-pages.js';
+
+const oshenHall = hallPageForCode('O')!;
+const amateurHall = hallPageForCode('A')!;
+const websiteHall = hallPageForCode('W')!;
+const recallHall = hallPageForCode('R')!;
+const hallPaths = Object.fromEntries(hallPages.map(({ code, path }) => [code, path]));
+
+const title = '發光的設計師';
+const overviewTitle = `${title}展館總覽`;
+const description = '按時期探索洋流設計師、洋流愛好者、洋流網站、鏟子超人、大罷免與青鳥行動六個展館，瀏覽創作者與作品。';
+const shareImage = new URL('/media/shining-designers-og.webp', Astro.site);
+const shareImageAlt = '發光的設計師。我相信光，是為了巷弄間的歡騰，不是為了墳前的孤寂';
 ---
-<Layout />
+
+<SiteLayout title={overviewTitle} description={description} active="designers" analytics={false}>
+  <Fragment slot="head">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={new URL('/designers/', Astro.site)} />
+    <meta property="og:title" content={overviewTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={shareImage} />
+    <meta property="og:image:type" content="image/webp" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={shareImageAlt} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content={shareImage} />
+    <meta name="twitter:image:alt" content={shareImageAlt} />
+  </Fragment>
+  <script slot="head" define:vars={{ hallPaths }}>
+    function redirectLegacyMarket() {
+      const [mode, target] = location.hash.replace(/^#\/?/, '').split('/');
+      if (!['walk', 'list', 'map', 'designer'].includes(mode)) return false;
+
+      const hall = mode === 'walk' ? hallPaths[target?.[0]] : hallPaths.O;
+      location.replace((hall || hallPaths.O) + location.search + location.hash);
+      return true;
+    }
+    if (!redirectLegacyMarket()) {
+      const analytics = document.createElement('script');
+      analytics.src = '/assets/analytics.js?v=20261019-content-group';
+      document.head.appendChild(analytics);
+    }
+    window.addEventListener('hashchange', redirectLegacyMarket);
+  </script>
+  <section class="directory page-width" aria-labelledby="designer-period-title">
+    <div class="directory-header">
+      <a class="back-link" href="/#explore"><span aria-hidden="true">←</span> 回探索首頁</a>
+      <h1 id="designer-period-title">{title}</h1>
+    </div>
+    <nav class="period-menu" aria-label="設計師時期">
+      <div class="period-with-intro">
+        <a class="entry" href={oshenHall.path}>
+          <span class="entry-info">
+            <span class="period-label">
+              <img class="period-logo" src="/media/oshen-2026-logo.webp" width="256" height="181" alt="" />
+              <span>2026洋流時期</span>
+            </span>
+            <span class="entry-arrow" aria-hidden="true">→</span>
+          </span>
+        </a>
+        <details class="period-intro">
+          <summary>洋流時期簡介</summary>
+          <div class="period-intro-copy">
+            <p>由 Doctor Design 的 Ken 與許家綸共同操刀的「洋流」，掀起了一場前所未見的選舉美學運動。</p>
+            <p>面對台灣選戰長期累積的壓抑氛圍，大眾迫切渴望看見未來的希望；而沈伯洋以正面選戰為主軸、讓政策回歸討論核心的做法，也為全台選舉風氣帶來轉機。</p>
+            <p>2026 年 8 月 18 日，兩位設計師在寧夏夜市首發500張「洋流海報」，成功讓這股由民間自發的設計能量走入大眾視野。在同年 10 月 4 日沈伯洋競選總部成立之前，競選團隊便主動與兩人接洽授權。</p>
+            <p>藉由彈性的多元授權，洋流設計迅速向各地擴散。隨著品牌效應發酵，這套視覺系統也在短時間內超越設計本身，發展為遍及全台的社會運動。</p>
+            <p>本篇以「洋流時期」為時間軸，梳理台北、新北、台中等地候選人的競選視覺與創作者群像；凡於該時期問世的競選視覺，不論是否運用洋流元素，均在本次收錄之列。</p>
+          </div>
+        </details>
+        <div class="period-hall-links">
+          <a class="period-hall-link" href={websiteHall.path}>{websiteHall.name} <span aria-hidden="true">→</span></a>
+          <a class="period-hall-link" href={amateurHall.path}>{amateurHall.name} <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+      <div class="period-with-intro">
+        <a class="entry" href="/designers/halls/shovel-heroes/">
+          <span class="entry-info">
+            <span class="period-label">
+              <img class="period-logo period-logo-contained" src="/media/library/yuan-art-space/4.webp" width="637" height="800" alt="" />
+              <span>2025 鏟子超人</span>
+            </span>
+            <span class="entry-arrow" aria-hidden="true">→</span>
+          </span>
+        </a>
+        <details class="period-intro">
+          <summary>鏟子超人簡介</summary>
+          <div class="period-intro-copy">
+            <p>2025 年 9 月 23 日，花蓮馬太鞍溪堰塞湖溢流，大量泥沙吞沒花蓮光復鄉。花蓮地檢署認為，災前撤離未落實，加重了傷亡，並就相關疏失提起公訴。<a href="https://www.hlc.moj.gov.tw/53445/53474/53475/1376985/post">花蓮地檢署新聞稿</a></p>
+            <p>同年 9 月 25 日，蘇睿丞與父親蘇進雄前往光復協助清淤，並拍下「買張車票來玩泥巴」、「來找一戶喜歡的玩泥巴」的邀約，把原本民眾想像中的高難度救災，轉化成人人都能參與的事，迅速點燃全台的熱情。</p>
+            <p>透過去中心化的社群串聯，大批民眾帶著自備物資與工具湧入花蓮光復。隨著參與人數增加，志工在當地形成自發、有組織的後勤體系，成為災後重建的重要力量。</p>
+            <p>這段邀約也讓滷房研製所的前三鐵國手蘇睿丞與父親蘇進雄，被譽為「一號鏟子超人」。</p>
+            <p><a href="https://www.threads.com/@suuuray/post/DPAvB6TgbZI">觀看救災邀約（Threads）</a><br />
+              <a href="https://www.youtube.com/watch?v=jIj2521m7kE">觀看蘇睿丞人物專訪（YouTube）</a></p>
+          </div>
+        </details>
+      </div>
+      <a class="entry" href={recallHall.path}>
+        <span class="entry-info">
+          <span class="period-label">
+            <img class="period-logo period-logo-contained" src={recallHall.image} width={recallHall.width} height={recallHall.height} alt="" />
+            <span>{recallHall.name}</span>
+          </span>
+          <span class="entry-arrow" aria-hidden="true">→</span>
+        </span>
+      </a>
+      <div class="period-with-intro">
+        <a class="entry" href="/designers/halls/bluebird-action/">
+          <span class="entry-info">
+            <span class="period-label">
+              <img class="period-logo period-logo-contained" src="/media/bluebird-action-2024-logo.webp" width="800" height="800" alt="" />
+              <span>2024 青鳥行動</span>
+            </span>
+            <span class="entry-arrow" aria-hidden="true">→</span>
+          </span>
+        </a>
+        <details class="period-intro">
+          <summary>青鳥行動簡介</summary>
+          <div class="period-intro-copy">
+            <p>2024 年 5 月，台灣經濟民主連合、台灣公民陣線、公投護台灣聯盟、台灣人權促進會、地球公民基金會等超過 40 個公民團體，共同發起 5 月 21 日的立法院外集結。這一系列抗議後來被稱為「青鳥行動」。</p>
+            <p>當時，國民黨與民眾黨在立法院合計掌握過半席次，並推動《立法院職權行使法》修正案。公民團體質疑修法缺乏充分討論，可能讓立法院的權力過度擴張，破壞權力分立，因此號召民眾到立法院周邊集結抗議。</p>
+            <p>5 月 24 日，台灣民主實驗室等超過 60 個公民團體再次號召民眾到立法院外集結。當晚主辦單位估計，立法院周邊的集結人數達 10 萬人。</p>
+            <p><a href="https://www.civilmedia.tw/archives/125880">5 月 21 日行動聲明</a><br />
+              <a href="https://www.civilmedia.tw/event/【採訪通知】國會濫權-立院集結-0524行動">5 月 24 日採訪通知</a></p>
+          </div>
+        </details>
+      </div>
+    </nav>
+  </section>
+</SiteLayout>
+
+<style>
+  .period-menu { display: grid; gap: .75rem; }
+  .period-menu .entry-info { font: 800 1.3rem/1.35 var(--serif); }
+  .period-label { display: flex; align-items: center; justify-content: flex-start; gap: .75rem; }
+  .period-logo { display: block; flex: none; width: clamp(3.5rem, 17vw, 5.5rem); height: auto; border-radius: 3px; }
+  .period-logo-contained { aspect-ratio: 256 / 181; object-fit: contain; }
+  .period-with-intro > .entry { border-radius: 5px 5px 0 0; }
+  .period-hall-links { display: flex; flex-wrap: wrap; }
+  .period-hall-link { display: inline-flex; align-items: center; gap: .4rem; min-height: 44px; padding-inline: 1.15rem; color: var(--accent); font-weight: 600; }
+  .period-intro { background: #fdf8ef; border: 1px solid var(--line); border-top: 0; border-radius: 0 0 5px 5px; }
+  .period-intro summary { padding: .65rem 1.15rem; color: var(--accent); font-weight: 600; cursor: pointer; }
+  .period-intro summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .period-intro-copy { padding: 0 1.15rem 1.15rem; line-height: 1.8; }
+  .period-intro-copy p { margin: 0; }
+  .period-intro-copy p + p { margin-top: .8rem; }
+</style>
