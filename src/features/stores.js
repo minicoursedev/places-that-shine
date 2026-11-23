@@ -448,9 +448,9 @@ function storeCoordinates(shop) {
 
 async function createStoreMap(container, message, mapButtons, sheet, mobile, onSelectMobileStore) {
   await Promise.all([
-    loadAsset('link', '/vendor/leaflet/leaflet.css'),
+    loadAsset('link', '/vendor/leaflet/leaflet.css?v=20261123-webp'),
     loadAsset('link', '/vendor/leaflet-markercluster/MarkerCluster.css'),
-    loadAsset('script', '/vendor/leaflet/leaflet.js'),
+    loadAsset('script', '/vendor/leaflet/leaflet.js?v=20261123-webp'),
   ]);
   await loadAsset('script', '/vendor/leaflet-markercluster/leaflet.markercluster.js');
   const L = globalThis.L;

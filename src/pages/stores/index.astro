@@ -8,7 +8,7 @@ import '../../styles/store-work-preview.css';
 
 const title = '發光的店家';
 const description = '發光的店家（我們的洋流地圖）整理台灣各地的小店與生活服務，可搜尋店家並查看到訪資訊與地圖位置。';
-const shareImage = new URL('/media/shining-stores-og-shadow-50.jpg', Astro.site);
+const shareImage = new URL('/media/shining-stores-og-shadow-50.webp', Astro.site);
 const shareImageAlt = '發光的店家。我相信光，是為了巷弄間的歡騰，不是為了墳前的孤寂。巷弄夜景與台灣夜間光點示意。';
 const compareText = new Intl.Collator('zh-Hant-TW').compare;
 const byCity = new Map<string, (typeof stores)[number][]>();
@@ -27,7 +27,7 @@ const storesByCity = [...byCity].sort(([a], [b]) => compareText(a, b));
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={shareImage} />
-    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:type" content="image/webp" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content={shareImageAlt} />

@@ -128,7 +128,7 @@ async function renderCard(designer, input, fontDirectory) {
   ];
   return sharp({ create: {
     width: OG_WIDTH, height: OG_HEIGHT, channels: 3, background: '#ffffff',
-  } }).composite(layers).jpeg({ quality: 90, chromaSubsampling: '4:4:4' }).toBuffer();
+  } }).composite(layers).webp({ quality: 90, effort: 6, smartSubsample: true }).toBuffer();
 }
 
 export async function generateDesignerOg({ root, site, directory, urlPrefix = '/designers/assets/og/' }) {
@@ -150,9 +150,9 @@ export async function generateDesignerOg({ root, site, directory, urlPrefix = '/
       if (!image) return [id, fallback[id]];
       const buffer = await renderCard(designer, image.input, fontDirectory);
       const version = createHash('sha256').update(buffer).digest('hex').slice(0, 16);
-      await writeFile(resolve(outputDirectory, `${id}.jpg`), buffer);
+      await writeFile(resolve(outputDirectory, `${id}.webp`), buffer);
       return [id, {
-        url: `${urlPrefix}${id}.jpg?v=${version}`, width: OG_WIDTH, height: OG_HEIGHT, type: 'image/jpeg',
+        url: `${urlPrefix}${id}.webp?v=${version}`, width: OG_WIDTH, height: OG_HEIGHT, type: 'image/webp',
         alt: `${plainText(designer.name)}｜${image.label}、名字${plainText(designer.description) ? '與簡介' : ''}`,
       }];
     }));
