@@ -37,6 +37,15 @@ const entries = category ? storyEntries.filter(entry => entry.category === categ
             </p>
             <div class="index-copy">
               <h2 id={`${entry.id}-title`}>{entry.title}</h2>
+              {entry.category === 'media' && (
+                <p class="index-founding">
+                  <span>成立時間</span>
+                  {entry.founding?.description ?? '尚待查證'}
+                  {entry.founding?.sources.map(({ label, href }) => (
+                    <a href={href} aria-label={`${entry.title}成立時間資料來源 ${label}`}>{label}</a>
+                  ))}
+                </p>
+              )}
               <p>{entry.description}</p>
               {entry.movement && (
                 <p class="index-movement">
@@ -125,11 +134,13 @@ const entries = category ? storyEntries.filter(entry => entry.category === categ
     font: 550 1rem/1.8 var(--serif);
     overflow-wrap: anywhere;
   }
+  .index-founding span,
   .index-movement span {
     margin-inline-end: .4rem;
     color: var(--ink);
     font-weight: 700;
   }
+  .index-founding a,
   .index-movement a { margin-inline-start: .3rem; }
   .index-copy a {
     color: var(--accent);

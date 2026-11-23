@@ -20,6 +20,10 @@ interface StoryEntry {
     description: string;
     href: string;
   };
+  founding?: {
+    description: string;
+    sources: { label: string; href: string }[];
+  };
 }
 
 export const storyEntries: StoryEntry[] = [
@@ -296,6 +300,10 @@ export const storyEntries: StoryEntry[] = [
     title: '南方工作小組',
     source: 'Threads',
     description: '從臺南出發的志工團隊，參與街頭志工行動與跨區支援，也整理並串聯在地友善店家。',
+    founding: {
+      description: '尚未確認，2025 年 4 月已有公開活動紀錄。',
+      sources: [{ label: '行動歷程', href: 'https://svp.minicourse.dev/#story' }],
+    },
     href: 'https://www.threads.com/@southvolunteerproject',
   },
   {
@@ -305,6 +313,13 @@ export const storyEntries: StoryEntry[] = [
     title: '台派寶寶 Taiwan b.b.',
     source: 'Threads',
     description: '以原創角色分享台灣文化，推出貼紙與 LINE 貼圖，也串連在地店家並舉辦展覽與活動。',
+    founding: {
+      description: '官網記載 2024 年誕生，另一份官方簡介記載 2025 年共同創立。',
+      sources: [
+        { label: '品牌官網', href: 'https://taiwanbb.com/' },
+        { label: '官方簡介', href: 'https://portaly.cc/taiwanbb/pages/about' },
+      ],
+    },
     href: 'https://www.threads.com/@taiwan_bb',
   },
   {
@@ -314,6 +329,10 @@ export const storyEntries: StoryEntry[] = [
     title: '沃草 Watchout',
     source: 'Threads',
     description: '從國會監督起步，透過新聞報導與專題追蹤立法院、選舉及其他臺灣公共議題。',
+    founding: {
+      description: '2013 年 11 月',
+      sources: [{ label: '影響力報告', href: 'https://watchout.tw/downloads/watchout-report.pdf' }],
+    },
     href: 'https://www.threads.com/@watchout.tw',
   },
 ];
