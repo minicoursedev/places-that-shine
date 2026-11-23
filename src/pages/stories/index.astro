@@ -1,6 +1,8 @@
 ---
 import SiteLayout from '../../layouts/SiteLayout.astro';
 
+const bookTitle = '努力發著光';
+const coverPhoto = '/assets/storybook/reading-room.webp';
 const categories = ['人', '事', '物'];
 const entries = [
   {
@@ -36,15 +38,8 @@ const pages = [
     id: 'story-front-matter',
     title: '卷首',
     description: '這本故事書，留給店家、設計師與舞台之外，仍在努力發光的人、事與物。',
-    indexCategories: ['人', '事'],
-    facingIndex: { id: 'story-contents', label: '第 2 頁 · 物' },
   },
-  {
-    id: 'story-contents',
-    title: '篇目',
-    indexCategories: ['物'],
-    facingIndex: { id: 'story-front-matter', label: '第 1 頁 · 人、事' },
-  },
+  { id: 'story-contents', title: '篇目' },
   ...categories.flatMap(category => entries.filter(entry => entry.category === category)),
 ].map((page, index) => ({ ...page, number: index + 1 }));
 
@@ -54,31 +49,41 @@ const contents = categories.map(category => ({
 }));
 ---
 
-<SiteLayout title="努力發著光" description="收錄店家、設計師與舞台之外，仍在努力發光的人、事與物。">
-  <section class="story-shelf page-width" aria-labelledby="story-title">
-    <h1 id="story-title" class="visually-hidden">努力發著光</h1>
+<SiteLayout title={bookTitle} description="收錄店家、設計師與舞台之外，仍在努力發光的人、事與物。">
+  <section class="story-shelf" aria-labelledby="story-title">
+    <h1 id="story-title" class="visually-hidden">{bookTitle}</h1>
     <details class="storybook" data-storybook>
       <summary>
         <span class="book-cover">
-          <span class="cover-star" aria-hidden="true">✦</span>
-          <span class="cover-title" aria-hidden="true">努力發著光</span>
-          <span class="open-book">翻開故事書 <span aria-hidden="true">→</span></span>
+          <span class="cover-copy">
+            <span class="cover-categories" aria-hidden="true">人 · 事 · 物</span>
+            <span class="cover-title" aria-hidden="true">{bookTitle}</span>
+            <span class="open-book">翻開故事書</span>
+          </span>
+          <img class="cover-photo" src={coverPhoto} alt="" fetchpriority="high" />
         </span>
-        <span class="close-book"><span aria-hidden="true">←</span> 闔上故事書</span>
+        <span class="close-book">闔上故事書</span>
       </summary>
+      <a class="book-index-link" href="#story-contents">回篇目</a>
       <div class="book-spread">
         {pages.map(page => (
-          <section class="book-page" id={page.id} data-book-page aria-labelledby={`${page.id}-title`}>
+          <section class:list={['book-page', {
+            'book-intro': page.id === 'story-front-matter',
+            'book-directory': page.id === 'story-contents',
+            'book-entry': page.category,
+          }]} id={page.id} data-book-page aria-labelledby={`${page.id}-title`}>
             <header class="book-page-heading">
               {page.category && <p class="book-page-category">{page.category}／{page.type}</p>}
               <h2 id={`${page.id}-title`} tabindex="-1">{page.title}</h2>
               {page.subtitle && <p class="book-page-subtitle">{page.subtitle}</p>}
             </header>
+            {page.id === 'story-front-matter' && <p class="frontispiece-title" aria-hidden="true">{bookTitle}</p>}
             {page.description && <p>{page.description}</p>}
-            {page.indexCategories && (
+            {page.id === 'story-front-matter' && <img class="frontispiece-photo" src={coverPhoto} alt="" />}
+            {page.id === 'story-contents' && (
               <div class="book-contents">
-                {contents.filter(({ category }) => page.indexCategories?.includes(category)).map(({ category, entries }) => (
-                  <section>
+                {contents.map(({ category, entries }) => (
+                  <section class="book-chapter">
                     <h3>{category}</h3>
                     {entries.length ? (
                       <ul>
@@ -96,7 +101,6 @@ const contents = categories.map(category => ({
                 ))}
               </div>
             )}
-            {page.facingIndex && <a class="facing-index" href={`#${page.facingIndex.id}`}>{page.facingIndex.label}</a>}
             {page.href && <a class="story-source" href={page.href} aria-label={`前往原站 ${page.title}`}>前往原站</a>}
             <footer class="page-number">第 {page.number} 頁</footer>
           </section>
@@ -125,7 +129,7 @@ const contents = categories.map(category => ({
   if (book && pagination && previous && next) {
     const pages = Array.from(book.querySelectorAll<HTMLElement>('[data-book-page]'));
     const links = Array.from(pagination.querySelectorAll<HTMLAnchorElement>('[data-book-page-link]'));
-    const narrow = window.matchMedia('(max-width: 620px)');
+    const narrow = window.matchMedia('(max-width: 600px)');
 
     const showPages = (moveFocus = false) => {
       const targetIndex = pages.findIndex(page => `#${page.id}` === window.location.hash);
@@ -164,10 +168,18 @@ const contents = categories.map(category => ({
 
 <style>
   .story-shelf {
+    --book-ink: #243330;
+    --book-accent: #234b48;
+    --book-muted: #58655c;
+    --book-paper: #fffcf3;
+    --book-rule: #ddd7c5;
     display: grid;
     align-items: center;
+    width: min(100% - clamp(2rem, 7vw, 8rem), 68rem);
     min-height: 72vh;
-    padding-block: clamp(2rem, 6vw, 5rem);
+    margin-inline: auto;
+    padding-block: clamp(1.75rem, 4.8vw, 4.75rem);
+    color: var(--book-ink);
   }
 
   .visually-hidden {
@@ -181,176 +193,248 @@ const contents = categories.map(category => ({
     white-space: nowrap;
   }
 
-  .storybook { margin-inline: auto; width: min(100%, 23rem); }
-  .storybook[open] { width: min(100%, 52rem); }
+  .storybook { position: relative; width: min(100%, 57rem); margin-inline: auto; }
+  .storybook[open] { width: 100%; }
   .storybook summary { display: block; list-style: none; cursor: pointer; }
   .storybook summary::-webkit-details-marker { display: none; }
-  .storybook summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
+  .storybook summary:focus-visible { outline: 2px solid var(--book-accent); outline-offset: 5px; }
 
   .book-cover {
-    position: relative;
-    isolation: isolate;
     display: grid;
-    justify-items: center;
-    align-content: center;
-    gap: 1.15rem;
-    min-height: clamp(20rem, 41vw, 29rem);
-    padding: 2.4rem 1.6rem 2.4rem 2.2rem;
-    color: #f5e0b7;
-    background:
-      linear-gradient(90deg, #242032, #413644 5%, transparent 7%),
-      radial-gradient(ellipse at 53% 32%, #473a4b, #2b2638 67%);
-    border: 1px solid #332731;
-    border-radius: 4px 13px 13px 4px;
-    box-shadow: 4px 2px #f3dec1, 8px 4px #594435, 9px 10px 22px #30221733;
-    text-align: center;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+    height: clamp(20rem, 46vw, 30rem);
+    overflow: hidden;
+    isolation: isolate;
+    border: 1px solid #1a3738;
+    border-radius: .3rem .7rem .7rem .3rem;
+    color: #fff8e7;
+    background: linear-gradient(115deg, #152f32, #244b49);
+    box-shadow: 0 7px 0 -3px #e1d5bd, 0 10px 0 -4px #2e4943, 0 19px 38px #1b34352c;
   }
 
-  .book-cover::before {
-    content: '';
-    position: absolute;
-    z-index: -1;
-    inset: .95rem .85rem .95rem 1.35rem;
-    border: 1px solid #dbb97c77;
-    border-radius: 2px 8px 8px 2px;
+  .cover-copy {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    min-width: 0;
+    padding: clamp(1.5rem, 5.25vw, 4.5rem);
+    border-inline-start: .45rem solid #183638;
+    box-shadow: inset 1px 0 #b99e6e56;
   }
 
-  .cover-star { color: #edc081; font-size: 2.2rem; line-height: 1; }
-  .cover-title { font: 800 clamp(1.65rem, 7vw, 3rem)/1.3 var(--serif); letter-spacing: .1em; }
-  .open-book, .close-book { display: inline-flex; align-items: center; gap: .55rem; font-size: .875rem; font-weight: 700; }
-  .open-book { padding: .55rem .8rem; border: 1px solid #dbb97c88; border-radius: 3px; }
-  .storybook summary:hover .open-book { color: #302539; background: #f5e0b7; }
+  .cover-categories {
+    color: #e4cda5;
+    font: 650 .875rem/1.45 var(--sans);
+    letter-spacing: .16em;
+  }
+
+  .cover-title {
+    margin-block: .7rem clamp(1.35rem, 3vw, 2rem);
+    font: 800 clamp(2.1rem, 5.65vw, 4.8rem)/1.22 var(--serif);
+    letter-spacing: .035em;
+    text-wrap: balance;
+  }
+
+  .open-book {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.75rem;
+    padding-inline: 1.15rem;
+    border: 1px solid #dfc595;
+    border-radius: .18rem;
+    color: #213a36;
+    background: #dfc595;
+    font: 750 .875rem/1.45 var(--sans);
+  }
+
+  .storybook summary:hover .open-book { background: #f1ddba; }
+  .cover-photo { display: block; width: 100%; height: 100%; min-height: 0; object-fit: cover; object-position: center 56%; }
   .storybook:not([open]) .close-book,
   .storybook:not([open]) .book-spread,
   .storybook[open] .book-cover { display: none; }
-  .storybook[open] summary { width: fit-content; margin: 0 0 .9rem auto; }
-  .close-book { min-height: 2.75rem; padding-inline: .75rem; color: var(--accent); }
-  .storybook summary:hover .close-book { text-decoration: underline; text-underline-offset: .25em; }
+  .storybook[open] summary { width: fit-content; margin: 0 0 .75rem auto; }
+
+  .close-book, .book-index-link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.75rem;
+    padding-inline: .75rem;
+    color: var(--book-accent);
+    font: 700 .875rem/1.45 var(--sans);
+    text-decoration: underline;
+    text-decoration-color: #9bb1a5;
+    text-underline-offset: .23em;
+  }
+
+  .close-book:hover, .book-index-link:hover { text-decoration-color: currentColor; }
+  .book-index-link { position: absolute; inset-block-start: 0; inset-inline-start: 0; }
+  .storybook:not([open]) .book-index-link,
+  .storybook:has(.book-directory:not([hidden])) .book-index-link { display: none; }
 
   .book-spread {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    border: 1px solid #c9b79e;
-    border-radius: .45rem;
-    box-shadow: 0 5px #e0d0b7, 0 7px #998167, 0 12px 22px #30221722;
+    overflow: hidden;
+    border: 1px solid #d3cbb6;
+    border-radius: .3rem;
+    background: var(--book-paper);
+    box-shadow: 0 6px 0 -3px #e6ddc8, 0 9px 0 -4px #beb39b, 0 20px 38px #2d372b16;
   }
 
+  .book-page, .book-endpaper { background-color: var(--book-paper); }
   .book-page {
     display: flex;
     flex-direction: column;
-    min-height: clamp(19rem, 38vw, 25rem);
-    padding: clamp(1.65rem, 4.5vw, 3.5rem) clamp(1rem, 3.4vw, 3.2rem);
-    padding-block-end: clamp(1.25rem, 3vw, 2rem);
-    background: #fff9ed;
+    min-width: 0;
+    min-height: clamp(22.5rem, 42vw, 34rem);
+    padding: clamp(1.35rem, 3.6vw, 3.5rem) clamp(1.1rem, 3.4vw, 3.5rem) 1.15rem;
   }
 
-  .book-page:nth-child(odd) {
-    background-image: linear-gradient(90deg, transparent 87%, #bba58724);
-    border-radius: .4rem 0 0 .4rem;
-  }
-
+  .book-page:nth-child(odd) { background-image: linear-gradient(270deg, #82775414, transparent 1.55rem); }
   .book-page:nth-child(even), .book-endpaper {
-    background: #fff9ed linear-gradient(90deg, #bba58730, transparent 13%);
-    border-inline-start: 1px solid #c9b79e;
-    border-radius: 0 .4rem .4rem 0;
+    border-inline-start: 1px solid #c8c0aa;
+    background-image: linear-gradient(90deg, #82775418, transparent 1.45rem);
   }
   .book-page[hidden] + .book-endpaper { display: none; }
 
-  .book-page-heading {
-    margin: 0 0 1.05rem;
-    padding-bottom: .65rem;
-    border-bottom: 1px solid var(--line);
-  }
-
+  .book-page-heading { margin: 0 0 clamp(.9rem, 1.8vw, 1.4rem); }
   .book-page-heading h2 {
     width: fit-content;
+    max-width: 100%;
     margin: 0;
-    color: var(--ink);
-    font: 800 clamp(1.4rem, 3.75vw, 2rem)/1.35 var(--serif);
-    letter-spacing: .035em;
+    color: var(--book-ink);
+    font: 800 clamp(1.6rem, 3.2vw, 2.7rem)/1.35 var(--serif);
+    letter-spacing: .02em;
+    text-wrap: balance;
   }
-  .book-page-heading h2:focus-visible { outline: 1px solid var(--accent); outline-offset: .18em; }
+  .book-page-heading h2:focus-visible { outline: 2px solid var(--book-accent); outline-offset: .18em; }
+  .book-page p { margin: 0; font: 550 1rem/1.9 var(--serif); }
+  .book-page-heading .book-page-category {
+    margin-block-end: .85rem;
+    color: var(--book-accent);
+    font: 740 .875rem/1.5 var(--sans);
+    letter-spacing: .06em;
+  }
+  .book-page-heading .book-page-subtitle { margin-block-start: .55rem; color: var(--book-muted); }
 
-  .book-page p { margin: 0; font: 600 1rem/1.9 var(--serif); }
-  .book-page-heading .book-page-category { margin-block-end: .35rem; color: var(--muted); font-size: .875rem; }
-  .book-page-heading .book-page-subtitle { margin-block-start: .35rem; color: var(--muted); }
+  .book-entry .book-page-heading {
+    padding-block-end: 1rem;
+    border-block-end: 1px solid var(--book-rule);
+  }
 
-  .book-contents { display: grid; gap: 1rem; }
-  .book-page > p + .book-contents { margin-block-start: 1.25rem; }
-  .book-contents h3 { margin: 0 0 .35rem; color: var(--accent); font: 800 1rem/1.4 var(--serif); }
-  .book-contents ul { display: grid; gap: .5rem; margin: 0; padding: 0; list-style: none; }
-  .book-contents .book-contents-empty { color: var(--muted); font-size: .875rem; }
+  .book-intro { background-color: #f5f0e1; }
+  .book-intro .book-page-heading { margin-block-end: .6rem; }
+  .book-intro .book-page-heading h2 { color: var(--book-muted); font: 740 .875rem/1.5 var(--sans); letter-spacing: .16em; }
+  .book-intro .frontispiece-title {
+    margin-block-end: .75rem;
+    color: var(--book-accent);
+    font: 800 clamp(1.9rem, 4vw, 3.75rem)/1.28 var(--serif);
+    letter-spacing: .025em;
+    text-wrap: balance;
+  }
+  .frontispiece-photo {
+    display: block;
+    width: 100%;
+    aspect-ratio: 2.05;
+    margin-block-start: clamp(1.05rem, 2.25vw, 1.65rem);
+    object-fit: cover;
+    object-position: center 58%;
+    border-radius: .15rem;
+  }
+
+  .book-directory .book-page-heading { margin-block-end: .8rem; }
+  .book-chapter {
+    display: grid;
+    grid-template-columns: 2rem minmax(0, 1fr);
+    gap: clamp(.5rem, 1.5vw, 1rem);
+    align-items: start;
+    padding-block: .5rem;
+    border-block-start: 1px solid var(--book-rule);
+  }
+  .book-chapter h3 { margin: .27rem 0 0; color: var(--book-accent); font: 800 1.35rem/1.35 var(--serif); }
+  .book-chapter ul { margin: 0; padding: 0; list-style: none; }
+  .book-contents .book-contents-empty { align-self: center; color: var(--book-muted); font: 550 .875rem/1.6 var(--sans); }
   .book-contents a {
     display: flex;
+    justify-content: space-between;
     align-items: baseline;
-    gap: .4rem;
-    color: var(--ink);
-    font: 650 1rem/1.6 var(--serif);
-    text-decoration-color: #bda994;
-    text-underline-offset: .2em;
+    gap: .65rem;
+    min-height: 2.65rem;
+    padding-block: .35rem;
+    color: var(--book-ink);
+    font: 690 1rem/1.6 var(--serif);
+    text-decoration: none;
   }
-  .book-contents a::after { content: ''; order: 1; flex: 1 0 .5rem; border-block-end: 1px dotted #c3b39e; }
+  .book-contents a:hover .book-contents-title { text-decoration: underline; text-underline-offset: .22em; }
   .book-contents-title { min-width: 0; overflow-wrap: anywhere; }
-  .book-contents-folio { order: 2; flex: none; color: var(--muted); font: 600 .875rem/1.5 var(--sans); }
-  .book-contents a:hover { color: var(--accent); text-decoration-color: currentColor; }
-  .facing-index { display: none; }
-  .story-source { align-self: start; margin-block-start: 1rem; color: var(--accent); font-weight: 700; text-underline-offset: .2em; }
+  .book-contents-folio { flex: none; color: var(--book-muted); font: 640 .875rem/1.5 var(--sans); font-variant-numeric: tabular-nums; }
+
+  .story-source {
+    display: inline-flex;
+    align-items: center;
+    align-self: flex-start;
+    min-height: 2.75rem;
+    margin-block-start: 1.25rem;
+    padding-inline: .9rem;
+    border: 1px solid #91a39b;
+    border-radius: .2rem;
+    color: var(--book-accent);
+    font: 700 .875rem/1.45 var(--sans);
+    text-decoration: none;
+  }
+  .story-source:hover { background: #e8eee4; }
 
   .page-number {
     margin-block-start: auto;
-    padding-block-start: 1.5rem;
-    color: var(--muted);
-    font: 600 .875rem/1.5 var(--serif);
-    text-align: center;
+    padding-block-start: 1.35rem;
+    color: var(--book-muted);
+    font: 630 .875rem/1.5 var(--sans);
   }
+  .book-page:nth-child(even) .page-number { text-align: end; }
 
   .book-pagination {
     display: grid;
-    grid-template-columns: 1fr auto 1fr;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
     align-items: center;
-    gap: .5rem;
-    margin-block-start: .95rem;
+    gap: .55rem;
+    margin-block-start: 1.15rem;
   }
   .book-pagination button, .book-page-links a {
     display: grid;
     min-height: 2.75rem;
     place-items: center;
-    padding: .35rem .65rem;
+    padding: .35rem .6rem;
     border: 0;
-    border-radius: .25rem;
-    color: var(--accent);
+    border-radius: .23rem;
+    color: var(--book-accent);
     background: transparent;
-    font: 650 .875rem/1.4 var(--sans);
+    font: 700 .875rem/1.4 var(--sans);
   }
   .book-pagination button { cursor: pointer; }
-  .book-pagination button:disabled { cursor: default; color: var(--muted); opacity: .65; }
+  .book-pagination button:disabled { cursor: default; color: var(--book-muted); opacity: .67; }
   .book-pagination button:first-child { justify-self: start; }
   .book-pagination button:last-child { justify-self: end; }
-  .book-page-links { display: flex; flex-wrap: wrap; justify-content: center; gap: .35rem; }
-  .book-page-links a { min-width: 2.75rem; text-decoration: none; }
-  .book-page-links a[data-visible-page] { background: #f1e6d6; }
-  .book-page-links a[aria-current="page"] { box-shadow: inset 0 -2px var(--accent); }
+  .book-page-links { display: flex; flex-wrap: wrap; justify-content: center; gap: .28rem; }
+  .book-page-links a { min-width: 2.75rem; text-decoration: none; font-variant-numeric: tabular-nums; }
+  .book-page-links a[data-visible-page] { background: #e4e9df; }
+  .book-page-links a[aria-current="page"] { color: #fff9ef; background: var(--book-accent); }
   .book-page-links a:hover, .book-pagination button:enabled:hover { text-decoration: underline; text-underline-offset: .2em; }
 
-  @media (max-width: 620px) {
+  @media (max-width: 600px) {
+    .story-shelf { min-height: 0; padding-block: 1.45rem 2rem; }
+    .book-cover { grid-template-columns: minmax(0, 1fr); height: auto; }
+    .cover-photo { grid-row: 1; height: auto; aspect-ratio: 1.65; }
+    .cover-copy { padding: clamp(1.25rem, 6vw, 2.25rem); }
+    .cover-title { margin-block: .5rem 1.15rem; }
     .book-spread { grid-template-columns: minmax(0, 1fr); }
     .book-endpaper { display: none; }
     .book-page:nth-child(n) {
-      min-height: min(21rem, 58svh);
+      min-height: min(23rem, 60svh);
       border: 0;
-      border-radius: .4rem;
-      background-image: linear-gradient(0deg, #bba58722, transparent 18%);
+      background-image: none;
     }
-    .facing-index {
-      display: inline-flex;
-      align-self: flex-start;
-      align-items: center;
-      min-height: 2.75rem;
-      margin-block-start: 1rem;
-      color: var(--accent);
-      font-size: .875rem;
-      text-underline-offset: .2em;
-    }
+    .book-page:nth-child(n) .page-number { text-align: center; }
     .book-pagination { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .book-page-links { grid-row: 1; grid-column: 1 / -1; }
   }
