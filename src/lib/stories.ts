@@ -256,6 +256,15 @@ export const storyEntries: StoryEntry[] = [
     href: 'https://www.threads.com/@miaopoyatw',
   },
   {
+    id: 'wild-lily-movement',
+    category: 'events',
+    type: '歷史事件',
+    title: '野百合學運',
+    source: '中研院《學動．運生》線上展',
+    description: '回顧 1990 年 3 月 16 至 22 日的學生靜坐、各校串連、四大訴求與退場，收錄現場照片、傳單和《廣場通訊》。',
+    href: 'https://ios20.ascdc.tw/e2_wildlily/',
+  },
+  {
     id: 'democracy-at-4am',
     category: 'events',
     type: '歷史事件',
