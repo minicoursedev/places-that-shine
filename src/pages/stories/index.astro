@@ -18,6 +18,7 @@ import SiteLayout from '../../layouts/SiteLayout.astro';
         <section class="book-page front-matter" aria-labelledby="front-matter-title">
           <h2 id="front-matter-title">卷首</h2>
           <p>這本故事書，留給店家、設計師與舞台之外，仍在努力發光的人、事與物。</p>
+          <footer class="page-number">第 1 頁</footer>
         </section>
         <section class="book-page contents" aria-labelledby="story-contents-title">
           <h2 id="story-contents-title">篇目</h2>
@@ -25,6 +26,11 @@ import SiteLayout from '../../layouts/SiteLayout.astro';
             <h3><a href="https://taiwan1947.org/">二二八台灣史補課筆記（2026）</a></h3>
             <p>由 @gratitude.drops 整理二二八事件、白色恐怖與台灣民主化的公開資料，收錄附有來源的歷史編年、事件地圖與互動式學習內容。</p>
           </article>
+          <article>
+            <h3><a href="https://4am-tw.maylogger.com/tw/">在凌晨 4 點的民主</a></h3>
+            <p>透過時間軸、照片、影片與報導，記錄 2014 年太陽花學運的經過與現場聲音。</p>
+          </article>
+          <footer class="page-number">第 2 頁</footer>
         </section>
       </div>
     </details>
@@ -105,8 +111,11 @@ import SiteLayout from '../../layouts/SiteLayout.astro';
   }
 
   .book-page {
+    display: flex;
+    flex-direction: column;
     min-height: clamp(19rem, 38vw, 25rem);
     padding: clamp(2rem, 6vw, 4rem) clamp(1.5rem, 4.75vw, 3.8rem);
+    padding-block-end: clamp(1.25rem, 3vw, 2rem);
     background: #fff9ed;
   }
 
@@ -131,9 +140,18 @@ import SiteLayout from '../../layouts/SiteLayout.astro';
   }
 
   .book-page p { margin: 0; font: 600 1rem/1.9 var(--serif); }
+  .contents article + article { margin-block-start: 1.25rem; }
   .contents h3 { margin: 0 0 .45rem; font: 800 1.15rem/1.5 var(--serif); }
   .contents a { color: var(--accent); text-underline-offset: .2em; }
   .contents p { color: var(--muted); }
+
+  .page-number {
+    margin-block-start: auto;
+    padding-block-start: 1.5rem;
+    color: var(--muted);
+    font: 600 .875rem/1.5 var(--serif);
+    text-align: center;
+  }
 
   @media (max-width: 620px) {
     .book-spread { grid-template-columns: minmax(0, 1fr); }
