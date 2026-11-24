@@ -1,5 +1,6 @@
 ---
 import WorkShareDialog from '../components/WorkShareDialog.astro';
+import PrivacyLink from '../components/PrivacyLink.astro';
 import { designerWorks, designerPath } from '../lib/oshen-designers';
 import { designerWorkPath, designerWorkSharePath } from '../../public/designers/js/work-links.js';
 import { designerHallRoot, designerSharePath } from '../../public/designers/js/routes.js';
@@ -94,7 +95,10 @@ const structuredData = {
       </div>
     </article>
   </main>
-  <footer class="work-footer"><small>© 2026 發光的地方｜收錄之作品與商標，其權利歸各設計師或原權利人所有。</small></footer>
+  <footer class="work-footer">
+    <small>© 2026 發光的地方｜收錄之作品與商標，其權利歸各設計師或原權利人所有。</small>
+    <PrivacyLink compact />
+  </footer>
   {!Astro.props.shareHall && <script define:vars={{ halls }}>
     const hallCode = new URLSearchParams(location.search).get('hall');
     const hall = halls.find(entry => entry.code === hallCode);

@@ -1,6 +1,7 @@
 ---
 import { catalogue, stageBase, stagePath, hallPath } from '../lib/oshen-stage';
 import { designerHallRoot } from '../../public/designers/js/routes.js';
+import PrivacyLink from '../components/PrivacyLink.astro';
 interface Props { hallId?: string; videoId?: string }
 const { hallId, videoId } = Astro.props;
 const video = catalogue.stages.find(stage => stage.id === videoId);
@@ -69,7 +70,11 @@ const canonical = new URL(video ? stagePath(video.id) : hall ? hallPath(hall.id)
     </div>
   </main>
   <main class="map-mode" id="stage-map" hidden><div class="stage-page"><h1 id="map-title">舞台地圖</h1><p>選一座舞台，走過去看影片。</p><div id="stage-plan"></div></div></main>
-  <footer class="app-footer"><small class="footer-full">© 2026 MiniCourse｜影片及相關內容權利歸原創作者或原權利人所有。</small><details class="footer-details"><summary>© 2026 MiniCourse・版權資訊</summary><small>影片及相關內容權利歸原創作者或原權利人所有。</small></details></footer>
+  <footer class="app-footer">
+    <small class="footer-full">© 2026 MiniCourse｜影片及相關內容權利歸原創作者或原權利人所有。</small>
+    <details class="footer-details"><summary>© 2026 MiniCourse・版權資訊</summary><small>影片及相關內容權利歸原創作者或原權利人所有。</small></details>
+    <PrivacyLink compact />
+  </footer>
   <div class="toast" id="toast" role="status" popover="manual"></div>
 </div>
 <dialog id="video-dialog" class="dlg video-dialog" aria-labelledby="video-title">
@@ -102,6 +107,7 @@ const canonical = new URL(video ? stagePath(video.id) : hall ? hallPath(hall.id)
     <span class="songs-notice-action">前往 <svg aria-hidden="true" viewBox="0 0 24 24" fill="none"><path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
     <span class="songs-notice-url">puma.taipei/songs</span>
   </a>
+  <footer class="songs-notice-footer"><small><PrivacyLink /></small></footer>
 </dialog>}
 <noscript><p class="stage-message">啟用 JavaScript 即可使用互動舞台與播放器。</p></noscript>
 <script is:inline type="module" src="/puma_oshen_wave/stage/app.js?v=20261101-hall-picker"></script>
@@ -116,3 +122,7 @@ const canonical = new URL(video ? stagePath(video.id) : hall ? hallPath(hall.id)
 </script>
 </body>
 </html>
+
+<style>
+  .songs-notice-footer { padding: 0 1rem 1rem; text-align: center; }
+</style>

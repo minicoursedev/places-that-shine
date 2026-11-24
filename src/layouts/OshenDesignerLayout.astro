@@ -5,6 +5,7 @@ import { designerMetadata, designerStructuredData, serializeStructuredData } fro
 import { hallPageForCode } from '../../public/designers/js/hall-pages.js';
 import { designerSharePath } from '../../public/designers/js/routes.js';
 import WorkShareDialog from '../components/WorkShareDialog.astro';
+import PrivacyLink from '../components/PrivacyLink.astro';
 interface Props { designerId?: string; hallCode?: string; shareHall?: string }
 const designer = designers.find(profile => profile.id === Astro.props.designerId);
 const shareHall = designer && Astro.props.shareHall;
@@ -140,6 +141,7 @@ const shareImageAlt = preview?.alt || '洋流設計師展逛攤畫面';
   <footer class="app-footer">
     <small class="footer-full">© 2026 發光的地方｜收錄之設計師資料、作品與商標，其權利歸各設計師或原權利人所有。</small>
     <details class="footer-details"><summary>© 2026 發光的地方・版權資訊</summary><small>收錄之設計師資料、作品與商標，其權利歸各設計師或原權利人所有。</small></details>
+    <PrivacyLink compact />
   </footer>
   <div class="toast" id="toast" role="status" popover="manual"></div>
 </div>

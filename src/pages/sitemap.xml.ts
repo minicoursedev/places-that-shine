@@ -9,6 +9,7 @@ import { designerWorkPath } from '../../public/designers/js/work-links.js';
 
 const paths = [
   '/',
+  '/privacy/',
   '/stores/',
   ...stores.map(({ id }) => storePath(id)),
   '/designers/',

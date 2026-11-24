@@ -1,5 +1,6 @@
 ---
 import '../styles/site.css';
+import PrivacyLink from '../components/PrivacyLink.astro';
 
 interface Props {
   title: string;
@@ -47,14 +48,20 @@ const routes = [
     <footer class="site-footer">
       <div class="site-footer-inner page-width">
         <a class="brand" href="/"><span class="brand-mark" aria-hidden="true">✦</span>{siteName}</a>
-        {Astro.url.pathname === '/' && <a class="history-link" href="/history/">開發歷程</a>}
+        <nav class="footer-links" aria-label="頁尾導覽">
+          {Astro.url.pathname === '/' && <a href="/history/">開發歷程</a>}
+          <PrivacyLink />
+        </nav>
       </div>
     </footer>
   </body>
 </html>
 
 <style>
-  .history-link {
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .45rem 1.25rem;
     color: var(--accent);
     font-size: .875rem;
     font-weight: 600;

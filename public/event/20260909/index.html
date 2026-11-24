@@ -166,6 +166,22 @@
     }
     .home-link:focus-visible { outline: 2px solid #38bdf8; outline-offset: 3px; }
 
+    .presentation-footer {
+      position: absolute;
+      bottom: 1.5rem;
+      left: 0.8rem;
+      z-index: 10;
+      font-size: 0.85rem;
+    }
+    .presentation-footer a {
+      color: #ffffff;
+      background: #18181b;
+      padding: 0.35rem 0.65rem;
+      border-radius: 4px;
+      text-underline-offset: 3px;
+    }
+    .presentation-footer a:focus-visible { outline: 2px solid #38bdf8; outline-offset: 3px; }
+
     .counter {
       position: absolute;
       bottom: 1.5rem;
@@ -772,6 +788,7 @@
 
   <input class="progress-bar" id="progressBar" type="range" min="1" max="1" value="1" step="1" aria-label="簡報頁碼">
   <div class="counter" id="counter">1 / 44</div>
+  <footer class="presentation-footer"><a href="/privacy/">網站隱私權政策</a></footer>
 
   <script>
     const slides = document.querySelectorAll('.slide');

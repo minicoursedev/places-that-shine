@@ -1,0 +1,47 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+---
+
+<SiteLayout title="隱私權政策" description="發光的地方如何使用 Google Analytics 4、Cookie、定位與第三方服務，以及如何聯絡我們。">
+  <article class="directory page-width policy">
+    <header class="directory-header">
+      <h1>隱私權政策</h1>
+    </header>
+    <p class="updated">更新日期 <time datetime="2026-11-24">2026 年 11 月 24 日</time></p>
+    <p>本政策適用於「發光的地方」（minicourse.dev）網站。洋流地圖 App 與迷你課 YouTube 上傳工具各有專用的隱私權政策。</p>
+
+    <section>
+      <h2>網站流量分析</h2>
+      <p>網站使用 Google Analytics 4（GA4）統計瀏覽情況，了解哪些內容受到關注，並改善網站。你造訪使用分析功能的頁面時，瀏覽器會向 Google 傳送資料，例如瀏覽的網址、頁面標題、來源網址、瀏覽與互動事件，以及瀏覽器、裝置和語言等資訊。依 Google 說明，GA4 可從連線的 IP 位址推算大致地區，並在處理後捨棄原始 IP 位址。</p>
+      <p>Google 的資料處理方式請參閱<a href="https://policies.google.com/technologies/partner-sites?hl=zh-TW">「Google 如何運用來自採用 Google 服務的網站和應用程式的資訊」</a>及<a href="https://policies.google.com/privacy?hl=zh-TW">「Google 隱私權政策」</a>。</p>
+    </section>
+
+    <section>
+      <h2>Cookie 與瀏覽器儲存</h2>
+      <p>GA4 可在瀏覽器設定第一方 Cookie，例如用來區分瀏覽器的 <code>_ga</code>，以及用來維持工作階段狀態的 <code>_ga_&lt;容器 ID&gt;</code>。依 Google 公布的預設值，這兩種 Cookie 的有效期限是兩年，實際期限受瀏覽器及分析設定影響。</p>
+      <p>你可在瀏覽器設定中清除或封鎖網站 Cookie，管理 Cookie 的儲存。GA4 在沒有 Cookie 時仍可傳送資料。如要停用 GA4 的瀏覽統計，可在支援的瀏覽器安裝並啟用 <a href="https://tools.google.com/dlpage/gaoptout?hl=zh-TW">Google Analytics 停用工具</a>。設計師展、市集及洋流舞台也會在瀏覽器儲存已造訪的攤位、舞台等瀏覽狀態，你可以清除本網站的網站資料來移除這些記錄。</p>
+    </section>
+
+    <section>
+      <h2>定位、推薦與第三方服務</h2>
+      <p>使用店家地圖的定位功能時，網站會向瀏覽器請求位置權限。取得的座標在頁面中用於排序店家及標示你的位置，你可以在瀏覽器設定中撤回權限。地圖畫面載入時會向 OpenStreetMap 等圖磚服務請求對應的圖磚。</p>
+      <p>透過「推薦店家」送出資料時，我們會使用你填寫的店家連結、名稱和地址，或上傳的照片查證店家資訊。照片供人工審閱，審閱完成後會刪除。表單使用 <a href="https://www.cloudflare.com/turnstile-privacy-policy/">Cloudflare Turnstile</a> 驗證，服務可能處理 IP 位址與瀏覽器資訊。</p>
+      <p>網站由 GitHub Pages 提供網頁，並使用 Cloudflare 傳送網站內容。載入字型、影片縮圖、地圖或播放嵌入影片時，瀏覽器也可能連線至 Google Fonts、YouTube 或 OpenStreetMap 等服務。這些服務可能取得 IP 位址等連線資訊，並依各自的隱私權政策處理。從本站開啟外部網站時，適用該外部網站的隱私權政策。</p>
+    </section>
+
+    <section>
+      <h2>聯絡與資料權利</h2>
+      <p>若你以電子郵件聯絡我們，我們會使用你提供的信箱、內容和附件處理問題，並在處理及必要的後續聯繫期間保留。若要查詢、更正或刪除你提供的資料，或對本政策有疑問，請聯絡 <a href="mailto:lman.services@brain-c.com">lman.services@brain-c.com</a>。功能或資料處理方式變更時，我們會更新本頁與更新日期。</p>
+      <p>相關服務政策可參閱<a href="/puma_oshen_wave/privacy/">洋流地圖 App 隱私權政策</a>及<a href="/youtube-uploader/privacy/">迷你課 YouTube 上傳工具隱私權政策</a>。</p>
+    </section>
+  </article>
+</SiteLayout>
+
+<style>
+  .policy { max-width: 48rem; line-height: 1.8; overflow-wrap: anywhere; }
+  .updated { color: var(--muted); font-size: .875rem; }
+  section { margin-block-start: 2rem; }
+  h2 { margin-block-end: .5rem; font: 700 1.35rem/1.45 var(--serif); }
+  p { margin-block: 0 .85rem; }
+  a { color: var(--accent); text-underline-offset: .2em; }
+</style>
