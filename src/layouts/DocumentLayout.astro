@@ -1,0 +1,39 @@
+---
+import SiteLayout from './SiteLayout.astro';
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const shareTitle = `${title}｜發光的地方`;
+---
+
+<SiteLayout title={title} description={description}>
+  <Fragment slot="head">
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="zh_TW" />
+    <meta property="og:site_name" content="發光的地方" />
+    <meta property="og:title" content={shareTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={shareTitle} />
+    <meta name="twitter:description" content={description} />
+  </Fragment>
+  <article class="directory page-width document">
+    <header class="directory-header"><h1>{title}</h1></header>
+    <slot />
+    <slot name="navigation" />
+  </article>
+</SiteLayout>
+
+<style>
+  .document { max-width: 48rem; line-height: 1.8; overflow-wrap: anywhere; }
+  .document :global(h2) { margin: 2rem 0 .5rem; font: 700 1.35rem/1.45 var(--serif); }
+  .document :global(p) { margin-block: 0 .85rem; }
+  .document :global(a) { color: var(--accent); text-underline-offset: .2em; }
+  .document :global(nav) { display: flex; flex-wrap: wrap; gap: .5rem 1.25rem; margin-top: 2rem; }
+</style>

@@ -1,0 +1,11 @@
+---
+const pages = [
+  { href: '/youtube-uploader/', label: '工具介紹' },
+  { href: '/youtube-uploader/privacy/', label: '隱私權政策' },
+  { href: '/youtube-uploader/terms/', label: '使用條款' },
+];
+---
+
+<nav aria-label="上傳工具相關資訊">
+  {pages.map(({ href, label }) => <a href={href} aria-current={Astro.url.pathname === href ? 'page' : undefined}>{label}</a>)}
+</nav>

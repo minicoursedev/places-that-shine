@@ -1,0 +1,20 @@
+---
+import YouTubeUploaderNavigation from '../../components/YouTubeUploaderNavigation.astro';
+import DocumentLayout from '../../layouts/DocumentLayout.astro';
+---
+
+<DocumentLayout title="YouTube 上傳工具" description="上傳影片至指定 YouTube 頻道的自用工具。">
+  <p>本工具是自用的影片上傳腳本，透過 YouTube Data API 將製作完成的影片上傳至<a href="https://www.youtube.com/@minicourse-dev">指定的 YouTube 頻道</a>。本工具不提供公開註冊或代管其他人的頻道。</p>
+
+  <section>
+    <h2>用途與授權</h2>
+    <p>由具有頻道授權資格的管理者登入 Google，選擇指定的 YouTube 頻道並同意授權。腳本使用影片上傳權限（youtube.upload）；如需核對目標頻道，會另請求 YouTube 資料唯讀權限（youtube.readonly）。實際權限以 Google 同意畫面為準。</p>
+    <p>離線授權可讓腳本在管理者指定的伺服器執行，無須每次上傳重新登入。Google 帳戶密碼不會交給本工具。授權僅用於頻道影片發布作業。</p>
+  </section>
+
+  <section>
+    <h2>資料與聯絡方式</h2>
+    <p>使用前請閱讀<a href="/youtube-uploader/privacy/">隱私權政策</a>及<a href="/youtube-uploader/terms/">使用條款</a>。聯絡信箱：<a href="mailto:lman@brain-c.com">lman@brain-c.com</a>。</p>
+  </section>
+  <YouTubeUploaderNavigation slot="navigation" />
+</DocumentLayout>

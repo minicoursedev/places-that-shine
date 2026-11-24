@@ -1,0 +1,11 @@
+---
+const links = [
+  { href: '/stores/', label: '探索店家地圖' },
+  { href: '/puma_oshen_wave/support/', label: 'App 支援' },
+  { href: '/puma_oshen_wave/privacy/', label: 'App 隱私權政策' },
+];
+---
+
+<nav aria-label="App 相關資訊">
+  {links.map(({ href, label }) => <a href={href} aria-current={Astro.url.pathname === href ? 'page' : undefined}>{label}</a>)}
+</nav>
