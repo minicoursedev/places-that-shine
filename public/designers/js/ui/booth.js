@@ -9,7 +9,7 @@ import { loadProducts, sampleProducts } from '../products.js?v=20261030-pinned-w
 const dlg = () => document.getElementById('dlg-booth');
 
 // The designer currently shown in the dialog.
-let current = null;   // { boothId, booth, aisle }
+let current = null;
 let openToken = 0;
 
 
@@ -32,13 +32,16 @@ async function getAisleFor(boothId) {
   return loadAisle(code);
 }
 
-export async function openBooth(boothId, { keepHall = false } = {}) {
+export async function openBooth(boothId, { keepHall = false, initialUrl = null } = {}) {
   const d = dlg();
   if (!d || !boothId) return;
   const token = ++openToken;
   current = null;
-  d.innerHTML = loadingHtml(boothId);
-  if (!d.open) d.showModal();
+  // Direct profile pages already contain the author's complete static view.
+  if (!initialUrl) {
+    d.innerHTML = loadingHtml(boothId);
+    if (!d.open) d.showModal();
+  }
 
   let aisle;
   try {
@@ -61,20 +64,28 @@ export async function openBooth(boothId, { keepHall = false } = {}) {
       const products = await loadProducts(store.productsUrl, booth.store);
       booth = { ...booth, works: sampleProducts(products), total: products.length, randomSelection: true };
     } catch {
+      if (initialUrl) return;
       booth = { ...booth, productsError: true };
     }
     if (token !== openToken) return;
   }
-  current = { boothId, booth, aisle };
-  const path = keepHall || booth.id !== booth.hallBooths[0].id
-    ? designerSharePath(booth.store, aisle.hall)
-    : designerPath(booth.store);
-  history.replaceState(null, '', path);
-  updateDesignerMetadata(store, booth);
+  if (initialUrl) {
+    // The visitor may have left the profile while its catalogue was loading.
+    const staticProfile = document.getElementById('static-designer-profile');
+    if (location.href !== initialUrl || !staticProfile?.getClientRects().length || document.querySelector('dialog[open]')) return;
+  } else {
+    const path = keepHall || booth.id !== booth.hallBooths[0].id
+      ? designerSharePath(booth.store, aisle.hall)
+      : designerPath(booth.store);
+    history.replaceState(null, '', path);
+    updateDesignerMetadata(store, booth);
+  }
+  current = { boothId, booth, aisle, initialUrl };
   paint();
   if (!d.open) d.showModal();
   d.querySelector('.dlg-close')?.focus();
   markVisited(boothId);
+  return true;
 }
 
 function wire() {
@@ -90,8 +101,9 @@ function wire() {
     else if (box?.classList.contains('bo-avatar')) { box.classList.add('bo-avatar-none'); img.remove(); }
   }, true);
   d.addEventListener('close', () => {
+    const closingInitialProfile = current?.initialUrl === location.href;
     openToken++; current = null;
-    if (resolveDesignerRoute(new URL(location.href)).mode === 'designer') {
+    if (closingInitialProfile || resolveDesignerRoute(new URL(location.href)).mode === 'designer') {
       const returnPath = document.getElementById('stage-list').hidden
         ? designerWalkPath(state.aisleCode)
         : `${designerHallRoot(state.hallCode)}#/list`;

@@ -15,6 +15,7 @@ export function readProducts(data, designerId, baseUrl) {
     ids.add(id); images.add(cover);
     return [{
       id, cover, name: typeof product.alt === 'string' ? product.alt : '',
+      title: product.title, number: product.number,
       caption: typeof product.caption === 'string' ? product.caption : '',
       pinned: product.pinned === true,
       width: Number.isInteger(product.width) && product.width > 0 ? product.width : 800,

@@ -8,6 +8,8 @@ export { designerRoot, designerPath } from '../../public/designers/js/routes.js'
 
 export interface DesignerWork {
   id: string;
+  title?: string;
+  number?: number;
   cover: string;
   name: string;
   caption: string;

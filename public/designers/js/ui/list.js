@@ -2,8 +2,8 @@
 // Fill each card’s logo and works gallery as it scrolls into view.
 import { state, toast, findBoothIn } from '../state.js';
 import { loadSearch, loadAisle, aisleOfBooth } from '../data.js?v=20261119-recall-hall';
-import { goToBooth } from '../nav.js?v=20261124-oshen-entry';
-import { openBooth } from './booth.js?v=20261124-oshen-entry';
+import { goToBooth } from '../nav.js?v=20261124-profile-boot';
+import { openBooth } from './booth.js?v=20261124-profile-boot';
 import { thumbnailUrl, retryOriginal } from '../images.js';
 import { loadProducts } from '../products.js?v=20261030-pinned-work';
 import { designerPath, designerWalkPath } from '../routes.js?v=20261124-oshen-entry';

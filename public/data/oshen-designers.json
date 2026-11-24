@@ -103,6 +103,7 @@
       },
       "productImages": [
         {
+          "number": 22,
           "id": "work-da86deb7a9cc421690892e507e43449e",
           "alt": "黑色與橘色虎爺海浪圖案旗幟",
           "url": "/media/library/vincent-atu/1.webp"
@@ -277,12 +278,14 @@
       },
       "productImages": [
         {
+          "title": "栗山先生糖果罐包裝設計（斜角展示）",
           "id": "koi-design-studio-1",
           "alt": "Koi Design Studio 扣乙図設作品：栗山先生糖果罐包裝設計，斜角展示",
           "url": "/media/library/koi-design-studio/1.webp",
           "source": "https://koidesignstudio.com/169661a3b78867"
         },
         {
+          "title": "栗山先生糖果罐包裝設計（正面展示）",
           "id": "koi-design-studio-2",
           "alt": "Koi Design Studio 扣乙図設作品：栗山先生糖果罐包裝設計，正面展示",
           "url": "/media/library/koi-design-studio/2.webp",
@@ -450,21 +453,25 @@
           "url": "/media/library/axmonart/12.webp"
         },
         {
+          "number": 13,
           "id": "work-e8fb46b0310c4035a2ee4f59337c5fdf",
           "alt": "顧紫蝶 | 阿猛。AxMon手繪工作室 新增作品照片 1",
           "url": "/media/library/axmonart/13.webp"
         },
         {
+          "number": 14,
           "id": "work-5933f07fde4a4d18af97c10104c93fea",
           "alt": "顧紫蝶 | 阿猛。AxMon手繪工作室 新增作品照片 2",
           "url": "/media/library/axmonart/14.webp"
         },
         {
+          "number": 15,
           "id": "work-0ad4f840b9f742d5b536a3d08a09b559",
           "alt": "顧紫蝶 | 阿猛。AxMon手繪工作室 新增作品照片 3",
           "url": "/media/library/axmonart/15.webp"
         },
         {
+          "number": 16,
           "id": "work-4a7587bc0f984dc1910b7d4e5dd8ecd3",
           "alt": "顧紫蝶 | 阿猛。AxMon手繪工作室 新增作品照片 4",
           "url": "/media/library/axmonart/16.webp"
@@ -730,6 +737,7 @@
           "url": "/media/library/yuan-art-space/4.webp"
         },
         {
+          "title": "青鳥行動插畫 Logo",
           "id": "wendy-tsai-bluebird-action-logo",
           "alt": "Wendy Tsai 的青鳥行動插畫 Logo",
           "caption": "青鳥行動入口 Logo。插畫為 Wendy Tsai 創作。",
@@ -2408,6 +2416,7 @@
       },
       "productImages": [
         {
+          "title": "尤景文 Eugene Yu - 就在我心底  Inside of my heart",
           "id": "midoli0213-6",
           "alt": "尤景文 Eugene Yu - 就在我心底  Inside of my heart",
           "caption": "尤景文 Eugene Yu - 就在我心底  Inside of my heart",
@@ -3669,6 +3678,7 @@
       },
       "productImages": [
         {
+          "title": "洋流視覺設計",
           "id": "kewpiewu-1",
           "alt": "洋流視覺設計",
           "caption": "洋流視覺設計",
@@ -3676,6 +3686,7 @@
           "source": "https://reurl.cc/nxKrLv"
         },
         {
+          "title": "青色羽毛，青島東路集會",
           "id": "kewpiewu-2",
           "alt": "青色羽毛，青島東路集會",
           "caption": "青色羽毛，青島東路集會",
@@ -3683,6 +3694,7 @@
           "source": "https://reurl.cc/dOYLDq"
         },
         {
+          "title": "台南優繡傳產品牌轉型品牌及策略、產品開發輔導",
           "id": "kewpiewu-3",
           "alt": "台南優繡傳產品牌轉型品牌及策略、產品開發輔導",
           "caption": "台南優繡傳產品牌轉型品牌及策略、產品開發輔導",
@@ -3690,6 +3702,7 @@
           "source": "https://reurl.cc/gNd4Dp"
         },
         {
+          "title": "KIM-KIM 台北霞海城隍廟聯名平安符，企劃以及品牌識別",
           "id": "kewpiewu-4",
           "alt": "KIM-KIM 台北霞海城隍廟聯名平安符，企劃以及品牌識別",
           "caption": "KIM-KIM 台北霞海城隍廟聯名平安符，企劃以及品牌識別",
@@ -3697,6 +3710,7 @@
           "source": "https://reurl.cc/27nzE9"
         },
         {
+          "title": "《看不見的國家》主視覺設計",
           "id": "kewpiewu-5",
           "alt": "《看不見的國家》主視覺設計",
           "caption": "《看不見的國家》主視覺設計",
@@ -3704,6 +3718,7 @@
           "source": "https://reurl.cc/3yz7xV"
         },
         {
+          "title": "陳珊妮 調教｜教條 演唱會視訊視覺設計",
           "id": "kewpiewu-6",
           "alt": "陳珊妮 調教｜教條 演唱會視訊視覺設計",
           "caption": "陳珊妮 調教｜教條 演唱會視訊視覺設計",
@@ -3711,6 +3726,7 @@
           "source": "https://reurl.cc/NOW405"
         },
         {
+          "title": "Nomiya 韓國飯捲識別設計（作品 7）",
           "id": "kewpiewu-7",
           "alt": "Nomiya 韓國飯捲識別設計（作品 7）",
           "caption": "Nomiya 韓國飯捲識別設計",
@@ -3718,6 +3734,7 @@
           "source": "https://reurl.cc/eQrLXR"
         },
         {
+          "title": "Nomiya 韓國飯捲識別設計（作品 8）",
           "id": "kewpiewu-8",
           "alt": "Nomiya 韓國飯捲識別設計（作品 8）",
           "caption": "Nomiya 韓國飯捲識別設計",
@@ -3725,6 +3742,7 @@
           "source": "https://reurl.cc/eQrLXR"
         },
         {
+          "title": "Talent Hacks 全球企業員工線上課程平台識別設計",
           "id": "kewpiewu-9",
           "alt": "Talent Hacks 全球企業員工線上課程平台識別設計",
           "caption": "Talent Hacks 全球企業員工線上課程平台識別設計",
@@ -3732,6 +3750,7 @@
           "source": "https://reurl.cc/EYA44n"
         },
         {
+          "title": "Brunette 倫敦燉牛胸料理包識別/包裝設計（作品 10）",
           "id": "kewpiewu-10",
           "alt": "Brunette 倫敦燉牛胸料理包識別/包裝設計（作品 10）",
           "caption": "Brunette 倫敦燉牛胸料理包識別/包裝設計",
@@ -3739,6 +3758,7 @@
           "source": "https://reurl.cc/XxzqqD"
         },
         {
+          "title": "Brunette 倫敦燉牛胸料理包識別/包裝設計（作品 11）",
           "id": "kewpiewu-11",
           "alt": "Brunette 倫敦燉牛胸料理包識別/包裝設計（作品 11）",
           "caption": "Brunette 倫敦燉牛胸料理包識別/包裝設計",
@@ -3746,6 +3766,7 @@
           "source": "https://reurl.cc/XxzqqD"
         },
         {
+          "title": "約旦首都安曼城市發展策略白皮書，書籍編排及資訊圖表設計",
           "id": "kewpiewu-12",
           "alt": "約旦首都安曼城市發展策略白皮書，書籍編排及資訊圖表設計",
           "caption": "約旦首都安曼城市發展策略白皮書，書籍編排及資訊圖表設計",
@@ -3753,6 +3774,7 @@
           "source": "https://reurl.cc/MWe44X"
         },
         {
+          "title": "Saihoji 倫敦抹茶品牌識別設計",
           "id": "kewpiewu-13",
           "alt": "Saihoji 倫敦抹茶品牌識別設計",
           "caption": "Saihoji 倫敦抹茶品牌識別設計",
@@ -3760,6 +3782,7 @@
           "source": "https://reurl.cc/nxKrrv"
         },
         {
+          "title": "陳珊妮浪人祭演出：〈情歌／你在煩惱些什麼呢？親愛的／葬你的髮〉視覺設計",
           "id": "kewpiewu-14",
           "alt": "陳珊妮浪人祭演出：〈情歌／你在煩惱些什麼呢？親愛的／葬你的髮〉視覺設計",
           "caption": "陳珊妮浪人祭演出：〈情歌／你在煩惱些什麼呢？親愛的／葬你的髮〉視覺設計",
@@ -3767,6 +3790,7 @@
           "source": "https://reurl.cc/aE3LLX"
         },
         {
+          "title": "陳珊妮《Peace of Shxx》2026：〈情歌，致敬施水環〉視覺設計",
           "id": "kewpiewu-15",
           "alt": "陳珊妮《Peace of Shxx》2026：〈情歌，致敬施水環〉視覺設計",
           "caption": "陳珊妮《Peace of Shxx》2026：〈情歌，致敬施水環〉視覺設計",
@@ -3805,36 +3829,42 @@
       },
       "productImages": [
         {
+          "title": "《台北市感性心經》符紙",
           "id": "shua-liao-1",
           "alt": "《台北市感性心經》符紙",
           "caption": "《台北市感性心經》符紙",
           "url": "/media/library/shua-liao/1.webp"
         },
         {
+          "title": "《台北市感性心經》網路圖卡",
           "id": "shua-liao-2",
           "alt": "《台北市感性心經》網路圖卡",
           "caption": "《台北市感性心經》網路圖卡",
           "url": "/media/library/shua-liao/2.webp"
         },
         {
+          "title": "《台北市感性心經》符紙實體",
           "id": "shua-liao-3",
           "alt": "《台北市感性心經》符紙實體",
           "caption": "《台北市感性心經》符紙實體",
           "url": "/media/library/shua-liao/3.webp"
         },
         {
+          "title": "《台灣隊》鄉鎮市民代表篇",
           "id": "shua-liao-4",
           "alt": "《台灣隊》鄉鎮市民代表篇",
           "caption": "《台灣隊》鄉鎮市民代表篇",
           "url": "/media/library/shua-liao/4.webp"
         },
         {
+          "title": "《台灣隊》鄉鎮市長篇",
           "id": "shua-liao-5",
           "alt": "《台灣隊》鄉鎮市長篇",
           "caption": "《台灣隊》鄉鎮市長篇",
           "url": "/media/library/shua-liao/5.webp"
         },
         {
+          "title": "《台灣隊》市議員篇",
           "id": "shua-liao-6",
           "alt": "《台灣隊》市議員篇",
           "caption": "《台灣隊》市議員篇",
@@ -3866,6 +3896,7 @@
           "url": "/media/library/suyu-art/1.webp"
         },
         {
+          "title": "《給你一個抱抱》小誌與插畫",
           "id": "suyu-art-2",
           "alt": "《給你一個抱抱》小誌與插畫",
           "url": "/media/library/suyu-art/2.webp"
@@ -3876,11 +3907,13 @@
           "url": "/media/library/suyu-art/3.webp"
         },
         {
+          "title": "《小石頭不知道》新書與分享活動宣傳圖",
           "id": "suyu-art-4",
           "alt": "《小石頭不知道》新書與分享活動宣傳圖",
           "url": "/media/library/suyu-art/4.webp"
         },
         {
+          "title": "《小石頭不知道》新書分享活動資訊",
           "id": "suyu-art-5",
           "alt": "《小石頭不知道》新書分享活動資訊",
           "url": "/media/library/suyu-art/5.webp"
@@ -3915,6 +3948,7 @@
           "source": "https://minicourse.dev/media/library/xiekamaoshi/3.webp?v=2efde62a0929a901",
           "checkedAt": "2026-11-17",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 3,
           "id": "work-0fcfcceb4d4a4f3bbda73ea09a1e54a5",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572146655820513280/4f4ba218ac1dbffb.jpg?ex=6afd4f2b&is=6afbfdab&hm=78f1288ee90f04efaa933abd2f2739100ad54918a85fcc83cf68cedb21e887de&"
         },
@@ -3924,6 +3958,7 @@
           "source": "https://minicourse.dev/media/library/xiekamaoshi/4.webp?v=9b5ca30e5d917394",
           "checkedAt": "2026-11-17",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 4,
           "id": "work-7a7ddb6d9e324d8eb3d60cb06931c8ed",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572146656076632064/0cc99bfb675ccde9.jpg?ex=6afd4f2b&is=6afbfdab&hm=3caa4f3eaf7f7c77d08cd1d6e9b7cdd8af2de405a3a944bc0c7f2aa6593255cd&"
         },
@@ -3933,6 +3968,7 @@
           "source": "https://minicourse.dev/media/library/xiekamaoshi/5.webp?v=79aefd0948d91cc3",
           "checkedAt": "2026-11-17",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 5,
           "id": "work-3ee74913fc8a45beabf753c5ca0eae0d",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572146656345063564/9963cba5d48401ac.jpg?ex=6afd4f2b&is=6afbfdab&hm=ec3c2559b71fd559aef7da4f6862875f6868aa4a575eddd13ddf82abe93027dd&"
         },
@@ -3942,6 +3978,7 @@
           "source": "https://minicourse.dev/media/library/xiekamaoshi/6.webp?v=4a54effe02079dcc",
           "checkedAt": "2026-11-17",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 6,
           "id": "work-448ffd105e2a42c499c47dabb7f8f2a7",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572146656646799451/-1.jpg?ex=6afd4f2c&is=6afbfdac&hm=d714a6a4e07f1a0fa9478fc7a8e39a78f66fc8d208fe7016d5ad419744bf9f5d&"
         },
@@ -3951,6 +3988,7 @@
           "source": "https://minicourse.dev/media/library/xiekamaoshi/7.webp?v=544e710a56a8a68a",
           "checkedAt": "2026-11-17",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 7,
           "id": "work-a4e781ec83af4b05800be60ba0fe0a71",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572146657036865546/72703ca9a3697392.jpg?ex=6afd4f2c&is=6afbfdac&hm=a75e3c85bc125327294e0d0d087fbd184fc2c1be805a3942830340df3a4f91ba&"
         },
@@ -3960,6 +3998,7 @@
           "source": "https://minicourse.dev/media/library/xiekamaoshi/8.webp?v=d2ca21ee4e462e8e",
           "checkedAt": "2026-11-17",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 8,
           "id": "work-10e1c69c3703454cbe2c2cea323bc387",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572146657603223662/a3a20ef4e380fd66.jpg?ex=6afd4f2c&is=6afbfdac&hm=16a0504fca9215c9672f1fe90248dca0a86a1ec18b0b2b94389e81d997216970&"
         },
@@ -3969,6 +4008,7 @@
           "source": "https://minicourse.dev/media/library/xiekamaoshi/9.webp?v=1c86d028d18f0991",
           "checkedAt": "2026-11-17",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 9,
           "id": "work-1954c95c15ec4b7f91eb39fa07891459",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572146658135777471/-1.jpg?ex=6afd4f2c&is=6afbfdac&hm=69ef12f904babc7023dded3a7a313734a89398a705a490077c121858b19ac429&"
         },
@@ -3978,6 +4018,7 @@
           "source": "https://minicourse.dev/media/library/xiekamaoshi/10.webp?v=3cfb822b8e624e9f",
           "checkedAt": "2026-11-17",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 10,
           "id": "work-2b451ba6ae7643f6af25bb8cafa14800",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572146658463064115/b7d4f472d718b73d.jpg?ex=6afd4f2c&is=6afbfdac&hm=c5f53d22fd85cfaaad27309d724285b835aafa1936b5ad62a293d245131bee3b&"
         }
@@ -4060,76 +4101,91 @@
       },
       "productImages": [
         {
+          "number": 7,
           "id": "work-b51f9a9f2a53461d8bcb4db3401430c9",
           "alt": "張開雙臂的動物插畫與文字",
           "url": "/media/library/wenchanee/7.webp"
         },
         {
+          "number": 8,
           "id": "work-6a9b2894c29641008022e82e4b6f2497",
           "alt": "花叢中的貓插畫與文字",
           "url": "/media/library/wenchanee/8.webp"
         },
         {
+          "number": 9,
           "id": "work-1f0a9678da0649a7a2320b39090d94dc",
           "alt": "騎著白色動物的角色插畫與文字",
           "url": "/media/library/wenchanee/9.webp"
         },
         {
+          "number": 10,
           "id": "work-eff2720f546344bdbc64130a8c5b8acc",
           "alt": "抱著粉紅玩偶的角色插畫與文字",
           "url": "/media/library/wenchanee/10.webp"
         },
         {
+          "number": 11,
           "id": "work-da246d43addc427fa541f6e502641777",
           "alt": "水手鳥造型圓形徽章插畫",
           "url": "/media/library/wenchanee/11.webp"
         },
         {
+          "number": 12,
           "id": "work-7efc3f2f04b7448598f94b04c52a76d8",
           "alt": "水手動物造型圓形徽章插畫",
           "url": "/media/library/wenchanee/12.webp"
         },
         {
+          "number": 13,
           "id": "work-d9d4fd640f474adbbd8c8ba27c29510e",
           "alt": "水手海豹造型圓形徽章插畫",
           "url": "/media/library/wenchanee/13.webp"
         },
         {
+          "number": 14,
           "id": "work-c2d6c8b5eeda4d1ca3c57b1277e4f8bd",
           "alt": "敬禮的水手動物造型圓形徽章插畫",
           "url": "/media/library/wenchanee/14.webp"
         },
         {
+          "number": 15,
           "id": "work-c9a5de50cf66458ab58b7e0f28b00fa2",
           "alt": "水手海豚造型圓形徽章插畫",
           "url": "/media/library/wenchanee/15.webp"
         },
         {
+          "number": 17,
           "id": "work-d323f5725a3b46f3af13de08d70f85fa",
           "alt": "筆獺君作品10",
           "url": "/media/library/wenchanee/17.webp"
         },
         {
+          "number": 1,
           "id": "work-8581b64f66044213a85da90d046b512e",
           "alt": "貓咪和多隻豎起大拇指的手插畫",
           "url": "/media/library/wenchanee/1.webp"
         },
         {
+          "number": 2,
           "id": "work-8f9149c249514ae4aa0a1bfd1c7f7900",
           "alt": "多隻手托起山多小地瓜的插畫",
           "url": "/media/library/wenchanee/2.webp"
         },
         {
+          "number": 3,
           "id": "work-91beb3e33676472b8b52549730dedcf5",
           "alt": "向日葵花叢中的貓咪插畫",
           "url": "/media/library/wenchanee/3.webp"
         },
         {
+          "number": 4,
           "id": "work-f4c82153c1e848829b000492f627372f",
           "alt": "手掌上抱著綠色物件的山多小地瓜插畫",
           "url": "/media/library/wenchanee/4.webp"
         },
         {
+          "number": 5,
           "id": "work-550910e511564136aaca53aea536b753",
           "alt": "山多小地瓜自我介紹插畫",
           "url": "/media/library/wenchanee/5.webp",
@@ -4597,31 +4653,37 @@
       },
       "productImages": [
         {
+          "number": 1,
           "id": "work-57535bc6516a42979e9a29cc80570d75",
           "alt": "台北靠 3 活動直式旗幟設計",
           "url": "/media/library/boyealai/1.webp"
         },
         {
+          "number": 2,
           "id": "work-ff56efe4deab4bd59ab85d1a9552ca70",
           "alt": "HEART 與台北靠 3 活動直式旗幟設計",
           "url": "/media/library/boyealai/2.webp"
         },
         {
+          "number": 3,
           "id": "work-f673c2a07ba5495fba674c053ccee353",
           "alt": "台北靠 3 活動海報設計",
           "url": "/media/library/boyealai/3.webp"
         },
         {
+          "number": 4,
           "id": "work-c3ac639ae7634aa1a977fa17da6eed1c",
           "alt": "活動視覺貼紙設計組合",
           "url": "/media/library/boyealai/4.webp"
         },
         {
+          "number": 5,
           "id": "work-24857c26ca734cf7a31d591f3e832314",
           "alt": "台北與新北活動直式旗幟設計",
           "url": "/media/library/boyealai/5.webp"
         },
         {
+          "number": 6,
           "id": "work-f875f993ca7c4cc38b4fd9ff8da275e0",
           "alt": "新北活動視覺社群頭像設計",
           "url": "/media/library/boyealai/6.webp"
@@ -4657,6 +4719,7 @@
           "source": "https://www.threads.com/@marskino0811/post/DftTSCVCW7B/media",
           "checkedAt": "2026-11-14",
           "note": "使用者提供，指定為此設計師作品照片；圖片取自指定 Threads 貼文。",
+          "number": 1,
           "id": "work-1dbfb0c3b44740daa2260bb0b20ed4fa",
           "originalUrl": "https://scontent-lax3-2.cdninstagram.com/v/t51.82787-15/900765603_17999982066109108_1723833746895752926_n.webp?_nc_cat=105&_nc_map=urlgen_bucketless&ig_cache_key=NDAyOTk2MjA0MzkwMTE3NzUzNw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMTgwMC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=j7osfLCnW5oQ7kNvwHljR5E&_nc_oc=AdpUbgsYkzpcnZOEOOJuvcwcrySe5PgU-UMZyWmUMh26VVf53_Ch1TpAjiOexR_la-g&_nc_zt=23&_nc_ht=scontent-lax3-2.cdninstagram.com&_nc_gid=wzIoApXXw8c_KXUKXtMzzQ&_nc_ss=7920f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQQDW9fTG6oK6DQa0Wtk-wBPYxnVCrAYVHvzBN6HnCklDg&oe=6AFE087F"
         },
@@ -4666,6 +4729,7 @@
           "source": "https://www.threads.com/@marskino0811/post/DfSMkROCZbu/media",
           "checkedAt": "2026-11-14",
           "note": "使用者提供，指定為此設計師作品照片；圖片取自指定 Threads 貼文。",
+          "number": 2,
           "id": "work-2e64d10d95ee4c959ebd866e69846608",
           "originalUrl": "https://scontent-lax3-1.cdninstagram.com/v/t51.82787-15/886754955_17998350555109108_4051091106929999533_n.webp?_nc_cat=106&_nc_map=urlgen_bucketless&ig_cache_key=NDAyMjMzMjY4NjE0MzY5MDQ3OA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMTI3OC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=6D2Sc4sKPi8Q7kNvwG5d23F&_nc_oc=AdoKJzp0d9YuUgQocHBs7BE5xiR8b5rUl1apzo7kGD-SottYlnne2OyzJsd0Kzqw7Oo&_nc_zt=23&_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_gid=o5KwSC-CWGk2xzLSyD5NHg&_nc_ss=7920f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQQjFqpRJ0Dt-1F4arDX-wG_Dn4dKX5gH5nZVs1HOzOrKg&oe=6AFE266F"
         },
@@ -4675,6 +4739,7 @@
           "source": "https://www.threads.com/@marskino0811/post/De_3d2wk9Tt/media",
           "checkedAt": "2026-11-14",
           "note": "使用者提供，指定為此設計師作品照片；圖片取自指定 Threads 貼文。",
+          "number": 3,
           "id": "work-ccc5ab6f27204ab386650f4df6bb8632",
           "originalUrl": "https://scontent-lax3-2.cdninstagram.com/v/t51.82787-15/861511099_17996929968109108_3399896271291103700_n.webp?_nc_cat=102&_nc_map=urlgen_bucketless&ig_cache_key=NDAxNzE3MzMzNjg1Nzc2MTAwNQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMTI0MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=-iOuqBGrf0gQ7kNvwHUTZ44&_nc_oc=AdrKnw5BjPgBk2off4ZAcnbKQPflUqqDWjpnHrPtoP2lerGFdvd0FURni-GnTxeYcw8&_nc_zt=23&_nc_ht=scontent-lax3-2.cdninstagram.com&_nc_gid=kbumyhbThIE0--nHs--zYQ&_nc_ss=7920f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQQy_RM_I5cuwMxpBv9tbo1p7mgLReqNNXadEOjU-OMLaQ&oe=6AFE095E"
         },
@@ -4684,6 +4749,7 @@
           "source": "https://www.threads.com/@marskino0811/post/De_UfV7E3ei/media",
           "checkedAt": "2026-11-14",
           "note": "使用者提供，指定為此設計師作品照片；圖片取自指定 Threads 貼文。",
+          "number": 4,
           "id": "work-aa096656371d4793bdbdf5621dcff19f",
           "originalUrl": "https://scontent-lax7-1.cdninstagram.com/v/t51.82787-15/867534780_17996888847109108_5643849322061967220_n.webp?_nc_cat=100&_nc_map=urlgen_bucketless&ig_cache_key=NDAxNzAxOTUwNzQxMTQ4MjUzMA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMTI0MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=ov09rrExIIIQ7kNvwFGRGWm&_nc_oc=AdrwjrFas1u9URY5BCY04oLkY60Bnyz5sCpdfBX1h8ZarY13pZ5Ye6fPY2GuACQnwKI&_nc_zt=23&_nc_ht=scontent-lax7-1.cdninstagram.com&_nc_gid=W4JVCngR41m6LU1lj53gkg&_nc_ss=7920f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQTOUlUmQxgGRU1p4vZyxx_1kvTIySIktmXPlpzFwPEKfQ&oe=6AFE2ED1"
         },
@@ -4693,6 +4759,7 @@
           "source": "https://www.threads.com/@marskino0811/post/De_HAVXE8TG/media",
           "checkedAt": "2026-11-14",
           "note": "使用者提供，指定為此設計師作品照片；圖片取自指定 Threads 貼文。",
+          "number": 5,
           "id": "work-b2d45458a0da43c18617289feee2d0f3",
           "originalUrl": "https://scontent-lax3-2.cdninstagram.com/v/t51.82787-15/859682394_17996878344109108_6637802878510777141_n.webp?_nc_cat=111&_nc_map=urlgen_bucketless&ig_cache_key=NDAxNjk2MDIwMTg5OTA5OTMzNA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMTI0MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=bkJ15tfQKa0Q7kNvwE-0n5C&_nc_oc=AdqyoJH_5XiYQip7pu8OS8PP1cU8vcD4OedSyni_yPlLgXRXCqhmqXYmB4Ei_BbomIc&_nc_zt=23&_nc_ht=scontent-lax3-2.cdninstagram.com&_nc_gid=hw6yDgzlQcj45MYoPJzwzQ&_nc_ss=7920f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQRcDSbpDO_YQpEQLMu_v4XiM5w4Kn9AAmfYspg3fGL9tA&oe=6AFE2202"
         }
@@ -4727,6 +4794,7 @@
           "source": "https://www.threads.com/@nninninninn/post/Dfo3gfeD-Rf/media",
           "checkedAt": "2026-11-14",
           "note": "使用者提供，指定為此設計師作品照片；取自指定 Threads 貼文第 1 張圖片",
+          "number": 1,
           "id": "work-e566b9ecc2b748d798e65b82d6324078",
           "originalUrl": "https://scontent-lax3-1.cdninstagram.com/v/t51.82787-15/902592020_17992600638120031_5065483804312614241_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&ig_cache_key=NDAyODcxMjcwMTgzMTAzMTMzNg%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNDA5NS5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=2mvehmY87wAQ7kNvwGJQHhM&_nc_oc=AdorDqmIPWsax-WUD5CvzpXbHATcSrs8XoFS_M0Fh_YxopJMIvB-fR_5Deu6AZUye1g&_nc_zt=23&_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_gid=jv-VjOiMhwhDvr6lISpMaA&_nc_ss=7b20f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQQBnt9CeFH7EkudHfQTK7WnUiHJYgPb2AV1Aqp9eV8t9w&oe=6AFE1C1D"
         },
@@ -4736,6 +4804,7 @@
           "source": "https://www.threads.com/@nninninninn/post/Dfo3gfeD-Rf/media",
           "checkedAt": "2026-11-14",
           "note": "使用者提供，指定為此設計師作品照片；取自指定 Threads 貼文第 2 張圖片",
+          "number": 2,
           "id": "work-38744b03f4804182a54cb8aaa199a95d",
           "originalUrl": "https://scontent-lax3-2.cdninstagram.com/v/t51.82787-15/902591689_17992600662120031_4562145897315018231_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=106&_nc_map=urlgen_bucketless&ig_cache_key=NDAyODcxMjcyNTc3MjE5Njk0MA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTA4MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=EytTTdWokaMQ7kNvwHPJ0v5&_nc_oc=AdoCO2LuJwuks9alVjkneXXJCqOvTa7JmBIwVPUi02oK6oaPP_RpwQNtCvrcIYkuCBU&_nc_zt=23&_nc_ht=scontent-lax3-2.cdninstagram.com&_nc_gid=jv-VjOiMhwhDvr6lISpMaA&_nc_ss=7b20f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQSa-xKg8yibt7K8C44KYojjsIqcDMk9Nahs144-4kA8pA&oe=6AFE1C0B"
         },
@@ -4745,6 +4814,7 @@
           "source": "https://www.threads.com/@nninninninn/post/Dfkj4tKD9LI/media",
           "checkedAt": "2026-11-14",
           "note": "使用者提供，指定為此設計師作品照片；取自指定 Threads 貼文第 1 張圖片",
+          "number": 3,
           "id": "work-804cf706d8fb43bdb1368cf56480ea7c",
           "originalUrl": "https://scontent-lax3-1.cdninstagram.com/v/t51.82787-15/901063510_17992309554120031_5053640102837813868_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=105&_nc_map=urlgen_bucketless&ig_cache_key=NDAyNzUwMDIwNDIyNjI4MTQ0Nw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNDA5NS5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=FFxqKUQERmwQ7kNvwFSXd3O&_nc_oc=AdrCrUPvdxdOiOOXpx042jN8e2GQYkoC8MxsLWA3WiHVNB3HVYsJU4SqLEs01x60rPQ&_nc_zt=23&_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_gid=N_Jk0541Z2qmxrbL2VwTBg&_nc_ss=7b20f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQRECqUZEUC84Yq7CbjKo3RUVIsDVomLKry6HVoD4q_CDQ&oe=6AFE0995"
         },
@@ -4754,6 +4824,7 @@
           "source": "https://www.threads.com/@nninninninn/post/Dfcn6YeDz1X/media",
           "checkedAt": "2026-11-14",
           "note": "使用者提供，指定為此設計師作品照片；取自指定 Threads 貼文第 1 張圖片",
+          "number": 5,
           "id": "work-69ca56d390fe48e5ae1af74829ec3a8c",
           "originalUrl": "https://scontent-lax3-1.cdninstagram.com/v/t51.82787-15/893801976_17991836289120031_2848888981620558154_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&ig_cache_key=NDAyNTI2NTYxNjE4Mzk5MTY5Ng%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNDA5NS5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=pVlcW7MoYwgQ7kNvwFkUOfi&_nc_oc=AdpX92GSCTixNwuDXTQLVBU4Bmf5PcbYWE3xVifNFfRm1cqmqtkI05Ip2miABIjjlcw&_nc_zt=23&_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_gid=C5kA7s_75Vi7Ups3vrpgHw&_nc_ss=7b20f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQSHYdQ5ymrtUDKxvMz_iQIU6QHfrPBoC_Q6vvh8aSrxxA&oe=6AFE152B"
         },
@@ -4763,6 +4834,7 @@
           "source": "https://www.threads.com/@nninninninn/post/Dfcn6YeDz1X/media",
           "checkedAt": "2026-11-14",
           "note": "使用者提供，指定為此設計師作品照片；取自指定 Threads 貼文第 2 張圖片",
+          "number": 6,
           "id": "work-ae6e3b5cfdc2408898626e1773f77b85",
           "originalUrl": "https://scontent-lax3-1.cdninstagram.com/v/t51.82787-15/892172071_17991836325120031_5698252446228561612_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=106&_nc_map=urlgen_bucketless&ig_cache_key=NDAyNTI2NTczMTc5NTg5MjgwNQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMjg5NS5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=EZaaywU8cZ0Q7kNvwHAzQmD&_nc_oc=AdrWco6T5BUvea5mtOUNZ69l_HmZLF9UmKMEP6OUy4upviZMef2IKuN7e3qxd2gdlfQ&_nc_zt=23&_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_gid=C5kA7s_75Vi7Ups3vrpgHw&_nc_ss=7b20f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQSKft2fb7N-x89ruM41LFC88CDV2HlFbPeL9zn2LQqZCg&oe=6AFE04C7"
         }
@@ -4801,6 +4873,7 @@
           "source": "https://minicourse.dev/media/library/paparaya/1.webp?v=17b92d75ea12bfca",
           "checkedAt": "2026-11-14",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 1,
           "id": "work-fd097825846a40ea824bbd27ed65f5c5",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571169168957505750/904316002_18001554360115972_1198885400678351164_n.png?ex=6af9c0d0&is=6af86f50&hm=55d94b50d9e16141cd4a78a1a86df938e83ecaf095f470149467c2395fad4816&"
         },
@@ -4810,6 +4883,7 @@
           "source": "https://minicourse.dev/media/library/paparaya/2.webp?v=d874c12b63426370",
           "checkedAt": "2026-11-14",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 2,
           "id": "work-7cfe7b714c2248a7b17bc85857c163d5",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571169169867800576/901617126_18001554351115972_8338018108428470059_n.png?ex=6af9c0d1&is=6af86f51&hm=a993c3e91c07cd91ff549d261437605af927f57d4dc42ca7d86affd93553631f&"
         },
@@ -4819,6 +4893,7 @@
           "source": "https://minicourse.dev/media/library/paparaya/3.webp?v=4cd8d58271a1721b",
           "checkedAt": "2026-11-14",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 3,
           "id": "work-cfe6c2bf09294e05a13ee9b86b127c76",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571169170433773609/902005832_18001097505115972_2444837875724646592_n.png?ex=6af9c0d1&is=6af86f51&hm=83a3fcc7e51cd0d124dd64f4d37ca233604cd3a3c306d8b3bb5edec2e6f04a9a&"
         },
@@ -4828,6 +4903,7 @@
           "source": "https://minicourse.dev/media/library/paparaya/4.webp?v=f46450d07190efe2",
           "checkedAt": "2026-11-14",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 4,
           "id": "work-083de108bc794a739e07f503b47ace54",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571169170752807053/902227088_18001097613115972_6800286184705392776_n.png?ex=6af9c0d1&is=6af86f51&hm=144bd768709ca89978208815717334b65d0c53473d7fe1859c38017be5b24e6e&"
         },
@@ -4837,6 +4913,7 @@
           "source": "https://minicourse.dev/media/library/paparaya/5.webp?v=ba8576fca6283beb",
           "checkedAt": "2026-11-14",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 5,
           "id": "work-159b27319a244ab4aa79ba3d283262db",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571169171226624120/860339493_18000616443115972_8100970053206245343_n.png?ex=6af9c0d1&is=6af86f51&hm=69b7643e5afd1278e7354e914f950a9beb504088f0f0a0167a465f4d1e9fed7b&"
         },
@@ -4846,6 +4923,7 @@
           "source": "https://minicourse.dev/media/library/paparaya/6.webp?v=15c2ba29a0ff6671",
           "checkedAt": "2026-11-14",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 6,
           "id": "work-3aab13ff57b34a9a8321fdfabf0e171d",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571169172052910254/883384248_18000401445115972_7317422774679536899_n.png?ex=6af9c0d1&is=6af86f51&hm=bd9af8c65783ae725dfd8c25e90f4997610a7d53bbff262876b2390e888e023d&"
         },
@@ -4855,6 +4933,7 @@
           "source": "https://minicourse.dev/media/library/paparaya/7.webp?v=a190d4e119999ee5",
           "checkedAt": "2026-11-14",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 7,
           "id": "work-b2dc917b9cca49ec96026179f24f54d5",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571169172874862732/877218464_18637005355045325_8084904638335294986_n.png?ex=6af9c0d1&is=6af86f51&hm=3b94bae56fb9b1baa5e61248b888a2d4e25b5533acd5f7208cc868f6a403b76b&"
         }
@@ -4888,6 +4967,7 @@
           "source": "https://minicourse.dev/media/library/jack55082003/1.webp?v=c08090764a73066e",
           "checkedAt": "2026-11-15",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 1,
           "id": "work-dfbfe143d33748ae9b61be476710268d",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571350232472490125/895552090_17970588912206161_7191749084482079864_n.png?ex=6afa6971&is=6af917f1&hm=e75abaf9c43e1dda7a6bc837adeb7361773e831fe22182930745a67a6e186e08&"
         },
@@ -4897,6 +4977,7 @@
           "source": "https://minicourse.dev/media/library/jack55082003/2.webp?v=8a3c72ec4603dba9",
           "checkedAt": "2026-11-15",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 2,
           "id": "work-b44bbfa797554fcb97a987ccc12d3475",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571350233689100358/904610220_17970588939206161_5188839315055466864_n.png?ex=6afa6971&is=6af917f1&hm=6f16b4225ecc9f7e2c854d0dd06d6db339204e80d682889c4d36511dca76444c&"
         }
@@ -4931,6 +5012,7 @@
           "source": "https://minicourse.dev/media/library/kalakala-oystershell-studio/6.webp?v=937e577ebc8f5831",
           "checkedAt": "2026-11-15",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 6,
           "id": "work-ecdf65789aaf494899c07a496d3af77b",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571353230573576322/903015637_968380069329547_7941582063925170588_n.png?ex=6afa6c3c&is=6af91abc&hm=366e4eb84443d3a6055cd97540f06f18abac9dbf68a756dff40ec1f9f39bcbb7&"
         },
@@ -4940,6 +5022,7 @@
           "source": "https://minicourse.dev/media/library/kalakala-oystershell-studio/7.webp?v=96c04833ce269982",
           "checkedAt": "2026-11-15",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 7,
           "id": "work-6bc6489281e84ff5bb32fbe561628d41",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571353231223689266/906894252_1807379873738409_3397457242728288017_n.png?ex=6afa6c3c&is=6af91abc&hm=97575886cde684930bf5cc561015a87e4611f66bc8e9b8794d9b390fbd9c7759&"
         },
@@ -4949,6 +5032,7 @@
           "source": "https://minicourse.dev/media/library/kalakala-oystershell-studio/8.webp?v=c894608709d82da8",
           "checkedAt": "2026-11-15",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 8,
           "id": "work-46638e94e63a4b66882579e6d98a174f",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571353232071205034/901472269_1714239876936310_5732496164948530298_n.png?ex=6afa6c3c&is=6af91abc&hm=a04c49d82904715e3ae1f5bbe815f0b6fd6be33b4e7c8468641c1ef06f222ba7&"
         },
@@ -4958,6 +5042,7 @@
           "source": "https://minicourse.dev/media/library/kalakala-oystershell-studio/9.webp?v=8fa1c4578fc8d962",
           "checkedAt": "2026-11-15",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 9,
           "id": "work-85c2520bca7945f68c7154e7135ee26f",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571353232738091149/894974287_975880865168262_903377764733840588_n.png?ex=6afa6c3d&is=6af91abd&hm=b3ff928f67023101056a5c6c17f1bc4bcfea1806a1a73972e01f8b8a3a5707ec&"
         },
@@ -4967,6 +5052,7 @@
           "source": "https://minicourse.dev/media/library/kalakala-oystershell-studio/10.webp?v=fcd92d8988ebdd13",
           "checkedAt": "2026-11-15",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 10,
           "id": "work-fbe63541e937462286f2816ca096f4d4",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571353233077571735/912030994_1132263486113173_2485596969687972175_n.png?ex=6afa6c3d&is=6af91abd&hm=671d42e4081215bec7b8beeb8e98729811c05eb8a921242163c6e189237d28be&"
         },
@@ -4976,6 +5062,7 @@
           "source": "https://minicourse.dev/media/library/kalakala-oystershell-studio/11.webp?v=111d3074fd53435c",
           "checkedAt": "2026-11-15",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 11,
           "id": "work-e82d6a9444f748bc8b268b8c187de572",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571353233400795136/903644824_1905301107514567_7347513283221428713_n.png?ex=6afa6c3d&is=6af91abd&hm=92e7ead780c9ac2e96cc2c8df26e2a1364ff51cbed192baeec710d64138ee36f&"
         },
@@ -4985,6 +5072,7 @@
           "source": "https://minicourse.dev/media/library/kalakala-oystershell-studio/12.webp?v=d30bf0a0080c9f80",
           "checkedAt": "2026-11-15",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 12,
           "id": "work-5fef5d8167914fb59d0e0d1e74a2a7d8",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571353233820221561/903644824_2297234177723876_4248344816292903199_n.png?ex=6afa6c3d&is=6af91abd&hm=56371d378f336a08154b8625d825a650ee35b06f1e40c4afda61007f78f8edc5&"
         },
@@ -4994,6 +5082,7 @@
           "source": "https://minicourse.dev/media/library/kalakala-oystershell-studio/13.webp?v=16b9b3b9f415e6ca",
           "checkedAt": "2026-11-15",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 13,
           "id": "work-f218a8a2c4204f7987d89b11ffde5889",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571353234151448677/905348161_1157848730130326_3099867030620251785_n.png?ex=6afa6c3d&is=6af91abd&hm=7a59ef407788f8f706f4e236a5fe35061b742f001834b488eeda97204f5779da&"
         },
@@ -5003,6 +5092,7 @@
           "source": "https://minicourse.dev/media/library/kalakala-oystershell-studio/14.webp?v=120cab1a9d734df2",
           "checkedAt": "2026-11-15",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 14,
           "id": "work-126553d8c54b44b48aee79be5300d5f8",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571353234683994122/907370254_2139065953377273_147927692629914182_n.png?ex=6afa6c3d&is=6af91abd&hm=b1507b4b74ceb0cf01f32272d0139af5b020ddb49aa492a346966e4cabe3e6e6&"
         },
@@ -5012,6 +5102,7 @@
           "source": "https://minicourse.dev/media/library/kalakala-oystershell-studio/15.webp?v=16e2272b99ef1863",
           "checkedAt": "2026-11-15",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 15,
           "id": "work-edda0052b9a94d7f90923fd2e214710e",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571353235363467294/910049190_1769413701012377_5289132728715968362_n.png?ex=6afa6c3d&is=6af91abd&hm=36206cf4b6be5a2f447d3049f640e6ed5610703c2b5006b31a20bac2309eaa7f&"
         }
@@ -5057,6 +5148,7 @@
           "source": "https://minicourse.dev/media/library/people2/1.webp?v=b41991b821fab25b",
           "checkedAt": "2026-11-15",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 1,
           "id": "work-f7b3e59e9feb4c8881f3867916ce98cd",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571408654027067402/556607830_1333474718146787_1007702591469781971_n.png?ex=6afa9fda&is=6af94e5a&hm=06df6254ca515dd534ba42bba79da0b0c22f927a05ecef44c8fc200fb580240e&"
         }
@@ -5091,6 +5183,7 @@
           "source": "https://minicourse.dev/media/library/116537882210/1.webp?v=8f371e58b7e18c80",
           "checkedAt": "2026-11-15",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 1,
           "id": "work-0defe87e83104a06823bf4b74ae69160",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571428247495909437/841525356_17955846630258014_2668152717884588887_n.png?ex=6afab219&is=6af96099&hm=aabc7f6a3a2c3424af0b3a0ba6ebf3d33887b62389311a4f08c9c6ef09bc73b3&"
         },
@@ -5100,6 +5193,7 @@
           "source": "https://minicourse.dev/media/library/116537882210/2.webp?v=ac435779a6043c84",
           "checkedAt": "2026-11-15",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 2,
           "id": "work-ea77d15997454844a1e0af4729b67ee2",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571428247978123284/839280659_17955552117258014_3792305786711457865_n.png?ex=6afab21a&is=6af9609a&hm=8823500424d367c43affbabe30f04341a2237f0d7351b06ddc39a242b3531792&"
         },
@@ -5109,6 +5203,7 @@
           "source": "https://minicourse.dev/media/library/116537882210/3.webp?v=8c2c8e9c0358efad",
           "checkedAt": "2026-11-15",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 3,
           "id": "work-b12f295187f7464782af2da866db35b8",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571428248494280844/835356425_17955428583258014_7219881612620360858_n.png?ex=6afab21a&is=6af9609a&hm=6a16d6916bd794b565d4ab1220ba54d2f13ecc04a0328dadd859b0c117f86005&"
         }
@@ -5143,6 +5238,7 @@
           "source": "https://minicourse.dev/media/library/hannah-bbicc/1.webp?v=43d3660197e9d693",
           "checkedAt": "2026-11-15",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 1,
           "id": "work-cc2be956a5ee4fdf927cf970a0dbc906",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571430384313303171/890716638_17978016168132742_6494453144448649128_n.png?ex=6afab417&is=6af96297&hm=1141cd600c1a7951911b0dac94c9c93f20e429205cfc903d82c6b0b939ac9e13&"
         },
@@ -5152,6 +5248,7 @@
           "source": "https://minicourse.dev/media/library/hannah-bbicc/2.webp?v=281f2116f9ec7115",
           "checkedAt": "2026-11-15",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 2,
           "id": "work-0e48547e50104ba7afb19ac1931e104d",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571430385362018395/877167542_17977275423132742_5633926601845051817_n.png?ex=6afab417&is=6af96297&hm=5abbf2f20152caa7b262060b24a7a6d4e48af0108dad0f6a6046dcf38cb2fe20&"
         },
@@ -5161,6 +5258,7 @@
           "source": "https://minicourse.dev/media/library/hannah-bbicc/3.webp?v=f9160817333a7012",
           "checkedAt": "2026-11-15",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 3,
           "id": "work-8a8556a6b12447868b144816283f5029",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571430385965989908/870065389_17977108320132742_1963984399441335971_n.png?ex=6afab417&is=6af96297&hm=81903558995ff1b0ddd22a5d9888212325768762104cad229dc872bebad934f1&"
         }
@@ -5195,6 +5293,7 @@
           "source": "https://minicourse.dev/media/library/wang1xiu/1.webp?v=4b3e3a01759aa9f0",
           "checkedAt": "2026-11-15",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 1,
           "id": "work-03bb694fead34fbbbc2ec81aaa334f06",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571434009135816734/888601435_17992744104117650_5471681422974271701_n.png?ex=6afab777&is=6af965f7&hm=fec25e67f1245a53d8f3d5dc27ac8dc846e01a46869c2ebe4b88bade8377d1c7&"
         },
@@ -5204,6 +5303,7 @@
           "source": "https://minicourse.dev/media/library/wang1xiu/2.webp?v=c6b32377af66bdfa",
           "checkedAt": "2026-11-15",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 2,
           "id": "work-0b5d5efdcc534d55a254ee38775ae0a8",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571434009769283674/886743799_17992741302117650_5687735289201290334_n.png?ex=6afab777&is=6af965f7&hm=8a11ab358c7acee409346ce0cbffdab48e37d53d28e15cb54a57ef44a590ad18&"
         },
@@ -5213,6 +5313,7 @@
           "source": "https://minicourse.dev/media/library/wang1xiu/3.webp?v=68a834339f5e635e",
           "checkedAt": "2026-11-15",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 3,
           "id": "work-3fbb70d6187a4113980a2213b29c3f7c",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571434010188718140/879895932_17992360674117650_7258846668003504606_n.png?ex=6afab777&is=6af965f7&hm=4c4c337144a5746099344aaa2fce9b84419c8ca8cc1b892b75083b66a2bb49b4&"
         },
@@ -5222,6 +5323,7 @@
           "source": "https://minicourse.dev/media/library/wang1xiu/4.webp?v=522d8d882fb79701",
           "checkedAt": "2026-11-15",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 4,
           "id": "work-0765564b45e144f19ff509a09c2d1f55",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571434010616266762/640276885_17943889905117650_1415750621880522470_n.png?ex=6afab777&is=6af965f7&hm=b912c455bdeec3dab86b68a2d067a7732c3cd026817b372383fd5265c4df8c55&"
         }
@@ -5256,6 +5358,7 @@
           "source": "https://minicourse.dev/media/library/neneko-ig/1.webp?v=441d9b579cf40904",
           "checkedAt": "2026-11-15",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 1,
           "id": "work-ee91b2b2f4eb408983fb126b8308adc8",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571527739456888993/907329797_17998596555104654_1005073406966319981_n.png?ex=6afb0ec2&is=6af9bd42&hm=f7cbe2ae8e26e020bec9ff6db9fe48a7aa58852572ee99195b7e25034d0d8bb5&"
         },
@@ -5265,6 +5368,7 @@
           "source": "https://www.threads.com/@neneko_ig/post/DeUC4FWCVHL",
           "checkedAt": "2026-11-15",
           "note": "使用者指定 Threads 作品貼文；已核對該作者官方貼文內的作品圖片，HTTPS 圖片可讀取",
+          "number": 7,
           "id": "work-42bb2c8367aa4b75b6895e0003725388",
           "originalUrl": "https://scontent-lax7-1.cdninstagram.com/v/t51.82787-15/844417645_17992467156104654_5483459677419553351_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=104&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=nfwiI9Z-3W0Q7kNvwFX3Dir&_nc_oc=AdpbU30LjJNOn1LFSL3OzCw2zPRrDDNg6FegI1dHqOOYqTSdrXCKrJaK6E6vmHDhAU0&_nc_zt=23&_nc_ht=scontent-lax7-1.cdninstagram.com&_nc_gid=6GBE4bYEQwNPKneSixt_Rw&_nc_ss=7920f&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQRfYStevNuHxJ2FN-aHMOHLUnMa9aTgcLbFXVpbRYnxKg&oe=6AFF6B8E"
         },
@@ -5274,6 +5378,7 @@
           "source": "https://www.threads.com/@neneko_ig/post/DeUC4FWCVHL",
           "checkedAt": "2026-11-15",
           "note": "使用者指定 Threads 作品貼文；已核對該作者官方貼文內的作品圖片，HTTPS 圖片可讀取",
+          "number": 8,
           "id": "work-412afa851bf0407da0d873656e280dd8",
           "originalUrl": "https://scontent-lax3-1.cdninstagram.com/v/t51.82787-15/843278967_17992467174104654_4624440620453075807_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=RTUB9fICRbAQ7kNvwH8oE1E&_nc_oc=Adr8Qdg7biR8-VID1bg_dxQexW_xnfW-N77pu7VRLjFlSvwgzrk6VddmcUi2DLiZ0Vs&_nc_zt=23&_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_gid=6GBE4bYEQwNPKneSixt_Rw&_nc_ss=7920f&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQShoMPKhNhE3cvbT8r6H99_RwHaWMIVHJt_FxuDrt86VQ&oe=6AFF7C30"
         },
@@ -5283,6 +5388,7 @@
           "source": "https://www.threads.com/@neneko_ig/post/DeEPIWhCRqN",
           "checkedAt": "2026-11-15",
           "note": "使用者指定 Threads 作品貼文",
+          "number": 12,
           "id": "work-c92d6845a1314d4d8ddc6b9ee4fd3b7d",
           "originalUrl": "https://scontent-lax3-1.cdninstagram.com/v/t51.82787-15/836635379_17991578898104654_343751463528435702_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=104&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=ZRcLNUESQ4QQ7kNvwHsqAUm&_nc_oc=Adq0ecc93pNORO3oA4_lNjuANLDdyQV571-iME2JI90wg-tLEJTmMmM3jSkh82JkQEg&_nc_zt=23&_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_gid=uLApUqtxHjPwCtYdTl0j1A&_nc_ss=7920f&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQRIoyDX5pueE4Qh4Pb_EgYPLn0FV-7GN-BtEFO3ja0L8Q&oe=6AFF83F2"
         },
@@ -5292,6 +5398,7 @@
           "source": "https://www.threads.com/@neneko_ig/post/Dc8nlH7iRDx",
           "checkedAt": "2026-11-15",
           "note": "使用者指定 Threads 作品貼文；已核對該作者官方貼文內的作品圖片，HTTPS 圖片可讀取",
+          "number": 9,
           "id": "work-711301d2a4c5492fa14f21d14737b706",
           "originalUrl": "https://scontent-lax3-1.cdninstagram.com/v/t51.82787-15/799085031_17987648142104654_2939349181891382794_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=110&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=oEVCfqYdrO8Q7kNvwHuOp55&_nc_oc=Ado1YZnFYyKngh_75Ak4QagTYiVPTJDgNdDcVi6TyH7GfZ-I1pymnQi4VW1FT5sN8q0&_nc_zt=23&_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_gid=k_gyBClO30KhdzRHs648DA&_nc_ss=7920f&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQT2RtYeygdEZS7tNtkxSeOpopxhejt1z-DhT-59XjNvjw&oe=6AFF5006"
         }
@@ -5333,6 +5440,7 @@
           "source": "https://minicourse.dev/media/library/yisatsai/1.webp?v=aebcb1ea55f3ef97",
           "checkedAt": "2026-11-15",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 1,
           "id": "work-91a6d5c81138497f85c9ba039fd4363d",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571505822649950349/902440245_17978939874155127_3754859133437836814_n.png?ex=6afafa59&is=6af9a8d9&hm=c8f30e97b99f8a0ab1b9f782ee5c2be70a7f2f432a2a37921c9624967f42cdeb&"
         },
@@ -5342,6 +5450,7 @@
           "source": "https://minicourse.dev/media/library/yisatsai/2.webp?v=7b82e9107cc3b32f",
           "checkedAt": "2026-11-15",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 2,
           "id": "work-7148a95498e54180a74c90e1e0f2f48d",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571505823509909614/902096059_17978943855155127_4016267516460886264_n.png?ex=6afafa59&is=6af9a8d9&hm=3bf2148cba1c7e46775696c3b03f256741c31d0d667c3c0c314b1f5517f2c71c&"
         },
@@ -5351,6 +5460,7 @@
           "source": "https://minicourse.dev/media/library/yisatsai/3.webp?v=6fcf830683d704e4",
           "checkedAt": "2026-11-15",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 3,
           "id": "work-9dd1d4d5d5bd4904b90e78aec86aa429",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571505824205897828/905743567_17978943879155127_8392174950579919654_n.png?ex=6afafa59&is=6af9a8d9&hm=6f3e909a0ddbd2117cd24c0fc91b8d600d4ce3103e68fadc72046cf8e8e6b210&"
         },
@@ -5360,6 +5470,7 @@
           "source": "https://minicourse.dev/media/library/yisatsai/4.webp?v=b600a0f47ca2cac9",
           "checkedAt": "2026-11-15",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 4,
           "id": "work-c8b37a447782479881f4a6ec972f813f",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571505825791352922/894461575_17978502705155127_5132187526092317551_n.png?ex=6afafa5a&is=6af9a8da&hm=961a35320936d222e536477235bef19a7e258f5f9c0b642db84c25035ba42b65&"
         },
@@ -5369,6 +5480,7 @@
           "source": "https://minicourse.dev/media/library/yisatsai/5.webp?v=804fe2c605bb500e",
           "checkedAt": "2026-11-15",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 5,
           "id": "work-5f9a9e6d2a604408a9695a5f271d4de2",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571505827318202520/892134693_17978152749155127_5330891956869748507_n.png?ex=6afafa5a&is=6af9a8da&hm=889a2833780b01d8d83808f9971d6b0d2bbd72e08171bd7c678abc87c2927680&"
         },
@@ -5378,6 +5490,7 @@
           "source": "https://minicourse.dev/media/library/yisatsai/6.webp?v=b91094e163358452",
           "checkedAt": "2026-11-15",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 6,
           "id": "work-b4a07f67c5e549b1967c59e6044516c1",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571505827913797823/889001588_10240315013846411_2636002246932027582_n.png?ex=6afafa5a&is=6af9a8da&hm=ec1ef48573794ffcb792d06899e3a27d0928fd69aafad2e8380015fd2560a0ac&"
         }
@@ -5407,6 +5520,7 @@
       },
       "productImages": [
         {
+          "title": "《台灣大洋流・台北順起來》政見動畫解說",
           "id": "taiwanwell-puma-taipei-intro",
           "url": "/media/library/andrew-wulala/10.webp?v=0fcd999a27a34e9d",
           "alt": "沈伯洋參選台北市長的理念：不只貼 OK 繃，要給完整免疫系統｜臺北靠3就是你",
@@ -5422,6 +5536,7 @@
           "source": "https://minicourse.dev/media/library/andrew-wulala/1.webp?v=9e3e1a7c343d5d3a",
           "checkedAt": "2026-11-15",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 1,
           "id": "work-ffa8b20ad1ae463f9d29261702bcaeb3",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571524972332195911/904749021_17986077018104816_3726677743002835548_n.png?ex=6afb0c2e&is=6af9baae&hm=76e20c139328159074acefd0e606a99f12a0c7f06efcea990c24ed0fc4cc71a1&"
         },
@@ -5431,6 +5546,7 @@
           "source": "https://minicourse.dev/media/library/andrew-wulala/2.webp?v=340e0e3c622cb913",
           "checkedAt": "2026-11-15",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 2,
           "id": "work-f844ad83eb884d13aba16cd23514489a",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571524972789104741/907333148_17986077042104816_813422569599303717_n.png?ex=6afb0c2f&is=6af9baaf&hm=c1bf4164a4a6c7e5e73086aaae0f258022a3b21a30bcc5c2fe3fecb1e8f3c868&"
         },
@@ -5440,6 +5556,7 @@
           "source": "https://minicourse.dev/media/library/andrew-wulala/3.webp?v=51b76f845f5667a7",
           "checkedAt": "2026-11-15",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 3,
           "id": "work-7dfae9856579472296b257ab92ecad67",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571524973091102725/903916393_17986077066104816_4612235838706685138_n.png?ex=6afb0c2f&is=6af9baaf&hm=3c18f6df76c93da2fe6cdbf56d6617a4ccb8dc09df1f62f2d1efab68710728d6&"
         },
@@ -5449,6 +5566,7 @@
           "source": "https://minicourse.dev/media/library/andrew-wulala/4.webp?v=4c167f11b4ae6a56",
           "checkedAt": "2026-11-15",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 4,
           "id": "work-70028f440ad844e7878b40d4f7301a68",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571524973607260160/902115098_17986077096104816_1521597650698452282_n.png?ex=6afb0c2f&is=6af9baaf&hm=97d16c6f9a03500a6612c9d4c7240579582c2b18c030a138fa0afef896a1f4b6&"
         },
@@ -5458,6 +5576,7 @@
           "source": "https://minicourse.dev/media/library/andrew-wulala/5.webp?v=7e84f7883c5fc3d2",
           "checkedAt": "2026-11-15",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 5,
           "id": "work-72802f5ea3ad4abbbaafd6a99e48ebd7",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571524974253051984/902158908_17986077123104816_9069402393212159309_n.png?ex=6afb0c2f&is=6af9baaf&hm=e2df42eda2f92ad9db7cc46cf3c25af8d76d5d26c2e3f6587df733032364a2a3&"
         },
@@ -5467,6 +5586,7 @@
           "source": "https://minicourse.dev/media/library/andrew-wulala/6.webp?v=834accdadc8b9f7f",
           "checkedAt": "2026-11-15",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 6,
           "id": "work-6bd63009495a4e16b0e7ef45e9853d3d",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571524974638923887/910384645_17986077147104816_983181593065376598_n.png?ex=6afb0c2f&is=6af9baaf&hm=123caf72c80647be1852efd1dc307aa2b5a53aa8c457c12b74520f289a282a06&"
         },
@@ -5476,6 +5596,7 @@
           "source": "https://minicourse.dev/media/library/andrew-wulala/7.webp?v=aa2f9d9a27f53cf6",
           "checkedAt": "2026-11-15",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 7,
           "id": "work-cc7930f4a9f241369406b63fe2416804",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571524975209480222/904136209_17986077177104816_6530418720100267621_n.png?ex=6afb0c2f&is=6af9baaf&hm=b21aa4f4a1999d4e4cc026f72599d43e142eada38dcf28df389b01b3e3ded574&"
         },
@@ -5485,6 +5606,7 @@
           "source": "https://minicourse.dev/media/library/andrew-wulala/8.webp?v=36351416d2d1a97b",
           "checkedAt": "2026-11-15",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 8,
           "id": "work-efbb3b7ab72d492a88958e9001299f9e",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571524975788036256/903878302_17986077201104816_8351310746622624410_n.png?ex=6afb0c2f&is=6af9baaf&hm=7408c7641c14bc5258dd4ebc84f22c2323324b97e9c4c2f22c31f1ccbae9654b&"
         },
@@ -5494,6 +5616,7 @@
           "source": "https://minicourse.dev/media/library/andrew-wulala/9.webp?v=79fdcd3359e4bfaa",
           "checkedAt": "2026-11-15",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 9,
           "id": "work-72fccf610c464dc7b88270692c2797f4",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571524976581017620/901883999_17986076994104816_974227112684061835_n.png?ex=6afb0c2f&is=6af9baaf&hm=0a56e25ba12d86a6b013a6cb802c7d005089139d20826455a439621d53e06524&",
           "thumbnail": {
@@ -5543,6 +5666,7 @@
           "source": "https://www.threads.com/@306_678/post/Dfw_R3Bk8V9/media",
           "checkedAt": "2026-11-15",
           "note": "使用者指定 Threads 作品貼文；已核對該作者官方貼文內的作品圖片，HTTPS 圖片可讀取",
+          "number": 1,
           "id": "work-15fe4f2c4c844d3084b3d7d0929efe7e",
           "originalUrl": "https://scontent-lax3-2.cdninstagram.com/v/t51.82787-15/902586019_17980447692158463_2846986794415008795_n.jpg?stp=cp6_dst-jpg_e35_tt6&_nc_cat=106&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMDk5OTk3MDc0MDE1OTg2OQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuNTg0LnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=MmLUF2JUPuUQ7kNvwGJAJjg&_nc_oc=AdpPqL-cgkHLDwx8oxAbmZOZzQEVrXnp5grn4Q8JgCP0GyVU8yyeqDa-BAXt7IfR5o8&_nc_zt=23&_nc_ht=scontent-lax3-2.cdninstagram.com&_nc_gid=ETAcCx6xkd7hEd341mmmXA&_nc_ss=7920f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQS1GwoIwgfq-_who0_DRC-W82AwWrV54NLDP9GQxZ4wHg&oe=6AFF900C"
         },
@@ -5552,6 +5676,7 @@
           "source": "https://www.threads.com/@306_678/post/Dfvugl_k0oR",
           "checkedAt": "2026-11-15",
           "note": "使用者指定 Threads 作品貼文；已核對該作者官方貼文內的作品圖片，HTTPS 圖片可讀取",
+          "number": 2,
           "id": "work-900758a2214d4b44a6e931c18e34fafe",
           "originalUrl": "https://scontent-lax3-1.cdninstagram.com/v/t51.82787-15/906611985_17980360401158463_6901823791390866412_n.jpg?stp=cp6_dst-jpg_e35_tt6&_nc_cat=107&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMDY0MDk4NDY0NzAwNTM5Ng%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTY2Mi5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=bfwMAvMuQWsQ7kNvwEU_ad7&_nc_oc=AdqU-IQbm2MVUTvqoQCa6FUJZv0DOlhDLRIOwS2yedWdEwgjOW8-Y2iPygj3wMpOU9c&_nc_zt=23&_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_gid=W18uZslgRc9zAwhrjreFnw&_nc_ss=7920f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQRYMT31DDlXVY5F4IOkviOY-jS0tE9ZM_C2QYVTJqUdDA&oe=6AFF96EA"
         },
@@ -5561,6 +5686,7 @@
           "source": "https://www.threads.com/@306_678/post/Dfvugl_k0oR",
           "checkedAt": "2026-11-15",
           "note": "使用者指定 Threads 作品貼文；已核對該作者官方貼文內的作品圖片，HTTPS 圖片可讀取",
+          "number": 3,
           "id": "work-0ee7bf044b9d47c5811d3afcb725c336",
           "originalUrl": "https://scontent-lax3-2.cdninstagram.com/v/t51.82787-15/902585925_17980360425158463_3740520586180650472_n.jpg?stp=cp6_dst-jpg_e35_tt6&_nc_cat=108&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMDY0MDk4NDk4MjUyMTU4MQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTU2MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=4ud9oFrmOt0Q7kNvwFrFUgJ&_nc_oc=AdqfHcAxnCSFJ0uzD7hHhfjHKmvrUWjb8tLAZFI5wok9vpsyN5yugHQIlmLaS3zwR14&_nc_zt=23&_nc_ht=scontent-lax3-2.cdninstagram.com&_nc_gid=W18uZslgRc9zAwhrjreFnw&_nc_ss=7920f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQRSxlzICuqdmUzbVUM_IQFF0c6si2rJ_nUfOjCHOWzWIg&oe=6AFFA26C"
         },
@@ -5570,6 +5696,7 @@
           "source": "https://www.threads.com/@306_678/post/Dfvugl_k0oR",
           "checkedAt": "2026-11-15",
           "note": "使用者指定 Threads 作品貼文；已核對該作者官方貼文內的作品圖片，HTTPS 圖片可讀取",
+          "number": 4,
           "id": "work-753027f2b3bf4ab79beeeec3a053e44d",
           "originalUrl": "https://scontent-lax3-1.cdninstagram.com/v/t51.82787-15/902585976_17980360410158463_5400954814959009401_n.jpg?stp=cp6_dst-jpg_e35_tt6&_nc_cat=108&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMDY0MDk4NDgxNDc0MTI5OQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTU2Mi5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=TAzFLxn0EzAQ7kNvwF8Mp5m&_nc_oc=AdqvRjYUOyZlnyMCpIh8GBDiM-eDDUf7rZdibPPfDAVLBUdKl4kGBmkMtKT7QRxaTXw&_nc_zt=23&_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_gid=W18uZslgRc9zAwhrjreFnw&_nc_ss=7920f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQSdWe866tVjrmjxTHP7yyUB-7c7WMc-XwZGmdZ9LCYMYg&oe=6AFF80EA"
         }
@@ -5604,6 +5731,7 @@
           "source": "https://minicourse.dev/media/library/csom26/1.webp?v=aede927f7199302a",
           "checkedAt": "2026-11-16",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 1,
           "id": "work-88ca58534cc647f3a9a374fd5920e664",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571713166193201203/909503189_17976543879151110_6320260185608512786_n.png?ex=6afbbb73&is=6afa69f3&hm=5f2683c67d33e3be3795cbe34ee8d325b6344d2c722d269ad8093b988ec53764&"
         }
@@ -5639,6 +5767,7 @@
           "source": "https://naiting-liu.tw/zh/works/ocean-current/",
           "checkedAt": "2026-11-16",
           "note": "作者官方作品頁提供的《洋流》作品預覽圖；官網關於頁連結至同一 Threads 與 Instagram 帳號，HTTPS 圖片可讀取",
+          "title": "洋流 Ocean Current",
           "id": "work-6d4a7d7d885e4859b975b07ae7bb31ce",
           "originalUrl": "https://naiting-liu.tw/_astro/ocean-current.XFioXyJC_1AjBO0.webp"
         },
@@ -5648,6 +5777,7 @@
           "source": "https://memoriesofthewind.tw/",
           "checkedAt": "2026-11-16",
           "note": "使用者指定作品網站的 og:image 預覽圖；網站首頁及關於頁均連結至 eziraros 的 Threads 帳號，HTTPS 圖片可讀取",
+          "title": "風的記憶 Memories of the Wind",
           "id": "work-3c37584998d74879a440898389330d4a",
           "originalUrl": "https://memoriesofthewind.tw/og-home.jpg"
         }
@@ -5692,6 +5822,7 @@
           "source": "https://www.threads.com/@xiaru_art/post/DfPAAt6gfFI",
           "checkedAt": "2026-11-16",
           "note": "使用者提供，指定為此設計師作品照片；來源為使用者所提供的 Threads 貼文，已核對貼文作者為 @xiaru_art",
+          "number": 1,
           "id": "work-ac41d8c1870341569c9bdee7282f5b84",
           "originalUrl": "https://scontent-tpe5-1.cdninstagram.com/v/t51.82787-15/882312565_18111462080207428_4334857069042466710_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=bVThyjdCv3kQ7kNvwGjvYas&_nc_oc=AdpFKNF8vhld2dPG3_W7llYPDRtHf08dLYTmpWJpwciJraj2rnH5LbObwzq23bpQXzg&_nc_zt=23&_nc_ht=scontent-tpe5-1.cdninstagram.com&_nc_gid=7o_klEKb72ZKJyC7rctpPQ&_nc_ss=7920f&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQQ91LD5AL8quaSkPRNsqWDvqY8QEpCPeiZ1Jiw0Thawmw&oe=6B005322"
         },
@@ -5701,6 +5832,7 @@
           "source": "https://minicourse.dev/media/library/xiaru-art/8.webp?v=ccf0bffbb706f2f0",
           "checkedAt": "2026-11-16",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 8,
           "id": "work-264b71e369a9454c9820e4e30e01e28f",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571818988629921842/900669251_18113554055207428_2011662810644795161_n.png?ex=6afc1e01&is=6afacc81&hm=be094161710bde3ad2ea9aecd51cb325cc9b3f285cd2cc0ce78ed70245119d4e&"
         },
@@ -5710,6 +5842,7 @@
           "source": "https://minicourse.dev/media/library/xiaru-art/9.webp?v=a7cc7bee9d12d026",
           "checkedAt": "2026-11-16",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 9,
           "id": "work-406c9a1f622c4019a9fbca0bfe8a0ec0",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571818990253375558/910885018_18113554079207428_8903110382599121082_n.png?ex=6afc1e02&is=6afacc82&hm=d105ad57cb31283d40783c59a720757299ccb849b2e0fa0c59b08ad40daedb4b&"
         },
@@ -5719,6 +5852,7 @@
           "source": "https://minicourse.dev/media/library/xiaru-art/10.webp?v=8904e98970921a5a",
           "checkedAt": "2026-11-16",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 10,
           "id": "work-4f56902679c643a9a25310e0ba6d5c36",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571818992090218526/906078873_18113554106207428_5973895318019224897_n.png?ex=6afc1e02&is=6afacc82&hm=19d3413b89c9221910e2ba75cc2832f2bb50ebfc7dad7213d2ea06dbe5c8fe7a&"
         },
@@ -5728,6 +5862,7 @@
           "source": "https://www.threads.com/@xiaru_art/post/Dfwz-esIHtg",
           "checkedAt": "2026-11-16",
           "note": "使用者提供，指定為此設計師作品照片；來源為使用者所提供的 Threads 貼文，已核對貼文作者為 @xiaru_art",
+          "number": 5,
           "id": "work-98303186da72452b82be3f108cabf511",
           "originalUrl": "https://scontent-tpe1-1.cdninstagram.com/v/t51.82787-15/907608880_18113413778207428_4243237109525515615_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=107&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=7Uwb5nPo_NoQ7kNvwF-aJDM&_nc_oc=Adq77EZOv7a2-m5PsQAtJ_80kVeKfj7sR5la0A9qNF_6ksB517El45mRLI8VmXER80g&_nc_zt=23&_nc_ht=scontent-tpe1-1.cdninstagram.com&_nc_gid=byMqzZpUp2EaFAsGnCUQew&_nc_ss=7920f&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQQmZ7GQ6G7d3H7gNYnfmAmCtbaEIgWJDTOOMeTusT6mRg&oe=6B0054E7"
         },
@@ -5737,6 +5872,7 @@
           "source": "https://www.threads.com/@xiaru_art/post/Dfwz-esIHtg",
           "checkedAt": "2026-11-16",
           "note": "使用者提供，指定為此設計師作品照片；來源為使用者所提供的 Threads 貼文，已核對貼文作者為 @xiaru_art",
+          "number": 6,
           "id": "work-3ab42c0c150840fe897c6554454eddaf",
           "originalUrl": "https://scontent-tpe5-1.cdninstagram.com/v/t51.82787-15/901928966_18113413808207428_5920170348356657443_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=4pApyyAFUfkQ7kNvwH7jgji&_nc_oc=AdqWmQpRZKo-4Wh5n0nDAnCS3OW8smhI3sasGLt1SYCgd4BCUwVi36wteamB9IXJFWM&_nc_zt=23&_nc_ht=scontent-tpe5-1.cdninstagram.com&_nc_gid=byMqzZpUp2EaFAsGnCUQew&_nc_ss=7920f&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQQ-smiBrU6Mm7eS3ZthSPCIg3tX9q4ZVWC7mS55vZ_09g&oe=6B004255"
         },
@@ -5746,6 +5882,7 @@
           "source": "https://www.threads.com/@xiaru_art/post/Dfwz-esIHtg",
           "checkedAt": "2026-11-16",
           "note": "使用者提供，指定為此設計師作品照片；來源為使用者所提供的 Threads 貼文，已核對貼文作者為 @xiaru_art",
+          "number": 7,
           "id": "work-a780de2d22504490a11af529ec321749",
           "originalUrl": "https://scontent-tpe1-1.cdninstagram.com/v/t51.82787-15/901826010_18113413835207428_4447774101147700537_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=108&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=I9qepSZoA3EQ7kNvwFMZzU1&_nc_oc=Adqj9NPLvFZ1bf5EodwReDqAddejWTeaxHELofnuTHmzWQrEIIrVaS5lQVrHy5f761s&_nc_zt=23&_nc_ht=scontent-tpe1-1.cdninstagram.com&_nc_gid=byMqzZpUp2EaFAsGnCUQew&_nc_ss=7920f&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQQ0iUaK6jC8_So6zpmRooCZoggT5g16GsBpwAD7sro6UQ&oe=6B006557"
         }
@@ -5792,6 +5929,7 @@
           "source": "https://minicourse.dev/media/library/yuncraft-o/1.webp?v=90f9754b7f536662",
           "checkedAt": "2026-11-16",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 1,
           "id": "work-13ca9ee7b584409f99109f09bb181219",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571750275037794365/905664657_17921066937525715_7133899557519473409_n.png?ex=6afbde03&is=6afa8c83&hm=670d6689f6f4f2da83707c4fe3fc2aa8453b2a81be866806f344325d4e4dbab6&"
         }
@@ -5827,6 +5965,7 @@
           "source": "https://minicourse.dev/media/library/mygirlaiko/1.webp?v=5065b4b2dfe314c5",
           "checkedAt": "2026-11-16",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 1,
           "id": "work-3857b9361c5842f8bdcc88c82b2e58a0",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571752919433216000/1.jpg?ex=6afbe079&is=6afa8ef9&hm=c121995f3d8c19674cca7b1be3a1db6f82835e3b94e83ddcbf39b31cfd3f6a85&"
         },
@@ -5836,6 +5975,7 @@
           "source": "https://minicourse.dev/media/library/mygirlaiko/2.webp?v=238788985d652da1",
           "checkedAt": "2026-11-16",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 2,
           "id": "work-2336c928b0894d22b31c45e2c012a36a",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571752919865495573/2.jpg?ex=6afbe079&is=6afa8ef9&hm=b5429d179deee03edfc8cd270239ea3d6abbdf280ffd5ee8a0d09dd527704379&"
         },
@@ -5845,6 +5985,7 @@
           "source": "https://minicourse.dev/media/library/mygirlaiko/3.webp?v=12d6285ae999860e",
           "checkedAt": "2026-11-16",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 3,
           "id": "work-d2554291cdb14804a6e9b55133b5cb5a",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571752920251109436/3.jpg?ex=6afbe079&is=6afa8ef9&hm=14274b5b8ec1f75c92d756e2507890f75f77dba25b333d1969bd7dd49a0bf7a3&"
         },
@@ -5854,6 +5995,7 @@
           "source": "https://minicourse.dev/media/library/mygirlaiko/4.webp?v=1850c76642c4436d",
           "checkedAt": "2026-11-16",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 4,
           "id": "work-5929f4423c0e4aef90995c92cd7121d6",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571752920603566130/4.jpg?ex=6afbe07a&is=6afa8efa&hm=e975494bbd6e8612e7e7b83373fa9399e644fc64afd092cf979bcc923309a73b&"
         },
@@ -5863,6 +6005,7 @@
           "source": "https://minicourse.dev/media/library/mygirlaiko/5.webp?v=017e48209915abdb",
           "checkedAt": "2026-11-16",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 5,
           "id": "work-15f8c9a6b2a14fa2bc0bad8152252977",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571752921136238613/5.jpg?ex=6afbe07a&is=6afa8efa&hm=451c723e5902aa0c7db0a8158e9cc9183e3b47380fb4597c5e50c95e5b4b63da&"
         },
@@ -5872,6 +6015,7 @@
           "source": "https://minicourse.dev/media/library/mygirlaiko/6.webp?v=36db948cbdd5826b",
           "checkedAt": "2026-11-16",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 6,
           "id": "work-72c0b06be4654c199e4f7f58d59fc1f6",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571752921601679400/6.jpg?ex=6afbe07a&is=6afa8efa&hm=337f9358176efc4d511e124baf6f253ab48a808f0866825b15cc42c5379ac24d&"
         },
@@ -5881,6 +6025,7 @@
           "source": "https://minicourse.dev/media/library/mygirlaiko/7.webp?v=0eee3560069df0d9",
           "checkedAt": "2026-11-16",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 7,
           "id": "work-4d9b0d93293f40c79a49cca2740e8bfb",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571752922096603226/7.jpg?ex=6afbe07a&is=6afa8efa&hm=57271ac362b18ffb285ec9846635fb800f7d01fb67f993eab68c44845fb009ed&"
         }
@@ -5915,6 +6060,7 @@
           "source": "https://minicourse.dev/media/library/chemaowei/1.webp?v=7c4510f2481b079c",
           "checkedAt": "2026-11-16",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 1,
           "id": "work-5bd15ee2d0bb4b2b88dadc642ed45e23",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571758813009420349/899588211_17919883305531509_448560485226065360_n.png?ex=6afbe5f6&is=6afa9476&hm=98a501876e3dd018cf5e397d7baa4dbf7b1d8e4f9a2cfe2bb8551c48e86e72bc&"
         },
@@ -5924,6 +6070,7 @@
           "source": "https://minicourse.dev/media/library/chemaowei/2.webp?v=7c47a79859dafbd6",
           "checkedAt": "2026-11-16",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 2,
           "id": "work-5c263ce5223c41ff8d6ff513c13db623",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571758813428580493/900664761_17919882555531509_6146205921219144133_n.png?ex=6afbe5f6&is=6afa9476&hm=675c0276341e5b885228f917635c31d12d0f3a5ea775947360fa815d4891f07b&"
         }
@@ -5958,6 +6105,7 @@
           "source": "https://minicourse.dev/media/library/jiho-studio/1.webp?v=9536c89362e0cf3e",
           "checkedAt": "2026-11-16",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 1,
           "id": "work-080717b16dce4e748297b927b30e7ed0",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571870574144262245/883626789_17993365122108560_3763745873025040886_n.png?ex=6afc4e0c&is=6afafc8c&hm=b932abd7d800843112f698afd12c94bc95ce9f4b89a1a3c64291057e5968ef16&"
         },
@@ -5967,6 +6115,7 @@
           "source": "https://minicourse.dev/media/library/jiho-studio/2.webp?v=572ab1ead65ddf26",
           "checkedAt": "2026-11-16",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 2,
           "id": "work-8e98bcfda552423d9402140893b4c4c7",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571870574802763886/883558433_17993365113108560_6335987596840467762_n.png?ex=6afc4e0c&is=6afafc8c&hm=c0ab65abc5bbd0ece5c0bb8758e5fb63d8bef8d20ce4f8deaaaca9bc6c60a8db&"
         },
@@ -5976,6 +6125,7 @@
           "source": "https://minicourse.dev/media/library/jiho-studio/3.webp?v=cf348c7bc6562c6b",
           "checkedAt": "2026-11-16",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 3,
           "id": "work-409fd369211e4ebca5290b8d303048a9",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571870575520129034/799440277_18627738016054042_3727243403029643329_n.png?ex=6afc4e0d&is=6afafc8d&hm=7a4e906e6d3045ca6c09a5449986b1dacef258f9d4a93c2b550bee3e9c516069&"
         },
@@ -5985,6 +6135,7 @@
           "source": "https://minicourse.dev/media/library/jiho-studio/4.webp?v=d73bb554c3c67464",
           "checkedAt": "2026-11-16",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 4,
           "id": "work-881e94222a7749168aa6fb7b1c384e73",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571870577185128608/907371282_18653248543054042_5601520989301613109_n.png?ex=6afc4e0d&is=6afafc8d&hm=57847f9630837bc81f1fe0b89523238f4c31ce85735282f685534a5c79e50d81&"
         },
@@ -5994,6 +6145,7 @@
           "source": "https://minicourse.dev/media/library/jiho-studio/5.webp?v=4d2b7d588e2c5484",
           "checkedAt": "2026-11-16",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 5,
           "id": "work-614f48c12eae4bfb8d1077a3f1e38676",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571870578703605801/907684017_18653248534054042_1951814598457368662_n.png?ex=6afc4e0d&is=6afafc8d&hm=7b307a69ef84c3fc0af41d23e46cd1d1db2da56be40f5f9a70cd32087011474a&"
         },
@@ -6003,6 +6155,7 @@
           "source": "https://minicourse.dev/media/library/jiho-studio/6.webp?v=bf5950e90854d6c2",
           "checkedAt": "2026-11-16",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 6,
           "id": "work-9d362b2d92734bcf902371edbf25e532",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571870579638800454/899270266_18650757484054042_8913804704924476129_n.png?ex=6afc4e0e&is=6afafc8e&hm=60871c8a80f305bb1b9e2e6900acf5cf7f813dc2c085eb6966660bdedb0a5e53&"
         }
@@ -6051,6 +6204,7 @@
           "source": "https://www.threads.com/@aduen/post/DfmAs03GNew",
           "checkedAt": "2026-11-16",
           "note": "使用者提供，指定為此設計師作品照片\n作品對照連結：https://www.threads.com/@aduen/post/DfmAs03GNew",
+          "number": 1,
           "id": "work-ae3f209f71224968afd2a34405b66586",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571897414959370432/1.png?ex=6afc670c&is=6afb158c&hm=acdaeeeb0da0fe702285fbc9af98fe1a39da80b7c5d3fb5841d9da0e361355ca&"
         },
@@ -6060,6 +6214,7 @@
           "source": "https://www.threads.com/@aduen/post/DftYFTjGJVx",
           "checkedAt": "2026-11-16",
           "note": "使用者提供，指定為此設計師作品照片\n作品對照連結：https://www.threads.com/@aduen/post/DftYFTjGJVx",
+          "number": 2,
           "id": "work-1699fc4b52c845ec9b5e5596dc66f63a",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571897415852630059/2.png?ex=6afc670c&is=6afb158c&hm=734219e42b96b26b28877d943235a46cd464c470609ff2a2f45ec9e75f5008d4&"
         },
@@ -6069,6 +6224,7 @@
           "source": "https://www.threads.com/@aduen/post/DfzT8bqmFe2",
           "checkedAt": "2026-11-16",
           "note": "使用者提供，指定為此設計師作品照片\n作品對照連結：https://www.threads.com/@aduen/post/DfzT8bqmFe2",
+          "number": 3,
           "id": "work-4126db4bd85e4805af770a570966c3b2",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571897416943403098/3.png?ex=6afc670c&is=6afb158c&hm=1ffec1603a78c58c055dbbeae2cd3bc082b777ef5118ee205c80711dd95b26e2&"
         },
@@ -6078,6 +6234,7 @@
           "source": "https://www.threads.com/@aduen/post/DfzT8bqmFe2",
           "checkedAt": "2026-11-16",
           "note": "使用者提供，指定為此設計師作品照片\n作品對照連結：https://www.threads.com/@aduen/post/DfzT8bqmFe2",
+          "number": 4,
           "id": "work-16b026eab2bb4462851a2a96d9542539",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571897417761165342/4.png?ex=6afc670c&is=6afb158c&hm=0b38a6b384136ea5a9139598662894c7363a36176078bc8247593fc922355bdb&"
         },
@@ -6087,6 +6244,7 @@
           "source": "https://www.threads.com/@aduen/post/DevwPDWG8B2",
           "checkedAt": "2026-11-16",
           "note": "使用者提供，指定為此設計師作品照片\n作品對照連結：https://www.threads.com/@aduen/post/DevwPDWG8B2",
+          "number": 5,
           "id": "work-b29f09b5fdfe4958990fdf3ed13141fb",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571897418738303036/5.png?ex=6afc670d&is=6afb158d&hm=30319425263e2330ac2bce7d35cfad2dadfbd5bc2bd07fe542960c733fd4b967&"
         },
@@ -6096,6 +6254,7 @@
           "source": "https://www.threads.com/@aduen/post/DbkSq9sm6xd",
           "checkedAt": "2026-11-16",
           "note": "使用者提供，指定為此設計師作品照片\n作品對照連結：https://www.threads.com/@aduen/post/DbkSq9sm6xd",
+          "number": 6,
           "id": "work-f0b0b8dee9544e60ab46605a81c7bd04",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571897419262726236/6.png?ex=6afc670d&is=6afb158d&hm=9277e7a86757bbeae8730473dbd3b6d5f93c66608823acd6ca5414363d9d3e8b&"
         },
@@ -6105,6 +6264,7 @@
           "source": "https://www.threads.com/@aduen/post/Db9tY3CG5-9",
           "checkedAt": "2026-11-16",
           "note": "使用者提供，指定為此設計師作品照片\n作品對照連結：https://www.threads.com/@aduen/post/Db9tY3CG5-9",
+          "number": 7,
           "id": "work-204a50a2ef974dd0b000e9fe1c45c5d6",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571897419874967622/7.png?ex=6afc670d&is=6afb158d&hm=451c21db275a8ee495195097116de4636de6bd1fb520ea0f45ff204868959f0f&"
         },
@@ -6114,6 +6274,7 @@
           "source": "https://www.threads.com/@aduen/post/DeYh0y4G3L6",
           "checkedAt": "2026-11-16",
           "note": "使用者提供，指定為此設計師作品照片\n作品對照連結：https://www.threads.com/@aduen/post/DeYh0y4G3L6",
+          "number": 8,
           "id": "work-aa6a88d36493489aa55c582584b9aaf4",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571897420332400680/8.png?ex=6afc670d&is=6afb158d&hm=26b6ef5760e1ccaf44ca6bbdd5075e1b7636f9470e1269744f8201d7c0710fb5&"
         },
@@ -6123,6 +6284,7 @@
           "source": "https://www.threads.com/@aduen/post/Dbh0BFom-yN",
           "checkedAt": "2026-11-16",
           "note": "使用者提供，指定為此設計師作品照片\n作品對照連結：https://www.threads.com/@aduen/post/Dbh0BFom-yN",
+          "number": 9,
           "id": "work-d6317d7ab1d34c5d9e8917559f9531f8",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571897421221466226/9.png?ex=6afc670d&is=6afb158d&hm=0e9ec644cb1d180bde23bb56c0195d6a7f6b5b87669ed5a615cc49bbe6eb5506&"
         },
@@ -6132,6 +6294,7 @@
           "source": "https://www.threads.com/@aduen/post/DbfBTtVG-c4",
           "checkedAt": "2026-11-16",
           "note": "使用者提供，指定為此設計師作品照片\n作品對照連結：https://www.threads.com/@aduen/post/DbfBTtVG-c4",
+          "number": 10,
           "id": "work-00d287ae97ef44b2b38449ecfc0f119c",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571897422513184899/10.png?ex=6afc670d&is=6afb158d&hm=d72a6db21f184f19d1fbbef3d3fe6f8fabb4a8153f7c09bad030a5760b3bd6fd&"
         }
@@ -6166,6 +6329,7 @@
           "source": "https://minicourse.dev/media/library/freedom-482/6.webp?v=6de174b11c2baa67",
           "checkedAt": "2026-11-17",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 6,
           "id": "work-99081bb5d47a4a19ae178883ba2bbc3e",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572213271040102471/902586135_17915513724559527_7968812524001585619_n.png?ex=6afd8d36&is=6afc3bb6&hm=6574940ed0019f4a8387e44a25101b00acd37175b0b762337cb7a28dcbaf8c3b&"
         },
@@ -6175,6 +6339,7 @@
           "source": "https://minicourse.dev/media/library/freedom-482/1.webp?v=22419ae1ddbd11e9",
           "checkedAt": "2026-11-16",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 1,
           "id": "work-c1117c87963c4e63a88ecd34bd26a996",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571918759772430638/773918626_17899968963559527_6597838222151533266_n.png?ex=6afc7aed&is=6afb296d&hm=459dd8058db1fc7650ce25911ce2ee67c7ff81ad75cccf127e7bdbe82454f140&"
         },
@@ -6184,6 +6349,7 @@
           "source": "https://minicourse.dev/media/library/freedom-482/2.webp?v=5acb3ba33ee90e3e",
           "checkedAt": "2026-11-16",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 2,
           "id": "work-ca55a998ca8d449eba4ef4efd9b07728",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571918760548503552/774863041_17899968897559527_8490154832471230893_n.png?ex=6afc7aed&is=6afb296d&hm=e840db0427faf60bc09203ad92974a0b6046a63b52d6ad650bb1d74f56183edc&"
         },
@@ -6193,6 +6359,7 @@
           "source": "https://minicourse.dev/media/library/freedom-482/3.webp?v=ae0aa14b96b18ff6",
           "checkedAt": "2026-11-16",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 3,
           "id": "work-3cba32eb3ff049d185dff6d95bc571dc",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571918761051553912/774406025_17899968936559527_6208086612984793459_n.png?ex=6afc7aed&is=6afb296d&hm=af0ab3a9a4c24cefa872ad4d1f428eea496531fa7bbc80d051b365c82a2848d4&"
         },
@@ -6202,6 +6369,7 @@
           "source": "https://minicourse.dev/media/library/freedom-482/4.webp?v=8e6a3c46ee32f2e0",
           "checkedAt": "2026-11-16",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 4,
           "id": "work-ddd7334b1a7447cab70f142390e7453c",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571918761592750121/775775752_17899968954559527_6787696793347862324_n.png?ex=6afc7aed&is=6afb296d&hm=544160eb70b8caaaae0a1554b7de3b274b9adb45a06e6ebb6ffd0da3ffe7feef&"
         },
@@ -6211,6 +6379,7 @@
           "source": "https://minicourse.dev/media/library/freedom-482/5.webp?v=8e0e51623cf48be4",
           "checkedAt": "2026-11-16",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 5,
           "id": "work-3311452b42ad4e52998d925af8369730",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1571918762242736268/902586108_17915504178559527_1957714115851855313_n.png?ex=6afc7aed&is=6afb296d&hm=b2be82421d8cbb5fa1843831a15dd54a0406add447adce375a005527713cd0cc&"
         }
@@ -6249,6 +6418,7 @@
           "source": "https://minicourse.dev/media/library/rabby-wang/1.webp?v=552f72c3760dbfa4",
           "checkedAt": "2026-11-17",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 1,
           "id": "work-6e339df030b949aeb2d212f9c46be2bc",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572105008021774366/911496486_1645006930416746_3641607495528367953_n.png?ex=6afd2862&is=6afbd6e2&hm=dbdb88b47c2e6f9df8e6008bbd160f6cc857b5ddc89f96bd2bf9609e181866a3&"
         },
@@ -6258,6 +6428,7 @@
           "source": "https://minicourse.dev/media/library/rabby-wang/2.webp?v=fda33732fb7d9149",
           "checkedAt": "2026-11-17",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 2,
           "id": "work-cb8958901ca24034a6ba7dc3d57d0b95",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572105008571220100/912160518_2312542956190105_2456376836372195263_n.png?ex=6afd2862&is=6afbd6e2&hm=3e89f27091155e0e7f01378483292546f231a1da1322ee0a1dab32b7f4cc3972&"
         },
@@ -6267,6 +6438,7 @@
           "source": "https://minicourse.dev/media/library/rabby-wang/3.webp?v=8e5d30a95a715e90",
           "checkedAt": "2026-11-17",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 3,
           "id": "work-5efeecdc606c481a975c4c4c37d27706",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572105009082929152/910879299_2022721882487850_603446506937441404_n.png?ex=6afd2862&is=6afbd6e2&hm=b2873944c26b4ea0c0ca0944598f32a7105b91634d9ee9a62a66e97f0d1a2502&"
         },
@@ -6276,6 +6448,7 @@
           "source": "https://minicourse.dev/media/library/rabby-wang/4.webp?v=6cf03627b5d50820",
           "checkedAt": "2026-11-17",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 4,
           "id": "work-8a5332c5fc0949ccbf88c4de31ada609",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572105015806656583/912147333_29676903081913770_6169088751552500003_n.png?ex=6afd2864&is=6afbd6e4&hm=c8309c04b263423e92dd11a9acb7a015ed70aa5d1375f026d6bc99672731c479&"
         },
@@ -6285,6 +6458,7 @@
           "source": "https://minicourse.dev/media/library/rabby-wang/5.webp?v=b80c2cb9131e48a2",
           "checkedAt": "2026-11-17",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 5,
           "id": "work-02b4a679c58042ec8cc02f164bbd3ff1",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572105016351920259/912538034_3147485562309503_5505429435920126388_n.png?ex=6afd2864&is=6afbd6e4&hm=137320bf6e65828c3d844bb4045c0738f0cb97efd1ed6488072005592409f352&"
         },
@@ -6294,6 +6468,7 @@
           "source": "https://minicourse.dev/media/library/rabby-wang/6.webp?v=87ac92be41b688d3",
           "checkedAt": "2026-11-17",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 6,
           "id": "work-3a4c64c199724e2eae9a22f93bbaa268",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572105016683008050/910302592_3735433199965994_2938958157767077146_n.png?ex=6afd2864&is=6afbd6e4&hm=fb8ec9da09b1dd6f8c7d5346e4d6ff22765fb032c1645d1b22ca1e2298b13ae0&"
         },
@@ -6303,6 +6478,7 @@
           "source": "https://minicourse.dev/media/library/rabby-wang/7.webp?v=c6b674bad913bc30",
           "checkedAt": "2026-11-17",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 7,
           "id": "work-7fdd6e7b664f4997b0c7292d9a590ab9",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572105017039659089/906678514_1898551111576949_7710121969073618815_n.png?ex=6afd2864&is=6afbd6e4&hm=880ed91b62c7ce3013c5d5c20e390c7930d0cddebff1d6c45d35bf8bceea6ec1&"
         },
@@ -6312,6 +6488,7 @@
           "source": "https://minicourse.dev/media/library/rabby-wang/8.webp?v=3693ac58a4a130ac",
           "checkedAt": "2026-11-17",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 8,
           "id": "work-8cbcfd103dd146d78c66baddeba01d7e",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572105017303769160/907577767_1151991990626222_8617764318673759424_n.png?ex=6afd2864&is=6afbd6e4&hm=e60a29cea85861905706a8fef743d5f34f3a2d7e74f5752c83d71e7058e92e8a&"
         },
@@ -6321,6 +6498,7 @@
           "source": "https://minicourse.dev/media/library/rabby-wang/9.webp?v=af2fb5e716c7a5f3",
           "checkedAt": "2026-11-17",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 9,
           "id": "work-5503da6b4c984f8fa8fbfc1baece7e10",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572105017639436368/907273342_2190725224848558_7243742219905978228_n.png?ex=6afd2864&is=6afbd6e4&hm=869c8e5da0e4801547269ed890cc04ced84a12c3c04d3c871b69a52feb58b7eb&"
         },
@@ -6330,6 +6508,7 @@
           "source": "https://minicourse.dev/media/library/rabby-wang/10.webp?v=0ecb1f22dd71dd67",
           "checkedAt": "2026-11-17",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 10,
           "id": "work-1a1cabf997544c1ca0f245607cc2c5f4",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572105018109337631/913792817_984547880934120_6339756046492242889_n.png?ex=6afd2864&is=6afbd6e4&hm=2215c522fdc399eb91a0c88d0dae014978a5cc326eeddf080e1fec41e35ec8de&"
         },
@@ -6339,6 +6518,7 @@
           "source": "https://minicourse.dev/media/library/rabby-wang/11.webp?v=7f9a3331d3beb777",
           "checkedAt": "2026-11-17",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 11,
           "id": "work-117df274b3604b69b4300851b198a193",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572105356916555876/906838410_2224144564857427_3867880290718884437_n.png?ex=6afd28b5&is=6afbd735&hm=73eef1ed5d75c4c646632768f8e07dab2fc92b7809c6ea39ceb5d9cfa1130533&"
         },
@@ -6348,6 +6528,7 @@
           "source": "https://minicourse.dev/media/library/rabby-wang/12.webp?v=c4b6b2df7111be34",
           "checkedAt": "2026-11-17",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 12,
           "id": "work-cddbfeddd51e470fbbf879929318f9c2",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572105357470466148/910903958_3628303034017397_424988126066820126_n.png?ex=6afd28b5&is=6afbd735&hm=de2654fb12cfda9b4a41aedfcaad7310239117dc9e073a78e8d2dbf171ce6a61&"
         },
@@ -6357,6 +6538,7 @@
           "source": "https://minicourse.dev/media/library/rabby-wang/13.webp?v=0d6bfe0b96fde0e6",
           "checkedAt": "2026-11-17",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 13,
           "id": "work-b1e189bc21e04e06a65a2fe614f5d8c7",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572105358040760331/907538150_1655080916108912_5725773553337322798_n.png?ex=6afd28b5&is=6afbd735&hm=f4f19d552bed5a726547a6ec91519a6ddac48dc664ca5a304b6b765cc8e6e266&"
         },
@@ -6366,6 +6548,7 @@
           "source": "https://minicourse.dev/media/library/rabby-wang/14.webp?v=d7cdd356f3b11bcf",
           "checkedAt": "2026-11-17",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 14,
           "id": "work-f611a19c71564864a25fbb6dc87a76d6",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572105358829293589/907538150_1698772748331060_5630376263731834283_n.png?ex=6afd28b5&is=6afbd735&hm=97eab528d56729050c5bb2e66252ac5af1be38a7aadd461187a0a69a36152df9&"
         },
@@ -6375,6 +6558,7 @@
           "source": "https://minicourse.dev/media/library/rabby-wang/15.webp?v=c750283456aeb8c0",
           "checkedAt": "2026-11-17",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 15,
           "id": "work-b3b136db8e6b48019b9695a81407719e",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572105359416500244/907054014_1135644808958813_6347481655839160847_n.png?ex=6afd28b5&is=6afbd735&hm=928df85a96ac5692c4fd3767c61fc035078a7f4132117879430bef69bb586497&"
         },
@@ -6384,6 +6568,7 @@
           "source": "https://minicourse.dev/media/library/rabby-wang/16.webp?v=2e7382660add4220",
           "checkedAt": "2026-11-17",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 16,
           "id": "work-772878b6aef94492b0ed49ff29b405f7",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572105359680602173/912467997_2021025148809037_7461098360575804750_n.png?ex=6afd28b6&is=6afbd736&hm=32e644cdffb0803a6273f23da21b4a424aa919da515841f6fc0efa97a862f529&"
         },
@@ -6393,6 +6578,7 @@
           "source": "https://minicourse.dev/media/library/rabby-wang/17.webp?v=5bd5d06722ef98ae",
           "checkedAt": "2026-11-17",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 17,
           "id": "work-bd1d8fde8af4424085b69a530198fbdb",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572105359999373412/906894227_1907666053539700_3832654904620782438_n.png?ex=6afd28b6&is=6afbd736&hm=d5f63097c29d13c2b115ac734868771fbe4dc686d4ddf695b956a5a898a9ab81&"
         },
@@ -6402,6 +6588,7 @@
           "source": "https://minicourse.dev/media/library/rabby-wang/18.webp?v=2a301ed440fb7c2d",
           "checkedAt": "2026-11-17",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 18,
           "id": "work-024967acfed14d7a8981f37900f87c0a",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572105360402288730/913083840_1673181220843375_6443738031206108487_n.png?ex=6afd28b6&is=6afbd736&hm=8372e800fe437fce24283fd19cd4cf9e1b235d7b0c805ff4dcbbeef3061c5271&"
         },
@@ -6411,6 +6598,7 @@
           "source": "https://minicourse.dev/media/library/rabby-wang/19.webp?v=0ac0907349485708",
           "checkedAt": "2026-11-17",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 19,
           "id": "work-bb7223ddc9da4ca381248d5ebc1f9322",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572105360783712419/913149961_981290287937599_2193777068634506036_n.png?ex=6afd28b6&is=6afbd736&hm=73233e2b3307d5ece11bf934c97ce8cce37d77ec7ca3a90b0e6be15469659056&"
         }
@@ -6445,6 +6633,7 @@
           "source": "https://minicourse.dev/media/library/agi-huang/11.webp?v=1da920fa72b00e24",
           "checkedAt": "2026-11-17",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 11,
           "id": "work-7545009f82d246afa9b8c9320a3779a1",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572130653527347221/913588033_4624114114490098_6432990830201140970_n.png?ex=6afd4044&is=6afbeec4&hm=6e256356366ac4a449f6d91dd6a521547b2d4cd1f217326949d07eb02f3ee9f6&"
         },
@@ -6454,6 +6643,7 @@
           "source": "https://minicourse.dev/media/library/agi-huang/12.webp?v=4b94afe959baf34a",
           "checkedAt": "2026-11-17",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 12,
           "id": "work-fb2f7ec793c841fd987420ed210f5b26",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572130653959356516/909929197_2400395544106276_6863652061432446608_n.png?ex=6afd4044&is=6afbeec4&hm=0c163ec8e004a47e49be021afb12296211bd53d4ced3b5ea179c151990c01e58&"
         },
@@ -6463,6 +6653,7 @@
           "source": "https://minicourse.dev/media/library/agi-huang/13.webp?v=ad9e79581b06b755",
           "checkedAt": "2026-11-17",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 13,
           "id": "work-822be693322e42e1b3a992e14d9ee0cd",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572130654378795050/912264978_1452082510423875_4388122353169390845_n.png?ex=6afd4044&is=6afbeec4&hm=f6b156142e3a6dad636c9deab2c8c7163d8c3d2b06bbbb705f7b850e911c123d&"
         },
@@ -6472,6 +6663,7 @@
           "source": "https://minicourse.dev/media/library/agi-huang/10.webp?v=0906e55eb0dd5e79",
           "checkedAt": "2026-11-17",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 10,
           "id": "work-947bd81b99c64616918327285d3e7b53",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572107047162613760/869628222_17954836107296184_688332363054381684_n.png?ex=6afd2a48&is=6afbd8c8&hm=4296d87ab6997b9352d51dc2dc1ba0cceda4066a7dba8d6abb9f7ef64af8115e&"
         },
@@ -6481,6 +6673,7 @@
           "source": "https://minicourse.dev/media/library/agi-huang/1.webp?v=e3b902c4b692ac36",
           "checkedAt": "2026-11-17",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 1,
           "id": "work-0f655592e27c4a5cac8c35148d7cf7e9",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572106773072969788/831354407_17950452285296184_401974454426682995_n.png?ex=6afd2a07&is=6afbd887&hm=48a8989ea49f9737ebde75689425daff97327cf1cc6f8cb684479ba56003edd0&"
         },
@@ -6490,6 +6683,7 @@
           "source": "https://minicourse.dev/media/library/agi-huang/2.webp?v=6d804855283b5c87",
           "checkedAt": "2026-11-17",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 2,
           "id": "work-8dfcf040d78c47f1868e6472a30418cc",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572106773651922954/830116183_17950783896296184_2588092217986851061_n.png?ex=6afd2a07&is=6afbd887&hm=36565c52a0eb92528a480d4015983c3f0a3d7552da2b53ebfccb0b9badad6e85&"
         },
@@ -6499,6 +6693,7 @@
           "source": "https://minicourse.dev/media/library/agi-huang/3.webp?v=5ebdaf95b6e90a93",
           "checkedAt": "2026-11-17",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 3,
           "id": "work-e833dac2b26842baaffd41abed0dc6e5",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572106774213951560/833374985_17950786911296184_5573646853909290599_n.png?ex=6afd2a07&is=6afbd887&hm=e724cb6d783592e4f28ba8bec71d0faa85652adac4aac617dc70aaaf2afdfa30&"
         },
@@ -6508,6 +6703,7 @@
           "source": "https://minicourse.dev/media/library/agi-huang/4.webp?v=be4bb6a01fde7f84",
           "checkedAt": "2026-11-17",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 4,
           "id": "work-030affdf4046471abb6b16e0a44b7f4f",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572106775459659898/835721679_17951367309296184_2640499717945855422_n.png?ex=6afd2a07&is=6afbd887&hm=8243597edabee8cc63e906ec1dea0e4f80a56134fadedc74a0aa28ebf2ad8bed&"
         },
@@ -6517,6 +6713,7 @@
           "source": "https://minicourse.dev/media/library/agi-huang/5.webp?v=5981f225aec2c7ba",
           "checkedAt": "2026-11-17",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 5,
           "id": "work-28a3ec64e5214f5297c8a67d66d4047f",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572106775883161741/845977214_17952197448296184_4192336675486405917_n.png?ex=6afd2a07&is=6afbd887&hm=03a9c7e0a1fdc7a1b8a52c8a05affbefa476325a573851f09dd2edb92295beeb&"
         },
@@ -6526,6 +6723,7 @@
           "source": "https://minicourse.dev/media/library/agi-huang/6.webp?v=419af2623d028d00",
           "checkedAt": "2026-11-17",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 6,
           "id": "work-d31b80e2784c4397b08fa1048374778b",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572106776189603950/852558657_17952804822296184_7300054943218952122_n.png?ex=6afd2a07&is=6afbd887&hm=8d565ec91800f8dc3b2d59f7deb66b2d0380027f45ba45ef8347a73636a39c0a&"
         },
@@ -6535,6 +6733,7 @@
           "source": "https://minicourse.dev/media/library/agi-huang/7.webp?v=2efe6a91e69d1e15",
           "checkedAt": "2026-11-17",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 7,
           "id": "work-a47de7e17d0e4c4db3446184b4360dad",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572106776508240052/849771954_17952804846296184_41450134910797372_n.png?ex=6afd2a07&is=6afbd887&hm=0aeb347674e9028176e792d5771ce427ecd9d8513d80d3249181beb88a72a518&"
         },
@@ -6544,6 +6743,7 @@
           "source": "https://minicourse.dev/media/library/agi-huang/8.webp?v=8512b63511ef7e22",
           "checkedAt": "2026-11-17",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 8,
           "id": "work-2e931cad7f7643dc9e7cfbb1cbb2adfa",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572106783261065286/864960612_17953833327296184_3108073588757265865_n.png?ex=6afd2a09&is=6afbd889&hm=e249d8894f214c8262caecb239394a96f61f03ddf92f00e319a8d04eac83530b&"
         },
@@ -6553,6 +6753,7 @@
           "source": "https://minicourse.dev/media/library/agi-huang/9.webp?v=da6ef4a98f207e50",
           "checkedAt": "2026-11-17",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 9,
           "id": "work-5f4a425394a04d69a3eaeb84bdf3594c",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572106783881957446/867837553_17954445285296184_7165112224515815758_n.png?ex=6afd2a09&is=6afbd889&hm=6ab069ab1ec3ade20ccd67aa060c8778d6407a6b027317bff06dda0047f516b5&"
         }
@@ -6587,6 +6788,7 @@
           "source": "https://minicourse.dev/media/library/alulu1223/1.webp?v=5cbc699f6252f7de",
           "checkedAt": "2026-11-17",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 1,
           "id": "work-880fa8e12cfb43d89020df9c520fd3a0",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572134241578254446/902591853_17993444718116777_6503031064327399288_n.png?ex=6afd439c&is=6afbf21c&hm=0e864f133737a04d9e0e3c2de4b3851d22242067f0b3b717fe1398364e12ae9d&"
         },
@@ -6596,6 +6798,7 @@
           "source": "https://minicourse.dev/media/library/alulu1223/2.webp?v=dcf62e08bfb80f7d",
           "checkedAt": "2026-11-17",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 2,
           "id": "work-28904fcecbaa48ff801bc0cdfc731cd7",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572134242555531406/902591992_17993444667116777_6912044117923391086_n.png?ex=6afd439c&is=6afbf21c&hm=88c47ffe366a3dc560cabd0ebf06b57e597feaf94d140a1d4f6a4ec277191c6e&"
         },
@@ -6605,6 +6808,7 @@
           "source": "https://minicourse.dev/media/library/alulu1223/3.webp?v=27ef315d01f56dae",
           "checkedAt": "2026-11-17",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 3,
           "id": "work-3d9c46c4778b48b9858dcf75d19a3984",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572134243289661460/778340511_17980424142116777_1391180231959829783_n.png?ex=6afd439c&is=6afbf21c&hm=da5f6bc849345c913545760ebf8b12dc072d424dc82b2372dd32ae3eb1bdbac5&"
         },
@@ -6614,6 +6818,7 @@
           "source": "https://minicourse.dev/media/library/alulu1223/4.webp?v=54bd78c63ddbd23b",
           "checkedAt": "2026-11-17",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 4,
           "id": "work-6f6176fe594e43be94302de9c1b70535",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572134243860090952/780074704_17980424151116777_8184531126855775420_n.png?ex=6afd439c&is=6afbf21c&hm=30c7884f10aa8bb9b95a4638b7ff3026371db5ffacd16c8a6ebb9aeaa7d7abd4&"
         },
@@ -6624,6 +6829,7 @@
           "source": "https://www.threads.com/@alulu1223/post/DcOg-nRj-BT",
           "checkedAt": "2026-11-17",
           "note": "使用者指定 Threads 作品貼文",
+          "title": "虎爺香火袋",
           "id": "work-9795dcc672624c8bb143899245d268f7",
           "originalUrl": "https://scontent-tpe1-1.cdninstagram.com/v/t51.82787-15/778061022_17980421202116777_4972956566728266062_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=108&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=K9CggqUNYFYQ7kNvwFTleBf&_nc_oc=AdryInICJNGJw6OoQzsqrQvHoR0rTp8thBt_aa7uQ5yth8GtGXVxVt0NBJtXx_CuLN4&_nc_zt=23&_nc_ht=scontent-tpe1-1.cdninstagram.com&_nc_gid=R_4OP0F0YLyLEYGwKM4Fnw&_nc_ss=7020f&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQTH1NxD8lL_C6yKSGqTfnz-bqKBZD1g9zyn8IopxVOw_A&oe=6B01D86A"
         },
@@ -6634,6 +6840,7 @@
           "source": "https://www.threads.com/@alulu1223/post/Db7VwZgj4TQ",
           "checkedAt": "2026-11-17",
           "note": "使用者指定 Threads 作品貼文",
+          "title": "下壇虎 小畫",
           "id": "work-5915dd050db8478a9322c5b89c8cdada",
           "originalUrl": "https://scontent-tpe1-1.cdninstagram.com/v/t51.82787-15/771573490_17979077496116777_3156961242792588898_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=104&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=0lYXeXQuHrwQ7kNvwH2kPlE&_nc_oc=AdrcDnFEQ9UHj8qeoGFvEueaYWtIxg39f14y4Rn-wmM1T_AnDf9Z_BWNbi23LMHtyXg&_nc_zt=23&_nc_ht=scontent-tpe1-1.cdninstagram.com&_nc_gid=raU_6pZ3DZfvZT4hpXWDyQ&_nc_ss=7020f&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQQ1Z_1J_FgKPhEHvRBqSIJNwBYi7JgJEMtzqvy2_xZ4kQ&oe=6B01DB2E"
         },
@@ -6644,6 +6851,7 @@
           "source": "https://www.threads.com/@alulu1223/post/Dfq4TqvD_vt",
           "checkedAt": "2026-11-17",
           "note": "使用者指定 Threads 作品貼文",
+          "title": "青山王暗訪",
           "id": "work-614e321753a44cf68545d77abfd3425b",
           "originalUrl": "https://scontent-tpe1-1.cdninstagram.com/v/t51.82787-15/901114536_18289029310290575_1840320891616727412_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=104&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=UPg35sBO7KUQ7kNvwFK4vS-&_nc_oc=Adq7XrZC2EiDLBldUnX_i3FSr7TWaOQdi-hFJqIjcQZqCkzC5sEhGSJIUlMoBNxxo94&_nc_zt=23&_nc_ht=scontent-tpe1-1.cdninstagram.com&_nc_gid=cwOQs5IRr7D2AhxCvxt6tg&_nc_ss=7020f&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQTG0vU5Jd6SdChz7lxN0ImgayovswpXskkyCeJwkswiSw&oe=6B01DE69&dl=1"
         }
@@ -6693,6 +6901,7 @@
           "source": "https://minicourse.dev/media/library/pon-pon-bao/5.webp?v=2ae37eb22e7d8d80",
           "checkedAt": "2026-11-17",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 5,
           "id": "work-8379bccd02b54c39982b73c9b326065c",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572251302828974151/604660123_17927505498174684_5418539334750994473_n.png?ex=6afdb0a1&is=6afc5f21&hm=56823ae45e1f3c943e90148754fd4ff67d9d6e931a3ae70a0c1c3e0501f5bd39&"
         },
@@ -6702,6 +6911,7 @@
           "source": "https://minicourse.dev/media/library/pon-pon-bao/6.webp?v=5aba4f1fd2f29a80",
           "checkedAt": "2026-11-17",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 6,
           "id": "work-257c65c13aa0499a8c4de9734ebef15c",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572251303550259210/560095904_17918829585174684_2895892653927190546_n.png?ex=6afdb0a1&is=6afc5f21&hm=845c1240eaf8595888e2de457a04a596578fc6527e20e3d2787107010bb70631&"
         },
@@ -6711,6 +6921,7 @@
           "source": "https://minicourse.dev/media/library/pon-pon-bao/7.webp?v=622552f907dec08b",
           "checkedAt": "2026-11-17",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 7,
           "id": "work-0ec11ae921ba4462b839677d39ecc8d8",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572251304158302299/535172754_17913260298174684_6930920550976944350_n.png?ex=6afdb0a1&is=6afc5f21&hm=c2c5ca38588e4d1b7d00ca1dff5df0959e0045ce8d8b04248f3609ca5a8e8803&"
         },
@@ -6720,6 +6931,7 @@
           "source": "https://www.threads.com/@pon_pon_bao/post/Df2B5PaGkQL",
           "checkedAt": "2026-11-17",
           "note": "取自官方 Threads 帳號 @pon_pon_bao 的公開作品貼文，HTTPS 圖片可讀取",
+          "number": 1,
           "id": "work-8373c4512932445d91e71752572282ca",
           "originalUrl": "https://scontent-itm1-1.cdninstagram.com/v/t51.82787-15/907464925_17975879652174684_3819515820553672779_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=111&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMjQxNjc4NjIwODU1MjkzMQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTM3OC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=chBkkuSr57kQ7kNvwEY2Ind&_nc_oc=AdrINOOHNhAsT7W8aNbxHzbfmMsS7cSCb--mY89guArx4yb7qj-iXlp6M3bEvE8Zzzc&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-itm1-1.cdninstagram.com&_nc_gid=W41LVYlxbJ10JCO3sgPTtg&_nc_ss=7a20f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQSij8Wed0BSyDZLswFknH-ITSzqcsadHJk-ElvCT3hkqg&oe=6B022FE1"
         },
@@ -6729,6 +6941,7 @@
           "source": "https://www.threads.com/@pon_pon_bao/post/Df18mmImqGM",
           "checkedAt": "2026-11-17",
           "note": "取自官方 Threads 帳號 @pon_pon_bao 的公開作品貼文，HTTPS 圖片可讀取",
+          "number": 2,
           "id": "work-f0989dda86504ee680edbfcee9d80564",
           "originalUrl": "https://scontent-lax7-1.cdninstagram.com/v/t51.82787-15/907684029_17975875074174684_4667404337030737231_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=106&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMjM5NDE4NDI2MjAxNTk4NQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTE4MS5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=L4OePieGwq8Q7kNvwGybK4z&_nc_oc=AdrhWi_5udRYWPU0jmpGa89zwpQh0vRwvuhtz-SOxXvxW0D7NKrTdfZ85P824B5Ekpw&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-lax7-1.cdninstagram.com&_nc_gid=W41LVYlxbJ10JCO3sgPTtg&_nc_ss=7a20f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQS2cRMwyqR-QE9zEtHz85jbDugirN4ShE6je1KBKQe2Pg&oe=6B0240DB"
         },
@@ -6738,6 +6951,7 @@
           "source": "https://www.threads.com/@pon_pon_bao/post/Df18mmImqGM",
           "checkedAt": "2026-11-17",
           "note": "取自官方 Threads 帳號 @pon_pon_bao 的公開作品貼文，HTTPS 圖片可讀取",
+          "number": 3,
           "id": "work-2f1855c73e4e4b18abb8de905fdd18a9",
           "originalUrl": "https://scontent-lax3-2.cdninstagram.com/v/t51.82787-15/896705765_17975875101174684_1059426782162220242_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=101&_nc_map=urlgen_bucketless&ig_cache_key=NDAzMjM5NDIwNDEzNDc0NjY0NQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTE4MS5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=I-9lFLV3h40Q7kNvwEOmS3e&_nc_oc=AdreZtXuorM16MWVq6VcwpQ6JEtN154LLPrQKZHozHH1gIoYtQt5iNrWaDENNZYgWws&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-lax3-2.cdninstagram.com&_nc_gid=W41LVYlxbJ10JCO3sgPTtg&_nc_ss=7a20f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQTvGMBV8mQM1v72aj4m0qeeIZS0ovwYJ5US-v45CUzlzQ&oe=6B023387"
         },
@@ -6747,6 +6961,7 @@
           "source": "https://minicourse.dev/media/library/pon-pon-bao/4.webp?v=9874f2d3c2da7825",
           "checkedAt": "2026-11-17",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 4,
           "id": "work-a9ea0825859343c8badda56bde2c3479",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572251301989974046/842767859_17969826792174684_158268851542510600_n.png?ex=6afdb0a1&is=6afc5f21&hm=f1806911eb7e2712155e11259de7bbb1ded8767f45228002b5fcbcf491df7114&"
         }
@@ -6781,6 +6996,7 @@
           "source": "https://minicourse.dev/media/library/sigmeow/1.webp?v=f52ecd86dbc4d420",
           "checkedAt": "2026-11-17",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 1,
           "id": "work-a211c145d0b54b10bb54735a0622f96e",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572260602997375017/907603329_17921067219539293_8515562830658834053_n.png?ex=6afdb94a&is=6afc67ca&hm=7dcddde6b9c9a61e52aec3af3059c82db65636b124127080644789d3168aeb86&"
         },
@@ -6790,6 +7006,7 @@
           "source": "https://www.threads.com/@_.sigmeow._/post/Df096T_krM4",
           "checkedAt": "2026-11-17",
           "note": "使用者提供，指定為此設計師作品照片；圖片取自指定的官方 Threads 貼文",
+          "number": 2,
           "id": "work-6e1534766dd84e39a5428a2816e07b0e",
           "originalUrl": "https://scontent-lax3-1.cdninstagram.com/v/t51.82787-15/907515589_17921005770539293_5425534987816121879_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=106&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=DxpoG4dzeoMQ7kNvwE5IsBG&_nc_oc=AdqtuX9IY-5qV5epC3vE6lhWUTy2XUo-psBraaE3FzYz3sllgmH2HA6eYWgsDbfphl8&_nc_zt=23&_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_gid=1lJAb1quXZV6tZ4TJ3Rd4Q&_nc_ss=7920f&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQRUsCGNQF5YJ4_YMOluokE_JT1Qiu0bcLQHrDVjqF3axw&oe=6B023F1C"
         },
@@ -6799,6 +7016,7 @@
           "source": "https://www.threads.com/@_.sigmeow._/post/Df096T_krM4",
           "checkedAt": "2026-11-17",
           "note": "使用者提供，指定為此設計師作品照片；圖片取自指定的官方 Threads 貼文",
+          "number": 3,
           "id": "work-7510203272e249a9a0686d43dd7157a8",
           "originalUrl": "https://scontent-lax7-1.cdninstagram.com/v/t51.82787-15/907515589_17921005797539293_286695556511034064_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=106&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=_-1_TC6rOXAQ7kNvwHzc_KH&_nc_oc=AdoFouwAo2_vBvOOzOyfVJU9D0kqXGCKH44GNFqi138vsgTvId1fb8spf_XIU_hRO5o&_nc_zt=23&_nc_ht=scontent-lax7-1.cdninstagram.com&_nc_gid=1lJAb1quXZV6tZ4TJ3Rd4Q&_nc_ss=7920f&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQQLZprbQMggIjj-hYj4-JEFW2-b1ICzw9HdkzirMsAKaA&oe=6B02429E"
         },
@@ -6808,6 +7026,7 @@
           "source": "https://www.threads.com/@_.sigmeow._/post/DfmLKc6kiF5",
           "checkedAt": "2026-11-17",
           "note": "使用者提供，指定為此設計師作品照片；圖片取自指定的官方 Threads 貼文",
+          "number": 4,
           "id": "work-7e7a82331e134352ba5c2de9af89ddcf",
           "originalUrl": "https://scontent-lax3-1.cdninstagram.com/v/t51.82787-15/899626632_17919935442539293_7404913380800679520_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=105&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=Gm-LsidiAY0Q7kNvwHqqtlO&_nc_oc=Adob35K9KEvzkUZ-Gh0s-XFRki7ozmA8xIQuP0jVNn2CO_0Ej5GqP0MX4BeqAWYrtVY&_nc_zt=23&_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_gid=UGAZ6qwevQqpmPv_B71t-A&_nc_ss=7920f&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQTZwXaj9Lww56fcYTNKM1vT0Jdc8q2UdSx_zsLvhNU46w&oe=6B02277E"
         },
@@ -6817,6 +7036,7 @@
           "source": "https://www.threads.com/@_.sigmeow._/post/DfmLKc6kiF5",
           "checkedAt": "2026-11-17",
           "note": "使用者提供，指定為此設計師作品照片；圖片取自指定的官方 Threads 貼文",
+          "number": 5,
           "id": "work-1745db00a95b40cbaafbdbc65f03d038",
           "originalUrl": "https://scontent-lax3-2.cdninstagram.com/v/t51.82787-15/902081256_17919935469539293_2687178853029859293_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=110&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=6kYPBP7jbTAQ7kNvwGB2LBF&_nc_oc=Adq-DTMIDrur9XZR4_AB6PU3xN1K5KLoFg57xGLhNWEpRHFWLxKf90-Zov9RsqF-EbM&_nc_zt=23&_nc_ht=scontent-lax3-2.cdninstagram.com&_nc_gid=UGAZ6qwevQqpmPv_B71t-A&_nc_ss=7920f&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQR4IJSAElmfkJ2YLDaMvi4GtGodJhrLvicwX7TVjvW5yw&oe=6B023695"
         },
@@ -6826,6 +7046,7 @@
           "source": "https://www.threads.com/@_.sigmeow._/post/Debj2Erkhtp",
           "checkedAt": "2026-11-17",
           "note": "使用者提供，指定為此設計師作品照片；圖片取自指定的官方 Threads 貼文",
+          "number": 6,
           "id": "work-29385a0cf5e4431e8d153cdb0cbd2b63",
           "originalUrl": "https://scontent-itm1-1.cdninstagram.com/v/t51.82787-15/846136942_17914613913539293_8753239833556258349_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=aEzVCCY9nDgQ7kNvwHrtoHC&_nc_oc=AdpT-Mkklk6aDBlUMXbNNVV0J8PMZS6wVs36iltO5Sr_X2w0x507WTm_zv00q38vlKw&_nc_zt=23&_nc_ht=scontent-itm1-1.cdninstagram.com&_nc_gid=Vx7w9IfxoZkLvHx-JuslDw&_nc_ss=7920f&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQS4UhSIGrKH40_C8PdwFlVLDO-YIiD8B8tAKTKeOTPvQA&oe=6B022CD4"
         },
@@ -6835,6 +7056,7 @@
           "source": "https://www.threads.com/@_.sigmeow._/post/Debj2Erkhtp",
           "checkedAt": "2026-11-17",
           "note": "使用者提供，指定為此設計師作品照片；圖片取自指定的官方 Threads 貼文",
+          "number": 7,
           "id": "work-2e886660f03645538d17fbe10035887e",
           "originalUrl": "https://scontent-lax7-1.cdninstagram.com/v/t51.82787-15/846485754_17914613937539293_4531492293315818377_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=111&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=3RORp4Az26sQ7kNvwEDL383&_nc_oc=AdoMMRJ2D6RB1Btew1Cw2AW0jPFHLfJGgLpOg34CmcxHOqh2SRsNYvDapOwvwIE6bB4&_nc_zt=23&_nc_ht=scontent-lax7-1.cdninstagram.com&_nc_gid=Vx7w9IfxoZkLvHx-JuslDw&_nc_ss=7920f&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQROi7mPLxXtaoLR-IGA0eF1qwR_fXO9sYbjhATEaAvxRg&oe=6B0256C7"
         },
@@ -6844,6 +7066,7 @@
           "source": "https://www.threads.com/@_.sigmeow._/post/Debj2Erkhtp",
           "checkedAt": "2026-11-17",
           "note": "使用者提供，指定為此設計師作品照片；圖片取自指定的官方 Threads 貼文",
+          "number": 8,
           "id": "work-0cac497bbb604cf3bd2804ea39391877",
           "originalUrl": "https://scontent-lax3-2.cdninstagram.com/v/t51.82787-15/846087061_17914613901539293_4569279334608845539_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=vXNTyo9vNcoQ7kNvwHLpQAC&_nc_oc=AdruQDs2SiDRWn05zMNtRqnI58Rwb1wgnVfF_bRAOve17rX2dlELX8ITWyDcO-mUCyo&_nc_zt=23&_nc_ht=scontent-lax3-2.cdninstagram.com&_nc_gid=Vx7w9IfxoZkLvHx-JuslDw&_nc_ss=7920f&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQSO5Qq1i9qP5PfLjZ07QeBEJbdaltMc3HK_Adb2YtAQNQ&oe=6B024323"
         },
@@ -6853,6 +7076,7 @@
           "source": "https://www.threads.com/@_.sigmeow._/post/Debj2Erkhtp",
           "checkedAt": "2026-11-17",
           "note": "使用者提供，指定為此設計師作品照片；圖片取自指定的官方 Threads 貼文",
+          "number": 9,
           "id": "work-e7f8e87dd87949418f72d9d79d1cfcf9",
           "originalUrl": "https://scontent-lax3-2.cdninstagram.com/v/t51.82787-15/843474378_17914613904539293_1109019596701433046_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=pgtfCoIvfokQ7kNvwGyjdjB&_nc_oc=Adp9ybePAUOA1o5yQFCWNXNlZvuEntQ50HdvhpvYOOiTOp7fMOGH1TI9GgyrhWUsm2s&_nc_zt=23&_nc_ht=scontent-lax3-2.cdninstagram.com&_nc_gid=Vx7w9IfxoZkLvHx-JuslDw&_nc_ss=7920f&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQRlHsn2O5o7Zm7aLE2sKKMpHwUBFyC92RIXeOlTk5_Vkw&oe=6B02446D"
         }
@@ -6887,6 +7111,7 @@
           "source": "https://www.instagram.com/p/Day8V5Lj4as/?img_index=1",
           "checkedAt": "2026-11-17",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 8,
           "id": "work-93d84bdff1504dce8a7671e210b1355c",
           "originalUrl": "https://scontent-tpe1-1.cdninstagram.com/v/t39.30808-6/748343762_1498168328991353_2246415069178811990_n.jpg?stp=c0.67.960.1066a_dst-jpg_e35_sh2.08_tt6&_nc_cat=100&_nc_map=urlgen_bucketless&ig_cache_key=Mzk0MTQ3Nzk5MTQ5NDY1NDQ0MQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuOTYwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=P9ImeraNApcQ7kNvwHn3Dui&_nc_oc=Adr3Wtx8Q3e-_bd9VW4EeMi9OfHGzK2TpySAdaolhLqZzDkWcYAOg6TZyBFiPbnMUPY&_nc_zt=23&_nc_ht=scontent-tpe1-1.cdninstagram.com&_nc_gid=FZGT_KZjBtL12pNQ1jy_Jw&_nc_ss=79500&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQTEQWnmFIzskM_Ssrkvz4cQnQeeXwzZOzmLrei9_fUPgQ&oe=6B023D8B"
         },
@@ -6896,6 +7121,7 @@
           "source": "https://www.instagram.com/p/DBxzp80vuWY/?img_index=1",
           "checkedAt": "2026-11-17",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 9,
           "id": "work-7db760efddf84b8fa36324804846ae84",
           "originalUrl": "https://scontent-tpe1-1.cdninstagram.com/v/t51.82787-15/655245947_18098907458474975_1000512404340811629_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=108&_nc_map=urlgen_bucketless&ig_cache_key=MzQ5MDc5ODM2MzIxOTk0MDM1OA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTQ0MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=6mjk2Z1rdc0Q7kNvwESA7Rc&_nc_oc=AdpKeHhdyTMo2v7GF2U9d4DD9hUegbpk4Vh1KkpSJLtYsjezZwXubBV8l5XtFULVy0o&_nc_zt=23&_nc_ht=scontent-tpe1-1.cdninstagram.com&_nc_gid=VBwIzmpF8D6kNZ96z7Crng&_nc_ss=79500&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQRukUOcfV5H9-FESgXWUghAsudnnmpDIHIlAXEB7Wy9Xw&oe=6B0266C6"
         },
@@ -6905,6 +7131,7 @@
           "source": "https://www.instagram.com/p/CuMF1H9vwZq/",
           "checkedAt": "2026-11-17",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 10,
           "id": "work-9954c03bf6b84a87803a43cc22c81e61",
           "originalUrl": "https://scontent-tpe1-1.cdninstagram.com/v/t51.82787-15/623791718_18079668077463890_6444904815476013187_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&ig_cache_key=MzEzNzkwODY4MTI4NzMzNzU3OA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMTQ0MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=JwzmN7CiT9gQ7kNvwFM0zvM&_nc_oc=AdoIqesPGhkb0OLn8BN_UL-JyHolL7M8oRZU0yXhKYDVWSiyf3xCDOWX95KkUKdhHDY&_nc_zt=23&_nc_ht=scontent-tpe1-1.cdninstagram.com&_nc_gid=IV-0bk6Y120ae7jke1ztjw&_nc_ss=79500&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQRYYZBRdK6Vh1EsweLKVzLK-YnHjBPAFYmcfcJxKU3UZg&oe=6B024FDE"
         },
@@ -6914,6 +7141,7 @@
           "source": "https://minicourse.dev/media/library/woody1993/1.webp?v=38ccfae7d4acc0cd",
           "checkedAt": "2026-11-17",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 1,
           "id": "work-9c96eb866038461d8fd151828636057c",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572275393073909840/897153696_17966033370234572_788963993742244688_n.png?ex=6afdc711&is=6afc7591&hm=3836527514b1da2977e8a324093d125dab3d8247cbd987b76225755e582efe40&"
         },
@@ -6923,6 +7151,7 @@
           "source": "https://minicourse.dev/media/library/woody1993/2.webp?v=699ba384ce4e5617",
           "checkedAt": "2026-11-17",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 2,
           "id": "work-6212ebc01e9646788ccea7cde1d1cef0",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572275393787068598/900495703_17965955970234572_6800247268316881426_n.png?ex=6afdc711&is=6afc7591&hm=3b8632ba7c19c8839b892d95d9e2bd1bd79252ddc0b9a3c4f2e21a42b42debd0&"
         },
@@ -6932,6 +7161,7 @@
           "source": "https://minicourse.dev/media/library/woody1993/3.webp?v=b36e59173c0799cf",
           "checkedAt": "2026-11-17",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 3,
           "id": "work-9d6720a14b4844b9abc399c5ee050e56",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572275395045367818/894460999_17966137641234572_7635921180115087126_n.png?ex=6afdc711&is=6afc7591&hm=50e105ac73223b3f6ddfc59fadaab442f108dfd00c9e72812466f54dae318b9b&"
         },
@@ -6941,6 +7171,7 @@
           "source": "https://minicourse.dev/media/library/woody1993/4.webp?v=b363f616bc876f67",
           "checkedAt": "2026-11-17",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 4,
           "id": "work-2423331e336e4d7cb7aa6722769fdd1f",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572275396110585956/904441448_17967325707234572_4681766870976828306_n.png?ex=6afdc711&is=6afc7591&hm=23db61a842120c0451d3d4dcfa7708dbd2ef90a5d645bfb02663d95d2e706b94&"
         },
@@ -6950,6 +7181,7 @@
           "source": "https://minicourse.dev/media/library/woody1993/5.webp?v=5bba375aa18a8085",
           "checkedAt": "2026-11-17",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 5,
           "id": "work-0de04ffddc39465d8a435eb0319d1b10",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572275396857307248/903825535_17967325731234572_2930838711984743415_n.png?ex=6afdc712&is=6afc7592&hm=a4bba9b7d9c5754a4638ee52babe34f186af2901e3b1408a9cdd7d28aec4625c&"
         },
@@ -6959,6 +7191,7 @@
           "source": "https://minicourse.dev/media/library/woody1993/6.webp?v=eb1748cbf6cd5b86",
           "checkedAt": "2026-11-17",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 6,
           "id": "work-454e5ca422ba42ecafb1163ccd81cee3",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572275397716877443/902247353_17966938395234572_2759306163403938148_n.png?ex=6afdc712&is=6afc7592&hm=9c8fdb0fbe4b9e14342929d1e678bd445fc55bbcfa9db392d87cefa4d97a70a0&"
         },
@@ -6968,6 +7201,7 @@
           "source": "https://minicourse.dev/media/library/woody1993/7.webp?v=c2457a7d0dc4c491",
           "checkedAt": "2026-11-17",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 7,
           "id": "work-bfcb263fee794e9fa0e093f65b02354f",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572275398497145005/894035769_17966341812234572_284922442385471416_n.png?ex=6afdc712&is=6afc7592&hm=c498edeb6ba1f4e6172de2da70ffcd48b89a10f8ead95a8272d2ae5fd8e64571&"
         }
@@ -7002,6 +7236,7 @@
           "source": "https://minicourse.dev/media/library/riyu-design/10.webp?v=6e245a640f5ab2af",
           "checkedAt": "2026-11-18",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 10,
           "id": "work-41ba1ab391e14625a94b4d1cd157de22",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572489007391056014/1.jpg?ex=6afe8e02&is=6afd3c82&hm=4e5a85b40e7c14c3e49500fa0ad9e0cdfa1b33d64c38ca6fb14b9b337f0f1d30&"
         },
@@ -7011,6 +7246,7 @@
           "source": "https://minicourse.dev/media/library/riyu-design/11.webp?v=0ae27cc96a67efc2",
           "checkedAt": "2026-11-18",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 11,
           "id": "work-be114d4bc933454cab504263b822e788",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572489007810478121/2.jpg?ex=6afe8e02&is=6afd3c82&hm=471ad09908d4b97f5169acab3b365ea8217f802373e3a53c23a15e74d5f4c3e6&"
         },
@@ -7020,6 +7256,7 @@
           "source": "https://minicourse.dev/media/library/riyu-design/12.webp?v=a9be06400fff9917",
           "checkedAt": "2026-11-18",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 12,
           "id": "work-8bdd755dfd2a49c89343d38b748645c4",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572489008540418079/3.png?ex=6afe8e03&is=6afd3c83&hm=6755517de122467f08bba077e612aa47b386725ac35fed482553c29b249901ea&"
         },
@@ -7029,6 +7266,7 @@
           "source": "https://minicourse.dev/media/library/riyu-design/13.webp?v=993e989af2af3d7b",
           "checkedAt": "2026-11-18",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 13,
           "id": "work-66ba2ba65a7643e18150afbe2d024f13",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572489009068908564/4.png?ex=6afe8e03&is=6afd3c83&hm=027ee72316cc648c9a31bb666c5fee2df885f13836ae2e75b279d49c175d9c03&"
         },
@@ -7038,6 +7276,7 @@
           "source": "https://minicourse.dev/media/library/riyu-design/14.webp?v=883b9bc3f29f9517",
           "checkedAt": "2026-11-18",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 14,
           "id": "work-45d9157a15a7416c83ba13ea0a6b66a4",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572489009429741798/5.jpg?ex=6afe8e03&is=6afd3c83&hm=568b51fd37e3622480bec1174c1f0ae940b1922460bebb14c407f90da6dfc94b&"
         },
@@ -7047,6 +7286,7 @@
           "source": "https://minicourse.dev/media/library/riyu-design/15.webp?v=eccf57da3466270e",
           "checkedAt": "2026-11-18",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 15,
           "id": "work-6cf2dbc9f0974f53b034cc89377183fd",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572489009811161118/6.jpg?ex=6afe8e03&is=6afd3c83&hm=af76e677451efd99260309a55616a77da558426d39cdb7f8ec0ccad9c9450079&"
         },
@@ -7056,6 +7296,7 @@
           "source": "https://minicourse.dev/media/library/riyu-design/16.webp?v=c80e0d3abbdd2343",
           "checkedAt": "2026-11-18",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 16,
           "id": "work-3a4b250e34314d488f1c562349b70b40",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572489010197307392/7.jpg?ex=6afe8e03&is=6afd3c83&hm=01089aa530360720f503cd42bb6e68943664628a79c695c47bfbae4d86b88d57&"
         },
@@ -7065,6 +7306,7 @@
           "source": "https://minicourse.dev/media/library/riyu-design/17.webp?v=bc0c028a789b2edf",
           "checkedAt": "2026-11-18",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 17,
           "id": "work-18f9845cf2564fc78e7550f3b3af19ed",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572489010851483718/8.jpg?ex=6afe8e03&is=6afd3c83&hm=f356e814198b8fc8ae0cc94d1128b5e0177d9356404090ce648a8292b5f5ccee&"
         },
@@ -7074,6 +7316,7 @@
           "source": "https://minicourse.dev/media/library/riyu-design/18.webp?v=67e6c92ff483c608",
           "checkedAt": "2026-11-18",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 18,
           "id": "work-3c7e5fac74c94319a45d6022ce279a96",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1572489011535282217/9.jpg?ex=6afe8e03&is=6afd3c83&hm=3e152ca85ae9f2cb1f6a83cbd8b6fd92ef00a8018f9c9e64593167445d1f33ca&"
         }
@@ -7119,6 +7362,7 @@
           "source": "https://www.threads.com/@takoking2046/post/DfXRmyDEkko",
           "checkedAt": "2026-11-19",
           "note": "依章魚王 Threads 原貼文圖集第 1 張收錄。",
+          "number": 1,
           "id": "work-37452a27913b44abbcc00d51e85a585a"
         },
         {
@@ -7127,6 +7371,7 @@
           "source": "https://www.threads.com/@takoking2046/post/DfXRmyDEkko",
           "checkedAt": "2026-11-19",
           "note": "依章魚王 Threads 原貼文圖集第 2 張收錄。",
+          "number": 2,
           "id": "work-1b3035872af6449ea0699eeee223760c"
         },
         {
@@ -7135,6 +7380,7 @@
           "source": "https://www.threads.com/@takoking2046/post/DfXRmyDEkko",
           "checkedAt": "2026-11-19",
           "note": "依章魚王 Threads 原貼文圖集第 3 張收錄。",
+          "number": 3,
           "id": "work-a7c1bff0542a4334b6d542a09ed4adbf"
         },
         {
@@ -7143,6 +7389,7 @@
           "source": "https://www.threads.com/@takoking2046/post/DfXRmyDEkko",
           "checkedAt": "2026-11-19",
           "note": "依章魚王 Threads 原貼文圖集第 4 張收錄。",
+          "number": 4,
           "id": "work-40710048b47a4c7293d14a10da878389"
         },
         {
@@ -7151,6 +7398,7 @@
           "source": "https://www.threads.com/@takoking2046/post/DfXRmyDEkko",
           "checkedAt": "2026-11-19",
           "note": "依章魚王 Threads 原貼文圖集第 5 張收錄。",
+          "number": 5,
           "id": "work-74f9414447994b28b6fcf91460f13f40"
         },
         {
@@ -7159,6 +7407,7 @@
           "source": "https://www.threads.com/@takoking2046/post/DfXRmyDEkko",
           "checkedAt": "2026-11-19",
           "note": "依章魚王 Threads 原貼文圖集第 6 張收錄。",
+          "number": 6,
           "id": "work-ce9f84d9e9524b96aeba9d034f41bbc8"
         }
       ]
@@ -7192,6 +7441,7 @@
           "alt": "大罷免黑色 T 恤",
           "checkedAt": "2026-11-19",
           "note": "使用者提供的作品附件（大罷免／大罷免Tee-2.jpeg）。",
+          "number": 20,
           "id": "work-69146235b1904720bf4a853c2091926b"
         },
         {
@@ -7199,6 +7449,7 @@
           "alt": "大罷免白色 T 恤",
           "checkedAt": "2026-11-19",
           "note": "使用者提供的作品附件（大罷免／大罷免Tee.jpeg）。",
+          "number": 21,
           "id": "work-89c7e88f43d74ab6a42b08bcf9da711e"
         },
         {
@@ -7206,6 +7457,7 @@
           "alt": "罷免擁護未來",
           "checkedAt": "2026-11-19",
           "note": "使用者提供的作品附件（大罷免／大罷免時期.jpeg）。",
+          "title": "罷免擁護未來",
           "id": "work-c5159571cb5844d6b15ecf7e748a7e66"
         },
         {
@@ -7213,6 +7465,7 @@
           "alt": "我愛台灣・我很小民 524",
           "checkedAt": "2026-11-19",
           "note": "使用者提供的作品附件（青鳥系列／2F80C380-BFAF-4C2E-99E7-3E098F61A761_4_5005_c.jpeg）。",
+          "number": 23,
           "id": "work-e40c6ccb5fce464aa24737bef982b52d"
         },
         {
@@ -7220,6 +7473,7 @@
           "alt": "青鳥計劃・散步青島",
           "checkedAt": "2026-11-19",
           "note": "使用者提供的作品附件（青鳥系列／IMG_3944.jpeg）。",
+          "number": 24,
           "id": "work-c1aeabc2a0b44aeb99d3ac14bde487e7"
         },
         {
@@ -7227,6 +7481,7 @@
           "alt": "青綠底雙白鳥手機桌布",
           "checkedAt": "2026-11-19",
           "note": "使用者提供的作品附件（青鳥系列／IMG_3982.JPG）。",
+          "number": 25,
           "id": "work-7faaa1c2e92042bdb83f54baf6fe0764"
         },
         {
@@ -7234,6 +7489,7 @@
           "alt": "青綠底雙白鳥插畫",
           "checkedAt": "2026-11-19",
           "note": "使用者提供的作品附件（青鳥系列／photo-output (1).jpeg）。",
+          "number": 26,
           "id": "work-e97f5fd8de10416aa0dd8fffa280bf63"
         },
         {
@@ -7241,6 +7497,7 @@
           "alt": "青鳥行動與火焰白鳥",
           "checkedAt": "2026-11-19",
           "note": "使用者提供的作品附件（青鳥系列／photo-output.jpeg）。",
+          "number": 27,
           "id": "work-334d5d51d43e443a9524bd7ae69ed6e4"
         },
         {
@@ -7248,6 +7505,7 @@
           "alt": "青鳥行動手機桌布",
           "checkedAt": "2026-11-19",
           "note": "使用者提供的作品附件（青鳥系列／®️生日桌布🎂.png）。",
+          "number": 28,
           "id": "work-f700f9b817ce4b2fa17ec743d069ce3c"
         },
         {
@@ -7255,6 +7513,7 @@
           "alt": "青鳥行動方形圖案",
           "checkedAt": "2026-11-19",
           "note": "使用者提供的作品附件（青鳥系列／青鳥行動.png）。",
+          "number": 29,
           "id": "work-94819cfc49a5471680eef90964434287"
         },
         {
@@ -7262,6 +7521,7 @@
           "alt": "臺灣露營車手機殼",
           "checkedAt": "2026-11-19",
           "note": "使用者提供的作品附件（商品系列／3D257721-0876-4DBC-AF4E-7F3E6CE0633D_1_105_c.jpeg）。",
+          "number": 30,
           "id": "work-481c9351f56b4e4688446c29416badb6"
         },
         {
@@ -7269,6 +7529,7 @@
           "alt": "臺灣虎手機殼",
           "checkedAt": "2026-11-19",
           "note": "使用者提供的作品附件（商品系列／46BDBDE2-A72B-4557-9693-8082AA57BE6A_4_5005_c.jpeg）。",
+          "number": 31,
           "id": "work-51a4189df79b4bcba9437800e6c7b357"
         },
         {
@@ -7276,6 +7537,7 @@
           "alt": "我是臺灣人手機殼",
           "checkedAt": "2026-11-19",
           "note": "使用者提供的作品附件（商品系列／5F692B7A-D1CF-45D7-B62B-1A6A474655D8_4_5005_c.jpeg）。",
+          "number": 32,
           "id": "work-aaeb6d657aa347639f53c55e5304275c"
         },
         {
@@ -7283,6 +7545,7 @@
           "alt": "Taiwan Independent 貼紙",
           "checkedAt": "2026-11-19",
           "note": "使用者提供的作品附件（商品系列／6DBF9E82-69EB-489F-91EB-D404E368B184_1_105_c.jpeg）。",
+          "number": 33,
           "id": "work-9a046a5af9104696ac91fc5c26cecdb5"
         },
         {
@@ -7290,6 +7553,7 @@
           "alt": "給台灣的愛心手機殼",
           "checkedAt": "2026-11-19",
           "note": "使用者提供的作品附件（商品系列／745B8C76-78B8-4F38-B571-E77DF60D7C4C_1_105_c.jpeg）。",
+          "number": 34,
           "id": "work-4f6c1a900efb4024a3b5465781ebeee9"
         },
         {
@@ -7297,6 +7561,7 @@
           "alt": "愛我們和土地手機殼",
           "checkedAt": "2026-11-19",
           "note": "使用者提供的作品附件（商品系列／8367CDB8-D5AA-4BD3-913C-9692701D1202_1_105_c.jpeg）。",
+          "number": 35,
           "id": "work-38fd4ba10e2c47f9956a7a08bc317a30"
         },
         {
@@ -7304,6 +7569,7 @@
           "alt": "山川河流美麗臺灣手機殼",
           "checkedAt": "2026-11-19",
           "note": "使用者提供的作品附件（商品系列／FEE97B94-8CDC-4164-9399-A98E34A961E2_1_105_c.jpeg）。",
+          "number": 36,
           "id": "work-1c8bc039052a4c9e9ad391084d842c9e"
         },
         {
@@ -7311,6 +7577,7 @@
           "alt": "笑臉太陽與露營車手機桌布展示",
           "checkedAt": "2026-11-19",
           "note": "使用者提供的作品附件（臺灣系列／photo-output 2.HEIC）。",
+          "number": 37,
           "id": "work-377fa6933bc24d1681587ee915fcd500"
         },
         {
@@ -7318,6 +7585,7 @@
           "alt": "笑臉夕陽與露營車手機桌布展示",
           "checkedAt": "2026-11-19",
           "note": "使用者提供的作品附件（臺灣系列／photo-output.HEIC）。",
+          "number": 38,
           "id": "work-9c69f45cee3841c48868beee81823f7f"
         },
         {
@@ -7325,6 +7593,7 @@
           "alt": "臺灣是我家，黑底橫式",
           "checkedAt": "2026-11-19",
           "note": "使用者提供的作品附件（臺灣系列／工作區域 2 複本.jpg）。",
+          "number": 39,
           "id": "work-8c48b31e605c4d7dbdb2064dc1446893"
         },
         {
@@ -7332,6 +7601,7 @@
           "alt": "我是臺灣人，白底橫式",
           "checkedAt": "2026-11-19",
           "note": "使用者提供的作品附件（臺灣系列／工作區域 2.jpg）。",
+          "number": 40,
           "id": "work-50024eadee32421e9cdaf5111900c421"
         },
         {
@@ -7339,6 +7609,7 @@
           "alt": "臺灣是我家，黑底方形",
           "checkedAt": "2026-11-19",
           "note": "使用者提供的作品附件（臺灣系列／工作區域 3 複本.jpg）。",
+          "number": 41,
           "id": "work-c47c4477c8e34922959e700e3d5eb7fa"
         },
         {
@@ -7346,6 +7617,7 @@
           "alt": "我是臺灣人，黃底方形",
           "checkedAt": "2026-11-19",
           "note": "使用者提供的作品附件（臺灣系列／工作區域 3.jpg）。",
+          "number": 42,
           "id": "work-9c28ba4f53204df7a67815e31dcc76bf"
         },
         {
@@ -7353,6 +7625,7 @@
           "alt": "Taiwan Is Our Country，綠底方形",
           "checkedAt": "2026-11-19",
           "note": "使用者提供的作品附件（臺灣系列／工作區域 4.jpg）。",
+          "number": 43,
           "id": "work-521775ebd3e347d19c3db2e554414456"
         },
         {
@@ -7360,6 +7633,7 @@
           "alt": "臺灣是我家，粉紅底直式",
           "checkedAt": "2026-11-19",
           "note": "使用者提供的作品附件（臺灣系列／工作區域 6.jpg）。",
+          "number": 44,
           "id": "work-8fa5095ccafb45c4a7960818b9c200cb"
         },
         {
@@ -7367,6 +7641,7 @@
           "alt": "Lovely Country 臺灣島插畫",
           "checkedAt": "2026-11-19",
           "note": "使用者提供的作品附件（臺灣系列／臺灣系列1.jpg）。",
+          "number": 45,
           "id": "work-edc5a95627c043c1a18716045aa638fb"
         },
         {
@@ -7374,6 +7649,7 @@
           "alt": "Taiwan Is Our Country，黑底橫式",
           "checkedAt": "2026-11-19",
           "note": "使用者提供的作品附件（臺灣系列／臺灣系列2.jpg）。",
+          "number": 46,
           "id": "work-c493b2dbaa2145fbb578e1107e3683ea"
         },
         {
@@ -7381,6 +7657,7 @@
           "alt": "Taiwan Is Our Country，白底綠字橫式",
           "checkedAt": "2026-11-19",
           "note": "使用者提供的作品附件（臺灣系列／鐵雄-綠綠貼紙-橫式.jpg）。",
+          "number": 47,
           "id": "work-5e72000a5ac8437193d66e81aebedf55"
         },
         {
@@ -7388,6 +7665,7 @@
           "alt": "臺灣是我家，白底方形",
           "checkedAt": "2026-11-19",
           "note": "使用者提供的作品附件（臺灣系列／鐵雄-臺灣是我家-方形.jpg）。",
+          "number": 48,
           "id": "work-bf71e8957b864a2fbc3da09b95c80753"
         },
         {
@@ -7395,6 +7673,7 @@
           "alt": "臺灣是我家，白底橫式",
           "checkedAt": "2026-11-19",
           "note": "使用者提供的作品附件（臺灣系列／鐵雄-臺灣是我家-橫式.jpg）。",
+          "number": 49,
           "id": "work-ff7964585c6c44c6bda3d789eaf54405"
         }
       ],
@@ -7453,6 +7732,7 @@
           "source": "https://minicourse.dev/media/library/mjscattw/11.webp?v=6d9b248889de90b6",
           "checkedAt": "2026-11-20",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 11,
           "id": "work-82b3458c9fee4fcca316975bde386bb3",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1573155915970904166/a281e717c55d69e7.jpg?ex=6b00fb1e&is=6affa99e&hm=1a8fbe07223c75e289cb1462f3f0aa272284bc5af7785e260876a11c81ac5790&"
         },
@@ -7462,6 +7742,7 @@
           "source": "https://minicourse.dev/media/library/mjscattw/12.webp?v=5c211250151ee109",
           "checkedAt": "2026-11-20",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 12,
           "id": "work-55d0503b50e54af6a36aa6f666602a24",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1573155916495323250/327fc651b9d39146.jpg?ex=6b00fb1e&is=6affa99e&hm=c1a98a433bfda970df556076d96a8840770c790fd1df8794cdd725bd9312bea2&"
         },
@@ -7471,6 +7752,7 @@
           "source": "https://minicourse.dev/media/library/mjscattw/13.webp?v=9b92172c54df32e4",
           "checkedAt": "2026-11-20",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 13,
           "id": "work-565851dbef5246ba9e7d111a2d068d29",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1573155917162094794/8f81d772b87dbe94.jpg?ex=6b00fb1e&is=6affa99e&hm=1de548753f1aa74c39934ccae1470fafd2d1c3f7187b284bc7c74a0f7be3f767&"
         },
@@ -7480,6 +7762,7 @@
           "source": "https://minicourse.dev/media/library/mjscattw/14.webp?v=6f10a578c4be67a5",
           "checkedAt": "2026-11-20",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 14,
           "id": "work-4b147f580f8844988c052c4f4f2ce0e6",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1573155917883641917/-.jpg?ex=6b00fb1e&is=6affa99e&hm=cb243a6d161ace4b1c548da579b09d163970f5ebb242a9b65678cf23fea3602e&"
         },
@@ -7489,6 +7772,7 @@
           "source": "https://minicourse.dev/media/library/mjscattw/1.webp?v=49ef51b0fb72012f",
           "checkedAt": "2026-11-20",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 1,
           "id": "work-2c0e3aad0be74d47b7753136a090140b",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1573141111105523814/Europe-1.webp?ex=6b00ed54&is=6aff9bd4&hm=96569943782a680dac083ef727a6d119f9160d5702298529b4f88ff0bae61867&"
         },
@@ -7498,6 +7782,7 @@
           "source": "https://minicourse.dev/media/library/mjscattw/2.webp?v=7b33805dde13a2ed",
           "checkedAt": "2026-11-20",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 2,
           "id": "work-9bcbb29bc7bf4c51bcde203404df8079",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1573141111583543306/Europe2.jpg?ex=6b00ed54&is=6aff9bd4&hm=189af359e542a7c07da3fa2344818cb62bb8cc2b907ded8d392114fe68c1df29&"
         },
@@ -7507,6 +7792,7 @@
           "source": "https://minicourse.dev/media/library/mjscattw/3.webp?v=4c6ac6918230eafd",
           "checkedAt": "2026-11-20",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 3,
           "id": "work-2333b0d8e229458d8021f02b45fc02fa",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1573141111986331708/Europe1.jpg?ex=6b00ed54&is=6aff9bd4&hm=2fffc1c353b31a4ba7c81dc06878b4215158b94db095a247c828d31970342e61&"
         },
@@ -7516,6 +7802,7 @@
           "source": "https://minicourse.dev/media/library/mjscattw/4.webp?v=4dac9fe4c01855fd",
           "checkedAt": "2026-11-20",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 4,
           "id": "work-bb58fbdd15e345ad82cf4eefea48fa5d",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1573141112632246384/Europe2024.jpg?ex=6b00ed54&is=6aff9bd4&hm=1e849d831a2800dfa24a22a014ce2deca54aecc1f3a73f3f0e56ecd692bb75ef&"
         },
@@ -7525,6 +7812,7 @@
           "source": "https://minicourse.dev/media/library/mjscattw/5.webp?v=32feca68c43c520b",
           "checkedAt": "2026-11-20",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 5,
           "id": "work-fa506b2cee0e4b089001137ae77537b6",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1573141113210933298/556c0a81488b6625.png?ex=6b00ed54&is=6aff9bd4&hm=2f7e214aa737e41d5fa88b3cec182336eed00826b75cf73852651aef766b2273&"
         },
@@ -7534,6 +7822,7 @@
           "source": "https://minicourse.dev/media/library/mjscattw/6.webp?v=3101ab1317207d6f",
           "checkedAt": "2026-11-20",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 6,
           "id": "work-d4912dcca7224a8c82a18ef2c0907996",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1573141113680957470/-20180530-3.jpg?ex=6b00ed55&is=6aff9bd5&hm=05085a2461cf1a466b84de9dc8f768386c3d6edcd70efb1f2c900067a7f0f8e7&"
         },
@@ -7543,6 +7832,7 @@
           "source": "https://minicourse.dev/media/library/mjscattw/7.webp?v=5b0d9b5b8b77787c",
           "checkedAt": "2026-11-20",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 7,
           "id": "work-20b5e5d7177a4974bcef27777f7a8fd4",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1573141114087538788/---01.jpg?ex=6b00ed55&is=6aff9bd5&hm=4b528137a790e5757f0e2872b80f97c6ce8f3a0aba6884415a57cd615f948c9a&"
         },
@@ -7552,6 +7842,7 @@
           "source": "https://minicourse.dev/media/library/mjscattw/8.webp?v=425ec177a5c75f49",
           "checkedAt": "2026-11-20",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 8,
           "id": "work-f02ca913c615443f8fa2ed4130fc533f",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1573141114578542622/--.jpg?ex=6b00ed55&is=6aff9bd5&hm=f47850921d472d1bbc0dc7e80d7ff219bced8ea1e6d405a29a72296209533d17&"
         },
@@ -7561,6 +7852,7 @@
           "source": "https://minicourse.dev/media/library/mjscattw/9.webp?v=889db838ac2923cb",
           "checkedAt": "2026-11-20",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 9,
           "id": "work-246cb77394d243e3b00215bf53908bd7",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1573141115010424842/-.jpg?ex=6b00ed55&is=6aff9bd5&hm=099af9627f6889bbed412823f7f90fa15e7d0352f1d8139d60f848ff3ee9d2c0&"
         },
@@ -7570,6 +7862,7 @@
           "source": "https://minicourse.dev/media/library/mjscattw/10.webp?v=b36fa58779234cd2",
           "checkedAt": "2026-11-20",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 10,
           "id": "work-9b69a3e184be4a58ac4f4a0f1d510f1f",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1573141115320795236/513fc0066c7ff095.png?ex=6b00ed55&is=6aff9bd5&hm=c532deb1ab6920efb0a7c6785143b88743e28a1b264bf6d5bcc8666281155cae&"
         }
@@ -7604,6 +7897,7 @@
           "source": "https://minicourse.dev/media/library/hot-write/1.webp?v=08e793b1a1fd3b86",
           "checkedAt": "2026-11-20",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 1,
           "id": "work-804050c1906f411787dc7472e81dd982",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1573150479897067560/890644369_18659351458023193_9177899681640837710_n.png?ex=6b00f60e&is=6affa48e&hm=a26fa41f575848c36209d11038f8b8f73dad14e7c61aa9237048b07e21c770a4&"
         },
@@ -7613,6 +7907,7 @@
           "source": "https://minicourse.dev/media/library/hot-write/2.webp?v=85abed3c27166832",
           "checkedAt": "2026-11-20",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 2,
           "id": "work-68667fe640004abb89c3618c8574f63c",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1573150480899510383/890344287_17993308770118401_6008131859128647690_n.png?ex=6b00f60e&is=6affa48e&hm=e4f799eab29b0a6a5ac43a69c2b8a3e0db27e3df90438ceb32aa6bf43c62971a&"
         },
@@ -7622,6 +7917,7 @@
           "source": "https://minicourse.dev/media/library/hot-write/3.webp?v=5f3dc0cb948ec1d6",
           "checkedAt": "2026-11-20",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 3,
           "id": "work-5d372e1cd6ab462d972692638da14f13",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1573150481486979113/886743792_17993159367118401_8112583373043853751_n.png?ex=6b00f60e&is=6affa48e&hm=6bf047f04f3214364de033ac538ad287d679c50e4ce0152f0c421ed9ddccb10b&"
         },
@@ -7631,6 +7927,7 @@
           "source": "https://minicourse.dev/media/library/hot-write/4.webp?v=994de8eebcff4fc8",
           "checkedAt": "2026-11-20",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 4,
           "id": "work-581d73e247e54cff89ac11aac3ade7c4",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1573150482007064616/867571449_17991324942118401_4949929088022980924_n.png?ex=6b00f60e&is=6affa48e&hm=fb6708b5a1ad3de94abf93a1384a525dc3caaaec87eaea7e246b1adfe87e5ca6&"
         },
@@ -7640,6 +7937,7 @@
           "source": "https://minicourse.dev/media/library/hot-write/5.webp?v=d09d20d2de0afd8b",
           "checkedAt": "2026-11-20",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 5,
           "id": "work-385066d9f132401388b4558200cd7be0",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1573150482493481001/753248099_18620461375023193_8844589219493832671_n.png?ex=6b00f60e&is=6affa48e&hm=cf98d1d9288ba4202ed22d865f6862f31a931ba72c5608915d739a62d5f414b9&"
         },
@@ -7649,6 +7947,7 @@
           "source": "https://minicourse.dev/media/library/hot-write/6.webp?v=6663fda809758058",
           "checkedAt": "2026-11-20",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 6,
           "id": "work-7af4b76092d04fbf91895ae1f6ea1e43",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1573150482942267554/725237376_17971037934118401_8130387810740800773_n.png?ex=6b00f60e&is=6affa48e&hm=906c13f3eb0a75dc23502b8508ad93aff1482e7c891f030f84d6da068411e089&"
         },
@@ -7658,6 +7957,7 @@
           "source": "https://minicourse.dev/media/library/hot-write/7.webp?v=c28cee0ca43258db",
           "checkedAt": "2026-11-20",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 7,
           "id": "work-725e9110649447aa80a7fd895a80698e",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1573150483638526012/657949716_17951591433118401_7302890885233093993_n.png?ex=6b00f60f&is=6affa48f&hm=e5d5658df280ff7f75398fb8f6389c48756784b3613a3362a1873da4bdbea83c&"
         },
@@ -7667,6 +7967,7 @@
           "source": "https://minicourse.dev/media/library/hot-write/8.webp?v=38bf68e81e7a3b3a",
           "checkedAt": "2026-11-20",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 8,
           "id": "work-efa38828665146758683f8b68fcf08db",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1573150484183650375/527482585_17916888921118401_6627783090411916830_n.png?ex=6b00f60f&is=6affa48f&hm=41d6951c0c0473d0fa7b1e9fa3c8d6b0a65bf1eb734f307cc46a321930907ae5&"
         },
@@ -7676,6 +7977,7 @@
           "source": "https://minicourse.dev/media/library/hot-write/9.webp?v=d08473ec4c9189eb",
           "checkedAt": "2026-11-20",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 9,
           "id": "work-50a1d10c20234152a783798a3958baaa",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1573150484737429515/513952225_17912659806118401_2124630532172163918_n.png?ex=6b00f60f&is=6affa48f&hm=3321c8c5de572f847b93b4ca117adb83faffd3cf29d4e7f7ded9ffa81f63b0b5&"
         },
@@ -7685,6 +7987,7 @@
           "source": "https://minicourse.dev/media/library/hot-write/10.webp?v=9e64d7fd3a9b850e",
           "checkedAt": "2026-11-20",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 10,
           "id": "work-a0f08d4f0034412fb017edda4d7ba75f",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1573150485194739823/491453902_17904917037118401_2565238156756025466_n.png?ex=6b00f60f&is=6affa48f&hm=cb746d06a3e5b4f747b94bf85cdc45d06e4ce8aae5420ad3445fb32da58dade1&"
         }
@@ -7725,6 +8028,7 @@
           "source": "https://minicourse.dev/media/library/yiyecreative/1.webp?v=f57bd21323253a86",
           "checkedAt": "2026-11-20",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 1,
           "id": "work-72ccb60c8c3b4ecd80e6af2d1b5c9f31",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1573183547425165393/912169717_17908252254670883_6582719466709299644_n.png?ex=6b0114da&is=6affc35a&hm=5dccc968108a886695dfe3fb9109748bb48fc243da9c80dad9d64d2169772d03&"
         },
@@ -7734,6 +8038,7 @@
           "source": "https://minicourse.dev/media/library/yiyecreative/2.webp?v=00823164be400ccd",
           "checkedAt": "2026-11-20",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 2,
           "id": "work-69ab9ff939e2465c8219f23ba940fc5b",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1573183547957710879/907561660_17908252290670883_7397306256248933769_n.png?ex=6b0114da&is=6affc35a&hm=0564c5e93c0b43d29f063a3f42d588a90c2940acee69ddbfbc332dfedf62ced0&"
         },
@@ -7744,6 +8049,7 @@
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1573183548561825843/652793934_17858281287670883_2279123065908554865_n.png?ex=6b0114da&is=6affc35a&hm=a70476eea12c1524cd035b8a18bc8e06d4b942dd20f5adb462a0f5fdf0690b85&",
           "checkedAt": "2026-11-20",
           "note": "使用者提供，指定為此設計師作品照片；Threads 連結由使用者指定放在此作品。",
+          "number": 3,
           "id": "work-df685adfc2b34647806f9a98981aa80d"
         },
         {
@@ -7752,6 +8058,7 @@
           "source": "https://minicourse.dev/media/library/yiyecreative/4.webp?v=e9043b3d08d11d15",
           "checkedAt": "2026-11-20",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 4,
           "id": "work-9655d61d51b1498b86bd8b2efda4ba55",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1573183549228711936/651047301_17857591383670883_8259573755406278134_n.png?ex=6b0114da&is=6affc35a&hm=a2c238d644261fec38803c8eeeba081df782d61d2ebab2642ba2d9c0add7ef03&"
         },
@@ -7761,6 +8068,7 @@
           "source": "https://minicourse.dev/media/library/yiyecreative/5.webp?v=2353db4426a09ee8",
           "checkedAt": "2026-11-20",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 5,
           "id": "work-a364b6ca3901415cba19d81a0c7b43ef",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1573184516770762872/649229525_17856724728670883_1243096143304996016_n.png?ex=6b0115c1&is=6affc441&hm=02c1de77c8ac5f899030e32420f82687038cc367d729c64d1a2fe7736def430c&"
         }
@@ -7795,6 +8103,7 @@
           "source": "https://minicourse.dev/media/library/miro-cheng-official/1.webp?v=81763b8dbf75b0ee",
           "checkedAt": "2026-11-20",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 1,
           "id": "work-5a75c698abd34d5aab98a7424cc41f73",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1573326136434364416/912093882_17895358908479615_3206402593380774648_n.png?ex=6b0199a5&is=6b004825&hm=b9ee5355ed77185bc534263085247a3729e06b54598f9a410eea263fb8018005&"
         },
@@ -7804,6 +8113,7 @@
           "source": "https://minicourse.dev/media/library/miro-cheng-official/2.webp?v=75f68e628cef7517",
           "checkedAt": "2026-11-20",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 2,
           "id": "work-a659903f4720408e8a1cfa1bcf40e75e",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1573326137201786930/915083916_17895358890479615_3146528509860548429_n.png?ex=6b0199a6&is=6b004826&hm=1b6fbd1a7f97e7aa42aa3da68e0b2ed71e49eddaf7ba57db946d37d6ea0f3752&"
         }
@@ -7833,6 +8143,7 @@
       },
       "productImages": [
         {
+          "title": "《回憶錄－衝擊之後》影片封面",
           "id": "work-f1946342adb75470a6d937d31f0f32d6",
           "url": "/media/library/neko-kaeru-studio/1.webp?v=a34ae55ec39b2232",
           "alt": "《回憶錄－衝擊之後》影片封面，青蛙上方寫著「很久很久以前」",
@@ -7840,6 +8151,7 @@
           "checkedAt": "2026-11-20"
         },
         {
+          "number": 2,
           "id": "work-7dc32c7e49485e4f90069aff8d35b657",
           "url": "/media/library/neko-kaeru-studio/2.webp?v=0f74bd6c81c1ed66",
           "alt": "「11月28日回家投票」插畫，青蛙手持印章，衣服上有兩隻貓",
@@ -7847,6 +8159,7 @@
           "checkedAt": "2026-11-20"
         },
         {
+          "number": 3,
           "id": "work-8d19f6ce836958c3a1065c6166590e45",
           "url": "/media/library/neko-kaeru-studio/3.webp?v=c92db85f854d463e",
           "alt": "中秋節插畫，青蛙與貓咪在滿月下圍爐烤肉",
@@ -7854,6 +8167,7 @@
           "checkedAt": "2026-11-20"
         },
         {
+          "title": "《跟貓生活後的驚悚故事》漫畫",
           "id": "work-373ab472701650a381c1c49e7ee6168f",
           "url": "/media/library/neko-kaeru-studio/5.webp?v=abef37accdcded5e",
           "alt": "《跟貓生活後的驚悚故事》漫畫，貓與青蛙坐在綠色沙發上",
@@ -7861,6 +8175,7 @@
           "checkedAt": "2026-11-20"
         },
         {
+          "number": 6,
           "id": "work-eb84318fa030581889295b54a4ba6f91",
           "url": "/media/library/neko-kaeru-studio/6.webp?v=a97b29b62c1536f6",
           "alt": "偷偷熬夜影片封面，黑貓蜷在橘色棉被上",
@@ -7901,6 +8216,7 @@
           "source": "https://minicourse.dev/media/library/xxpsaviexx/1.webp?v=02fb4e91682b0267",
           "checkedAt": "2026-11-22",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 1,
           "id": "work-3a5f1ce84a004e1d9ec98eb6ec1cb7be",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1574027352235712582/916772233_17993780460119730_8421822129988776386_n.png?ex=6b0426b4&is=6b02d534&hm=a439bc269dd4b7055a24e5882835444264b0b9133a06ecbacc72848bd6568d4e&"
         },
@@ -7910,6 +8226,7 @@
           "source": "https://minicourse.dev/media/library/xxpsaviexx/2.webp?v=50e56021d70feae3",
           "checkedAt": "2026-11-22",
           "note": "使用者提供，指定為此設計師作品照片",
+          "number": 2,
           "id": "work-d6b954613bb44f969245ef3553ce258b",
           "originalUrl": "https://cdn.discordapp.com/attachments/1553247600935833680/1574027352965517343/912161774_17993622675119730_2567292451567271159_n.png?ex=6b0426b4&is=6b02d534&hm=5afcb170f3e1fbcc69b5dd65deac8f712488779658a088c4063f8bee57370a98&"
         },
@@ -7919,6 +8236,7 @@
           "source": "https://www.threads.com/@xxpsaviexx/post/DgCL7SjoSR-",
           "note": "使用者指定的 Threads 原貼文代表圖。",
           "checkedAt": "2026-11-22",
+          "number": 3,
           "id": "work-58737f92332d4baa8fe252bd4cefe124",
           "originalUrl": "https://scontent-lax7-1.cdninstagram.com/v/t51.82787-15/921314068_17993956623119730_7628150351117150308_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=105&_nc_map=urlgen_bucketless&ig_cache_key=NDAzNTgzNDEyODY4NTk5MjkxNg%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTIwNS5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=Zmbu8Pl9BfoQ7kNvwHwPEeq&_nc_oc=AdqUVc5b7Wg-xbRrzdLoIOIPPDsvy5D3YpZu-Tq3-wI6Mxr2TFrOG5Xi2xz3AYLvfqQ&_nc_zt=23&_nc_ht=scontent-lax7-1.cdninstagram.com&_nc_gid=MWWl7Gd8lAXpx0Vki4PqSA&_nc_ss=7920f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQRMV4j9X589MyCEBfvs2DDbu5hYFx-aPGaFxZLU4-AF9w&oe=6B08C74E"
         },
@@ -7928,6 +8246,7 @@
           "source": "https://www.threads.com/@xxpsaviexx/post/Df_uySyoRyI",
           "note": "使用者指定的 Threads 原貼文代表圖。",
           "checkedAt": "2026-11-22",
+          "number": 4,
           "id": "work-6e8fc3d9b5d041ee969a85d255c2aae9",
           "originalUrl": "https://scontent-lax7-1.cdninstagram.com/v/t51.82787-15/912468797_17993789664119730_2662786068521808281_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=102&_nc_map=urlgen_bucketless&ig_cache_key=NDAzNTE0OTU1NzQzNzM3MzU3Ng%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMTI4NC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=vVp-ANlgvHQQ7kNvwFEpGLH&_nc_oc=AdrFHaFZzVf8_-pxQvquEX165rYuf0jLsZDjHSFInlW0j4_r_gWNwt5VqXGkfaBdRDA&_nc_zt=23&_nc_ht=scontent-lax7-1.cdninstagram.com&_nc_gid=8Jm16hKQbGh6eWXvjTVtxA&_nc_ss=7920f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQRPLjch1_KeMkukLIelNeP7fYFH7frlm1QKXzR_s4V5mA&oe=6B089B4A"
         }

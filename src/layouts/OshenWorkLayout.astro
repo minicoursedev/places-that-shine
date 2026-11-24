@@ -9,26 +9,32 @@ interface Props { designerId: string; workId: string; shareHall?: string }
 const entry = designerWorks.find(({ designer, work }) => designer.id === Astro.props.designerId && work.id === Astro.props.workId)!;
 const { designer, work } = entry;
 const shareTitle = `${designer.name} 設計師`;
-const title = `${designer.name}的作品｜發光的地方`;
+const workImage = new URL(work.cover, Astro.site);
+// Older entries encode their catalogue number in the work ID or the media filename.
+const idNumber = work.id.startsWith(designer.id + '-') && work.id.slice(designer.id.length + 1).match(/^\d+$/)?.[0];
+const mediaNumber = workImage.pathname.match(/\/(\d+)\.[^/]+$/)?.[1];
+const workTitle = work.title?.trim() || `作品 ${work.number || idNumber || mediaNumber || work.id}`;
+const titlePrefix = `${designer.name}-${workTitle}|發光的地方|`;
 const description = work.caption?.trim() || designer.store.description;
 const label = work.name || `${designer.name}的作品`;
 const canonical = new URL(designerWorkPath(designer.id, work.id), Astro.site).href;
 const shareUrl = Astro.props.shareHall
   ? new URL(designerWorkSharePath(designer.id, work.id, Astro.props.shareHall), Astro.site).href
   : canonical;
-const workImage = new URL(work.cover, Astro.site).href;
 const halls = designer.booth.hallBooths.map(({ aisle, hall }) => ({
   code: aisle[0],
   name: hall,
+  pageTitle: titlePrefix + hall,
   marketPath: designerHallRoot(aisle[0]),
   boothPath: designerSharePath(designer.id, aisle[0]),
   sharePath: designerWorkSharePath(designer.id, work.id, aisle[0]),
 }));
 const firstHall = halls.find(hall => hall.code === Astro.props.shareHall) || halls[0];
+const title = firstHall.pageTitle;
 const structuredData = {
   '@context': 'https://schema.org', '@type': 'WebPage', url: canonical, name: title, inLanguage: 'zh-Hant-TW',
   ...(description ? { description } : {}),
-  primaryImageOfPage: { '@type': 'ImageObject', contentUrl: workImage, name: label, ...(work.caption ? { caption: work.caption } : {}) },
+  primaryImageOfPage: { '@type': 'ImageObject', contentUrl: workImage.href, name: label, ...(work.caption ? { caption: work.caption } : {}) },
   isPartOf: { '@type': 'WebPage', url: new URL(designerPath(designer.id), Astro.site).href, name: designer.name },
 };
 ---
@@ -103,6 +109,11 @@ const structuredData = {
     const hallCode = new URLSearchParams(location.search).get('hall');
     const hall = halls.find(entry => entry.code === hallCode);
     if (hall) {
+      document.title = hall.pageTitle;
+      const schema = document.querySelector('script[type="application/ld+json"]');
+      const page = JSON.parse(schema.textContent);
+      page.name = hall.pageTitle;
+      schema.textContent = JSON.stringify(page);
       for (const link of document.querySelectorAll('[data-work-booth]')) link.href = hall.boothPath;
       const breadcrumb = document.querySelector('[data-work-hall]');
       breadcrumb.href = hall.marketPath;

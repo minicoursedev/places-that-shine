@@ -1,12 +1,12 @@
 // Boot and wiring: header, dock, walk view, dialogs, list and map pages, routes (#/walk/<aisle or booth>, #/list, #/map).
 import { state, on, emit, visitedCount, toast } from './state.js';
 import { loadIndex, aisleOfBooth, loadBoothForDesigner, isOshenHall } from './data.js?v=20261119-recall-hall';
-import { goToAisle } from './nav.js?v=20261124-oshen-entry';
+import { goToAisle } from './nav.js?v=20261124-profile-boot';
 import { createWalkView } from './walk.js?v=20261114-hall-sign-2';
 import { wireFloatingNav } from './floating-nav.js';
-import { openBooth } from './ui/booth.js?v=20261124-oshen-entry';
-import { mountMap } from './ui/map.js?v=20261124-oshen-entry';
-import { mountList } from './ui/list.js?v=20261124-oshen-entry';
+import { openBooth } from './ui/booth.js?v=20261124-profile-boot';
+import { mountMap } from './ui/map.js?v=20261124-profile-boot';
+import { mountList } from './ui/list.js?v=20261124-profile-boot';
 import { loadSchedule, isClosed, closeTagText, msLeft, lastOpenLabel } from './schedule.js?v=20261030-site-data';
 import { loadCats, loadChatter } from './cats.js?v=20261030-site-data';
 import { showClosed } from './ui/closed.js';
@@ -51,7 +51,11 @@ function setMode(mode, opts = {}) {
   }
   if (mode === 'walk') {
     walk?.resize();
-    if (state.aisleCode && !location.hash.startsWith('#/walk/')) history.replaceState(null, '', designerWalkPath(state.aisleCode));
+    const onWalkRoute = location.pathname === designerHallRoot(state.hallCode) && location.hash.startsWith('#/walk/');
+    if (!opts.keepUrl && state.aisleCode && !onWalkRoute) {
+      history.replaceState(null, '', designerWalkPath(state.aisleCode));
+      updateDesignerMetadata();
+    }
   }
 }
 
@@ -77,6 +81,7 @@ function wireDialogs() {
 }
 
 async function boot() {
+  const entryUrl = location.href;
   wireDialogs();
   wireFloatingNav();
   $('designer-loading-retry')?.addEventListener('click', () => location.reload());
@@ -134,7 +139,7 @@ async function boot() {
   loadChatter().then(cfg => { if (cfg) walk.setChatter(cfg); });
 
   on('aisle', d => {
-    if ($('stage-walk').hidden) setMode('walk');
+    if (!d.background && $('stage-walk').hidden) setMode('walk');
     state.neighbors = { prev: d.prev, next: d.next };
     const prevHall = state.index.halls.find(hall => hall.code === d.prev?.[0] && hall.code !== d.data.hall);
     const nextHall = state.index.halls.find(hall => hall.code === d.next?.[0] && hall.code !== d.data.hall);
@@ -169,22 +174,27 @@ async function boot() {
   const entryHall = hallPageForPath(location.pathname)?.code || 'O';
   const first = state.index.halls.find(h => h.code === entryHall).aisles[0].code;
   async function route({ boot = false } = {}) {
-    const { mode, target, then, hall } = resolveDesignerRoute(new URL(location.href), { boot });
+    const url = new URL(location.href);
+    const initialEntry = boot && url.href === entryUrl;
+    const { mode, target, then, hall } = resolveDesignerRoute(url, { boot: initialEntry });
     if (mode === 'list' || mode === 'map') { if (boot) await goToAisle(first); setMode(mode); return; }
     let ok = false;
     if (mode === 'designer') {
+      const initialProfile = initialEntry && document.documentElement.dataset.designerProfile === target;
       const boothId = await loadBoothForDesigner(target, hall);
       if (boothId) {
-        ok = await goToAisle(aisleOfBooth(boothId), { boothId });
+        ok = await goToAisle(aisleOfBooth(boothId), { boothId, background: initialProfile });
         if (ok) {
-          setMode('walk');
-          await openBooth(boothId, { keepHall: Boolean(hall) });
+          if (!initialProfile) setMode('walk');
+          const opened = await openBooth(boothId, { keepHall: Boolean(hall), initialUrl: initialProfile ? url.href : null });
+          if (opened && initialProfile) setMode('walk', { keepUrl: true });
           return;
         }
       } else {
         $('dlg-booth').close();
         toast('找不到這位設計師，攤位可能已下架');
       }
+      if (initialProfile) return;
     } else if (target && BOOTH_ID.test(target)) {
       ok = await goToAisle(aisleOfBooth(target), { boothId: target });
       if (ok && then === 'open') openBooth(target);

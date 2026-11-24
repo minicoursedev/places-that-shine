@@ -78,6 +78,8 @@ export function createCatalogue(data, { baseUrl = CONFIG.DESIGNERS_URL, ogImages
         const works = (Array.isArray(designer.productImages) ? designer.productImages : [])
           .map((product, i) => ({
             id: inlineWorkId(designer.id, product),
+            title: product?.title,
+            number: product?.number,
             name: typeof product?.alt === 'string' && product.alt.trim() ? product.alt : `${designer.name} 作品參考 ${i + 1}`,
             caption: typeof product?.caption === 'string' ? product.caption : '',
             cover: imageUrl(product?.url),
