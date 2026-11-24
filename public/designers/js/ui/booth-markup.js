@@ -1,6 +1,5 @@
 import { thumbnailUrl } from '../images.js';
-import { designerSharePath, designerWalkPath } from '../routes.js?v=20261124-oshen-entry';
-import { designerMetadata } from '../profile-seo.js?v=20261114-designer-title';
+import { designerSharePath, designerWalkPath } from '../routes.js?v=20261124-profile-title';
 import { designerWorkSharePath } from '../work-links.js?v=20261114-share-channels';
 import { browserOrigin } from '../config.js';
 
@@ -84,7 +83,7 @@ export function boothHtml(booth, store, { profile = false, staticProfile = false
   const heading = profile ? 'h1' : 'h2';
   const subheading = profile ? 'h2' : 'h3';
   const titleId = staticProfile ? 'static-designer-title' : 'booth-title';
-  const introduction = designerMetadata(store || { name }).introduction;
+  const introduction = store?.description?.trim() || '';
   const where = [booth.zoneName].filter(Boolean);
   const works = booth.works || [];
   const more = booth.randomSelection ? 0 : Math.max(0, (booth.total || 0) - works.length);

@@ -9,16 +9,16 @@ import PrivacyLink from '../components/PrivacyLink.astro';
 interface Props { designerId?: string; hallCode?: string; shareHall?: string }
 const designer = designers.find(profile => profile.id === Astro.props.designerId);
 const shareHall = designer && Astro.props.shareHall;
-const shareBooth = shareHall && designer?.booth.hallBooths.find(booth => booth.aisle[0] === shareHall);
+const shareBooth = shareHall ? designer.booth.hallBooths.find(booth => booth.aisle[0] === shareHall) : undefined;
 const hall = hallPageForCode(Astro.props.hallCode || shareHall || designer?.hallCode) || hallPageForCode('O')!;
 const listedDesigners = designer ? [] : designers.filter(profile => profile.hallCodes.includes(hall.code));
-const metadata = designer && designerMetadata(designer.store);
+const metadata = designer && designerMetadata(designer.store, shareBooth?.hall);
 const title = metadata ? metadata.title : hall.title;
 const shareTitle = metadata ? metadata.shareTitle : title;
 const description = metadata ? metadata.description : hall.description;
 const canonical = new URL(designer ? designerPath(designer.id) : hall.path, Astro.site).href;
 const shareUrl = designer && shareHall ? new URL(designerSharePath(designer.id, shareHall), Astro.site).href : canonical;
-const structuredData = designer && designerStructuredData(designer.store, designer.booth, canonical, new URL(designerRoot, Astro.site).href);
+const structuredData = designer && designerStructuredData(designer.store, designer.booth, canonical, new URL(designerRoot, Astro.site).href, metadata);
 const exhibitionImage = new URL('/designers/assets/exhibition-og.webp?v=20261123-webp', Astro.site).href;
 const preview = designer ? designer.og : hall;
 const shareImage = new URL(designer?.og?.url || preview?.image || exhibitionImage, Astro.site).href;
@@ -146,6 +146,6 @@ const shareImageAlt = preview?.alt || '洋流設計師展逛攤畫面';
 <dialog id="dlg-booth" class="dlg" aria-labelledby="booth-title"></dialog>
 <WorkShareDialog kind="designer" />
 <WorkShareDialog />
-<script is:inline type="module" src="/designers/js/app.js?v=20261124-profile-boot"></script>
+<script is:inline type="module" src="/designers/js/app.js?v=20261124-profile-title"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-import { designerMetadata, designerStructuredData, serializeStructuredData, publicUrl } from './profile-seo.js?v=20261114-designer-title';
+import { designerMetadata, designerStructuredData, serializeStructuredData, publicUrl } from './profile-seo.js?v=20261124-profile-title';
 import { hallPageForCode, hallPageForPath } from './hall-pages.js?v=20261124-hall-seo';
 import { browserOrigin } from './config.js';
 
@@ -86,5 +86,5 @@ export function updateDesignerMetadata(designer = null, booth = {}) {
     structuredData.type = 'application/ld+json';
     document.head.append(structuredData);
   }
-  structuredData.textContent = serializeStructuredData(designerStructuredData(designer, booth, canonical, new URL(designerRoot, canonical).href));
+  structuredData.textContent = serializeStructuredData(designerStructuredData(designer, booth, canonical, new URL(designerRoot, canonical).href, metadata));
 }

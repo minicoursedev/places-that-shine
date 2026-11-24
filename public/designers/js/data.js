@@ -59,6 +59,7 @@ export function createCatalogue(data, { baseUrl = CONFIG.DESIGNERS_URL, ogImages
 
   for (const HALL of HALLS) {
     const ZONE = HALL.zone;
+    const hallName = HALL.year ? `${HALL.year} ${HALL.name}` : HALL.name;
     const hallDesigners = designers.filter(designer => designerHallCodes(designer).includes(HALL.code));
     const summaries = [];
     // Keep one empty aisle in each hall, including before its first author is listed.
@@ -69,9 +70,10 @@ export function createCatalogue(data, { baseUrl = CONFIG.DESIGNERS_URL, ogImages
       const booths = members.map((designer, pos) => {
         const id = `${code}-${pad2(pos + 1)}`;
         const category = ['設計師', '創作者', '愛好者'].includes(designer.category) ? designer.category : HALL.category;
-        if (HALL.code === primaryHall(designer)) designerBooths.set(designer.id, id);
+        const mainHall = primaryHall(designer);
+        if (HALL.code === mainHall) designerBooths.set(designer.id, id);
         const hallBooths = hallBoothsByDesigner.get(designer.id) || [];
-        hallBooths.push({ id, aisle: code, hall: HALL.year ? `${HALL.year} ${HALL.name}` : HALL.name });
+        hallBooths.push({ id, aisle: code, hall: hallName });
         hallBoothsByDesigner.set(designer.id, hallBooths);
         const social = Object.fromEntries(Object.entries(designer.social || {})
           .map(([key, value]) => [key, externalUrl(value)]));
@@ -88,7 +90,7 @@ export function createCatalogue(data, { baseUrl = CONFIG.DESIGNERS_URL, ogImages
             url: productLink(product),
           })).filter((work, i) => work.cover && designer.productImages[i]?.disabled !== true);
         stores[designer.id] = {
-          id: designer.id, name: designer.name, owner: designer.name, category,
+          id: designer.id, name: designer.name, owner: designer.name, category, hallName, primaryHall: mainHall,
           description: typeof designer.description === 'string' ? designer.description.trim() : '',
           entityType: ['Person', 'Organization'].includes(designer.entityType) ? designer.entityType : '',
           og: ogImages[designer.id] || null,
