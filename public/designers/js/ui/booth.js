@@ -1,8 +1,8 @@
 // Designer dialog: profile, catalogue images, social links and share link.
 import { state, markVisited, findBoothIn } from '../state.js';
-import { loadAisle, aisleOfBooth } from '../data.js?v=20261119-recall-hall';
-import { boothHtml, loadingHtml, failHtml } from './booth-markup.js?v=20261124-oshen-entry';
-import { designerHallRoot, designerPath, designerSharePath, designerWalkPath, resolveDesignerRoute, updateDesignerMetadata } from '../routes.js?v=20261124-oshen-entry';
+import { loadAisle, aisleOfBooth } from '../data.js?v=20261124-profile-title';
+import { boothHtml, loadingHtml, failHtml } from './booth-markup.js?v=20261124-profile-title';
+import { designerHallRoot, designerPath, designerSharePath, designerWalkPath, resolveDesignerRoute, updateDesignerMetadata } from '../routes.js?v=20261124-profile-title';
 import { retryOriginal } from '../images.js';
 import { loadProducts, sampleProducts } from '../products.js?v=20261030-pinned-work';
 
@@ -73,8 +73,12 @@ export async function openBooth(boothId, { keepHall = false, initialUrl = null }
     // The visitor may have left the profile while its catalogue was loading.
     const staticProfile = document.getElementById('static-designer-profile');
     if (location.href !== initialUrl || !staticProfile?.getClientRects().length || document.querySelector('dialog[open]')) return;
+    // A legacy ?hall= link shares the primary profile's static HTML.
+    if (location.pathname === designerPath(store.id) && keepHall && aisle.hall !== store.primaryHall) {
+      updateDesignerMetadata(store, booth);
+    }
   } else {
-    const path = keepHall || booth.id !== booth.hallBooths[0].id
+    const path = keepHall || aisle.hall !== store.primaryHall
       ? designerSharePath(booth.store, aisle.hall)
       : designerPath(booth.store);
     history.replaceState(null, '', path);

@@ -21,17 +21,16 @@ export function officialLinks(store) {
     });
 }
 
-export function designerMetadata(store) {
+export function designerMetadata(store, hallName = store.hallName) {
   const name = text(store.name);
-  const title = `${name} | 發光的地方`;
+  const title = `${name}|${hallName}|發光的設計師`;
   // A missing biography stays empty in visible content and metadata.
   const introduction = text(store.description);
   const description = shorten(introduction);
   return { title, shareTitle: title, description, introduction };
 }
 
-export function designerStructuredData(store, booth, canonical, directoryUrl) {
-  const metadata = designerMetadata(store);
+export function designerStructuredData(store, booth, canonical, directoryUrl, metadata = designerMetadata(store)) {
   const entityId = `${canonical}#designer`;
   const pageId = `${canonical}#webpage`;
   const breadcrumbId = `${canonical}#breadcrumb`;
