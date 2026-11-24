@@ -5253,6 +5253,35 @@
       "addressSource": "https://www.ubereats.com/tw-en/store/%E8%8B%B1%E4%BF%8A%E8%B6%8A%E5%BC%8F%E7%83%A4%E9%A4%85-%E6%9D%B1%E9%96%80%E5%A4%9C%E5%B8%82%E5%BA%97/oR1vYI65X5-Pws7Mz5J43A",
       "verification": false,
       "disabled": false
+    },
+    {
+      "id": "manchaoqd",
+      "name": "Manchao Coffee 漫潮咖啡｜慶東店",
+      "address": "臺南市東區慶東街140號",
+      "addressSource": "https://www.ubereats.com/tw/store/manchao-coffee-%E6%85%B6%E6%9D%B1%E5%BA%97/V0tGrGMlUb2NaS5PT9Yysw",
+      "category": "咖啡廳",
+      "latlng": {
+        "lat": 22.989667,
+        "lng": 120.216428
+      },
+      "coordinateSource": "https://market.591.com.tw/2335328",
+      "coordinateNote": "OpenStreetMap 未取得可核對的門牌結果。591 實價登錄明列臺南市東區慶東街140號，其導航連結 https://maps.google.com.tw/maps?f=q&hl=zh-TW&q=22.9896670%2C120.2164280&z=17 以 q 參數明示門牌座標，與店家菜單刊登的門牌一致。此為門牌定位，非地圖視窗中心或店家入口實測點。",
+      "social": {
+        "instagram": "https://www.instagram.com/manchaoqd/",
+        "threads": "https://www.threads.com/@manchaoqd"
+      },
+      "shopPhoto": {
+        "url": "",
+        "source": "https://www.threads.com/@manchaoqd",
+        "platform": "threads",
+        "status": "unverified",
+        "checkedAt": "2026-11-24",
+        "note": "Threads 連結由使用者提供，Encore 活動主辦方公告亦將 @manchaoqd 與慶東店配對。Threads 個人頁回傳 HTTP 429；輕旅行同店同址頁所連的 Instagram 個人頁亦無法讀取，未能核對頭像原圖及圖片回應。"
+      },
+      "visitNote": "供應義式咖啡、手沖咖啡、可頌與甜點。聯絡電話：0962-056-520。",
+      "giftStatus": "可能有小物",
+      "verification": false,
+      "disabled": false
     }
   ]
 }
