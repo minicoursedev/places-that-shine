@@ -24,6 +24,7 @@ const shareUrl = Astro.props.shareHall
 const halls = designer.booth.hallBooths.map(({ aisle, hall }) => ({
   code: aisle[0],
   name: hall,
+  authorLabel: hall.replace(/館$/, '').replace(/設計師$/, '') + '設計師',
   pageTitle: titlePrefix + hall,
   marketPath: designerHallRoot(aisle[0]),
   boothPath: designerSharePath(designer.id, aisle[0]),
@@ -88,7 +89,7 @@ const structuredData = {
         <section class="work-author" aria-labelledby="work-author-name">
           <a class="work-author-link" data-work-booth href={firstHall.boothPath}>
             {designer.store.avatar && <span class:list={['bo-avatar', { 'bo-avatar-contain': designer.store.avatarFit === 'contain' }]}><img src={designer.store.avatar} alt="" decoding="async" /></span>}
-            <div><span class="work-author-category">{designer.store.category}</span><h2 class="work-author-name" id="work-author-name">{designer.name}</h2></div>
+            <div><span class="work-author-category">{firstHall.authorLabel}</span><h2 class="work-author-name" id="work-author-name">{designer.name}</h2></div>
           </a>
           {designer.store.description && <p class="work-author-bio">{designer.store.description}</p>}
         </section>
@@ -118,6 +119,7 @@ const structuredData = {
       const breadcrumb = document.querySelector('[data-work-hall]');
       breadcrumb.href = hall.marketPath;
       breadcrumb.textContent = hall.name;
+      document.querySelector('.work-author-category').textContent = hall.authorLabel;
       document.querySelector('.work-market-link').href = hall.marketPath;
       document.querySelector('[data-share-work]').dataset.shareWork = hall.sharePath;
     }
