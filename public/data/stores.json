@@ -5053,6 +5053,34 @@
       "giftStatus": "可能有小物",
       "verification": true,
       "disabled": false
+    },
+    {
+      "id": "manchao-coffee-qingdong",
+      "name": "Manchao Coffee 漫潮咖啡（慶東店）",
+      "address": "臺南市東區慶東街140號",
+      "category": "咖啡廳",
+      "latlng": {
+        "lat": 22.98966704167,
+        "lng": 120.21642839208
+      },
+      "coordinateSource": "https://raw.githubusercontent.com/zhengda/taiwan-address-data/master/roads/67-%E6%85%B6%E6%9D%B1%E8%A1%97.csv",
+      "coordinateNote": "OpenStreetMap 未取得可核對的門牌結果。採用標示源自 TGOS 的公開門牌資料，取臺南市東區圍下里18鄰慶東街140號所列 X（經度）與 Y（緯度）。門牌與慶東店的 Uber Eats 頁面一致，座標也與 591 同門牌頁面的地圖定位相符；非地圖視窗中心。",
+      "visitNote": "供應手沖咖啡、義式咖啡、可頌及甜點；電話 0962-056-520。",
+      "shopPhoto": {
+        "url": "",
+        "source": "https://www.threads.com/@manchaoqd",
+        "platform": "threads",
+        "status": "unverified",
+        "checkedAt": "2026-11-24",
+        "note": "Threads 網址由使用者提供，Encore 活動主辦方亦以同帳號標示慶東店。Threads 個人頁回傳 HTTP 429；輕旅行店家頁所連的同名 Instagram 個人頁也無法讀取，未能核對頭像或確認圖片可存取。"
+      },
+      "social": {
+        "instagram": "https://www.instagram.com/manchaoqd/",
+        "threads": "https://www.threads.com/@manchaoqd"
+      },
+      "giftStatus": "可能有小物",
+      "verification": false,
+      "disabled": false
     }
   ]
 }
