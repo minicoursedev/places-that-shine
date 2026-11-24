@@ -53,7 +53,7 @@ function stageUrl(id) {
 }
 function updateMetadata(stage = null) {
   const hall = currentHall();
-  const title = stage ? `${stage.title}｜${stage.creator}｜洋流舞台` : hall ? `${hall.name}｜洋流舞台` : '洋流舞台｜我們的洋流地圖';
+  const title = stage ? `${stage.title}｜${stage.creator}｜洋流舞台` : hall ? `${hall.name}｜洋流舞台` : '洋流舞台｜發光的地方';
   const description = stage ? `${stage.creator}的《${stage.title}》。${stage.description || '在洋流舞台觀看影片與探索作者作品。'}` : hall ? `走進${hall.name}，在洋流舞台探索影片與作者作品。` : '走進洋流舞台，點一座舞台，看一部影片。';
   const path = stage ? `${stageRoot}videos/${encodeURIComponent(stage.id)}/` : location.pathname === stageRoot ? stageRoot : hall ? hallUrl(hall.id) : stageRoot;
   const canonical = new URL(path, 'https://minicourse.dev').href;
