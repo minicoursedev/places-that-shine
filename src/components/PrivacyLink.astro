@@ -1,8 +1,8 @@
 ---
-interface Props { compact?: boolean }
-const { compact } = Astro.props;
+interface Props { compact?: boolean; class?: string }
+const { compact, class: className } = Astro.props;
 ---
-<a href="/privacy/" class:list={{ compact }} aria-current={Astro.url.pathname === '/privacy/' ? 'page' : undefined}>網站隱私權政策</a>
+<a href="/privacy/" class:list={[className, { compact }]} aria-current={Astro.url.pathname === '/privacy/' ? 'page' : undefined}>網站隱私權政策</a>
 
 <style>
   a { white-space: nowrap; text-underline-offset: .2em; }
