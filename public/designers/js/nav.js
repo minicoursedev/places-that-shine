@@ -20,16 +20,18 @@ export function aisleNeighbors(code) {
 }
 
 // A missing aisle or network error returns false and shows a message.
-export async function goToAisle(code, { boothId = null, from = null } = {}) {
+export async function goToAisle(code, { boothId = null, from = null, background = false } = {}) {
   try {
     if (!hallOfIndex(code)) { toast('找不到這條走道'); return false; }
     const data = await loadAisle(code);
     state.aisleCode = code;
     state.aisle = data;
     state.hallCode = data.hall;
-    emit('aisle', { code, data, boothId, from, ...aisleNeighbors(code) });
-    history.replaceState(null, '', designerWalkPath(code, boothId));
-    updateDesignerMetadata();
+    emit('aisle', { code, data, boothId, from, background, ...aisleNeighbors(code) });
+    if (!background) {
+      history.replaceState(null, '', designerWalkPath(code, boothId));
+      updateDesignerMetadata();
+    }
     return true;
   } catch (e) {
     if (e.status === 404) toast('找不到這條走道，名單可能剛更新過');
