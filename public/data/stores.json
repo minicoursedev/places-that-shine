@@ -5271,14 +5271,14 @@
         "threads": "https://www.threads.com/@manchaoqd"
       },
       "shopPhoto": {
-        "url": "",
+        "url": "./media/library/manchaoqd/logo.webp?v=fe1367e44a9aedf2",
         "source": "https://www.threads.com/@manchaoqd",
         "platform": "threads",
-        "status": "unverified",
+        "status": "verified",
         "checkedAt": "2026-11-24",
-        "note": "Threads 連結由使用者提供，Encore 活動主辦方公告亦將 @manchaoqd 與慶東店配對。Threads 個人頁回傳 HTTP 429；輕旅行同店同址頁所連的 Instagram 個人頁亦無法讀取，未能核對頭像原圖及圖片回應。"
+        "note": "官方帳號 og:url 相符；個人頭像 CDN 路徑；Manchao Coffee慶東店 (@manchaoqd) • Threads, Say more；相同帳號公開資料 hd_profile_pic_versions"
       },
-      "visitNote": "供應義式咖啡、手沖咖啡、可頌與甜點。聯絡電話：0962-056-520。",
+      "visitNote": "供應義式咖啡、手沖咖啡、可頌與甜點。聯絡電話：0962-056-520。依店家 Threads 簡介，內用每人低消一杯飲品，禁止外食；假日不提供插座，客滿時限 120 分鐘。",
       "giftStatus": "可能有小物",
       "verification": false,
       "disabled": false
