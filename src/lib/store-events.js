@@ -6,6 +6,7 @@
  * @property {string} endsAt
  * @property {string} [organizerUrl]
  * @property {string} [sourceUrl]
+ * @property {boolean} [connectMarkers]
  * @property {string} [introduction]
  * @property {string} [shareImageAlt]
  * @property {{ name: string, storeIds: string[] }[]} groups
