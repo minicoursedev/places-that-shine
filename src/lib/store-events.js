@@ -5,6 +5,7 @@
  * @property {string} startsAt
  * @property {string} endsAt
  * @property {string} [organizerUrl]
+ * @property {string} [sourceUrl]
  * @property {string} [introduction]
  * @property {string} [shareImageAlt]
  * @property {{ name: string, storeIds: string[] }[]} groups
