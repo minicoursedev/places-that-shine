@@ -1,5 +1,5 @@
 import { readStores } from '../lib/oshen-store-data';
-import { storeCity, storeMapCenterParam, storeMapId, storePath } from '../lib/oshen-store-links.mjs';
+import { storeCategoryPath, storeCity, storeMapCenterParam, storeMapId, storePath } from '../lib/oshen-store-links.mjs';
 import { storeCategoryIcon } from './store-marker-icons.js';
 import { createStoreShare } from './store-share.js';
 
@@ -919,7 +919,9 @@ export async function mountStores(root, workPreviews = [], initialCategory = '')
   });
   search.addEventListener('input', filterStores);
   city.addEventListener('change', filterStores);
-  category.addEventListener('change', filterStores);
+  category.addEventListener('change', () => {
+    location.assign(category.value ? storeCategoryPath(category.value) : '/stores/');
+  });
   mobile.addEventListener('change', () => {
     storeSheet.close();
     if (!mobile.matches && !showingMap) void showMap();
