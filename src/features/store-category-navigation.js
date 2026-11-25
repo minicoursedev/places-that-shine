@@ -84,7 +84,7 @@ export function createStoreCategoryNavigation(root) {
       const path = category ? storeCategoryPath(category) : '/stores/';
       let page = cache.get(path);
       if (!page) {
-        const response = await fetch(new URL(path, location.origin), { signal, headers: { Accept: 'text/html' } });
+        const response = await fetch(new URL(path, location.origin), { signal, cache: 'no-cache', headers: { Accept: 'text/html' } });
         if (request !== latestRequest) return false;
         if (!response.ok) throw new Error('目前無法載入店家分類，請稍後重試。');
         const html = await response.text();
