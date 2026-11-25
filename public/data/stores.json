@@ -5081,6 +5081,40 @@
       "giftStatus": "可能有小物",
       "verification": false,
       "disabled": false
+    },
+    {
+      "id": "koo-kwang-ming-foundation",
+      "name": "辜寬敏基金會",
+      "address": "臺北市中山區松江路266號3樓",
+      "category": "洋流服務站",
+      "serviceType": "基金會",
+      "latlng": {
+        "lat": 25.059324331097,
+        "lng": 121.53293971424
+      },
+      "coordinateSource": "https://raw.githubusercontent.com/zhengda/taiwan-address-data/master/roads/63-%E6%9D%BE%E6%B1%9F%E8%B7%AF.csv",
+      "coordinateNote": "OpenStreetMap 未取得可核對的門牌結果。採用標示源自 TGOS 的公開門牌資料，取臺北市中山區中庄里21鄰松江路266號所列 X（經度）與 Y（緯度）。門牌與基金會官網所列辦公室地址相符；為門牌定位點，非3樓入口實測點。",
+      "visitUrl": "https://www.kookwangming.org.tw/",
+      "visitNote": "此處為基金會辦公室，曾作為洋流飄帶發放據點。到訪前請先查看官方公告或電洽 02-2567-0011。",
+      "social": {
+        "facebook": "https://www.facebook.com/KooKwangMingFoundation",
+        "instagram": "https://www.instagram.com/tnc1926/",
+        "threads": "https://www.threads.com/@tnc1926"
+      },
+      "shopPhoto": {
+        "url": "",
+        "source": "https://www.threads.com/@tnc1926",
+        "platform": "threads",
+        "status": "unverified",
+        "checkedAt": "2026-11-25",
+        "note": "基金會官網直接連至此 Threads 帳號，但個人頁回傳 HTTP 429；官網所連的 Instagram 無法讀取，Facebook 顯示暫時封鎖，LINE 連結轉址後亦無法讀取，未能確認個人檔案頭像或圖片回應。"
+      },
+      "mapMarker": {
+        "label": "辜寬敏基金會"
+      },
+      "giftStatus": "可能有小物",
+      "verification": true,
+      "disabled": false
     }
   ]
 }
