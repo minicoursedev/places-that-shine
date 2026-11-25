@@ -1,5 +1,6 @@
-const eventFiles = import.meta.glob('../../public/data/store-events/*.json', { eager: true, import: 'default' });
-const events = Object.values(eventFiles).map(event => ({
+import { storeEventPath, storeEvents } from '../lib/store-events.js';
+
+const events = storeEvents.map(event => ({
   ...event,
   start: Date.parse(event.startsAt),
   end: Date.parse(event.endsAt),
@@ -15,7 +16,7 @@ function eventLink(text, path, current) {
   return link;
 }
 
-export function createStoreEventFilter(nav, onChange) {
+export function createStoreEventFilter(nav, pageEventId, onChange) {
   const links = nav.querySelector('.store-event-links');
   const groupSelect = nav.querySelector('select');
   let available = [];
@@ -27,12 +28,15 @@ export function createStoreEventFilter(nav, onChange) {
     const now = Date.now();
     const next = events.filter(event => event.start <= now && now < event.end);
     const url = new URL(location.href);
-    const requested = url.searchParams.get('event');
-    const nextSelected = next.find(event => event.id === requested);
-    if (requested !== null && !nextSelected) {
-      url.searchParams.delete('event');
-      history.replaceState(history.state, '', url);
+    const legacyId = url.searchParams.get('event');
+    const nextSelected = next.find(event => event.id === (pageEventId || legacyId));
+    url.searchParams.delete('event');
+    if ((nextSelected?.id || '') !== pageEventId) {
+      url.pathname = nextSelected ? storeEventPath(nextSelected.id) : '/stores/';
+      location.replace(url);
+      return;
     }
+    if (legacyId !== null) history.replaceState(history.state, '', url);
     const selectionChanged = nextSelected !== selected;
     if (selectionChanged || next.length !== available.length || next.some((event, i) => event !== available[i])) {
       selected = nextSelected;
@@ -40,7 +44,7 @@ export function createStoreEventFilter(nav, onChange) {
       nav.hidden = available.length === 0;
       links.replaceChildren();
       for (const event of available) {
-        links.append(eventLink(event.name, '/stores/?event=' + encodeURIComponent(event.id), event === selected));
+        links.append(eventLink(event.name, storeEventPath(event.id), event === selected));
       }
       if (selected) links.append(eventLink('回全部店家', '/stores/'));
       if (selectionChanged) {
@@ -50,17 +54,12 @@ export function createStoreEventFilter(nav, onChange) {
       }
     }
     const boundary = Math.min(...events.flatMap(event => [event.start, event.end]).filter(time => time > now));
-    if (Number.isFinite(boundary)) timer = setTimeout(refresh, Math.min(boundary - now, 2_147_483_647));
-    return selectionChanged;
-  }
-
-  function refresh() {
-    if (sync()) onChange();
+    if (Number.isFinite(boundary)) timer = setTimeout(sync, Math.min(boundary - now, 2_147_483_647));
   }
 
   groupSelect.addEventListener('change', onChange);
-  document.addEventListener('visibilitychange', () => { if (!document.hidden) refresh(); });
-  window.addEventListener('pageshow', refresh);
+  document.addEventListener('visibilitychange', () => { if (!document.hidden) sync(); });
+  window.addEventListener('pageshow', sync);
   sync();
 
   return {

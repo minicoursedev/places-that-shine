@@ -15,6 +15,13 @@ export function storeCategoryFromPath(path) {
 }
 
 export function createStoreCategoryNavigation(root) {
+  // Event pages have their own canonical URL and sharing metadata.
+  if (root.dataset.eventId) {
+    return category => {
+      location.assign(category ? storeCategoryPath(category) : '/stores/');
+      return false;
+    };
+  }
   const directory = root.closest('.stores-directory');
   const categoryNavigation = directory.querySelector('.store-category-directory');
   const links = [...categoryNavigation.querySelectorAll('a[href]')];

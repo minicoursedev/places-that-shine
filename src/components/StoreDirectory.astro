@@ -2,14 +2,16 @@
 import StoreShareDialog from './StoreShareDialog.astro';
 import { storeWorkPreviews } from '../lib/oshen-store-work-previews';
 import { stores, categories, storeCategoryPath, storeCity, storePath } from '../lib/oshen-stores';
+import type { StoreEvent } from '../lib/store-events.js';
 import '../styles/stores.css';
 import '../styles/store-work-preview.css';
 
-interface Props { category?: string }
-const { category } = Astro.props;
-const title = category || '發光的店家';
+interface Props { category?: string; event?: StoreEvent }
+const { category, event } = Astro.props;
+const title = event?.name || category || '發光的店家';
 const compareText = new Intl.Collator('zh-Hant-TW').compare;
-const categoryStores = stores.filter(store => !category || store.category === category)
+const eventIds = event && new Set(event.groups.flatMap(group => group.storeIds));
+const categoryStores = stores.filter(store => (!category || store.category === category) && (!eventIds || eventIds.has(store.id)))
   .sort((a, b) => compareText(a.name, b.name));
 const byCity = new Map<string, (typeof stores)[number][]>();
 for (const store of categoryStores) {
@@ -22,8 +24,14 @@ const storesByCity = [...byCity].sort(([a], [b]) => compareText(a, b));
 
   <section class="stores-directory directory page-width" aria-labelledby="stores-title">
     <div class="directory-header">
-      <a class="back-link" href={category ? "/stores/" : "/#explore"}><span aria-hidden="true">←</span> {category ? "回店家地圖" : "回探索首頁"}</a>
+      <a class="back-link" href={category || event ? "/stores/" : "/#explore"}><span aria-hidden="true">←</span> {category || event ? "回店家地圖" : "回探索首頁"}</a>
       <h1 id="stores-title">{title}</h1>
+      {(event?.organizerUrl || event?.introduction) && (
+        <div class="store-event-intro">
+          {event.organizerUrl && <p>發起人：<a href={event.organizerUrl}>{event.organizerUrl}</a></p>}
+          {event.introduction && <p>{event.introduction}</p>}
+        </div>
+      )}
       <a class="store-action" href="/stores/report/">推薦店家</a>
     </div>
     <nav class="store-events" aria-label="現在進行式" hidden>
@@ -31,7 +39,7 @@ const storesByCity = [...byCity].sort(([a], [b]) => compareText(a, b));
       <span class="store-event-links"></span>
       <label hidden>活動分組 <select class="store-input"></select></label>
     </nav>
-    <div id="stores-content" aria-label="店家目錄" data-category={category} data-work-previews={JSON.stringify(storeWorkPreviews)}><p role="status">正在載入店家資料…</p></div>
+    <div id="stores-content" aria-label="店家目錄" data-category={category} data-event-id={event?.id} data-work-previews={JSON.stringify(storeWorkPreviews)}><p role="status">正在載入店家資料…</p></div>
     <StoreShareDialog />
     <dialog id="store-photo-viewer" class="store-photo-viewer" aria-label="全螢幕店家照片">
       <div class="store-photo-track" aria-label="店家照片"></div>
@@ -83,6 +91,10 @@ const storesByCity = [...byCity].sort(([a], [b]) => compareText(a, b));
 </script>
 
 <style>
+  .store-event-intro { order: 1; flex: 0 0 100%; min-width: 0; }
+  .store-event-intro p { max-width: 46rem; margin: .3rem 0; line-height: 1.7; }
+  .store-event-intro a { color: var(--accent); overflow-wrap: anywhere; }
+
   .stores-by-city-groups {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr));

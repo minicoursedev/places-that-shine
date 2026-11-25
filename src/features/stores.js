@@ -725,8 +725,8 @@ export async function mountStores(root, workPreviews = [], initialCategory = '')
   let preserveMapViewOnRefresh = false;
   let locating = false;
   let firstMobileStoreSelected = false;
-  const eventFilter = createStoreEventFilter(root.closest('.stores-directory').querySelector('.store-events'), () => {
-    if (!eventFilter.selected) category.value = activeCategory;
+  const eventNav = root.closest('.stores-directory').querySelector('.store-events');
+  const eventFilter = createStoreEventFilter(eventNav, root.dataset.eventId || '', () => {
     if (!search.disabled) filterStores();
   });
 
