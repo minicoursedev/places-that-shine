@@ -9,6 +9,7 @@
   "groups": [
     {
       "name": "開票地點",
+      "closedLoop": true,
       "storeIds": ["thng-tik-tsiong-house", "xiadadao-lianghuang-temple", "sing-yuan-coffee"]
     }
   ]

@@ -9,7 +9,7 @@
  * @property {boolean} [connectMarkers]
  * @property {string} [introduction]
  * @property {string} [shareImageAlt]
- * @property {{ name: string, storeIds: string[] }[]} groups
+ * @property {{ name: string, storeIds: string[], closedLoop?: boolean }[]} groups
  */
 const files = import.meta.glob('../../public/data/store-events/*.json', { eager: true, import: 'default' });
 

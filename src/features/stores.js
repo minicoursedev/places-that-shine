@@ -593,7 +593,11 @@ async function createStoreMap(container, message, mapButtons, sheet, mobile, onS
       }
       if (connections) {
         const positions = new Map(pins.map(pin => [pin.options.storeId, pin.getLatLng()]));
-        const lines = connectedGroups.map(group => group.storeIds.map(id => positions.get(id)).filter(Boolean));
+        const lines = connectedGroups.map(group => {
+          const points = group.storeIds.map(id => positions.get(id)).filter(Boolean);
+          if (group.closedLoop && points.length > 2) points.push(points[0]);
+          return points;
+        });
         connections.setLatLngs(lines.filter(points => points.length > 1));
       }
       if (center) map.setView(center, 16, { animate: false });
