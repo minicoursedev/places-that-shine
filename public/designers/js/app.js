@@ -2,7 +2,7 @@
 import { state, on, emit, visitedCount, toast } from './state.js';
 import { loadIndex, aisleOfBooth, loadBoothForDesigner, isOshenHall } from './data.js?v=20261124-profile-title';
 import { goToAisle } from './nav.js?v=20261124-profile-title';
-import { createWalkView } from './walk.js?v=20261114-hall-sign-2';
+import { createWalkView } from './walk.js?v=20261125-hall-nameplates';
 import { wireFloatingNav } from './floating-nav.js';
 import { openBooth } from './ui/booth.js?v=20261124-profile-title';
 import { mountMap } from './ui/map.js?v=20261124-profile-title';
@@ -22,7 +22,6 @@ let list = null;
 let map = null;
 
 function finishBoot() {
-  document.documentElement.classList.remove('designer-booting');
   if (!$('stage-walk').hidden) walk?.resize();
 }
 
@@ -112,6 +111,8 @@ async function boot() {
   // the walk view keeps walking to a tapped booth; don't let it open things over a dialog or behind the list
   const busy = () => !!document.querySelector('dialog[open]') || $('stage-walk').hidden;
   walk = createWalkView($('walk-canvas'), {
+    nameplates: $('designer-nameplates'),
+    onFirstDraw: () => $('stage-walk').removeAttribute('data-opening'),
     onNear: id => {
       state.nearBooth = id;
       const btn = $('btn-browse');
@@ -211,11 +212,7 @@ async function boot() {
 
 boot().catch(err => {
   console.error(err);
-  const message = $('designer-loading-message'), retry = $('designer-loading-retry');
-  if (message) {
-    message.textContent = '市集載入失敗，請重新載入。';
-    message.classList.remove('designer-loading-sr');
-  }
-  if (retry) retry.hidden = false;
+  const errorNotice = $('designer-walk-error');
+  if (errorNotice) errorNotice.hidden = false;
   toast('載入失敗，請重新整理再試一次');
 });

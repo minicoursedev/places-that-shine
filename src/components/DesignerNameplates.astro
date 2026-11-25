@@ -1,0 +1,67 @@
+---
+import { catalogue } from '../lib/oshen-designers';
+import { designerPath, designerSharePath } from '../../public/designers/js/routes.js';
+import { designerNameplatePositions, NAMEPLATE_WIDTH, NORTH_NAME_Y, southNameY } from '../../public/designers/js/walk-layout.js';
+
+interface Props { hallCode?: string }
+const { hallCode } = Astro.props;
+const hall = catalogue.index.halls.find(hall => hall.code === hallCode);
+---
+
+<div id="designer-nameplates" style={`--name-width:${NAMEPLATE_WIDTH};--north-y:${NORTH_NAME_Y};--south-y:${southNameY(430)};--south-compact-y:${southNameY(354)}`}>
+  {hall?.aisles.map(({ code }, index) => {
+    const aisle = catalogue.aisles.get(code);
+    const portrait = designerNameplatePositions(aisle, false);
+    const landscape = designerNameplatePositions(aisle, true);
+    return <div class="hall-opening-world" data-aisle={code} hidden={index !== 0}>
+      {aisle.islands.flatMap(island => island.booths).map(booth => {
+        const store = aisle.stores[booth.store];
+        const link = store.primaryHall === hallCode ? designerPath(store.id) : designerSharePath(store.id, hallCode);
+        return <a href={link} data-booth={booth.id} data-side={portrait.get(booth.id).side}
+          style={`--portrait-x:${portrait.get(booth.id).x};--landscape-x:${landscape.get(booth.id).x}`}
+        >{store.name}</a>;
+      })}
+    </div>;
+  })}
+</div>
+
+<style is:global>
+  #designer-nameplates {
+    position: absolute; inset: 0; overflow: clip; pointer-events: none;
+  }
+  #designer-nameplates .hall-opening-world {
+    --unit: var(--live-unit, var(--hall-unit));
+    position: absolute; top: 0; left: 0;
+    transform: translate(var(--live-left, var(--hall-left)), var(--live-top, var(--hall-top)));
+  }
+  #designer-nameplates a {
+    --x: var(--portrait-x); --y: var(--north-y);
+    position: absolute;
+    left: calc(var(--x) * var(--unit)); top: calc(var(--y) * var(--unit));
+    transform: translate(-50%, -50%); pointer-events: auto;
+    width: calc(var(--name-width) * var(--unit)); height: calc(14 * var(--unit));
+    font: 700 calc(12.075 * var(--unit))/calc(14 * var(--unit)) "Noto Sans TC", system-ui, -apple-system, "PingFang TC", "Microsoft JhengHei", sans-serif;
+    text-align: center; display: -webkit-box; -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1; line-clamp: 1; word-break: break-all; overflow: hidden;
+    color: var(--ink); text-decoration: none;
+  }
+  /* Fit at the same unscaled world font size as Canvas, then zoom the result.
+     Some system fonts use different glyph metrics at larger point sizes. */
+  @supports (transform: scale(calc(1px / 1px))) {
+    #designer-nameplates a {
+      width: calc(var(--name-width) * 1px); height: 14px; font-size: 12.075px; line-height: 14px;
+      transform: scale(calc(var(--unit) / 1px)) translate(-50%, -50%);
+      transform-origin: top left;
+    }
+  }
+  #designer-nameplates a:focus-visible { outline: 2px solid var(--pink); outline-offset: -2px; }
+  @media (orientation: portrait) {
+    #designer-nameplates [data-side="S"] { --y: var(--south-y); }
+  }
+  @media (orientation: portrait) and (max-width: 1024px) {
+    #designer-nameplates [data-side="S"] { --y: var(--south-compact-y); }
+  }
+  @media (orientation: landscape) {
+    #designer-nameplates a { --x: var(--landscape-x); }
+  }
+</style>

@@ -76,7 +76,7 @@ async function biographyLines(description, fontDirectory) {
   return lines.join('\n');
 }
 
-async function readBundledSource(source, publicDirectory, site, designerId) {
+export async function readBundledSource(source, publicDirectory, site, designerId) {
   if (!source) return null;
   const url = new URL(source, new URL(CATALOGUE, site));
   if (url.origin !== new URL(site).origin) return null;

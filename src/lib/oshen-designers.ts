@@ -36,7 +36,7 @@ for (const designer of data.designers) {
   validateWorkIds(designer.id, designer.productImages ?? [], 'retiredWorkIds' in designer ? designer.retiredWorkIds : undefined);
 }
 
-const catalogue = createCatalogue(data, { baseUrl, ogImages });
+export const catalogue = createCatalogue(data, { baseUrl, ogImages });
 const productFiles = import.meta.glob<ProductCatalogue>('../../public/data/designers/*.json', {
   eager: true,
   import: 'default',

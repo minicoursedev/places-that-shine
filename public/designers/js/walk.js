@@ -1,26 +1,16 @@
 // Walk view: one aisle drawn as a clean manga page. Ink outlines, halftone tones, warm white paper, pink and green accents.
 // World: a horizontal aisle in world units. N booths on top (poster stand, table, cloth), S booths below (table seen from
 // above, covers lying flat). Redraws only while something moves or an image arrives.
+import { EXIT_W, DESIGNER_BOOTH_WIDTH, NAMEPLATE_WIDTH, NORTH_NAME_Y, placeIslands, southNameY } from './walk-layout.js';
+import { bindNameplates } from './walk-nameplates.js';
 import { isVisited, toast } from './state.js';
 import { catFits, pickLine, praiseLine } from './cats.js?v=20261030-site-data';
 import { thumbnailUrl, retryOriginal } from './images.js';
 
-const palette = getComputedStyle(document.documentElement);
-const color = name => palette.getPropertyValue(name).trim();
-const INK = color('--ink');
-const PAPER = color('--paper');
-const PAPER2 = color('--paper-2');
-const PINK = color('--pink');
-const PINK_SOFT = color('--pink-soft');
-const GREEN = color('--green');
-const GREEN_DEEP = color('--green-deep');
-const GREEN_SOFT = color('--green-soft');
 const FONT = '"Noto Sans TC", system-ui, -apple-system, "PingFang TC", "Microsoft JhengHei", sans-serif';
 const MONO = '"IBM Plex Mono", ui-monospace, Consolas, monospace';
 
 // world layout (units)
-const CROSS = 104;       // cross aisle between two islands on the same side
-const EXIT_W = 190;      // exit area at each end of the aisle
 const EXIT_TRIG = 72;    // walking this close to an end leaves the aisle
 const X_MIN = 22;
 const SPEED = 260;
@@ -49,7 +39,19 @@ function rng(s) {
   };
 }
 
-export function createWalkView(canvas, { onNear = () => {}, onOpen = () => {}, onCreator = () => {}, onEnd = () => {}, catContext = () => ({}), display = 'booth', visited = isVisited } = {}) {
+export function createWalkView(canvas, { onNear = () => {}, onOpen = () => {}, onCreator = () => {}, onEnd = () => {}, catContext = () => ({}), display = 'booth', visited = isVisited, nameplates = null, omitNameplates = false, onFirstDraw = null, opening = null } = {}) {
+  const palette = opening?.palette || getComputedStyle(document.documentElement);
+  const color = name => palette.getPropertyValue(name).trim();
+  const INK = color('--ink');
+  const PAPER = color('--paper');
+  const PAPER2 = color('--paper-2');
+  const PINK = color('--pink');
+  const PINK_SOFT = color('--pink-soft');
+  const GREEN = color('--green');
+  const GREEN_DEEP = color('--green-deep');
+  const GREEN_SOFT = color('--green-soft');
+  const makeCanvas = opening?.makeCanvas ?? (() => document.createElement('canvas'));
+  const Matrix = opening?.Matrix ?? DOMMatrix;
   // Give the lower booth the same 56-unit logo as the upper booth by
   // moving its front up and using a shorter upper number panel.
   const boothShift = display === 'stage' ? 0 : 16;
@@ -59,9 +61,10 @@ export function createWalkView(canvas, { onNear = () => {}, onOpen = () => {}, o
   };
   let worldH = 500, PY_MIN = 232 - boothShift, PY_MAX = 342 - boothShift, AISLE_MID = 276 - boothShift;
   let compactAisle = false, singleRow = false;
-  const BW = display === 'stage' ? 224 : 112;
+  const BW = display === 'stage' ? 224 : DESIGNER_BOOTH_WIDTH;
+  const linkedNames = nameplates ? bindNameplates(nameplates, onOpen) : null;
   const c = canvas.getContext('2d');
-  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const reduce = opening ? { matches: true } : window.matchMedia('(prefers-reduced-motion: reduce)');
   let alive = true;
   let cssW = 0, cssH = 0, dpr = 1, scale = 1, offY = 0;
   let T = null;                                   // halftone patterns
@@ -84,24 +87,24 @@ export function createWalkView(canvas, { onNear = () => {}, onOpen = () => {}, o
   // ---------- drawing helpers ----------
   function tone(k, s, r) {
     const px = Math.max(2, Math.round(s * k));
-    const p = document.createElement('canvas');
+    const p = makeCanvas();
     p.width = p.height = px;
     const g = p.getContext('2d');
     g.fillStyle = GREEN;
     g.beginPath(); g.arc(px / 2, px / 2, r * px / s, 0, Math.PI * 2); g.fill();
     const pat = c.createPattern(p, 'repeat');
-    pat.setTransform(new DOMMatrix([s / px, 0, 0, s / px, 0, 0]));
+    pat.setTransform(new Matrix([s / px, 0, 0, s / px, 0, 0]));
     return pat;
   }
   function hatch(k, s) {
     const px = Math.max(3, Math.round(s * k));
-    const p = document.createElement('canvas');
+    const p = makeCanvas();
     p.width = p.height = px;
     const g = p.getContext('2d');
     g.strokeStyle = INK; g.lineWidth = Math.max(1, 0.9 * px / s);
     for (const o of [-px, 0, px]) { g.beginPath(); g.moveTo(o, px); g.lineTo(o + px, 0); g.stroke(); }
     const pat = c.createPattern(p, 'repeat');
-    pat.setTransform(new DOMMatrix([s / px, 0, 0, s / px, 0, 0]));
+    pat.setTransform(new Matrix([s / px, 0, 0, s / px, 0, 0]));
     return pat;
   }
   function buildTones() {
@@ -143,6 +146,7 @@ export function createWalkView(canvas, { onNear = () => {}, onOpen = () => {}, o
   // ---------- images ----------
   function getImg(url) {
     if (!url) return null;
+    if (opening) return opening.images.get(url) || null;
     let e = imgs.get(url);
     if (!e) e = loadImg(url);
     e.used = frameNo;
@@ -167,10 +171,14 @@ export function createWalkView(canvas, { onNear = () => {}, onOpen = () => {}, o
         g.imageSmoothingQuality = 'high';
         g.drawImage(img, 0, 0, tw, th);
         e.cv = cv; e.st = 'ok';
-        kick();
       } catch { e.st = 'err'; }
+      kick();
     };
-    img.onerror = () => { if (alive && retryOriginal(img)) return; e.st = 'err'; };
+    img.onerror = () => {
+      if (!alive || retryOriginal(img)) return;
+      e.st = 'err';
+      kick();
+    };
     img.dataset.original = url;
     img.src = thumbnailUrl(url);
     return e;
@@ -196,44 +204,19 @@ export function createWalkView(canvas, { onNear = () => {}, onOpen = () => {}, o
     }));
   }
   function build(d) {
-    if (singleRow) {
-      const booths = [], islands = [], byId = new Map();
-      let x = EXIT_W;
-      const groups = d.islands.filter(i => i.booths.length);
-      for (const [index, isl] of groups.entries()) {
-        const I = { side: 'N', isl, x0: x, x1: x + isl.booths.length * BW, signs: [] };
-        isl.booths.forEach((b, i) => {
-          const B = { b, side: 'N', x: x + i * BW, cx: x + i * BW + BW / 2, h: hash(b.id), I };
-          booths.push(B); byId.set(b.id, B);
-        });
-        I.signs = signsOf(I, d.hallName);
-        islands.push(I);
-        x = I.x1 + (index < groups.length - 1 ? CROSS : 0);
-      }
-      return { booths, islands, byId, order: booths.slice(), worldW: x + EXIT_W };
+    const { islands, worldW } = placeIslands(d.islands, singleRow, BW);
+    const booths = [], byId = new Map();
+    for (const I of islands) {
+      I.isl.booths.forEach((b, i) => {
+        const x = I.x0 + i * BW;
+        const B = { b, side: I.side, x, cx: x + BW / 2, h: hash(b.id), I };
+        booths.push(B);
+        byId.set(b.id, B);
+      });
+      I.signs = signsOf(I, d.hallName);
     }
-    const nIs = d.islands.filter(i => i.side === 'N');
-    const sIs = d.islands.filter(i => i.side === 'S');
-    const cols = Math.max(nIs.length, sIs.length);
-    const booths = [], islands = [], byId = new Map();
-    let x = EXIT_W;
-    for (let k = 0; k < cols; k++) {
-      const n = Math.max(nIs[k]?.booths.length || 0, sIs[k]?.booths.length || 0);
-      for (const isl of [nIs[k], sIs[k]]) {
-        if (!isl || !isl.booths.length) continue;
-        const I = { side: isl.side, isl, x0: x, x1: x + isl.booths.length * BW, signs: [] };
-        isl.booths.forEach((b, i) => {
-          const B = { b, side: isl.side, x: x + i * BW, cx: x + i * BW + BW / 2, h: hash(b.id), I };
-          booths.push(B); byId.set(b.id, B);
-        });
-        I.signs = signsOf(I, d.hallName);
-        islands.push(I);
-      }
-      x += n * BW;
-      if (k < cols - 1) x += CROSS;
-    }
-    const order = d.islands.flatMap(i => i.booths).map(b => byId.get(b.id)).filter(Boolean);
-    return { booths, islands, byId, order, worldW: x + EXIT_W };
+    const order = d.islands.flatMap(island => island.booths).map(booth => byId.get(booth.id));
+    return { booths, islands, byId, order, worldW };
   }
   const frontOf = B => ({ x: B.cx, y: B.side === 'N' ? PY_MIN + 4 : PY_MAX - 4 });
   const clampWalk = p => ({ x: clamp(p.x, X_MIN, L.worldW - X_MIN), y: clamp(p.y, PY_MIN, PY_MAX) });
@@ -442,6 +425,17 @@ export function createWalkView(canvas, { onNear = () => {}, onOpen = () => {}, o
   }
   const storeName = b => (data.stores[b.store] && data.stores[b.store].name) || '';
   const logoOf = b => data.stores[b.store]?.avatar || '';
+  function drawStoreName(b, cx, cy) {
+    if (linkedNames) {
+      // Expose the real HTML link through the white name card. Foreground art
+      // painted later can still cover it, and all pointer input stays on Canvas.
+      c.clearRect(cx - NAMEPLATE_WIDTH / 2, cy - 6.5, NAMEPLATE_WIDTH, 12);
+    } else if (!omitNameplates) {
+      c.fillStyle = INK;
+      c.font = `700 12.075px ${FONT}`;
+      c.fillText(fit(storeName(b), NAMEPLATE_WIDTH), cx, cy);
+    }
+  }
   function squareDisplay(b, x, y, size) {
     const gap = 4, small = (size - gap) / 2;
     const logo = logoOf(b);
@@ -509,8 +503,7 @@ export function createWalkView(canvas, { onNear = () => {}, onOpen = () => {}, o
     c.strokeStyle = INK; c.lineWidth = 2; c.strokeRect(px, py, pw, ph);
     c.fillStyle = INK; c.fillRect(px + 14, py - 3, 7, 5); c.fillRect(px + pw - 21, py - 3, 7, 5);
     c.lineWidth = 1.4; line(px, py + 15, px + pw, py + 15);
-    c.fillStyle = INK; c.font = `700 12.075px ${FONT}`;
-    c.fillText(fit(storeName(b), pw - 8), cx, py + 8.5);
+    drawStoreName(b, cx, NORTH_NAME_Y);
     const size = Math.min(ph - 23, (pw - 10) * 2 / 3);
     const width = size + 4 + (size - 4) / 2;
     squareDisplay(b, cx - width / 2, py + 19 + (ph - 23 - size) / 2, size);
@@ -543,8 +536,7 @@ export function createWalkView(canvas, { onNear = () => {}, onOpen = () => {}, o
     // name card at the back of the table
     c.fillStyle = PAPER; c.fillRect(x + 9, Y.TABLE_S - 20, BW - 18, 14);
     c.strokeStyle = INK; c.lineWidth = 1.2; c.strokeRect(x + 9, Y.TABLE_S - 20, BW - 18, 14);
-    c.fillStyle = INK; c.font = `700 12.075px ${FONT}`;
-    c.fillText(fit(storeName(b), BW - 26), cx, Y.TABLE_S - 12.5);
+    drawStoreName(b, cx, southNameY(Y.TABLE_S));
   }
   function islandEdges(x0, x1) {
     c.strokeStyle = INK;
@@ -824,12 +816,13 @@ export function createWalkView(canvas, { onNear = () => {}, onOpen = () => {}, o
     c.fillStyle = PAPER2; c.fillRect(0, 0, canvas.width, canvas.height);
     if (!L || !cssW || !T) return;
     const k = dpr * scale;
-    c.setTransform(k, 0, 0, k, -camX * k, offY * dpr);
+    const bleed = opening?.bleedX || 0, bleedY = opening?.bleedY || 0;
+    c.setTransform(k, 0, 0, k, -camX * k + bleed * dpr, (offY + bleedY) * dpr);
     c.lineJoin = 'round'; c.lineCap = 'round';
     c.textAlign = 'center'; c.textBaseline = 'middle';
     const vw = cssW / scale;
-    const x0 = camX - 24, x1 = camX + vw + 24;
-    const yTop = -offY / scale - 2, yBot = (cssH - offY) / scale + 2;
+    const x0 = camX - 24 - bleed / scale, x1 = camX + vw + 24 + bleed / scale;
+    const yTop = -(offY + bleedY) / scale - 2, yBot = (cssH - offY + bleedY) / scale + 2;
     backdrop(x0, x1, yTop, yBot);
     ends(x0, x1, yTop);
     const vis = L.booths.filter(B => B.x + BW >= x0 && B.x <= x1);
@@ -854,6 +847,11 @@ export function createWalkView(canvas, { onNear = () => {}, onOpen = () => {}, o
       }
       const bounds = speech(passer.x, passer.y - 36 * passer.s - 2, passer.line, x0, x1);
       passerBalloons.push({ passer, ...bounds });
+    }
+    linkedNames?.draw(data, L, camX, scale, offY, cssW);
+    if (onFirstDraw) {
+      onFirstDraw();
+      onFirstDraw = null;
     }
     prefetch(x0 - BW * 2, x1 + BW * 2);
   }
@@ -982,7 +980,7 @@ export function createWalkView(canvas, { onNear = () => {}, onOpen = () => {}, o
     draw();
     if (busy) raf = requestAnimationFrame(frame); else last = 0;
   }
-  function kick() { if (!raf && alive) raf = requestAnimationFrame(frame); }
+  function kick() { if (!opening && !raf && alive) raf = requestAnimationFrame(frame); }
 
   // ---------- input ----------
   function local(e) { const r = canvas.getBoundingClientRect(); return { sx: e.clientX - r.left, sy: e.clientY - r.top }; }
@@ -1070,18 +1068,21 @@ export function createWalkView(canvas, { onNear = () => {}, onOpen = () => {}, o
 
   // ---------- public ----------
   function resize() {
-    const w = canvas.clientWidth, h = canvas.clientHeight;
+    // Initialize the first aisle before mapping its player position to the screen,
+    // as the original walk did on its first visible frame.
+    if (!data && (opening || canvas.closest('[data-opening]'))) return;
+    const w = opening?.width ?? canvas.clientWidth, h = opening?.height ?? canvas.clientHeight;
     if (!w || !h) return;
-    const nd = Math.min(2, window.devicePixelRatio || 1);
+    const nd = opening ? 1 : Math.min(2, window.devicePixelRatio || 1);
     if (w === cssW && h === cssH && nd === dpr && T) return;
     cssW = w; cssH = h; dpr = nd;
-    const nextSingleRow = display === 'booth' && window.matchMedia('(orientation: landscape)').matches;
+    const nextSingleRow = display === 'booth' && (opening ? w > h : window.matchMedia('(orientation: landscape)').matches);
     const layoutChanged = nextSingleRow !== singleRow;
     const oldBooth = layoutChanged && L && (L.byId.get(nearId) || L.booths.reduce((best, B) =>
       !best || Math.abs(B.cx - player.x) < Math.abs(best.cx - player.x) ? B : best, null));
     const relativeX = oldBooth ? player.x - oldBooth.cx : 0;
     singleRow = nextSingleRow;
-    const compact = window.innerWidth <= 1024;
+    const compact = (opening ? w : window.innerWidth) <= 1024;
     if (compact !== compactAisle) {
       const mapY = y => compact ? Y.CLOTH_N + (y - Y.CLOTH_N) / 2 : Y.CLOTH_N + (y - Y.CLOTH_N) * 2;
       player.y = mapY(player.y);
@@ -1116,7 +1117,7 @@ export function createWalkView(canvas, { onNear = () => {}, onOpen = () => {}, o
       initCats(data.code);
       updateNear(true);
     }
-    canvas.width = Math.round(w * dpr); canvas.height = Math.round(h * dpr);
+    canvas.width = Math.round((w + 2 * (opening?.bleedX || 0)) * dpr); canvas.height = Math.round((h + 2 * (opening?.bleedY || 0)) * dpr);
     // In a short landscape viewport, use the full canvas and overlay the controls.
     let top = w <= 560 ? 82 : 58, bottom = 54;
     if (h < 520) { top = w <= 560 ? 76 : 46; bottom = 48; }
@@ -1147,9 +1148,10 @@ export function createWalkView(canvas, { onNear = () => {}, onOpen = () => {}, o
     latchR = player.x > L.worldW - EXIT_TRIG - 36;
     initNpcs(d.code);
     initCats(d.code);
-    canvas.setAttribute('aria-label', `${d.hallName} ${d.code} 走道：按住拖著小人走，${display === 'stage' ? '點影片觀看，點名牌看作者社群' : '點設計師即可查看介紹'}`);
+    if (!opening) canvas.setAttribute('aria-label', `${d.hallName} ${d.code} 走道：按住拖著小人走，${display === 'stage' ? '點影片觀看，點名牌看作者社群' : '點設計師即可查看介紹'}`);
     camSnap = true;
     updateNear(true);
+    if (!cssW) resize();
     kick();
   }
   function walkTo(B) { target = frontOf(B); pending = null; goal = B.b.id; kick(); }
@@ -1182,6 +1184,18 @@ export function createWalkView(canvas, { onNear = () => {}, onOpen = () => {}, o
       return;
     }
     walkTo(order[i + 1]);
+  }
+
+  // Astro paints the same initial scene into a build-time canvas. Extra pixels on
+  // the sides let the responsive layout crop the scene around the starting camera.
+  if (opening) {
+    setAisle(opening.aisle, opening.neighbors);
+    placeCamera(0, true);
+    draw();
+    return {
+      x: camX - opening.bleedX / scale, y: -(offY + opening.bleedY) / scale,
+      width: canvas.width / scale, height: canvas.height / scale,
+    };
   }
 
   canvas.addEventListener('pointerdown', onDown);
@@ -1232,6 +1246,7 @@ export function createWalkView(canvas, { onNear = () => {}, onOpen = () => {}, o
       window.removeEventListener('blur', onBlur);
       if (ro) ro.disconnect();
       if (reduce.removeEventListener) reduce.removeEventListener('change', onMotion);
+      linkedNames?.destroy();
       imgs.clear();
     },
   };

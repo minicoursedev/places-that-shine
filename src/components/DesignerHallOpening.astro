@@ -1,0 +1,69 @@
+---
+import { openingFrame, openingViews } from '../lib/designer-openings';
+interface Props { hallCode: string }
+const frames = await Promise.all(openingViews.map(async view => ({ ...view, ...await openingFrame(Astro.props.hallCode, view) })));
+// From the most specific media condition to the general fallback.
+const sources = [...frames].reverse();
+const css = frames.flatMap(frame => Object.entries(frame.bounds).map(([key, value]) => `--${frame.key}-${key}:${value}`)).join(';');
+---
+<div class="hall-opening-scene" aria-hidden="true" style={css}>
+  {[false, true].map(ceiling => (
+    <picture class:list={[{ 'opening-ceiling': ceiling }]}>
+      {sources.map(frame => <source media={frame.media} srcset={frame.url} />)}
+      <img src={frames[0].url} alt="" fetchpriority="high" />
+    </picture>
+  ))}
+</div>
+
+<style is:global>
+  #stage-walk {
+    container-type: size;
+    --hall-world-width: var(--portrait-width);
+    --hall-world-height: 500;
+    --hall-head: 58px;
+    --hall-foot: 54px;
+    --hall-available: max(140px, calc(100cqh - var(--hall-head) - var(--hall-foot)));
+    --hall-unit: clamp(.42px, calc(var(--hall-available) / var(--hall-world-height)), 2.4px);
+    --hall-extra: calc(100cqw - var(--hall-world-width) * var(--hall-unit));
+    --hall-left: calc(max(0px, var(--hall-extra)) / 2 + clamp(min(0px, var(--hall-extra)), 42cqw - 224 * var(--hall-unit), 0px));
+    --hall-top: calc(var(--hall-head) + (var(--hall-available) - var(--hall-world-height) * var(--hall-unit)) / 2);
+  }
+  @media (max-width: 1024px) { #stage-walk { --hall-world-height: 424; } }
+  @media (max-width: 560px) { #stage-walk { --hall-head: 82px; } }
+  @media (max-height: 519px) { #stage-walk { --hall-head: 46px; --hall-foot: 48px; } }
+  @media (max-height: 519px) and (max-width: 560px) { #stage-walk { --hall-head: 76px; } }
+  @media (orientation: landscape) { #stage-walk { --hall-world-width: var(--landscape-width); --hall-world-height: 300; } }
+  @media (orientation: landscape) and (max-height: 499px) {
+    #stage-walk { --hall-head: 0px; --hall-foot: 0px; --hall-available: 100cqh; --hall-unit: clamp(.25px, calc(100cqh / 300), 2.4px); }
+  }
+  .hall-opening-scene {
+    position: absolute; inset: 0; overflow: hidden; pointer-events: none;
+    background: linear-gradient(to bottom, var(--pink-soft) 0 48%, var(--green-soft) 52% 100%);
+    --x: var(--wide-x); --y: var(--wide-y); --w: var(--wide-width); --h: var(--wide-height);
+  }
+  .hall-opening-scene picture { position: absolute; inset: 0; overflow: hidden; }
+  /* The truss stays attached to the ceiling while the camera centers the stalls. */
+  .hall-opening-scene .opening-ceiling { height: calc(21 * var(--hall-unit)); }
+  .hall-opening-scene .opening-ceiling img { top: 0; }
+  .hall-opening-scene img {
+    display: block; position: absolute; max-width: none;
+    left: calc(var(--hall-left) + var(--x) * var(--hall-unit)); top: calc(var(--hall-top) + var(--y) * var(--hall-unit));
+    width: calc(var(--w) * var(--hall-unit)); height: calc(var(--h) * var(--hall-unit));
+  }
+  @media (orientation: landscape) and (min-width: 1800px) {
+    .hall-opening-scene { --x: var(--large-x); --y: var(--large-y); --w: var(--large-width); --h: var(--large-height); }
+  }
+  @media (orientation: landscape) and (max-height: 499px) {
+    .hall-opening-scene .opening-ceiling { display: none; }
+    .hall-opening-scene { --x: var(--short-x); --y: var(--short-y); --w: var(--short-width); --h: var(--short-height); }
+  }
+  @media (orientation: portrait) {
+    .hall-opening-scene { --x: var(--phone-x); --y: var(--phone-y); --w: var(--phone-width); --h: var(--phone-height); }
+  }
+  @media (orientation: portrait) and (min-width: 561px) {
+    .hall-opening-scene { --x: var(--tablet-x); --y: var(--tablet-y); --w: var(--tablet-width); --h: var(--tablet-height); }
+  }
+  @media (orientation: portrait) and (min-width: 1025px) {
+    .hall-opening-scene { --x: var(--tall-x); --y: var(--tall-y); --w: var(--tall-width); --h: var(--tall-height); }
+  }
+</style>
