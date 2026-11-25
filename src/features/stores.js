@@ -2,6 +2,7 @@ import { readStores } from '../lib/oshen-store-data';
 import { storeCategoryPath, storeCity, storeMapCenterParam, storeMapId, storePath } from '../lib/oshen-store-links.mjs';
 import { storeCategoryIcon } from './store-marker-icons.js';
 import { createStoreShare } from './store-share.js';
+import { createStoreCategoryNavigation, storeCategoryFromPath } from './store-category-navigation.js';
 
 const STORE_FEED = '/data/stores.json';
 const PAGE_SIZE = 12;
@@ -549,7 +550,10 @@ async function createStoreMap(container, message, mapButtons, sheet, mobile, onS
       });
       return true;
     },
-    refresh(stores, category, focusId) {
+    refresh(stores, category, focusId, preserveView = false) {
+      const previousView = preserveView && !focusId && Number.isFinite(map.getZoom())
+        ? { center: map.getCenter(), zoom: map.getZoom() }
+        : null;
       map.invalidateSize({ pan: false });
       map.removeLayer(markers);
       markers.clearLayers();
@@ -582,17 +586,20 @@ async function createStoreMap(container, message, mapButtons, sheet, mobile, onS
         pins.push(marker);
       }
       if (center) map.setView(center, 16, { animate: false });
-      else {
+      else if (!previousView) {
         const bounds = pins.length ? L.latLngBounds(pins.map(pin => pin.getLatLng())) : TAIWAN_BOUNDS;
         map.fitBounds(bounds, { animate: false, padding: [28, 28], maxZoom: 15 });
       }
       markers.addLayers(pins);
       markers.addTo(map);
+      if (previousView) map.setView(previousView.center, previousView.zoom, { animate: false });
     },
   };
 }
 
 export async function mountStores(root, workPreviews = [], initialCategory = '') {
+  const navigateCategoryPage = createStoreCategoryNavigation(root);
+  let activeCategory = initialCategory;
   const mobile = window.matchMedia('(max-width: 560px)');
   const openShare = createStoreShare(document.getElementById('store-share-dialog'));
   const openPhotos = createStorePhotoViewer(document.getElementById('store-photo-viewer'));
@@ -714,6 +721,7 @@ export async function mountStores(root, workPreviews = [], initialCategory = '')
   let mapTask = null;
   let showingMap = true;
   let mapNeedsRefresh = true;
+  let preserveMapViewOnRefresh = false;
   let locating = false;
   let firstMobileStoreSelected = false;
 
@@ -734,8 +742,9 @@ export async function mountStores(root, workPreviews = [], initialCategory = '')
   function updateMap() {
     if (!map || !showingMap || !mapElement.offsetWidth) return;
     if (mapNeedsRefresh) {
-      map.refresh(matches, category.value, pendingStoreId);
+      map.refresh(matches, category.value, pendingStoreId, preserveMapViewOnRefresh);
       mapNeedsRefresh = false;
+      preserveMapViewOnRefresh = false;
     } else {
       map.resize();
     }
@@ -863,7 +872,7 @@ export async function mountStores(root, workPreviews = [], initialCategory = '')
     showMore();
   }
 
-  function filterStores() {
+  function filterStores({ preserveMapView = false } = {}) {
     storeSheet.close();
     const activeFilters = Number(Boolean(city.value)) + Number(Boolean(category.value));
     filterToggle.textContent = activeFilters ? `篩選（${activeFilters}）` : '篩選';
@@ -876,7 +885,23 @@ export async function mountStores(root, workPreviews = [], initialCategory = '')
     feedback.textContent = matches.length ? '' : '找不到符合條件的店家。試試其他店名、地址或篩選條件。';
     renderList();
     mapNeedsRefresh = true;
+    preserveMapViewOnRefresh = preserveMapView;
     updateMap();
+  }
+
+  async function changeCategory(nextCategory, { history = true } = {}) {
+    try {
+      if (!await navigateCategoryPage(nextCategory, { history })) return;
+      activeCategory = category.value = nextCategory;
+      pendingStoreId = null;
+      filterStores({ preserveMapView: true });
+    } catch {
+      category.value = activeCategory;
+      if (!history) {
+        window.history.replaceState(window.history.state, '', activeCategory ? storeCategoryPath(activeCategory) : '/stores/');
+      }
+      feedback.textContent = '目前無法載入這個分類。請稍後重試。';
+    }
   }
 
   async function loadStores() {
@@ -897,7 +922,7 @@ export async function mountStores(root, workPreviews = [], initialCategory = '')
       });
       setOptions(city, '全部縣市', stores.map(shop => shop.city));
       setOptions(category, '全部店別', stores.map(shop => shop.category));
-      if (initialCategory) category.value = initialCategory;
+      category.value = activeCategory;
       search.disabled = city.disabled = category.disabled = listMode.disabled = mapMode.disabled = false;
       filterToggle.disabled = false;
       filterStores();
@@ -920,7 +945,23 @@ export async function mountStores(root, workPreviews = [], initialCategory = '')
   search.addEventListener('input', filterStores);
   city.addEventListener('change', filterStores);
   category.addEventListener('change', () => {
-    location.assign(category.value ? storeCategoryPath(category.value) : '/stores/');
+    void changeCategory(category.value);
+  });
+  root.closest('.stores-directory').addEventListener('click', event => {
+    const link = event.target.closest?.('a');
+    if (!link || !link.matches('.store-category-directory a, .directory-header > .back-link') ||
+        event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey ||
+        link.hasAttribute('download') || (link.target && link.target !== '_self')) return;
+    const url = new URL(link.href);
+    const nextCategory = storeCategoryFromPath(url.pathname);
+    if (url.origin !== location.origin || nextCategory === null) return;
+    event.preventDefault();
+    category.value = nextCategory;
+    void changeCategory(nextCategory);
+  });
+  window.addEventListener('popstate', () => {
+    const restoredCategory = storeCategoryFromPath(location.pathname);
+    if (restoredCategory !== null) void changeCategory(restoredCategory, { history: false });
   });
   mobile.addEventListener('change', () => {
     storeSheet.close();
