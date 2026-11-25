@@ -5580,6 +5580,37 @@
       "giftStatus": "可能有小物",
       "verification": false,
       "disabled": false
+    },
+    {
+      "id": "sweetchen-tw",
+      "name": "Sweet Chen",
+      "address": "新北市板橋區大明街25巷2弄26號",
+      "addressSource": "https://www.sweetchen.com.tw/pages/%E5%BA%97%E9%9D%A2%E8%B3%87%E8%A8%8A",
+      "category": "甜點飲料",
+      "latlng": {
+        "lat": 25.002731109952,
+        "lng": 121.45737120452
+      },
+      "coordinateSource": "https://raw.githubusercontent.com/zhengda/taiwan-address-data/master/roads/65-%E5%A4%A7%E6%98%8E%E8%A1%97.csv",
+      "coordinateNote": "OpenStreetMap 未取得可核對的門牌結果。採用標示源自 TGOS 的公開門牌資料，CSV 明列新北市板橋區華貴里14鄰大明街25巷2弄26號所對應的 X（經度）與 Y（緯度）；與官網自取地址相符，為門牌定位點，非入口實測點。",
+      "visitNote": "供應手工蛋糕、棉花糖布朗尼及甜點禮盒，提供到店自取。電話：02-8953-5978；LINE：@sweetchen。",
+      "social": {
+        "facebook": "https://www.facebook.com/sweetchen.taiwan/",
+        "instagram": "https://www.instagram.com/sweetchen.tw/",
+        "threads": "https://www.threads.com/@sweetchen.tw",
+        "website": "https://www.sweetchen.com.tw/"
+      },
+      "shopPhoto": {
+        "url": "./media/library/sweetchen-tw/logo.webp?v=f7727c09df484552",
+        "source": "https://www.threads.com/@sweetchen.tw",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-26",
+        "note": "官方帳號 sweetchen.tw 的 hd_profile_pic_versions"
+      },
+      "giftStatus": "可能有小物",
+      "verification": false,
+      "disabled": false
     }
   ]
 }
