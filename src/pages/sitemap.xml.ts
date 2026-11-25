@@ -1,5 +1,5 @@
 import type { APIRoute } from 'astro';
-import { stores, storePath } from '../lib/oshen-stores';
+import { stores, storePath, categories, storeCategoryPath } from '../lib/oshen-stores';
 import { designers, designerPath, designerWorks } from '../lib/oshen-designers';
 import { catalogue, hallPath, stagePath } from '../lib/oshen-stage';
 import { designers as yilanDesigners, designerPath as yilanDesignerPath } from '../lib/yilan-market';
@@ -11,6 +11,7 @@ const paths = [
   '/',
   '/privacy/',
   '/stores/',
+  ...categories.map(storeCategoryPath),
   ...stores.map(({ id }) => storePath(id)),
   '/designers/',
   ...hallPages.map(hall => hall.path),

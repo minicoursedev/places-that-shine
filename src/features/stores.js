@@ -592,7 +592,7 @@ async function createStoreMap(container, message, mapButtons, sheet, mobile, onS
   };
 }
 
-export async function mountStores(root, workPreviews = []) {
+export async function mountStores(root, workPreviews = [], initialCategory = '') {
   const mobile = window.matchMedia('(max-width: 560px)');
   const openShare = createStoreShare(document.getElementById('store-share-dialog'));
   const openPhotos = createStorePhotoViewer(document.getElementById('store-photo-viewer'));
@@ -897,6 +897,7 @@ export async function mountStores(root, workPreviews = []) {
       });
       setOptions(city, '全部縣市', stores.map(shop => shop.city));
       setOptions(category, '全部店別', stores.map(shop => shop.category));
+      if (initialCategory) category.value = initialCategory;
       search.disabled = city.disabled = category.disabled = listMode.disabled = mapMode.disabled = false;
       filterToggle.disabled = false;
       filterStores();

@@ -1,0 +1,102 @@
+---
+import StoreShareDialog from './StoreShareDialog.astro';
+import { storeWorkPreviews } from '../lib/oshen-store-work-previews';
+import { stores, categories, storeCategoryPath, storeCity, storePath } from '../lib/oshen-stores';
+import '../styles/stores.css';
+import '../styles/store-work-preview.css';
+
+interface Props { category?: string }
+const { category } = Astro.props;
+const title = category || '發光的店家';
+const compareText = new Intl.Collator('zh-Hant-TW').compare;
+const categoryStores = stores.filter(store => !category || store.category === category)
+  .sort((a, b) => compareText(a.name, b.name));
+const byCity = new Map<string, (typeof stores)[number][]>();
+for (const store of categoryStores) {
+  const city = storeCity(store.address) || '其他地區';
+  if (!byCity.has(city)) byCity.set(city, []);
+  byCity.get(city)!.push(store);
+}
+const storesByCity = [...byCity].sort(([a], [b]) => compareText(a, b));
+---
+
+  <section class="stores-directory directory page-width" aria-labelledby="stores-title">
+    <div class="directory-header">
+      <a class="back-link" href={category ? "/stores/" : "/#explore"}><span aria-hidden="true">←</span> {category ? "回店家地圖" : "回探索首頁"}</a>
+      <h1 id="stores-title">{title}</h1>
+      <a class="store-action" href="/stores/report/">推薦店家</a>
+    </div>
+    <div id="stores-content" aria-label="店家目錄" data-category={category} data-work-previews={JSON.stringify(storeWorkPreviews)}><p role="status">正在載入店家資料…</p></div>
+    <StoreShareDialog />
+    <dialog id="store-photo-viewer" class="store-photo-viewer" aria-label="全螢幕店家照片">
+      <div class="store-photo-track" aria-label="店家照片"></div>
+      <button class="store-photo-control store-photo-close" type="button" aria-label="關閉照片" autofocus>×</button>
+      <button class="store-photo-control store-photo-previous" type="button" aria-label="上一張照片" data-photo-previous>‹</button>
+      <button class="store-photo-control store-photo-next" type="button" aria-label="下一張照片" data-photo-next>›</button>
+    </dialog>
+    {!category && <noscript>
+      <p>搜尋、篩選與地圖需要 JavaScript。</p>
+      <nav aria-label="店家目錄" class="stores-by-city-groups">
+        {storesByCity.map(([city, cityStores]) => (
+          <section>
+            <h2>{city}</h2>
+            <ul>
+              {cityStores.sort((a, b) => compareText(a.name, b.name)).map(store => (
+                <li><a href={storePath(store.id)}>{store.name}</a></li>
+              ))}
+            </ul>
+          </section>
+        ))}
+      </nav>
+    </noscript>}
+    {category && (
+      <details class="store-static-directory">
+        <summary>{category}清單（{categoryStores.length} 家）</summary>
+        <ul class="store-results" aria-label={`${category}清單`}>
+          {categoryStores.map(store => (
+            <li class="store-card" data-shop-id={store.id}>
+              <h2 class="store-name"><a href={storePath(store.id)}>{store.name}</a></h2>
+              <p class="store-address">{store.address}</p>
+            </li>
+          ))}
+        </ul>
+      </details>
+    )}
+    <details class="store-category-directory">
+      <summary>依店別瀏覽</summary>
+      <nav aria-label="店家分類">
+        {categories.map(value => <a href={storeCategoryPath(value)} aria-current={value === category ? 'page' : undefined}>{value}</a>)}
+      </nav>
+    </details>
+  </section>
+
+<script>
+  import { mountStores } from '../features/stores.js';
+
+  const directory = document.querySelector<HTMLElement>('#stores-content');
+  if (directory) void mountStores(directory, JSON.parse(directory.dataset.workPreviews || '[]'), directory.dataset.category || '');
+</script>
+
+<style>
+  .stores-by-city-groups {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr));
+    align-items: start;
+    gap: 1rem 1.75rem;
+    padding-bottom: 1rem;
+  }
+  .stores-by-city-groups h2 { margin: .4rem 0; font-size: 1rem; }
+  .stores-by-city-groups ul { margin: 0; padding: 0; list-style: none; }
+  .stores-by-city-groups a { display: inline-block; padding-block: .25rem; }
+  .stores-by-city-groups a, :global(.store-name a) { text-underline-offset: .2em; }
+  :global(.store-name a) { text-decoration-color: var(--line); }
+  .stores-by-city-groups a:hover, :global(.store-name a:hover) {
+    color: var(--accent);
+    text-decoration-color: currentColor;
+  }
+  .store-static-directory, .store-category-directory { margin-top: 1.25rem; font-size: .875rem; }
+  .store-static-directory summary, .store-category-directory summary { min-height: 44px; align-content: center; cursor: pointer; color: var(--accent); }
+  .store-category-directory nav { display: flex; flex-wrap: wrap; gap: .25rem 1rem; }
+  .store-category-directory nav a { display: inline-flex; min-height: 44px; align-items: center; text-underline-offset: .2em; }
+  .store-category-directory nav a[aria-current="page"] { font-weight: 700; color: var(--accent); }
+</style>

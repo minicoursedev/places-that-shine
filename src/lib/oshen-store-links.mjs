@@ -4,6 +4,10 @@ const MAP_HASH_PREFIX = '#map/';
 export const STORE_ID = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 export const storeMapCenterParam = 'center';
 
+export function storeCategoryPath(category) {
+  return `/stores/categories/${encodeURIComponent(category)}/`;
+}
+
 export function storePath(id) {
   return `/stores/${id}/`;
 }

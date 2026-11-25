@@ -6,7 +6,7 @@ import StoreShareDialog from '../../../components/StoreShareDialog.astro';
 import SiteLayout from '../../../layouts/SiteLayout.astro';
 import { storeMapPath } from '../../../lib/oshen-store-links.mjs';
 import { storeWorkPreviews } from '../../../lib/oshen-store-work-previews';
-import { stores, storePath } from '../../../lib/oshen-stores';
+import { stores, storePath, storeCategoryPath } from '../../../lib/oshen-stores';
 import { serializeStructuredData } from '../../../../public/designers/js/profile-seo.js';
 import '../../../styles/store-work-preview.css';
 
@@ -162,7 +162,7 @@ const structuredData = {
     </nav>
 
     <header class="store-overview">
-      <p class="store-category">{type}</p>
+      <p class="store-category"><a href={storeCategoryPath(category)}>{type}</a></p>
       <div class="store-heading">
         <h1 id="shop-name">{name}</h1>
         {logo && <img class="store-logo" src={logo.src} width="144" height="144" alt={`${name}的頭像`} decoding="async" />}
