@@ -1,5 +1,7 @@
 import type { APIRoute } from 'astro';
 import { createCanvas, GlobalFonts, loadImage, type SKRSContext2D } from '@napi-rs/canvas';
+import { existsSync } from 'node:fs';
+import { readFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import { stores } from '../../../../lib/oshen-stores';
 import { storeEvents } from '../../../../lib/store-events.js';
@@ -41,7 +43,11 @@ function drawTitle(ctx: SKRSContext2D, title: string) {
   lines.forEach((line, i) => ctx.fillText(line, inset, first + i * spacing));
 }
 
-export const GET: APIRoute = async ({ props }) => {
+export const GET: APIRoute = async ({ params, props }) => {
+  const headers = { 'Content-Type': 'image/png' };
+  const poster = resolve('src/assets/store-events', `${params.id}.png`);
+  if (existsSync(poster)) return new Response(new Uint8Array(await readFile(poster)), { headers });
+
   const canvas = createCanvas(width, height);
   const ctx = canvas.getContext('2d');
   const photo = await loadImage(resolve('public/media/tainan-evening.webp'));
@@ -63,5 +69,5 @@ export const GET: APIRoute = async ({ props }) => {
   ctx.fillStyle = '#fff8e8';
   ctx.fillText(`${props.count} 間參與店家`, inset, 514);
 
-  return new Response(new Uint8Array(await canvas.encode('png')), { headers: { 'Content-Type': 'image/png' } });
+  return new Response(new Uint8Array(await canvas.encode('png')), { headers });
 };
