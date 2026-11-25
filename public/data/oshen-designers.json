@@ -8252,7 +8252,7 @@
         }
       ],
       "hall": "O",
-      "additionalHalls": [
+      "legacyShareHalls": [
         "A"
       ]
     },
