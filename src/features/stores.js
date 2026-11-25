@@ -499,6 +499,7 @@ async function createStoreMap(container, message, mapButtons, sheet, mobile, onS
   const markers = L.markerClusterGroup({
     maxClusterRadius: 45,
     disableClusteringAtZoom: event?.disableClusteringAtZoom ?? (connections ? 17 : null),
+    removeOutsideVisibleBounds: event?.disableClusteringAtZoom !== 0,
     showCoverageOnHover: false,
     spiderfyDistanceMultiplier: 1.8,
     iconCreateFunction(cluster) {
