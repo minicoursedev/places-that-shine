@@ -9,11 +9,12 @@ interface Props {
   errorPage?: boolean;
   analytics?: boolean;
   fontText?: string;
+  appendSiteName?: boolean;
 }
 
-const { title, description, active, errorPage, analytics = true, fontText } = Astro.props;
+const { title, description, active, errorPage, analytics = true, fontText, appendSiteName = true } = Astro.props;
 const siteName = '發光的地方';
-const pageTitle = title === siteName ? title : `${title}｜${siteName}`;
+const pageTitle = appendSiteName && title !== siteName ? `${title}｜${siteName}` : title;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const routes = [
   { id: 'stores', href: '/stores/', label: '店家' },
