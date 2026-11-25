@@ -5333,6 +5333,40 @@
         "threads": "https://www.threads.com/@bar.san.tainan"
       },
       "verification": false
+    },
+    {
+      "id": "thng-tik-tsiong-house",
+      "name": "湯德章故居",
+      "address": "臺南市中西區友愛街115巷11號",
+      "addressSource": "https://thng-tik-tsiong.com/visit/",
+      "category": "其它",
+      "latlng": {
+        "lat": 22.9906811,
+        "lng": 120.1994556
+      },
+      "coordinateSource": "https://data.tainan.gov.tw/Resource/af44f904-2f4c-49b2-aaf8-1a64dce09bd4",
+      "coordinateNote": "臺南市政府民政局 114 年門牌參考坐標，依友愛街115巷11號定位。",
+      "social": {
+        "threads": "https://www.threads.com/@thng_tik_tsiong"
+      },
+      "verification": false
+    },
+    {
+      "id": "xiadadao-lianghuang-temple",
+      "name": "下大道良皇宮",
+      "address": "700臺南市中西區南美里府前路一段340號",
+      "addressSource": "https://deh.csie.ncku.edu.tw/poi_detail/35750",
+      "category": "其它",
+      "latlng": {
+        "lat": 22.9904520,
+        "lng": 120.1982897
+      },
+      "coordinateSource": "https://data.tainan.gov.tw/Resource/af44f904-2f4c-49b2-aaf8-1a64dce09bd4",
+      "coordinateNote": "臺南市政府民政局 114 年門牌參考坐標，依府前路一段340號定位。",
+      "social": {
+        "facebook": "https://www.facebook.com/profile.php?id=100069614583268"
+      },
+      "verification": false
     }
   ]
 }

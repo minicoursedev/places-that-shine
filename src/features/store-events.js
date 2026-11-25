@@ -48,7 +48,7 @@ export function createStoreEventFilter(nav, pageEventId, onChange) {
       }
       if (selected) links.append(eventLink('回全部店家', '/stores/'));
       if (selectionChanged) {
-        groupSelect.closest('label').hidden = !selected;
+        groupSelect.closest('label').hidden = !selected || selected.groups.length < 2;
         groupSelect.replaceChildren(new Option('全部分組', ''));
         for (const group of selected?.groups || []) groupSelect.add(new Option(group.name, group.name));
       }
