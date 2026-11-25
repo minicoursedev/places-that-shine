@@ -1,0 +1,194 @@
+---
+import { stageOpeningFrame, stageOpeningViews, stageSceneFor } from '../lib/stage-opening';
+import {
+  stageVideoLinks, stageWorldWidth, STAGE_AUTHOR, STAGE_EXIT_WIDTH, STAGE_SCREEN, STAGE_TITLE, STAGE_WIDTH,
+} from '../../public/puma_oshen_wave/stage/walk-labels.js';
+
+interface Props { scene: ReturnType<typeof stageSceneFor> }
+const { scene } = Astro.props;
+const frames = await Promise.all(stageOpeningViews.map(async view => ({
+  ...view, ...await stageOpeningFrame(scene.aisle.hall, view),
+})));
+const sources = [...frames].reverse();
+const properties = [
+  ['world-width', stageWorldWidth(scene.aisle)],
+  ['screen-y', STAGE_SCREEN.y], ['screen-width', STAGE_SCREEN.width], ['screen-height', STAGE_SCREEN.height],
+  ['title-y', STAGE_TITLE.y], ['title-width', STAGE_TITLE.width], ['title-height', STAGE_TITLE.height],
+  ['author-y', STAGE_AUTHOR.y], ['author-width', STAGE_AUTHOR.width], ['author-height', STAGE_AUTHOR.height],
+  ...frames.flatMap(frame => Object.entries(frame.bounds).map(([key, value]) => [frame.key + '-' + key, value])),
+].map(([key, value]) => `--stage-${key}:${value}`).join(';');
+---
+<div class="stage-opening" style={properties}>
+  <div id="stage-nameplates">
+    {scene.videos.map((video, index) => {
+      const links = stageVideoLinks(video);
+      const x = STAGE_EXIT_WIDTH + (index + 0.5) * STAGE_WIDTH;
+      return (
+        <div data-booth={video.boothId} data-stage-id={video.id} class:list={[{ 'is-near': index === 0 }]} style={`--scene-booth-x:${x}`}>
+          {video.video.poster && (
+            <a class="stage-scene-poster" href={links.video} aria-label={video.title} tabindex="-1"
+              style={`--stage-poster:url(${JSON.stringify(video.video.poster)})`}></a>
+          )}
+          <a class="stage-scene-title" href={links.video}>{video.title}</a>
+          {video.creator && <a class="stage-scene-author" href={links.author}>{video.creator}</a>}
+        </div>
+      );
+    })}
+  </div>
+  <div class="stage-opening-art" aria-hidden="true">
+    {[false, true].map(ceiling => (
+      <picture class:list={[{ 'stage-opening-ceiling': ceiling }]}>
+        {sources.map(frame => <source media={frame.media} srcset={frame.url} />)}
+        <img src={frames[0].url} alt="" fetchpriority="high" />
+      </picture>
+    ))}
+  </div>
+</div>
+
+<style is:global>
+  #stage-walk:has(.stage-opening) { container-type: size; }
+  #stage-walk[data-stage-opening] #walk-canvas { visibility: hidden; }
+  #stage-walk:not([data-stage-opening]) .stage-opening-art { display: none; }
+  .stage-opening {
+    position: absolute; inset: 0;
+    pointer-events: none; background: var(--paper-2);
+    --stage-world-height: 500;
+    --stage-head: 58px;
+    --stage-foot: 54px;
+    --stage-min-scale: .42px;
+    --stage-available: max(140px, calc(100cqh - var(--stage-head) - var(--stage-foot)));
+    --stage-scale: clamp(var(--stage-min-scale), calc(var(--stage-available) / var(--stage-world-height)), 2.4px);
+    --stage-extra: calc(100cqw - var(--stage-world-width) * var(--stage-scale));
+    --stage-left: calc(max(0px, var(--stage-extra)) / 2 + clamp(min(0px, var(--stage-extra)), 42cqw - 224 * var(--stage-scale), 0px));
+    --stage-top: calc(var(--stage-head) + (var(--stage-available) - var(--stage-world-height) * var(--stage-scale)) / 2);
+    --art-x: var(--stage-desktop-x); --art-y: var(--stage-desktop-y);
+    --art-width: var(--stage-desktop-width); --art-height: var(--stage-desktop-height);
+  }
+  @media (min-width: 1800px) {
+    .stage-opening {
+      --art-x: var(--stage-wide-x); --art-y: var(--stage-wide-y);
+      --art-width: var(--stage-wide-width); --art-height: var(--stage-wide-height);
+    }
+  }
+  @media (max-width: 1024px) {
+    .stage-opening {
+      --stage-world-height: 424;
+      --art-x: var(--stage-tablet-x); --art-y: var(--stage-tablet-y);
+      --art-width: var(--stage-tablet-width); --art-height: var(--stage-tablet-height);
+    }
+  }
+  @media (max-width: 560px) {
+    .stage-opening {
+      --stage-head: 82px; --stage-foot: 136px;
+      --art-x: var(--stage-phone-x); --art-y: var(--stage-phone-y);
+      --art-width: var(--stage-phone-width); --art-height: var(--stage-phone-height);
+    }
+  }
+  @container (max-height: 519px) {
+    .stage-opening { --stage-head: 46px; --stage-foot: 48px; }
+  }
+  @container (max-width: 560px) and (max-height: 519px) {
+    .stage-opening { --stage-head: 76px; --stage-foot: 136px; }
+  }
+  @media (orientation: landscape) and (max-width: 1024px) and (max-height: 532px) {
+    .stage-opening {
+      --art-x: var(--stage-short-x); --art-y: var(--stage-short-y);
+      --art-width: var(--stage-short-width); --art-height: var(--stage-short-height);
+    }
+  }
+  @container (orientation: landscape) and (max-height: 499px) {
+    .stage-opening { --stage-head: 0px; --stage-foot: 0px; --stage-available: 100cqh; --stage-min-scale: .25px; }
+  }
+  .stage-opening-art,
+  .stage-opening-art picture { position: absolute; inset: 0; overflow: hidden; }
+  .stage-opening-art img {
+    position: absolute; display: block; max-width: none;
+    left: calc(var(--stage-left) + var(--art-x) * var(--stage-scale));
+    top: calc(var(--stage-top) + var(--art-y) * var(--stage-scale));
+    width: calc(var(--art-width) * var(--stage-scale));
+    height: calc(var(--art-height) * var(--stage-scale));
+  }
+  .stage-opening-art .stage-opening-ceiling { height: calc(21 * var(--stage-scale)); }
+  .stage-opening-art .stage-opening-ceiling img { top: 0; }
+  #stage-nameplates {
+    position: absolute;
+    left: var(--live-scene-left, var(--stage-left));
+    top: var(--live-scene-top, var(--stage-top));
+    --scene-scale: var(--live-scene-scale, var(--stage-scale));
+  }
+  #stage-nameplates [data-booth] {
+    position: absolute; top: 0; left: calc(var(--scene-booth-x) * var(--scene-scale));
+  }
+  #stage-nameplates a {
+    position: absolute; display: block; color: var(--ink);
+    left: 0; transform: translate(-50%, -50%);
+    width: calc(var(--label-width) * var(--scene-scale));
+    height: calc(var(--label-height) * var(--scene-scale));
+    text-align: center; text-decoration: none;
+  }
+  #stage-walk[data-stage-opening] #stage-nameplates a { pointer-events: auto; }
+  #stage-nameplates .stage-scene-title, #stage-nameplates .stage-scene-author {
+    top: calc(var(--label-y) * var(--scene-scale));
+    font-family: var(--font);
+    font-size: calc(var(--label-font-size) * var(--scene-scale));
+    line-height: calc(var(--label-height) * var(--scene-scale));
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    word-break: break-all;
+  }
+  #stage-nameplates a:focus-visible {
+    outline: 2px solid var(--pink); outline-offset: -2px;
+  }
+  #stage-nameplates .stage-scene-title {
+    --label-width: var(--stage-title-width); --label-height: var(--stage-title-height);
+    --label-y: var(--stage-title-y); --label-font-size: 12.65;
+    font-weight: 700;
+  }
+  #stage-nameplates .stage-scene-author {
+    --label-width: var(--stage-author-width); --label-height: var(--stage-author-height);
+    --label-y: var(--stage-author-y); --label-font-size: 13.225;
+    font-weight: 600;
+    text-decoration: underline; text-underline-offset: 1px;
+  }
+  #stage-nameplates .stage-scene-title { background: var(--paper-2); }
+  #stage-nameplates .stage-scene-author { background: var(--paper); }
+  #stage-nameplates .is-near .stage-scene-author { background: var(--pink-soft); }
+  #stage-nameplates .stage-scene-poster {
+    --label-width: var(--stage-screen-width); --label-height: var(--stage-screen-height);
+    top: calc(var(--stage-screen-y) * var(--scene-scale));
+    transform: translateX(-50%); overflow: hidden;
+    background-color: var(--paper);
+    background-image:
+      var(--stage-poster),
+      radial-gradient(circle at 42% 40%, var(--paper) 0 9.5%, var(--ink) 10%, transparent 10.9%),
+      radial-gradient(circle, var(--green) 15%, transparent 21%);
+    background-position: center, center, 0 0;
+    background-size: contain, 100% 100%, calc(4 * var(--scene-scale)) calc(4 * var(--scene-scale));
+    background-repeat: no-repeat, no-repeat, repeat;
+  }
+  #stage-walk[data-stage-opening] .stage-scene-poster::before,
+  #stage-walk[data-stage-opening] .stage-scene-poster::after {
+    content: ""; position: absolute; z-index: 1; top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  #stage-walk[data-stage-opening] .stage-scene-poster::before {
+    width: calc(32 * var(--scene-scale)); height: calc(32 * var(--scene-scale));
+    background: #000a; border-radius: 50%;
+  }
+  #stage-walk[data-stage-opening] .stage-scene-poster::after {
+    width: calc(12 * var(--scene-scale)); height: calc(14 * var(--scene-scale));
+    left: calc(50% + 2 * var(--scene-scale));
+    background: var(--paper); clip-path: polygon(0 0, 100% 50%, 0 100%);
+  }
+  @supports (transform: scale(calc(1px / 1px))) {
+    #stage-nameplates .stage-scene-title, #stage-nameplates .stage-scene-author {
+      width: calc(var(--label-width) * 1px); height: calc(var(--label-height) * 1px);
+      font-size: calc(var(--label-font-size) * 1px); line-height: calc(var(--label-height) * 1px);
+      transform: scale(calc(var(--scene-scale) / 1px)) translate(-50%, -50%);
+      transform-origin: top left;
+    }
+  }
+</style>

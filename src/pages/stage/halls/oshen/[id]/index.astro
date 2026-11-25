@@ -1,0 +1,11 @@
+---
+import Layout from '../../../../../layouts/OshenStageLayout.astro';
+import { catalogue } from '../../../../../lib/oshen-stage';
+import { publicHallId } from '../../../../../../public/puma_oshen_wave/stage/routes.js';
+
+export function getStaticPaths() {
+  return catalogue.halls.filter(hall => hall.id !== publicHallId)
+    .map(hall => ({ params: { id: hall.id }, props: { hallId: hall.id } }));
+}
+---
+<Layout hallId={Astro.props.hallId} />

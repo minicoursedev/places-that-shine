@@ -1,22 +1,33 @@
 ---
 import SiteLayout from '../../layouts/SiteLayout.astro';
-import '../../styles/stage.css';
+import { oshenStagePath } from '../../../public/puma_oshen_wave/stage/routes.js';
+
+const description = '選擇舞台分館，走進現場看演出。';
 ---
 
-<SiteLayout title="發光的舞台" description="找一首歌，看一場演出。" active="stage">
+<SiteLayout title="發光的舞台" description={description} active="stage">
   <section class="directory page-width" aria-labelledby="stage-title">
     <div class="directory-header">
       <a class="back-link" href="/#explore"><span aria-hidden="true">←</span> 回探索首頁</a>
       <h1 id="stage-title">發光的舞台</h1>
     </div>
-    <div id="stage-content" aria-label="舞台影片目錄"><p role="status">正在載入舞台資料…</p></div>
-    <noscript><p>請開啟 JavaScript 以在本站瀏覽目錄。</p></noscript>
+    <nav class="stage-halls" aria-label="舞台分館">
+      <a class="entry" href={oshenStagePath}>
+        <span class="entry-info">
+          <span class="hall-label">
+            <img src="/media/oshen-2026-logo.webp" width="256" height="181" alt="" />
+            <span>2026 洋流舞台</span>
+          </span>
+          <span class="entry-arrow" aria-hidden="true">→</span>
+        </span>
+      </a>
+    </nav>
   </section>
 </SiteLayout>
 
-<script>
-  import { mountStage } from '../../features/stage.js';
-
-  const gallery = document.querySelector<HTMLElement>('#stage-content');
-  if (gallery) void mountStage(gallery);
-</script>
+<style>
+  .stage-halls { display: grid; gap: .75rem; }
+  .stage-halls .entry-info { font: 800 1.3rem/1.35 var(--serif); }
+  .hall-label { display: flex; align-items: center; gap: .75rem; }
+  .hall-label img { display: block; flex: none; width: clamp(3.5rem, 17vw, 5.5rem); height: auto; border-radius: 3px; }
+</style>

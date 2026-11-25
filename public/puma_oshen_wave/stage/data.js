@@ -61,23 +61,24 @@ function hallAisles(hall, stages) {
   return aisles;
 }
 
-export function createPublicShowcase(catalogue, { random = Math.random, previousHalls = [] } = {}) {
+export function createPublicShowcase(catalogue, { random = Math.random, previousHalls = [], stageIds } = {}) {
   const hall = catalogue.halls.find(item => item.id === 'public-stage');
   if (!hall) throw new Error('找不到公共舞台');
   const groups = catalogue.halls.map(source => ({
     id: source.id, stages: catalogue.stages.filter(stage => stage.hallId === source.id),
   })).filter(group => group.stages.length);
   const count = Math.min(PER_AISLE, groups.length);
-  const fresh = groups.filter(group => !previousHalls.includes(group.id));
-  const pool = [...(fresh.length >= count ? fresh : groups)];
-  for (let i = pool.length - 1; i > 0; i--) {
-    const j = Math.floor(random() * (i + 1));
-    [pool[i], pool[j]] = [pool[j], pool[i]];
+  let selected = Array.isArray(stageIds) ? stageIds.map(id => catalogue.stages.find(stage => stage.id === id)) : [];
+  if (selected.length !== count || !selected.every(Boolean) || new Set(selected.map(stage => stage.hallId)).size !== count) {
+    const fresh = groups.filter(group => !previousHalls.includes(group.id));
+    const pool = [...(fresh.length >= count ? fresh : groups)];
+    for (let i = pool.length - 1; i > 0; i--) {
+      const j = Math.floor(random() * (i + 1));
+      [pool[i], pool[j]] = [pool[j], pool[i]];
+    }
+    selected = pool.slice(0, count).map(group => group.stages[Math.floor(random() * group.stages.length)]);
   }
-  const stages = pool.slice(0, count).map(group => ({
-    ...group.stages[Math.floor(random() * group.stages.length)],
-    sourceHallId: group.id, hallId: hall.id,
-  }));
+  const stages = selected.map(stage => ({ ...stage, sourceHallId: stage.hallId, hallId: hall.id }));
   return { stages, aisles: hallAisles(hall, stages) };
 }
 

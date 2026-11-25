@@ -1,8 +1,9 @@
-import { createWalkView } from '../designer/js/walk.js?v=20261101-landscape-row';
+import { createWalkView } from '../designer/js/walk.js?v=20261125-stage-openings';
 import { wireFloatingNav } from '../designer/js/floating-nav.js';
 import { toast } from '../designer/js/state.js';
-import { loadCatalogue, createPublicShowcase } from './data.js?v=20261030-site-data';
+import { loadCatalogue, createPublicShowcase } from './data.js?v=20261125-stage-halls';
 import { mountPlayer } from './player.js?v=20261031-player-type';
+import { oshenStagePath, publicHallId as PUBLIC_HALL, resolveStageRoute, stageHallPath, stagePageMetadata, stageVideoPath } from './routes.js?v=20261125-stage-halls';
 
 const $ = id => document.getElementById(id);
 const make = (tag, text, className) => {
@@ -12,7 +13,6 @@ const make = (tag, text, className) => {
   return el;
 };
 const KEY = 'pow-stage-visited';
-const PUBLIC_HALL = 'public-stage';
 const PUBLIC_KEY = 'pow-stage-public-halls';
 let visited = new Set();
 try {
@@ -26,7 +26,8 @@ try {
 } catch { /* Keep the last selection in memory when storage is unavailable. */ }
 let catalogue, walk, hallId, aisleIndex = 0, nearId = null, mode = 'walk';
 let publicShowcase = null;
-let current = null, returnHash = '#/walk';
+let current = null, returnPath = oshenStagePath;
+let openingStageIds;
 let destroyPlayer = null, continuousIndex = -1;
 const dialog = $('video-dialog');
 const creatorDialog = $('creator-dialog');
@@ -36,7 +37,8 @@ const hallStages = () => hallId === PUBLIC_HALL ? publicShowcase.stages : catalo
 const currentHall = () => catalogue.halls.find(hall => hall.id === hallId);
 
 function refreshPublicShowcase() {
-  publicShowcase = createPublicShowcase(catalogue, { previousHalls: previousPublicHalls });
+  publicShowcase = createPublicShowcase(catalogue, { previousHalls: previousPublicHalls, stageIds: openingStageIds });
+  openingStageIds = undefined;
   previousPublicHalls = publicShowcase.stages.map(stage => stage.sourceHallId);
   try { sessionStorage.setItem(PUBLIC_KEY, JSON.stringify(previousPublicHalls)); } catch { /* Storage is optional. */ }
   catalogue.aisles = catalogue.halls.flatMap(hall => hall.id === PUBLIC_HALL
@@ -46,19 +48,28 @@ function refreshPublicShowcase() {
   for (const stage of publicShowcase.stages) byBooth.set(stage.boothId, stage);
 }
 
-const stageRoot = '/puma_oshen_wave/stage/';
-const hallUrl = id => `${stageRoot}halls/${encodeURIComponent(id)}/`;
 function stageUrl(id) {
-  return new URL(`${stageRoot}videos/${encodeURIComponent(id)}/`, location.origin).href;
+  return new URL(stageVideoPath(id), location.origin).href;
 }
+
+function activeHallPath({ mode: view = mode, booth } = {}) {
+  const aisle = catalogue.aisles[aisleIndex];
+  const first = catalogue.aisles.find(entry => entry.hall === hallId);
+  return stageHallPath(hallId, { mode: view, aisle: aisle === first ? null : aisle?.code, booth });
+}
+
+function writeRoute(path, { replace = false, state = null } = {}) {
+  if (path === location.pathname + location.search + location.hash && !state) return;
+  if (replace) history.replaceState(state, '', path);
+  else history.pushState(state, '', path);
+}
+
 function updateMetadata(stage = null) {
-  const hall = currentHall();
-  const title = stage ? `${stage.title}｜${stage.creator}｜洋流舞台` : hall ? `${hall.name}｜洋流舞台` : '洋流舞台｜發光的地方';
-  const description = stage ? `${stage.creator}的《${stage.title}》。${stage.description || '在洋流舞台觀看影片與探索作者作品。'}` : hall ? `走進${hall.name}，在洋流舞台探索影片與作者作品。` : '走進洋流舞台，點一座舞台，看一部影片。';
-  const path = stage ? `${stageRoot}videos/${encodeURIComponent(stage.id)}/` : location.pathname === stageRoot ? stageRoot : hall ? hallUrl(hall.id) : stageRoot;
-  const canonical = new URL(path, 'https://minicourse.dev').href;
+  const { title, description, path } = stagePageMetadata({ stage, hall: currentHall() });
+  const canonicalLink = document.querySelector('link[rel="canonical"]');
+  const canonical = new URL(path, canonicalLink.href).href;
   document.title = title;
-  document.querySelector('link[rel="canonical"]').href = canonical;
+  canonicalLink.href = canonical;
   for (const [selector, value] of [['meta[name="description"]', description], ['meta[property="og:title"]', title], ['meta[property="og:description"]', description], ['meta[property="og:url"]', canonical]]) document.querySelector(selector).content = value;
 }
 
@@ -94,7 +105,7 @@ function setMode(next, navigate = true) {
   if (next === 'walk') walk?.resize();
   if (next === 'list') renderList();
   if (next === 'map') renderMap();
-  if (navigate) history.pushState(null, '', hallUrl(hallId) + (next === 'walk' ? `#/walk/${catalogue.aisles[aisleIndex].code}` : `#/${next}/${hallId}`));
+  if (navigate) writeRoute(activeHallPath());
   updateMetadata();
 }
 
@@ -107,14 +118,17 @@ function goToAisle(index, boothId = null, from = null) {
   aisleIndex = index;
   const aisle = catalogue.aisles[index];
   hallId = aisle.hall;
+  const selectedBooth = boothId && aisle.islands.some(island => island.booths.some(booth => booth.id === boothId))
+    ? boothId : null;
   setMode('walk', false);
   walk.setAisle(aisle, {
-    boothId, from,
+    boothId: selectedBooth, from,
     prev: catalogue.aisles[index - 1]?.hall === hallId ? catalogue.aisles[index - 1].code : null,
     next: catalogue.aisles[index + 1]?.hall === hallId ? catalogue.aisles[index + 1].code : null,
   });
   $('where-aisle').textContent = `${aisle.code} 走道`;
   updateHall();
+  return selectedBooth;
 }
 
 function selectHall(id) {
@@ -149,7 +163,7 @@ function closeVideo(restore = true) {
   stopPlayer();
   current = null;
   if (dialog.open) dialog.close();
-  if (restore && (location.hash.startsWith('#/stage/') || location.pathname.includes('/stage/videos/'))) history.replaceState(null, '', returnHash);
+  if (restore && resolveStageRoute(new URL(location.href)).videoId) writeRoute(returnPath, { replace: true });
   updateMetadata();
 }
 
@@ -171,7 +185,10 @@ function openCreator(stage) {
 function openStage(stage, navigate = true, continuous = false) {
   if (!stage) return;
   if (!continuous) continuousIndex = -1;
-  if (navigate && !current) returnHash = hallUrl(hallId) + (location.hash || '#/walk');
+  if (navigate && !current) {
+    const route = resolveStageRoute(new URL(location.href));
+    returnPath = activeHallPath({ booth: route.booth });
+  }
   stopPlayer();
   current = stage;
   $('video-title').textContent = stage.title;
@@ -206,8 +223,10 @@ function openStage(stage, navigate = true, continuous = false) {
   walk.refresh();
   updateStatus();
   if (navigate) {
-    if (continuous && continuousIndex > 0) history.replaceState(null, '', stageUrl(stage.id));
-    else history.pushState(null, '', stageUrl(stage.id));
+    writeRoute(stageVideoPath(stage.id), {
+      replace: continuous && continuousIndex > 0,
+      state: { stageReturnPath: returnPath },
+    });
   }
 }
 
@@ -254,7 +273,7 @@ function renderMap() {
         button.append(make('b', booth.id), make('span', stage.title));
         button.addEventListener('click', () => {
           goToAisle(index, booth.id);
-          history.pushState(null, '', `#/walk/${booth.id}`);
+          writeRoute(activeHallPath({ booth: booth.id }));
           $('walk-canvas').focus();
         });
         row.append(button);
@@ -267,42 +286,45 @@ function renderMap() {
   }));
 }
 
+function showHall({ hallId: targetHall = PUBLIC_HALL, mode: view = 'walk', aisle, booth, legacyPosition }) {
+  const code = booth?.split('-')[0] || aisle;
+  const target = catalogue.aisles.findIndex(entry => entry.code === code && (legacyPosition || entry.hall === targetHall));
+  const first = catalogue.aisles.findIndex(entry => entry.hall === targetHall);
+  const index = target >= 0 ? target : Math.max(0, first);
+  const selectedBooth = goToAisle(index, target >= 0 ? booth : null);
+  if (view !== 'walk') setMode(view, false);
+  return selectedBooth;
+}
+
 function route() {
-  let [next, target] = location.hash.replace(/^#\/?/, '').split('/');
-  const path = location.pathname.match(/^\/puma_oshen_wave\/stage\/(videos|halls)\/([^/]+)\/?$/);
-  if (!next && path) { next = path[1] === 'videos' ? 'stage' : 'hall'; target = decodeURIComponent(path[2]); }
+  const entry = resolveStageRoute(new URL(location.href));
   if (creatorDialog.open) creatorDialog.close();
   closeVideo(false);
-  if (next === 'stage') {
-    const stage = byId.get(target);
+  if (entry.videoId) {
+    const stage = byId.get(entry.videoId);
     if (stage) {
-      const index = catalogue.aisles.findIndex(aisle => stage.hallId === PUBLIC_HALL ? aisle.hall === PUBLIC_HALL : aisle.code === stage.aisleCode);
-      goToAisle(index, stage.hallId === PUBLIC_HALL ? null : stage.boothId);
-      returnHash = hallUrl(hallId) + `#/walk/${catalogue.aisles[aisleIndex].code}`;
+      const stored = history.state?.stageReturnPath;
+      const back = typeof stored === 'string' && stored.startsWith(oshenStagePath)
+        ? resolveStageRoute(new URL(stored, location.origin))
+        : { hallId: stage.hallId, aisle: stage.aisleCode, booth: stage.hallId === PUBLIC_HALL ? null : stage.boothId };
+      const booth = showHall(back);
+      returnPath = activeHallPath({ booth: stored ? booth : null });
+      if (entry.migrate) writeRoute(stageVideoPath(stage.id), { replace: true, state: { stageReturnPath: returnPath } });
       openStage(stage, false);
       return;
     }
     toast('找不到這座舞台，影片可能已下架。');
   }
-  if (next === 'hall') {
-    const index = catalogue.aisles.findIndex(aisle => aisle.hall === target);
-    return goToAisle(index < 0 ? 0 : index);
+  const booth = showHall(entry);
+  if ((entry.migrate && !entry.bareLegacyHome) || entry.videoId) {
+    writeRoute(activeHallPath({ booth }), { replace: true });
   }
-  if (next === 'list' || next === 'map') {
-    const index = catalogue.aisles.findIndex(aisle => aisle.hall === target);
-    if (index >= 0) goToAisle(index);
-    return setMode(next, false);
-  }
-  if (!target && (!next || next === 'walk')) {
-    if (hallId === PUBLIC_HALL) hallId = null;
-    return goToAisle(0);
-  }
-  const index = catalogue.aisles.findIndex(aisle => aisle.code === target?.split('-')[0]);
-  goToAisle(index < 0 ? aisleIndex : index, byBooth.has(target) ? target : null);
 }
 
 async function boot() {
   wireFloatingNav();
+  const opening = $('stage-walk').dataset.stageEntry;
+  if (opening) openingStageIds = JSON.parse(opening);
   catalogue = await loadCatalogue();
   $('hall-select').replaceChildren(...catalogue.halls.map(hall => {
     const option = make('option', hall.name);
@@ -315,6 +337,9 @@ async function boot() {
   const busy = () => dialog.open || creatorDialog.open || mode !== 'walk';
   walk = createWalkView($('walk-canvas'), {
     display: 'stage', visited: id => visited.has(byBooth.get(id)?.id),
+    openingLabels: $('stage-nameplates'),
+    resolveStage: id => byBooth.get(id),
+    onFirstDraw: () => $('stage-walk').removeAttribute('data-stage-opening'),
     onNear: id => {
       nearId = id;
       $('btn-watch').disabled = !id;
@@ -327,7 +352,7 @@ async function boot() {
       const index = aisleIndex + (direction === 'next' ? 1 : -1);
       if (catalogue.aisles[index]?.hall !== hallId) return;
       goToAisle(index, null, direction === 'next' ? 'left' : 'right');
-      history.replaceState(null, '', `#/walk/${catalogue.aisles[aisleIndex].code}`);
+      writeRoute(activeHallPath(), { replace: true });
     },
   });
   $('btn-watch').addEventListener('click', () => openStage(byBooth.get(nearId)));
@@ -360,8 +385,12 @@ async function boot() {
     }
   });
   $('walk-canvas').addEventListener('pointerdown', () => $('hint').classList.add('is-gone'), { once: true });
-  window.addEventListener('hashchange', route);
-  window.addEventListener('popstate', () => { if (!location.hash) route(); });
+  let popUrl;
+  window.addEventListener('popstate', () => { popUrl = location.href; route(); });
+  window.addEventListener('hashchange', event => {
+    if (event.newURL === location.href && event.newURL !== popUrl) route();
+    popUrl = null;
+  });
   window.addEventListener('pagehide', stopPlayer);
   route();
 }

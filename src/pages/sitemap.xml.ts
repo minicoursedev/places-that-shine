@@ -1,7 +1,8 @@
 import type { APIRoute } from 'astro';
 import { stores, storePath, categories, storeCategoryPath } from '../lib/oshen-stores';
 import { catalogue as designerCatalogue, designers, designerPath, designerWorks } from '../lib/oshen-designers';
-import { catalogue, hallPath, stagePath } from '../lib/oshen-stage';
+import { catalogue } from '../lib/oshen-stage';
+import { stageHallPath, stageVideoPath } from '../../public/puma_oshen_wave/stage/routes.js';
 import { designers as yilanDesigners, designerPath as yilanDesignerPath } from '../lib/yilan-market';
 import { eventEntries, storyEventPath } from '../lib/story-events';
 import { designerWalkPath } from '../../public/designers/js/routes.js';
@@ -18,12 +19,11 @@ const paths = [
   ...designers.map(designer => designerPath(designer.id)),
   ...designerWorks.map(({ designer, work }) => designerWorkPath(designer.id, work.id)),
   '/stage/',
+  ...catalogue.halls.map(hall => stageHallPath(hall.id)),
+  ...catalogue.stages.map(stage => stageVideoPath(stage.id)),
   '/stories/',
   '/stories/events/',
   ...eventEntries.map(({ id }) => storyEventPath(id)),
-  '/puma_oshen_wave/stage/',
-  ...catalogue.halls.map(hall => hallPath(hall.id)),
-  ...catalogue.stages.map(stage => stagePath(stage.id)),
   '/puma_oshen_wave/yilan_taiwan_11_07/',
   ...yilanDesigners.map(designer => yilanDesignerPath(designer.id)),
   '/puma_oshen_wave/support/',

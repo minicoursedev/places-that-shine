@@ -1,15 +1,20 @@
 ---
-import { catalogue, stageBase, stagePath, hallPath } from '../lib/oshen-stage';
+import { catalogue } from '../lib/oshen-stage';
+import { stageBase, oshenStagePath, publicHallId, stageHallPath, stagePageMetadata, stageVideoPath } from '../../public/puma_oshen_wave/stage/routes.js';
 import { designerHallRoot } from '../../public/designers/js/routes.js';
 import PrivacyLink from '../components/PrivacyLink.astro';
-interface Props { hallId?: string; videoId?: string }
-const { hallId, videoId } = Astro.props;
+import StageHallOpening from '../components/StageHallOpening.astro';
+import { stageSceneFor } from '../lib/stage-opening';
+interface Props { hallId?: string; videoId?: string; legacyRoot?: boolean }
+const { hallId, videoId, legacyRoot } = Astro.props;
 const video = catalogue.stages.find(stage => stage.id === videoId);
 const hall = catalogue.halls.find(hall => hall.id === hallId);
+const scene = video ? undefined : stageSceneFor(hallId || publicHallId);
 const members = video ? [video] : hall ? catalogue.stages.filter(stage => stage.hallId === hall.id) : catalogue.stages;
-const title = video ? `${video.title}｜${video.creator}｜洋流舞台` : hall ? `${hall.name}｜洋流舞台` : '洋流舞台｜發光的地方';
-const description = video ? `${video.creator}的《${video.title}》。${video.description || '在洋流舞台觀看影片與探索作者作品。'}` : hall ? `走進${hall.name}，在洋流舞台探索影片與作者作品。` : '走進洋流舞台，點一座舞台，看一部影片。';
-const canonical = new URL(video ? stagePath(video.id) : hall ? hallPath(hall.id) : stageBase, Astro.site).href;
+const sceneCount = hall && hall.id !== publicHallId ? members.length : scene?.videos.length;
+const { title, description, path } = stagePageMetadata({ stage: video, hall });
+const canonical = new URL(path, Astro.site).href;
+const legacy = Astro.url.pathname.startsWith('/puma_oshen_wave/stage/');
 ---
 <!doctype html>
 <html lang="zh-Hant-TW">
@@ -39,34 +44,35 @@ const canonical = new URL(video ? stagePath(video.id) : hall ? hallPath(hall.id)
   <details class="floating-nav" id="floating-nav">
     <summary class="floating-nav-toggle" aria-label="導覽選單"><span aria-hidden="true">☰</span> 選單</summary>
     <nav class="bar" aria-label="導覽選單">
-    <a class="plaque" href="/puma_oshen_wave/stage/#/walk" aria-label="洋流舞台首頁">洋流舞台</a>
+    <a class="plaque" href={oshenStagePath} aria-label="洋流舞台首頁">洋流舞台</a>
     <div class="modes" role="group" aria-label="舞台瀏覽方式">
       <button type="button" data-mode="walk" aria-pressed="true">逛舞台</button>
       <button type="button" data-mode="list" aria-pressed="false">影片列表</button>
       <button type="button" data-mode="map" aria-pressed="false">舞台地圖</button>
     </div>
-    <nav class="stage-links" aria-label="洋流網站"><a class="link-btn" href={designerHallRoot('O')}>洋流設計師</a><a class="link-btn" href="/puma_oshen_wave/">返回地圖</a></nav>
+    <div class="stage-links"><a class="link-btn" href={designerHallRoot('O')}>洋流設計師</a><a class="link-btn" href={legacy ? '/puma_oshen_wave/' : stageBase}>{legacy ? '返回地圖' : '分館總覽'}</a></div>
     </nav>
   </details>
-  <main class="stage" id="stage-walk" hidden>
+  <main class="stage" id="stage-walk" hidden={!scene} data-stage-opening={scene ? '' : undefined} data-stage-entry={scene?.entryStageIds && JSON.stringify(scene.entryStageIds)}>
+    {scene && <StageHallOpening scene={scene} />}
     <canvas id="walk-canvas" tabindex="0" aria-label="洋流舞台：按住拖著小人走，點舞台觀看影片"></canvas>
-    <button type="button" class="where" id="btn-where"><b id="where-hall">公共舞台</b><span id="where-aisle"></span><span class="where-switch">看地圖</span></button>
-    <div class="status"><span class="tag" id="status-count" role="status">舞台準備中…</span></div>
+    <button type="button" class="where" id="btn-where"><b id="where-hall">{scene?.aisle.hallName || '公共舞台'}</b><span id="where-aisle">{scene && `${scene.aisle.code} 走道`}</span><span class="where-switch">看地圖</span></button>
+    <div class="status"><span class="tag" id="status-count" role="status">{sceneCount ? `已造訪 0 / ${sceneCount} 座舞台` : '影片準備中'}</span></div>
     <p class="hint" id="hint"><span class="hint-desktop">按住拖著小人走，點影片觀看，點名牌看作者社群。電腦也可以用方向鍵。</span><span class="hint-mobile">拖曳移動；點影片觀看，點名牌看社群。</span></p>
     <p class="stage-message" id="stage-message" role="status" hidden></p>
     <div class="dock">
-      <button type="button" class="btn btn-primary" id="btn-watch" disabled>靠近舞台看影片</button>
+      <button type="button" class="btn btn-primary" id="btn-watch" disabled={!scene?.videos.length}>{scene?.videos.length ? '觀看影片' : '靠近舞台看影片'}</button>
       <div class="hall-controls">
-        <button type="button" class="btn" id="btn-next" disabled>下一個館別</button>
-        <label class="hall-picker"><select id="hall-select" aria-label="選擇舞台館別" disabled></select></label>
+        <button type="button" class="btn" id="btn-next" disabled={!scene || catalogue.halls.length < 2}>下一個館別</button>
+        <label class="hall-picker"><select id="hall-select" aria-label="選擇舞台館別" disabled={!scene}>{scene && catalogue.halls.map(item => <option value={item.id} selected={item.id === scene.aisle.hall}>{item.name}</option>)}</select></label>
       </div>
-      <button type="button" class="btn" id="btn-continuous" disabled>連續播放</button>
+      <button type="button" class="btn" id="btn-continuous" disabled={!scene?.videos.length}>連續播放</button>
     </div>
   </main>
-  <main class="list-mode" id="stage-list">
+  <main class="list-mode" id="stage-list" hidden={!!scene}>
     <div class="stage-page"><h1 id="list-title">{video?.title || hall?.name || '洋流舞台'}</h1>
       <label class="stage-search">找一部影片<input id="video-search" type="search" placeholder="搜尋影片、創作者" autocomplete="off"></label>
-      <p id="list-count" role="status"></p><div class="video-grid" id="video-list">{members.map(stage => <article class="video-card"><a class="video-poster" href={stagePath(stage.id)}>{stage.video.poster && <img src={stage.video.poster} alt="" loading="lazy" />}</a><h2>{stage.title}</h2><p class="muted creator-meta"><a class="creator-name" href={hallPath(stage.hallId)}>{stage.creator}</a></p>{stage.description && <p>{stage.description}</p>}<a class="btn btn-primary" href={stagePath(stage.id)}>觀看影片</a>{video && <a class="btn" href={stage.video.url} target="_blank" rel="noopener noreferrer">到原網站觀看</a>}</article>)}</div>
+      <p id="list-count" role="status"></p><div class="video-grid" id="video-list">{members.map(stage => <article class="video-card"><a class="video-poster" href={stageVideoPath(stage.id)}>{stage.video.poster && <img src={stage.video.poster} alt="" loading="lazy" />}</a><h2>{stage.title}</h2><p class="muted creator-meta"><a class="creator-name" href={stageHallPath(stage.hallId)}>{stage.creator}</a></p>{stage.description && <p>{stage.description}</p>}<a class="btn btn-primary" href={stageVideoPath(stage.id)}>觀看影片</a>{video && <a class="btn" href={stage.video.url} target="_blank" rel="noopener noreferrer">到原網站觀看</a>}</article>)}</div>
     </div>
   </main>
   <main class="map-mode" id="stage-map" hidden><div class="stage-page"><h1 id="map-title">舞台地圖</h1><p>選一座舞台，走過去看影片。</p><div id="stage-plan"></div></div></main>
@@ -96,7 +102,7 @@ const canonical = new URL(video ? stagePath(video.id) : hall ? hallPath(hall.id)
     <p id="creator-empty" class="muted" hidden>作者尚未提供社群連結。</p>
   </div>
 </dialog>
-{!hallId && !videoId && <dialog id="songs-notice" class="songs-notice" aria-labelledby="songs-notice-title" aria-describedby="songs-notice-intro" tabindex="-1" autofocus closedby="none">
+{legacyRoot && <dialog id="songs-notice" class="songs-notice" aria-labelledby="songs-notice-title" aria-describedby="songs-notice-intro" tabindex="-1" autofocus closedby="none">
   <div class="songs-notice-head">
     <span class="songs-notice-badge">洋流舞台公告</span>
   </div>
@@ -109,17 +115,18 @@ const canonical = new URL(video ? stagePath(video.id) : hall ? hallPath(hall.id)
   </a>
   <footer class="songs-notice-footer"><small><PrivacyLink /></small></footer>
 </dialog>}
-<noscript><p class="stage-message">啟用 JavaScript 即可使用互動舞台與播放器。</p></noscript>
-<script is:inline type="module" src="/puma_oshen_wave/stage/app.js?v=20261124-site-name"></script>
-<script is:inline>
+<script is:inline type="module" src="/puma_oshen_wave/stage/app.js?v=20261125-stage-halls"></script>
+{legacyRoot && <script is:inline>
   const songsNotice = document.getElementById('songs-notice');
-  songsNotice?.addEventListener('cancel', event => event.preventDefault());
-  songsNotice?.addEventListener('keydown', event => {
-    if (event.key === 'Escape') event.preventDefault();
-  });
-  songsNotice?.showModal();
-  songsNotice?.focus({ preventScroll: true });
-</script>
+  if (songsNotice && !location.hash && !location.search) {
+    songsNotice.addEventListener('cancel', event => event.preventDefault());
+    songsNotice.addEventListener('keydown', event => {
+      if (event.key === 'Escape') event.preventDefault();
+    });
+    songsNotice.showModal();
+    songsNotice.focus({ preventScroll: true });
+  }
+</script>}
 </body>
 </html>
 
