@@ -5115,6 +5115,36 @@
       "giftStatus": "可能有小物",
       "verification": true,
       "disabled": false
+    },
+    {
+      "id": "new-stonecci",
+      "name": "拾石文創｜衣服印刷",
+      "address": "臺中市清水區鎮北街23巷4號",
+      "category": "印刷小組",
+      "latlng": {
+        "lat": 24.268181176525,
+        "lng": 120.57572186256
+      },
+      "coordinateSource": "https://raw.githubusercontent.com/zhengda/taiwan-address-data/master/roads/66-%E9%8E%AE%E5%8C%97%E8%A1%97.csv",
+      "coordinateNote": "OpenStreetMap 未取得可核對的門牌結果。採用標示源自 TGOS 的公開門牌資料，取臺中市清水區南寧里2鄰鎮北街23巷4號所列 X（經度）與 Y（緯度）。此門牌與指定 Threads 簡介相符，為門牌定位點，非入口實測點。",
+      "visitNote": "提供客製團體服，也接受單件衣服印刷。下單、取件或到訪前，請先透過官方 LINE（@mdb2842e）確認。",
+      "visitUrl": "https://www.stonecci.com.tw/%E8%81%AF%E7%B5%A1%E8%B3%87%E8%A8%8A/",
+      "social": {
+        "facebook": "https://www.facebook.com/profile.php?id=100064010376968",
+        "instagram": "https://www.instagram.com/new.stonecci/",
+        "threads": "https://www.threads.com/@new.stonecci"
+      },
+      "shopPhoto": {
+        "url": "./media/library/new-stonecci/logo.webp?v=bf25d5fa0329adc8",
+        "source": "https://www.threads.com/@new.stonecci",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-25",
+        "note": "官方帳號 og:url 相符；個人頭像 CDN 路徑；拾石文創-衣服印刷-（台中沙鹿店） (@new.stonecci) • Threads, Say more；相同帳號公開資料 hd_profile_pic_versions"
+      },
+      "giftStatus": "可能有小物",
+      "verification": true,
+      "disabled": false
     }
   ]
 }
