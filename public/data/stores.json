@@ -5358,7 +5358,7 @@
       "addressSource": "https://deh.csie.ncku.edu.tw/poi_detail/35750",
       "category": "其它",
       "latlng": {
-        "lat": 22.9904520,
+        "lat": 22.990452,
         "lng": 120.1982897
       },
       "coordinateSource": "https://data.tainan.gov.tw/Resource/af44f904-2f4c-49b2-aaf8-1a64dce09bd4",
@@ -5396,6 +5396,36 @@
       },
       "giftStatus": "可能有小物",
       "verification": true,
+      "disabled": false
+    },
+    {
+      "id": "beantsu-tauhue",
+      "name": "民主豆花",
+      "address": "臺中市北區崇德路一段133巷15號",
+      "addressSource": "https://www.threads.com/@beantsu_tauhue",
+      "category": "甜點飲料",
+      "latlng": {
+        "lat": 24.1610249,
+        "lng": 120.684278
+      },
+      "coordinateSource": "https://maps.app.goo.gl/uvhwGrrqyrQJAR9PA",
+      "coordinateNote": "OpenStreetMap 未取得可核對的門牌結果。採用同名同址公開店家頁所連 Google Maps 地點網址中的 !3d24.1610249 與 !4d120.684278，非地圖視窗中心；門牌與官方 Threads 簡介相符。",
+      "visitNote": "以臺灣黃豆製作豆花與豆漿，另供應日式刨冰及麻薏粉粿。電話：04-2235-8428。",
+      "shopPhoto": {
+        "url": "./media/library/beantsu-tauhue/logo.webp?v=eec7e5d4ec4e914e",
+        "source": "https://www.threads.com/@beantsu_tauhue",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-25",
+        "note": "官方帳號 og:url 相符；個人頭像 CDN 路徑；民主豆花 (@beantsu_tauhue) • Threads, Say more；相同帳號公開資料 hd_profile_pic_versions"
+      },
+      "social": {
+        "facebook": "https://www.facebook.com/587583147773733/",
+        "instagram": "https://www.instagram.com/beantsu_tauhue/",
+        "threads": "https://www.threads.com/@beantsu_tauhue"
+      },
+      "giftStatus": "可能有小物",
+      "verification": false,
       "disabled": false
     }
   ]
