@@ -5456,6 +5456,130 @@
       "giftStatus": "可能有小物",
       "verification": false,
       "disabled": false
+    },
+    {
+      "id": "menwen-taipei-daan",
+      "name": "慢溫 MenWen 台北大安旗艦店 × 慢溫密室",
+      "address": "臺北市大安區忠孝東路四段181巷40弄14號",
+      "addressSource": "https://brand.menwen.com.tw/zh",
+      "category": "選物雜貨",
+      "latlng": {
+        "lat": 25.043885626339,
+        "lng": 121.55011331051
+      },
+      "coordinateSource": "https://raw.githubusercontent.com/zhengda/taiwan-address-data/master/roads/63-%E5%BF%A0%E5%AD%9D%E6%9D%B1%E8%B7%AF.csv",
+      "coordinateNote": "OpenStreetMap 未取得可核對的門牌結果；採用源自 TGOS 的公開門牌資料，CSV 明列大安區忠孝東路四段181巷40弄14號的 X（經度）與 Y（緯度）。",
+      "visitNote": "販售水晶設計飾品，店內的慢溫密室供應咖啡、特調與點心。門市電話：02-2775-2468。",
+      "social": {
+        "facebook": "https://www.facebook.com/menwen.com.tw",
+        "instagram": "https://www.instagram.com/menwen_tw/",
+        "threads": "https://www.threads.com/@menwen_tw",
+        "website": "https://www.menwen.com.tw/"
+      },
+      "shopPhoto": {
+        "url": "./media/library/menwen-taipei-daan/logo.webp?v=873b023be4634afc",
+        "source": "https://www.threads.com/@menwen_tw",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-26",
+        "note": "官方帳號 menwen_tw 的 hd_profile_pic_versions"
+      },
+      "giftStatus": "可能有小物",
+      "verification": false,
+      "disabled": false
+    },
+    {
+      "id": "menwen-tainan-anping",
+      "name": "慢溫 MenWen 台南安平旗艦店 × 慢溫密室",
+      "address": "臺南市安平區安平路87號",
+      "addressSource": "https://brand.menwen.com.tw/zh",
+      "category": "選物雜貨",
+      "latlng": {
+        "lat": 22.999429275586,
+        "lng": 120.1652234309
+      },
+      "coordinateSource": "https://raw.githubusercontent.com/zhengda/taiwan-address-data/master/roads/67-%E5%AE%89%E5%B9%B3%E8%B7%AF.csv",
+      "coordinateNote": "OpenStreetMap 未取得可核對的門牌結果；採用源自 TGOS 的公開門牌資料，CSV 明列安平區安平路87號的 X（經度）與 Y（緯度）。",
+      "visitNote": "品牌總部與旗艦店同址，一樓販售水晶設計飾品，慢溫密室供應咖啡與特調。門市電話：06-221-1393 轉 11。",
+      "social": {
+        "facebook": "https://www.facebook.com/menwen.com.tw",
+        "instagram": "https://www.instagram.com/menwen_tw/",
+        "threads": "https://www.threads.com/@menwen_tw",
+        "website": "https://www.menwen.com.tw/"
+      },
+      "shopPhoto": {
+        "url": "./media/library/menwen-tainan-anping/logo.webp?v=873b023be4634afc",
+        "source": "https://www.threads.com/@menwen_tw",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-26",
+        "note": "官方帳號 menwen_tw 的 hd_profile_pic_versions"
+      },
+      "giftStatus": "可能有小物",
+      "verification": false,
+      "disabled": false
+    },
+    {
+      "id": "menwen-tainan-chihkan",
+      "name": "慢溫 MenWen 台南赤崁創始店",
+      "address": "臺南市中西區新美街320號",
+      "addressSource": "https://brand.menwen.com.tw/zh",
+      "category": "選物雜貨",
+      "latlng": {
+        "lat": 22.998753760636,
+        "lng": 120.20182309256
+      },
+      "coordinateSource": "https://raw.githubusercontent.com/zhengda/taiwan-address-data/master/roads/67-%E6%96%B0%E7%BE%8E%E8%A1%97.csv",
+      "coordinateNote": "OpenStreetMap 未取得可核對的門牌結果；採用源自 TGOS 的公開門牌資料，CSV 明列中西區新美街320號的 X（經度）與 Y（緯度）。",
+      "visitNote": "品牌第一間實體門市，販售水晶設計飾品，二樓設有休憩區。門市電話：06-221-1313。",
+      "social": {
+        "facebook": "https://www.facebook.com/menwen.com.tw",
+        "instagram": "https://www.instagram.com/menwen_tw/",
+        "threads": "https://www.threads.com/@menwen_tw",
+        "website": "https://www.menwen.com.tw/"
+      },
+      "shopPhoto": {
+        "url": "./media/library/menwen-tainan-chihkan/logo.webp?v=873b023be4634afc",
+        "source": "https://www.threads.com/@menwen_tw",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-26",
+        "note": "官方帳號 menwen_tw 的 hd_profile_pic_versions"
+      },
+      "giftStatus": "可能有小物",
+      "verification": false,
+      "disabled": false
+    },
+    {
+      "id": "menwen-taichung-parklane",
+      "name": "慢溫 MenWen 台中綠園道店",
+      "address": "臺中市西區公益路68號3樓（勤美誠品綠園道）",
+      "addressSource": "https://parklane.com.tw/brand/%E6%85%A2%E6%BA%ABmen-wen/",
+      "category": "選物雜貨",
+      "latlng": {
+        "lat": 24.151277808635,
+        "lng": 120.66386612992
+      },
+      "coordinateSource": "https://raw.githubusercontent.com/zhengda/taiwan-address-data/master/roads/66-%E5%85%AC%E7%9B%8A%E8%B7%AF.csv",
+      "coordinateNote": "OpenStreetMap 可辨識勤美誠品商場，未取得可直接核對的門牌點；採用源自 TGOS 的公開門牌資料，CSV 明列西區公益路68號的 X（經度）與 Y（緯度），不是三樓櫃位的實測座標。",
+      "visitNote": "勤美誠品綠園道三樓的水晶設計飾品專櫃。門市電話：04-2328-1000 轉 3805。",
+      "social": {
+        "facebook": "https://www.facebook.com/menwen.com.tw",
+        "instagram": "https://www.instagram.com/menwen_tw/",
+        "threads": "https://www.threads.com/@menwen_tw",
+        "website": "https://www.menwen.com.tw/"
+      },
+      "shopPhoto": {
+        "url": "./media/library/menwen-taichung-parklane/logo.webp?v=873b023be4634afc",
+        "source": "https://www.threads.com/@menwen_tw",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-26",
+        "note": "官方帳號 menwen_tw 的 hd_profile_pic_versions"
+      },
+      "giftStatus": "可能有小物",
+      "verification": false,
+      "disabled": false
     }
   ]
 }
