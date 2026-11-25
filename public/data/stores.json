@@ -5611,6 +5611,35 @@
       "giftStatus": "可能有小物",
       "verification": false,
       "disabled": false
+    },
+    {
+      "id": "ample-leather",
+      "name": "集信皮行 Ample Leather",
+      "address": "臺北市大同區太原路97巷14號1樓",
+      "addressSource": "https://ample-leather.com/",
+      "category": "選物雜貨",
+      "latlng": {
+        "lat": 25.052099972936,
+        "lng": 121.51625612382
+      },
+      "coordinateSource": "https://raw.githubusercontent.com/zhengda/taiwan-address-data/master/roads/63-%E5%A4%AA%E5%8E%9F%E8%B7%AF.csv",
+      "coordinateNote": "OpenStreetMap 未取得可核對的門牌結果。採用標示源自 TGOS 的公開門牌資料，以臺北市大同區建泰里19鄰太原路97巷14號所列 X 為經度、Y 為緯度，並與臺北市警察局大同分局公開資料的同門牌座標交叉核對。此為門牌定位點，非店家入口實測點。",
+      "visitNote": "販售皮革材料與手作皮件，提供皮件訂製服務。門市電話：02-2555-3636。",
+      "social": {
+        "facebook": "https://www.facebook.com/ampleleather?locale=zh_TW",
+        "website": "https://ample-leather.com/"
+      },
+      "shopPhoto": {
+        "url": "./media/library/ample-leather/logo.webp?v=f9c5481f049fc986",
+        "source": "https://www.facebook.com/ampleleather?locale=zh_TW",
+        "platform": "facebook",
+        "status": "verified",
+        "checkedAt": "2026-11-26",
+        "note": "官方帳號 og:url 相符；個人頭像 CDN 路徑；集信皮行 | Taipei ；本站 Logo 最長邊 256 px、完整置中、小圖不放大；來源尺寸 720 × 720。"
+      },
+      "giftStatus": "可能有小物",
+      "verification": false,
+      "disabled": false
     }
   ]
 }
