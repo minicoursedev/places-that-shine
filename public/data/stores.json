@@ -5427,6 +5427,35 @@
       "giftStatus": "可能有小物",
       "verification": false,
       "disabled": false
+    },
+    {
+      "id": "bloomtea-tw",
+      "name": "杏日製茶",
+      "address": "新北市板橋區文化路一段343號1樓",
+      "addressSource": "https://www.foodpanda.com.tw/restaurant/h6li/xing-ri-zhi-cha-h6li",
+      "category": "甜點飲料",
+      "latlng": {
+        "lat": 25.02090035666,
+        "lng": 121.46648261623
+      },
+      "coordinateSource": "https://raw.githubusercontent.com/zhengda/taiwan-address-data/master/roads/65-%E6%96%87%E5%8C%96%E8%B7%AF.csv",
+      "coordinateNote": "OpenStreetMap 未取得可核對結果。採用標示源自 TGOS 的公開門牌資料，以新北市板橋區忠誠里1鄰文化路一段343號所列 X 為經度、Y 為緯度；此為門牌定位點，非店家入口實測點。",
+      "visitNote": "供應原葉茶、果茶與奶茶。電話：02-2255-0343；官方 LINE：@423depfu。",
+      "visitUrl": "https://line.me/R/ti/p/@423depfu",
+      "social": {
+        "threads": "https://www.threads.com/@bloomtea_tw"
+      },
+      "shopPhoto": {
+        "url": "./media/library/bloomtea-tw/logo.webp?v=8cfb3caf54c272fb",
+        "source": "https://www.threads.com/@bloomtea_tw",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-25",
+        "note": "官方帳號 og:url 相符；個人頭像 CDN 路徑；杏日製茶 (@bloomtea_tw) • Threads, Say more；相同帳號公開資料 hd_profile_pic_versions"
+      },
+      "giftStatus": "可能有小物",
+      "verification": false,
+      "disabled": false
     }
   ]
 }
