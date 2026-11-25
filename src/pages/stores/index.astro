@@ -7,7 +7,7 @@ import '../../styles/stores.css';
 import '../../styles/store-work-preview.css';
 
 const title = '發光的店家';
-const description = '發光的店家整理台灣各地的小店與生活服務，可搜尋店家並查看到訪資訊與地圖位置。';
+const description = '發光的店家（我們的洋流地圖）整理台灣各地的小店與生活服務，可搜尋店家並查看到訪資訊與地圖位置。';
 const shareImage = new URL('/media/shining-stores-og-shadow-50.webp', Astro.site);
 const shareImageAlt = '發光的店家。我相信光，是為了巷弄間的歡騰，不是為了墳前的孤寂。巷弄夜景與台灣夜間光點示意。';
 const compareText = new Intl.Collator('zh-Hant-TW').compare;
@@ -20,7 +20,7 @@ for (const store of stores) {
 const storesByCity = [...byCity].sort(([a], [b]) => compareText(a, b));
 ---
 
-<SiteLayout title={title} description={description} active="stores">
+<SiteLayout title={`${title}｜我們的洋流地圖`} description={description} active="stores">
   <Fragment slot="head">
     <meta property="og:type" content="website" />
     <meta property="og:url" content={new URL('/stores/', Astro.site)} />
