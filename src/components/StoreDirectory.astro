@@ -26,6 +26,11 @@ const storesByCity = [...byCity].sort(([a], [b]) => compareText(a, b));
       <h1 id="stores-title">{title}</h1>
       <a class="store-action" href="/stores/report/">推薦店家</a>
     </div>
+    <nav class="store-events" aria-label="活動分類" hidden>
+      <strong>活動分類</strong>
+      <span class="store-event-links"></span>
+      <label hidden>活動分組 <select class="store-input"></select></label>
+    </nav>
     <div id="stores-content" aria-label="店家目錄" data-category={category} data-work-previews={JSON.stringify(storeWorkPreviews)}><p role="status">正在載入店家資料…</p></div>
     <StoreShareDialog />
     <dialog id="store-photo-viewer" class="store-photo-viewer" aria-label="全螢幕店家照片">

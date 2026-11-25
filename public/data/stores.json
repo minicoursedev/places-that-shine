@@ -5282,6 +5282,57 @@
       "giftStatus": "可能有小物",
       "verification": false,
       "disabled": false
+    },
+    {
+      "id": "mm-friedchicken",
+      "name": "山人自有妙雞",
+      "address": "臺南市安南區海佃路一段213巷37號",
+      "addressSource": "https://ri.tainan.gov.tw/LoveMeal/Default",
+      "category": "小吃",
+      "latlng": {
+        "lat": 23.0244972,
+        "lng": 120.1903129
+      },
+      "coordinateSource": "https://data.tainan.gov.tw/Resource/af44f904-2f4c-49b2-aaf8-1a64dce09bd4",
+      "coordinateNote": "臺南市政府民政局 114 年門牌參考坐標，依海佃路一段213巷37號定位。",
+      "social": {
+        "instagram": "https://www.instagram.com/mm_friedchicken2025/"
+      },
+      "visitNote": "聯絡電話：0911-608-716。",
+      "verification": false
+    },
+    {
+      "id": "alpha-diagon-alley",
+      "name": "阿爾法斜角巷",
+      "address": "臺南市東區東興路399號",
+      "category": "其它",
+      "latlng": {
+        "lat": 22.9988993,
+        "lng": 120.2292168
+      },
+      "coordinateSource": "https://data.tainan.gov.tw/Resource/af44f904-2f4c-49b2-aaf8-1a64dce09bd4",
+      "coordinateNote": "臺南市政府民政局 114 年門牌參考坐標，依東興路399號定位。",
+      "social": {
+        "threads": "https://www.threads.com/@alpha_diagon_alley"
+      },
+      "visitNote": "提供牌卡占卜服務。聯絡電話：0911-072-023。",
+      "verification": false
+    },
+    {
+      "id": "bar-san-tainan",
+      "name": "Bar.san",
+      "address": "臺南市中西區開山路12號",
+      "category": "酒吧",
+      "latlng": {
+        "lat": 22.9918299,
+        "lng": 120.2055474
+      },
+      "coordinateSource": "https://data.tainan.gov.tw/Resource/af44f904-2f4c-49b2-aaf8-1a64dce09bd4",
+      "coordinateNote": "臺南市政府民政局 114 年門牌參考坐標，依開山路12號定位。",
+      "social": {
+        "threads": "https://www.threads.com/@bar.san.tainan"
+      },
+      "verification": false
     }
   ]
 }
