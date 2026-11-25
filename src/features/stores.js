@@ -448,7 +448,7 @@ function storeCoordinates(shop) {
   return shop.latlng ? [shop.latlng.lat, shop.latlng.lng] : null;
 }
 
-async function createStoreMap(container, message, mapButtons, sheet, mobile, onSelectMobileStore) {
+async function createStoreMap(container, message, mapButtons, sheet, mobile, onSelectMobileStore, event) {
   await Promise.all([
     loadAsset('link', '/vendor/leaflet/leaflet.css?v=20261123-webp'),
     loadAsset('link', '/vendor/leaflet-markercluster/MarkerCluster.css'),
@@ -491,8 +491,15 @@ async function createStoreMap(container, message, mapButtons, sheet, mobile, onS
   tiles.addTo(map);
   actions.addTo(map);
 
+  const connectedGroups = event?.connectMarkers ? event.groups : [];
+  const connections = connectedGroups.length ? L.polyline([], {
+    color: '#9a451e', weight: 4, opacity: .95, dashArray: '7 6',
+    interactive: false, className: 'store-event-connections',
+  }).addTo(map) : null;
   const markers = L.markerClusterGroup({
     maxClusterRadius: 45,
+    disableClusteringAtZoom: event?.disableClusteringAtZoom ?? (connections ? 17 : null),
+    removeOutsideVisibleBounds: event?.disableClusteringAtZoom !== 0,
     showCoverageOnHover: false,
     spiderfyDistanceMultiplier: 1.8,
     iconCreateFunction(cluster) {
@@ -586,10 +593,19 @@ async function createStoreMap(container, message, mapButtons, sheet, mobile, onS
         });
         pins.push(marker);
       }
+      if (connections) {
+        const positions = new Map(pins.map(pin => [pin.options.storeId, pin.getLatLng()]));
+        const lines = connectedGroups.map(group => {
+          const points = group.storeIds.map(id => positions.get(id)).filter(Boolean);
+          if (group.closedLoop && points.length > 2) points.push(points[0]);
+          return points;
+        });
+        connections.setLatLngs(lines.filter(points => points.length > 1));
+      }
       if (center) map.setView(center, 16, { animate: false });
       else if (!previousView) {
         const bounds = pins.length ? L.latLngBounds(pins.map(pin => pin.getLatLng())) : TAIWAN_BOUNDS;
-        map.fitBounds(bounds, { animate: false, padding: [28, 28], maxZoom: 15 });
+        map.fitBounds(bounds, { animate: false, padding: [28, 28], maxZoom: connections ? 19 : 15 });
       }
       markers.addLayers(pins);
       markers.addTo(map);
@@ -773,7 +789,7 @@ export async function mountStores(root, workPreviews = [], initialCategory = '')
     if (!mapTask) {
       mapMessage.textContent = '正在載入地圖…';
       mapMessage.hidden = false;
-      mapTask = createStoreMap(mapElement, mapMessage, [sortCenterButton, locateButton], storeSheet, mobile, collapseOnFirstSelection);
+      mapTask = createStoreMap(mapElement, mapMessage, [sortCenterButton, locateButton], storeSheet, mobile, collapseOnFirstSelection, eventFilter.selected);
     }
     try {
       if (!map) {
