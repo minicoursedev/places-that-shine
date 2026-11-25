@@ -8,9 +8,10 @@ interface Props {
   active?: 'stores' | 'designers' | 'stage';
   errorPage?: boolean;
   analytics?: boolean;
+  fontText?: string;
 }
 
-const { title, description, active, errorPage, analytics = true } = Astro.props;
+const { title, description, active, errorPage, analytics = true, fontText } = Astro.props;
 const siteName = '發光的地方';
 const pageTitle = title === siteName ? title : `${title}｜${siteName}`;
 const canonical = new URL(Astro.url.pathname, Astro.site);
@@ -19,6 +20,20 @@ const routes = [
   { id: 'designers', href: '/designers/', label: '設計師' },
   { id: 'stage', href: '/stage/', label: '舞台' },
 ];
+const historyLabel = '開發歷程';
+const copyrightLabel = '版權資訊';
+let fontQuery = 'family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;600;700&family=Noto+Serif+TC:wght@500;600;700;800';
+if (fontText) {
+  const layoutText = [siteName, ...routes.map(({ label }) => label), historyLabel, '網站隱私權政策', copyrightLabel, '✦ '];
+  const characters = [...new Set([fontText, ...layoutText].join(''))].join('');
+  fontQuery = [
+    'family=DM+Sans:wght@400;600',
+    'family=Noto+Sans+TC:wght@400;600',
+    'family=Noto+Serif+TC:wght@500;800',
+    `text=${encodeURIComponent(characters)}`,
+  ].join('&');
+}
+const fontStylesheet = `https://fonts.googleapis.com/css2?${fontQuery}&display=swap`;
 ---
 <!doctype html>
 <html lang="zh-Hant-TW">
@@ -31,7 +46,7 @@ const routes = [
     <title>{pageTitle}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;600;700&family=Noto+Serif+TC:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <link href={fontStylesheet} rel="stylesheet" />
     <slot name="head" />
     {analytics && <script is:inline defer src="/assets/analytics.js?v=20261019-content-group"></script>}
   </head>
@@ -49,9 +64,9 @@ const routes = [
       <div class="site-footer-inner page-width">
         <a class="brand" href="/"><span class="brand-mark" aria-hidden="true">✦</span>{siteName}</a>
         <nav class="footer-links" aria-label="頁尾導覽">
-          {Astro.url.pathname === '/' && <a href="/history/">開發歷程</a>}
+          {Astro.url.pathname === '/' && <a href="/history/">{historyLabel}</a>}
           <PrivacyLink />
-          <a href="/privacy/#copyright">版權資訊</a>
+          <a href="/privacy/#copyright">{copyrightLabel}</a>
         </nav>
       </div>
     </footer>

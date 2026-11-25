@@ -6,16 +6,24 @@ const title = '發光的地方';
 const description = '在發光的地方，逛設計師的作品、看舞台演出。';
 const quoteLead = '我相信光';
 const quoteLine = '是為了巷弄間的歡騰，不是為了墳前的孤寂';
+const actionLabel = '開始探索';
+const exploreTitle = '尋光去';
+const storyTitle = '努力發著光';
+const storyDescription = '更多值得認識的人、事與物。';
 const shareImage = new URL('/media/places-that-shine-og.webp', Astro.site);
 const shareImageAlt = `${title}。 ${quoteLead}，${quoteLine}`;
 
 const entries = [
-  { href: '/stores/', title: '發光的店家', description: '找一間想走進去的店', cover: 'store.webp', width: 600, height: 400 },
+  { href: '/stores/', title: '發光的店家', description: '找一間想走進去的店', cover: 'store.webp', coverAvif: 'store.avif', width: 600, height: 400 },
   { href: '/designers/', title: '發光的設計師', description: '逛逛設計師與他們的作品', cover: 'designer.webp', width: 600, height: 400 },
-  { href: '/stage/', title: '發光的舞台', description: '聽一首歌，看一場演出', cover: 'stage.webp', width: 320, height: 180 },
+  { href: '/stage/', title: '發光的舞台', description: '聽一首歌，看一場演出', cover: 'stage.webp', coverAvif: 'stage.avif', width: 320, height: 180 },
 ];
+const fontText = [
+  title, quoteLead, quoteLine, actionLabel, exploreTitle, storyTitle, storyDescription, '↓↗',
+  ...entries.flatMap(({ title, description }) => [title, description]),
+].join('');
 ---
-<SiteLayout title={title} description={description} analytics={false}>
+<SiteLayout title={title} description={description} analytics={false} fontText={fontText}>
   <Fragment slot="head">
     <meta property="og:type" content="website" />
     <meta property="og:url" content={Astro.site} />
@@ -52,31 +60,51 @@ const entries = [
     }
   </script>
   <section id="home" class="hero" aria-labelledby="home-title">
-    <img class="hero-image" src="/media/tainan-evening.webp" width="1774" height="887" alt="" fetchpriority="high" />
+    <picture class="hero-picture">
+      <!-- The portrait crop keeps the same 65% focal point as the mobile object-position. -->
+      <source
+        type="image/avif"
+        media="(max-width: 720px) and (max-width: 32.5rem)"
+        srcset="/media/tainan-evening-portrait.avif"
+      />
+      <!-- With object-fit: cover, the visible frame can be narrower than the scaled 2:1 photo. -->
+      <source
+        type="image/avif"
+        srcset="/media/tainan-evening-1000.avif 1000w, /media/tainan-evening-1400.avif 1400w, /media/tainan-evening-1774.avif 1774w"
+        sizes="(max-width: 720px) 62rem, (max-width: 960px) 60rem, 100vw"
+      />
+      <img class="hero-image" src="/media/tainan-evening.webp" width="1774" height="887" alt="" fetchpriority="high" />
+    </picture>
     <div class="hero-inner page-width">
       <span class="hero-mark" aria-hidden="true">✦</span>
       <h1 id="home-title">{title}</h1>
       <p class="hero-quote">{quoteLead}<br />{quoteLine}</p>
-      <a class="hero-action" href="#explore">開始探索 <span aria-hidden="true">↓</span></a>
+      <a class="hero-action" href="#explore">{actionLabel} <span aria-hidden="true">↓</span></a>
     </div>
   </section>
   <section id="explore" class="explore page-width" aria-labelledby="explore-title">
-    <div class="section-heading"><h2 id="explore-title">尋光去</h2></div>
+    <div class="section-heading"><h2 id="explore-title">{exploreTitle}</h2></div>
     <div class="entry-grid">
-      {entries.map(({ href, title, description, cover, width, height }) => (
-        <a class="entry" href={href}>
-          <div class="entry-photo"><img src={`/media/${cover}`} width={width} height={height} alt="" /></div>
-          <div class="entry-info">
-            <div><h3>{title}</h3><p>{description}</p></div>
-            <span class="entry-arrow" aria-hidden="true">↗</span>
-          </div>
-        </a>
-      ))}
+      {entries.map(({ href, title, description, cover, coverAvif, width, height }) => {
+        const Photo = coverAvif ? 'picture' : 'div';
+        return (
+          <a class="entry" href={href}>
+            <Photo class="entry-photo">
+              {coverAvif && <source type="image/avif" srcset={`/media/${coverAvif}`} />}
+              <img src={`/media/${cover}`} width={width} height={height} alt="" />
+            </Photo>
+            <div class="entry-info">
+              <div><h3>{title}</h3><p>{description}</p></div>
+              <span class="entry-arrow" aria-hidden="true">↗</span>
+            </div>
+          </a>
+        );
+      })}
     </div>
     <a class="entry story-entry" href="/stories/">
       <span class="story-mark" aria-hidden="true">✦</span>
       <div class="entry-info">
-        <div><h3>努力發著光</h3><p>更多值得認識的人、事與物。</p></div>
+        <div><h3>{storyTitle}</h3><p>{storyDescription}</p></div>
         <span class="entry-arrow" aria-hidden="true">↗</span>
       </div>
     </a>
@@ -84,6 +112,8 @@ const entries = [
 </SiteLayout>
 
 <style>
+  .hero-picture { position: absolute; inset: 0; }
+
   .story-entry {
     flex-direction: row;
     align-items: center;
