@@ -14,8 +14,8 @@ const { category } = Astro.props;
 const compareText = new Intl.Collator('zh-Hant-TW').compare;
 const categoryStores = stores.filter(store => store.category === category)
   .sort((a, b) => compareText(a.name, b.name));
-const title = `${category}｜我們的洋流地圖`;
-const description = `查看洋流地圖收錄的${category}，瀏覽店家地址、資訊與地圖，規劃前往路線。`;
+const title = `${category}｜發光的店家｜我們的洋流地圖`;
+const description = `在發光的店家（我們的洋流地圖）探索${category}，查看店家地址、資訊與地圖，規劃前往路線。`;
 const canonical = new URL(storeCategoryPath(category), Astro.site);
 const directoryUrl = new URL('/stores/', Astro.site);
 const shareImage = new URL('/media/shining-stores-og-shadow-50.webp', Astro.site);

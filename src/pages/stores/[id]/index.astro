@@ -31,10 +31,10 @@ const [, postalCode, region, localAddress] = address.match(/^(?:(\d{3,6})\s*)?([
 const locality = localAddress?.match(region?.endsWith('縣') ? /^[\p{Script=Han}]{1,4}?[鄉鎮市]/u : /^[\p{Script=Han}]{1,4}?區/u)?.[0];
 const area = [region, locality].filter(Boolean).join('');
 const streetAddress = localAddress?.slice(locality?.length ?? 0).trim() || address;
-const title = `${name}｜${area ? `${area}${category}` : category}｜我們的洋流地圖`;
+const title = `${name}｜${area ? `${area}${category}` : category}｜發光的店家｜我們的洋流地圖`;
 const summary = [`${name}位於${address}。`, visitNote?.trim() || openingHours?.text.trim()]
   .filter(Boolean).join(' ').replace(/\s+/g, ' ');
-const mapDescription = '查看店家資訊、官方社群與洋流地圖，規劃前往路線。';
+const mapDescription = '發光的店家（我們的洋流地圖）提供店家資訊、官方社群與地圖，協助規劃前往路線。';
 const summaryLimit = 155 - Array.from(mapDescription).length - 1;
 const summaryCharacters = Array.from(summary);
 const summaryExcerpt = summaryCharacters.length > summaryLimit

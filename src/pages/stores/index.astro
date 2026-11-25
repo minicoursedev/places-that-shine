@@ -1,18 +1,43 @@
 ---
 import StoreDirectory from '../../components/StoreDirectory.astro';
 import SiteLayout from '../../layouts/SiteLayout.astro';
+import { stores, storePath } from '../../lib/oshen-stores';
+import { serializeStructuredData } from '../../../public/designers/js/profile-seo.js';
 
 const title = '發光的店家';
+const seoTitle = `${title}｜我們的洋流地圖`;
 const description = '發光的店家（我們的洋流地圖）整理台灣各地的小店與生活服務，可搜尋店家並查看到訪資訊與地圖位置。';
+const canonical = new URL('/stores/', Astro.site);
 const shareImage = new URL('/media/shining-stores-og-shadow-50.webp', Astro.site);
 const shareImageAlt = '發光的店家。我相信光，是為了巷弄間的歡騰，不是為了墳前的孤寂。巷弄夜景與台灣夜間光點示意。';
+const listId = `${canonical.href}#stores`;
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'CollectionPage', '@id': `${canonical.href}#webpage`,
+      url: canonical.href, name: seoTitle, description, inLanguage: 'zh-Hant-TW',
+      mainEntity: { '@id': listId },
+    },
+    {
+      '@type': 'ItemList', '@id': listId,
+      name: seoTitle, numberOfItems: stores.length,
+      itemListElement: stores.map((store, index) => ({
+        '@type': 'ListItem', position: index + 1,
+        item: { '@id': new URL(storePath(store.id), Astro.site).href, name: store.name },
+      })),
+    },
+  ],
+};
 ---
 
-<SiteLayout title={`${title}｜我們的洋流地圖`} description={description} active="stores">
+<SiteLayout title={seoTitle} description={description} active="stores">
   <Fragment slot="head">
     <meta property="og:type" content="website" />
-    <meta property="og:url" content={new URL('/stores/', Astro.site)} />
-    <meta property="og:title" content={title} />
+    <meta property="og:site_name" content="發光的地方" />
+    <meta property="og:locale" content="zh_TW" />
+    <meta property="og:url" content={canonical.href} />
+    <meta property="og:title" content={seoTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={shareImage} />
     <meta property="og:image:type" content="image/webp" />
@@ -20,8 +45,11 @@ const shareImageAlt = '發光的店家。我相信光，是為了巷弄間的歡
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content={shareImageAlt} />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={seoTitle} />
+    <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={shareImage} />
     <meta name="twitter:image:alt" content={shareImageAlt} />
+    <script is:inline type="application/ld+json" set:html={serializeStructuredData(structuredData)} />
   </Fragment>
   <StoreDirectory />
 </SiteLayout>
