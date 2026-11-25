@@ -448,7 +448,7 @@ function storeCoordinates(shop) {
   return shop.latlng ? [shop.latlng.lat, shop.latlng.lng] : null;
 }
 
-async function createStoreMap(container, message, mapButtons, sheet, mobile, onSelectMobileStore, connectedGroups) {
+async function createStoreMap(container, message, mapButtons, sheet, mobile, onSelectMobileStore, event) {
   await Promise.all([
     loadAsset('link', '/vendor/leaflet/leaflet.css?v=20261123-webp'),
     loadAsset('link', '/vendor/leaflet-markercluster/MarkerCluster.css'),
@@ -491,13 +491,14 @@ async function createStoreMap(container, message, mapButtons, sheet, mobile, onS
   tiles.addTo(map);
   actions.addTo(map);
 
+  const connectedGroups = event?.connectMarkers ? event.groups : [];
   const connections = connectedGroups.length ? L.polyline([], {
     color: '#9a451e', weight: 4, opacity: .95, dashArray: '7 6',
     interactive: false, className: 'store-event-connections',
   }).addTo(map) : null;
   const markers = L.markerClusterGroup({
     maxClusterRadius: 45,
-    disableClusteringAtZoom: connections ? 17 : null,
+    disableClusteringAtZoom: event?.disableClusteringAtZoom ?? (connections ? 17 : null),
     showCoverageOnHover: false,
     spiderfyDistanceMultiplier: 1.8,
     iconCreateFunction(cluster) {
@@ -787,9 +788,7 @@ export async function mountStores(root, workPreviews = [], initialCategory = '')
     if (!mapTask) {
       mapMessage.textContent = '正在載入地圖…';
       mapMessage.hidden = false;
-      const event = eventFilter.selected;
-      const connectedGroups = event?.connectMarkers ? event.groups : [];
-      mapTask = createStoreMap(mapElement, mapMessage, [sortCenterButton, locateButton], storeSheet, mobile, collapseOnFirstSelection, connectedGroups);
+      mapTask = createStoreMap(mapElement, mapMessage, [sortCenterButton, locateButton], storeSheet, mobile, collapseOnFirstSelection, eventFilter.selected);
     }
     try {
       if (!map) {

@@ -7,6 +7,7 @@
  * @property {string} [organizerUrl]
  * @property {string} [sourceUrl]
  * @property {boolean} [connectMarkers]
+ * @property {number} [disableClusteringAtZoom] Use 0 to show individual markers at every zoom.
  * @property {string} [introduction]
  * @property {string} [shareImageAlt]
  * @property {{ name: string, storeIds: string[], closedLoop?: boolean }[]} groups
