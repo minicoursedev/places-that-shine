@@ -1,3 +1,24 @@
+.store-events:not([hidden]), .store-event-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .5rem .75rem;
+}
+
+.store-events {
+  margin-bottom: 1rem;
+  font-size: .875rem;
+}
+
+.store-events a[aria-current="page"] {
+  font-weight: 700;
+  border-color: var(--accent);
+}
+
+.store-events .store-input {
+  width: auto;
+}
+
 .store-controls {
   display: grid;
   grid-template-columns: minmax(0, 2fr) repeat(2, minmax(0, 1fr));

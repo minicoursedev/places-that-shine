@@ -3,6 +3,7 @@ import { storeCategoryPath, storeCity, storeMapCenterParam, storeMapId, storePat
 import { storeCategoryIcon } from './store-marker-icons.js';
 import { createStoreShare } from './store-share.js';
 import { createStoreCategoryNavigation, storeCategoryFromPath } from './store-category-navigation.js';
+import { createStoreEventFilter } from './store-events.js';
 
 const STORE_FEED = '/data/stores.json';
 const PAGE_SIZE = 12;
@@ -724,6 +725,10 @@ export async function mountStores(root, workPreviews = [], initialCategory = '')
   let preserveMapViewOnRefresh = false;
   let locating = false;
   let firstMobileStoreSelected = false;
+  const eventFilter = createStoreEventFilter(root.closest('.stores-directory').querySelector('.store-events'), () => {
+    if (!eventFilter.selected) category.value = activeCategory;
+    if (!search.disabled) filterStores();
+  });
 
   function setToolsExpanded(expanded) {
     tools.classList.toggle('is-collapsed', !expanded);
@@ -878,7 +883,8 @@ export async function mountStores(root, workPreviews = [], initialCategory = '')
     filterToggle.textContent = activeFilters ? `篩選（${activeFilters}）` : '篩選';
     const terms = normalize(search.value).split(/\s+/).filter(Boolean);
     matches = stores.filter(shop => (
-      (!city.value || shop.city === city.value)
+      eventFilter.includes(shop.id)
+      && (!city.value || shop.city === city.value)
       && (!category.value || shop.category === category.value)
       && terms.every(term => shop.searchText.includes(term))
     ));
@@ -893,6 +899,7 @@ export async function mountStores(root, workPreviews = [], initialCategory = '')
     try {
       if (!await navigateCategoryPage(nextCategory, { history })) return;
       activeCategory = category.value = nextCategory;
+      eventFilter.sync();
       pendingStoreId = null;
       filterStores({ preserveMapView: true });
     } catch {
@@ -945,7 +952,8 @@ export async function mountStores(root, workPreviews = [], initialCategory = '')
   search.addEventListener('input', filterStores);
   city.addEventListener('change', filterStores);
   category.addEventListener('change', () => {
-    void changeCategory(category.value);
+    if (eventFilter.selected) filterStores();
+    else void changeCategory(category.value);
   });
   root.closest('.stores-directory').addEventListener('click', event => {
     const link = event.target.closest?.('a');
