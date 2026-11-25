@@ -26,6 +26,12 @@ const storesByCity = [...byCity].sort(([a], [b]) => compareText(a, b));
     <div class="directory-header">
       <a class="back-link" href={category || event ? "/stores/" : "/#explore"}><span aria-hidden="true">←</span> {category || event ? "回店家地圖" : "回探索首頁"}</a>
       <h1 id="stores-title">{title}</h1>
+      {(event?.organizerUrl || event?.introduction) && (
+        <div class="store-event-intro">
+          {event.organizerUrl && <p>發起人：<a href={event.organizerUrl}>{event.organizerUrl}</a></p>}
+          {event.introduction && <p>{event.introduction}</p>}
+        </div>
+      )}
       <a class="store-action" href="/stores/report/">推薦店家</a>
     </div>
     <nav class="store-events" aria-label="現在進行式" hidden>
@@ -85,6 +91,10 @@ const storesByCity = [...byCity].sort(([a], [b]) => compareText(a, b));
 </script>
 
 <style>
+  .store-event-intro { order: 1; flex: 0 0 100%; min-width: 0; }
+  .store-event-intro p { max-width: 46rem; margin: .3rem 0; line-height: 1.7; }
+  .store-event-intro a { color: var(--accent); overflow-wrap: anywhere; }
+
   .stores-by-city-groups {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr));
