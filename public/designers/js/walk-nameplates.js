@@ -1,4 +1,4 @@
-import { designerPath, designerSharePath } from './routes.js?v=20261124-profile-title';
+import { designerPath, designerSharePath } from './routes.js?v=20261125-hall-routes';
 import { designerNameplatePositions } from './walk-layout.js';
 
 export function bindNameplates(root, onOpen) {

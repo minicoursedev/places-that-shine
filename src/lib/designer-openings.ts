@@ -10,7 +10,7 @@ import { createWalkView } from '../../public/designers/js/walk.js';
 import { placeIslands, DESIGNER_BOOTH_WIDTH } from '../../public/designers/js/walk-layout.js';
 
 const catalogue = createCatalogue(data);
-export const hallCodes = catalogue.index.halls.map(h => h.code);
+export const openingAisles = catalogue.index.halls.flatMap(hall => hall.aisles.map(aisle => aisle.code));
 export const openingViews = [
   { key: 'wide', width: 1360, height: 840, bleedX: 640, bleedY: 320, media: '(orientation: landscape)' },
   { key: 'large', width: 2560, height: 1440, bleedX: 1280, bleedY: 500, media: '(orientation: landscape) and (min-width: 1800px)' },
@@ -28,19 +28,19 @@ for (const file of ['NotoSansTC-Regular.otf', 'NotoSansTC-Bold.otf']) {
   GlobalFonts.registerFromPath(join(root, 'scripts/fonts', file), 'Noto Sans TC');
 }
 
-function firstAisle(code: string) {
-  return catalogue.aisles.get(code + '01');
+export function openingFrameName(code: string, view: typeof openingViews[number]) {
+  return `${code.replace(/01$/, '')}-${view.key}`;
 }
 
 export function openingWorldStyle(code: string) {
-  const { islands } = firstAisle(code);
+  const { islands } = catalogue.aisles.get(code);
   const width = (landscape: boolean) => placeIslands(islands, landscape, DESIGNER_BOOTH_WIDTH).worldW;
   return `--portrait-width:${width(false)};--landscape-width:${width(true)}`;
 }
 
 type Artwork = Map<string, Awaited<ReturnType<typeof loadImage>>>;
 async function loadArtwork(code: string): Promise<Artwork> {
-  const aisle = firstAisle(code);
+  const aisle = catalogue.aisles.get(code);
   const urls = new Map<string, string>();
   for (const island of aisle.islands) {
     for (const booth of island.booths) {
@@ -59,34 +59,38 @@ async function loadArtwork(code: string): Promise<Artwork> {
   return images;
 }
 
-const pendingArt = new Map<string, Promise<Artwork>>();
-function artwork(code: string) {
-  if (!pendingArt.has(code)) pendingArt.set(code, loadArtwork(code));
-  return pendingArt.get(code)!;
-}
-
+let currentArt: { code: string; images: Artwork } | undefined;
 async function render(code: string, view: typeof openingViews[number]) {
-  const aisle = firstAisle(code);
-  const halls = catalogue.index.halls.filter(hall => isOshenHall(code) ? isOshenHall(hall.code) : hall.code === code);
+  const aisle = catalogue.aisles.get(code);
+  const halls = catalogue.index.halls.filter(hall => isOshenHall(aisle.hall) ? isOshenHall(hall.code) : hall.code === aisle.hall);
   const aisles = halls.flatMap(hall => hall.aisles.map(item => ({ code: item.code, hall })));
   const index = aisles.findIndex(item => item.code === aisle.code);
   const prev = aisles[index - 1], next = aisles[index + 1];
   const neighbors = {
     prev: prev?.code, next: next?.code,
-    prevLabel: prev && prev.hall.code !== code ? `← 往${prev.hall.name}` : '',
-    nextLabel: next && next.hall.code !== code ? `往${next.hall.name} →` : '',
+    prevLabel: prev && prev.hall.code !== aisle.hall ? `← 往${prev.hall.name}` : '',
+    nextLabel: next && next.hall.code !== aisle.hall ? `往${next.hall.name} →` : '',
   };
+  if (currentArt?.code !== code) currentArt = { code, images: await loadArtwork(code) };
   const canvas = createCanvas(1, 1);
-  const opening = { ...view, aisle, neighbors, palette, images: await artwork(code), Matrix: DOMMatrix, makeCanvas: () => createCanvas(1, 1) };
+  const opening = { ...view, aisle, neighbors, palette, images: currentArt.images, Matrix: DOMMatrix, makeCanvas: () => createCanvas(1, 1) };
   const bounds = createWalkView(canvas, { opening, visited: () => false, omitNameplates: true });
   const image = await canvas.encode('webp', 90);
+  canvas.width = canvas.height = 1;
   const version = createHash('sha256').update(image).digest('hex').slice(0, 12);
-  return { bounds, image, url: `/designers/openings/${code}-${view.key}.webp?v=${version}` };
+  return { bounds, image, url: `/designers/openings/${openingFrameName(code, view)}.webp?v=${version}` };
 }
 
 const frames = new Map<string, ReturnType<typeof render>>();
+// Both the HTML pages and image routes request frames. Keep only one full-size
+// drawing surface active, and retain only encoded WebPs for repeat requests.
+let nextRender = Promise.resolve();
 export function openingFrame(code: string, view: typeof openingViews[number]) {
-  const key = code + view.key;
-  if (!frames.has(key)) frames.set(key, render(code, view));
-  return frames.get(key)!;
+  const key = openingFrameName(code, view);
+  const cached = frames.get(key);
+  if (cached) return cached;
+  const frame = nextRender.then(() => render(code, view));
+  frames.set(key, frame);
+  nextRender = frame.then(() => {}, () => { frames.delete(key); });
+  return frame;
 }

@@ -2,11 +2,11 @@
 // Fill each card’s logo and works gallery as it scrolls into view.
 import { state, toast, findBoothIn } from '../state.js';
 import { loadSearch, loadAisle, aisleOfBooth } from '../data.js?v=20261124-profile-title';
-import { goToBooth } from '../nav.js?v=20261124-profile-title';
-import { openBooth } from './booth.js?v=20261124-profile-title';
+import { goToBooth } from '../nav.js?v=20261125-hall-routes';
+import { openBooth } from './booth.js?v=20261125-hall-routes';
 import { thumbnailUrl, retryOriginal } from '../images.js';
 import { loadProducts } from '../products.js?v=20261030-pinned-work';
-import { designerPath, designerWalkPath } from '../routes.js?v=20261124-profile-title';
+import { designerPath, designerSharePath, designerWalkPath } from '../routes.js?v=20261125-hall-routes';
 
 const PAGE = 60;
 const TYPES = ['漫畫', '插圖', '小說', '攝影', '有聲'];
@@ -158,7 +158,8 @@ export function mountList(container) {
   moreIO.observe(sentinel);
 
   function cardHtml(r) {
-    const path = esc(designerPath(r.designerId));
+    const path = esc(r.designer.primaryHall === r.hall
+      ? designerPath(r.designerId) : designerSharePath(r.designerId, r.hall));
     const name = esc(r.store);
     const workCount = r.designer?.productsUrl ? 0 : r.booth.works.length;
     const hasWorks = Boolean(r.booth.works.length || r.designer?.productsUrl);
@@ -306,7 +307,6 @@ export function mountList(container) {
     if (!card) return;
     const id = card.dataset.id;
     if (t.closest('.lc-walk')) {
-      document.querySelector('.modes button[data-mode="walk"]')?.click();
       goToBooth(id);
       return;
     }

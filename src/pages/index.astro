@@ -46,7 +46,7 @@ const fontText = [
       if (section === 'designers' && detail) {
         if (!work && ['walk', 'list', 'map'].includes(detail)) {
           target = designerHallPath;
-          if (detail !== 'walk') target += `#/${detail}`;
+          if (detail !== 'walk') target += `?view=${detail}`;
         } else {
           target += `${detail}/`;
           if (work) target += `works/${work}/`;

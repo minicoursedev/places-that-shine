@@ -3,17 +3,18 @@ import { catalogue } from '../lib/oshen-designers';
 import { designerPath, designerSharePath } from '../../public/designers/js/routes.js';
 import { designerNameplatePositions, NAMEPLATE_WIDTH, NORTH_NAME_Y, southNameY } from '../../public/designers/js/walk-layout.js';
 
-interface Props { hallCode?: string }
-const { hallCode } = Astro.props;
+interface Props { hallCode?: string; activeAisle?: string }
+const { hallCode, activeAisle } = Astro.props;
 const hall = catalogue.index.halls.find(hall => hall.code === hallCode);
+const aisles = hall?.aisles.filter(aisle => activeAisle === hall.aisles[0].code || aisle.code === activeAisle);
 ---
 
 <div id="designer-nameplates" style={`--name-width:${NAMEPLATE_WIDTH};--north-y:${NORTH_NAME_Y};--south-y:${southNameY(430)};--south-compact-y:${southNameY(354)}`}>
-  {hall?.aisles.map(({ code }, index) => {
+  {aisles?.map(({ code }) => {
     const aisle = catalogue.aisles.get(code);
     const portrait = designerNameplatePositions(aisle, false);
     const landscape = designerNameplatePositions(aisle, true);
-    return <div class="hall-opening-world" data-aisle={code} hidden={index !== 0}>
+    return <div class="hall-opening-world" data-aisle={code} hidden={code !== activeAisle}>
       {aisle.islands.flatMap(island => island.booths).map(booth => {
         const store = aisle.stores[booth.store];
         const link = store.primaryHall === hallCode ? designerPath(store.id) : designerSharePath(store.id, hallCode);

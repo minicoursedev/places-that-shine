@@ -1,7 +1,7 @@
 ---
 import { openingFrame, openingViews } from '../lib/designer-openings';
-interface Props { hallCode: string }
-const frames = await Promise.all(openingViews.map(async view => ({ ...view, ...await openingFrame(Astro.props.hallCode, view) })));
+interface Props { activeAisle: string }
+const frames = await Promise.all(openingViews.map(async view => ({ ...view, ...await openingFrame(Astro.props.activeAisle, view) })));
 // From the most specific media condition to the general fallback.
 const sources = [...frames].reverse();
 const css = frames.flatMap(frame => Object.entries(frame.bounds).map(([key, value]) => `--${frame.key}-${key}:${value}`)).join(';');

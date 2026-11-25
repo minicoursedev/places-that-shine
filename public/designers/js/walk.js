@@ -2,7 +2,7 @@
 // World: a horizontal aisle in world units. N booths on top (poster stand, table, cloth), S booths below (table seen from
 // above, covers lying flat). Redraws only while something moves or an image arrives.
 import { EXIT_W, DESIGNER_BOOTH_WIDTH, NAMEPLATE_WIDTH, NORTH_NAME_Y, placeIslands, southNameY } from './walk-layout.js';
-import { bindNameplates } from './walk-nameplates.js';
+import { bindNameplates } from './walk-nameplates.js?v=20261125-hall-routes';
 import { isVisited, toast } from './state.js';
 import { catFits, pickLine, praiseLine } from './cats.js?v=20261030-site-data';
 import { thumbnailUrl, retryOriginal } from './images.js';

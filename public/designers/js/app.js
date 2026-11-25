@@ -1,17 +1,18 @@
-// Boot and wiring: header, dock, walk view, dialogs, list and map pages, routes (#/walk/<aisle or booth>, #/list, #/map).
+// Exhibition navigation, walk view, dialogs and alternate views.
 import { state, on, emit, visitedCount, toast } from './state.js';
 import { loadIndex, aisleOfBooth, loadBoothForDesigner, isOshenHall } from './data.js?v=20261124-profile-title';
-import { goToAisle } from './nav.js?v=20261124-profile-title';
-import { createWalkView } from './walk.js?v=20261125-hall-nameplates';
+import { goToAisle } from './nav.js?v=20261125-hall-routes';
+import { createWalkView } from './walk.js?v=20261125-hall-routes';
 import { wireFloatingNav } from './floating-nav.js';
-import { openBooth } from './ui/booth.js?v=20261124-profile-title';
-import { mountMap } from './ui/map.js?v=20261124-profile-title';
-import { mountList } from './ui/list.js?v=20261124-profile-title';
+import { openBooth } from './ui/booth.js?v=20261125-hall-routes';
+import { mountMap } from './ui/map.js?v=20261125-hall-routes';
+import { mountList } from './ui/list.js?v=20261125-hall-routes';
 import { loadSchedule, isClosed, closeTagText, msLeft, lastOpenLabel } from './schedule.js?v=20261030-site-data';
 import { loadCats, loadChatter } from './cats.js?v=20261030-site-data';
 import { showClosed } from './ui/closed.js';
 
-import { designerHallRoot, designerWalkPath, hallPageForPath, updateDesignerMetadata, resolveDesignerRoute } from './routes.js?v=20261124-profile-title';
+import { designerHallRoot, designerViewPath, designerWalkPath, hallPageForPath, updateDesignerMetadata, resolveDesignerRoute } from './routes.js?v=20261125-hall-routes';
+import { legacyDesignerDestination } from './legacy-entry.js?v=20261125-hall-routes';
 
 const $ = id => document.getElementById(id);
 const BOOTH_ID = /^[A-Z]\d{2}-\d{2}$/;
@@ -38,24 +39,21 @@ function setMode(mode, opts = {}) {
       hall: isOshenHall(state.hallCode) ? undefined : state.hallCode,
       page: hallPageForPath(hallPath),
     });
-    history.replaceState(null, '', `${hallPath}#/list`);
-    updateDesignerMetadata();
   } else list?.hide();
   if (mode === 'map') {
     const firstVisit = !map; // The first visit shows the hall overview.
     map ||= mountMap($('stage-map'));
     map.show({ hall: state.hallCode, overview: firstVisit, ...opts });
-    history.replaceState(null, '', `${designerHallRoot(state.hallCode)}#/map`);
-    updateDesignerMetadata();
   }
   if (mode === 'walk') {
     walk?.resize();
-    const onWalkRoute = location.pathname === designerHallRoot(state.hallCode) && location.hash.startsWith('#/walk/');
-    if (!opts.keepUrl && state.aisleCode && !onWalkRoute) {
-      history.replaceState(null, '', designerWalkPath(state.aisleCode));
-      updateDesignerMetadata();
-    }
   }
+  if (opts.keepUrl || !state.aisleCode) return;
+  const path = mode === 'walk' ? designerWalkPath(state.aisleCode) : designerViewPath(state.aisleCode, mode);
+  // Re-selecting the walk tab keeps the current booth's shareable position.
+  if (mode === 'walk' && location.pathname === path && !location.hash && !new URLSearchParams(location.search).has('view')) return;
+  history.replaceState(null, '', path);
+  updateDesignerMetadata();
 }
 
 function updateStatus() {
@@ -80,6 +78,14 @@ function wireDialogs() {
 }
 
 async function boot() {
+  const incoming = new URL(location.href);
+  if (incoming.hash) {
+    const legacy = legacyDesignerDestination(incoming, hallPageForPath(incoming.pathname)?.code || 'O');
+    if (legacy && document.documentElement.dataset.designerProfile) {
+      incoming.hash = '';
+      history.replaceState(null, '', incoming);
+    } else if (legacy) history.replaceState(null, '', legacy);
+  }
   const entryUrl = location.href;
   wireDialogs();
   wireFloatingNav();
@@ -140,7 +146,7 @@ async function boot() {
   loadChatter().then(cfg => { if (cfg) walk.setChatter(cfg); });
 
   on('aisle', d => {
-    if (!d.background && $('stage-walk').hidden) setMode('walk');
+    if (!d.background && $('stage-walk').hidden) setMode('walk', { keepUrl: true });
     state.neighbors = { prev: d.prev, next: d.next };
     const prevHall = state.index.halls.find(hall => hall.code === d.prev?.[0] && hall.code !== d.data.hall);
     const nextHall = state.index.halls.find(hall => hall.code === d.next?.[0] && hall.code !== d.data.hall);
@@ -169,24 +175,26 @@ async function boot() {
   $('walk-canvas').addEventListener('pointerdown', hideHint, { once: true });
   window.addEventListener('keydown', hideHint, { once: true });
 
-  // Shared links use #/designer/<id>; resolve the current booth after catalogue updates.
-  // Also support #/walk/<aisle or booth>, #/walk/<booth>/open, #/list and #/map.
-  // Links pasted into the address bar arrive as hashchange.
-  const entryHall = hallPageForPath(location.pathname)?.code || 'O';
-  const first = state.index.halls.find(h => h.code === entryHall).aisles[0].code;
   async function route({ boot = false } = {}) {
     const url = new URL(location.href);
     const initialEntry = boot && url.href === entryUrl;
     const { mode, target, then, hall } = resolveDesignerRoute(url, { boot: initialEntry });
-    if (mode === 'list' || mode === 'map') { if (boot) await goToAisle(first); setMode(mode); return; }
+    const first = `${hallPageForPath(url.pathname)?.code || 'O'}01`;
+    if (mode !== 'designer' && $('dlg-booth').open) $('dlg-booth').close();
+    if (mode === 'list' || mode === 'map') {
+      const aisle = target || state.aisleCode || first;
+      if (aisle !== state.aisleCode) await goToAisle(aisle, { background: true });
+      setMode(mode);
+      return;
+    }
     let ok = false;
     if (mode === 'designer') {
       const initialProfile = initialEntry && document.documentElement.dataset.designerProfile === target;
       const boothId = await loadBoothForDesigner(target, hall);
       if (boothId) {
-        ok = await goToAisle(aisleOfBooth(boothId), { boothId, background: initialProfile });
+        ok = await goToAisle(aisleOfBooth(boothId), { boothId, background: true });
         if (ok) {
-          if (!initialProfile) setMode('walk');
+          if (!initialProfile) setMode('walk', { keepUrl: true });
           const opened = await openBooth(boothId, { keepHall: Boolean(hall), initialUrl: initialProfile ? url.href : null });
           if (opened && initialProfile) setMode('walk', { keepUrl: true });
           return;
@@ -198,13 +206,28 @@ async function boot() {
       if (initialProfile) return;
     } else if (target && BOOTH_ID.test(target)) {
       ok = await goToAisle(aisleOfBooth(target), { boothId: target });
-      if (ok && then === 'open') openBooth(target);
+      if (ok && then === 'open') { await openBooth(target); return; }
     }
     else if (target && AISLE_ID.test(target)) ok = await goToAisle(target);
     if (!ok && (boot || !state.aisle)) await goToAisle(first);
-    setMode('walk');
+    setMode('walk', { keepUrl: ok });
   }
-  window.addEventListener('hashchange', () => route());
+  // Switching the active profile's hall is a normal link, including back, forward
+  // and opening in a new tab. An ordinary click reuses the open dialog.
+  $('dlg-booth').addEventListener('click', event => {
+    const link = event.target.closest('a.bo-also-item');
+    if (!link || event.defaultPrevented || event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+    event.preventDefault();
+    if (link.href === location.href) return;
+    history.pushState(null, '', link.href);
+    route();
+  });
+  let popUrl;
+  window.addEventListener('popstate', () => { popUrl = location.href; route(); });
+  window.addEventListener('hashchange', event => {
+    if (event.newURL === location.href && event.newURL !== popUrl) route();
+    popUrl = null;
+  });
   await route({ boot: true });
   updateStatus();
   finishBoot();

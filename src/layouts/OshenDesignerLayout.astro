@@ -4,24 +4,25 @@ import { openingWorldStyle } from '../lib/designer-openings';
 import { boothHtml } from '../../public/designers/js/ui/booth-markup.js';
 import { designerMetadata, designerStructuredData, serializeStructuredData } from '../../public/designers/js/profile-seo.js';
 import { hallPageForCode } from '../../public/designers/js/hall-pages.js';
-import { designerSharePath } from '../../public/designers/js/routes.js';
+import { designerAisleTitle, designerSharePath, designerWalkPath } from '../../public/designers/js/routes.js';
 import DesignerHallOpening from '../components/DesignerHallOpening.astro';
 import DesignerNameplates from '../components/DesignerNameplates.astro';
 import WorkShareDialog from '../components/WorkShareDialog.astro';
 import PrivacyLink from '../components/PrivacyLink.astro';
-interface Props { designerId?: string; hallCode?: string; shareHall?: string }
+interface Props { designerId?: string; hallCode?: string; shareHall?: string; aisleCode?: string }
 const designer = designers.find(profile => profile.id === Astro.props.designerId);
 const shareHall = designer && Astro.props.shareHall;
 const shareBooth = shareHall ? designer.booth.hallBooths.find(booth => booth.aisle[0] === shareHall) : undefined;
 const hall = hallPageForCode(Astro.props.hallCode || shareHall || designer?.hallCode) || hallPageForCode('O')!;
-const openingAisle = designer ? undefined : catalogue.aisles.get(`${hall.code}01`);
+const openingAisle = designer ? undefined : catalogue.aisles.get(Astro.props.aisleCode || `${hall.code}01`);
 const firstBooth = openingAisle?.islands[0]?.booths[0];
-const listedDesigners = designer ? [] : designers.filter(profile => profile.hallCodes.includes(hall.code));
+const listedDesigners = designer || Astro.props.aisleCode ? [] : designers.filter(profile => profile.hallCodes.includes(hall.code));
 const metadata = designer && designerMetadata(designer.store, shareBooth?.hall);
-const title = metadata ? metadata.title : hall.title;
+const title = metadata ? metadata.title : designerAisleTitle(hall, openingAisle?.code);
 const shareTitle = metadata ? metadata.shareTitle : title;
 const description = metadata ? metadata.description : hall.description;
-const canonical = new URL(designer ? designerPath(designer.id) : hall.path, Astro.site).href;
+const pagePath = designer ? designerPath(designer.id) : designerWalkPath(openingAisle?.code);
+const canonical = new URL(pagePath, Astro.site).href;
 const shareUrl = designer && shareHall ? new URL(designerSharePath(designer.id, shareHall), Astro.site).href : canonical;
 const structuredData = designer && designerStructuredData(designer.store, designer.booth, canonical, new URL(designerRoot, Astro.site).href, metadata);
 const exhibitionImage = new URL('/designers/assets/exhibition-og.webp?v=20261123-webp', Astro.site).href;
@@ -89,9 +90,9 @@ const shareImageAlt = preview?.alt || '洋流設計師展逛攤畫面';
     </nav>
   </details>
 
-  <main class="stage" id="stage-walk" hidden={!!designer} data-opening={designer ? undefined : ''} style={!designer ? openingWorldStyle(hall.code) : undefined}>
-    {!designer && <DesignerHallOpening hallCode={hall.code} />}
-    <DesignerNameplates hallCode={designer ? undefined : hall.code} />
+  <main class="stage" id="stage-walk" hidden={!!designer} data-opening={designer ? undefined : ''} style={openingAisle && openingWorldStyle(openingAisle.code)}>
+    {openingAisle && <DesignerHallOpening activeAisle={openingAisle.code} />}
+    <DesignerNameplates hallCode={designer ? undefined : hall.code} activeAisle={openingAisle?.code} />
     <canvas id="walk-canvas" tabindex="0" aria-label="逛場子畫面：按住拖著小人走，點設計師即可查看介紹"></canvas>
     <button type="button" class="where" id="btn-where"><b id="where-hall">{openingAisle?.hallName || hall.name}</b><span id="where-aisle">{openingAisle && `${openingAisle.code} 走道`}</span><span class="where-switch">換館</span></button>
     <div class="status"><span class="tag tag-zone" id="status-zone">{openingAisle?.islands[0]?.zoneName}</span><span class="tag" id="status-count" hidden={!firstBooth}>已逛 0 / {catalogue.index.totals.booths} 攤</span></div>
@@ -108,7 +109,7 @@ const shareImageAlt = preview?.alt || '洋流設計師展逛攤畫面';
     <div class="ls-wrap">
       {designer ? (
         <article id="static-designer-profile" aria-label={designer.name} set:html={boothHtml(shareBooth ? { ...designer.booth, id: shareBooth.id } : designer.booth, designer.store, { profile: true, staticProfile: true })} />
-      ) : (
+      ) : !Astro.props.aisleCode && (
         <>
           <h1 class="ls-title">{hall.heading || hall.name}</h1>
           <p class="ls-intro">{hall.description}</p>
@@ -134,7 +135,7 @@ const shareImageAlt = preview?.alt || '洋流設計師展逛攤畫面';
 <dialog id="dlg-booth" class="dlg" aria-labelledby="booth-title"></dialog>
 <WorkShareDialog kind="designer" />
 <WorkShareDialog />
-<script is:inline type="module" src="/designers/js/app.js?v=20261125-hall-nameplates"></script>
+<script is:inline type="module" src="/designers/js/app.js?v=20261125-hall-routes"></script>
 </body>
 </html>
 

@@ -1,10 +1,10 @@
 import type { APIRoute } from 'astro';
 import { stores, storePath, categories, storeCategoryPath } from '../lib/oshen-stores';
-import { designers, designerPath, designerWorks } from '../lib/oshen-designers';
+import { catalogue as designerCatalogue, designers, designerPath, designerWorks } from '../lib/oshen-designers';
 import { catalogue, hallPath, stagePath } from '../lib/oshen-stage';
 import { designers as yilanDesigners, designerPath as yilanDesignerPath } from '../lib/yilan-market';
 import { eventEntries, storyEventPath } from '../lib/story-events';
-import { hallPages } from '../../public/designers/js/hall-pages.js';
+import { designerWalkPath } from '../../public/designers/js/routes.js';
 import { designerWorkPath } from '../../public/designers/js/work-links.js';
 
 const paths = [
@@ -14,7 +14,7 @@ const paths = [
   ...categories.map(storeCategoryPath),
   ...stores.map(({ id }) => storePath(id)),
   '/designers/',
-  ...hallPages.map(hall => hall.path),
+  ...designerCatalogue.index.halls.flatMap(hall => hall.aisles.map(aisle => designerWalkPath(aisle.code))),
   ...designers.map(designer => designerPath(designer.id)),
   ...designerWorks.map(({ designer, work }) => designerWorkPath(designer.id, work.id)),
   '/stage/',

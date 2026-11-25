@@ -1,5 +1,5 @@
 import { thumbnailUrl } from '../images.js';
-import { designerSharePath, designerWalkPath } from '../routes.js?v=20261124-profile-title';
+import { designerSharePath } from '../routes.js?v=20261125-hall-routes';
 import { designerWorkSharePath } from '../work-links.js?v=20261114-share-channels';
 import { browserOrigin } from '../config.js';
 
@@ -92,7 +92,7 @@ export function boothHtml(booth, store, { profile = false, staticProfile = false
   const hallsHtml = hallBooths.length > 1 ? `
     <section class="bo-also" aria-label="參展館別">
       <${subheading}>參展館別</${subheading}>
-      <div class="bo-also-list">${hallBooths.map(entry => `<a class="bo-also-item" href="${esc(designerWalkPath(entry.aisle, entry.id) + '/open')}">
+      <div class="bo-also-list">${hallBooths.map(entry => `<a class="bo-also-item" href="${esc(designerSharePath(booth.store, entry.aisle[0]))}">
         <span class="bo-also-where">${esc(entry.hall)}</span><span class="mono">${esc(entry.id)}</span></a>`).join('')}</div>
     </section>` : '';
 

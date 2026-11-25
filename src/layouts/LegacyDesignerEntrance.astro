@@ -13,7 +13,15 @@ const { target, title } = Astro.props;
     <title>{title}</title>
     <link rel="canonical" href={new URL(target, Astro.site)} />
     <script is:inline define:vars={{ target }}>
-      location.replace(target + location.search + location.hash);
+      const destination = new URL(target + location.search, location.origin);
+      if (location.hash) {
+        import('/designers/js/legacy-entry.js?v=20261125-hall-routes').then(({ legacyDesignerDestination }) => {
+          const hall = target === '/designers/halls/amateurs/' ? 'A' : 'O';
+          location.replace(legacyDesignerDestination(new URL(location.href), hall) || destination);
+        });
+      } else {
+        location.replace(destination);
+      }
     </script>
     <noscript><meta http-equiv="refresh" content={`0;url=${target}`} /></noscript>
   </head>

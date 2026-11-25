@@ -1,9 +1,9 @@
 import type { APIRoute } from 'astro';
-import { hallCodes, openingViews, openingFrame } from '../../../lib/designer-openings';
+import { openingAisles, openingViews, openingFrame, openingFrameName } from '../../../lib/designer-openings';
 
 export function getStaticPaths() {
-  return hallCodes.flatMap(code => openingViews.map(view => ({
-    params: { frame: `${code}-${view.key}` }, props: { code, view },
+  return openingAisles.flatMap(code => openingViews.map(view => ({
+    params: { frame: openingFrameName(code, view) }, props: { code, view },
   })));
 }
 

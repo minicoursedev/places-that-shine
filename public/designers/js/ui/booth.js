@@ -1,8 +1,8 @@
 // Designer dialog: profile, catalogue images, social links and share link.
 import { state, markVisited, findBoothIn } from '../state.js';
 import { loadAisle, aisleOfBooth } from '../data.js?v=20261124-profile-title';
-import { boothHtml, loadingHtml, failHtml } from './booth-markup.js?v=20261124-profile-title';
-import { designerHallRoot, designerPath, designerSharePath, designerWalkPath, resolveDesignerRoute, updateDesignerMetadata } from '../routes.js?v=20261124-profile-title';
+import { boothHtml, loadingHtml, failHtml } from './booth-markup.js?v=20261125-hall-routes';
+import { designerPath, designerSharePath, designerViewPath, designerWalkPath, resolveDesignerRoute, updateDesignerMetadata } from '../routes.js?v=20261125-hall-routes';
 import { retryOriginal } from '../images.js';
 import { loadProducts, sampleProducts } from '../products.js?v=20261030-pinned-work';
 
@@ -38,9 +38,9 @@ export async function openBooth(boothId, { keepHall = false, initialUrl = null }
   const token = ++openToken;
   current = null;
   // Direct profile pages already contain the author's complete static view.
-  if (!initialUrl) {
+  if (!initialUrl && !d.open) {
     d.innerHTML = loadingHtml(boothId);
-    if (!d.open) d.showModal();
+    d.showModal();
   }
 
   let aisle;
@@ -110,7 +110,7 @@ function wire() {
     if (closingInitialProfile || resolveDesignerRoute(new URL(location.href)).mode === 'designer') {
       const returnPath = document.getElementById('stage-list').hidden
         ? designerWalkPath(state.aisleCode)
-        : `${designerHallRoot(state.hallCode)}#/list`;
+        : designerViewPath(state.aisleCode, 'list');
       history.replaceState(null, '', returnPath);
       updateDesignerMetadata();
     }
