@@ -11698,6 +11698,41 @@
           "source": "https://www.threads.com/@minayuyu/post/DgNVfJ3E2Y8"
         }
       ]
+    },
+    {
+      "id": "roomatemeatpie",
+      "name": "肉餅和室友們",
+      "description": "這是個廢文居多的地方，歡迎追蹤IG，裡面都是漫畫，追一下不虧啦追啦追啦ʕ •ᴥ•ʔ",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@roomatemeatpie",
+        "ig": "https://www.instagram.com/roomatemeatpie/",
+        "web": ""
+      },
+      "logo": {
+        "url": "/media/library/roomatemeatpie/logo.webp?v=440c4c34294c8a28",
+        "source": "https://www.threads.com/@roomatemeatpie",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-26"
+      },
+      "productImages": [
+        {
+          "id": "roomatemeatpie-1",
+          "halls": [
+            "V"
+          ],
+          "title": "11/28 回家投票",
+          "alt": "灰白色和粉紅色的兩個動物角色抬著巨大的圈選章，一旁穿襯衫、繫領帶的藍色角色舉起雙手。上方以紅字寫著「11/28 回家投票」與「投給你要的生活～」。",
+          "caption": "投給你想要的生活～",
+          "url": "/media/library/roomatemeatpie/1.webp?v=0e89019ce1645aeb",
+          "source": "https://www.threads.com/@roomatemeatpie/post/DgNWC7UEkMS"
+        }
+      ]
     }
   ],
   "boothOrder": {
@@ -11776,7 +11811,8 @@
       "takoboom",
       "aray-comix",
       "daya-art",
-      "minayuyu"
+      "minayuyu",
+      "roomatemeatpie"
     ]
   }
 }
