@@ -394,8 +394,14 @@
       "productImages": [
         {
           "id": "axmonart-8",
-          "alt": "顧紫蝶 | 阿猛。AxMon手繪工作室 作品照片 1",
-          "url": "/media/library/axmonart/1.webp"
+          "alt": "灰色角色舉起印有圈選記號的選票，身旁的小夥伴也拿著選票。上方寫著「返鄉投票」，下方寫著「Taiwan 臺灣是一個國家 Taiwan」。",
+          "url": "/media/library/axmonart/1.webp",
+          "halls": [
+            "V"
+          ],
+          "source": "https://www.threads.com/@axmonart/post/DgMyrXXGA7Y/media",
+          "title": "返鄉投票",
+          "caption": "灰色角色舉起印有圈選記號的選票，身旁的小夥伴也拿著選票。上方寫著「返鄉投票」，下方寫著「Taiwan 臺灣是一個國家 Taiwan」。"
         },
         {
           "id": "axmonart-9",
@@ -476,6 +482,9 @@
           "alt": "顧紫蝶 | 阿猛。AxMon手繪工作室 新增作品照片 4",
           "url": "/media/library/axmonart/16.webp"
         }
+      ],
+      "additionalHalls": [
+        "V"
       ]
     },
     {
@@ -10402,6 +10411,111 @@
           "source": "https://www.threads.com/@jou502/post/DgMuMmkoBFr"
         }
       ]
+    },
+    {
+      "id": "tortorann13",
+      "name": "托托安",
+      "description": "托托安是遊戲實況主與繪畫創作者，在 YouTube 做實況，也在 Instagram 發表繪畫作品。",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@tortorann13",
+        "ig": "https://www.instagram.com/tortorann13/",
+        "web": "https://linktr.ee/tortorann13"
+      },
+      "logo": {
+        "url": "/media/library/tortorann13/logo.webp?v=e44561cd07490258",
+        "source": "https://www.threads.com/@tortorann13",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-26"
+      },
+      "productImages": [
+        {
+          "id": "tortorann13-1",
+          "halls": [
+            "V"
+          ],
+          "title": "11/28 來投票吧！",
+          "alt": "粉紅底插畫裡，三隻小水獺分別投下選票、拿著選票和在檯面上圈選。上方寫著 11/28，下方有「我大新北！」的字樣。",
+          "caption": "粉紅底插畫裡，三隻小水獺分別投下選票、拿著選票和在檯面上圈選。上方寫著 11/28，下方有「我大新北！」的字樣。",
+          "url": "/media/library/tortorann13/1.webp?v=1c4b81881b34f4e1",
+          "source": "https://www.threads.com/@tortorann13/post/DgMub3zmup1"
+        }
+      ]
+    },
+    {
+      "id": "buuuuu8le",
+      "name": "Bubble丁丁🍌畫原創BL ing",
+      "description": "喜歡畫畫的 Bubble 丁丁，正在創作原創 BL 漫畫。",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@buuuuu8le",
+        "ig": "",
+        "web": "https://portaly.cc/buuuuu8le"
+      },
+      "logo": {
+        "url": "/media/library/buuuuu8le/logo.webp?v=83de34e1911318aa",
+        "source": "https://www.threads.com/@buuuuu8le",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-26"
+      },
+      "productImages": [
+        {
+          "id": "buuuuu8le-1",
+          "halls": [
+            "V"
+          ],
+          "title": "11/28，要投票啦！",
+          "alt": "Bubble 丁丁提醒大家 11 月 28 日出門投票的插畫。",
+          "caption": "Bubble 丁丁想用溫暖的方式提醒大家，11 月 28 日記得出門投票。",
+          "url": "/media/library/buuuuu8le/1.webp?v=b6c9b1f1bdbe95b4",
+          "source": "https://www.threads.com/@buuuuu8le/post/DgMt5IFkyNf/media"
+        }
+      ]
+    },
+    {
+      "id": "dinner-illustration",
+      "name": "Dinner illustration",
+      "description": "從事插畫、書籍設計與平面設計。",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "https://www.facebook.com/DinnerIllustration",
+        "threads": "https://www.threads.com/@dinner_illustration",
+        "ig": "https://www.instagram.com/dinner_illustration/",
+        "web": ""
+      },
+      "logo": {
+        "url": "/media/library/dinner-illustration/logo.webp?v=d005ea6e33d5f010",
+        "source": "https://www.threads.com/@dinner_illustration",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-26"
+      },
+      "productImages": [
+        {
+          "id": "dinner-illustration-1",
+          "halls": [
+            "V"
+          ],
+          "title": "Go to VOTE for a better life",
+          "alt": "粉紅色海報上，兩個人帶著孩子與貓向前走。畫面寫著「Go to VOTE for a better life」和「11.28」。",
+          "caption": "粉紅色海報上，兩個人帶著孩子與貓向前走。畫面寫著「Go to VOTE for a better life」和「11.28」。",
+          "url": "/media/library/dinner-illustration/1.webp?v=2f358372262d52a3",
+          "source": "https://www.threads.com/@dinner_illustration/post/DgMzJWnFZhL/media"
+        }
+      ]
     }
   ],
   "boothOrder": {
@@ -10448,7 +10562,11 @@
       "ghost-john",
       "pawstodraw",
       "creative1shit2021",
-      "jou502"
+      "jou502",
+      "tortorann13",
+      "buuuuu8le",
+      "axmonart",
+      "dinner-illustration"
     ]
   }
 }
