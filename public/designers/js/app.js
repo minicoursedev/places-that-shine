@@ -1,12 +1,12 @@
 // Exhibition navigation, walk view, dialogs and alternate views.
 import { state, on, emit, visitedCount, toast } from './state.js';
-import { loadIndex, aisleOfBooth, loadBoothForDesigner, isOshenHall } from './data.js?v=20261126-vote-hall';
-import { goToAisle } from './nav.js?v=20261126-vote-hall';
+import { loadIndex, aisleOfBooth, loadBoothForDesigner, isOshenHall } from './data.js?v=20261126-booth-order';
+import { goToAisle } from './nav.js?v=20261126-booth-order';
 import { createWalkView } from './walk.js?v=20261125-hall-routes';
 import { wireFloatingNav } from './floating-nav.js';
-import { openBooth } from './ui/booth.js?v=20261126-vote-hall';
-import { mountMap } from './ui/map.js?v=20261126-vote-hall';
-import { mountList } from './ui/list.js?v=20261126-vote-hall';
+import { openBooth } from './ui/booth.js?v=20261126-booth-order';
+import { mountMap } from './ui/map.js?v=20261126-booth-order';
+import { mountList } from './ui/list.js?v=20261126-booth-order';
 import { loadSchedule, isClosed, closeTagText, msLeft, lastOpenLabel } from './schedule.js?v=20261030-site-data';
 import { loadCats, loadChatter } from './cats.js?v=20261030-site-data';
 import { showClosed } from './ui/closed.js';

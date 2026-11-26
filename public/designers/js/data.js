@@ -79,6 +79,12 @@ export function createCatalogue(data, { baseUrl = CONFIG.DESIGNERS_URL, ogImages
     const ZONE = HALL.zone;
     const hallName = HALL.year ? `${HALL.year} ${HALL.name}` : HALL.name;
     const hallDesigners = designers.filter(designer => designerHallCodes(designer).includes(HALL.code));
+    const boothOrder = data.boothOrder?.[HALL.code];
+    if (Array.isArray(boothOrder)) {
+      const rank = new Map([...new Set(boothOrder)].map((id, index) => [id, index]));
+      // Stable sorting keeps unlisted designers in catalogue order after the assigned booths.
+      hallDesigners.sort((a, b) => (rank.get(a.id) ?? rank.size) - (rank.get(b.id) ?? rank.size));
+    }
     const summaries = [];
     // Keep one empty aisle in each hall, including before its first author is listed.
     for (let start = 0; start < Math.max(1, hallDesigners.length); start += PER_AISLE) {

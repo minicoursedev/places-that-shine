@@ -1,6 +1,6 @@
 // Designer dialog: profile, catalogue images, social links and share link.
 import { state, markVisited, findBoothIn } from '../state.js';
-import { loadAisle, aisleOfBooth } from '../data.js?v=20261126-vote-hall';
+import { loadAisle, aisleOfBooth } from '../data.js?v=20261126-booth-order';
 import { boothHtml, loadingHtml, failHtml } from './booth-markup.js?v=20261125-hall-routes';
 import { designerPath, designerSharePath, designerViewPath, designerWalkPath, resolveDesignerRoute, updateDesignerMetadata } from '../routes.js?v=20261126-vote-hall';
 import { retryOriginal } from '../images.js';

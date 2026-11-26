@@ -63,3 +63,23 @@ test('the voting hall shows selected works while the original booth keeps its fu
   const separateCatalogue = readProducts({ designerId: 'artist', products }, 'artist', origin);
   assert.deepEqual(separateCatalogue.filter(work => workInHall(work, 'V')).map(work => work.id), ['vote']);
 });
+
+test('a hall can keep its published booth numbers when earlier designers join it', () => {
+  const designers = [
+    { id: 'first', name: 'First' },
+    { id: 'second', name: 'Second', additionalHalls: ['V'] },
+    { id: 'third', name: 'Third' },
+    { id: 'fourth', name: 'Fourth', additionalHalls: ['V'] },
+  ];
+  const booths = (catalogue, aisle) => catalogue.aisles.get(aisle).islands
+    .flatMap(island => island.booths.map(booth => [booth.id, booth.store]));
+  const original = createCatalogue({ designers });
+  const expanded = createCatalogue({
+    designers: designers.map(designer => ({ ...designer, additionalHalls: ['V'] })),
+    boothOrder: { V: ['second', 'fourth'] },
+  });
+  assert.deepEqual(booths(expanded, 'V01'), [
+    ...booths(original, 'V01'), ['V01-03', 'first'], ['V01-04', 'third'],
+  ]);
+  assert.deepEqual(booths(expanded, 'O01'), booths(original, 'O01'));
+});
