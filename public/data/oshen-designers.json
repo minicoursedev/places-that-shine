@@ -11663,6 +11663,41 @@
           "source": "https://www.threads.com/@takoboom__/post/DgNOBvAIDoS"
         }
       ]
+    },
+    {
+      "id": "minayuyu",
+      "name": "𝐋𝐢𝐭𝐭𝐥𝐞 𝐎𝐢𝐥 𝐀𝐫𝐭 / 小油画",
+      "description": "",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@minayuyu",
+        "ig": "https://www.instagram.com/minayuyu/",
+        "web": ""
+      },
+      "logo": {
+        "url": "/media/library/minayuyu/logo.webp?v=b100f1c98397dbdd",
+        "source": "https://www.threads.com/@minayuyu",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-26"
+      },
+      "productImages": [
+        {
+          "id": "minayuyu-1",
+          "halls": [
+            "V"
+          ],
+          "title": "11/28 回家投票",
+          "alt": "藍色星空下，黑貓和白貓坐在一艘黃色月牙船上。白貓抱著綠色的臺灣，黑貓舉起印有圈選符號的白旗，右側寫著「11/28 回家投票」和「GO VOTE」。",
+          "caption": "11/28 回家投票\n投給你想要的生活🫶🫶",
+          "url": "/media/library/minayuyu/1.webp?v=643941d9f75f87c8",
+          "source": "https://www.threads.com/@minayuyu/post/DgNVfJ3E2Y8"
+        }
+      ]
     }
   ],
   "boothOrder": {
@@ -11738,7 +11773,10 @@
       "thelittlebuby-illustration",
       "afayechen",
       "ethanyangtarou",
-      "takoboom"
+      "takoboom",
+      "aray-comix",
+      "daya-art",
+      "minayuyu"
     ]
   }
 }
