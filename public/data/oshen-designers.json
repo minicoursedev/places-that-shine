@@ -11780,6 +11780,41 @@
           "source": "https://www.threads.com/@axxycool/post/DgNWtjyk0bB"
         }
       ]
+    },
+    {
+      "id": "pukupuku-don",
+      "name": "PUKUPUKU Don-ぷくぷくドン",
+      "description": "⚾ 胖胖角頭的棒球迷日常\n🧡 統一獅／社畜／宅宅\n🎨 動插畫・LINE 貼圖 ↓",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@pukupuku_don",
+        "ig": "https://www.instagram.com/pukupuku_don/",
+        "web": ""
+      },
+      "logo": {
+        "url": "/media/library/pukupuku-don/logo.webp?v=46f9f9630cd84e1d",
+        "source": "https://www.threads.com/@pukupuku_don",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-26"
+      },
+      "productImages": [
+        {
+          "id": "pukupuku-don-1",
+          "halls": [
+            "V"
+          ],
+          "title": "VOTE",
+          "alt": "阿角雙手交叉坐在木船上，肩後露出一支圈選章，藍色波浪拍在船邊。畫面上方寫著「VOTE」，下方有作者的英文與日文署名。",
+          "caption": "大家禮拜6️⃣開開心心去投票",
+          "url": "/media/library/pukupuku-don/1.webp?v=2f2066436e4c5b9b",
+          "source": "https://www.threads.com/@pukupuku_don/post/DgNnVzAgb1x"
+        }
+      ]
     }
   ],
   "boothOrder": {
@@ -11860,7 +11895,8 @@
       "daya-art",
       "minayuyu",
       "roomatemeatpie",
-      "axxycool"
+      "axxycool",
+      "pukupuku-don"
     ]
   }
 }
