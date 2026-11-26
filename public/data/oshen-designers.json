@@ -10516,6 +10516,41 @@
           "source": "https://www.threads.com/@dinner_illustration/post/DgMzJWnFZhL/media"
         }
       ]
+    },
+    {
+      "id": "pump-pu",
+      "name": "Pu Pump",
+      "description": "Pu Pump 以「還有在畫圖的人」介紹自己，在 Threads 分享插畫與海報。",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@pump.pu",
+        "ig": "https://www.instagram.com/pump.pu/",
+        "web": ""
+      },
+      "logo": {
+        "url": "/media/library/pump-pu/logo.webp?v=fa463ef56b9dd3b0",
+        "source": "https://www.threads.com/@pump.pu",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-26"
+      },
+      "productImages": [
+        {
+          "id": "pump-pu-1",
+          "halls": [
+            "V"
+          ],
+          "title": "回家投票喔（物理）",
+          "alt": "在粉紅與淡黃綠相間的背景上，黑色人影跨步揮臂，巨大的圈選章佔據畫面上方。海報寫著「2026 11.28 回家投票」與「把票投給你要的生活」。",
+          "caption": "在粉紅與淡黃綠相間的背景上，黑色人影跨步揮臂，巨大的圈選章佔據畫面上方。海報寫著「2026 11.28 回家投票」與「把票投給你要的生活」。",
+          "url": "/media/library/pump-pu/1.webp?v=f2561c19a6737827",
+          "source": "https://www.threads.com/@pump.pu/post/DgM0QdkEv_F"
+        }
+      ]
     }
   ],
   "boothOrder": {
@@ -10566,7 +10601,8 @@
       "tortorann13",
       "buuuuu8le",
       "axmonart",
-      "dinner-illustration"
+      "dinner-illustration",
+      "pump-pu"
     ]
   }
 }
