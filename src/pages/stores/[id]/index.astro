@@ -1,7 +1,6 @@
 ---
 import { existsSync } from 'node:fs';
 import { resolve } from 'node:path';
-import sharp from 'sharp';
 import StoreShareDialog from '../../../components/StoreShareDialog.astro';
 import SiteLayout from '../../../layouts/SiteLayout.astro';
 import { storeMapPath } from '../../../lib/oshen-store-links.mjs';
@@ -47,7 +46,7 @@ function publicPhoto<T extends { url: URL }>(photo: T | undefined) {
   if (!photo) return;
   const { pathname, search } = photo.url;
   const file = resolve('public', `.${pathname}`);
-  if (existsSync(file)) return { ...photo, file, src: pathname + search };
+  if (existsSync(file)) return { ...photo, src: pathname + search };
 }
 
 const photos = store.photos.flatMap(photo => {
@@ -56,28 +55,8 @@ const photos = store.photos.flatMap(photo => {
 });
 const visits = store.visitRecords.map(record => ({ ...record, photo: publicPhoto(record.photo) }));
 const logo = publicPhoto(store.logo);
-const imageOptions = [
-  ...photos,
-  ...(logo ? [{ ...logo, alt: `${name}的頭像` }] : []),
-];
-let shareImage = {
-  url: new URL('/media/shining-stores-og-shadow-50.webp', Astro.site),
-  alt: '發光的店家',
-  width: 1200,
-  height: 630,
-  mime: 'image/webp',
-  large: true,
-};
-for (const photo of imageOptions) {
-  try {
-    const { width, height, format } = await sharp(photo.file).metadata();
-    if (!width || !height || width < 200 || height < 200 || !format) continue;
-    shareImage = { url: photo.url, alt: photo.alt, width, height, mime: `image/${format}`, large: width >= height * 1.5 };
-    break;
-  } catch {
-    // Try the next photo or keep the directory share image.
-  }
-}
+const shareImage = new URL('og.webp', canonical).href;
+const shareImageAlt = `${name}｜發光的店家`;
 
 const directions = new URL('https://www.google.com/maps/dir/');
 directions.searchParams.set('api', '1');
@@ -141,16 +120,16 @@ const structuredData = {
     <meta property="og:url" content={canonical.href} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={shareImage.url.href} />
-    <meta property="og:image:type" content={shareImage.mime} />
-    <meta property="og:image:width" content={shareImage.width} />
-    <meta property="og:image:height" content={shareImage.height} />
-    <meta property="og:image:alt" content={shareImage.alt} />
-    <meta name="twitter:card" content={shareImage.large ? 'summary_large_image' : 'summary'} />
+    <meta property="og:image" content={shareImage} />
+    <meta property="og:image:type" content="image/webp" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={shareImageAlt} />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={shareImage.url.href} />
-    <meta name="twitter:image:alt" content={shareImage.alt} />
+    <meta name="twitter:image" content={shareImage} />
+    <meta name="twitter:image:alt" content={shareImageAlt} />
     <script is:inline type="application/ld+json" set:html={serializeStructuredData(structuredData)} />
   </Fragment>
 
