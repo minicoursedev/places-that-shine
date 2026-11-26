@@ -11326,6 +11326,53 @@
           "source": "https://www.threads.com/@obie_rabbit/post/DgM9NU8ElPg/media"
         }
       ]
+    },
+    {
+      "id": "chibi-treasure",
+      "name": "迷你寶藏鋪 / 插畫(*˘︶˘*).。.:*♡",
+      "description": "店長貓毛是可愛動物蒐集家( ˘ ³˘)♡",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@chibi.treasure",
+        "ig": "https://www.instagram.com/chibi.treasure/",
+        "web": ""
+      },
+      "logo": {
+        "url": "/media/library/chibi-treasure/logo.webp?v=ab4b47a893b67be3",
+        "source": "https://www.threads.com/@chibi.treasure",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-26"
+      },
+      "productImages": [
+        {
+          "id": "chibi-treasure-1",
+          "halls": [
+            "V"
+          ],
+          "title": "回家投票",
+          "alt": "三隻貓前後坐在同一輛協力車上，中間的貓高舉一張印有圈選符號的選票。上方寫著「回家投票」與日期 2026.11.28。",
+          "caption": "\\ 禮拜六就是投票日啦~一起去投票吧~ /",
+          "url": "/media/library/chibi-treasure/1.webp?v=850da18490debbe5",
+          "source": "https://www.threads.com/@chibi.treasure/post/DgNA5XVk3Hl"
+        },
+        {
+          "id": "chibi-treasure-2",
+          "halls": [
+            "V"
+          ],
+          "title": "回家投票｜繪圖過程",
+          "alt": "影片從線條草稿開始，逐步畫出三人協力車、三隻貓、選票與車籃裡的小花，最後加上紅色的投票日期和標題。",
+          "caption": "從協力車的草稿到三隻貓一起出門，記錄〈回家投票〉的繪圖過程。",
+          "url": "/media/library/chibi-treasure/2.webp?v=9cd5fca0f3c912ab",
+          "source": "https://www.threads.com/@chibi.treasure/post/DgNA5XVk3Hl",
+          "videoUrl": "/media/library/chibi-treasure/2.mp4?v=426aa86fbf9c6265"
+        }
+      ]
     }
   ],
   "boothOrder": {
@@ -11394,7 +11441,8 @@
       "pingzitw",
       "carol-meat",
       "afoxtreetw",
-      "obie-rabbit"
+      "obie-rabbit",
+      "chibi-treasure"
     ]
   }
 }
