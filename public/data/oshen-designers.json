@@ -8342,6 +8342,40 @@
           "originalUrl": "https://instagram.fkhh1-1.fna.fbcdn.net/v/t51.82787-15/858365073_17995771773109108_7283369978320324004_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=108&_nc_map=urlgen_bucketless&ig_cache_key=NDAxMjc2ODkwNjk5NDIwMDk1Nw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMjg5NS5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=je_ZbBp1E34Q7kNvwHrqi3r&_nc_oc=Adpbp_GbsPMCJTFsWqNsNrUkcV94kRxRPzisaxlOLsh8y4IUTym-Xj2uFmdr1B1KhMU&_nc_zt=23&_nc_ht=instagram.fkhh1-1.fna&_nc_gid=A3o04Bq0yzPnW3PjzwIIYQ&_nc_ss=7930f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQRWgCg8USznTM3LrOcbqEbXOvv-_gsGsOl5adMnONX3fg&oe=6B0CE0F6"
         }
       ]
+    },
+    {
+      "id": "daya-art",
+      "name": "@daya_art",
+      "description": "Design｜Branding ｜Illustration｜Travel\n出版 《DAYA一筆一筆旅行插畫》",
+      "category": "設計師",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@daya_art",
+        "ig": "",
+        "web": ""
+      },
+      "logo": {
+        "url": "/media/library/daya-art/logo.webp?v=41b5764e30017971",
+        "source": "https://www.threads.com/@daya_art",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-26",
+        "note": "官方帳號 daya_art 的 hd_profile_pic_versions",
+        "originalUrl": "https://instagram.fkhh1-2.fna.fbcdn.net/v/t51.2885-19/357870460_6437356312997467_6110910536113356438_n.jpg?stp=dst-jpg_s320x320_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby42ODEuYzIifQ&_nc_ht=instagram.fkhh1-2.fna.fbcdn.net&_nc_cat=107&_nc_oc=Q6cZ2gF8_jNp1Dfalg3-Kqo8id95sC3voOHksHQpCuom7UVVpGzQseli2dxefUMqjy5dTJg&_nc_ohc=Pn6KaPCC4OwQ7kNvwGtZ9UR&_nc_gid=K6QArpmWwcFrMl_DXx3yag&edm=APs17CUBAAAA&ccb=7-5&_nc_ct=RQAsPBUCFQIAAAA&oh=00_AQRGTKdwi1JPIRbCfFalZezgD3nHdPn_7hgXSb3-nKMthQ&oe=6B0D95B7&_nc_sid=10d13b"
+      },
+      "productImages": [
+        {
+          "url": "/media/library/daya-art/1.webp?v=c3b5fd3fffe71769",
+          "source": "https://www.threads.com/@daya_art/post/DgKoCAcj6_0",
+          "alt": "@daya_art 的 Threads 作品",
+          "note": "使用者指定的 Threads 原貼文代表圖。",
+          "checkedAt": "2026-11-26",
+          "id": "work-d1cf4b905fe240919a799770fb3ad10a",
+          "originalUrl": "https://instagram.fkhh1-2.fna.fbcdn.net/v/t51.82787-15/928649496_17997391026111641_8229988888324193439_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=108&_nc_map=urlgen_bucketless&ig_cache_key=NDAzODIwOTM3NTg3NTkwNzQxMw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNzUwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=FxIEH6SwRlQQ7kNvwEukQmR&_nc_oc=AdqmOJyEZyR0Lt1TFz9sGWrrgYGjfCI_9lrRSHECTw5zkcv4btf1iRluauTZColQiuk&_nc_zt=23&_nc_ht=instagram.fkhh1-2.fna&_nc_gid=71R0njjCoZPBv6dbai0Daw&_nc_ss=7930f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQS0UQPjXgnDf4gFSbSJFVBg5RiFiQ0hO7w_us96Qjg2hw&oe=6B0D955A"
+        }
+      ]
     }
   ]
 }
