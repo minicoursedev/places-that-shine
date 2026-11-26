@@ -10958,6 +10958,63 @@
           "source": "https://www.threads.com/@tominagasinpei_/post/DgLjXGTEq6N"
         }
       ]
+    },
+    {
+      "id": "weareasimp-dog",
+      "name": "快樂小狗",
+      "description": "快樂小狗與他的老鼠室友痞德",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@weareasimp_dog",
+        "ig": "https://www.instagram.com/weareasimp_dog/",
+        "web": ""
+      },
+      "logo": {
+        "url": "/media/library/weareasimp-dog/logo.webp?v=c9304c7b6c06e83d",
+        "source": "https://www.threads.com/@weareasimp_dog",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-26"
+      },
+      "productImages": [
+        {
+          "id": "weareasimp-dog-1",
+          "halls": [
+            "V"
+          ],
+          "title": "11.28 回家投票",
+          "alt": "小狗背對畫面，舉著沾了紅色顏料的刷子。黑框裡用紅色大字寫著「回家投票」與日期 11.28。",
+          "caption": "11.28小狗跟痞德要回家投票",
+          "url": "/media/library/weareasimp-dog/1.webp?v=ee0c70e2f7b2bd11",
+          "source": "https://www.threads.com/@weareasimp_dog/post/DgMr2y8mtaX"
+        },
+        {
+          "id": "weareasimp-dog-2",
+          "halls": [
+            "V"
+          ],
+          "title": "痞德投票",
+          "alt": "灰色老鼠痞德把印有紅色圈選符號的選票投入票箱。箱上寫著「VOTE」，左上角寫著「11.28」。",
+          "caption": "痞德把選票投入寫著「VOTE」的票箱。",
+          "url": "/media/library/weareasimp-dog/2.webp?v=d8956dba47383553",
+          "source": "https://www.threads.com/@weareasimp_dog/post/DgMr2y8mtaX"
+        },
+        {
+          "id": "weareasimp-dog-3",
+          "halls": [
+            "V"
+          ],
+          "title": "痞德與手機",
+          "alt": "痞德一手比出噓聲手勢，另一手下方畫著一支手機，螢幕上是紅色電源符號。",
+          "caption": "進入投票所前，手機要記得關機ㄛ！",
+          "url": "/media/library/weareasimp-dog/3.webp?v=0b47233ce9dd03ff",
+          "source": "https://www.threads.com/@weareasimp_dog/post/DgMr2y8mtaX"
+        }
+      ]
     }
   ],
   "boothOrder": {
@@ -11019,7 +11076,8 @@
       "yumaooo-tw",
       "just-1-haha",
       "tominagasinpei",
-      "clairehandwriting"
+      "clairehandwriting",
+      "weareasimp-dog"
     ]
   }
 }
