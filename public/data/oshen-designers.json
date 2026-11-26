@@ -11580,6 +11580,52 @@
           "source": "https://www.threads.com/@ethanyangtarou/post/DgNF_OflGmO"
         }
       ]
+    },
+    {
+      "id": "takoboom",
+      "name": "TAKOBOOM",
+      "description": "Designer / Taiwan\n來自高雄的章魚設計師\n✉️ takoboom.studio@gmail.com",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@takoboom__",
+        "ig": "https://www.instagram.com/takoboom__/",
+        "web": ""
+      },
+      "logo": {
+        "url": "/media/library/takoboom/logo.webp?v=cfdd091c8c87c242",
+        "source": "https://www.threads.com/@takoboom__",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-26"
+      },
+      "productImages": [
+        {
+          "id": "takoboom-1",
+          "halls": [
+            "V"
+          ],
+          "title": "VOTE FOR THE LIFE YOU WANT",
+          "alt": "橘紅色海報上，藍色角色舉起寫著「TAIWAN」的圈選章。上方標示「11/28」，底部是白色大字「VOTE」。",
+          "caption": "VOTE FOR THE LIFE YOU WANT",
+          "url": "/media/library/takoboom/1.webp?v=a6b944b9acbe7e28",
+          "source": "https://www.threads.com/@takoboom__/post/DgNOBvAIDoS"
+        },
+        {
+          "id": "takoboom-2",
+          "halls": [
+            "V"
+          ],
+          "title": "回家投給想要的生活",
+          "alt": "灰底中央以黑色的「回家投給想要的生活」環繞橘紅色記號，旁邊點綴一滴藍色水滴，下方寫著「VOTE FOR THE LIFE YOU WANT」。",
+          "caption": "回家投給想要的生活！",
+          "url": "/media/library/takoboom/2.webp?v=731a19d17dcb4b42",
+          "source": "https://www.threads.com/@takoboom__/post/DgNOBvAIDoS"
+        }
+      ]
     }
   ],
   "boothOrder": {
@@ -11654,7 +11700,8 @@
       "sosokusonia",
       "thelittlebuby-illustration",
       "afayechen",
-      "ethanyangtarou"
+      "ethanyangtarou",
+      "takoboom"
     ]
   }
 }
