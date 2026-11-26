@@ -6446,6 +6446,68 @@
       "giftStatus": "可能有小物",
       "verification": false,
       "disabled": false
+    },
+    {
+      "id": "boven-magazine-library-taipei",
+      "name": "boven 雜誌圖書館（台北館）",
+      "address": "臺北市大安區復興南路一段107巷5弄18號B1",
+      "addressSource": "https://boven.my.canva.site/boven-magazine-library",
+      "category": "書店",
+      "latlng": {
+        "lat": 25.044166411431,
+        "lng": 121.54518464077
+      },
+      "coordinateSource": "https://raw.githubusercontent.com/zhengda/taiwan-address-data/master/roads/63-%E5%BE%A9%E8%88%88%E5%8D%97%E8%B7%AF.csv",
+      "coordinateNote": "OpenStreetMap 未取得可核對的門牌點。採用標示源自 TGOS 的公開門牌資料，取臺北市大安區光武里22鄰復興南路一段107巷5弄18號的 X（經度）與 Y（緯度）。此為與一樓咖啡館共用的門牌定位點，非地下室入口實測點。",
+      "visitNote": "提供單日付費閱覽、會員借閱及精選刊物販售。圖書館電話：02-2778-7526。",
+      "social": {
+        "facebook": "https://www.facebook.com/boven437",
+        "instagram": "https://www.instagram.com/mag.boven/",
+        "threads": "https://www.threads.com/@mag.boven",
+        "website": "https://boven.my.canva.site/boven-magazine-library"
+      },
+      "shopPhoto": {
+        "url": "./media/library/boven-magazine-library-taipei/logo.webp?v=577e34b6d4ce5b83",
+        "source": "https://www.threads.com/@mag.boven",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-26",
+        "note": "官方帳號 mag.boven 的 hd_profile_pic_versions"
+      },
+      "giftStatus": "可能有小物",
+      "verification": false,
+      "disabled": false
+    },
+    {
+      "id": "boven-cafe-taipei",
+      "name": "boven cafe",
+      "address": "臺北市大安區復興南路一段107巷5弄18號1樓",
+      "addressSource": "https://boven.my.canva.site/boven-magazine-library",
+      "category": "咖啡廳",
+      "latlng": {
+        "lat": 25.044166411431,
+        "lng": 121.54518464077
+      },
+      "coordinateSource": "https://raw.githubusercontent.com/zhengda/taiwan-address-data/master/roads/63-%E5%BE%A9%E8%88%88%E5%8D%97%E8%B7%AF.csv",
+      "coordinateNote": "OpenStreetMap 未取得可核對的門牌點。採用標示源自 TGOS 的公開門牌資料，取臺北市大安區光武里22鄰復興南路一段107巷5弄18號的 X（經度）與 Y（緯度）。此為與地下室圖書館共用的門牌定位點，非咖啡館入口實測點。",
+      "visitNote": "一樓的咖啡與策展空間，不提供訂位。咖啡館電話：02-2778-8202。",
+      "social": {
+        "facebook": "https://www.facebook.com/boven437",
+        "instagram": "https://www.instagram.com/mag.boven/",
+        "threads": "https://www.threads.com/@mag.boven",
+        "website": "https://boven.my.canva.site/boven-magazine-library"
+      },
+      "shopPhoto": {
+        "url": "./media/library/boven-cafe-taipei/logo.webp?v=577e34b6d4ce5b83",
+        "source": "https://www.threads.com/@mag.boven",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-26",
+        "note": "官方帳號 mag.boven 的 hd_profile_pic_versions"
+      },
+      "giftStatus": "可能有小物",
+      "verification": false,
+      "disabled": false
     }
   ]
 }
