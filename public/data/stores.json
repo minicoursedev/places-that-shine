@@ -6415,6 +6415,36 @@
       },
       "coordinateSource": "https://raw.githubusercontent.com/zhengda/taiwan-address-data/master/roads/65-%E6%80%9D%E6%BA%90%E8%B7%AF.csv",
       "verification": false
+    },
+    {
+      "id": "seeu-coffee",
+      "name": "瞳咖啡 See You Coffee",
+      "address": "臺北市大同區迪化街一段21號1樓1307室（永樂市場）",
+      "addressSource": "https://www.ubereats.com/tw/store/%E7%9E%B3%E5%92%96%E5%95%A1-see-you-coffee/g3AvypbNWLytDo1YSpPtBQ",
+      "category": "咖啡廳",
+      "latlng": {
+        "lat": 25.05495,
+        "lng": 121.51053
+      },
+      "coordinateSource": "https://mapcarta.com/W201268687",
+      "coordinateNote": "OpenStreetMap 的地址查詢未能直接取得結果；採用 Mapcarta 依 OpenStreetMap way 201268687 所列的永樂市場座標。市場門牌為大同區迪化街一段21號，與臺北市市場處及店家資料相符；此為市場建物定位，非1307室攤位實測點。",
+      "visitNote": "位於永樂市場1樓1307室，供應手沖咖啡、義式咖啡及手工布丁，另售咖啡豆。",
+      "social": {
+        "facebook": "https://www.facebook.com/seeucoffee/",
+        "instagram": "https://www.instagram.com/seeu_coffee/",
+        "threads": "https://www.threads.com/@seeu_coffee"
+      },
+      "shopPhoto": {
+        "url": "./media/library/seeu-coffee/logo.webp?v=8ec20d21f5abb57e",
+        "source": "https://www.threads.com/@seeu_coffee",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-26",
+        "note": "官方帳號 seeu_coffee 的 hd_profile_pic_versions"
+      },
+      "giftStatus": "可能有小物",
+      "verification": false,
+      "disabled": false
     }
   ]
 }
