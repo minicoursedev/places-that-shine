@@ -6006,6 +6006,415 @@
       "giftStatus": "可能有小物",
       "verification": false,
       "disabled": false
+    },
+    {
+      "id": "utopia-taipei",
+      "name": "西門烏托邦 UTOPIA TAIPEI",
+      "address": "臺北市萬華區昆明街109號2樓之5",
+      "addressSource": "https://storemap.puma.taipei/",
+      "category": "酒吧",
+      "latlng": {
+        "lat": 25.04214846,
+        "lng": 121.5047343
+      },
+      "coordinateSource": "https://data.taipei/dataset/detail?id=b7c8e724-1e98-45ee-a0bd-f3840623ed97",
+      "verification": false
+    },
+    {
+      "id": "hsieh-chih-chien-campaign",
+      "name": "新林里里長候選人 5 謝誌謙競選辦事處",
+      "address": "新北市林口區文化北路一段390號",
+      "addressSource": "https://newlinkou.com/",
+      "category": "其它",
+      "serviceType": "競選辦事處",
+      "latlng": {
+        "lat": 25.0749588512,
+        "lng": 121.36319356877
+      },
+      "coordinateSource": "https://raw.githubusercontent.com/zhengda/taiwan-address-data/master/roads/65-%E6%96%87%E5%8C%96%E5%8C%97%E8%B7%AF.csv",
+      "verification": false
+    },
+    {
+      "id": "haoke250",
+      "name": "好客食堂手作一夜干",
+      "address": "臺北市萬華區莒光路250號",
+      "addressSource": "https://www.bopiliao.taipei/Event_News/Detail/242",
+      "category": "正餐",
+      "latlng": {
+        "lat": 25.03130753,
+        "lng": 121.49964642
+      },
+      "coordinateSource": "https://data.taipei/dataset/detail?id=b7c8e724-1e98-45ee-a0bd-f3840623ed97",
+      "verification": false
+    },
+    {
+      "id": "hooah-jiangcui",
+      "name": "HOOAH 運動俱樂部 江翠店",
+      "address": "新北市板橋區松柏街83號1樓之2",
+      "category": "日常生活",
+      "serviceType": "運動教室",
+      "latlng": {
+        "lat": 25.030812750608,
+        "lng": 121.47667761192
+      },
+      "coordinateSource": "https://raw.githubusercontent.com/zhengda/taiwan-address-data/master/roads/65-%E6%9D%BE%E6%9F%8F%E8%A1%97.csv",
+      "verification": false,
+      "visitNote": "分店公告指引從松柏街83號獨立樓梯上2樓。"
+    },
+    {
+      "id": "miaozai-bar",
+      "name": "喵仔間",
+      "address": "臺北市大同區興城街1-3號",
+      "addressSource": "https://storemap.puma.taipei/",
+      "category": "酒吧",
+      "latlng": {
+        "lat": 25.05756147,
+        "lng": 121.51784908
+      },
+      "coordinateSource": "https://data.taipei/dataset/detail?id=b7c8e724-1e98-45ee-a0bd-f3840623ed97",
+      "verification": false
+    },
+    {
+      "id": "chishang-drink",
+      "name": "喫上飲",
+      "address": "臺北市大安區建國南路一段36號",
+      "category": "甜點飲料",
+      "latlng": {
+        "lat": 25.04412816,
+        "lng": 121.536234
+      },
+      "coordinateSource": "https://data.taipei/dataset/detail?id=b7c8e724-1e98-45ee-a0bd-f3840623ed97",
+      "verification": false
+    },
+    {
+      "id": "crater-lounge",
+      "name": "火山口 Crater Lounge",
+      "address": "臺北市萬華區貴陽街二段50號1樓",
+      "addressSource": "https://www.pickoneplace.com/index.php/area/9734",
+      "category": "酒吧",
+      "latlng": {
+        "lat": 25.03958832,
+        "lng": 121.50469336
+      },
+      "coordinateSource": "https://data.taipei/dataset/detail?id=b7c8e724-1e98-45ee-a0bd-f3840623ed97",
+      "verification": false
+    },
+    {
+      "id": "achun-2333",
+      "name": "SSS六星集車體美研",
+      "address": "新北市永和區永亨路43號",
+      "category": "其它",
+      "serviceType": "車體美容工作室",
+      "latlng": {
+        "lat": 25.006371340582,
+        "lng": 121.52002135219
+      },
+      "coordinateSource": "https://raw.githubusercontent.com/zhengda/taiwan-address-data/master/roads/65-%E6%B0%B8%E4%BA%A8%E8%B7%AF.csv",
+      "verification": false
+    },
+    {
+      "id": "chi-nan-church",
+      "name": "台灣基督長老教會濟南教會",
+      "address": "臺北市中正區幸福里中山南路3號",
+      "addressSource": "https://taiwangods.moi.gov.tw/html/cultural/3_0011.aspx?i=103",
+      "category": "其它",
+      "serviceType": "長老教會",
+      "latlng": {
+        "lat": 25.04347798,
+        "lng": 121.51940674
+      },
+      "coordinateSource": "https://data.taipei/dataset/detail?id=b7c8e724-1e98-45ee-a0bd-f3840623ed97",
+      "verification": false
+    },
+    {
+      "id": "goodman-home-to",
+      "name": "好人好室咖啡廳／好土書店",
+      "address": "臺北市中山區中山北路二段72巷18-1號3樓",
+      "addressSource": "https://www.taipeiface.com/2024/events/preview/975.html",
+      "category": "書店",
+      "latlng": {
+        "lat": 25.05699893,
+        "lng": 121.52159276
+      },
+      "coordinateSource": "https://data.taipei/dataset/detail?id=b7c8e724-1e98-45ee-a0bd-f3840623ed97",
+      "verification": false,
+      "visitNote": "好人好室位於中山北路二段72巷18-1號3樓。好土書店位於同巷20號1樓。"
+    },
+    {
+      "id": "gashapon-duke",
+      "name": "扭蛋公爵扭蛋專門店",
+      "address": "臺北市中正區忠孝東路一段108號（華山市場2樓第2攤）",
+      "addressSource": "https://www.tcma.gov.taipei/News_Content.aspx?n=1A4C7120ABFD0F9F&s=BE4E7B3323C487C2&sms=26C5BF03E7963F4E",
+      "category": "選物雜貨",
+      "latlng": {
+        "lat": 25.04425404,
+        "lng": 121.52477266
+      },
+      "coordinateSource": "https://data.taipei/dataset/detail?id=b7c8e724-1e98-45ee-a0bd-f3840623ed97",
+      "verification": false
+    },
+    {
+      "id": "icegyaru",
+      "name": "Ice Gyaru 霜淇淋專門店",
+      "address": "臺北市大安區和平東路一段10-1號1樓",
+      "addressSource": "https://www.instagram.com/icegyaru/",
+      "category": "甜點飲料",
+      "latlng": {
+        "lat": 25.02682411,
+        "lng": 121.5233259
+      },
+      "coordinateSource": "https://data.taipei/dataset/detail?id=b7c8e724-1e98-45ee-a0bd-f3840623ed97",
+      "verification": false
+    },
+    {
+      "id": "rainma-cafe",
+      "name": "Rainma Cafe",
+      "address": "臺北市信義區光復南路447-24號",
+      "addressSource": "https://www.instagram.com/rainma_bistro/",
+      "category": "正餐",
+      "latlng": {
+        "lat": 25.03522734,
+        "lng": 121.55816476
+      },
+      "coordinateSource": "https://data.taipei/dataset/detail?id=b7c8e724-1e98-45ee-a0bd-f3840623ed97",
+      "verification": false
+    },
+    {
+      "id": "boven-magazine-library",
+      "name": "boven 雜誌圖書館",
+      "address": "臺北市大安區復興南路一段107巷5弄18號B1",
+      "addressSource": "https://boven.my.canva.site/boven-magazine-library",
+      "category": "書店",
+      "latlng": {
+        "lat": 25.04416641,
+        "lng": 121.54518464
+      },
+      "coordinateSource": "https://data.taipei/dataset/detail?id=b7c8e724-1e98-45ee-a0bd-f3840623ed97",
+      "verification": false,
+      "visitNote": "B1 為雜誌圖書館，1F 為咖啡館。"
+    },
+    {
+      "id": "nekko-bar",
+      "name": "貓吧",
+      "address": "臺北市大安區德安里四維路14巷3號",
+      "addressSource": "https://storemap.puma.taipei/",
+      "category": "酒吧",
+      "latlng": {
+        "lat": 25.03687616,
+        "lng": 121.54787224
+      },
+      "coordinateSource": "https://data.taipei/dataset/detail?id=b7c8e724-1e98-45ee-a0bd-f3840623ed97",
+      "verification": false
+    },
+    {
+      "id": "adult-milk",
+      "name": "大人牛乳",
+      "address": "臺北市中山區伊通街87巷4-1號",
+      "addressSource": "https://storemap.puma.taipei/",
+      "category": "甜點飲料",
+      "latlng": {
+        "lat": 25.05286295,
+        "lng": 121.53511979
+      },
+      "coordinateSource": "https://data.taipei/dataset/detail?id=b7c8e724-1e98-45ee-a0bd-f3840623ed97",
+      "verification": false
+    },
+    {
+      "id": "bubu-jinwu",
+      "name": "BUBU 金屋藏車食堂",
+      "address": "臺北市士林區中山北路七段140巷1號1樓",
+      "addressSource": "https://storemap.puma.taipei/",
+      "category": "正餐",
+      "latlng": {
+        "lat": 25.12313094,
+        "lng": 121.5323949
+      },
+      "coordinateSource": "https://data.taipei/dataset/detail?id=b7c8e724-1e98-45ee-a0bd-f3840623ed97",
+      "verification": false
+    },
+    {
+      "id": "ka-lah-a",
+      "name": "家吶子台式居酒屋",
+      "address": "臺北市萬華區東園街68-4號",
+      "addressSource": "https://ka-lah-a.com.tw/location",
+      "category": "正餐",
+      "latlng": {
+        "lat": 25.02565858,
+        "lng": 121.49651601
+      },
+      "coordinateSource": "https://data.taipei/dataset/detail?id=b7c8e724-1e98-45ee-a0bd-f3840623ed97",
+      "verification": false
+    },
+    {
+      "id": "yanshi-bar",
+      "name": "厭世會社",
+      "address": "臺北市中正區羅斯福路四段40巷1-2號1樓",
+      "addressSource": "https://storemap.puma.taipei/",
+      "category": "酒吧",
+      "latlng": {
+        "lat": 25.01507788,
+        "lng": 121.53327079
+      },
+      "coordinateSource": "https://data.taipei/dataset/detail?id=b7c8e724-1e98-45ee-a0bd-f3840623ed97",
+      "verification": false
+    },
+    {
+      "id": "mimiice",
+      "name": "冰斗喫甜",
+      "address": "臺北市文山區萬年里羅斯福路五段192巷33號1樓",
+      "addressSource": "https://mimiice.com/",
+      "category": "甜點飲料",
+      "latlng": {
+        "lat": 25.00339284,
+        "lng": 121.53679259
+      },
+      "coordinateSource": "https://data.taipei/dataset/detail?id=b7c8e724-1e98-45ee-a0bd-f3840623ed97",
+      "verification": false
+    },
+    {
+      "id": "one-way-bali",
+      "name": "左岸單行道",
+      "address": "新北市八里區觀海大道97號",
+      "addressSource": "https://rayvoltbike.tw/tw/store/",
+      "category": "日常生活",
+      "serviceType": "戶外運動俱樂部",
+      "latlng": {
+        "lat": 25.1617343,
+        "lng": 121.4263819
+      },
+      "coordinateSource": "https://www.google.com/maps?cid=6018050053999044819",
+      "verification": false
+    },
+    {
+      "id": "flash-grid-nangang",
+      "name": "閃動格子南港旗艦店",
+      "address": "臺北市南港區中南里市民大道八段360號1樓",
+      "addressSource": "https://www.cybercube.com.tw/zh_TW/stores/nangang",
+      "category": "正餐",
+      "latlng": {
+        "lat": 25.0531365,
+        "lng": 121.6083845
+      },
+      "coordinateSource": "https://www.google.com/maps?cid=18050495265590730044",
+      "verification": false
+    },
+    {
+      "id": "shinpaku-sake-bar",
+      "name": "心白 shinpaku sake bar",
+      "address": "臺北市中山區松江路372巷28號1樓",
+      "addressSource": "https://storemap.puma.taipei/",
+      "category": "酒吧",
+      "latlng": {
+        "lat": 25.06302316,
+        "lng": 121.53199267
+      },
+      "coordinateSource": "https://data.taipei/dataset/detail?id=b7c8e724-1e98-45ee-a0bd-f3840623ed97",
+      "verification": false
+    },
+    {
+      "id": "starto",
+      "name": "STARTO開始吧",
+      "address": "新北市淡水區淡金路二段507號1樓",
+      "category": "正餐",
+      "latlng": {
+        "lat": 25.189846589527,
+        "lng": 121.44661654977
+      },
+      "coordinateSource": "https://raw.githubusercontent.com/zhengda/taiwan-address-data/master/roads/65-%E6%B7%A1%E9%87%91%E8%B7%AF.csv",
+      "verification": false
+    },
+    {
+      "id": "lele-boardgame",
+      "name": "樂樂桌遊休閒館",
+      "address": "臺北市文山區興隆路三段127號1樓",
+      "addressSource": "https://storemap.puma.taipei/",
+      "category": "桌遊",
+      "latlng": {
+        "lat": 24.9985563,
+        "lng": 121.55857407
+      },
+      "coordinateSource": "https://data.taipei/dataset/detail?id=b7c8e724-1e98-45ee-a0bd-f3840623ed97",
+      "verification": false
+    },
+    {
+      "id": "hello-study",
+      "name": "Hello Study 楓禾留學",
+      "address": "臺北市大安區信義路四段208號9樓",
+      "addressSource": "https://www.hellostudy.com.tw/about/location/",
+      "category": "其它",
+      "serviceType": "留學代辦",
+      "latlng": {
+        "lat": 25.03300439,
+        "lng": 121.55186502
+      },
+      "coordinateSource": "https://data.taipei/dataset/detail?id=b7c8e724-1e98-45ee-a0bd-f3840623ed97",
+      "verification": false
+    },
+    {
+      "id": "koizumi-natural-wine",
+      "name": "小泉自然酒",
+      "address": "臺北市信義區仁愛路四段444號1樓",
+      "addressSource": "https://storemap.puma.taipei/",
+      "category": "酒吧",
+      "latlng": {
+        "lat": 25.03733488,
+        "lng": 121.55864958
+      },
+      "coordinateSource": "https://data.taipei/dataset/detail?id=b7c8e724-1e98-45ee-a0bd-f3840623ed97",
+      "verification": false
+    },
+    {
+      "id": "hippun",
+      "name": "嬉皮HIPPUN",
+      "address": "臺北市信義區莊敬路423巷2弄1號",
+      "addressSource": "https://storemap.puma.taipei/",
+      "category": "咖啡廳",
+      "latlng": {
+        "lat": 25.02766989,
+        "lng": 121.56679596
+      },
+      "coordinateSource": "https://data.taipei/dataset/detail?id=b7c8e724-1e98-45ee-a0bd-f3840623ed97",
+      "verification": false
+    },
+    {
+      "id": "miracle-x-lab",
+      "name": "MIRACLE X LAB 南京復興場地租借",
+      "address": "臺北市松山區復興北路81巷20號",
+      "addressSource": "https://miracle-x-lab.netlify.app/",
+      "category": "其它",
+      "serviceType": "場地租借",
+      "latlng": {
+        "lat": 25.05113,
+        "lng": 121.54498865
+      },
+      "coordinateSource": "https://data.taipei/dataset/detail?id=b7c8e724-1e98-45ee-a0bd-f3840623ed97",
+      "verification": false
+    },
+    {
+      "id": "collaplay",
+      "name": "可能存在的遊樂園 CollaPlay",
+      "address": "臺北市萬華區武昌街二段83之6號3樓",
+      "addressSource": "https://collaplay.com/",
+      "category": "其它",
+      "serviceType": "場地租借",
+      "latlng": {
+        "lat": 25.0455147,
+        "lng": 121.50529681
+      },
+      "coordinateSource": "https://data.taipei/dataset/detail?id=b7c8e724-1e98-45ee-a0bd-f3840623ed97",
+      "verification": false
+    },
+    {
+      "id": "tmd-xinzhuang",
+      "name": "唬媽裝忙TMD",
+      "address": "新北市新莊區思源路419巷1弄1號1樓",
+      "category": "正餐",
+      "latlng": {
+        "lat": 25.0525248234,
+        "lng": 121.459369699
+      },
+      "coordinateSource": "https://raw.githubusercontent.com/zhengda/taiwan-address-data/master/roads/65-%E6%80%9D%E6%BA%90%E8%B7%AF.csv",
+      "verification": false
     }
   ]
 }
