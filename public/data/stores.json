@@ -5960,6 +5960,22 @@
         "threads": "https://www.threads.com/@cup.koko"
       },
       "verification": false
+    },
+    {
+      "id": "rende-sanxian-temple",
+      "name": "仁德三仙宮",
+      "address": "臺南市仁德區後壁里德南路11號",
+      "addressSource": "https://crgis.rchss.sinica.edu.tw/temples/TainanCity/rende/1127007-SXG",
+      "category": "其它",
+      "latlng": {
+        "lat": 22.9488925,
+        "lng": 120.2519297
+      },
+      "coordinateSource": "https://god.novice.tw/temple/仁德後壁厝三山宮-臺南市仁德區",
+      "coordinateNote": "採萬神錄所列的後壁厝三山宮 Google Maps 座標，門牌與中研院寺廟資料一致。",
+      "visitNote": "登記名稱為三山宮，又稱後壁厝三山宮，主祀三山國王。",
+      "verification": false,
+      "disabled": false
     }
   ]
 }
