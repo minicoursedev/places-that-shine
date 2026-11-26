@@ -10185,6 +10185,122 @@
           "source": "https://www.threads.com/@vitavita_cat/post/DgMo1XpGdWH"
         }
       ]
+    },
+    {
+      "id": "ghost-john",
+      "name": "𝑮𝒉𝒐𝒔𝒕 𝑱𝒐𝒉𝒏 ⁎꙳幽靈製造所",
+      "description": "幽靈製造所以小幽靈為創作角色，也分享陶器、釉色與出窯紀錄。",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@ghost._.john",
+        "ig": "https://www.instagram.com/ghost._.john/",
+        "web": "https://myship.7-11.com.tw/general/detail/GM2306109637460"
+      },
+      "logo": {
+        "url": "/media/library/ghost-john/logo.webp?v=b92c76803354b2d2",
+        "source": "https://www.threads.com/@ghost._.john",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-26"
+      },
+      "productImages": [
+        {
+          "id": "ghost-john-1",
+          "halls": [
+            "V"
+          ],
+          "title": "2026 1128 GO VOTE",
+          "alt": "戴著派對帽的小幽靈抱住寫著「GO VOTE」的圈選章，在兩隻同伴面前蓋印。彩色紙花間標著「2026 1128」。",
+          "caption": "戴著派對帽的小幽靈抱住寫著「GO VOTE」的圈選章，在兩隻同伴面前蓋印。彩色紙花間標著「2026 1128」。",
+          "url": "/media/library/ghost-john/1.webp?v=ffdfaaf592c4f111",
+          "source": "https://www.threads.com/@ghost._.john/post/DgMqOp-E8j3"
+        }
+      ]
+    },
+    {
+      "id": "pawstodraw",
+      "name": "派你畫鴿圖🇹🇼",
+      "description": "以「派鴿小鎮」為舞台，畫一隻叫派的貓與一隻叫布鴿的狗。",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@pawstodraw__",
+        "ig": "https://www.instagram.com/pawstodraw__/",
+        "web": ""
+      },
+      "logo": {
+        "url": "/media/library/pawstodraw/logo.webp?v=855bb3bd5e392c34",
+        "source": "https://www.threads.com/@pawstodraw__",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-26"
+      },
+      "productImages": [
+        {
+          "id": "pawstodraw-1",
+          "halls": [
+            "V"
+          ],
+          "title": "11/28 回家投票",
+          "alt": "戴眼鏡的狗和兩隻貓亮出投票用具，海報上寫著「回家投票」、11/28 與 08:00～16:00。",
+          "caption": "戴眼鏡的狗和兩隻貓亮出投票用具，海報上寫著「回家投票」、11/28 與 08:00～16:00。",
+          "url": "/media/library/pawstodraw/1.webp?v=50e4bf2690163d04",
+          "source": "https://www.threads.com/@pawstodraw__/post/DgMm4zdAfGS/media"
+        },
+        {
+          "id": "pawstodraw-2",
+          "halls": [
+            "V"
+          ],
+          "title": "投票三寶",
+          "alt": "兩隻貓和一隻狗分別示範身分證、印章與投票通知單，上方寫著「投票三寶」。",
+          "caption": "兩隻貓和一隻狗分別示範身分證、印章與投票通知單，上方寫著「投票三寶」。",
+          "url": "/media/library/pawstodraw/2.webp?v=11468733547f8359",
+          "source": "https://www.threads.com/@pawstodraw__/post/DgMm4zdAfGS/media"
+        }
+      ]
+    },
+    {
+      "id": "creative1shit2021",
+      "name": "龍哥",
+      "description": "繪製原創 BL 彩漫《歡迎光臨FujiNeko》，在 CXC 創利市集連載。",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@creative1shit2021",
+        "ig": "https://www.instagram.com/creative1shit2021/",
+        "web": "https://cxc.today/zh/store/longer/book/4090"
+      },
+      "logo": {
+        "url": "/media/library/creative1shit2021/logo.webp?v=ddbdea8bddad3734",
+        "source": "https://www.threads.com/@creative1shit2021",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-26"
+      },
+      "productImages": [
+        {
+          "id": "creative1shit2021-1",
+          "halls": [
+            "V"
+          ],
+          "title": "11.28 回家投票",
+          "alt": "十個長尾角色沿著藍色水流前進，白色水花和橘色描邊的「11.28 回家投票」字樣穿過畫面。",
+          "caption": "十個長尾角色沿著藍色水流前進，白色水花和橘色描邊的「11.28 回家投票」字樣穿過畫面。",
+          "url": "/media/library/creative1shit2021/1.webp?v=2b93d8d8f3cd1abb",
+          "source": "https://www.threads.com/@creative1shit2021/post/DgMrjPHn3Gd/media"
+        }
+      ]
     }
   ],
   "boothOrder": {
@@ -10227,7 +10343,10 @@
       "eli-pluma-lin",
       "wenhsiu-wang",
       "halfawakedept",
-      "vitavita-cat"
+      "vitavita-cat",
+      "ghost-john",
+      "pawstodraw",
+      "creative1shit2021"
     ]
   }
 }
