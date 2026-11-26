@@ -11850,6 +11850,63 @@
           "source": "https://www.threads.com/@jichun_ouo/post/DgNnQp9kroh"
         }
       ]
+    },
+    {
+      "id": "teruko-illustration",
+      "name": "昭子テルコ",
+      "description": "Illustration/Taiwan\n只畫畫會餓死嗎？",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@teruko.illustration",
+        "ig": "https://www.instagram.com/teruko.illustration/",
+        "web": ""
+      },
+      "logo": {
+        "url": "/media/library/teruko-illustration/logo.webp?v=21b08e68aa831815",
+        "source": "https://www.threads.com/@teruko.illustration",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-26"
+      },
+      "productImages": [
+        {
+          "id": "teruko-illustration-1",
+          "halls": [
+            "V"
+          ],
+          "title": "回家投票｜米色紙紋版",
+          "alt": "米色紙紋上，穿綠色圓點裝的角色站在粉紅色滑板上，高舉「VOTE」牌子。右側寫著「回家投票」，旁邊畫有投票箱。",
+          "caption": "回家投票！",
+          "url": "/media/library/teruko-illustration/1.webp?v=7b6c22bb0d91fe0d",
+          "source": "https://www.threads.com/@teruko.illustration/post/DgN0pGfkgUk"
+        },
+        {
+          "id": "teruko-illustration-2",
+          "halls": [
+            "V"
+          ],
+          "title": "回家投票｜黑白網點版",
+          "alt": "白底上的角色穿著圓點裝，踩著署名「テルコ」的滑板，雙手高舉。人物、投票箱、「VOTE」與「回家投票」字樣皆以深色線條和網點構成。",
+          "caption": "白底與深色網點的滑板人物舉起「VOTE」牌子。",
+          "url": "/media/library/teruko-illustration/2.webp?v=f61691094caae865",
+          "source": "https://www.threads.com/@teruko.illustration/post/DgN0pGfkgUk"
+        },
+        {
+          "id": "teruko-illustration-3",
+          "halls": [
+            "V"
+          ],
+          "title": "回家投票｜彩色箭頭版",
+          "alt": "白底插畫裡，穿淺藍圓點裝的角色踩著橘色滑板，高舉「VOTE」牌子。紅黃箭頭與圓點圍在人物和投票箱四周。",
+          "caption": "紅黃箭頭圍著滑板人物，右側寫著「回家投票」。",
+          "url": "/media/library/teruko-illustration/3.webp?v=f6ebaee0cb8bab1a",
+          "source": "https://www.threads.com/@teruko.illustration/post/DgN0pGfkgUk"
+        }
+      ]
     }
   ],
   "boothOrder": {
@@ -11932,7 +11989,8 @@
       "roomatemeatpie",
       "axxycool",
       "pukupuku-don",
-      "jichun-ouo"
+      "jichun-ouo",
+      "teruko-illustration"
     ]
   }
 }
