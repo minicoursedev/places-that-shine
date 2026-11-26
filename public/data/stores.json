@@ -5976,6 +5976,36 @@
       "visitNote": "登記名稱為三山宮，又稱後壁厝三山宮，主祀三山國王。",
       "verification": false,
       "disabled": false
+    },
+    {
+      "id": "no3coffee2019",
+      "name": "參號倉庫咖啡 No. 3 Cafe’",
+      "address": "新北市新店區力行路3號",
+      "addressSource": "https://www.threads.com/@no3coffee2019",
+      "category": "咖啡廳",
+      "latlng": {
+        "lat": 24.9644579,
+        "lng": 121.539542
+      },
+      "coordinateSource": "https://www.google.com.tw/maps/place/%E5%8F%83%E8%99%9F%E5%80%89%E5%BA%AB%E5%92%96%E5%95%A1%2BNo.3%2BCafe'/data=!4m7!3m6!1s0x346801f128c1f0d5:0x9ec9c3c970c1bf5!8m2!3d24.9644579!4d121.539542!16s%2Fg%2F11h76m1nms!19sChIJ1fDBKPEBaDQR9RsMlzyc7Ak?authuser=0&hl=zh-TW&rclk=1",
+      "coordinateNote": "OpenStreetMap 未取得可核對的門牌結果。採用 Eaters 同名同址店家頁所連 Google Maps 地點網址中的 !3d24.9644579 與 !4d121.539542，並與 woowa 同址頁所連的 Google Maps Place ID 交叉核對；未採用地圖視窗中心。",
+      "visitNote": "寵物友善咖啡廳，供應義式咖啡、手沖咖啡、咖啡豆及手作甜點。電話：02-2915-0662。",
+      "social": {
+        "facebook": "https://www.facebook.com/no3coffee/",
+        "instagram": "https://www.instagram.com/no3coffee2019/",
+        "threads": "https://www.threads.com/@no3coffee2019"
+      },
+      "shopPhoto": {
+        "url": "./media/library/no3coffee2019/logo.webp?v=f3b36f1025c0a372",
+        "source": "https://www.threads.com/@no3coffee2019",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-26",
+        "note": "官方帳號 no3coffee2019 的 hd_profile_pic_versions"
+      },
+      "giftStatus": "可能有小物",
+      "verification": false,
+      "disabled": false
     }
   ]
 }
