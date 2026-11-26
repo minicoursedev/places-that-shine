@@ -11733,6 +11733,53 @@
           "source": "https://www.threads.com/@roomatemeatpie/post/DgNWC7UEkMS"
         }
       ]
+    },
+    {
+      "id": "axxycool",
+      "name": "AXXY COOL",
+      "description": "Cooooooool",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@axxycool",
+        "ig": "https://www.instagram.com/axxycool/",
+        "web": ""
+      },
+      "logo": {
+        "url": "/media/library/axxycool/logo.webp?v=3d27c87c5fb3dcea",
+        "source": "https://www.threads.com/@axxycool",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-26"
+      },
+      "productImages": [
+        {
+          "id": "axxycool-1",
+          "halls": [
+            "V"
+          ],
+          "title": "VOTE for OUR FUTURE｜動態版",
+          "alt": "粉橘色海報中，自行車的輪子轉動。騎車的人伸開雙臂，肩上的小狗叼著身分證，車後插著「1128」小旗。",
+          "caption": "1128 出門投票 🗳️ ！！！",
+          "url": "/media/library/axxycool/1.webp?v=90ef44897245302d",
+          "source": "https://www.threads.com/@axxycool/post/DgNWtjyk0bB",
+          "videoUrl": "/media/library/axxycool/1.mp4?v=4a9f835868075a97"
+        },
+        {
+          "id": "axxycool-2",
+          "halls": [
+            "V"
+          ],
+          "title": "VOTE for OUR FUTURE｜靜態版",
+          "alt": "粉橘色海報上，騎車的人伸開雙臂，肩上的小狗叼著身分證，刺蝟坐在前方車籃裡。上方寫著「VOTE for OUR FUTURE」，下方署名 AXXY COOL。",
+          "caption": "Let‘s vote for the cooooool future we believe in! 💪🏻💥",
+          "url": "/media/library/axxycool/2.webp?v=82179dae619ee04c",
+          "source": "https://www.threads.com/@axxycool/post/DgNWtjyk0bB"
+        }
+      ]
     }
   ],
   "boothOrder": {
@@ -11812,7 +11859,8 @@
       "aray-comix",
       "daya-art",
       "minayuyu",
-      "roomatemeatpie"
+      "roomatemeatpie",
+      "axxycool"
     ]
   }
 }
