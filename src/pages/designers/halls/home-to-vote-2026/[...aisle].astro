@@ -1,0 +1,13 @@
+---
+import Layout from '../../../../layouts/OshenDesignerLayout.astro';
+import { catalogue } from '../../../../lib/oshen-designers';
+
+export function getStaticPaths() {
+  const hall = catalogue.index.halls.find(hall => hall.code === 'V');
+  return hall.aisles.map(({ code }, index) => ({
+    params: { aisle: index ? code.toLowerCase() : undefined },
+    props: { secondaryAisle: index ? code : undefined },
+  }));
+}
+---
+<Layout hallCode="V" aisleCode={Astro.props.secondaryAisle} />

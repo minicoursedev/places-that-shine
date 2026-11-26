@@ -1,5 +1,5 @@
 ---
-import { catalogue, designers, designerRoot, designerPath } from '../lib/oshen-designers';
+import { boothById, catalogue, designers, designerRoot, designerPath } from '../lib/oshen-designers';
 import { openingWorldStyle } from '../lib/designer-openings';
 import { boothHtml } from '../../public/designers/js/ui/booth-markup.js';
 import { designerMetadata, designerStructuredData, serializeStructuredData } from '../../public/designers/js/profile-seo.js';
@@ -13,10 +13,13 @@ interface Props { designerId?: string; hallCode?: string; shareHall?: string; ai
 const designer = designers.find(profile => profile.id === Astro.props.designerId);
 const shareHall = designer && Astro.props.shareHall;
 const shareBooth = shareHall ? designer.booth.hallBooths.find(booth => booth.aisle[0] === shareHall) : undefined;
+const profileBooth = shareBooth ? boothById(shareBooth.id) : designer?.booth;
 const hall = hallPageForCode(Astro.props.hallCode || shareHall || designer?.hallCode) || hallPageForCode('O')!;
 const openingAisle = designer ? undefined : catalogue.aisles.get(Astro.props.aisleCode || `${hall.code}01`);
 const firstBooth = openingAisle?.islands[0]?.booths[0];
 const listedDesigners = designer || Astro.props.aisleCode ? [] : designers.filter(profile => profile.hallCodes.includes(hall.code));
+const listedProfilePath = (profile: typeof designers[number]) =>
+  hall.code === 'V' && profile.hallCode !== hall.code ? designerSharePath(profile.id, hall.code) : designerPath(profile.id);
 const metadata = designer && designerMetadata(designer.store, shareBooth?.hall);
 const title = metadata ? metadata.title : designerAisleTitle(hall, openingAisle?.code);
 const shareTitle = metadata ? metadata.shareTitle : title;
@@ -24,7 +27,7 @@ const description = metadata ? metadata.description : hall.description;
 const pagePath = designer ? designerPath(designer.id) : designerWalkPath(openingAisle?.code);
 const canonical = new URL(pagePath, Astro.site).href;
 const shareUrl = designer && shareHall ? new URL(designerSharePath(designer.id, shareHall), Astro.site).href : canonical;
-const structuredData = designer && designerStructuredData(designer.store, designer.booth, canonical, new URL(designerRoot, Astro.site).href, metadata);
+const structuredData = designer && designerStructuredData(designer.store, profileBooth, canonical, new URL(designerRoot, Astro.site).href, metadata);
 const exhibitionImage = new URL('/designers/assets/exhibition-og.webp?v=20261123-webp', Astro.site).href;
 const preview = designer ? designer.og : hall;
 const shareImage = new URL(designer?.og?.url || preview?.image || exhibitionImage, Astro.site).href;
@@ -108,7 +111,7 @@ const shareImageAlt = preview?.alt || '洋流設計師展逛攤畫面';
   <main class="list-mode" id="stage-list" tabindex="-1" hidden={!designer}>
     <div class="ls-wrap">
       {designer ? (
-        <article id="static-designer-profile" aria-label={designer.name} set:html={boothHtml(shareBooth ? { ...designer.booth, id: shareBooth.id } : designer.booth, designer.store, { profile: true, staticProfile: true })} />
+        <article id="static-designer-profile" aria-label={designer.name} set:html={boothHtml(profileBooth, designer.store, { profile: true, staticProfile: true })} />
       ) : !Astro.props.aisleCode && (
         <>
           <h1 class="ls-title">{hall.heading || hall.name}</h1>
@@ -117,10 +120,10 @@ const shareImageAlt = preview?.alt || '洋流設計師展逛攤畫面';
           <div class="ls-grid">
             {listedDesigners.map(profile => (
               <article class="lc">
-                <div class="lc-heading"><h2 class="lc-name"><a class="lc-open" href={designerPath(profile.id)}>{profile.name}</a></h2></div>
+                <div class="lc-heading"><h2 class="lc-name"><a class="lc-open" href={listedProfilePath(profile)}>{profile.name}</a></h2></div>
                 <p class="lc-owner">{profile.store.category} {profile.name}</p>
                 <p class="lc-zone">{hall.name}・{profile.store.category}</p>
-                <a class="btn btn-primary lc-go" href={designerPath(profile.id)}>{profile.works.length ? '看作品' : '看介紹'}</a>
+                <a class="btn btn-primary lc-go" href={listedProfilePath(profile)}>{profile.works.length ? '看作品' : '看介紹'}</a>
               </article>
             ))}
           </div>
@@ -135,7 +138,7 @@ const shareImageAlt = preview?.alt || '洋流設計師展逛攤畫面';
 <dialog id="dlg-booth" class="dlg" aria-labelledby="booth-title"></dialog>
 <WorkShareDialog kind="designer" />
 <WorkShareDialog />
-<script is:inline type="module" src="/designers/js/app.js?v=20261125-hall-routes"></script>
+<script is:inline type="module" src="/designers/js/app.js?v=20261126-vote-hall"></script>
 </body>
 </html>
 

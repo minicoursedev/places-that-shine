@@ -1,7 +1,8 @@
 import data from '../../public/data/oshen-designers.json';
 import ogImages from 'designer-og-manifest';
 import { createCatalogue, designerHallCodes } from '../../public/designers/js/data.js';
-import { readProducts, PRODUCT_LIMIT } from '../../public/designers/js/products.js';
+import { readProducts, PRODUCT_LIMIT, workInHall } from '../../public/designers/js/products.js';
+import { findBoothIn } from '../../public/designers/js/state.js';
 import { validateWorkIds } from '../../public/designers/js/work-links.js';
 
 export { designerRoot, designerPath } from '../../public/designers/js/routes.js';
@@ -10,6 +11,7 @@ export interface DesignerWork {
   id: string;
   title?: string;
   number?: number;
+  halls?: string[];
   cover: string;
   name: string;
   caption: string;
@@ -20,6 +22,7 @@ export interface DesignerWork {
 }
 
 interface Booth {
+  id: string;
   store: string;
   hallBooths: Array<{ id: string; aisle: string; hall: string }>;
   works: DesignerWork[];
@@ -42,15 +45,18 @@ const productFiles = import.meta.glob<ProductCatalogue>('../../public/data/desig
   import: 'default',
 });
 
+export function boothById(id: string) {
+  return findBoothIn(catalogue.aisles.get(id.split('-')[0]), id) as Booth | null;
+}
+
 export const designers = data.designers.filter(designer => designer.disabled !== true).map(designer => {
   const boothId = catalogue.designerBooths.get(designer.id);
   const aisle = catalogue.aisles.get(boothId?.split('-')[0]);
-  const booth = aisle?.islands.flatMap((island: { booths: Booth[] }) => island.booths)
-    .find((entry: Booth) => entry.store === designer.id);
+  const booth = boothId && boothById(boothId);
   if (!booth) throw new Error(`Missing booth for ${designer.id}`);
 
   const store = aisle.stores[designer.id];
-  let works: DesignerWork[] = booth.works;
+  let works: DesignerWork[] = catalogue.worksByDesigner.get(designer.id);
   if (store.productsUrl) {
     const productsUrl = new URL(store.productsUrl, baseUrl);
     const file = productFiles[`../../public${productsUrl.pathname}`];
@@ -62,12 +68,16 @@ export const designers = data.designers.filter(designer => designer.disabled !==
     }
     works = products;
     // Stable static sample. The interactive booth samples again when it opens.
-    booth.works = [
-      ...products.filter((product: { pinned?: boolean }) => product.pinned),
-      ...products.filter((product: { pinned?: boolean }) => !product.pinned),
-    ].slice(0, PRODUCT_LIMIT);
-    booth.total = products.length;
-    booth.randomSelection = true;
+    for (const location of booth.hallBooths) {
+      const hallBooth = boothById(location.id)!;
+      const hallProducts = products.filter(product => workInHall(product, location.aisle[0]));
+      hallBooth.works = [
+        ...hallProducts.filter((product: { pinned?: boolean }) => product.pinned),
+        ...hallProducts.filter((product: { pinned?: boolean }) => !product.pinned),
+      ].slice(0, PRODUCT_LIMIT);
+      hallBooth.total = hallProducts.length;
+      hallBooth.randomSelection = true;
+    }
   }
 
   return {
@@ -87,4 +97,6 @@ export const designers = data.designers.filter(designer => designer.disabled !==
   };
 });
 
-export const designerWorks = designers.flatMap(designer => designer.works.map(work => ({ designer, work })));
+export const designerWorks = designers.flatMap(designer => designer.works
+  .filter(work => designer.hallCodes.some(hall => workInHall(work, hall)))
+  .map(work => ({ designer, work })));

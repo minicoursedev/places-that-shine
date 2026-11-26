@@ -33,6 +33,17 @@ export const hallPages = [{
   height: 576,
   type: 'image/webp',
 }, {
+  code: 'V',
+  name: '2026 回家投票',
+  path: '/designers/halls/home-to-vote-2026/',
+  title: '2026 回家投票｜發光的設計師',
+  description: '瀏覽不同創作者為 2026 年回家投票創作的作品。',
+  image: '/media/library/ohhiyo-my-fran/1.webp',
+  alt: 'Ohhiyo my Fran（咻筆 Xubi）的〈出門投票，點亮民主的光〉',
+  width: 564,
+  height: 800,
+  type: 'image/webp',
+}, {
   code: 'S',
   name: '鏟子超人館',
   path: '/designers/halls/shovel-heroes/',

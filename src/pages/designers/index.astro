@@ -5,11 +5,12 @@ import { hallPageForCode } from '../../../public/designers/js/hall-pages.js';
 const oshenHall = hallPageForCode('O')!;
 const amateurHall = hallPageForCode('A')!;
 const websiteHall = hallPageForCode('W')!;
+const voteHall = hallPageForCode('V')!;
 const recallHall = hallPageForCode('R')!;
 
 const title = '發光的設計師';
 const overviewTitle = `${title}展館總覽`;
-const description = '按時期探索洋流設計師、洋流愛好者、洋流網站、鏟子超人、大罷免與青鳥行動六個展館，瀏覽創作者與作品。';
+const description = '按時期探索洋流設計師、洋流愛好者、洋流網站、2026 回家投票、鏟子超人、大罷免與青鳥行動展館，瀏覽創作者與作品。';
 const shareImage = new URL(oshenHall.image, Astro.site);
 ---
 
@@ -31,7 +32,7 @@ const shareImage = new URL(oshenHall.image, Astro.site);
   <script slot="head" is:inline>
     async function redirectLegacyMarket() {
       if (!/^#\/?(walk|list|map|designer)(\/|$)/.test(location.hash)) return false;
-      const { legacyDesignerDestination } = await import('/designers/js/legacy-entry.js?v=20261125-hall-routes');
+      const { legacyDesignerDestination } = await import('/designers/js/legacy-entry.js?v=20261126-vote-hall');
       const destination = legacyDesignerDestination(new URL(location.href));
       if (!destination) return false;
       location.replace(destination.href);
@@ -76,6 +77,15 @@ const shareImage = new URL(oshenHall.image, Astro.site);
           <a class="period-hall-link" href={amateurHall.path}>{amateurHall.name} <span aria-hidden="true">→</span></a>
         </div>
       </div>
+      <a class="entry" href={voteHall.path}>
+        <span class="entry-info">
+          <span class="period-label">
+            <img class="period-logo period-logo-contained" src={voteHall.image} width={voteHall.width} height={voteHall.height} alt="" />
+            <span>{voteHall.name}</span>
+          </span>
+          <span class="entry-arrow" aria-hidden="true">→</span>
+        </span>
+      </a>
       <div class="period-with-intro">
         <a class="entry" href="/designers/halls/shovel-heroes/">
           <span class="entry-info">

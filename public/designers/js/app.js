@@ -1,18 +1,18 @@
 // Exhibition navigation, walk view, dialogs and alternate views.
 import { state, on, emit, visitedCount, toast } from './state.js';
-import { loadIndex, aisleOfBooth, loadBoothForDesigner, isOshenHall } from './data.js?v=20261124-profile-title';
-import { goToAisle } from './nav.js?v=20261125-hall-routes';
+import { loadIndex, aisleOfBooth, loadBoothForDesigner, isOshenHall } from './data.js?v=20261126-vote-hall';
+import { goToAisle } from './nav.js?v=20261126-vote-hall';
 import { createWalkView } from './walk.js?v=20261125-hall-routes';
 import { wireFloatingNav } from './floating-nav.js';
-import { openBooth } from './ui/booth.js?v=20261125-hall-routes';
-import { mountMap } from './ui/map.js?v=20261125-hall-routes';
-import { mountList } from './ui/list.js?v=20261125-hall-routes';
+import { openBooth } from './ui/booth.js?v=20261126-vote-hall';
+import { mountMap } from './ui/map.js?v=20261126-vote-hall';
+import { mountList } from './ui/list.js?v=20261126-vote-hall';
 import { loadSchedule, isClosed, closeTagText, msLeft, lastOpenLabel } from './schedule.js?v=20261030-site-data';
 import { loadCats, loadChatter } from './cats.js?v=20261030-site-data';
 import { showClosed } from './ui/closed.js';
 
-import { designerHallRoot, designerViewPath, designerWalkPath, hallPageForPath, updateDesignerMetadata, resolveDesignerRoute } from './routes.js?v=20261125-hall-routes';
-import { legacyDesignerDestination } from './legacy-entry.js?v=20261125-hall-routes';
+import { designerHallRoot, designerViewPath, designerWalkPath, hallPageForPath, updateDesignerMetadata, resolveDesignerRoute } from './routes.js?v=20261126-vote-hall';
+import { legacyDesignerDestination } from './legacy-entry.js?v=20261126-vote-hall';
 
 const $ = id => document.getElementById(id);
 const BOOTH_ID = /^[A-Z]\d{2}-\d{2}$/;

@@ -1,8 +1,9 @@
+import { workInHall } from '../../public/designers/js/products.js';
 import { designerWorkSharePath } from '../../public/designers/js/work-links.js';
 import { designerWorks } from './oshen-designers';
 
 export const storeWorkPreviews = designerWorks.flatMap(({ designer, work }) => {
-  const booth = designer.booth.hallBooths.find(({ aisle }) => aisle[0] !== 'A');
+  const booth = designer.booth.hallBooths.find(({ aisle }) => aisle[0] !== 'A' && workInHall(work, aisle[0]));
   if (!booth || work.id === 'yang-liu-avatar') return [];
   return [{
     designerName: designer.name,

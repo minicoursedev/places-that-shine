@@ -2,6 +2,7 @@
 import WorkShareDialog from '../components/WorkShareDialog.astro';
 import PrivacyLink from '../components/PrivacyLink.astro';
 import { designerWorks, designerPath } from '../lib/oshen-designers';
+import { workInHall } from '../../public/designers/js/products.js';
 import { designerWorkPath, designerWorkSharePath } from '../../public/designers/js/work-links.js';
 import { designerHallRoot, designerSharePath } from '../../public/designers/js/routes.js';
 import { serializeStructuredData } from '../../public/designers/js/profile-seo.js';
@@ -21,7 +22,7 @@ const canonical = new URL(designerWorkPath(designer.id, work.id), Astro.site).hr
 const shareUrl = Astro.props.shareHall
   ? new URL(designerWorkSharePath(designer.id, work.id, Astro.props.shareHall), Astro.site).href
   : canonical;
-const halls = designer.booth.hallBooths.map(({ aisle, hall }) => ({
+const halls = designer.booth.hallBooths.filter(({ aisle }) => workInHall(work, aisle[0])).map(({ aisle, hall }) => ({
   code: aisle[0],
   name: hall,
   authorLabel: hall.replace(/館$/, '').replace(/設計師$/, '') + '設計師',

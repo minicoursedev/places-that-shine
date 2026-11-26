@@ -1,5 +1,6 @@
 // Build the walk, map and search views from the shared local catalogue.
 import { CONFIG, resolveAsset } from './config.js';
+import { workInHall } from './products.js?v=20261126-vote-hall';
 import { inlineWorkId } from './work-links.js';
 
 const HALLS = [
@@ -9,6 +10,7 @@ const HALLS = [
   { code: 'S', name: '鏟子超人館', category: '設計師', zone: { code: 'SHOVEL-HEROES', name: '鏟子超人' } },
   { code: 'R', name: '大罷免', category: '設計師', zone: { code: 'RECALL', name: '大罷免' } },
   { code: 'B', name: '青鳥行動', year: 2024, category: '設計師', zone: { code: 'BLUEBIRD-ACTION', name: '青鳥行動' } },
+  { code: 'V', name: '2026 回家投票', category: '設計師', zone: { code: 'HOME-TO-VOTE', name: '回家投票' } },
 ];
 const PER_ISLAND = 8;
 const PER_AISLE = PER_ISLAND * 2;
@@ -51,6 +53,22 @@ export function createCatalogue(data, { baseUrl = CONFIG.DESIGNERS_URL, ogImages
     ids.add(designer.id);
   }
   const designers = data.designers.filter(d => d.disabled !== true);
+  const worksByDesigner = new Map(designers.map(designer => {
+    const works = (Array.isArray(designer.productImages) ? designer.productImages : [])
+      .map((product, i) => ({
+        id: inlineWorkId(designer.id, product),
+        title: product?.title,
+        number: product?.number,
+        halls: product?.halls,
+        name: typeof product?.alt === 'string' && product.alt.trim() ? product.alt : `${designer.name} 作品參考 ${i + 1}`,
+        caption: typeof product?.caption === 'string' ? product.caption : '',
+        cover: imageUrl(product?.url),
+        thumbnail: product?.thumbnail,
+        video: imageUrl(product?.videoUrl),
+        url: productLink(product),
+      })).filter((work, i) => work.cover && designer.productImages[i]?.disabled !== true);
+    return [designer.id, works];
+  }));
   const aisles = new Map();
   const designerBooths = new Map();
   const hallBoothsByDesigner = new Map();
@@ -77,18 +95,7 @@ export function createCatalogue(data, { baseUrl = CONFIG.DESIGNERS_URL, ogImages
         hallBoothsByDesigner.set(designer.id, hallBooths);
         const social = Object.fromEntries(Object.entries(designer.social || {})
           .map(([key, value]) => [key, externalUrl(value)]));
-        const works = (Array.isArray(designer.productImages) ? designer.productImages : [])
-          .map((product, i) => ({
-            id: inlineWorkId(designer.id, product),
-            title: product?.title,
-            number: product?.number,
-            name: typeof product?.alt === 'string' && product.alt.trim() ? product.alt : `${designer.name} 作品參考 ${i + 1}`,
-            caption: typeof product?.caption === 'string' ? product.caption : '',
-            cover: imageUrl(product?.url),
-            thumbnail: product?.thumbnail,
-            video: imageUrl(product?.videoUrl),
-            url: productLink(product),
-          })).filter((work, i) => work.cover && designer.productImages[i]?.disabled !== true);
+        const works = worksByDesigner.get(designer.id).filter(work => workInHall(work, HALL.code));
         stores[designer.id] = {
           id: designer.id, name: designer.name, owner: designer.name, category, hallName, primaryHall: mainHall,
           description: typeof designer.description === 'string' ? designer.description.trim() : '',
@@ -135,7 +142,7 @@ export function createCatalogue(data, { baseUrl = CONFIG.DESIGNERS_URL, ogImages
       halls,
       totals: { designers: designers.length, booths: search.length },
     },
-    aisles, search, designerBooths, hallBoothsByDesigner,
+    aisles, search, designerBooths, hallBoothsByDesigner, worksByDesigner,
   };
 }
 

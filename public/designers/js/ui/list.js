@@ -1,12 +1,12 @@
 // 設計師列表模式 <main id="stage-list">: filter the search rows in memory, render 60 cards at a time,
 // Fill each card’s logo and works gallery as it scrolls into view.
 import { state, toast, findBoothIn } from '../state.js';
-import { loadSearch, loadAisle, aisleOfBooth } from '../data.js?v=20261124-profile-title';
-import { goToBooth } from '../nav.js?v=20261125-hall-routes';
-import { openBooth } from './booth.js?v=20261125-hall-routes';
+import { loadSearch, loadAisle, aisleOfBooth } from '../data.js?v=20261126-vote-hall';
+import { goToBooth } from '../nav.js?v=20261126-vote-hall';
+import { openBooth } from './booth.js?v=20261126-vote-hall';
 import { thumbnailUrl, retryOriginal } from '../images.js';
-import { loadProducts } from '../products.js?v=20261030-pinned-work';
-import { designerPath, designerSharePath, designerWalkPath } from '../routes.js?v=20261125-hall-routes';
+import { loadProducts } from '../products.js?v=20261126-vote-hall';
+import { designerPath, designerSharePath, designerWalkPath } from '../routes.js?v=20261126-vote-hall';
 
 const PAGE = 60;
 const TYPES = ['漫畫', '插圖', '小說', '攝影', '有聲'];
@@ -219,7 +219,7 @@ export function mountList(container) {
     let productCount;
     if (designer?.productsUrl) {
       try {
-        const products = await loadProducts(designer.productsUrl, booth.store);
+        const products = await loadProducts(designer.productsUrl, booth.store, booth.id[0]);
         works = products.filter(work => !work.pinned || work.cover !== avatar);
         productCount = works.length;
       } catch {

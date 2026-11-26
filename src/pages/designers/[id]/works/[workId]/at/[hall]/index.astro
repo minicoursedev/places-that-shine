@@ -2,8 +2,10 @@
 import Layout from '../../../../../../../layouts/OshenWorkLayout.astro';
 import { designerWorks } from '../../../../../../../lib/oshen-designers';
 
+import { workInHall } from '../../../../../../../../public/designers/js/products.js';
+
 export function getStaticPaths() {
-  return designerWorks.flatMap(({ designer, work }) => designer.shareHallCodes.map(shareHall => ({
+  return designerWorks.flatMap(({ designer, work }) => designer.shareHallCodes.filter(hall => workInHall(work, hall)).map(shareHall => ({
     params: { id: designer.id, workId: work.id, hall: shareHall },
     props: { designerId: designer.id, workId: work.id, shareHall },
   })));

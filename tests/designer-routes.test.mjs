@@ -1,5 +1,7 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
+import { createCatalogue } from '../public/designers/js/data.js';
+import { readProducts, workInHall } from '../public/designers/js/products.js';
 import { hallPages } from '../public/designers/js/hall-pages.js';
 import { legacyDesignerDestination } from '../public/designers/js/legacy-entry.js';
 import { designerViewPath, designerWalkPath, resolveDesignerRoute } from '../public/designers/js/routes.js';
@@ -41,4 +43,23 @@ test('legacy bookmarks resolve to the original aisle, booth or designer', () => 
   const booth = new URL(designerWalkPath('O02', 'O02-01'), origin);
   assert.equal(booth.hash, '');
   assert.equal(resolveDesignerRoute(booth).target, 'O02-01');
+});
+
+test('the voting hall shows selected works while the original booth keeps its full catalogue', () => {
+  const products = [
+    { id: 'earlier', url: '/media/earlier.webp' },
+    { id: 'vote', url: '/media/vote.webp', halls: ['V'] },
+    { id: 'hidden', url: '/media/hidden.webp', halls: ['V'], disabled: true },
+  ];
+  const catalogue = createCatalogue({ designers: [
+    { id: 'artist', name: 'Artist', additionalHalls: ['V'], productImages: products },
+  ] });
+  const original = catalogue.aisles.get('O01').islands[0].booths[0];
+  const exhibit = catalogue.aisles.get('V01').islands[0].booths[0];
+  assert.equal(catalogue.designerBooths.get('artist'), original.id);
+  assert.deepEqual(original.works.map(work => work.id), ['earlier', 'vote']);
+  assert.deepEqual(exhibit.works.map(work => work.id), ['vote']);
+  assert.equal(exhibit.total, 1);
+  const separateCatalogue = readProducts({ designerId: 'artist', products }, 'artist', origin);
+  assert.deepEqual(separateCatalogue.filter(work => workInHall(work, 'V')).map(work => work.id), ['vote']);
 });

@@ -1,10 +1,10 @@
 // Designer dialog: profile, catalogue images, social links and share link.
 import { state, markVisited, findBoothIn } from '../state.js';
-import { loadAisle, aisleOfBooth } from '../data.js?v=20261124-profile-title';
+import { loadAisle, aisleOfBooth } from '../data.js?v=20261126-vote-hall';
 import { boothHtml, loadingHtml, failHtml } from './booth-markup.js?v=20261125-hall-routes';
-import { designerPath, designerSharePath, designerViewPath, designerWalkPath, resolveDesignerRoute, updateDesignerMetadata } from '../routes.js?v=20261125-hall-routes';
+import { designerPath, designerSharePath, designerViewPath, designerWalkPath, resolveDesignerRoute, updateDesignerMetadata } from '../routes.js?v=20261126-vote-hall';
 import { retryOriginal } from '../images.js';
-import { loadProducts, sampleProducts } from '../products.js?v=20261030-pinned-work';
+import { loadProducts, sampleProducts } from '../products.js?v=20261126-vote-hall';
 
 const dlg = () => document.getElementById('dlg-booth');
 
@@ -61,7 +61,7 @@ export async function openBooth(boothId, { keepHall = false, initialUrl = null }
   const store = aisle.stores?.[booth.store];
   if (store?.productsUrl) {
     try {
-      const products = await loadProducts(store.productsUrl, booth.store);
+      const products = await loadProducts(store.productsUrl, booth.store, aisle.hall);
       booth = { ...booth, works: sampleProducts(products), total: products.length, randomSelection: true };
     } catch {
       if (initialUrl) return;

@@ -1,5 +1,5 @@
-import { designerHallRoot, designerPath, designerViewPath, designerWalkPath } from './routes.js?v=20261125-hall-routes';
-import { hallPageForCode } from './hall-pages.js?v=20261124-hall-seo';
+import { designerHallRoot, designerPath, designerViewPath, designerWalkPath } from './routes.js?v=20261126-vote-hall';
+import { hallPageForCode } from './hall-pages.js?v=20261126-vote-hall';
 
 // Resolve old bookmarks before forwarding them to the current static pages.
 export function legacyDesignerDestination(url, fallbackHallCode = 'O') {

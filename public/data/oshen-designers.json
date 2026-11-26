@@ -609,7 +609,34 @@
           "id": "theaya1108-7",
           "alt": "AYA🌙 全糖腐女中心作品照片（使用者提供第 5 張）",
           "url": "/media/library/theaya1108/7.webp"
+        },
+        {
+          "id": "theaya1108-8",
+          "halls": [
+            "V"
+          ],
+          "title": "11/28 回家投票：姨喵船長",
+          "alt": "姨喵與夥伴乘船出航，船上揮著寫有「回家投票」的彩虹旗。",
+          "caption": "姨喵與夥伴乘船出航，船上揮著寫有「回家投票」的彩虹旗。",
+          "url": "/media/library/theaya1108/8.webp?v=1fd7a15458d31c16",
+          "source": "https://www.instagram.com/p/Df9qPCTmi6_/",
+          "referenceUrl": "https://www.threads.com/@theaya1108/post/DgMbTfYFGMu/media"
+        },
+        {
+          "id": "theaya1108-9",
+          "halls": [
+            "V"
+          ],
+          "title": "11/28 回家投票：著色版",
+          "alt": "給讀者自行上色的線稿，船舵前留了空位，可以把自己畫成船長。",
+          "caption": "給讀者自行上色的線稿，船舵前留了空位，可以把自己畫成船長。",
+          "url": "/media/library/theaya1108/9.webp?v=ad40b563f1a20a34",
+          "source": "https://www.instagram.com/p/Df9qPCTmi6_/?img_index=2",
+          "referenceUrl": "https://www.threads.com/@theaya1108/post/DgMbTfYFGMu/media"
         }
+      ],
+      "additionalHalls": [
+        "V"
       ]
     },
     {
@@ -8374,6 +8401,325 @@
           "checkedAt": "2026-11-26",
           "id": "work-d1cf4b905fe240919a799770fb3ad10a",
           "originalUrl": "https://instagram.fkhh1-2.fna.fbcdn.net/v/t51.82787-15/928649496_17997391026111641_8229988888324193439_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=108&_nc_map=urlgen_bucketless&ig_cache_key=NDAzODIwOTM3NTg3NTkwNzQxMw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuNzUwLnNkci5yZWd1bGFyX3Bob3RvLkMzIn0%3D&_nc_ohc=FxIEH6SwRlQQ7kNvwEukQmR&_nc_oc=AdqmOJyEZyR0Lt1TFz9sGWrrgYGjfCI_9lrRSHECTw5zkcv4btf1iRluauTZColQiuk&_nc_zt=23&_nc_ht=instagram.fkhh1-2.fna&_nc_gid=71R0njjCoZPBv6dbai0Daw&_nc_ss=7930f&_nc_ct=RQosPBUIFQIlBAAAAA&oh=00_AQS0UQPjXgnDf4gFSbSJFVBg5RiFiQ0hO7w_us96Qjg2hw&oe=6B0D955A"
+        }
+      ]
+    },
+    {
+      "id": "ohhiyo-my-fran",
+      "name": "Ohhiyo my Fran",
+      "description": "台派插畫家\n🖌️咻筆Xubi插畫工作室",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@ohhiyo_my_fran",
+        "ig": "https://www.instagram.com/ohhiyo_my_fran/",
+        "web": ""
+      },
+      "links": [
+        {
+          "label": "咻筆 Xubi 插畫工作室",
+          "platform": "ig",
+          "url": "https://www.instagram.com/xubi_uxu/"
+        }
+      ],
+      "logo": {
+        "url": "/media/library/ohhiyo-my-fran/logo.webp?v=e1778ba83de11e1d",
+        "source": "https://www.threads.com/@ohhiyo_my_fran",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-26"
+      },
+      "productImages": [
+        {
+          "id": "ohhiyo-my-fran-1",
+          "halls": [
+            "V"
+          ],
+          "title": "出門投票，點亮民主的光",
+          "alt": "黑、白、橘三色海報以長髮人物與「3 沈伯洋」簽繪圖案，配上「出門投票，點亮民主的光」字樣。",
+          "caption": "黑、白、橘三色海報以長髮人物與「3 沈伯洋」簽繪圖案，配上「出門投票，點亮民主的光」字樣。",
+          "url": "/media/library/ohhiyo-my-fran/1.webp?v=1d368ed7818aaacb",
+          "source": "https://www.threads.com/@ohhiyo_my_fran/post/DgLOykZE3kg/media"
+        },
+        {
+          "id": "ohhiyo-my-fran-2",
+          "halls": [
+            "V"
+          ],
+          "title": "簽繪板原稿",
+          "alt": "作者手持原始簽繪板，板上畫著長髮人物與綠色小動物，並寫有「3 沈伯洋」。",
+          "caption": "作者手持原始簽繪板，板上畫著長髮人物與綠色小動物，並寫有「3 沈伯洋」。",
+          "url": "/media/library/ohhiyo-my-fran/2.webp?v=d1bd8a1a1610cca1",
+          "source": "https://www.threads.com/@ohhiyo_my_fran/post/DgLOykZE3kg/media"
+        }
+      ]
+    },
+    {
+      "id": "asta-astawu",
+      "name": "Asta",
+      "description": "🦊 台灣人 Taiwanese 成為自由且快樂的小鳥\n𓁲Illustrator, picture book author,comics artist\nAustralian Shepherd lover",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@asta_astawu",
+        "ig": "https://www.instagram.com/asta_astawu/",
+        "web": "https://astawu.com/"
+      },
+      "logo": {
+        "url": "/media/library/asta-astawu/logo.webp?v=ce9c50c9d0ea7f79",
+        "source": "https://www.threads.com/@asta_astawu",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-26"
+      },
+      "productImages": [
+        {
+          "id": "asta-astawu-1",
+          "halls": [
+            "V"
+          ],
+          "title": "11.28 返鄉投票①",
+          "alt": "橘底方形插畫中，白色動物角色舉起寫著「3」的粉紅色選票。",
+          "caption": "橘底方形插畫中，白色動物角色舉起寫著「3」的粉紅色選票。",
+          "url": "/media/library/asta-astawu/1.webp?v=d3369c814df46110",
+          "source": "https://www.threads.com/@asta_astawu/post/DgKeSBgk_bJ"
+        },
+        {
+          "id": "asta-astawu-2",
+          "halls": [
+            "V"
+          ],
+          "title": "11.28 返鄉投票②",
+          "alt": "粉紅底方形插畫中，戴眼鏡的角色舉起飾有星星的「1」號牌。",
+          "caption": "粉紅底方形插畫中，戴眼鏡的角色舉起飾有星星的「1」號牌。",
+          "url": "/media/library/asta-astawu/2.webp?v=68915973cfdb9df9",
+          "source": "https://www.threads.com/@asta_astawu/post/DgKeSBgk_bJ"
+        },
+        {
+          "id": "asta-astawu-3",
+          "halls": [
+            "V"
+          ],
+          "title": "11.28 返鄉投票③",
+          "alt": "淺粉底方形插畫中，身穿「純」字上衣的角色高舉「1」號圓牌。",
+          "caption": "淺粉底方形插畫中，身穿「純」字上衣的角色高舉「1」號圓牌。",
+          "url": "/media/library/asta-astawu/3.webp?v=2b711280799d9a31",
+          "source": "https://www.threads.com/@asta_astawu/post/DgKeSBgk_bJ"
+        },
+        {
+          "id": "asta-astawu-4",
+          "halls": [
+            "V"
+          ],
+          "title": "11.28 出門投票",
+          "alt": "白底橫幅中，四名動物角色舉著選票、票券與號碼牌，一起向前走。",
+          "caption": "白底橫幅中，四名動物角色舉著選票、票券與號碼牌，一起向前走。",
+          "url": "/media/library/asta-astawu/4.webp?v=386b6f43602f25f4",
+          "source": "https://www.threads.com/@asta_astawu/post/DgKeSBgk_bJ"
+        }
+      ]
+    },
+    {
+      "id": "bird-cone",
+      "name": "鳥控 bird cone",
+      "description": "我實在是足佮意台灣啊!",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@bird_cone",
+        "ig": "https://www.instagram.com/bird_cone/",
+        "web": "https://portaly.cc/birdcone"
+      },
+      "links": [
+        {
+          "label": "賣貨便",
+          "url": "https://reurl.cc/gGnXVR"
+        }
+      ],
+      "logo": {
+        "url": "/media/library/bird-cone/logo.webp?v=c65b9027b6f55a79",
+        "source": "https://www.threads.com/@bird_cone",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-26"
+      },
+      "productImages": [
+        {
+          "id": "bird-cone-1",
+          "halls": [
+            "V"
+          ],
+          "title": "回家投票",
+          "alt": "穿橘色兜帽的孩子騎著黑貓穿過漫天選票，下方寫著紅色的「回家投票」。",
+          "caption": "穿橘色兜帽的孩子騎著黑貓穿過漫天選票，下方寫著紅色的「回家投票」。",
+          "url": "/media/library/bird-cone/1.webp?v=4f3c4fd182cfbd4a",
+          "source": "https://www.threads.com/@bird_cone/post/DgMdtb2lPDl"
+        }
+      ]
+    },
+    {
+      "id": "modear20220604",
+      "name": "思提莫莫",
+      "description": "產地_台灣\n說明_主打一個\"爽\" 歡迎轉載附『來源』即可感恩",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@modear20220604",
+        "ig": "",
+        "web": "https://clibo.tw/users/SITIMOMO"
+      },
+      "logo": {
+        "url": "/media/library/modear20220604/logo.webp?v=e5722f5f878620bd",
+        "source": "https://www.threads.com/@modear20220604",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-26"
+      },
+      "productImages": [
+        {
+          "id": "modear20220604-1",
+          "halls": [
+            "V"
+          ],
+          "title": "1128 回家投票",
+          "alt": "棕色動物把蓋了圈的選票投入票匭，上方寫著「票票民進黨、下架國民黨、氣死共產黨、1128回家投票」。",
+          "caption": "棕色動物把蓋了圈的選票投入票匭，上方寫著「票票民進黨、下架國民黨、氣死共產黨、1128回家投票」。",
+          "url": "/media/library/modear20220604/1.webp?v=d07a5a72008e1f86",
+          "source": "https://www.threads.com/@modear20220604/post/DgMQa_sEoUC/media"
+        }
+      ]
+    },
+    {
+      "id": "miimiicat",
+      "name": "三貓俱樂部",
+      "description": "咪仔",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@miimiicat",
+        "ig": "https://www.instagram.com/miimiicat/",
+        "web": "https://linktr.ee/miimiicat"
+      },
+      "logo": {
+        "url": "/media/library/miimiicat/logo.webp?v=1d8832abf585fd12",
+        "source": "https://www.threads.com/@miimiicat",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-26"
+      },
+      "productImages": [
+        {
+          "id": "miimiicat-1",
+          "halls": [
+            "V"
+          ],
+          "title": "11/28 GO VOTE",
+          "alt": "四隻貓咪站在寫著「GO VOTE」的票匭前，一隻貓爪正投入選票。",
+          "caption": "四隻貓咪站在寫著「GO VOTE」的票匭前，一隻貓爪正投入選票。",
+          "url": "/media/library/miimiicat/1.webp?v=6e66fc1681ed36b8",
+          "source": "https://www.threads.com/@miimiicat/post/DgJ8IEVjGso/media"
+        }
+      ]
+    },
+    {
+      "id": "tonystan8787",
+      "name": "屎蛋唐尼",
+      "description": "屎蛋唐尼的家\n歡迎追蹤，感謝愛戴。\n合作邀約請私訊我🙏\n平安喜樂\n愛大家❤️",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@tonystan8787",
+        "ig": "https://www.instagram.com/tonystan8787/",
+        "web": "https://msha.ke/tonystanstudio"
+      },
+      "logo": {
+        "url": "/media/library/tonystan8787/logo.webp?v=af073608d87dd045",
+        "source": "https://www.threads.com/@tonystan8787",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-26"
+      },
+      "productImages": [
+        {
+          "id": "tonystan8787-1",
+          "halls": [
+            "V"
+          ],
+          "title": "跟我的選票說吧！①",
+          "alt": "戴藍帽的黃色角色舉起投票章，跳到半空中。",
+          "caption": "戴藍帽的黃色角色舉起投票章，跳到半空中。",
+          "url": "/media/library/tonystan8787/1.webp?v=1b38dc1ec1dcbf7d",
+          "source": "https://www.threads.com/@tonystan8787/post/DgLPENBkt0R/media"
+        },
+        {
+          "id": "tonystan8787-2",
+          "halls": [
+            "V"
+          ],
+          "title": "跟我的選票說吧！②",
+          "alt": "黃色角色用力蓋下投票章，喊出「跟我的選票說吧!!」。",
+          "caption": "黃色角色用力蓋下投票章，喊出「跟我的選票說吧!!」。",
+          "url": "/media/library/tonystan8787/2.webp?v=429246d974771e33",
+          "source": "https://www.threads.com/@tonystan8787/post/DgLPENBkt0R/media"
+        }
+      ]
+    },
+    {
+      "id": "trigotri0209",
+      "name": "Trigotri",
+      "description": "👻萬聖節幽靈+小怪物插畫家👻\n✦畫些生活中有趣的小事!\n✦畫些你沒注意到的幽默!",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@trigotri0209",
+        "ig": "https://www.instagram.com/trigotri0209/",
+        "web": ""
+      },
+      "links": [
+        {
+          "label": "Pinkoi 設計館",
+          "url": "https://www.pinkoi.com/store/trigotri"
+        }
+      ],
+      "logo": {
+        "url": "/media/library/trigotri0209/logo.webp?v=c71be7dad35daad7",
+        "source": "https://www.threads.com/@trigotri0209",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-26"
+      },
+      "productImages": [
+        {
+          "id": "trigotri0209-1",
+          "halls": [
+            "V"
+          ],
+          "title": "11/28 回家投票",
+          "alt": "戴派對帽的小狗坐在女孩頭上，橘色海報寫著「Go vote, hooman~~」與「11/28 回家投票」。",
+          "caption": "戴派對帽的小狗坐在女孩頭上，橘色海報寫著「Go vote, hooman~~」與「11/28 回家投票」。",
+          "url": "/media/library/trigotri0209/1.webp?v=ad496d440915e928",
+          "source": "https://www.threads.com/@trigotri0209/post/DgMZ6yQEn5u/media"
         }
       ]
     }

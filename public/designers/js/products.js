@@ -4,6 +4,11 @@ import { resolveAsset } from './config.js';
 const catalogues = new Map();
 export const PRODUCT_LIMIT = 20;
 
+// The voting exhibition selects individual works from each participating designer.
+export function workInHall(work, hall) {
+  return hall !== 'V' || work.halls?.includes(hall) === true;
+}
+
 export function readProducts(data, designerId, baseUrl) {
   if (data?.designerId !== designerId || !Array.isArray(data.products)) throw new Error('Invalid product catalogue');
   const ids = new Set(), images = new Set();
@@ -15,7 +20,7 @@ export function readProducts(data, designerId, baseUrl) {
     ids.add(id); images.add(cover);
     return [{
       id, cover, name: typeof product.alt === 'string' ? product.alt : '',
-      title: product.title, number: product.number,
+      title: product.title, number: product.number, halls: product.halls,
       caption: typeof product.caption === 'string' ? product.caption : '',
       pinned: product.pinned === true,
       width: Number.isInteger(product.width) && product.width > 0 ? product.width : 800,
@@ -35,7 +40,7 @@ export function sampleProducts(products, random = Math.random) {
   return pinned.concat(shuffled).slice(0, PRODUCT_LIMIT);
 }
 
-export async function loadProducts(url, designerId) {
+export async function loadProducts(url, designerId, hall) {
   const key = `${designerId}|${url}`;
   if (!catalogues.has(key)) {
     catalogues.set(key, fetch(url, { cache: 'no-store' })
@@ -46,5 +51,6 @@ export async function loadProducts(url, designerId) {
       .then(data => readProducts(data, designerId, url))
       .catch(error => { catalogues.delete(key); throw error; }));
   }
-  return catalogues.get(key);
+  const products = await catalogues.get(key);
+  return products.filter(work => workInHall(work, hall));
 }
