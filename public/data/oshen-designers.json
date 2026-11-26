@@ -1260,7 +1260,32 @@
           "id": "halfawakedept-7",
           "alt": "半醒出張所 作品照片 11",
           "url": "/media/library/halfawakedept/7.webp"
+        },
+        {
+          "id": "halfawakedept-12",
+          "halls": [
+            "V"
+          ],
+          "title": "回家投票 GO VOTE｜橘底黃字",
+          "alt": "橘底黃字「回家投票」中央寫著 GO VOTE。小人抬著印有圈選記號的選票，有人騎單車、有人撐傘。",
+          "caption": "橘底黃字「回家投票」中央寫著 GO VOTE。小人抬著印有圈選記號的選票，有人騎單車、有人撐傘。",
+          "url": "/media/library/halfawakedept/12.webp?v=8a58547128951122",
+          "source": "https://www.threads.com/@halfawakedept/post/Df91k-Ko6Rn"
+        },
+        {
+          "id": "halfawakedept-13",
+          "halls": [
+            "V"
+          ],
+          "title": "回家投票 GO VOTE｜藍底粉紅字",
+          "alt": "藍底粉紅字的「回家投票」圍繞著 GO VOTE，小人抬起選票，在字間跑步、騎單車。",
+          "caption": "藍底粉紅字的「回家投票」圍繞著 GO VOTE，小人抬起選票，在字間跑步、騎單車。",
+          "url": "/media/library/halfawakedept/13.webp?v=20bd8af0b7623ae4",
+          "source": "https://www.threads.com/@halfawakedept/post/Df91k-Ko6Rn"
         }
+      ],
+      "additionalHalls": [
+        "V"
       ]
     },
     {
@@ -9602,6 +9627,529 @@
           "source": "https://www.threads.com/@mihua_sun_/post/DgHhO-2kkhw/media"
         }
       ]
+    },
+    {
+      "id": "haloochichi",
+      "name": "HALOOCHICHI / 插畫",
+      "description": "哈囉奇奇是插畫創作者，也把畫作做成文具和小物。",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@haloochichi",
+        "ig": "https://www.instagram.com/haloochichi/",
+        "web": "https://myship.7-11.com.tw/general/detail/GM2609186617704"
+      },
+      "logo": {
+        "url": "/media/library/haloochichi/logo.webp?v=de817bbc7244016e",
+        "source": "https://www.threads.com/@haloochichi",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-26"
+      },
+      "productImages": [
+        {
+          "id": "haloochichi-1",
+          "halls": [
+            "V"
+          ],
+          "title": "GO VOTE",
+          "alt": "一個角色扛著巨大的圈選章，另一個舉著選票站在票匭上；右下角保留了作者補上的 HALOOCHICHI 署名。",
+          "caption": "一個角色扛著巨大的圈選章，另一個舉著選票站在票匭上；右下角保留了作者補上的 HALOOCHICHI 署名。",
+          "url": "/media/library/haloochichi/1.webp?v=01d2e5aec4697b89",
+          "source": "https://www.threads.com/@haloochichi/post/DgMmWssoOSa",
+          "referenceUrl": "https://www.threads.com/@haloochichi/post/DgMl8xfIAsp/media"
+        }
+      ]
+    },
+    {
+      "id": "h-t-l",
+      "name": "謝東霖",
+      "description": "漫畫家、編劇，著有《我在詐騙公司上班》與《神明便利商店》。",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@h_t_l_",
+        "ig": "https://www.instagram.com/h_t_l_/",
+        "web": ""
+      },
+      "logo": {
+        "url": "/media/library/h-t-l/logo.webp?v=69451e63f3e4e088",
+        "source": "https://www.threads.com/@h_t_l_",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-26"
+      },
+      "productImages": [
+        {
+          "id": "h-t-l-1",
+          "halls": [
+            "V"
+          ],
+          "title": "11月28日 回家投票",
+          "alt": "橘底海報以大幅白字寫著「11月28日 回家投票」，下方的黑色角色提著公事包，和揮手的小黃貓站在一起。",
+          "caption": "橘底海報以大幅白字寫著「11月28日 回家投票」，下方的黑色角色提著公事包，和揮手的小黃貓站在一起。",
+          "url": "/media/library/h-t-l/1.webp?v=c875b85f06032baf",
+          "source": "https://www.threads.com/@h_t_l_/post/DgMlei7oMpF/media"
+        }
+      ]
+    },
+    {
+      "id": "cancancat-tw",
+      "name": "大腿舞貓咪",
+      "description": "以「大腿舞貓咪」為名，分享貓咪與自己的插畫創作。",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@cancancat_tw",
+        "ig": "https://www.instagram.com/cancancat_tw/",
+        "web": "https://portaly.cc/cedarleaves"
+      },
+      "logo": {
+        "url": "/media/library/cancancat-tw/logo.webp?v=062d3f2266f32aaf",
+        "source": "https://www.threads.com/@cancancat_tw",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-26"
+      },
+      "productImages": [
+        {
+          "id": "cancancat-tw-1",
+          "halls": [
+            "V"
+          ],
+          "title": "GO VOTE！淺色版",
+          "alt": "一排花貓手牽手踢起大腿，頭頂的圈選章和「11」「28」標示投票日。",
+          "caption": "一排花貓手牽手踢起大腿，頭頂的圈選章和「11」「28」標示投票日。作者註明禁止商用及後製。",
+          "url": "/media/library/cancancat-tw/1.webp?v=cbe090fd33c0dd6b",
+          "source": "https://www.threads.com/@cancancat_tw/post/DgKlyL9ktxW/media"
+        },
+        {
+          "id": "cancancat-tw-2",
+          "halls": [
+            "V"
+          ],
+          "title": "GO VOTE！深色版",
+          "alt": "同一隊跳舞花貓換上深棕色背景，選票上的紅色圈選記號與牠們相互呼應。",
+          "caption": "同一隊跳舞花貓換上深棕色背景，選票上的紅色圈選記號與牠們相互呼應。",
+          "url": "/media/library/cancancat-tw/2.webp?v=c64d7bd00e040cd9",
+          "source": "https://www.threads.com/@cancancat_tw/post/DgKlyL9ktxW/media"
+        },
+        {
+          "id": "cancancat-tw-3",
+          "halls": [
+            "V"
+          ],
+          "title": "GO VOTE！印刷實拍",
+          "alt": "作者手持印好的淺色版貓咪圖卡，拍下紙上的插畫與圈選記號。",
+          "caption": "作者手持印好的淺色版貓咪圖卡，拍下紙上的插畫與圈選記號。",
+          "url": "/media/library/cancancat-tw/3.webp?v=1c26a2b980436dff",
+          "source": "https://www.threads.com/@cancancat_tw/post/DgKlyL9ktxW/media",
+          "videoUrl": "/media/library/cancancat-tw/3.mp4?v=6f0ce0624920714a"
+        }
+      ]
+    },
+    {
+      "id": "3co-studio",
+      "name": "鼠粒控 / 3co Studio",
+      "description": "Yuri 以鼠粒控（3co Studio）的名義創作老鼠角色、動畫與 LINE 貼圖。",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@3co_studio_",
+        "ig": "https://www.instagram.com/3co_studio_/",
+        "web": "https://portaly.cc/yuridraw"
+      },
+      "logo": {
+        "url": "/media/library/3co-studio/logo.webp?v=84189558aa84de5b",
+        "source": "https://www.threads.com/@3co_studio_",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-26"
+      },
+      "productImages": [
+        {
+          "id": "3co-studio-1",
+          "halls": [
+            "V"
+          ],
+          "title": "11.28 回家投票",
+          "alt": "一隻小老鼠扛起圈選章、從空中落印，最後浮現「11.28（六）回家投票」。",
+          "caption": "一隻小老鼠扛起圈選章、從空中落印，最後浮現「11.28（六）回家投票」。",
+          "url": "/media/library/3co-studio/1.webp?v=05a588598841736b",
+          "source": "https://www.instagram.com/reel/DgKe0MJh_0X/",
+          "referenceUrl": "https://www.threads.com/@3co_studio_/post/DgKu8x9kjS4/media",
+          "videoUrl": "/media/library/3co-studio/1.mp4?v=9d360682e2be88e5"
+        }
+      ]
+    },
+    {
+      "id": "fumizi03",
+      "name": "Zi-wen Huang",
+      "description": "以企鵝角色畫圖，也在作品中記錄自己的生活。",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "https://www.facebook.com/share/1FnpSiTHNs/",
+        "threads": "https://www.threads.com/@fumizi03",
+        "ig": "https://www.instagram.com/fumizi03/",
+        "web": ""
+      },
+      "logo": {
+        "url": "/media/library/fumizi03/logo.webp?v=08c2fb8843984a3e",
+        "source": "https://www.threads.com/@fumizi03",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-26"
+      },
+      "productImages": [
+        {
+          "id": "fumizi03-1",
+          "halls": [
+            "V"
+          ],
+          "title": "1128 投票去！",
+          "alt": "一隻臉頰泛紅的企鵝從畫面右下探頭，手裡亮出有圈選記號的紙張。",
+          "caption": "一隻臉頰泛紅的企鵝從畫面右下探頭，手裡亮出有圈選記號的紙張。",
+          "url": "/media/library/fumizi03/1.webp?v=eb3880d5c958cd32",
+          "source": "https://www.threads.com/@fumizi03/post/DgLGhMfk6Lv/media"
+        }
+      ]
+    },
+    {
+      "id": "ayya-illustration",
+      "name": "Angela Yu",
+      "description": "台灣插畫家與 iPad 繪圖講師，創作立體繪本《對白》，也為實境解謎與議題遊戲繪製插畫。",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@ayya.illustration",
+        "ig": "https://www.instagram.com/ayya.illustration/",
+        "web": "https://www.instagram.com/ayya.illustration_projects"
+      },
+      "logo": {
+        "url": "/media/library/ayya-illustration/logo.webp?v=de05a5afcc621b32",
+        "source": "https://www.threads.com/@ayya.illustration",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-26"
+      },
+      "productImages": [
+        {
+          "id": "ayya-illustration-1",
+          "halls": [
+            "V"
+          ],
+          "title": "換企鵝阿爸游吧｜動畫",
+          "alt": "水獺媽媽上船休息，換企鵝阿爸在浪中游泳，船尾掛著「Go Vote」旗幟。作者分享檔案供列印，請勿商用。",
+          "caption": "水獺媽媽上船休息，換企鵝阿爸在浪中游泳，船尾掛著「Go Vote」旗幟。作者分享檔案供列印，請勿商用。",
+          "url": "/media/library/ayya-illustration/1.webp?v=3242a6681bdc3f4b",
+          "source": "https://www.threads.com/@ayya.illustration/post/DgK703Dk9xL/media",
+          "videoUrl": "/media/library/ayya-illustration/1.mp4?v=61c12f4bd6026243"
+        },
+        {
+          "id": "ayya-illustration-2",
+          "halls": [
+            "V"
+          ],
+          "title": "換企鵝阿爸游吧｜插畫",
+          "alt": "方形波浪邊框裡，載著水獺媽媽的船乘風破浪，企鵝阿爸在船邊游泳。作者分享檔案供列印，請勿商用。",
+          "caption": "方形波浪邊框裡，載著水獺媽媽的船乘風破浪，企鵝阿爸在船邊游泳。作者分享檔案供列印，請勿商用。",
+          "url": "/media/library/ayya-illustration/2.webp?v=042d11039c621a71",
+          "source": "https://www.threads.com/@ayya.illustration/post/DgK703Dk9xL/media"
+        }
+      ]
+    },
+    {
+      "id": "taitai-live-wild",
+      "name": "TAITAI 阿泰&呆呆",
+      "description": "阿泰與呆呆用影像與文字記錄登山和徒步旅行，著有《山知道》、《步知道》與《折返》。",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@taitai.live.wild",
+        "ig": "https://www.instagram.com/taitai.live.wild/",
+        "web": "https://linkby.tw/taitai.live.wild"
+      },
+      "logo": {
+        "url": "/media/library/taitai-live-wild/logo.webp?v=84544fef7ee8c988",
+        "source": "https://www.threads.com/@taitai.live.wild",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-26"
+      },
+      "productImages": [
+        {
+          "id": "taitai-live-wild-1",
+          "halls": [
+            "V"
+          ],
+          "title": "回家投票｜路上相遇",
+          "alt": "兩隻深色貓停在有雙黃線的路面上，回頭望向鏡頭。 畫面中央排著「回家投票」四字。",
+          "caption": "兩隻深色貓停在有雙黃線的路面上，回頭望向鏡頭。 畫面中央排著「回家投票」四字。",
+          "url": "/media/library/taitai-live-wild/1.webp?v=7858aa544f9af6c0",
+          "source": "https://www.threads.com/@taitai.live.wild/post/DgMi4uaICWL/media"
+        },
+        {
+          "id": "taitai-live-wild-2",
+          "halls": [
+            "V"
+          ],
+          "title": "回家投票｜石雕旁的橘貓",
+          "alt": "橘貓端坐在灰色石雕旁邊，抬頭望著上方。 畫面中央排著「回家投票」四字。",
+          "caption": "橘貓端坐在灰色石雕旁邊，抬頭望著上方。 畫面中央排著「回家投票」四字。",
+          "url": "/media/library/taitai-live-wild/2.webp?v=7f142fb0425572ae",
+          "source": "https://www.threads.com/@taitai.live.wild/post/DgMi4uaICWL/media"
+        },
+        {
+          "id": "taitai-live-wild-3",
+          "halls": [
+            "V"
+          ],
+          "title": "回家投票｜窗邊並坐",
+          "alt": "兩隻橘色虎斑貓並坐在白窗台上，前景有綠色葉片。 畫面中央排著「回家投票」四字。",
+          "caption": "兩隻橘色虎斑貓並坐在白窗台上，前景有綠色葉片。 畫面中央排著「回家投票」四字。",
+          "url": "/media/library/taitai-live-wild/3.webp?v=bc46e4b2a910e2f2",
+          "source": "https://www.threads.com/@taitai.live.wild/post/DgMi4uaICWL/media"
+        },
+        {
+          "id": "taitai-live-wild-4",
+          "halls": [
+            "V"
+          ],
+          "title": "回家投票｜窗台雙貓",
+          "alt": "鏡頭正對著白色木牆下的窗台，兩隻橘色虎斑貓蹲坐在左右兩側。 畫面中央排著「回家投票」四字。",
+          "caption": "鏡頭正對著白色木牆下的窗台，兩隻橘色虎斑貓蹲坐在左右兩側。 畫面中央排著「回家投票」四字。",
+          "url": "/media/library/taitai-live-wild/4.webp?v=9556348c3aec01fc",
+          "source": "https://www.threads.com/@taitai.live.wild/post/DgMi4uaICWL/media"
+        },
+        {
+          "id": "taitai-live-wild-5",
+          "halls": [
+            "V"
+          ],
+          "title": "回家投票｜欄杆後的貓",
+          "alt": "從欄杆縫隙間望去，一隻虎斑貓在綠蔭下閉眼休息。 畫面中央排著「回家投票」四字。",
+          "caption": "從欄杆縫隙間望去，一隻虎斑貓在綠蔭下閉眼休息。 畫面中央排著「回家投票」四字。",
+          "url": "/media/library/taitai-live-wild/5.webp?v=c3ccb412ceb11224",
+          "source": "https://www.threads.com/@taitai.live.wild/post/DgMi4uaICWL/media"
+        },
+        {
+          "id": "taitai-live-wild-6",
+          "halls": [
+            "V"
+          ],
+          "title": "回家投票｜一起上路",
+          "alt": "背著背包的旅人與一隻貓沿著樹蔭下的山路往前走。 畫面中央排著「回家投票」四字。",
+          "caption": "背著背包的旅人與一隻貓沿著樹蔭下的山路往前走。 畫面中央排著「回家投票」四字。",
+          "url": "/media/library/taitai-live-wild/6.webp?v=7e22c7b34c193c97",
+          "source": "https://www.threads.com/@taitai.live.wild/post/DgMi4uaICWL/media"
+        },
+        {
+          "id": "taitai-live-wild-7",
+          "halls": [
+            "V"
+          ],
+          "title": "回家投票｜屋簷上的貓",
+          "alt": "兩隻貓探出斑駁的水泥屋簷，低頭朝下看。 畫面中央排著「回家投票」四字。",
+          "caption": "兩隻貓探出斑駁的水泥屋簷，低頭朝下看。 畫面中央排著「回家投票」四字。",
+          "url": "/media/library/taitai-live-wild/7.webp?v=1def3489b79e05c6",
+          "source": "https://www.threads.com/@taitai.live.wild/post/DgMi4uaICWL/media"
+        },
+        {
+          "id": "taitai-live-wild-8",
+          "halls": [
+            "V"
+          ],
+          "title": "回家投票｜伸個懶腰",
+          "alt": "花叢下方，一隻花貓將前腳伸直，在屋前伸懶腰。 畫面中央排著「回家投票」四字。",
+          "caption": "花叢下方，一隻花貓將前腳伸直，在屋前伸懶腰。 畫面中央排著「回家投票」四字。",
+          "url": "/media/library/taitai-live-wild/8.webp?v=3bdfb4dddabd5c92",
+          "source": "https://www.threads.com/@taitai.live.wild/post/DgMi4uaICWL/media"
+        },
+        {
+          "id": "taitai-live-wild-9",
+          "halls": [
+            "V"
+          ],
+          "title": "回家投票｜雨傘下",
+          "alt": "橘貓蹲坐在一把撐開的深色雨傘下，前方散放著拖鞋。 畫面中央排著「回家投票」四字。",
+          "caption": "橘貓蹲坐在一把撐開的深色雨傘下，前方散放著拖鞋。 畫面中央排著「回家投票」四字。",
+          "url": "/media/library/taitai-live-wild/9.webp?v=b0bc59fe7fa2bc69",
+          "source": "https://www.threads.com/@taitai.live.wild/post/DgMi4uaICWL/media"
+        },
+        {
+          "id": "taitai-live-wild-10",
+          "halls": [
+            "V"
+          ],
+          "title": "回家投票｜縫隙間",
+          "alt": "一隻橘貓從兩道模糊的褐色橫條之間，望向鏡頭。 畫面中央排著「回家投票」四字。",
+          "caption": "一隻橘貓從兩道模糊的褐色橫條之間，望向鏡頭。 畫面中央排著「回家投票」四字。",
+          "url": "/media/library/taitai-live-wild/10.webp?v=cc2a0071db60bb6a",
+          "source": "https://www.threads.com/@taitai.live.wild/post/DgMi4uaICWL/media"
+        }
+      ]
+    },
+    {
+      "id": "michtdes",
+      "name": "mich.illust ✦ RuBa RuBa",
+      "description": "喜愛插畫，以畫畫放鬆，在作品中使用 mich.illust 的署名。",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@michtdes",
+        "ig": "https://www.instagram.com/michtdes/",
+        "web": "https://linktr.ee/michtdes"
+      },
+      "logo": {
+        "url": "/media/library/michtdes/logo.webp?v=3097ee47a423fd6f",
+        "source": "https://www.threads.com/@michtdes",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-26"
+      },
+      "productImages": [
+        {
+          "id": "michtdes-1",
+          "halls": [
+            "V"
+          ],
+          "title": "11/28 回家、出門投票",
+          "alt": "黃色海報裡，彩色小人高舉身分證，合力扛起投票章，旁邊寫著「11 28」與「VOTE」。",
+          "caption": "黃色海報裡，彩色小人高舉身分證，合力扛起投票章，旁邊寫著「11 28」與「VOTE」。",
+          "url": "/media/library/michtdes/1.webp?v=9092309599c55f24",
+          "source": "https://www.threads.com/@michtdes/post/DgMMFMdpZ_g/media"
+        }
+      ]
+    },
+    {
+      "id": "potaatomeat",
+      "name": "薯肉POTAATO🥔",
+      "description": "一顆台灣馬鈴薯，畫插畫，也直播遊戲和畫畫。",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@potaatomeat",
+        "ig": "https://www.instagram.com/potaatomeat/",
+        "web": "https://youtube.com/@ononori9"
+      },
+      "logo": {
+        "url": "/media/library/potaatomeat/logo.webp?v=21c9e73bc2258a44",
+        "source": "https://www.threads.com/@potaatomeat",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-26"
+      },
+      "productImages": [
+        {
+          "id": "potaatomeat-1",
+          "halls": [
+            "V"
+          ],
+          "title": "1128 一起去投票！",
+          "alt": "戴紅帽的黃色角色拿著圈選章坐在選票上，旁邊寫著「1128 一起去投票！」。",
+          "caption": "戴紅帽的黃色角色拿著圈選章坐在選票上，旁邊寫著「1128 一起去投票！」。",
+          "url": "/media/library/potaatomeat/1.webp?v=ba7a6360823d0653",
+          "source": "https://www.threads.com/@potaatomeat/post/DgKo_8qlz32"
+        }
+      ]
+    },
+    {
+      "id": "eli-pluma-lin",
+      "name": "Eli Lin 依萊",
+      "description": "漫畫家、插畫家，著有漫畫《羅賽塔》。",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@eli.pluma.lin",
+        "ig": "https://www.instagram.com/eli.pluma.lin/",
+        "web": ""
+      },
+      "logo": {
+        "url": "/media/library/eli-pluma-lin/logo.webp?v=a535dc43023bf524",
+        "source": "https://www.threads.com/@eli.pluma.lin",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-26"
+      },
+      "productImages": [
+        {
+          "id": "eli-pluma-lin-1",
+          "halls": [
+            "V"
+          ],
+          "title": "VOTE FOR TAIWAN",
+          "alt": "一名年輕人手拿飲料，站在寫著「11.28」的櫃檯前。上方三張招牌畫著身分證、投票通知單與印章。",
+          "caption": "一名年輕人手拿飲料，站在寫著「11.28」的櫃檯前。上方三張招牌畫著身分證、投票通知單與印章。",
+          "url": "/media/library/eli-pluma-lin/1.webp?v=daf632f2c33bcbd1",
+          "source": "https://www.instagram.com/p/DgJs3xGSFmY/",
+          "referenceUrl": "https://www.threads.com/@eli.pluma.lin/post/DgKS1p4kvwV/media"
+        }
+      ]
+    },
+    {
+      "id": "wenhsiu-wang",
+      "name": "Wen-Hsiu",
+      "description": "漫畫家，一個人工作，也喜歡和人聊天。",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@wenhsiu.wang",
+        "ig": "https://www.instagram.com/wenhsiu.wang/",
+        "web": ""
+      },
+      "logo": {
+        "url": "/media/library/wenhsiu-wang/logo.webp?v=7ae34ed7e87f5a89",
+        "source": "https://www.threads.com/@wenhsiu.wang",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-26"
+      },
+      "productImages": [
+        {
+          "id": "wenhsiu-wang-1",
+          "halls": [
+            "V"
+          ],
+          "title": "1128 我們一起出門投票！",
+          "alt": "分格插畫描繪排隊、圈選和投票，一名小小的人物站在放大的圈選章上，雙手舉起選票。",
+          "caption": "分格插畫描繪排隊、圈選和投票，一名小小的人物站在放大的圈選章上，雙手舉起選票。",
+          "url": "/media/library/wenhsiu-wang/1.webp?v=f5425921eee9fb30",
+          "source": "https://www.threads.com/@wenhsiu.wang/post/DgK6wGSEkoM"
+        }
+      ]
     }
   ],
   "boothOrder": {
@@ -9631,7 +10179,19 @@
       "yan-11101514",
       "im-ebi-tw",
       "ursoc00lxx",
-      "mihua-sun"
+      "mihua-sun",
+      "haloochichi",
+      "h-t-l",
+      "cancancat-tw",
+      "3co-studio",
+      "fumizi03",
+      "ayya-illustration",
+      "taitai-live-wild",
+      "michtdes",
+      "potaatomeat",
+      "eli-pluma-lin",
+      "wenhsiu-wang",
+      "halfawakedept"
     ]
   }
 }
