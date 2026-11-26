@@ -11015,6 +11015,41 @@
           "source": "https://www.threads.com/@weareasimp_dog/post/DgMr2y8mtaX"
         }
       ]
+    },
+    {
+      "id": "tinytotdesign",
+      "name": "Tiny Tot 像個小孩",
+      "description": "[ : ᴛᴀɪᴡᴀɴ x ᴅᴇsɪɢɴᴇʀ x ɪʟʟᴜsᴛʀᴀᴛᴏʀ : ]———————————————————\n商業合作｜tinytotdesign@gmail.com",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@tinytotdesign",
+        "ig": "https://www.instagram.com/tinytotdesign/",
+        "web": ""
+      },
+      "logo": {
+        "url": "/media/library/tinytotdesign/logo.webp?v=a9b17e24688848e8",
+        "source": "https://www.threads.com/@tinytotdesign",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-26"
+      },
+      "productImages": [
+        {
+          "id": "tinytotdesign-1",
+          "halls": [
+            "V"
+          ],
+          "title": "出門投票（更新版）",
+          "alt": "一隻黑貓從黃色房屋的橘門走出，伸手舉起寫著「VOTE」的紙張。牆上標著 11/28，綠色背景上寫著「出門投票」。",
+          "caption": "11.28，別讓自己的那一票缺席。一起出門投票！",
+          "url": "/media/library/tinytotdesign/1.webp?v=90d102bea13e5c3d",
+          "source": "https://www.threads.com/@tinytotdesign/post/DgM4n4tnT2r"
+        }
+      ]
     }
   ],
   "boothOrder": {
@@ -11077,7 +11112,8 @@
       "just-1-haha",
       "tominagasinpei",
       "clairehandwriting",
-      "weareasimp-dog"
+      "weareasimp-dog",
+      "tinytotdesign"
     ]
   }
 }
