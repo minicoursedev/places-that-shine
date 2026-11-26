@@ -854,7 +854,22 @@
           "id": "clairehandwriting-2",
           "alt": "claire chien 作品照片 2",
           "url": "/media/library/clairehandwriting/2.webp"
+        },
+        {
+          "id": "clairehandwriting-3",
+          "halls": [
+            "V"
+          ],
+          "title": "每一票，都是力量",
+          "alt": "橘色海報中，戴眼鏡的人舉著選票，胸前揹著貓、背上揹著包，邁步往前跑。左上角標有日期 2026.11.28，底部寫著「每一票，都是力量」。",
+          "caption": "每一票，都是力量。",
+          "url": "/media/library/clairehandwriting/3.webp?v=1693c9d05e09cfd3",
+          "source": "https://www.threads.com/@claire.chien1/post/DgFJrv8kooG",
+          "referenceUrl": "https://www.threads.com/@lizyu0203/post/DgKsMnzmnON/media"
         }
+      ],
+      "additionalHalls": [
+        "V"
       ]
     },
     {
@@ -11003,7 +11018,8 @@
       "goo-goo-lii",
       "yumaooo-tw",
       "just-1-haha",
-      "tominagasinpei"
+      "tominagasinpei",
+      "clairehandwriting"
     ]
   }
 }
