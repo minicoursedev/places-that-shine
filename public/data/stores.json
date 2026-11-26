@@ -5671,6 +5671,294 @@
       "giftStatus": "可能有小物",
       "verification": false,
       "disabled": false
+    },
+    {
+      "id": "jiala-beefnoodle",
+      "name": "家辣麻辣鴨血",
+      "address": "臺北市萬華區長泰街47號",
+      "addressSource": "https://www.threads.com/@jiala_beefnoodle",
+      "category": "小吃",
+      "latlng": {
+        "lat": 25.023112191312,
+        "lng": 121.50029289933
+      },
+      "coordinateSource": "https://raw.githubusercontent.com/zhengda/taiwan-address-data/master/roads/63-%E9%95%B7%E6%B3%B0%E8%A1%97.csv",
+      "social": {
+        "threads": "https://www.threads.com/@jiala_beefnoodle"
+      },
+      "verification": false
+    },
+    {
+      "id": "kauhoselect",
+      "name": "夠好選物 Kàu Hó Selection",
+      "address": "新竹縣竹北市文義街107號1樓",
+      "addressSource": "https://www.threads.com/@kauhoselect",
+      "category": "寵物",
+      "latlng": {
+        "lat": 24.830741239235,
+        "lng": 121.01722774269
+      },
+      "coordinateSource": "https://raw.githubusercontent.com/zhengda/taiwan-address-data/master/roads/10004-%E6%96%87%E7%BE%A9%E8%A1%97.csv",
+      "social": {
+        "threads": "https://www.threads.com/@kauhoselect"
+      },
+      "verification": false
+    },
+    {
+      "id": "at-studio-mycoffee",
+      "name": "AT STUDIO 甜點在工作室",
+      "address": "臺北市中山區遼寧街63巷19號2樓",
+      "addressSource": "https://www.ubereats.com/tw/store/at-studio-l-%E6%B3%B0%E5%BC%8Fx%E7%94%9C%E9%BB%9E%E5%AF%A6%E9%A9%97%E5%AE%A4/5A7l1KwDVkeXN4JWCTAwYA",
+      "category": "甜點飲料",
+      "latlng": {
+        "lat": 25.049207490423,
+        "lng": 121.54295420892
+      },
+      "coordinateSource": "https://raw.githubusercontent.com/zhengda/taiwan-address-data/master/roads/63-%E9%81%BC%E5%AF%A7%E8%A1%97.csv",
+      "social": {
+        "threads": "https://www.threads.com/@at.studio.mycoffee"
+      },
+      "verification": false
+    },
+    {
+      "id": "xiaomao-curry",
+      "name": "笑貓咖哩（台北承德店）",
+      "address": "臺北市大同區承德路一段24巷18號",
+      "addressSource": "https://www.threads.com/@xiaomao_curry",
+      "category": "正餐",
+      "latlng": {
+        "lat": 25.05058573466,
+        "lng": 121.51613227073
+      },
+      "coordinateSource": "https://raw.githubusercontent.com/zhengda/taiwan-address-data/master/roads/63-%E6%89%BF%E5%BE%B7%E8%B7%AF.csv",
+      "social": {
+        "threads": "https://www.threads.com/@xiaomao_curry"
+      },
+      "verification": false
+    },
+    {
+      "id": "tuntun-booksnbooze",
+      "name": "屯屯 tūn-tūn Books & Booze",
+      "address": "臺北市中山區長安東路一段39號",
+      "addressSource": "https://www.threads.com/@tuntun_booksnbooze",
+      "category": "書店",
+      "latlng": {
+        "lat": 25.049124436447,
+        "lng": 121.52516408345
+      },
+      "coordinateSource": "https://raw.githubusercontent.com/zhengda/taiwan-address-data/master/roads/63-%E9%95%B7%E5%AE%89%E6%9D%B1%E8%B7%AF.csv",
+      "social": {
+        "threads": "https://www.threads.com/@tuntun_booksnbooze"
+      },
+      "verification": false
+    },
+    {
+      "id": "wave-flower",
+      "name": "浪花花藝 Wave Flower",
+      "address": "臺北市大安區仁愛路三段28之1號1樓",
+      "addressSource": "https://www.wave-flower.com/pages/storefront",
+      "category": "花店",
+      "latlng": {
+        "lat": 25.037643670694,
+        "lng": 121.53636711825
+      },
+      "coordinateSource": "https://raw.githubusercontent.com/zhengda/taiwan-address-data/master/roads/63-%E4%BB%81%E6%84%9B%E8%B7%AF.csv",
+      "social": {
+        "threads": "https://www.threads.com/@wave_flower"
+      },
+      "verification": false
+    },
+    {
+      "id": "pegcoffee",
+      "name": "配個咖啡吧！PEG COFFEE",
+      "address": "臺北市信義區嘉興街309號",
+      "addressSource": "https://www.threads.com/@pegcoffee",
+      "category": "咖啡廳",
+      "latlng": {
+        "lat": 25.023202266217,
+        "lng": 121.55462769347
+      },
+      "coordinateSource": "https://raw.githubusercontent.com/zhengda/taiwan-address-data/master/roads/63-%E5%98%89%E8%88%88%E8%A1%97.csv",
+      "social": {
+        "threads": "https://www.threads.com/@pegcoffee"
+      },
+      "verification": false
+    },
+    {
+      "id": "bonicacafe",
+      "name": "Bonica Pâtisserie & Café",
+      "address": "臺北市大安區安和路二段20巷6號1樓",
+      "addressSource": "https://www.zopetshop.com/blogs/zozogo/bonica",
+      "category": "咖啡廳",
+      "latlng": {
+        "lat": 25.0320681103,
+        "lng": 121.55197150348
+      },
+      "coordinateSource": "https://raw.githubusercontent.com/zhengda/taiwan-address-data/master/roads/63-%E5%AE%89%E5%92%8C%E8%B7%AF.csv",
+      "social": {
+        "threads": "https://www.threads.com/@bonicacafe"
+      },
+      "verification": false
+    },
+    {
+      "id": "galicoffee",
+      "name": "嘎哩咖啡 GaliGabi",
+      "address": "臺北市大同區重慶北路三段23號2樓",
+      "addressSource": "https://damei17.com/galicoffee/",
+      "category": "咖啡廳",
+      "latlng": {
+        "lat": 25.064707054023,
+        "lng": 121.51388603347
+      },
+      "coordinateSource": "https://raw.githubusercontent.com/zhengda/taiwan-address-data/master/roads/63-%E9%87%8D%E6%85%B6%E5%8C%97%E8%B7%AF.csv",
+      "social": {
+        "threads": "https://www.threads.com/@galicoffee"
+      },
+      "verification": false
+    },
+    {
+      "id": "oa-cafe",
+      "name": "OA STUDIO & CAFE",
+      "address": "臺北市大安區新生南路三段56巷11之2號",
+      "addressSource": "https://www.threads.com/@oa.cafe_",
+      "category": "咖啡廳",
+      "latlng": {
+        "lat": 25.0204436,
+        "lng": 121.5335696
+      },
+      "coordinateSource": "https://maps.google.com/?cid=2127225810015770404",
+      "social": {
+        "threads": "https://www.threads.com/@oa.cafe_"
+      },
+      "verification": false
+    },
+    {
+      "id": "abd-coffeeandlife",
+      "name": "A BEAUTIFUL DAY COMPANY",
+      "address": "臺北市中正區林森南路3巷1號",
+      "addressSource": "https://www.threads.com/@abd_coffeeandlife",
+      "category": "咖啡廳",
+      "latlng": {
+        "lat": 25.04430466009,
+        "lng": 121.52363963575
+      },
+      "coordinateSource": "https://raw.githubusercontent.com/zhengda/taiwan-address-data/master/roads/63-%E6%9E%97%E6%A3%AE%E5%8D%97%E8%B7%AF.csv",
+      "social": {
+        "threads": "https://www.threads.com/@abd_coffeeandlife"
+      },
+      "verification": false
+    },
+    {
+      "id": "point2coffee",
+      "name": "點二咖啡 •2 coffee studio",
+      "address": "臺北市中山區民族東路208號2樓",
+      "addressSource": "https://www.threads.com/@point2coffee",
+      "category": "咖啡廳",
+      "latlng": {
+        "lat": 25.068142861984,
+        "lng": 121.53112558708
+      },
+      "coordinateSource": "https://raw.githubusercontent.com/zhengda/taiwan-address-data/master/roads/63-%E6%B0%91%E6%97%8F%E6%9D%B1%E8%B7%AF.csv",
+      "social": {
+        "threads": "https://www.threads.com/@point2coffee"
+      },
+      "verification": false
+    },
+    {
+      "id": "op-118-2",
+      "name": "菸花《Op118.2》",
+      "address": "臺北市大同區迪化街一段14巷37號",
+      "addressSource": "https://www.threads.com/@op_118_2",
+      "category": "咖啡廳",
+      "latlng": {
+        "lat": 25.05403358708,
+        "lng": 121.50924297323
+      },
+      "coordinateSource": "https://raw.githubusercontent.com/zhengda/taiwan-address-data/master/roads/63-%E8%BF%AA%E5%8C%96%E8%A1%97.csv",
+      "social": {
+        "threads": "https://www.threads.com/@op_118_2"
+      },
+      "verification": false
+    },
+    {
+      "id": "yachingtsao",
+      "name": "美愛美大樹下二花早餐店",
+      "address": "臺北市北投區光明路19號",
+      "addressSource": "https://team-taiwan.app/stores/台北市/北投區/分類/餐飲美食/",
+      "category": "小吃",
+      "latlng": {
+        "lat": 25.132603205293,
+        "lng": 121.49913591415
+      },
+      "coordinateSource": "https://raw.githubusercontent.com/zhengda/taiwan-address-data/master/roads/63-%E5%85%89%E6%98%8E%E8%B7%AF.csv",
+      "social": {
+        "threads": "https://www.threads.com/@yachingtsao"
+      },
+      "verification": false
+    },
+    {
+      "id": "wan-fu-hao1926",
+      "name": "萬福號－圓環拾味",
+      "address": "臺北市大同區重慶北路二段29號1樓",
+      "addressSource": "https://news.ustv.com.tw/food/shop/1714",
+      "category": "小吃",
+      "latlng": {
+        "lat": 25.054925946465,
+        "lng": 121.51436858232
+      },
+      "coordinateSource": "https://raw.githubusercontent.com/zhengda/taiwan-address-data/master/roads/63-%E9%87%8D%E6%85%B6%E5%8C%97%E8%B7%AF.csv",
+      "social": {
+        "threads": "https://www.threads.com/@wan_fu_hao1926"
+      },
+      "verification": false
+    },
+    {
+      "id": "coffeestand139",
+      "name": "珈飛小賣所",
+      "address": "臺北市大同區寧夏路139號",
+      "addressSource": "https://www.threads.com/@coffeestand139",
+      "category": "咖啡廳",
+      "latlng": {
+        "lat": 25.060932729281,
+        "lng": 121.51441125014
+      },
+      "coordinateSource": "https://raw.githubusercontent.com/zhengda/taiwan-address-data/master/roads/63-%E5%AF%A7%E5%A4%8F%E8%B7%AF.csv",
+      "social": {
+        "threads": "https://www.threads.com/@coffeestand139"
+      },
+      "verification": false
+    },
+    {
+      "id": "liminal-official-tw",
+      "name": "Liminal",
+      "address": "臺北市內湖區南京東路六段200之1號",
+      "addressSource": "https://www.threads.com/@liminal_official_tw",
+      "category": "選物雜貨",
+      "latlng": {
+        "lat": 25.056013604049,
+        "lng": 121.58048112587
+      },
+      "coordinateSource": "https://raw.githubusercontent.com/zhengda/taiwan-address-data/master/roads/63-%E5%8D%97%E4%BA%AC%E6%9D%B1%E8%B7%AF.csv",
+      "social": {
+        "threads": "https://www.threads.com/@liminal_official_tw"
+      },
+      "verification": false
+    },
+    {
+      "id": "cup-koko",
+      "name": "CUP",
+      "address": "臺北市松山區南京東路五段234號",
+      "addressSource": "https://www.threads.com/@cup.koko",
+      "category": "咖啡廳",
+      "latlng": {
+        "lat": 25.051164928081,
+        "lng": 121.56594795767
+      },
+      "coordinateSource": "https://raw.githubusercontent.com/zhengda/taiwan-address-data/master/roads/63-%E5%8D%97%E4%BA%AC%E6%9D%B1%E8%B7%AF.csv",
+      "social": {
+        "threads": "https://www.threads.com/@cup.koko"
+      },
+      "verification": false
     }
   ]
 }
