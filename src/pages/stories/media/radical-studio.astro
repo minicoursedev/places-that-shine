@@ -1,0 +1,129 @@
+---
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+
+const title = '一條「官逼民反」毛巾，從雲林走進立法院';
+const description = '激進工作室將拷秋勤的一首歌織成毛巾。跟著它走過雲林、大埔與立法院，回看陳威仲和團隊十五年的創作。';
+
+const posts = [
+  { date: '2026-11-25', title: '大家把「官逼民反」毛巾舉起來的合照', url: 'https://www.threads.com/@rdcstu/post/DgKg2uyERJ_' },
+  { date: '2026-11-26', title: '「說到2014」與質詢台前的毛巾', url: 'https://www.threads.com/@rdcstu/post/DgLs4uUiKeR' },
+  { date: '2026-11-26', title: '「自己國家自己救」再次開放預購', url: 'https://www.threads.com/@rdcstu/post/DgLzqt9CMgt' },
+  { date: '2025-02-20', title: '工作室用三種語言介紹自己', url: 'https://www.threads.com/@rdcstu/post/DGTMuyevboh' },
+];
+
+const sources = [
+  { id: 'towel', author: '激進工作室', title: '「官逼民反」緹花毛巾的製作故事', url: 'https://www.radicalonline.net/products/12-civil-revolt-towel' },
+  { id: 'dapu', author: 'Chris Shen／關鍵評論網，2013', title: '你今天團購「官逼民反」毛巾了嗎？', url: 'https://www.thenewslens.com/article/211' },
+  { id: 'legislature', author: '陳東／沃草，2014', title: '蘇震清委員於院會時送江宜樺「官逼民反」毛巾', url: 'https://watchout.tw/reports/jkcODpgvJWtOWR1Nu1AN' },
+  { id: 'shirt', author: 'BeautiMode，2014', title: '「自己國家自己救」T 恤設計師陳威仲專訪', url: 'https://www.beautimode.com/article/content/21859//' },
+  { id: 'occupation', author: 'Ho Yi／Taipei Times，2014', title: 'Not just a game', url: 'https://www.taipeitimes.com/News/feat/archives/2014/08/30/2003598593' },
+  { id: 'inland', author: 'flyingV／關鍵評論網，2016', title: '專訪「內地搖滾」創辦人', url: 'https://www.thenewslens.com/article/45155' },
+  { id: 'small-festival', author: '中央社，2017', title: '募資支出明細須公開　提案者憂智財難接受', url: 'https://www.cna.com.tw/news/asoc/201709250274.aspx' },
+  { id: 'tainan', author: '黃弘杰／台南言論自由日《我主張》，2023', title: '陳威仲談旗幟、服裝與做品牌的起心動念', url: 'https://nylonadvocate.blogspot.com/2023/05/blog-post.html' },
+  { id: 'forkmosa', author: '開放文化基金會，2026', title: 'Forkmosa 聯名水壺的設計與年末募款', url: 'https://ocf.tw/supportus/2026-year-end/' },
+];
+---
+
+<SiteLayout title={`${title}｜激進工作室｜努力發著光`} description={description}>
+  <article class="feature">
+    <nav class="breadcrumb" aria-label="所在位置">
+      <a href="/stories/">努力發著光</a><span aria-hidden="true">/</span><a href="/stories/media/#radical-studio">媒體・創作團隊</a>
+    </nav>
+    <header class="opening">
+      <div class="headline">
+        <p class="studio">激進工作室 <span lang="en">Radical Studio</span></p>
+        <h1><span>一條<b>「官逼民反」</b><b>毛巾，</b></span><span><b>從雲林</b><b>走進立法院</b></span></h1>
+        <p class="intro">2026 年 11 月，激進工作室在 Threads 貼出一張黑白合照。鏡頭前，幾個人拉開毛巾，布面上織著「官逼民反」。隔天，他們又貼了一張新聞畫面。立法院的質詢台前，也有人攤開了同款毛巾。要找它的來處，得回到 2012 年的雲林。</p>
+        <nav class="studio-links" aria-label="激進工作室官方連結">
+          <a href="https://www.radicalonline.net/">激進工作室官網</a>
+          <a href="https://www.radicalonline.net/collections/all">激進線上賣場</a>
+        </nav>
+      </div>
+      <figure class="cover-post">
+        <iframe title="激進工作室發表在 Threads 的街頭合照" src="https://www.threads.com/@rdcstu/post/DgKg2uyERJ_/embed" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        <figcaption>工作室於 2026 年 11 月 25 日貼出的合照。<a href={posts[0].url}>在 Threads 看原圖</a></figcaption>
+      </figure>
+    </header>
+
+    <div class="reading">
+      <section>
+        <h2>一首歌，怎麼織成一條毛巾？</h2>
+        <p>2011 年，饒舌樂團拷秋勤的成員組成激進工作室。團裡的 DJ 陳威仲負責設計，畫好的圖會帶回團裡討論。遇到歷史題材，還有熟悉這段歷史的團員幫忙檢視。隔年，他們請雲林的毛巾工廠，把拷秋勤的歌名〈官逼民反〉織進一條可以擦汗、也可以雙手舉起的棉毛巾。<sup><a href="#towel" aria-label="來源 1">1</a>、<a href="#shirt" aria-label="來源 4">4</a></sup></p>
+        <p>2013 年 8 月，Chris Shen 在新聞裡看到苗栗大埔張藥房的屋主彭秀春，手上正舉著這條毛巾。他準備去聲援大埔，於是在辦公室揪團訂購。一下班，同事帶著剛拿到的毛巾就要去運動中心跑步。隔年五月，立委蘇震清質詢行政院長江宜樺時，也在議場裡攤開一條，要送給他。沃草留下了那段影像。<sup><a href="#dapu" aria-label="來源 2">2</a>、<a href="#legislature" aria-label="來源 3">3</a></sup></p>
+      </section>
+      <section>
+        <h2>退場那天，他把身上的 T 恤脫了下來</h2>
+        <p>「自己國家自己救」T 恤在 2013 年 7 月就已經上市。八個月後，太陽花運動讓這件衣服進了新聞鏡頭。陳威仲後來告訴《Taipei Times》，立法院被佔領期間，工作室決定暫停營業，他覺得當下不適合做生意。<sup><a href="#shirt" aria-label="來源 4">4</a>、<a href="#occupation" aria-label="來源 5">5</a></sup></p>
+        <p>退場後接受訪問時，他還記得一件小事。那天有位學運代表沒衣服穿，他就脫下身上印著「團結就是力量」的那一款，給對方穿著走出去。<sup><a href="#shirt" aria-label="來源 4">4</a></sup></p>
+      </section>
+      <section>
+        <h2>把「台灣的內地是南投」唱回南投</h2>
+        <p>2015 年，工作室把大支歌裡的「台灣的內地是南投」搬到埔里，辦起第一屆「內地搖滾」。隔年，舞台來到集集車站旁。陳威仲說，有樂團願意免費上台，主辦方仍堅持付演出費。2017 年，第三屆募資沒有達標，最後以較小規模的「內地小搖滾」舉辦。<sup><a href="#inland" aria-label="來源 6">6</a>、<a href="#small-festival" aria-label="來源 7">7</a></sup></p>
+      </section>
+      <section>
+        <h2>看見有人穿出門</h2>
+        <p>2023 年，陳威仲在台南言論自由日的訪談裡談到，以前隨樂團出國，看到台下的觀眾搖旗會感動，也會想，自己代表的台灣，該用哪一面旗讓人認出來？那個在舞台上遇到的問題，後來成了他選擇設計題目的起點。<sup><a href="#tainan" aria-label="來源 8">8</a></sup></p>
+        <p>到了 2026 年，開放文化基金會的年末募款水壺上，也能看到激進的設計。瓶身的「Forkmosa」把開源社群用的 fork 和 Formosa 拼在一起。基金會說，字形裡的分岔與匯流，畫的是人們各自探路、又回來合作的樣子。<sup><a href="#forkmosa" aria-label="來源 9">9</a></sup></p>
+        <p>做這些東西也有灰心的時候。陳威仲在台南的那場訪談說，喜歡的人多，願意買的人未必多。讓他重新有勁的，是出門真的遇到有人穿著自己做的衣服。<sup><a href="#tainan" aria-label="來源 8">8</a></sup></p>
+      </section>
+    </div>
+
+    <aside id="related-posts" class="archive" aria-labelledby="posts-title">
+      <h2 id="posts-title">工作室的 Threads 貼文</h2>
+      <ol class="post-list">
+        {posts.map(post => <li><a href={post.url}>{post.title}</a><time datetime={post.date}>{post.date.replaceAll('-', '.')}</time></li>)}
+      </ol>
+      <a class="post-link" href="https://www.threads.com/@rdcstu">激進工作室 @rdcstu</a>
+    </aside>
+
+    <section class="sources" aria-labelledby="sources-title">
+      <h2 id="sources-title">資料來源</h2>
+      <ol>{sources.map(source => <li id={source.id}><a href={source.url}>{source.title}</a><span>{source.author}</span></li>)}</ol>
+    </section>
+    <nav class="back" aria-label="返回目錄"><a href="/stories/media/#radical-studio">回到「努力發著光」創作團隊</a></nav>
+  </article>
+</SiteLayout>
+
+<style>
+  .feature { width: min(calc(100% - 2 * var(--gutter)), 65rem); margin: 0 auto; padding-block: 1.75rem 4rem; }
+  .breadcrumb { display: flex; gap: .65rem; align-items: center; color: var(--muted); font-size: .9rem; }
+  .feature a { text-underline-offset: .24em; text-decoration-thickness: 1px; }
+  .feature a:hover { color: var(--accent); }
+  .opening { display: grid; grid-template-columns: 1.07fr 1fr; align-items: center; gap: clamp(2rem, 4vw, 3.5rem); margin-block: 2.3rem 0; padding-bottom: 2.25rem; border-bottom: 1px solid var(--line); }
+  .headline { max-width: 50rem; }
+  .studio { margin: 0 0 .8rem; color: var(--accent); font: 750 1.12rem/1.5 var(--sans); }
+  .studio span { margin-inline-start: .45rem; font-size: .94rem; }
+  h1, h2 { font-family: var(--serif); text-wrap: balance; }
+  h1 { margin: 0; font-size: clamp(1.85rem, 3.4vw, 2.7rem); line-height: 1.4; letter-spacing: -.025em; }
+  h1 span { display: block; }
+  h1 b { white-space: nowrap; font-weight: inherit; }
+  .intro { max-width: 37em; margin: 1.2rem 0 .8rem; font: 550 clamp(1.07rem, 2vw, 1.22rem)/1.92 var(--serif); }
+  .studio-links { display: flex; flex-wrap: wrap; gap: .5rem 1.25rem; }
+  .studio-links a, .post-link, .back a { color: var(--accent); font-weight: 650; }
+  .cover-post { min-width: 0; margin: 0; }
+  .cover-post iframe { display: block; width: 100%; height: 22rem; border: 1px solid var(--line); border-radius: .6rem; background: white; }
+  .cover-post figcaption { margin-top: .65rem; color: var(--muted); font-size: .9rem; line-height: 1.7; }
+  .cover-post figcaption a { color: var(--accent); white-space: nowrap; }
+  .reading, .archive, .sources, .back { max-width: 43rem; margin-inline: auto; }
+  .reading section { margin-block: clamp(2.25rem, 5vw, 3.4rem); }
+  h2 { margin-block: 0 .9rem; font-size: clamp(1.42rem, 3.4vw, 2rem); line-height: 1.5; }
+  .reading p { margin: 0 0 .9rem; font: 500 1.1rem/1.98 var(--serif); }
+  sup { padding-inline-start: .15em; font: 600 .76rem/1 var(--sans); color: var(--accent); }
+  sup a { display: inline-block; padding: .17rem; }
+  .archive { margin-block: 3.5rem 2.5rem; padding: 1.4rem clamp(1.15rem, 3.5vw, 2.35rem) 1.65rem; background: #f0e8d9; border-block-start: 3px solid var(--accent); }
+  .post-list, .sources ol { padding-inline-start: 1.7rem; }
+  .post-list li, .sources li { padding: .55rem 0 .55rem .25rem; }
+  li::marker { color: var(--accent); font-weight: 650; font-variant-numeric: tabular-nums; }
+  .post-list a, .sources a { font-weight: 650; }
+  time, .sources li span { display: block; margin-top: .15rem; color: var(--muted); font-size: .9rem; }
+  .sources li:target { background: #eee2cb; }
+  .back { margin-top: 2.5rem; border-top: 1px solid var(--line); padding-top: 1.25rem; }
+  @media (max-width: 900px) {
+    .opening { grid-template-columns: 1fr; gap: 1.4rem; }
+    .cover-post { width: min(100%, 33rem); }
+  }
+  @media (max-width: 600px) {
+    .feature { width: calc(100% - 2rem); padding-block-start: 1.25rem; }
+    .opening { margin-block-start: 1.6rem; padding-bottom: 1.5rem; }
+  }
+</style>

@@ -22,6 +22,7 @@ const paths = [
   ...catalogue.halls.map(hall => stageHallPath(hall.id)),
   ...catalogue.stages.map(stage => stageVideoPath(stage.id)),
   '/stories/',
+  '/stories/media/radical-studio/',
   '/stories/events/',
   ...eventEntries.map(({ id }) => storyEventPath(id)),
   '/puma_oshen_wave/yilan_taiwan_11_07/',

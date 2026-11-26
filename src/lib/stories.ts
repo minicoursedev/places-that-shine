@@ -298,6 +298,19 @@ export const storyEntries: (StoryEntry | StoryEvent)[] = [
     href: 'https://www.threads.com/@southvolunteerproject',
   },
   {
+    id: 'radical-studio',
+    category: 'media',
+    type: '創作團隊',
+    title: '激進工作室 Radical Studio',
+    source: '閱讀專題',
+    description: '拷秋勤成員把一首歌織成「官逼民反」毛巾。從雲林工廠、大埔街頭到立法院，跟著一條毛巾認識做它的人。',
+    founding: {
+      description: '2011 年',
+      sources: [{ label: '工作室置頂文', href: 'https://www.threads.com/@rdcstu/post/DGTMuyevboh' }],
+    },
+    href: '/stories/media/radical-studio/',
+  },
+  {
     id: 'taiwan-bb',
     category: 'media',
     type: '創作團隊',
