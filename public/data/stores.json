@@ -5640,6 +5640,37 @@
       "giftStatus": "可能有小物",
       "verification": false,
       "disabled": false
+    },
+    {
+      "id": "chef-dancingpig",
+      "name": "豬跳舞小餐館 Dancing Pig",
+      "address": "臺北市大安區光復南路290巷48號",
+      "addressSource": "https://mice.meettaiwan.com/meettaiwan/bizfun/file/02_Restaurantdiscountplan.pdf",
+      "category": "正餐",
+      "latlng": {
+        "lat": 25.03946,
+        "lng": 121.55574
+      },
+      "coordinateSource": "https://www-ws.gov.taipei/Download.ashx?icon=.pdf&n=MTEzMDkyNeWkp%2BWuieWIhuWxgF%2FpmLLnqbrnlo%2FmlaPpgb%2Fpm6PoqK3mlr3liJfnrqHmuIXlhooucGRm&u=LzAwMS9VcGxvYWQvNDcwL3JlbGZpbGUvNTQzNzkvODY5MzA0My9lYmM4ZDE0Yy04M2M4LTQ1OGEtYWVjNy1iZTU0NzY1NWY4ZWQucGRm",
+      "coordinateNote": "OpenStreetMap 查詢未取得可核對的門牌點，採臺北市政府警察局大安分局公開清冊中同門牌所列的座標（編號 WNA00654）。此為門牌定位點，非店家入口實測點。",
+      "visitNote": "供應義大利麵、燉飯、披薩及烤肉料理，招牌有脆皮豬腳與烤全雞。可透過 inline 或電話 02-2731-6469 訂位。",
+      "visitUrl": "https://inline.app/booking/-L_QVUTUS5GBaOEQzbVR:inline-live-2a466/-L_QVUX_dp-pVU7Nt2_t?language=zh-tw",
+      "social": {
+        "facebook": "https://www.facebook.com/dancingpigpig/",
+        "instagram": "https://www.instagram.com/chef_dancingpig/",
+        "threads": "https://www.threads.com/@chef_dancingpig"
+      },
+      "shopPhoto": {
+        "url": "./media/library/chef-dancingpig/logo.webp?v=4912c82930b59616",
+        "source": "https://www.threads.com/@chef_dancingpig",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-26",
+        "note": "官方帳號 chef_dancingpig 的 hd_profile_pic_versions"
+      },
+      "giftStatus": "可能有小物",
+      "verification": false,
+      "disabled": false
     }
   ]
 }
