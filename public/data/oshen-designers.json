@@ -11545,6 +11545,41 @@
           "source": "https://www.threads.com/@afayechen/post/DgNInCYFH36/media"
         }
       ]
+    },
+    {
+      "id": "ethanyangtarou",
+      "name": "伊森·楊·太郎 ｜ 浮世繪插畫設計",
+      "description": "イーサン．ヤン．たろう\nEthαn．Yang．Tarou\n《浮浪狗奇譚》\n購書連結 https://linktr.ee/ethan.ystudio \n更多作品請看IG\n歷史系插畫師\n擅長台派浮世繪\n致力於舊傳統中注入新樂趣\n發揚老靈魂帶出新風貌",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@ethanyangtarou",
+        "ig": "https://www.instagram.com/ethanyangtarou/",
+        "web": ""
+      },
+      "logo": {
+        "url": "/media/library/ethanyangtarou/logo.webp?v=70503c45d9e2275e",
+        "source": "https://www.threads.com/@ethanyangtarou",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-26"
+      },
+      "productImages": [
+        {
+          "id": "ethanyangtarou-1",
+          "halls": [
+            "V"
+          ],
+          "title": "臺灣順起來",
+          "alt": "浮世繪風格的插畫中，一隻貓頭鷹展翅，用爪子將選票送向投票箱。左上寫著「11月28日 轉去投票」，右側直書「臺灣順起來」。",
+          "caption": "臺灣順起來～",
+          "url": "/media/library/ethanyangtarou/1.webp?v=4600f4db1eabf425",
+          "source": "https://www.threads.com/@ethanyangtarou/post/DgNF_OflGmO"
+        }
+      ]
     }
   ],
   "boothOrder": {
@@ -11618,7 +11653,8 @@
       "dogs-co-ltd",
       "sosokusonia",
       "thelittlebuby-illustration",
-      "afayechen"
+      "afayechen",
+      "ethanyangtarou"
     ]
   }
 }
