@@ -11815,6 +11815,41 @@
           "source": "https://www.threads.com/@pukupuku_don/post/DgNnVzAgb1x"
         }
       ]
+    },
+    {
+      "id": "jichun-ouo",
+      "name": "泲淳",
+      "description": "也可以叫窩 綠錐/ㄚ淳/ru\n目前是個撐過畢製ㄉ破爛草莓ㄒㄒ\n彩虹en主推Uki & Freo｜ボカロ喜歡GUMI (ˊᗜˋ*)",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@jichun_ouo",
+        "ig": "https://www.instagram.com/jichun_ouo/",
+        "web": ""
+      },
+      "logo": {
+        "url": "/media/library/jichun-ouo/logo.webp?v=e1448a71653e5afd",
+        "source": "https://www.threads.com/@jichun_ouo",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-26"
+      },
+      "productImages": [
+        {
+          "id": "jichun-ouo-1",
+          "halls": [
+            "V"
+          ],
+          "title": "轉去投票",
+          "alt": "白底上以黑色粗體排出「轉去投票」，每個字上方標有臺語羅馬字。右側以紅字手寫「去頓票」，底部寫著「11 28」與「差你這票」。",
+          "caption": "11.28 「把票投給你想過的生活」",
+          "url": "/media/library/jichun-ouo/1.webp?v=e1fc4f150671fa15",
+          "source": "https://www.threads.com/@jichun_ouo/post/DgNnQp9kroh"
+        }
+      ]
     }
   ],
   "boothOrder": {
@@ -11896,7 +11931,8 @@
       "minayuyu",
       "roomatemeatpie",
       "axxycool",
-      "pukupuku-don"
+      "pukupuku-don",
+      "jichun-ouo"
     ]
   }
 }
