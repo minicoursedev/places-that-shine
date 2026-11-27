@@ -34,7 +34,7 @@ const shareImage = new URL(designer?.og?.url || preview?.image || exhibitionImag
 const shareImageAlt = preview?.alt || '洋流設計師展逛攤畫面';
 ---
 <!doctype html>
-<html lang="zh-Hant-TW" data-designer-profile={designer?.id}>
+<html lang="zh-Hant-TW" data-market-scroll data-designer-profile={designer?.id}>
 <head>
 <meta charset="utf-8">
 <script is:inline defer src="/assets/analytics.js?v=20261019-content-group"></script>
@@ -64,7 +64,8 @@ const shareImageAlt = preview?.alt || '洋流設計師展逛攤畫面';
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=IBM+Plex+Mono:wght@500;600&display=swap">
-<link rel="stylesheet" href="/designers/css/market.css">
+<link rel="stylesheet" href="/designers/css/market.css?v=20261127-document-scroll">
+<link rel="stylesheet" href="/css/fullscreen-scroll.css?v=1">
 <link rel="stylesheet" href="/designers/css/booth.css?v=20261123-webp">
 <link rel="stylesheet" href="/designers/css/work.css?v=20261114-share-channels">
 <link rel="stylesheet" href="/designers/css/map.css?v=20261114-bluebird-hall">
@@ -138,7 +139,7 @@ const shareImageAlt = preview?.alt || '洋流設計師展逛攤畫面';
 <dialog id="dlg-booth" class="dlg" aria-labelledby="booth-title"></dialog>
 <WorkShareDialog kind="designer" />
 <WorkShareDialog />
-<script is:inline type="module" src="/designers/js/app.js?v=20261127-hall-og"></script>
+<script is:inline type="module" src="/designers/js/app.js?v=20261127-document-scroll"></script>
 </body>
 </html>
 

@@ -35,8 +35,9 @@ const legacy = Astro.url.pathname.startsWith('/puma_oshen_wave/stage/');
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=IBM+Plex+Mono:wght@500;600&display=swap">
 <link rel="stylesheet" href="/puma_oshen_wave/designer/css/market.css">
-<link rel="stylesheet" href="/puma_oshen_wave/stage/stage.css?v=20261104-songs-notice">
+<link rel="stylesheet" href="/puma_oshen_wave/stage/stage.css?v=20261127-social-scroll">
 <link rel="stylesheet" href="/puma_oshen_wave/designer/css/floating-nav.css?v=20261101">
+<link rel="stylesheet" href="/css/fullscreen-scroll.css?v=1">
 <script is:inline defer src="/assets/analytics.js?v=20261019-content-group"></script>
 </head>
 <body>
@@ -115,7 +116,7 @@ const legacy = Astro.url.pathname.startsWith('/puma_oshen_wave/stage/');
   </a>
   <footer class="songs-notice-footer"><small><PrivacyLink /></small></footer>
 </dialog>}
-<script is:inline type="module" src="/puma_oshen_wave/stage/app.js?v=20261125-stage-halls"></script>
+<script is:inline type="module" src="/puma_oshen_wave/stage/app.js?v=20261127-social-scroll"></script>
 {legacyRoot && <script is:inline>
   const songsNotice = document.getElementById('songs-notice');
   if (songsNotice && !location.hash && !location.search) {

@@ -9,8 +9,9 @@ const pad2 = n => String(n).padStart(2, '0');
 const fmt = n => Number(n || 0).toLocaleString('zh-TW');
 
 const view = { mode: 'overview', hall: 'O', zone: null, booth: null };
-let root = null;   // <main id="stage-map">, scrolls by itself
+let root = null;   // <main id="stage-map">
 let wired = false;
+let focusFrame = 0;
 const shown = () => !!root && !root.hidden;
 
 const halls = () => state.index?.halls || [];
@@ -53,7 +54,10 @@ function wire() {
   root.addEventListener('change', e => {
     if (!e.target.matches('.mp-jump select')) return;
     const el = root.querySelector(`.mp-zone-h[data-zone="${CSS.escape(e.target.value)}"]`);
-    if (el) scrollInto(el, 0.05);
+    if (el) {
+      cancelAnimationFrame(focusFrame);
+      scrollInto(el, 0.05);
+    }
   });
   on('aisle', () => { if (shown()) render(); });
 }
@@ -187,15 +191,17 @@ function rowHtml(a, zoneName) {
 
 // ---------- scrolling
 function scrollInto(el, at = 0.35) {
-  const top = el.getBoundingClientRect().top - root.getBoundingClientRect().top + root.scrollTop - root.clientHeight * at;
-  root.scrollTop = Math.max(0, top);
+  const toolbarBottom = root.querySelector('.mp-tools').offsetHeight + 12;
+  const offset = Math.max(window.innerHeight * at, toolbarBottom);
+  window.scrollTo(0, Math.max(0, el.getBoundingClientRect().top + window.scrollY - offset));
 }
 
 function scrollToFocus() {
   const body = root.querySelector('.mp-body');
-  root.scrollTop = 0;
-  requestAnimationFrame(() => {
-    if (!shown()) return;
+  cancelAnimationFrame(focusFrame);
+  window.scrollTo(0, 0);
+  focusFrame = requestAnimationFrame(() => {
+    if (!shown() || !body.isConnected) return;
     let el = null;
     if (view.booth) el = body.querySelector(`[data-booth="${CSS.escape(view.booth)}"]`)?.closest('.mp-row');
     if (!el && view.zone) el = body.querySelector(`.mp-zone-h[data-zones~="${CSS.escape(view.zone)}"]`);

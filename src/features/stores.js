@@ -4,6 +4,7 @@ import { storeCategoryIcon } from './store-marker-icons.js';
 import { createStoreShare } from './store-share.js';
 import { createStoreCategoryNavigation, storeCategoryFromPath } from './store-category-navigation.js';
 import { createStoreEventFilter } from './store-events.js';
+import { setFullscreenScroll } from '../../public/js/fullscreen-scroll.js';
 
 const STORE_FEED = '/data/stores.json';
 const PAGE_SIZE = 12;
@@ -62,12 +63,13 @@ function connectPhotoControls(track, previous, next) {
   return sync;
 }
 
-function createStorePhotoViewer(dialog) {
+function createStorePhotoViewer(dialog, onOpen, onClose) {
   const track = dialog.querySelector('.store-photo-track');
   const previous = dialog.querySelector('[data-photo-previous]');
   const next = dialog.querySelector('[data-photo-next]');
   const sync = connectPhotoControls(track, previous, next);
   dialog.querySelector('.store-photo-close').addEventListener('click', () => dialog.close());
+  dialog.addEventListener('close', onClose);
   dialog.addEventListener('keydown', event => {
     if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
     event.preventDefault();
@@ -87,6 +89,7 @@ function createStorePhotoViewer(dialog) {
       return slide;
     }));
     previous.hidden = next.hidden = photos.length < 2;
+    onOpen();
     dialog.showModal();
     track.scrollLeft = selected * track.clientWidth;
     sync();
@@ -317,7 +320,7 @@ function createStorePin(L, shop, largeServiceMarkers) {
   };
 }
 
-function createStoreSheet(panel, container, renderStoreDetails, mobile) {
+function createStoreSheet(panel, container, renderStoreDetails, mobile, onChange) {
   const sheet = element('section', 'store-sheet');
   sheet.hidden = true;
   sheet.setAttribute('aria-labelledby', 'store-sheet-title');
@@ -409,8 +412,12 @@ function createStoreSheet(panel, container, renderStoreDetails, mobile) {
     container.style.removeProperty('--store-map-top');
     container.classList.remove('has-store-sheet');
     content.replaceChildren();
-    if (restoreFocus) (selected.trigger || selected.marker?.getElement())?.focus({ preventScroll: true });
+    if (restoreFocus) {
+      if (!mobile.matches) window.scrollTo({ top: selected.scrollY, behavior: 'instant' });
+      (selected.trigger || selected.marker?.getElement())?.focus({ preventScroll: true });
+    }
     selected = null;
+    onChange();
   }
 
   closeButton.addEventListener('click', () => close(true));
@@ -428,7 +435,7 @@ function createStoreSheet(panel, container, renderStoreDetails, mobile) {
   return {
     open(shop, marker, badge, trigger) {
       selected?.badge?.classList.remove('is-selected');
-      selected = { marker, badge, trigger };
+      selected = { marker, badge, trigger, scrollY: selected?.scrollY ?? window.scrollY };
       badge?.classList.add('is-selected');
       const card = renderStoreDetails(shop);
       card.querySelector('.store-name').id = 'store-sheet-title';
@@ -437,7 +444,9 @@ function createStoreSheet(panel, container, renderStoreDetails, mobile) {
       sheet.hidden = false;
       syncMapTop();
       container.classList.add('has-store-sheet');
-      (mobile.matches ? closeButton : backButton).focus({ preventScroll: true });
+      if (mobile.matches) closeButton.focus({ preventScroll: true });
+      else backButton.focus();
+      onChange();
     },
     close,
     syncMapTop,
@@ -619,7 +628,17 @@ export async function mountStores(root, workPreviews = [], initialCategory = '')
   let activeCategory = initialCategory;
   const mobile = window.matchMedia('(max-width: 560px)');
   const openShare = createStoreShare(document.getElementById('store-share-dialog'));
-  const openPhotos = createStorePhotoViewer(document.getElementById('store-photo-viewer'));
+  let photoScroll = null;
+  const openPhotos = createStorePhotoViewer(document.getElementById('store-photo-viewer'), () => {
+    photoScroll = window.scrollY;
+    syncFullscreenScroll();
+  }, () => {
+    const previousScroll = photoScroll;
+    photoScroll = null;
+    if (!syncFullscreenScroll() && previousScroll !== null) {
+      window.scrollTo({ top: previousScroll, behavior: 'instant' });
+    }
+  });
   let previousWork = -1;
   function linkedStoreId() {
     return new URLSearchParams(location.search).get(storeMapCenterParam) || storeMapId(location.hash);
@@ -723,7 +742,7 @@ export async function mountStores(root, workPreviews = [], initialCategory = '')
   const mapLayout = element('div', 'store-map-layout is-showing-map');
   mapPanel.append(locationStatus, mapMessage, mapElement);
   mapLayout.append(listPanel);
-  const storeSheet = createStoreSheet(mapLayout, mapElement, renderStoreDetails, mobile);
+  const storeSheet = createStoreSheet(mapLayout, mapElement, renderStoreDetails, mobile, syncFullscreenScroll);
   mapLayout.append(mapPanel);
   root.replaceChildren(tools, feedback, retry, mapLayout);
 
@@ -745,6 +764,16 @@ export async function mountStores(root, workPreviews = [], initialCategory = '')
   const eventFilter = createStoreEventFilter(eventNav, root.dataset.eventId || '', () => {
     if (!search.disabled) filterStores();
   });
+
+  function syncFullscreenScroll() {
+    // The fixed body still reports long content if a panel opens or the viewport shrinks.
+    const fitsViewport = mobile.matches && showingMap && mapElement.offsetHeight > 0
+      && !mapElement.classList.contains('has-store-sheet')
+      && document.body.scrollHeight <= document.documentElement.clientHeight;
+    const fullscreen = photoScroll !== null || fitsViewport;
+    setFullscreenScroll(fullscreen);
+    return fullscreen;
+  }
 
   function setToolsExpanded(expanded) {
     tools.classList.toggle('is-collapsed', !expanded);
@@ -799,6 +828,7 @@ export async function mountStores(root, workPreviews = [], initialCategory = '')
       if (!showingMap) return;
       mapElement.hidden = false;
       updateMap();
+      syncFullscreenScroll();
       sortCenterButton.disabled = false;
       locateButton.disabled = locating;
     } catch {
@@ -868,6 +898,7 @@ export async function mountStores(root, workPreviews = [], initialCategory = '')
     mapMode.setAttribute('aria-pressed', 'false');
     mapPanel.hidden = true;
     mapLayout.classList.remove('is-showing-map');
+    syncFullscreenScroll();
   }
 
   function showMore() {
@@ -888,7 +919,6 @@ export async function mountStores(root, workPreviews = [], initialCategory = '')
   function renderList() {
     listMatches = sortPosition ? map.sortByDistance(matches, sortPosition) : matches;
     list.replaceChildren();
-    listPanel.scrollTop = 0;
     shown = 0;
     showMore();
   }
@@ -989,6 +1019,7 @@ export async function mountStores(root, workPreviews = [], initialCategory = '')
   });
   mobile.addEventListener('change', () => {
     storeSheet.close();
+    syncFullscreenScroll();
     if (!mobile.matches && !showingMap) void showMap();
   });
   window.addEventListener('hashchange', () => {
@@ -1004,6 +1035,11 @@ export async function mountStores(root, workPreviews = [], initialCategory = '')
   });
   locateButton.addEventListener('click', locateMe);
   new ResizeObserver(updateMap).observe(mapElement);
+  const layoutObserver = new ResizeObserver(syncFullscreenScroll);
+  layoutObserver.observe(root.closest('.stores-directory'));
+  const footer = document.querySelector('body > .site-footer');
+  if (footer) layoutObserver.observe(footer);
+  window.addEventListener('resize', syncFullscreenScroll);
   more.addEventListener('click', () => {
     const [first] = showMore();
     first?.querySelector('a')?.focus();

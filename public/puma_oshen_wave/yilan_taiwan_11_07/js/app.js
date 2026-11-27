@@ -1,11 +1,12 @@
 // Boot and wiring: header, dock, walk view, dialogs, list and map pages, routes (#/walk/<aisle or booth>, #/list, #/map).
+import { setFullscreenScroll } from '/js/fullscreen-scroll.js?v=1';
 import { state, on, emit, visitedCount, toast } from './state.js?v=20261031-yilan-zones';
 import { loadIndex, aisleOfBooth, loadBoothForDesigner } from './data.js?v=20261031-oshen-shop';
 import { goToAisle } from './nav.js?v=20261031-oshen-shop';
 import { createWalkView } from './walk.js?v=20261101-landscape-row';
 import { openBooth } from './ui/booth.js?v=20261123-webp';
-import { mountMap } from './ui/map.js?v=20261031-oshen-shop';
-import { mountList } from './ui/list.js?v=20261123-webp';
+import { mountMap } from './ui/map.js?v=20261127-document-scroll';
+import { mountList } from './ui/list.js?v=20261127-document-scroll';
 import { loadSchedule, isClosed, closeTagText, msLeft, lastOpenLabel } from './schedule.js?v=20261031-yilan-zones';
 import { loadCats, loadChatter } from './cats.js?v=20261031-yilan-zones';
 import { showClosed } from './ui/closed.js?v=20261031-yilan-zones';
@@ -23,16 +24,19 @@ let map = null;
 
 // three pages share the header tabs: 逛場子 (walk), 攤位列表 (list), 市集地圖 (map)
 function setMode(mode, opts = {}) {
+  const wasList = !$('stage-list').hidden;
+  if (wasList && mode !== 'list') list?.hide();
   $('stage-walk').hidden = mode !== 'walk';
   $('stage-list').hidden = mode !== 'list';
   $('stage-map').hidden = mode !== 'map';
+  setFullscreenScroll(mode === 'walk');
   for (const b of document.querySelectorAll('.modes button')) b.setAttribute('aria-pressed', String(b.dataset.mode === mode));
   if (mode === 'list') {
     list ||= mountList($('stage-list'));
-    list.show();
+    list.show({ restoreScroll: !wasList, savedScroll: opts.savedListScroll });
     history.replaceState(null, '', `${designerRoot}#/list`);
     updateDesignerMetadata();
-  } else list?.hide();
+  }
   if (mode === 'map') {
     const firstVisit = !map; // The first visit shows the hall overview.
     map ||= mountMap($('stage-map'));
@@ -66,6 +70,7 @@ function wireDialogs() {
 }
 
 async function boot() {
+  const savedListScroll = history.state?.marketListScroll;
   wireDialogs();
   const menu = $('yl-nav');
   menu.addEventListener('click', e => {
@@ -88,6 +93,7 @@ async function boot() {
     closed = true;
     tag.textContent = '已休市'; tag.hidden = false;
     showClosed();
+    setFullscreenScroll(false);
   };
   if (isClosed()) return close();
   const tick = () => {
@@ -130,8 +136,9 @@ async function boot() {
   loadCats().then(cfg => { if (cfg) walk.setCats(cfg); });
   loadChatter().then(cfg => { if (cfg) walk.setChatter(cfg); });
 
+  let initialRoute = true;
   on('aisle', d => {
-    if ($('stage-walk').hidden) setMode('walk');
+    if (!initialRoute && $('stage-walk').hidden) setMode('walk');
     state.neighbors = { prev: d.prev, next: d.next };
     walk.setAisle(d.data, d);
     $('walk-canvas').setAttribute('aria-label', `${d.data.hallName} ${d.code} 走道：按住拖著小人走，點攤位即可查看介紹`);
@@ -164,7 +171,11 @@ async function boot() {
       }
       toast('找不到這個攤位，已顯示市集地圖');
     }
-    if (mode === 'list' || mode === 'map') { if (boot) await goToAisle(first); setMode(mode); return; }
+    if (mode === 'list' || mode === 'map') {
+      if (boot) await goToAisle(first);
+      setMode(mode, { savedListScroll: boot ? savedListScroll : undefined });
+      return;
+    }
     let ok = false;
     if (mode === 'designer') {
       const boothId = await loadBoothForDesigner(target);
@@ -188,7 +199,13 @@ async function boot() {
     setMode('walk');
   }
   window.addEventListener('hashchange', () => route());
+  window.addEventListener('pagehide', () => {
+    if (list && !$('stage-list').hidden) {
+      history.replaceState({ ...history.state, marketListScroll: list.getScroll() }, '');
+    }
+  });
   await route({ boot: true });
+  initialRoute = false;
   updateStatus();
   const cover = $('yl-cover');
   if (cover && showCoverOnEntry) {

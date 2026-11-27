@@ -4,6 +4,7 @@ import { toast } from '../designer/js/state.js';
 import { loadCatalogue, createPublicShowcase } from './data.js?v=20261125-stage-halls';
 import { mountPlayer } from './player.js?v=20261031-player-type';
 import { oshenStagePath, publicHallId as PUBLIC_HALL, resolveStageRoute, stageHallPath, stagePageMetadata, stageVideoPath } from './routes.js?v=20261125-stage-halls';
+import { setFullscreenScroll } from '/js/fullscreen-scroll.js?v=1';
 
 const $ = id => document.getElementById(id);
 const make = (tag, text, className) => {
@@ -94,22 +95,23 @@ function updateHall() {
   updateStatus();
 }
 
-function setMode(next, navigate = true) {
+function setMode(next, { navigate = true, booth } = {}) {
+  if (navigate) writeRoute(activeHallPath({ mode: next, booth }));
   mode = next;
   // Keep hall selection available in every view, next to the next-hall button while walking.
   const picker = document.querySelector('.hall-picker');
   if (next === 'walk') document.querySelector('.hall-controls').append(picker);
   else document.querySelector('.floating-nav .bar').insertBefore(picker, document.querySelector('.floating-nav .modes'));
   for (const name of ['walk', 'list', 'map']) $(`stage-${name}`).hidden = name !== next;
+  setFullscreenScroll(next === 'walk');
   for (const button of document.querySelectorAll('[data-mode]')) button.setAttribute('aria-pressed', String(button.dataset.mode === next));
   if (next === 'walk') walk?.resize();
   if (next === 'list') renderList();
   if (next === 'map') renderMap();
-  if (navigate) writeRoute(activeHallPath());
   updateMetadata();
 }
 
-function goToAisle(index, boothId = null, from = null) {
+function goToAisle(index, { boothId = null, from = null, view = 'walk', navigate = false } = {}) {
   if (!catalogue.aisles[index]) return;
   if (catalogue.aisles[index].hall === PUBLIC_HALL && hallId !== PUBLIC_HALL) {
     refreshPublicShowcase();
@@ -120,7 +122,7 @@ function goToAisle(index, boothId = null, from = null) {
   hallId = aisle.hall;
   const selectedBooth = boothId && aisle.islands.some(island => island.booths.some(booth => booth.id === boothId))
     ? boothId : null;
-  setMode('walk', false);
+  setMode(view, { navigate, booth: selectedBooth });
   walk.setAisle(aisle, {
     boothId: selectedBooth, from,
     prev: catalogue.aisles[index - 1]?.hall === hallId ? catalogue.aisles[index - 1].code : null,
@@ -134,9 +136,7 @@ function goToAisle(index, boothId = null, from = null) {
 function selectHall(id) {
   const index = catalogue.aisles.findIndex(aisle => aisle.hall === id);
   if (index < 0) return;
-  const next = mode;
-  goToAisle(index);
-  setMode(next);
+  goToAisle(index, { view: mode, navigate: true });
 }
 
 function stopPlayer() {
@@ -272,9 +272,8 @@ function renderMap() {
         button.type = 'button';
         button.append(make('b', booth.id), make('span', stage.title));
         button.addEventListener('click', () => {
-          goToAisle(index, booth.id);
-          writeRoute(activeHallPath({ booth: booth.id }));
-          $('walk-canvas').focus();
+          goToAisle(index, { boothId: booth.id, navigate: true });
+          $('walk-canvas').focus({ preventScroll: true });
         });
         row.append(button);
       }
@@ -291,9 +290,7 @@ function showHall({ hallId: targetHall = PUBLIC_HALL, mode: view = 'walk', aisle
   const target = catalogue.aisles.findIndex(entry => entry.code === code && (legacyPosition || entry.hall === targetHall));
   const first = catalogue.aisles.findIndex(entry => entry.hall === targetHall);
   const index = target >= 0 ? target : Math.max(0, first);
-  const selectedBooth = goToAisle(index, target >= 0 ? booth : null);
-  if (view !== 'walk') setMode(view, false);
-  return selectedBooth;
+  return goToAisle(index, { boothId: target >= 0 ? booth : null, view });
 }
 
 function route() {
@@ -351,7 +348,7 @@ async function boot() {
       if (busy()) return;
       const index = aisleIndex + (direction === 'next' ? 1 : -1);
       if (catalogue.aisles[index]?.hall !== hallId) return;
-      goToAisle(index, null, direction === 'next' ? 'left' : 'right');
+      goToAisle(index, { from: direction === 'next' ? 'left' : 'right' });
       writeRoute(activeHallPath(), { replace: true });
     },
   });

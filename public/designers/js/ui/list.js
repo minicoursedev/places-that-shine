@@ -22,6 +22,7 @@ export function mountList(container) {
   let shown = 0;
   let loading = null;
   let entryHall = '';
+  let scrollTop = 0;
   const cardRows = new WeakMap();
 
   const halls = () => state.index?.halls || [];
@@ -150,11 +151,11 @@ export function mountList(container) {
       coverIO.unobserve(e.target);
       fillCardImages(e.target);
     }
-  }, { root: container, rootMargin: '400px 0px' });
+  }, { rootMargin: '400px 0px' });
 
   const moreIO = new IntersectionObserver(entries => {
     if (entries.some(e => e.isIntersecting) && !container.hidden) renderMore();
-  }, { root: container, rootMargin: '600px 0px' });
+  }, { rootMargin: '600px 0px' });
   moreIO.observe(sentinel);
 
   function cardHtml(r) {
@@ -181,10 +182,10 @@ export function mountList(container) {
     </article>`;
   }
 
-  function renderMore() {
+  function renderMore(count = PAGE) {
     if (shown >= results.length) return;
     const first = shown;
-    const next = results.slice(first, first + PAGE);
+    const next = results.slice(first, first + count);
     shown += next.length;
     grid.insertAdjacentHTML('beforeend', next.map(cardHtml).join(''));
     for (const [index, row] of next.entries()) {
@@ -250,7 +251,7 @@ export function mountList(container) {
   }
 
   // ---------- refresh
-  async function refresh({ keepScroll = false } = {}) {
+  async function refresh(savedScroll) {
     const p = (loading = (async () => { await ensureRows(); })());
     try { await p; } catch {
       $('.ls-count').textContent = '讀取失敗';
@@ -265,10 +266,24 @@ export function mountList(container) {
     for (const c of grid.children) coverIO.unobserve(c);
     grid.textContent = '';
     shown = 0;
-    if (!keepScroll) container.scrollTop = 0;
     showEmptyState();
     moreBtn.hidden = true;
-    renderMore();
+    renderMore(savedScroll?.shown || PAGE);
+    const anchor = savedScroll?.anchorId && grid.querySelector(`[data-id="${CSS.escape(savedScroll.anchorId)}"]`);
+    if (anchor) {
+      // Restore after the galleries that affect the saved card's position are laid out.
+      const end = anchor.getBoundingClientRect().top + window.innerHeight;
+      const cards = [...grid.children].filter(card => card.getBoundingClientRect().top <= end);
+      await Promise.all(cards.map(card => {
+        coverIO.unobserve(card);
+        return fillCardImages(card);
+      }));
+      if (p !== loading) return;
+    }
+    scrollTop = anchor
+      ? Math.max(0, anchor.getBoundingClientRect().top + window.scrollY - savedScroll.anchorTop)
+      : savedScroll?.top ?? 0;
+    if (!container.hidden) window.scrollTo(0, scrollTop);
   }
 
   // ---------- events
@@ -321,7 +336,7 @@ export function mountList(container) {
 
   zoneSel.addEventListener('change', () => { f.zone = zoneSel.value; refresh(); });
   return {
-    show({ hall, page } = {}) {
+    show({ hall, page, restoreScroll, savedScroll } = {}) {
       $('.ls-title').textContent = page?.heading || page?.name || '設計師列表';
       const intro = $('.ls-intro');
       intro.textContent = page?.description || '';
@@ -330,10 +345,21 @@ export function mountList(container) {
       const filterChanged = nextHall !== entryHall && (nextHall !== '' || f.hall === entryHall);
       if (filterChanged) selectHall(nextHall);
       entryHall = nextHall;
-      if (!rows || filterChanged) refresh();
+      if (!rows || filterChanged) refresh(savedScroll);
+      else if (restoreScroll) window.scrollTo(0, scrollTop);
     },
     hide() {
       clearTimeout(timer);
+      scrollTop = window.scrollY;
+    },
+    getScroll() {
+      const top = window.scrollY;
+      const visible = top > 0 && [...grid.children].filter(card => {
+        const rect = card.getBoundingClientRect();
+        return rect.top < window.innerHeight && rect.bottom > 0;
+      });
+      const anchor = visible && (visible.find(card => card.getBoundingClientRect().top >= 0) || visible[0]);
+      return { top, shown, anchorId: anchor?.dataset.id, anchorTop: anchor?.getBoundingClientRect().top };
     },
   };
 }

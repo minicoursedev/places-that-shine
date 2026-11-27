@@ -29,6 +29,13 @@ a { color: inherit; }
 
 .app { height: 100%; display: grid; grid-template-rows: auto minmax(0, 1fr) auto; }
 .app > main { grid-row: 2; min-width: 0; }
+
+/* The walk canvas uses a viewport grid. Let the other views grow with their content. */
+html[data-market-scroll]:not(:has(#stage-walk:not([hidden]))),
+html[data-market-scroll]:not(:has(#stage-walk:not([hidden]))) :is(body, .app) { height: auto; }
+html[data-market-scroll]:not(:has(#stage-walk:not([hidden]))) .app { min-height: 100vh; min-height: 100dvh; }
+html[data-market-scroll] .app > :is(.list-mode, .map-mode, .closed) { overflow: visible; }
+
 .app-footer {
   grid-row: 3; padding: 6px max(12px, env(safe-area-inset-right, 0px)) calc(6px + env(safe-area-inset-bottom, 0px)) max(12px, env(safe-area-inset-left, 0px));
   border-top: 1px solid var(--line); background: var(--paper-2); color: var(--muted); text-align: center; text-wrap: balance;

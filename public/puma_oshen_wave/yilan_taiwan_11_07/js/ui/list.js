@@ -19,6 +19,7 @@ export function mountList(container) {
   let results = [];
   let shown = 0;
   let loading = null;
+  let scrollTop = 0;
 
   const halls = () => state.index?.halls || [];
   const hallName = code => halls().find(h => h.code === code)?.name || code;
@@ -100,11 +101,11 @@ export function mountList(container) {
       coverIO.unobserve(e.target);
       fillCovers(e.target);
     }
-  }, { root: container, rootMargin: '400px 0px' });
+  }, { rootMargin: '400px 0px' });
 
   const moreIO = new IntersectionObserver(entries => {
     if (entries.some(e => e.isIntersecting) && !container.hidden) renderMore();
-  }, { root: container, rootMargin: '600px 0px' });
+  }, { rootMargin: '600px 0px' });
   moreIO.observe(sentinel);
 
   function cardHtml(r) {
@@ -119,9 +120,9 @@ export function mountList(container) {
     </article>`;
   }
 
-  function renderMore() {
+  function renderMore(count = PAGE) {
     if (shown >= results.length) return;
-    const next = results.slice(shown, shown + PAGE);
+    const next = results.slice(shown, shown + count);
     shown += next.length;
     grid.insertAdjacentHTML('beforeend', next.map(cardHtml).join(''));
     const cards = grid.children;
@@ -174,7 +175,7 @@ export function mountList(container) {
   }
 
   // ---------- refresh
-  async function refresh({ keepScroll = false } = {}) {
+  async function refresh(savedScroll) {
     const p = (loading = (async () => { await ensureRows(); })());
     try { await p; } catch {
       $('.ls-count').textContent = '讀取失敗';
@@ -187,10 +188,24 @@ export function mountList(container) {
     for (const c of grid.children) coverIO.unobserve(c);
     grid.textContent = '';
     shown = 0;
-    if (!keepScroll) container.scrollTop = 0;
     $('.ls-empty').hidden = results.length > 0;
     $('.ls-empty').textContent = rows.length ? '沒有符合的攤位。換個關鍵字，或少選一點條件。' : '目前尚無攤位資料。';
-    renderMore();
+    renderMore(savedScroll?.shown || PAGE);
+    const anchor = savedScroll?.anchorId && grid.querySelector(`[data-id="${CSS.escape(savedScroll.anchorId)}"]`);
+    if (anchor) {
+      // Restore after the galleries that affect the saved card's position are laid out.
+      const end = anchor.getBoundingClientRect().top + window.innerHeight;
+      const cards = [...grid.children].filter(card => card.getBoundingClientRect().top <= end);
+      await Promise.all(cards.map(card => {
+        coverIO.unobserve(card);
+        return fillCovers(card);
+      }));
+      if (p !== loading) return;
+    }
+    scrollTop = anchor
+      ? Math.max(0, anchor.getBoundingClientRect().top + window.scrollY - savedScroll.anchorTop)
+      : savedScroll?.top ?? 0;
+    if (!container.hidden) window.scrollTo(0, scrollTop);
   }
 
   // ---------- events
@@ -235,12 +250,23 @@ export function mountList(container) {
 
   zoneSel.addEventListener('change', () => { f.zone = zoneSel.value; refresh(); });
   return {
-    show() {
+    show({ restoreScroll, savedScroll } = {}) {
       fillZones();
-      if (!rows) refresh();
+      if (!rows) refresh(savedScroll);
+      else if (restoreScroll) window.scrollTo(0, scrollTop);
     },
     hide() {
       clearTimeout(timer);
+      scrollTop = window.scrollY;
+    },
+    getScroll() {
+      const top = window.scrollY;
+      const visible = top > 0 && [...grid.children].filter(card => {
+        const rect = card.getBoundingClientRect();
+        return rect.top < window.innerHeight && rect.bottom > 0;
+      });
+      const anchor = visible && (visible.find(card => card.getBoundingClientRect().top >= 0) || visible[0]);
+      return { top, shown, anchorId: anchor?.dataset.id, anchorTop: anchor?.getBoundingClientRect().top };
     },
   };
 }

@@ -1,0 +1,16 @@
+html[data-fullscreen-scroll] {
+  height: calc(100% + 1px);
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+html[data-fullscreen-scroll]::-webkit-scrollbar {
+  display: none;
+}
+
+html[data-fullscreen-scroll] > body {
+  position: fixed;
+  inset: 0;
+  height: auto;
+  overflow: hidden;
+}

@@ -1,12 +1,13 @@
 // Exhibition navigation, walk view, dialogs and alternate views.
+import { setFullscreenScroll } from '/js/fullscreen-scroll.js?v=1';
 import { state, on, emit, visitedCount, toast } from './state.js';
 import { loadIndex, aisleOfBooth, loadBoothForDesigner, isOshenHall } from './data.js?v=20261126-booth-order';
 import { goToAisle } from './nav.js?v=20261127-hall-og';
 import { createWalkView } from './walk.js?v=20261125-hall-routes';
 import { wireFloatingNav } from './floating-nav.js';
 import { openBooth } from './ui/booth.js?v=20261127-hall-og';
-import { mountMap } from './ui/map.js?v=20261127-hall-og';
-import { mountList } from './ui/list.js?v=20261127-hall-og';
+import { mountMap } from './ui/map.js?v=20261127-document-scroll';
+import { mountList } from './ui/list.js?v=20261127-document-scroll';
 import { loadSchedule, isClosed, closeTagText, msLeft, lastOpenLabel } from './schedule.js?v=20261030-site-data';
 import { loadCats, loadChatter } from './cats.js?v=20261030-site-data';
 import { showClosed } from './ui/closed.js';
@@ -23,14 +24,19 @@ let list = null;
 let map = null;
 
 function finishBoot() {
-  if (!$('stage-walk').hidden) walk?.resize();
+  const isWalk = !$('stage-walk').hidden;
+  setFullscreenScroll(isWalk);
+  if (isWalk) walk?.resize();
 }
 
 // three pages share the header tabs: 逛場子 (walk), 設計師列表 (list), 設計師地圖 (map)
 function setMode(mode, opts = {}) {
+  const wasList = !$('stage-list').hidden;
+  if (wasList && mode !== 'list') list?.hide();
   $('stage-walk').hidden = mode !== 'walk';
   $('stage-list').hidden = mode !== 'list';
   $('stage-map').hidden = mode !== 'map';
+  setFullscreenScroll(mode === 'walk');
   for (const b of document.querySelectorAll('.modes button')) b.setAttribute('aria-pressed', String(b.dataset.mode === mode));
   if (mode === 'list') {
     list ||= mountList($('stage-list'));
@@ -38,8 +44,10 @@ function setMode(mode, opts = {}) {
     list.show({
       hall: isOshenHall(state.hallCode) ? undefined : state.hallCode,
       page: hallPageForPath(hallPath),
+      restoreScroll: !wasList,
+      savedScroll: opts.savedListScroll,
     });
-  } else list?.hide();
+  }
   if (mode === 'map') {
     const firstVisit = !map; // The first visit shows the hall overview.
     map ||= mountMap($('stage-map'));
@@ -87,6 +95,10 @@ async function boot() {
     } else if (legacy) history.replaceState(null, '', legacy);
   }
   const entryUrl = location.href;
+  const savedListScroll = history.state?.marketListScroll;
+  if (!$('stage-walk').hidden && resolveDesignerRoute(new URL(entryUrl), { boot: true }).mode === 'walk') {
+    setFullscreenScroll(true);
+  }
   wireDialogs();
   wireFloatingNav();
   $('designer-loading-retry')?.addEventListener('click', () => location.reload());
@@ -184,7 +196,7 @@ async function boot() {
     if (mode === 'list' || mode === 'map') {
       const aisle = target || state.aisleCode || first;
       if (aisle !== state.aisleCode) await goToAisle(aisle, { background: true });
-      setMode(mode);
+      setMode(mode, { savedListScroll: initialEntry ? savedListScroll : undefined });
       return;
     }
     let ok = false;
@@ -223,6 +235,11 @@ async function boot() {
     route();
   });
   let popUrl;
+  window.addEventListener('pagehide', () => {
+    if (list && !$('stage-list').hidden) {
+      history.replaceState({ ...history.state, marketListScroll: list.getScroll() }, '');
+    }
+  });
   window.addEventListener('popstate', () => { popUrl = location.href; route(); });
   window.addEventListener('hashchange', event => {
     if (event.newURL === location.href && event.newURL !== popUrl) route();
