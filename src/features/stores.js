@@ -1035,7 +1035,15 @@ export async function mountStores(root, workPreviews = [], initialCategory = '')
   });
   locateButton.addEventListener('click', locateMe);
   new ResizeObserver(updateMap).observe(mapElement);
-  const layoutObserver = new ResizeObserver(syncFullscreenScroll);
+  let fullscreenLayoutFrame = 0;
+  const layoutObserver = new ResizeObserver(() => {
+    if (fullscreenLayoutFrame) return;
+    // Applying the fixed-body styles can resize the elements being observed.
+    fullscreenLayoutFrame = requestAnimationFrame(() => {
+      fullscreenLayoutFrame = 0;
+      syncFullscreenScroll();
+    });
+  });
   layoutObserver.observe(root.closest('.stores-directory'));
   const footer = document.querySelector('body > .site-footer');
   if (footer) layoutObserver.observe(footer);
