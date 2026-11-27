@@ -143,6 +143,12 @@ const shareImage = new URL(oshenHall.image, Astro.site);
 </SiteLayout>
 
 <style>
+  @media (pointer: coarse) {
+    .directory {
+      -webkit-user-select: none;
+      user-select: none;
+    }
+  }
   .period-menu { display: grid; gap: .75rem; }
   .period-menu .entry-info { font: 800 1.3rem/1.35 var(--serif); }
   .period-label { display: flex; align-items: center; justify-content: flex-start; gap: .75rem; }

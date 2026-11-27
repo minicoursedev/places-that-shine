@@ -23,6 +23,22 @@ body { background: var(--pink-soft); color: var(--ink); font-family: var(--font)
 button { font: inherit; color: inherit; }
 a { color: inherit; }
 [hidden] { display: none !important; }
+
+/* Prevent accidental text selection while browsing on touchscreens. */
+@media (pointer: coarse) {
+  body,
+  dialog {
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  input[type="search"],
+  .work-share-url {
+    -webkit-user-select: text;
+    user-select: text;
+  }
+}
+
 .mono { font-family: var(--mono); }
 .muted { color: var(--muted); }
 .tone { background-image: var(--tone); }
