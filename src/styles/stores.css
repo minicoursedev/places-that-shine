@@ -1,24 +1,3 @@
-.store-events:not([hidden]), .store-event-links {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: .5rem .75rem;
-}
-
-.store-events {
-  margin-bottom: 1rem;
-  font-size: .875rem;
-}
-
-.store-events a[aria-current="page"] {
-  font-weight: 700;
-  border-color: var(--accent);
-}
-
-.store-events .store-input {
-  width: auto;
-}
-
 .store-controls {
   display: grid;
   grid-template-columns: minmax(0, 2fr) repeat(2, minmax(0, 1fr));
@@ -34,22 +13,280 @@
   display: none;
 }
 
-.stores-directory .store-tools-toggle {
-  display: inline-flex;
-  flex: none;
+.store-events {
+  display: grid;
+  gap: .4rem;
+  min-width: 0;
+  margin-bottom: .5rem;
+  font-size: .875rem;
+}
+
+.stores-directory:has(.store-sheet:not([hidden])) > .store-events {
+  display: none;
+}
+
+.store-events-header {
+  display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+}
+
+.store-events-header label {
+  font-weight: 700;
+}
+
+.store-events-close {
+  display: grid;
+  flex: none;
+  align-self: start;
+  place-items: center;
   min-width: 44px;
   min-height: 44px;
   padding: 0;
   border: 0;
   background: transparent;
-  white-space: nowrap;
+  color: var(--ink);
+  font-size: 1.25rem;
+  line-height: 1;
+  text-decoration: none;
   cursor: pointer;
+}
+
+@supports (appearance: base-select) and selector(select::picker(select)) {
+  #store-event-select,
+  #store-event-select::picker(select) {
+    appearance: base-select;
+    font-size: 1rem;
+  }
+
+  #store-event-select::picker(select) {
+    box-sizing: border-box;
+    inline-size: anchor-size(inline);
+    max-block-size: min(18rem, 55dvh);
+    margin-block-start: .3rem;
+    border: 1px solid var(--line);
+    border-radius: .5rem;
+    background: var(--paper);
+    color: var(--ink);
+    box-shadow: 0 4px 16px #281b1524;
+  }
+
+  #store-event-select option {
+    min-block-size: 44px;
+    padding: .45rem .75rem;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  #store-event-select option:is(:hover, :focus-visible):not(:disabled) {
+    background: var(--line);
+  }
+}
+
+.store-event-group {
+  display: flex;
+  flex-basis: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .35rem;
+  font-size: .875rem;
+}
+
+.store-event-group .store-input {
+  width: auto;
+  max-width: 100%;
+}
+
+@media (max-width: 560px) and (max-height: 650px) {
+  .store-events {
+    grid-template-columns: minmax(0, 1fr) 44px;
+    row-gap: .15rem;
+  }
+
+  .store-events-header {
+    display: contents;
+  }
+
+  .store-events-header .store-events-close {
+    grid-area: 1 / 2 / 3 / 3;
+  }
 }
 
 .store-tools.is-collapsed {
   display: none;
+}
+
+html:has(.store-toolbar) {
+  --store-toolbar-height: calc(3rem + env(safe-area-inset-bottom));
+  scroll-padding-bottom: var(--store-toolbar-height);
+}
+
+body:has(.store-map-layout:not(.is-showing-map)) {
+  padding-bottom: var(--store-toolbar-height);
+}
+
+.store-toolbar {
+  position: fixed;
+  z-index: 2;
+  inset: auto 0 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  height: var(--store-toolbar-height);
+  padding: 0 env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+  background: var(--paper);
+  box-shadow: 0 -1px 0 var(--line);
+}
+
+.store-toolbar > :is(a, button) {
+  display: grid;
+  place-items: center;
+  padding: 0 .5rem;
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  font-weight: 650;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.store-toolbar > :is(a, button):not(:first-child) {
+  border-inline-start: 1px solid var(--line);
+}
+
+.store-toolbar > :focus-visible {
+  outline-offset: -4px;
+}
+
+.store-toolbar > button[aria-expanded="true"]:not(.store-toolbar-locate) {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.store-toolbar > button:is(:disabled, [aria-disabled="true"]) {
+  opacity: .55;
+  cursor: default;
+}
+
+.store-toolbar .store-toolbar-locate {
+  align-content: center;
+  gap: .15rem;
+  line-height: 1.15;
+}
+
+.store-location-label {
+  display: flex;
+  align-items: center;
+  gap: .3rem;
+}
+
+.store-locate-icon {
+  position: relative;
+  flex: none;
+  width: 1.125rem;
+  height: 1.125rem;
+  background:
+    linear-gradient(currentColor 0 0) center top / 1.5px 4px no-repeat,
+    linear-gradient(currentColor 0 0) center bottom / 1.5px 4px no-repeat,
+    linear-gradient(currentColor 0 0) left center / 4px 1.5px no-repeat,
+    linear-gradient(currentColor 0 0) right center / 4px 1.5px no-repeat;
+}
+
+.store-locate-icon::before,
+.store-locate-icon::after {
+  position: absolute;
+  content: '';
+  border-radius: 50%;
+}
+
+.store-locate-icon::before {
+  inset: 15%;
+  border: 1.5px solid currentColor;
+}
+
+.store-locate-icon::after {
+  inset: 40%;
+  background: currentColor;
+}
+
+.store-location-permission {
+  color: var(--muted);
+  font-size: .75rem;
+}
+
+[data-permission="granted"] .store-location-permission {
+  color: #24613e;
+}
+
+[data-permission="denied"] .store-location-permission {
+  color: #9e332a;
+}
+
+.store-info-dialog,
+.store-location-help {
+  border: 1px solid var(--line);
+  border-radius: .5rem;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.store-info-dialog {
+  width: min(26rem, calc(100% - 2rem));
+  padding: 1.25rem;
+}
+
+.store-info-dialog h2 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.store-info-dialog form {
+  text-align: end;
+}
+
+.store-toolbar:has(.store-location-help:not([hidden])) {
+  z-index: 4;
+}
+
+.store-location-help {
+  --store-location-help-width: 22rem;
+  position: absolute;
+  inset-inline-end: max(.65rem, calc(37.5% - var(--store-location-help-width) / 2));
+  bottom: calc(100% + .5rem);
+  width: min(var(--store-location-help-width), calc(100% - 4.5rem));
+  max-height: min(50dvh, calc(100dvh - var(--store-toolbar-height) - 1rem));
+  overflow: auto;
+  overscroll-behavior: contain;
+  padding: .75rem;
+  box-shadow: 0 4px 16px #281b1524;
+  font-size: .875rem;
+}
+
+.store-location-help-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .5rem;
+}
+
+.store-location-help h2 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.store-location-help .store-action {
+  min-height: 44px;
+}
+
+.store-location-help ol {
+  padding-inline-start: 1.4rem;
+}
+
+.store-location-help li + li {
+  margin-top: .4rem;
+}
+
+.store-location-help p {
+  margin-bottom: 0;
 }
 
 .store-field {
@@ -156,6 +393,10 @@
   margin-top: .55rem;
   color: var(--muted, #6e6056);
   font-size: .79rem;
+}
+
+.store-introduction {
+  font-size: 1.125rem;
 }
 
 .store-details summary {
@@ -507,18 +748,90 @@ html:not([data-fullscreen-scroll]):has(.store-photo-viewer[open]) {
   color: var(--paper, #fffaf1);
 }
 
-.store-map-layout {
-  --store-map-height: clamp(340px, 60dvh, 590px);
+html:not([data-fullscreen-scroll]):has(.store-map-layout.is-showing-map) {
+  overflow: hidden;
+}
+
+body:has(.store-map-layout.is-showing-map) > :is(.site-header, .site-footer) {
+  display: none;
+}
+
+.stores-directory.directory:has(.is-showing-map) {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100dvh;
+  min-height: 0;
+  padding: .65rem;
+  padding-bottom: calc(.65rem + var(--store-toolbar-height));
+}
+
+.stores-directory:has(.is-showing-map) :is(.directory-header, .store-events),
+.stores-directory:has(.is-showing-map) #stores-content > :not(.store-map-layout),
+.is-showing-map > .store-list-panel {
+  position: relative;
+  z-index: 1;
+}
+
+.stores-directory:has(.is-showing-map) :is(.directory-header, .store-events) {
+  flex: none;
+  margin-bottom: .5rem;
+  padding: .5rem .65rem;
+  border: 1px solid var(--line);
+  border-radius: .5rem;
+  background: var(--paper);
+}
+
+.stores-directory:has(.is-showing-map) .directory-header h1 {
+  min-width: 0;
+  font-size: 1.4rem;
+  overflow-wrap: anywhere;
+}
+
+.stores-directory:has(.is-showing-map) #stores-content,
+.store-map-layout.is-showing-map {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.stores-directory:has(.is-showing-map) :is(.store-tools, .store-feedback:not(:empty), .store-map-status, .store-location-status:not(:empty)) {
+  margin-bottom: .5rem;
+  padding: .5rem .65rem;
+  border: 1px solid var(--line);
+  border-radius: .5rem;
+  background: var(--paper);
+}
+
+.stores-directory:has(.is-showing-map) .store-tools:has(details[open]) {
+  max-height: min(45dvh, 24rem);
+  overflow: auto;
+  overscroll-behavior: contain;
+}
+
+.stores-directory:has(.is-showing-map) .store-modes {
+  margin-bottom: 0;
+}
+
+.store-map-panel {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  background: #e9e3d7;
 }
 
 .store-map {
   position: relative;
   isolation: isolate;
   width: 100%;
-  height: var(--store-map-height);
-  border: 1px solid var(--line, #dcd2c4);
-  border-radius: .5rem;
-  background: #e9e3d7;
+  height: 100%;
+}
+
+.store-map .leaflet-bottom {
+  bottom: var(--store-toolbar-height);
 }
 
 .store-map-status {
@@ -537,64 +850,11 @@ html:not([data-fullscreen-scroll]):has(.store-photo-viewer[open]) {
   margin-bottom: .7rem;
 }
 
-.store-map-actions {
-  display: flex;
-  align-items: center;
-  gap: .35rem;
-}
-
-.store-map .store-sort-center,
-.store-map .store-locate {
+.store-map .store-sort-center {
   min-height: 44px;
+  padding-inline: .65rem;
   background: #fff;
   box-shadow: 0 1px 5px #0003;
-}
-
-.store-map .store-sort-center {
-  padding-inline: .65rem;
-}
-
-.store-map .store-locate {
-  display: grid;
-  width: 44px;
-  height: 44px;
-  padding: 0;
-  place-items: center;
-  color: #08783c;
-}
-
-.store-locate:disabled {
-  opacity: .65;
-  cursor: wait;
-}
-
-.store-locate-icon {
-  position: relative;
-  display: block;
-  width: 24px;
-  height: 24px;
-  background:
-    linear-gradient(currentColor 0 0) center top / 2px 5px no-repeat,
-    linear-gradient(currentColor 0 0) center bottom / 2px 5px no-repeat,
-    linear-gradient(currentColor 0 0) left center / 5px 2px no-repeat,
-    linear-gradient(currentColor 0 0) right center / 5px 2px no-repeat;
-}
-
-.store-locate-icon::before,
-.store-locate-icon::after {
-  position: absolute;
-  content: '';
-  border-radius: 50%;
-}
-
-.store-locate-icon::before {
-  inset: 3px;
-  border: 2px solid currentColor;
-}
-
-.store-locate-icon::after {
-  inset: 9px;
-  background: currentColor;
 }
 
 .store-map .store-cluster {
@@ -698,11 +958,18 @@ html:not([data-fullscreen-scroll]):has(.store-photo-viewer[open]) {
 }
 
 @media (width > 560px) {
-  .store-map-layout {
-    display: grid;
-    grid-template-columns: clamp(15rem, 34%, 23rem) minmax(0, 1fr);
-    align-items: start;
-    gap: .85rem;
+  .stores-directory:has(.is-showing-map) :is(.directory-header, .store-events, #stores-content) {
+    width: clamp(15rem, 32vw, 23rem);
+  }
+
+  .stores-directory:has(.is-showing-map) .store-controls {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: .45rem;
+    margin-bottom: 0;
+  }
+
+  .stores-directory:has(.is-showing-map) .store-controls > .store-field {
+    grid-column: 1 / -1;
   }
 
   .store-modes,
@@ -710,37 +977,19 @@ html:not([data-fullscreen-scroll]):has(.store-photo-viewer[open]) {
     display: none;
   }
 
-  .store-map-layout > .store-map-panel {
-    grid-area: 1 / 2;
-    display: flex;
-    flex-direction: column;
-    position: sticky;
-    top: calc(var(--header-height) + .75rem);
-  }
-
-  .store-map-panel > .store-map {
-    flex: 1 1 auto;
-    min-height: 0;
-    height: auto;
-  }
-
-  .store-map-panel,
   .store-list-panel,
   .store-sheet {
+    position: relative;
+    z-index: 1;
+    flex: 1;
     min-width: 0;
+    min-height: 0;
   }
 
-  .store-map-panel {
-    height: var(--store-map-height);
-  }
-
-  .store-list-panel,
-  .store-sheet {
-    grid-area: 1 / 1;
-  }
-
-  .store-sheet-content {
-    overflow: visible;
+  .store-list-panel {
+    overflow: auto;
+    overscroll-behavior: contain;
+    scrollbar-gutter: stable;
   }
 
   .store-list-panel .store-results {
@@ -810,31 +1059,26 @@ html:not([data-fullscreen-scroll]):has(.store-photo-viewer[open]) {
     display: none;
   }
 
+  .stores-directory:has(.store-sheet.is-expanded) .store-toolbar {
+    display: none;
+  }
+
+  .store-map.has-store-sheet .leaflet-bottom {
+    bottom: 0;
+  }
+
   .stores-directory.directory {
     padding-block-start: 0;
   }
 
   .stores-directory .directory-header {
-    align-items: center;
-    gap: .35rem .75rem;
     margin-bottom: .65rem;
     padding-block: .25rem;
   }
 
   .stores-directory .directory-header h1 {
-    order: -1;
-    flex: 0 1 auto;
     font-size: clamp(1.25rem, 5.8vw, 1.6rem);
     letter-spacing: .03em;
-  }
-
-  .stores-directory .back-link {
-    flex-basis: auto;
-    display: inline-flex;
-    align-items: center;
-    min-height: 44px;
-    font-size: .8rem;
-    white-space: nowrap;
   }
 
   .store-controls {
@@ -898,18 +1142,18 @@ html:not([data-fullscreen-scroll]):has(.store-photo-viewer[open]) {
     --store-sheet-collapsed-height: calc(200dvh / 3);
   }
 
-  .store-map.has-store-sheet {
-    height: min(60dvh, max(9rem, calc(100dvh - var(--store-sheet-collapsed-height) - var(--store-map-top) - .5rem)));
+  .store-map-panel:has(.has-store-sheet) {
+    bottom: calc(var(--store-sheet-collapsed-height) + var(--store-toolbar-height));
   }
 
   .store-sheet {
     position: fixed;
     z-index: 3;
-    inset: auto 0 0;
+    inset: auto 0 var(--store-toolbar-height);
     display: flex;
     flex-direction: column;
     height: var(--store-sheet-collapsed-height);
-    padding: 0 1rem max(.6rem, env(safe-area-inset-bottom));
+    padding: 0 1rem .6rem;
     border: 1px solid var(--line);
     border-radius: 1rem 1rem 0 0;
     background: #fffaf1;
@@ -918,14 +1162,20 @@ html:not([data-fullscreen-scroll]):has(.store-photo-viewer[open]) {
   }
 
   .store-sheet.is-expanded {
+    bottom: 0;
     height: 100dvh;
     padding-top: env(safe-area-inset-top);
+    padding-bottom: max(.6rem, env(safe-area-inset-bottom));
     border-radius: 0;
   }
 
   .store-sheet.is-dragging {
     height: clamp(var(--store-sheet-collapsed-height), var(--store-sheet-drag-height), 100dvh);
     transition: none;
+  }
+
+  .store-sheet.is-dragging:not(.is-expanded) {
+    max-height: calc(100dvh - var(--store-toolbar-height));
   }
 
   .store-sheet-toolbar {

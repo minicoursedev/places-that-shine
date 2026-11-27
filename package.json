@@ -8,7 +8,10 @@
     "preview": "ASTRO_TELEMETRY_DISABLED=1 astro preview"
   },
   "dependencies": {
+    "@maplibre/maplibre-gl-leaflet": "0.1.4",
     "astro": "7.3.3",
+    "leaflet": "1.9.4",
+    "maplibre-gl": "6.20.0",
     "sharp": "0.35.5"
   },
   "devDependencies": {

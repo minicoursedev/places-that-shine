@@ -34,10 +34,9 @@ export function createStoreCategoryNavigation(root) {
   function readPage(page, category) {
     const source = page.querySelector('.stores-directory');
     const heading = source?.querySelector('#stores-title');
-    const backlink = source?.querySelector('.directory-header > .back-link');
     const canonical = page.head.querySelector('link[rel="canonical"]');
     const staticDirectory = source?.querySelector('.store-static-directory');
-    if (!heading || !backlink || !page.title || !canonical ||
+    if (!heading || !page.title || !canonical ||
         !page.head.querySelector('meta[name="description"]') ||
         (source.querySelector('#stores-content')?.dataset.category || '') !== category ||
         storeCategoryFromPath(new URL(canonical.href, location.href).pathname) !== category ||
@@ -48,7 +47,6 @@ export function createStoreCategoryNavigation(root) {
       title: page.title,
       metadata: [...page.head.querySelectorAll(metadataSelector)].map(node => node.cloneNode(true)),
       heading: heading.textContent,
-      backlink: backlink.cloneNode(true),
       staticDirectory: staticDirectory?.cloneNode(true),
     };
   }
@@ -58,9 +56,6 @@ export function createStoreCategoryNavigation(root) {
     document.head.querySelectorAll(metadataSelector).forEach(node => node.remove());
     document.head.append(...page.metadata.map(node => node.cloneNode(true)));
     directory.querySelector('#stores-title').textContent = page.heading;
-    const backlink = directory.querySelector('.directory-header > .back-link');
-    backlink.setAttribute('href', page.backlink.getAttribute('href'));
-    backlink.replaceChildren(...[...page.backlink.childNodes].map(node => node.cloneNode(true)));
     const currentStatic = directory.querySelector('.store-static-directory');
     if (currentStatic) staticDetailsOpen = currentStatic.open;
     if (page.staticDirectory) {

@@ -7,21 +7,14 @@ const events = storeEvents.map(event => ({
   storeIds: new Set(event.groups.flatMap(group => group.storeIds)),
 }));
 
-function eventLink(text, path, current) {
-  const link = document.createElement('a');
-  link.className = 'store-action';
-  link.href = path;
-  link.textContent = text;
-  if (current) link.setAttribute('aria-current', 'page');
-  return link;
-}
-
-export function createStoreEventFilter(nav, pageEventId, onChange) {
-  const links = nav.querySelector('.store-event-links');
-  const groupSelect = nav.querySelector('select');
+export function createStoreEventFilter(directory, pageEventId, onChange) {
+  const nav = directory.querySelector('.store-events');
+  const eventSelect = nav?.querySelector('select');
+  const groupSelect = directory.querySelector('.store-event-group select');
   let available = [];
   let selected;
   let timer;
+  let dismissed = false;
 
   function sync() {
     clearTimeout(timer);
@@ -37,37 +30,38 @@ export function createStoreEventFilter(nav, pageEventId, onChange) {
       return;
     }
     if (legacyId !== null) history.replaceState(history.state, '', url);
-    const selectionChanged = nextSelected !== selected;
-    if (selectionChanged || next.length !== available.length || next.some((event, i) => event !== available[i])) {
-      selected = nextSelected;
+    selected = nextSelected;
+    if (nav && (next.length !== available.length || next.some((event, i) => event !== available[i]))) {
       available = next;
-      nav.hidden = available.length === 0;
-      links.replaceChildren();
-      for (const event of available) {
-        links.append(eventLink(event.name, storeEventPath(event.id), event === selected));
-      }
-      if (selected) links.append(eventLink('回全部店家', '/stores/'));
-      if (selectionChanged) {
-        groupSelect.closest('label').hidden = !selected || selected.groups.length < 2;
-        groupSelect.replaceChildren(new Option('全部分組', ''));
-        for (const group of selected?.groups || []) groupSelect.add(new Option(group.name, group.name));
-      }
+      nav.hidden = dismissed || available.length === 0;
+      const placeholder = new Option('選擇活動', '', true, true);
+      placeholder.disabled = true;
+      eventSelect.replaceChildren(placeholder, ...available.map(event => new Option(event.name, event.id)));
     }
     const boundary = Math.min(...events.flatMap(event => [event.start, event.end]).filter(time => time > now));
     if (Number.isFinite(boundary)) timer = setTimeout(sync, Math.min(boundary - now, 2_147_483_647));
   }
 
-  groupSelect.addEventListener('change', onChange);
+  nav?.querySelector('.store-events-close').addEventListener('click', () => {
+    dismissed = nav.hidden = true;
+    directory.querySelector('h1').focus({ preventScroll: true });
+  });
+  eventSelect?.addEventListener('change', () => {
+    const id = eventSelect.value;
+    if (!id) return;
+    eventSelect.value = '';
+    location.assign(storeEventPath(id));
+  });
+  groupSelect?.addEventListener('change', onChange);
   document.addEventListener('visibilitychange', () => { if (!document.hidden) sync(); });
   window.addEventListener('pageshow', sync);
   sync();
 
   return {
-    sync,
     get selected() { return selected; },
     includes(id) {
       if (!selected) return true;
-      const group = selected.groups.find(group => group.name === groupSelect.value);
+      const group = selected.groups.find(group => group.name === groupSelect?.value);
       return group ? group.storeIds.includes(id) : selected.storeIds.has(id);
     },
   };
