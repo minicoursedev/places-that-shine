@@ -43,6 +43,13 @@ export const hallPages = [{
   width: 564,
   height: 800,
   type: 'image/webp',
+  entrancePreview: {
+    image: '/designers/assets/home-to-vote-2026-hall-og.png',
+    alt: '2026 回家投票展館 V01 走道的創作者攤位',
+    width: 2545,
+    height: 1097,
+    type: 'image/png',
+  },
 }, {
   code: 'S',
   name: '鏟子超人館',

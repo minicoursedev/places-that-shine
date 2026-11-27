@@ -2,7 +2,7 @@
 // Fill each card’s logo and works gallery as it scrolls into view.
 import { state, toast, findBoothIn } from '../state.js';
 import { loadSearch, loadAisle, aisleOfBooth } from '../data.js?v=20261126-booth-order';
-import { goToBooth } from '../nav.js?v=20261126-booth-order';
+import { goToBooth } from '../nav.js?v=20261127-hall-og';
 import { openBooth } from './booth.js?v=20261126-booth-order';
 import { thumbnailUrl, retryOriginal } from '../images.js';
 import { loadProducts } from '../products.js?v=20261126-vote-hall';

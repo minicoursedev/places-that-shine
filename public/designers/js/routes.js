@@ -1,5 +1,5 @@
 import { designerMetadata, designerStructuredData, serializeStructuredData, publicUrl } from './profile-seo.js?v=20261124-profile-title';
-import { hallPageForCode, hallPageForPath as hallRootForPath } from './hall-pages.js?v=20261126-vote-hall';
+import { hallPageForCode, hallPageForPath as hallRootForPath } from './hall-pages.js?v=20261127-hall-og';
 import { browserOrigin } from './config.js';
 
 export const designerRoot = '/designers/';
@@ -20,6 +20,8 @@ function hallLocation(pathname) {
 export const hallPageForPath = pathname => hallLocation(pathname)?.hall || null;
 export const designerAisleTitle = (hall, code) => code && code !== `${hall.code}01`
   ? `${hall.name} ${code} 走道｜發光的地方` : hall.title;
+export const designerAislePreview = (hall, code) =>
+  code === `${hall.code}01` ? hall.entrancePreview || hall : hall;
 export function designerWalkPath(code, boothId = null) {
   const hall = hallPageForCode(code?.[0]) || defaultHall;
   const path = !code || code === `${hall.code}01` ? hall.path : `${hall.path}${code.toLowerCase()}/`;
@@ -78,7 +80,7 @@ export function updateDesignerMetadata(designer = null, booth = {}) {
     tag.content = value;
   }
   const avatar = publicUrl(designer?.avatar, canonical);
-  let preview = hall;
+  let preview = designerAislePreview(hall, aisle);
   if (designer) {
     if (designer.og) preview = { ...designer.og, image: designer.og.url };
     else if (initialPreview?.id === designer.id) preview = initialPreview;

@@ -2,7 +2,7 @@
 import { state, markVisited, findBoothIn } from '../state.js';
 import { loadAisle, aisleOfBooth } from '../data.js?v=20261126-booth-order';
 import { boothHtml, loadingHtml, failHtml } from './booth-markup.js?v=20261125-hall-routes';
-import { designerPath, designerSharePath, designerViewPath, designerWalkPath, resolveDesignerRoute, updateDesignerMetadata } from '../routes.js?v=20261126-vote-hall';
+import { designerPath, designerSharePath, designerViewPath, designerWalkPath, resolveDesignerRoute, updateDesignerMetadata } from '../routes.js?v=20261127-hall-og';
 import { retryOriginal } from '../images.js';
 import { loadProducts, sampleProducts } from '../products.js?v=20261126-vote-hall';
 
