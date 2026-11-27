@@ -12329,6 +12329,41 @@
           "source": "https://www.threads.com/@there_is_a_zoo/post/DgO1GgLkzam/media"
         }
       ]
+    },
+    {
+      "id": "pb-coco-art",
+      "name": "COCO JIANG⎟插畫x 設計x療癒",
+      "description": "💖靈性插畫療癒空間💖\n以直覺感知你的靈魂樣子\n用插畫，陪你走生活的故事 🌿\n聯絡信箱；oofam3445@gmail.com\n✨ 插畫創作 | 療癒 靈性陪伴| 品牌合作 | 課程教學",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@pb_coco.art",
+        "ig": "https://www.instagram.com/pb_coco.art/",
+        "web": ""
+      },
+      "logo": {
+        "url": "/media/library/pb-coco-art/logo.webp?v=57790b3441495474",
+        "source": "https://www.threads.com/@pb_coco.art",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-27"
+      },
+      "productImages": [
+        {
+          "id": "pb-coco-art-1",
+          "halls": [
+            "V"
+          ],
+          "title": "回家投票",
+          "alt": "橘色與藍綠色的直幅插畫分成三格。上方女孩眨著眼舉起選票，中間的臺灣島上印有圈選符號，下方橘色緞帶寫著「回家投票」。",
+          "caption": "不論如何\n11/28 回家投票！！！！！！！！！",
+          "url": "/media/library/pb-coco-art/1.webp?v=7c5daceeaa5ac13a",
+          "source": "https://www.threads.com/@pb_coco.art/post/DgL7az_k3Fo"
+        }
+      ]
     }
   ],
   "boothOrder": {
@@ -12424,7 +12459,8 @@
       "relish522",
       "sawacat619",
       "bubu-draw",
-      "there-is-a-zoo"
+      "there-is-a-zoo",
+      "pb-coco-art"
     ]
   }
 }
