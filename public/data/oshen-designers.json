@@ -7246,7 +7246,32 @@
           "number": 9,
           "id": "work-e7f8e87dd87949418f72d9d79d1cfcf9",
           "originalUrl": "https://scontent-lax3-2.cdninstagram.com/v/t51.82787-15/843474378_17914613904539293_1109019596701433046_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&_nc_map=urlgen_bucketless&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=pgtfCoIvfokQ7kNvwGyjdjB&_nc_oc=Adp9ybePAUOA1o5yQFCWNXNlZvuEntQ50HdvhpvYOOiTOp7fMOGH1TI9GgyrhWUsm2s&_nc_zt=23&_nc_ht=scontent-lax3-2.cdninstagram.com&_nc_gid=Vx7w9IfxoZkLvHx-JuslDw&_nc_ss=7920f&_nc_ct=RQosPBUKFQIAAAA&oh=00_AQRlHsn2O5o7Zm7aLE2sKKMpHwUBFyC92RIXeOlTk5_Vkw&oe=6B02446D"
+        },
+        {
+          "id": "sigmeow-10",
+          "halls": [
+            "V"
+          ],
+          "title": "GO VOTE｜淡紫色版",
+          "alt": "淡紫色星空與城市天際線前，三隻貓各舉起一隻前腳，懷裡抱著印章、證件和捲起的紙。下方寫著「GO VOTE」與「1128」。",
+          "caption": "淡紫色的城市星空下，三隻貓一起舉起前腳。",
+          "url": "/media/library/sigmeow/10.webp?v=8ee2b4a7dca1d379",
+          "source": "https://www.threads.com/@_.sigmeow._/post/DgO-4isErm3"
+        },
+        {
+          "id": "sigmeow-11",
+          "halls": [
+            "V"
+          ],
+          "title": "GO VOTE｜藍綠色版",
+          "alt": "藍綠色星空下，三隻貓舉起前腳，頭頂各有一顆金色大星星。下方「GO VOTE」的 O 畫成紅色圈選符號。",
+          "caption": "藍綠色的城市星空下，三顆金色大星星照著舉起前腳的貓。",
+          "url": "/media/library/sigmeow/11.webp?v=fafb167ce7daa605",
+          "source": "https://www.threads.com/@_.sigmeow._/post/DgO-4isErm3"
         }
+      ],
+      "additionalHalls": [
+        "V"
       ]
     },
     {
@@ -12460,7 +12485,8 @@
       "sawacat619",
       "bubu-draw",
       "there-is-a-zoo",
-      "pb-coco-art"
+      "pb-coco-art",
+      "sigmeow"
     ]
   }
 }
