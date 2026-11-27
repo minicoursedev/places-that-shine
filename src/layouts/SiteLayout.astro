@@ -65,7 +65,7 @@ const fontStylesheet = `https://fonts.googleapis.com/css2?${fontQuery}&display=s
       <div class="site-footer-inner page-width">
         <a class="brand" href="/"><span class="brand-mark" aria-hidden="true">✦</span>{siteName}</a>
         <nav class="footer-links" aria-label="頁尾導覽">
-          {Astro.url.pathname === '/' && <a href="/history/">{historyLabel}</a>}
+          <a href="/history/">{historyLabel}</a>
           <PrivacyLink />
           <a href="/privacy/#copyright">{copyrightLabel}</a>
         </nav>
