@@ -1,0 +1,44 @@
+{
+  "id": "nanbei-shunfei",
+  "name": "台南-南北順妃",
+  "disableClusteringAtZoom": 0,
+  "organizerUrl": "https://www.threads.com/@xillinna.daily",
+  "introduction": "「南北順妃」限量版飄帶組合即將發放！洋流 × 起妃，連起南北兩座城市，也讓我們連起對未來的期待。",
+  "shareImageAlt": "南北順妃，發光的店家-給你看地圖。海報主標「臺派店家大友好！」，右側為洋流與起妃兩款飄帶。",
+  "startsAt": "2026-11-25T19:54:00+08:00",
+  "endsAt": "2026-11-28T00:00:00+08:00",
+  "groups": [
+    {
+      "name": "文創",
+      "storeIds": [
+        "lumos-flower-lab",
+        "morona-tainan",
+        "tuojin-mobile",
+        "em-hair-design",
+        "penguindaddy-massage",
+        "sing-yuan-coffee"
+      ]
+    },
+    {
+      "name": "親子",
+      "storeIds": [
+        "inspire-island-studio",
+        "hsuehs-select",
+        "hexin-pharmacy",
+        "mm-friedchicken"
+      ]
+    },
+    {
+      "name": "彩虹",
+      "storeIds": ["fashion-wenxian", "alpha-diagon-alley"]
+    },
+    {
+      "name": "毛孩",
+      "storeIds": ["ainagareru"]
+    },
+    {
+      "name": "酒吧",
+      "storeIds": ["bar-san-tainan"]
+    }
+  ]
+}

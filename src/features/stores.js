@@ -1,11 +1,11 @@
 import { readStores } from '../lib/oshen-store-data';
 import { storeCity, storeMapCenterParam, storeMapId, storePath } from '../lib/oshen-store-links.mjs';
 import { storeCategoryIcon } from './store-marker-icons.js';
+import { createStoreEventFilter } from './store-events.js';
 import { createStoreShare } from './store-share.js';
 
 const STORE_FEED = '/data/stores.json';
 const PAGE_SIZE = 12;
-const MAP_TILES = 'https://tile.openstreetmap.org/{z}/{x}/{y}.png';
 const TAIWAN_BOUNDS = [[21.88, 117.97], [26.42, 122.05]];
 const compareText = new Intl.Collator('zh-Hant-TW').compare;
 
@@ -233,7 +233,7 @@ function renderStore(shop, openShare, openPhotos, tag = 'li', onSelect) {
 
   card.append(summary, actions);
   if (openingHours || visitNote) {
-    const details = element('details', 'store-details');
+    const details = element('details', 'store-details store-introduction');
     details.open = true;
     details.append(element('summary', '', '店家簡介'));
     if (openingHours) {
@@ -404,7 +404,6 @@ function createStoreSheet(panel, container, renderStoreDetails, mobile) {
     sheet.hidden = true;
     finishDrag();
     setExpanded(false);
-    container.style.removeProperty('--store-map-top');
     container.classList.remove('has-store-sheet');
     content.replaceChildren();
     if (restoreFocus) (selected.trigger || selected.marker?.getElement())?.focus({ preventScroll: true });
@@ -417,12 +416,6 @@ function createStoreSheet(panel, container, renderStoreDetails, mobile) {
     if (event.key === 'Escape') close(true);
   });
 
-  function syncMapTop() {
-    if (!selected || !mobile.matches) return;
-    const top = container.getBoundingClientRect().top + window.scrollY;
-    container.style.setProperty('--store-map-top', `${top}px`);
-  }
-
   return {
     open(shop, marker, badge, trigger) {
       selected?.badge?.classList.remove('is-selected');
@@ -433,12 +426,10 @@ function createStoreSheet(panel, container, renderStoreDetails, mobile) {
       content.replaceChildren(card);
       content.scrollTop = 0;
       sheet.hidden = false;
-      syncMapTop();
       container.classList.add('has-store-sheet');
       (mobile.matches ? closeButton : backButton).focus({ preventScroll: true });
     },
     close,
-    syncMapTop,
   };
 }
 
@@ -446,17 +437,31 @@ function storeCoordinates(shop) {
   return shop.latlng ? [shop.latlng.lat, shop.latlng.lng] : null;
 }
 
-async function createStoreMap(container, message, mapButtons, sheet, mobile, onSelectMobileStore) {
-  await Promise.all([
+async function createStoreMap(container, layout, message, sortCenterButton, sheet, mobile, onSelectMobileStore, event) {
+  const [{ default: L }] = await Promise.all([
+    import('leaflet'),
     loadAsset('link', '/vendor/leaflet/leaflet.css?v=20261123-webp'),
     loadAsset('link', '/vendor/leaflet-markercluster/MarkerCluster.css'),
-    loadAsset('script', '/vendor/leaflet/leaflet.js?v=20261123-webp'),
   ]);
+  globalThis.L = L;
   await loadAsset('script', '/vendor/leaflet-markercluster/leaflet.markercluster.js');
-  const L = globalThis.L;
   const map = L.map(container, { scrollWheelZoom: false, maxZoom: 19 });
   let userMarker;
   let pendingFocus;
+
+  function overlayPadding() {
+    const controls = layout.getBoundingClientRect();
+    const viewport = container.getBoundingClientRect();
+    return mobile.matches
+      ? L.point(0, Math.min(controls.top - viewport.top, viewport.height / 2))
+      : L.point(controls.right - viewport.left, 0);
+  }
+
+  function centerView(position, zoom) {
+    const center = map.project(position, zoom).subtract(overlayPadding().divideBy(2));
+    map.setView(map.unproject(center, zoom), zoom, { animate: false });
+  }
+
   function closeDetails() {
     pendingFocus = null;
     sheet.close();
@@ -464,33 +469,45 @@ async function createStoreMap(container, message, mapButtons, sheet, mobile, onS
   map.on('click', () => {
     if (!mobile.matches) closeDetails();
   });
-  map.zoomControl.getContainer().querySelector('.leaflet-control-zoom-in').setAttribute('aria-label', '放大地圖');
-  map.zoomControl.getContainer().querySelector('.leaflet-control-zoom-out').setAttribute('aria-label', '縮小地圖');
+  function positionZoomControl() {
+    map.zoomControl.setPosition(mobile.matches ? 'bottomleft' : 'topright');
+    const zoom = map.zoomControl.getContainer();
+    zoom.querySelector('.leaflet-control-zoom-in').setAttribute('aria-label', '放大地圖');
+    zoom.querySelector('.leaflet-control-zoom-out').setAttribute('aria-label', '縮小地圖');
+  }
+  positionZoomControl();
+  mobile.addEventListener('change', positionZoomControl);
   const actions = L.control({ position: 'bottomright' });
   actions.onAdd = () => {
-    const control = element('div', 'store-map-actions');
-    control.append(...mapButtons);
-    L.DomEvent.disableClickPropagation(control);
-    return control;
+    L.DomEvent.disableClickPropagation(sortCenterButton);
+    return sortCenterButton;
   };
 
-  let tileLoaded = false;
-  const tiles = L.tileLayer(MAP_TILES, {
-    maxZoom: 19,
-    referrerPolicy: 'strict-origin-when-cross-origin',
-    attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+  function basemapUnavailable() {
+    message.textContent = '底圖目前無法載入，仍可選取標記查看店家，或切換回清單。';
+    message.hidden = false;
+  }
+  map.whenReady(async () => {
+    try {
+      const { addStoreBasemap } = await import('./store-basemap.js');
+      await addStoreBasemap(map, basemapUnavailable, () => {
+        message.hidden = true;
+      });
+    } catch {
+      basemapUnavailable();
+    }
   });
-  tiles.on('loading', () => { tileLoaded = false; });
-  tiles.on('tileload', () => { tileLoaded = true; });
-  tiles.on('load', () => {
-    message.textContent = tileLoaded ? '' : '底圖目前無法載入，仍可選取標記查看店家，或切換回清單。';
-    message.hidden = tileLoaded;
-  });
-  tiles.addTo(map);
   actions.addTo(map);
 
+  const connectedGroups = event?.connectMarkers ? event.groups : [];
+  const connections = connectedGroups.length ? L.polyline([], {
+    color: '#9a451e', weight: 4, opacity: .95, dashArray: '7 6',
+    interactive: false, className: 'store-event-connections',
+  }).addTo(map) : null;
   const markers = L.markerClusterGroup({
     maxClusterRadius: 45,
+    disableClusteringAtZoom: event?.disableClusteringAtZoom ?? (connections ? 17 : null),
+    removeOutsideVisibleBounds: event?.disableClusteringAtZoom !== 0,
     showCoverageOnHover: false,
     spiderfyDistanceMultiplier: 1.8,
     iconCreateFunction(cluster) {
@@ -509,7 +526,8 @@ async function createStoreMap(container, message, mapButtons, sheet, mobile, onS
   return {
     closeDetails,
     centerPosition() {
-      const { lat, lng } = map.getCenter();
+      const center = map.getSize().add(overlayPadding()).divideBy(2);
+      const { lat, lng } = map.containerPointToLatLng(center);
       return { latitude: lat, longitude: lng };
     },
     locate({ latitude, longitude }) {
@@ -523,7 +541,7 @@ async function createStoreMap(container, message, mapButtons, sheet, mobile, onS
           className: 'store-user-location',
         }).addTo(map).bindTooltip('我的位置');
       }
-      map.setView(position, 16, { animate: false });
+      centerView(position, 16);
     },
     sortByDistance(stores, { latitude, longitude }) {
       const origin = L.latLng(latitude, longitude);
@@ -540,8 +558,7 @@ async function createStoreMap(container, message, mapButtons, sheet, mobile, onS
       if (!marker) return false;
       const selection = pendingFocus = { marker };
       const center = marker.getLatLng();
-      container.scrollIntoView({ block: 'nearest' });
-      map.setView(center, 16, { animate: false });
+      centerView(center, 16);
       markers.zoomToShowLayer(marker, () => {
         if (pendingFocus !== selection) return;
         pendingFocus = null;
@@ -576,15 +593,33 @@ async function createStoreMap(container, message, mapButtons, sheet, mobile, onS
           if (mobile.matches) onSelectMobileStore();
           sheet.open(shop, marker, badge, trigger);
           map.invalidateSize({ pan: false });
-          if (center) map.panTo(center, { animate: false });
-          else map.panInside(marker.getLatLng(), { paddingTopLeft: [35, 58], paddingBottomRight: [35, 35], animate: false });
+          if (center) centerView(center, map.getZoom());
+          else map.panInside(marker.getLatLng(), {
+            paddingTopLeft: overlayPadding().add([35, 35]),
+            paddingBottomRight: [35, 35],
+            animate: false,
+          });
         });
         pins.push(marker);
       }
-      if (center) map.setView(center, 16, { animate: false });
+      if (connections) {
+        const positions = new Map(pins.map(pin => [pin.options.storeId, pin.getLatLng()]));
+        const lines = connectedGroups.map(group => {
+          const points = group.storeIds.map(id => positions.get(id)).filter(Boolean);
+          if (group.closedLoop && points.length > 2) points.push(points[0]);
+          return points;
+        });
+        connections.setLatLngs(lines.filter(points => points.length > 1));
+      }
+      if (center) centerView(center, 16);
       else {
         const bounds = pins.length ? L.latLngBounds(pins.map(pin => pin.getLatLng())) : TAIWAN_BOUNDS;
-        map.fitBounds(bounds, { animate: false, padding: [28, 28], maxZoom: 15 });
+        map.fitBounds(bounds, {
+          animate: false,
+          paddingTopLeft: overlayPadding().add([28, 28]),
+          paddingBottomRight: [28, 28],
+          maxZoom: connections ? 19 : 15,
+        });
       }
       markers.addLayers(pins);
       markers.addTo(map);
@@ -665,10 +700,33 @@ export async function mountStores(root, workPreviews = []) {
   const tools = element('div', 'store-tools');
   tools.id = 'store-tools';
   tools.append(controls, modes);
-  const toolsToggle = element('button', 'back-link store-tools-toggle');
-  toolsToggle.type = 'button';
+
+  const toolbar = element('div', 'store-toolbar');
+  toolbar.setAttribute('role', 'group');
+  toolbar.setAttribute('aria-label', '店家功能');
+  const homeLink = element('a', '', '首頁');
+  homeLink.href = '/';
+  const aboutDialog = document.getElementById('store-about-dialog');
+  const aboutButton = element('button', '', '關於');
+  aboutButton.setAttribute('aria-haspopup', 'dialog');
+  aboutButton.setAttribute('aria-controls', aboutDialog.id);
+  const locateButton = element('button', 'store-toolbar-locate');
+  const locateLabel = element('span', 'store-location-label', '定位');
+  const locateIcon = element('span', 'store-locate-icon');
+  locateIcon.setAttribute('aria-hidden', 'true');
+  locateLabel.prepend(locateIcon);
+  const permissionLabel = element('span', 'store-location-permission', '待確認');
+  const locationHelp = document.getElementById('store-location-help');
+  locateButton.append(locateLabel, permissionLabel);
+  locateButton.setAttribute('aria-controls', locationHelp.id);
+  locateButton.setAttribute('aria-expanded', 'false');
+  locateButton.disabled = true;
+  const toolsToggle = element('button', '', '工具');
   toolsToggle.setAttribute('aria-controls', tools.id);
-  root.closest('.stores-directory').querySelector('.directory-header').append(toolsToggle);
+  aboutButton.type = locateButton.type = toolsToggle.type = 'button';
+  toolbar.append(homeLink, aboutButton, locateButton, locationHelp, toolsToggle);
+  root.after(toolbar);
+
   const retry = element('button', 'store-action', '重新載入');
   const more = element('button', 'store-action store-more', '顯示更多店家');
   retry.type = more.type = 'button';
@@ -681,14 +739,6 @@ export async function mountStores(root, workPreviews = []) {
   const sortCenterButton = element('button', 'store-action store-sort-center', '依地圖中心排序');
   sortCenterButton.type = 'button';
   sortCenterButton.disabled = true;
-  const locateButton = element('button', 'store-action store-locate');
-  locateButton.type = 'button';
-  locateButton.disabled = true;
-  locateButton.setAttribute('aria-label', '我的位置');
-  locateButton.title = '我的位置';
-  const locateIcon = element('span', 'store-locate-icon');
-  locateIcon.setAttribute('aria-hidden', 'true');
-  locateButton.append(locateIcon);
   const locationStatus = element('p', 'store-location-status');
   locationStatus.setAttribute('role', 'status');
   const mapElement = element('div', 'store-map');
@@ -697,11 +747,13 @@ export async function mountStores(root, workPreviews = []) {
   mapMessage.setAttribute('role', 'status');
   mapPanel.hidden = mapElement.hidden = mapMessage.hidden = true;
   const mapLayout = element('div', 'store-map-layout is-showing-map');
-  mapPanel.append(locationStatus, mapMessage, mapElement);
+  const mapStatus = element('div');
+  mapStatus.append(locationStatus, mapMessage);
+  mapPanel.append(mapElement);
   mapLayout.append(listPanel);
   const storeSheet = createStoreSheet(mapLayout, mapElement, renderStoreDetails, mobile);
   mapLayout.append(mapPanel);
-  root.replaceChildren(tools, feedback, retry, mapLayout);
+  root.replaceChildren(tools, feedback, retry, mapStatus, mapLayout);
 
   let stores = [];
   let matches = [];
@@ -715,13 +767,19 @@ export async function mountStores(root, workPreviews = []) {
   let showingMap = true;
   let mapNeedsRefresh = true;
   let locating = false;
+  let automaticLocation = 'waiting';
+  let locationPermission;
+  let permissionCheck = 0;
   let firstMobileStoreSelected = false;
+  const pageEventId = root.dataset.eventId || '';
+  const eventFilter = createStoreEventFilter(root.closest('.stores-directory'), pageEventId, () => {
+    cancelAutomaticLocation();
+    if (!search.disabled) filterStores();
+  });
 
   function setToolsExpanded(expanded) {
     tools.classList.toggle('is-collapsed', !expanded);
     toolsToggle.setAttribute('aria-expanded', String(expanded));
-    toolsToggle.textContent = expanded ? '收合工具' : '展開工具';
-    storeSheet.syncMapTop();
     updateMap();
   }
 
@@ -755,11 +813,12 @@ export async function mountStores(root, workPreviews = []) {
     listMode.setAttribute('aria-pressed', 'false');
     mapMode.setAttribute('aria-pressed', 'true');
     mapLayout.classList.add('is-showing-map');
-    mapPanel.hidden = false;
+    mapPanel.hidden = mapStatus.hidden = false;
     if (!mapTask) {
       mapMessage.textContent = '正在載入地圖…';
       mapMessage.hidden = false;
-      mapTask = createStoreMap(mapElement, mapMessage, [sortCenterButton, locateButton], storeSheet, mobile, collapseOnFirstSelection);
+      mapTask = createStoreMap(mapElement, mapLayout, mapMessage, sortCenterButton, storeSheet, mobile,
+        collapseOnFirstSelection, eventFilter.selected);
     }
     try {
       if (!map) {
@@ -770,7 +829,8 @@ export async function mountStores(root, workPreviews = []) {
       mapElement.hidden = false;
       updateMap();
       sortCenterButton.disabled = false;
-      locateButton.disabled = locating;
+      locateButton.disabled = false;
+      maybeLocateAutomatically();
     } catch {
       mapTask = null;
       const retryMap = element('button', 'store-action', '重新載入地圖');
@@ -781,46 +841,126 @@ export async function mountStores(root, workPreviews = []) {
     }
   }
 
-  function locateMe() {
+  function showPermissionState(state) {
+    const labels = { granted: '已允許', denied: '已封鎖', prompt: '待確認', unavailable: '不支援' };
+    locateButton.dataset.permission = state;
+    permissionLabel.textContent = labels[state];
+  }
+
+  function updatePermissionState() {
+    showPermissionState(locationPermission.state);
+    maybeLocateAutomatically();
+  }
+
+  async function refreshLocationPermission() {
+    if (!navigator.geolocation) {
+      showPermissionState('unavailable');
+      return;
+    }
+    const check = ++permissionCheck;
+    try {
+      const status = await navigator.permissions?.query({ name: 'geolocation' });
+      if (!status || check !== permissionCheck) return;
+      if (status !== locationPermission) {
+        locationPermission?.removeEventListener('change', updatePermissionState);
+        locationPermission = status;
+        locationPermission.addEventListener('change', updatePermissionState);
+      }
+      updatePermissionState();
+    } catch {
+      // Browsers can provide location without exposing its permission state.
+    }
+  }
+
+  function setLocationHelpVisible(visible) {
+    locateButton.setAttribute('aria-expanded', String(visible));
+    if (!visible && locationHelp.contains(document.activeElement)) locateButton.focus({ preventScroll: true });
+    locationHelp.hidden = !visible;
+  }
+
+  function cancelAutomaticLocation() {
+    automaticLocation = 'done';
+  }
+
+  function maybeLocateAutomatically() {
+    if (automaticLocation !== 'waiting' || locating || !map || !showingMap || mapElement.hidden || document.hidden
+      || pageEventId || linkedStoreId() || locationPermission?.state !== 'granted') return;
+    automaticLocation = 'pending';
+    locateMe(true);
+  }
+
+  function locateMe(automatic = false) {
+    if (locating) return;
+    if (locationPermission?.state === 'denied') {
+      setLocationHelpVisible(locationHelp.hidden);
+      void refreshLocationPermission();
+      return;
+    }
+    if (!automatic && locationPermission?.state === 'granted') cancelAutomaticLocation();
+    if (!showingMap) void showMap();
     if (!navigator.geolocation) {
       locationStatus.textContent = '此瀏覽器無法定位，請使用支援定位的瀏覽器。';
       return;
     }
 
     const sortPositionAtRequest = sortPosition;
-    locating = locateButton.disabled = true;
+    locating = true;
     locateButton.setAttribute('aria-busy', 'true');
+    locateButton.setAttribute('aria-disabled', 'true');
     locationStatus.textContent = '正在取得你的位置…';
     let finished = false;
     function finish(message = '') {
       if (finished) return;
       finished = true;
+      if (automatic) cancelAutomaticLocation();
       clearTimeout(watchdog);
       locationStatus.textContent = message;
-      locating = locateButton.disabled = false;
+      locating = false;
       locateButton.removeAttribute('aria-busy');
+      locateButton.removeAttribute('aria-disabled');
     }
 
     const watchdog = setTimeout(() => {
-      finish('定位等待逾時，請確認已允許位置存取後再試。');
+      finish('定位等待逾時，請稍後再試。');
     }, 20000);
     try {
       navigator.geolocation.getCurrentPosition(({ coords }) => {
         if (finished) return;
+        if (automatic && (automaticLocation !== 'pending' || locationPermission?.state !== 'granted' || linkedStoreId())) {
+          finish();
+          return;
+        }
+        permissionCheck++;
+        showPermissionState('granted');
+        setLocationHelpVisible(false);
         try {
           const { latitude, longitude } = coords;
           userPosition = { latitude, longitude };
-          if (sortPosition === sortPositionAtRequest) sortPosition = userPosition;
+          if (!automatic) {
+            cancelAutomaticLocation();
+            if (sortPosition === sortPositionAtRequest) sortPosition = userPosition;
+            renderList();
+          }
           userPositionNeedsUpdate = true;
-          renderList();
           updateMap();
           finish();
         } catch {
           finish('定位結果無法顯示，請再試一次。');
         }
       }, ({ code }) => {
+        if (finished) return;
+        if (automatic && automaticLocation !== 'pending') {
+          finish();
+          return;
+        }
+        if (code === 1) {
+          showPermissionState(locationPermission?.state === 'granted' ? 'granted' : 'denied');
+          finish();
+          setLocationHelpVisible(true);
+          void refreshLocationPermission();
+          return;
+        }
         const messages = {
-          1: '尚未允許定位，請在瀏覽器或手機設定中允許位置存取後再試。',
           2: '暫時無法取得位置，請確認手機定位服務已開啟後再試。',
           3: '定位逾時，請移到訊號較佳的位置後再試。',
         };
@@ -832,11 +972,12 @@ export async function mountStores(root, workPreviews = []) {
   }
 
   function showList() {
+    cancelAutomaticLocation();
     showingMap = false;
     map?.closeDetails();
     listMode.setAttribute('aria-pressed', 'true');
     mapMode.setAttribute('aria-pressed', 'false');
-    mapPanel.hidden = true;
+    mapPanel.hidden = mapStatus.hidden = true;
     mapLayout.classList.remove('is-showing-map');
   }
 
@@ -845,6 +986,7 @@ export async function mountStores(root, workPreviews = []) {
       renderStore(shop, openShare, openPhotos, 'li', event => {
         if (mobile.matches || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
         event.preventDefault();
+        cancelAutomaticLocation();
         const trigger = event.currentTarget;
         if (!map?.focusStore(shop.id, trigger)) storeSheet.open(shop, undefined, undefined, trigger);
       }));
@@ -869,7 +1011,8 @@ export async function mountStores(root, workPreviews = []) {
     filterToggle.textContent = activeFilters ? `篩選（${activeFilters}）` : '篩選';
     const terms = normalize(search.value).split(/\s+/).filter(Boolean);
     matches = stores.filter(shop => (
-      (!city.value || shop.city === city.value)
+      eventFilter.includes(shop.id)
+      && (!city.value || shop.city === city.value)
       && (!category.value || shop.category === category.value)
       && terms.every(term => shop.searchText.includes(term))
     ));
@@ -907,34 +1050,59 @@ export async function mountStores(root, workPreviews = []) {
     }
   }
 
-  toolsToggle.addEventListener('click', () => {
-    setToolsExpanded(toolsToggle.getAttribute('aria-expanded') !== 'true');
-  });
+  function toggleTools() {
+    const expanded = tools.classList.contains('is-collapsed');
+    if (expanded && mobile.matches) storeSheet.close();
+    setToolsExpanded(expanded);
+    if (expanded && !showingMap) tools.scrollIntoView({ block: 'nearest' });
+  }
+
+  aboutButton.addEventListener('click', () => aboutDialog.showModal());
+  toolsToggle.addEventListener('click', toggleTools);
   filterToggle.addEventListener('click', () => {
     const expanded = filterToggle.getAttribute('aria-expanded') === 'true';
     filterToggle.setAttribute('aria-expanded', String(!expanded));
-    storeSheet.syncMapTop();
     updateMap();
   });
   search.addEventListener('input', filterStores);
   city.addEventListener('change', filterStores);
   category.addEventListener('change', filterStores);
+  controls.addEventListener('input', cancelAutomaticLocation, { capture: true, once: true });
+  mapElement.addEventListener('pointerdown', cancelAutomaticLocation, { capture: true, once: true });
+  mapElement.addEventListener('keydown', cancelAutomaticLocation, { capture: true, once: true });
   mobile.addEventListener('change', () => {
     storeSheet.close();
     if (!mobile.matches && !showingMap) void showMap();
   });
   window.addEventListener('hashchange', () => {
     pendingStoreId = linkedStoreId();
-    if (pendingStoreId && !mapMode.disabled) void showMap();
+    if (pendingStoreId) {
+      cancelAutomaticLocation();
+      if (!mapMode.disabled) void showMap();
+    }
   });
   listMode.addEventListener('click', showList);
   mapMode.addEventListener('click', showMap);
   sortCenterButton.addEventListener('click', () => {
+    cancelAutomaticLocation();
     sortPosition = map.centerPosition();
     map.closeDetails();
     renderList();
   });
-  locateButton.addEventListener('click', locateMe);
+  locateButton.addEventListener('click', () => locateMe());
+  locationHelp.querySelector('button').addEventListener('click', () => setLocationHelpVisible(false));
+  toolbar.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && (event.target === locateButton || locationHelp.contains(event.target))) {
+      setLocationHelpVisible(false);
+    }
+  });
+  window.addEventListener('focus', refreshLocationPermission);
+  window.addEventListener('pageshow', event => {
+    if (event.persisted) void refreshLocationPermission();
+  });
+  document.addEventListener('visibilitychange', () => {
+    if (!document.hidden) void refreshLocationPermission();
+  });
   new ResizeObserver(updateMap).observe(mapElement);
   more.addEventListener('click', () => {
     const [first] = showMore();
@@ -948,5 +1116,6 @@ export async function mountStores(root, workPreviews = []) {
   });
 
   setToolsExpanded(false);
+  void refreshLocationPermission();
   await loadStores();
 }

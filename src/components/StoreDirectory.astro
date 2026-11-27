@@ -1,0 +1,140 @@
+---
+import StoreShareDialog from './StoreShareDialog.astro';
+import { storeWorkPreviews } from '../lib/oshen-store-work-previews';
+import { stores, storeCity, storePath } from '../lib/oshen-stores';
+import type { StoreEvent } from '../lib/store-events.js';
+import '../styles/stores.css';
+import '../styles/store-work-preview.css';
+
+interface Props { event?: StoreEvent }
+const { event } = Astro.props;
+const title = event?.name || '發光的店家';
+const description = '發光的店家整理台灣各地的小店與生活服務，可搜尋店家並查看到訪資訊與地圖位置。';
+const eventStores = event && new Set(event.groups.flatMap(group => group.storeIds));
+const compareText = new Intl.Collator('zh-Hant-TW').compare;
+const byCity = new Map<string, (typeof stores)[number][]>();
+for (const store of stores) {
+  if (eventStores && !eventStores.has(store.id)) continue;
+  const city = storeCity(store.address) || '其他地區';
+  if (!byCity.has(city)) byCity.set(city, []);
+  byCity.get(city)!.push(store);
+}
+const storesByCity = [...byCity].sort(([a], [b]) => compareText(a, b));
+---
+
+<section class="stores-directory directory page-width" aria-labelledby="stores-title">
+  <div class="directory-header">
+    <h1 id="stores-title" tabindex="-1">{title}</h1>
+    {event && <a class="store-events-close" href="/stores/" aria-label="關閉活動，回全部店家">Ⓧ</a>}
+    {(event?.organizerUrl || event?.introduction || event?.sourceUrl) && (
+      <details class="store-event-intro">
+        <summary>活動資訊</summary>
+        {event.organizerUrl && <p>發起人 <a href={event.organizerUrl}>{event.organizerUrl}</a></p>}
+        {event.introduction && <p class="store-event-description">{event.introduction}</p>}
+        {event.sourceUrl && <p><a href={event.sourceUrl}>活動原文</a></p>}
+      </details>
+    )}
+    {event && event.groups.length > 1 && (
+      <label class="store-event-group">
+        活動分組
+        <select class="store-input">
+          <option value="">全部分組</option>
+          {event.groups.map(group => <option value={group.name}>{group.name}</option>)}
+        </select>
+      </label>
+    )}
+  </div>
+  {!event && (
+    <nav class="store-events" aria-label="現在進行式" hidden>
+      <div class="store-events-header">
+        <label for="store-event-select">現在進行式</label>
+        <button class="store-events-close" type="button" aria-label="關閉活動列">Ⓧ</button>
+      </div>
+      <select id="store-event-select" class="store-input"></select>
+    </nav>
+  )}
+  <div id="stores-content" aria-label="店家目錄" data-event-id={event?.id} data-work-previews={JSON.stringify(storeWorkPreviews)}><p role="status">正在載入店家資料…</p></div>
+  <dialog id="store-about-dialog" class="store-info-dialog" aria-labelledby="store-about-title">
+    <h2 id="store-about-title">關於發光的店家</h2>
+    <p>{description}</p>
+    <p><a href="/stores/report/">推薦店家</a></p>
+    <p><a href="/privacy/#copyright">版權資訊</a></p>
+    <form method="dialog">
+      <button class="store-action" type="submit" autofocus>關閉</button>
+    </form>
+  </dialog>
+  <section id="store-location-help" class="store-location-help" aria-labelledby="store-location-help-title" hidden>
+    <div class="store-location-help-header">
+      <h2 id="store-location-help-title">開啟定位權限</h2>
+      <button class="store-action" type="button" aria-label="關閉定位指引">關閉</button>
+    </div>
+    <ol>
+      <li>在 <strong>Safari</strong> 的網址列旁開啟「頁面選單」，進入「網站設定」，將「位置」設為「允許」。</li>
+      <li>在 <strong>Chrome</strong> 點網址列旁的「查看網站資訊」，從「權限」或「網站設定」允許使用位置。</li>
+      <li>在 <strong>Firefox</strong> 點網址列旁的權限圖示，清除位置的封鎖設定。</li>
+    </ol>
+    <p>若網站已允許，請到裝置的「定位服務」允許瀏覽器使用位置。調整後回到地圖，再按「定位」。</p>
+  </section>
+  <StoreShareDialog />
+  <dialog id="store-photo-viewer" class="store-photo-viewer" aria-label="全螢幕店家照片">
+    <div class="store-photo-track" aria-label="店家照片"></div>
+    <button class="store-photo-control store-photo-close" type="button" aria-label="關閉照片" autofocus>×</button>
+    <button class="store-photo-control store-photo-previous" type="button" aria-label="上一張照片" data-photo-previous>‹</button>
+    <button class="store-photo-control store-photo-next" type="button" aria-label="下一張照片" data-photo-next>›</button>
+  </dialog>
+  <noscript>
+    <p>搜尋、篩選與地圖需要 JavaScript。</p>
+    <nav aria-label="店家目錄" class="stores-by-city-groups">
+      {storesByCity.map(([city, cityStores]) => (
+        <section>
+          <h2>{city}</h2>
+          <ul>
+            {cityStores.sort((a, b) => compareText(a.name, b.name)).map(store => (
+              <li><a href={storePath(store.id)}>{store.name}</a></li>
+            ))}
+          </ul>
+        </section>
+      ))}
+    </nav>
+  </noscript>
+</section>
+
+
+<script>
+  import { mountStores } from '../features/stores.js';
+
+  const directory = document.querySelector<HTMLElement>('#stores-content');
+  if (directory) void mountStores(directory, JSON.parse(directory.dataset.workPreviews || '[]'));
+</script>
+
+<style>
+  .store-event-intro {
+    flex: 0 0 100%;
+    min-width: 0;
+    max-height: min(25dvh, 14rem);
+    overflow: auto;
+    overscroll-behavior: contain;
+    font-size: .875rem;
+  }
+  .store-event-intro summary { color: var(--accent); cursor: pointer; }
+  .store-event-intro p { margin: .3rem 0; overflow-wrap: anywhere; }
+  .store-event-intro a { color: var(--accent); }
+  .store-event-description { white-space: pre-line; }
+
+  .stores-by-city-groups {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr));
+    align-items: start;
+    gap: 1rem 1.75rem;
+    padding-bottom: 1rem;
+  }
+  .stores-by-city-groups h2 { margin: .4rem 0; font-size: 1rem; }
+  .stores-by-city-groups ul { margin: 0; padding: 0; list-style: none; }
+  .stores-by-city-groups a { display: inline-block; padding-block: .25rem; }
+  .stores-by-city-groups a, :global(.store-name a) { text-underline-offset: .2em; }
+  :global(.store-name a) { text-decoration-color: var(--line); }
+  .stores-by-city-groups a:hover, :global(.store-name a:hover) {
+    color: var(--accent);
+    text-decoration-color: currentColor;
+  }
+</style>
