@@ -3831,7 +3831,21 @@
           "id": "chamber-hiroto-2",
           "alt": "屏東山海飄帶示意圖",
           "url": "/media/library/chamber-hiroto/2.webp"
+        },
+        {
+          "id": "chamber-hiroto-3",
+          "halls": [
+            "V"
+          ],
+          "title": "屏東回家投票",
+          "alt": "白鵝從水花中探頭，背後是山峰、鵝群與紅色的「屏東回家投票」。",
+          "caption": "屏東鵝樂號參戰😆",
+          "url": "/media/library/chamber-hiroto/3.webp?v=708269081c5aa453",
+          "source": "https://www.threads.com/@chamber_hiroto/post/DgP-iwMo8iy"
         }
+      ],
+      "additionalHalls": [
+        "V"
       ]
     },
     {
@@ -11985,6 +11999,18 @@
           "source": "https://www.instagram.com/reel/DfsH3ZFg-Wl/",
           "referenceUrl": "https://www.threads.com/@serpensspiritstudio/post/DgNTwPJkxSq/media",
           "videoUrl": "/media/library/serpensspiritstudio/1.mp4?v=857db12de2f2b682"
+        },
+        {
+          "id": "serpensspiritstudio-2",
+          "halls": [
+            "V"
+          ],
+          "title": "11/28 回家投票（像素動畫）",
+          "alt": "藍色水滴落在白色紙張上，接著出現圈選記號與「11/28 回家投票」。",
+          "caption": "藍色水滴落在白色紙張上，接著出現圈選記號與「11/28 回家投票」。",
+          "url": "/media/library/serpensspiritstudio/2.webp?v=5ea95168727f0757",
+          "source": "https://www.threads.com/@serpensspiritstudio/post/DgPzQaNIzmP/media",
+          "videoUrl": "/media/library/serpensspiritstudio/2.mp4?v=2799b9791c632a70"
         }
       ]
     },
@@ -13416,6 +13442,28 @@
           "caption": "白底海報左邊寫著「回家投票」與「08:00–16:00」。右邊的粉髮角色與動物圍繞在桃紅色圓框內。",
           "url": "/media/library/kan-artwork/1.webp?v=f83cc6982694f6b6",
           "source": "https://www.threads.com/@kan_artwork_/post/DgPmDvwkVkO/media"
+        },
+        {
+          "id": "kan-artwork-2",
+          "halls": [
+            "V"
+          ],
+          "title": "11.28 回家投票｜大選副本",
+          "alt": "長著翅膀的少女與兩名夥伴圍在圓形圖案中，左上寫著「回家投票」，左下標示 11.28 和投票時間。",
+          "caption": "長著翅膀的少女與兩名夥伴圍在圓形圖案中，左上寫著「回家投票」，左下標示 11.28 和投票時間。",
+          "url": "/media/library/kan-artwork/2.webp?v=ee0a98d40a89da87",
+          "source": "https://www.threads.com/@kan_artwork_/post/DgOnjNgkfk-"
+        },
+        {
+          "id": "kan-artwork-3",
+          "halls": [
+            "V"
+          ],
+          "title": "大選副本｜輸出手、通訊員、監視官",
+          "alt": "黃底上，三個對話框介紹角色「輸出手」「通訊員」與「監視官」，分別提醒攜帶投票用品、打電話與監票。",
+          "caption": "黃底上，三個對話框介紹角色「輸出手」「通訊員」與「監視官」，分別提醒攜帶投票用品、打電話與監票。",
+          "url": "/media/library/kan-artwork/3.webp?v=596cf13b3c4128d1",
+          "source": "https://www.threads.com/@kan_artwork_/post/DgOnjNgkfk-"
         }
       ]
     },
@@ -14786,6 +14834,2761 @@
           "source": "https://www.threads.com/@neko_1ab/post/DgPJJkDE-Eb/media"
         }
       ]
+    },
+    {
+      "id": "xxiva",
+      "name": "阿瓦瓦【XXiVA】",
+      "description": "🍔Gesture drawing junkie♥\n🍣クロッキー大好き♥\n🧋就是愛速寫♥\n【Illustrator, Character Designer, & Comic Artist ☻】",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@_xxiva_",
+        "ig": "",
+        "web": ""
+      },
+      "productImages": [
+        {
+          "id": "xxiva-1",
+          "halls": [
+            "V"
+          ],
+          "title": "11/28 開心投票",
+          "alt": "橙色底上，一隻打領帶的白狗坐在「11/28 開心投票」旁。",
+          "caption": "11/28，開心投票♥",
+          "url": "/media/library/xxiva/1.webp?v=e91e6bf912ff750b",
+          "source": "https://www.threads.com/@_xxiva_/post/DgPwSQ9kiWD"
+        }
+      ],
+      "logo": {
+        "url": "/media/library/xxiva/logo.webp?v=f1fa41977a762fe4",
+        "source": "https://www.threads.com/@_xxiva_",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-27"
+      }
+    },
+    {
+      "id": "teabi-su",
+      "name": "提比蘇_TeabiSu",
+      "description": "叫我蘇提比/提比蘇\n畫原創的獨角獸\n嘗試努力經營一下社群\n.\nAI禁止，無斷轉載禁止\n創作之前，我是臺灣人🇹🇼",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@teabi_su",
+        "ig": "",
+        "web": ""
+      },
+      "productImages": [
+        {
+          "id": "teabi-su-1",
+          "halls": [
+            "V"
+          ],
+          "title": "1128 回家投票｜拉著行李",
+          "alt": "粉紅棋盤格畫面上，獨角人物拖著印有投票記號的行李箱。",
+          "caption": "剛畫完！大家記得回家投票歐▓",
+          "url": "/media/library/teabi-su/1.webp?v=50273cb2c062ad6e",
+          "source": "https://www.threads.com/@teabi_su/post/DgPmIEiIFQ1"
+        },
+        {
+          "id": "teabi-su-2",
+          "halls": [
+            "V"
+          ],
+          "title": "1128 回家投票｜記得停看聽",
+          "alt": "粉紅色接續畫面中，戴眼鏡的人物拿著望遠鏡，對話框寫著「記得停看聽」。",
+          "caption": "記得停看聽",
+          "url": "/media/library/teabi-su/2.webp?v=f2356cc958be1925",
+          "source": "https://www.threads.com/@teabi_su/post/DgPmIEiIFQ1"
+        }
+      ],
+      "logo": {
+        "url": "/media/library/teabi-su/logo.webp?v=762b4c811f833d15",
+        "source": "https://www.threads.com/@teabi_su",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-27"
+      }
+    },
+    {
+      "id": "coku102",
+      "name": "羽洛依(coku)",
+      "description": "佛系繪家 ◆ 台灣 ◆ 社恐I人 ◆ 原創二創愛好者 ◆ 不定期圖/文/小漫畫創作 ◆ 萌作品眾多，目前主ORV 、韓日台作品等",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@coku102",
+        "ig": "",
+        "web": ""
+      },
+      "productImages": [
+        {
+          "id": "coku102-1",
+          "halls": [
+            "V"
+          ],
+          "title": "一起回家投票｜橘底版",
+          "alt": "橘底直幅中，戴墨鏡的人物坐在掛有「順」字領巾的白犬背上。",
+          "caption": "一起回家投想要的生活：D",
+          "url": "/media/library/coku102/1.webp?v=40bdf5bc133bba7a",
+          "source": "https://www.threads.com/@coku102/post/DgP0M3LIA3h"
+        },
+        {
+          "id": "coku102-2",
+          "halls": [
+            "V"
+          ],
+          "title": "一起回家投票｜波紋版",
+          "alt": "米白波紋上，白犬載著戴墨鏡的人物，下方寫著「一起回家投票」。",
+          "caption": "一起回家投想要的生活：D",
+          "url": "/media/library/coku102/2.webp?v=42cb14a901186b2e",
+          "source": "https://www.threads.com/@coku102/post/DgP0M3LIA3h"
+        }
+      ],
+      "logo": {
+        "url": "/media/library/coku102/logo.webp?v=ba52b57512cc9ec3",
+        "source": "https://www.threads.com/@coku102",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-27"
+      }
+    },
+    {
+      "id": "blaze-wu",
+      "name": "Blaze Wu",
+      "description": "台灣插畫家，繪畫了百本小說封面，參與多款遊戲美術繪畫，遊戲《Cytus α》主視覺插畫、遊戲《Deemo》多款曲圖插畫。近年將傳統繪畫技法加入作畫中，研發了繪圖專用墨水《墨事典episodic ink》系列。",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@blaze_wu",
+        "ig": "",
+        "web": ""
+      },
+      "productImages": [
+        {
+          "id": "blaze-wu-1",
+          "halls": [
+            "V"
+          ],
+          "title": "11/28 VOTE",
+          "alt": "深色背景上，兩個黑色鳥形剪影沿著發亮的弧線並行，上方印著「11/28 VOTE」。",
+          "caption": "明天，回家投票！",
+          "url": "/media/library/blaze-wu/1.webp?v=c44ad9a993be6a61",
+          "source": "https://www.threads.com/@blaze_wu/post/DgPqL8SI9OE"
+        }
+      ],
+      "logo": {
+        "url": "/media/library/blaze-wu/logo.webp?v=c4acc31c978464e8",
+        "source": "https://www.threads.com/@blaze_wu",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-27"
+      }
+    },
+    {
+      "id": "panpan-2026222",
+      "name": "Pan Pan パンパン",
+      "description": "可樂餅專賣 ( ﾟ∀ ﾟ) \n使用台灣在地食材，做出熟悉的日式街頭點心",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@panpan_2026222",
+        "ig": "",
+        "web": ""
+      },
+      "productImages": [
+        {
+          "id": "panpan-2026222-1",
+          "halls": [
+            "V"
+          ],
+          "title": "11.28 GO VOTE",
+          "alt": "黃底海報中，貓、女孩和熊排隊站在票箱旁，上方寫著「11.28 GO VOTE」。",
+          "caption": "11.28 GO VOTE",
+          "url": "/media/library/panpan-2026222/1.webp?v=6a7a484f6edd3d37",
+          "source": "https://www.threads.com/@panpan_2026222/post/DgPs8q0AX3W"
+        }
+      ],
+      "logo": {
+        "url": "/media/library/panpan-2026222/logo.webp?v=32279327c83b90fe",
+        "source": "https://www.threads.com/@panpan_2026222",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-27"
+      }
+    },
+    {
+      "id": "hakkaniki",
+      "name": "客家兄貴",
+      "description": "『我們總是流離失首，無所遁從\n一旦連言語形貌都失去\n那最終\n不過只是一肉塊』\n我會在這裡更新些切面人的創作和各種小漫畫",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@hakkaniki",
+        "ig": "",
+        "web": ""
+      },
+      "productImages": [
+        {
+          "id": "hakkaniki-1",
+          "halls": [
+            "V"
+          ],
+          "title": "1128 回家投票",
+          "alt": "線描人物手持寫有「投給自己想要的生活／VOTE FOR TAIWAN」的紙張。",
+          "caption": "投給自己想要的生活",
+          "url": "/media/library/hakkaniki/1.webp?v=994a531dc9293dd3",
+          "source": "https://www.threads.com/@hakkaniki/post/DgPsCpPkqsy"
+        },
+        {
+          "id": "hakkaniki-2",
+          "halls": [
+            "V"
+          ],
+          "title": "1128 投給你想要的生活",
+          "alt": "橘色底上，戴眼鏡、穿西裝的人物豎起拇指，旁邊寫著「1128 投給你想要的生活」。",
+          "caption": "1128 投給你想要的生活",
+          "url": "/media/library/hakkaniki/2.webp?v=79bc14d9d0470827",
+          "source": "https://www.threads.com/@hakkaniki/post/DgPsCpPkqsy"
+        },
+        {
+          "id": "hakkaniki-3",
+          "halls": [
+            "V"
+          ],
+          "title": "洋流來了！",
+          "alt": "綠底插畫中，戴眼鏡的人物張開雙手，兩旁寫著「洋流來了！」與「沈伯洋」。",
+          "caption": "洋流來了！",
+          "url": "/media/library/hakkaniki/3.webp?v=d4a72e501bd0d571",
+          "source": "https://www.threads.com/@hakkaniki/post/DgPsCpPkqsy"
+        }
+      ],
+      "logo": {
+        "url": "/media/library/hakkaniki/logo.webp?v=ea31d05c8868fbb5",
+        "source": "https://www.threads.com/@hakkaniki",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-27"
+      }
+    },
+    {
+      "id": "godanclub",
+      "name": "狗蛋俱樂部 GoDan Club",
+      "description": "給大人的療癒俱樂部 Hosted by DT\n#紅貴賓酷比 #黃金犬狗蛋",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@godanclub",
+        "ig": "",
+        "web": ""
+      },
+      "productImages": [
+        {
+          "id": "godanclub-1",
+          "halls": [
+            "V"
+          ],
+          "title": "GO VOTE",
+          "alt": "淡紫底上，兩隻背著包的狗各抱著一個投票章，頭頂寫著「GO VOTE」。",
+          "caption": "11/28回家投票！",
+          "url": "/media/library/godanclub/1.webp?v=00fda08176bfb987",
+          "source": "https://www.threads.com/@godanclub/post/DgP6u_JI2Zl"
+        }
+      ],
+      "logo": {
+        "url": "/media/library/godanclub/logo.webp?v=e2c509d132adab4c",
+        "source": "https://www.threads.com/@godanclub",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-27"
+      }
+    },
+    {
+      "id": "frog-ribbbit",
+      "name": "呱呱叫",
+      "description": "會分享故事在自己帳號的人。",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@frog_ribbbit",
+        "ig": "",
+        "web": ""
+      },
+      "productImages": [
+        {
+          "id": "frog-ribbbit-1",
+          "halls": [
+            "V"
+          ],
+          "title": "11.28",
+          "alt": "橘色波紋中央，白色線條角色與投票記號交疊，上方寫著「11.28」。",
+          "caption": "11.28",
+          "url": "/media/library/frog-ribbbit/1.webp?v=e89eff0c944a507c",
+          "source": "https://www.threads.com/@frog_ribbbit/post/DgPeI52IyYq"
+        }
+      ],
+      "logo": {
+        "url": "/media/library/frog-ribbbit/logo.webp?v=18b5d69ea8f90fa2",
+        "source": "https://www.threads.com/@frog_ribbbit",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-27"
+      }
+    },
+    {
+      "id": "lost-found-studio",
+      "name": "拾遺工作室",
+      "description": "標本製作丨展覽策劃丨生態觀察丨藝術設計\n一群熱愛生態公民科學跟標本的人！",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@lost.found_studio",
+        "ig": "",
+        "web": ""
+      },
+      "productImages": [
+        {
+          "id": "lost-found-studio-1",
+          "halls": [
+            "V"
+          ],
+          "title": "VOTE FOR LIFE｜鳥類海報",
+          "alt": "八幅不同鳥類的頭像分列投票記號兩側，標題寫著「VOTE FOR LIFE」。",
+          "caption": "台灣鳥兒報到！！！我們的未來應該要包含跟我們分享土地的野生動物🥹🥹",
+          "url": "/media/library/lost-found-studio/1.webp?v=1d2b14e12a6f2eca",
+          "source": "https://www.threads.com/@lost.found_studio/post/DgP2KVNGIA1"
+        },
+        {
+          "id": "lost-found-studio-2",
+          "halls": [
+            "V"
+          ],
+          "title": "VOTE FOR LIFE｜鳥類動畫",
+          "alt": "鳥類肖像在畫面中央依序切換，最後排在橙色的投票記號兩側。",
+          "caption": "鳥類肖像依序出現，最後並列於「VOTE FOR LIFE」海報。",
+          "url": "/media/library/lost-found-studio/2.webp?v=696ae5ead61e9117",
+          "source": "https://www.threads.com/@lost.found_studio/post/DgP2KVNGIA1",
+          "videoUrl": "/media/library/lost-found-studio/2.mp4?v=c8e4565582b02a69"
+        }
+      ],
+      "logo": {
+        "url": "/media/library/lost-found-studio/logo.webp?v=c834b587eb77e572",
+        "source": "https://www.threads.com/@lost.found_studio",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-27"
+      }
+    },
+    {
+      "id": "mocomaru-art",
+      "name": "YuRin",
+      "description": "台灣人🇹🇼插畫、繪畫相關接案\n住過日本五年但日文忘得差不多😍\n🦛不定期發廢文廢圖❤️\n可能快要餓死，努力增粉中",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@mocomaru_art",
+        "ig": "",
+        "web": ""
+      },
+      "productImages": [
+        {
+          "id": "mocomaru-art-1",
+          "halls": [
+            "V"
+          ],
+          "title": "1128 回家投票",
+          "alt": "一隻小倉鼠抱著投票章坐在選票上方，背景是黑橙配色的「1128 回家投票」。",
+          "caption": "1128 回家投票",
+          "url": "/media/library/mocomaru-art/1.webp?v=3c0b669bd226cd8c",
+          "source": "https://www.threads.com/@mocomaru_art/post/DgP6gweEtFq"
+        }
+      ],
+      "logo": {
+        "url": "/media/library/mocomaru-art/logo.webp?v=316b6bea51803484",
+        "source": "https://www.threads.com/@mocomaru_art",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-27"
+      }
+    },
+    {
+      "id": "nanashi-bear",
+      "name": "Nanashi.Bear",
+      "description": "畫喜歡的事物療癒自己",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@nanashi.bear",
+        "ig": "",
+        "web": ""
+      },
+      "productImages": [
+        {
+          "id": "nanashi-bear-1",
+          "halls": [
+            "V"
+          ],
+          "title": "1128 來去投票｜三隻貓",
+          "alt": "三隻貓並排，其中一隻高舉身分證圖卡，底下寫著「1128 來去投票」。",
+          "caption": "11.28 來去投票",
+          "url": "/media/library/nanashi-bear/1.webp?v=3768b1779a29bb0d",
+          "source": "https://www.threads.com/@nanashi.bear/post/DgP2Jc_jULr"
+        },
+        {
+          "id": "nanashi-bear-2",
+          "halls": [
+            "V"
+          ],
+          "title": "1128 來去投票｜黑熊",
+          "alt": "胸前帶有白色月牙的黑熊手持投票記號，下方寫著「1128 來去投票」。",
+          "caption": "11.28 來去投票",
+          "url": "/media/library/nanashi-bear/2.webp?v=cbc2349bc3b0003b",
+          "source": "https://www.threads.com/@nanashi.bear/post/DgP2Jc_jULr"
+        },
+        {
+          "id": "nanashi-bear-3",
+          "halls": [
+            "V"
+          ],
+          "title": "1128 來去投票｜黑貓",
+          "alt": "黑貓手捧投票記號坐在米色背景前，下方寫著「1128 來去投票」。",
+          "caption": "11.28 來去投票",
+          "url": "/media/library/nanashi-bear/3.webp?v=d199e95f3cd5ce26",
+          "source": "https://www.threads.com/@nanashi.bear/post/DgP2Jc_jULr"
+        }
+      ],
+      "logo": {
+        "url": "/media/library/nanashi-bear/logo.webp?v=dff38923bda97f47",
+        "source": "https://www.threads.com/@nanashi.bear",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-27"
+      }
+    },
+    {
+      "id": "yellowbananastar",
+      "name": "黃蕉星",
+      "description": "✦ 常被認成香蕉的星星 ✧\n✍🏻 畫畫、寫字、手作、手帳⋯什麼都來一點\n這邊比較少更新\n⚠️嚴禁拿我的圖去餵AI⚠️",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@yellowbananastar",
+        "ig": "",
+        "web": ""
+      },
+      "productImages": [
+        {
+          "id": "yellowbananastar-1",
+          "halls": [
+            "V"
+          ],
+          "title": "VOTE FOR OUR HOME",
+          "alt": "彩虹色的筆觸圍著台灣地圖，兩旁是有表情的投票章，左下寫著「2026 11.28 回家投票」。",
+          "caption": "VOTE FOR OUR HOME",
+          "url": "/media/library/yellowbananastar/1.webp?v=c004dc1a4ac313e6",
+          "source": "https://www.threads.com/@yellowbananastar/post/DgP2Yydo88D"
+        }
+      ],
+      "logo": {
+        "url": "/media/library/yellowbananastar/logo.webp?v=7af7168e716a3f6e",
+        "source": "https://www.threads.com/@yellowbananastar",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-27"
+      }
+    },
+    {
+      "id": "oswv1008",
+      "name": "🛸 太空電波波波 OUTER SPACE WAVEE 🛸",
+      "description": "Henry Hou \n自由接案 | 角色設計講師 | Freelance illustrator, Graphic & Motion Designer | Music  \n🛸 Taipei | Taiwan",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@oswv1008",
+        "ig": "",
+        "web": ""
+      },
+      "productImages": [
+        {
+          "id": "oswv1008-1",
+          "halls": [
+            "V"
+          ],
+          "title": "橘貓與投票章",
+          "alt": "白底上，橘貓低頭看著一枚投票章，周圍以橘綠色的「VOTE」字樣作框。",
+          "caption": "希望大家都成為投票的人，沒有人是局外人。",
+          "url": "/media/library/oswv1008/1.webp?v=d320fda140e6b3c4",
+          "source": "https://www.threads.com/@oswv1008/post/DgM-9ZJko5N"
+        },
+        {
+          "id": "oswv1008-2",
+          "halls": [
+            "V"
+          ],
+          "title": "11/28 回家投票｜長幅版",
+          "alt": "橙綠漸層的長幅中，格紋向中央的發光圖形延伸，兩側重複印著「VOTE」。",
+          "caption": "11/28 回家投票",
+          "url": "/media/library/oswv1008/2.webp?v=7a8e889051ab66d2",
+          "source": "https://www.threads.com/@oswv1008/post/DgM-9ZJko5N"
+        },
+        {
+          "id": "oswv1008-3",
+          "halls": [
+            "V"
+          ],
+          "title": "11/28 回家投票｜海報版",
+          "alt": "直式海報用橙綠漸層與透視格紋構圖，中間印有「11/28 回家投票」。",
+          "caption": "11/28 回家投票",
+          "url": "/media/library/oswv1008/3.webp?v=186018118649f399",
+          "source": "https://www.threads.com/@oswv1008/post/DgM-9ZJko5N"
+        }
+      ],
+      "logo": {
+        "url": "/media/library/oswv1008/logo.webp?v=3999be0d4e920d1d",
+        "source": "https://www.threads.com/@oswv1008",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-27"
+      }
+    },
+    {
+      "id": "jujubecandraw",
+      "name": "青澀棗子",
+      "description": "棗安你好嗎👋\n追蹤感謝🙏\n畫圖在練💪✍️\n期待再相逢🫶",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@jujubecandraw",
+        "ig": "",
+        "web": ""
+      },
+      "productImages": [
+        {
+          "id": "jujubecandraw-1",
+          "halls": [
+            "V"
+          ],
+          "title": "1128 回家投票",
+          "alt": "橙底插畫裡的白色毛茸茸角色舉起投票記號，綠色立體字寫著「1128 回家投票」。",
+          "caption": "出門投票🗳️",
+          "url": "/media/library/jujubecandraw/1.webp?v=f00571b6c58ffcb4",
+          "source": "https://www.threads.com/@jujubecandraw/post/DgPqyPRk57A"
+        }
+      ],
+      "logo": {
+        "url": "/media/library/jujubecandraw/logo.webp?v=1be5c51cc7c55995",
+        "source": "https://www.threads.com/@jujubecandraw",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-27"
+      }
+    },
+    {
+      "id": "muyuco-studio",
+      "name": "木魚子",
+      "description": "🇹🇼用插畫 | 設計 說些小故事🖋️🍳",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@muyuco_studio",
+        "ig": "",
+        "web": ""
+      },
+      "productImages": [
+        {
+          "id": "muyuco-studio-1",
+          "halls": [
+            "V"
+          ],
+          "title": "11.28 回家投票",
+          "alt": "粉色和黃色角色分站在投票章兩側，底部印有「回家投票」與台語羅馬字。",
+          "caption": "Vote for the life you want.",
+          "url": "/media/library/muyuco-studio/1.webp?v=f3abdd40d3e824b7",
+          "source": "https://www.threads.com/@muyuco_studio/post/DgP08FFGmNj"
+        },
+        {
+          "id": "muyuco-studio-2",
+          "halls": [
+            "V"
+          ],
+          "title": "伊是候選人，咱是好選民",
+          "alt": "紅色投票記號下是三行黑色台文與紅色羅馬字：「伊是候選人／咱是好選民／莫做漚酸民」。",
+          "caption": "伊是候選人，咱是好選民，莫做漚酸民。",
+          "url": "/media/library/muyuco-studio/2.webp?v=1304f5789495fcd4",
+          "source": "https://www.threads.com/@muyuco_studio/post/DgP08FFGmNj"
+        }
+      ],
+      "logo": {
+        "url": "/media/library/muyuco-studio/logo.webp?v=784d8a364f90cd83",
+        "source": "https://www.threads.com/@muyuco_studio",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-27"
+      }
+    },
+    {
+      "id": "dirtysnakeko",
+      "name": "穢蛇子",
+      "description": "畫畫的 ！八美肉！男的！離群症患者！",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@dirtysnakeko",
+        "ig": "",
+        "web": ""
+      },
+      "productImages": [
+        {
+          "id": "dirtysnakeko-1",
+          "halls": [
+            "V"
+          ],
+          "title": "舉起圈選工具",
+          "alt": "綁著長辮子的角色雙腳騰空，把一支巨大的圈選工具高舉過頭頂。",
+          "caption": "綁著長辮子的角色雙腳騰空，把一支巨大的圈選工具高舉過頭頂。",
+          "url": "/media/library/dirtysnakeko/1.webp?v=a926965a0101190b",
+          "source": "https://www.threads.com/@dirtysnakeko/post/DgPqTA8EmOs"
+        }
+      ],
+      "logo": {
+        "url": "/media/library/dirtysnakeko/logo.webp?v=0e75f4a9eb069b32",
+        "source": "https://www.threads.com/@dirtysnakeko",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-27"
+      }
+    },
+    {
+      "id": "myaowl",
+      "name": "MYAOWL喵喔 - 壞喵與毛喵",
+      "description": "MYAOWL喵喔",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@myaowl",
+        "ig": "",
+        "web": ""
+      },
+      "productImages": [
+        {
+          "id": "myaowl-1",
+          "halls": [
+            "V"
+          ],
+          "title": "11.28 回家投票",
+          "alt": "壞喵和毛喵站在綠色臺灣輪廓前，對話框寫著「11.28」與「回家投票」，下方是「VOTE FOR TAIWAN」。",
+          "caption": "壞喵和毛喵站在綠色臺灣輪廓前，對話框寫著「11.28」與「回家投票」，下方是「VOTE FOR TAIWAN」。",
+          "url": "/media/library/myaowl/1.webp?v=e897d97ce61a10df",
+          "source": "https://www.threads.com/@myaowl/post/DgP-n42GD-j"
+        }
+      ],
+      "logo": {
+        "url": "/media/library/myaowl/logo.webp?v=5344ff9d35ebd314",
+        "source": "https://www.threads.com/@myaowl",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-27"
+      }
+    },
+    {
+      "id": "rain-or-shine2017",
+      "name": "雨立今 Rain or Shine",
+      "description": "小雨(Rainy🌧)\n獅子花花更新中🌼\n粉絲名是小雨滴💧🫶\n插畫 | 繪本 | 貼圖 | 似顏繪 | 客製",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@rain_or_shine2017",
+        "ig": "",
+        "web": ""
+      },
+      "productImages": [
+        {
+          "id": "rain-or-shine2017-1",
+          "halls": [
+            "V"
+          ],
+          "title": "獅子花花｜回家投票",
+          "alt": "獅子花花抱著圈選工具，蓋出紅色的圈選記號，淺綠背景浮現「回家投票」。",
+          "caption": "獅子花花抱著圈選工具，蓋出紅色的圈選記號，淺綠背景浮現「回家投票」。",
+          "url": "/media/library/rain-or-shine2017/1.webp?v=37067e552d959441",
+          "source": "https://www.threads.com/@rain_or_shine2017/post/DgP3KK5jSGB",
+          "videoUrl": "/media/library/rain-or-shine2017/1.mp4?v=5e8377cc3407912c"
+        }
+      ],
+      "logo": {
+        "url": "/media/library/rain-or-shine2017/logo.webp?v=bd4c39bdb99ffe0b",
+        "source": "https://www.threads.com/@rain_or_shine2017",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-27"
+      }
+    },
+    {
+      "id": "astraseer",
+      "name": "Astraseer 超吉星",
+      "description": "",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@astraseer",
+        "ig": "",
+        "web": ""
+      },
+      "productImages": [
+        {
+          "id": "astraseer-1",
+          "halls": [
+            "V"
+          ],
+          "title": "回家投票｜白底海豚",
+          "alt": "小角色騎著藍綠色海豚躍起，上方是「回家投票」四個字，白色背景點綴著星星。",
+          "caption": "小角色騎著藍綠色海豚躍起，上方是「回家投票」四個字，白色背景點綴著星星。",
+          "url": "/media/library/astraseer/1.webp?v=dfb66c5e69b243a8",
+          "source": "https://www.threads.com/@astraseer/post/DgPwt3ik4V1"
+        },
+        {
+          "id": "astraseer-2",
+          "halls": [
+            "V"
+          ],
+          "title": "回家投票｜綠底海豚",
+          "alt": "淡綠背景上，小角色騎著粉紅色海豚躍起，藍色線條勾出星星和「回家投票」字樣。",
+          "caption": "淡綠背景上，小角色騎著粉紅色海豚躍起，藍色線條勾出星星和「回家投票」字樣。",
+          "url": "/media/library/astraseer/2.webp?v=22a4ea1125d89435",
+          "source": "https://www.threads.com/@astraseer/post/DgPwt3ik4V1"
+        }
+      ],
+      "logo": {
+        "url": "/media/library/astraseer/logo.webp?v=4a40d214e60d98b7",
+        "source": "https://www.threads.com/@astraseer",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-27"
+      }
+    },
+    {
+      "id": "mogi7586",
+      "name": "Marc",
+      "description": "3D遊戲美術創作",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@mogi7586",
+        "ig": "",
+        "web": ""
+      },
+      "productImages": [
+        {
+          "id": "mogi7586-1",
+          "halls": [
+            "V"
+          ],
+          "title": "記得去投票喔｜洋流號",
+          "alt": "黑色背景上，橘色的立體船隻掛著彩虹帆，船尾的發光裝置與甲板上的角色隨動畫移動。",
+          "caption": "黑色背景上，橘色的立體船隻掛著彩虹帆，船尾的發光裝置與甲板上的角色隨動畫移動。",
+          "url": "/media/library/mogi7586/1.webp?v=84f2a32d935b92bb",
+          "source": "https://www.threads.com/@mogi7586/post/DgPyVc5jVWL",
+          "videoUrl": "/media/library/mogi7586/1.mp4?v=abb7338757ec5ff2"
+        }
+      ],
+      "logo": {
+        "url": "/media/library/mogi7586/logo.webp?v=c4dc16fe6d4737e9",
+        "source": "https://www.threads.com/@mogi7586",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-27"
+      }
+    },
+    {
+      "id": "ciaoillustration",
+      "name": "Ciao illustration",
+      "description": "Illustrator 🇹🇼",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@ciaoillustration",
+        "ig": "",
+        "web": ""
+      },
+      "productImages": [
+        {
+          "id": "ciaoillustration-1",
+          "halls": [
+            "V"
+          ],
+          "title": "去投票，就會贏",
+          "alt": "橘線畫出的長嘴角色抱著綠色圈選工具，身旁寫著「去投票，就會贏」。",
+          "caption": "橘線畫出的長嘴角色抱著綠色圈選工具，身旁寫著「去投票，就會贏」。",
+          "url": "/media/library/ciaoillustration/1.webp?v=ea31502155115543",
+          "source": "https://www.threads.com/@ciaoillustration/post/DgPuLTID6xW"
+        }
+      ],
+      "logo": {
+        "url": "/media/library/ciaoillustration/logo.webp?v=1bc14fbe069a784b",
+        "source": "https://www.threads.com/@ciaoillustration",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-27"
+      }
+    },
+    {
+      "id": "lengwaguo",
+      "name": "冷蛙鍋",
+      "description": "同人社團冷水青蛙鍋，這邊就用來發發廢文跟雜圖。\n有時候看起來像在罵人的內容，很大可能是提醒自己用的\n#同人 #繪圖",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@lengwaguo",
+        "ig": "",
+        "web": ""
+      },
+      "productImages": [
+        {
+          "id": "lengwaguo-1",
+          "halls": [
+            "V"
+          ],
+          "title": "11 月 28 日你幾點要出門投票？",
+          "alt": "綁著馬尾、穿水手領上衣的角色大步向前跑，旁邊畫著紅色圈選記號。",
+          "caption": "綁著馬尾、穿水手領上衣的角色大步向前跑，旁邊畫著紅色圈選記號。",
+          "url": "/media/library/lengwaguo/1.webp?v=39b4d4b03058f59b",
+          "source": "https://www.threads.com/@lengwaguo/post/DgPnZNFnwqZ"
+        }
+      ],
+      "logo": {
+        "url": "/media/library/lengwaguo/logo.webp?v=35701328a9b535c5",
+        "source": "https://www.threads.com/@lengwaguo",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-27"
+      }
+    },
+    {
+      "id": "kwandraws",
+      "name": "Kwan Draws | 官官",
+      "description": "全職插畫設計師 illustrator\n🎐 illustrator & Designer",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@kwandraws_",
+        "ig": "",
+        "web": ""
+      },
+      "productImages": [
+        {
+          "id": "kwandraws-1",
+          "halls": [
+            "V"
+          ],
+          "title": "Go vote!",
+          "alt": "粉彩色光暈中，一支圈選工具斜躺在地面，橘紅色圈選記號朝向畫面前方。",
+          "caption": "粉彩色光暈中，一支圈選工具斜躺在地面，橘紅色圈選記號朝向畫面前方。",
+          "url": "/media/library/kwandraws/1.webp?v=447547dfa95bfc97",
+          "source": "https://www.threads.com/@kwandraws_/post/DgP3W57k0sv"
+        }
+      ],
+      "logo": {
+        "url": "/media/library/kwandraws/logo.webp?v=a23276d43a426e70",
+        "source": "https://www.threads.com/@kwandraws_",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-27"
+      }
+    },
+    {
+      "id": "adobe0630",
+      "name": "Adobe大師's 哲學貓生",
+      "description": "台派/ ENFP/ 噗哩\n主🖤副💙❤️CP🖤💙、🖤❤️\n漫畫在FB和IG，這邊只有追星政治和BL\n✨出版作品：《哲學貓生開示啦》",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@adobe0630",
+        "ig": "",
+        "web": ""
+      },
+      "productImages": [
+        {
+          "id": "adobe0630-1",
+          "halls": [
+            "V"
+          ],
+          "title": "11/28 出門投票",
+          "alt": "兩隻貓各抱一支圈選工具站在綠色臺灣上，手寫字寫著「11/28 出門投票」。",
+          "caption": "兩隻貓各抱一支圈選工具站在綠色臺灣上，手寫字寫著「11/28 出門投票」。",
+          "url": "/media/library/adobe0630/1.webp?v=7a046d6db4e85321",
+          "source": "https://www.threads.com/@adobe0630/post/DgP9OLNGrGx"
+        }
+      ],
+      "logo": {
+        "url": "/media/library/adobe0630/logo.webp?v=35aca975b05dde36",
+        "source": "https://www.threads.com/@adobe0630",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-27"
+      }
+    },
+    {
+      "id": "yirgacrow",
+      "name": "Yirga 耶加",
+      "description": "TW | US | Illustrator ｜イラストレーター\n中文｜ENG｜簡単な日本語｜AI学習、無断転載🚫\n「才能は開花させるもの、センスは磨くもの」",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@yirgacrow",
+        "ig": "",
+        "web": ""
+      },
+      "productImages": [
+        {
+          "id": "yirgacrow-1",
+          "halls": [
+            "V"
+          ],
+          "title": "投給你想要的生活",
+          "alt": "少女抬起手，彩色飄帶從她身邊飛過。上方寫著「投給你想要的生活」，日期數字中央印著紅色圈選記號。",
+          "caption": "少女抬起手，彩色飄帶從她身邊飛過。上方寫著「投給你想要的生活」，日期數字中央印著紅色圈選記號。",
+          "url": "/media/library/yirgacrow/1.webp?v=59ef987b75ba6a03",
+          "source": "https://www.threads.com/@yirgacrow/post/DgP-RuppX68"
+        }
+      ],
+      "logo": {
+        "url": "/media/library/yirgacrow/logo.webp?v=c0dda0301f8ac4a5",
+        "source": "https://www.threads.com/@yirgacrow",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-27"
+      }
+    },
+    {
+      "id": "0715deku",
+      "name": "三字晶",
+      "description": "字晶✌️\n圖放這不會被裁好耶\n比較常在FB\n無情分享bot\n再說一次夏油傑是對的🐒",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@0715deku",
+        "ig": "",
+        "web": ""
+      },
+      "productImages": [
+        {
+          "id": "0715deku-1",
+          "halls": [
+            "V"
+          ],
+          "title": "1128 回家投票",
+          "alt": "橘黃底上，一群圓滾滾的角色舉起印著圈選記號的選票，下方寫著「1128 回家投票」和「GO VOTE TOGETHER」。",
+          "caption": "橘黃底上，一群圓滾滾的角色舉起印著圈選記號的選票，下方寫著「1128 回家投票」和「GO VOTE TOGETHER」。",
+          "url": "/media/library/0715deku/1.webp?v=ef8691f88112aab1",
+          "source": "https://www.threads.com/@0715deku/post/DgP1kOxoxaI"
+        }
+      ],
+      "logo": {
+        "url": "/media/library/0715deku/logo.webp?v=afb9a07c4e3ed317",
+        "source": "https://www.threads.com/@0715deku",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-27"
+      }
+    },
+    {
+      "id": "loo-fish-5u",
+      "name": "Loo.fish 呆呆啵啵魚燒",
+      "description": "魚燒，畫圖很慢的同人女。\n♥ 有機會出現二創塗鴉 / 閱讀觀影心得\n♥ 咒術（五悠）／JOJO……\n＊請勿無斷轉載，請勿未經授權將我的作品做為ai生成素材\n＊Don‘t use, repost, edit my art without permission.",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@loo.fish.5u",
+        "ig": "",
+        "web": ""
+      },
+      "productImages": [
+        {
+          "id": "loo-fish-5u-1",
+          "halls": [
+            "V"
+          ],
+          "title": "投票返鄉，開啟新漳",
+          "alt": "兩個水滴角色陪著印有「MADE IN YILAN」的小車向前跑，背景是綠色山巒與「投票返鄉」「開啟新漳」字樣。",
+          "caption": "兩個水滴角色陪著印有「MADE IN YILAN」的小車向前跑，背景是綠色山巒與「投票返鄉」「開啟新漳」字樣。",
+          "url": "/media/library/loo-fish-5u/1.webp?v=2203322f3612c51c",
+          "source": "https://www.threads.com/@loo.fish.5u/post/DgPPTSZmLpx",
+          "referenceUrl": "https://www.threads.com/@loo.fish.5u/post/DgPqSs3mFR7"
+        }
+      ],
+      "logo": {
+        "url": "/media/library/loo-fish-5u/logo.webp?v=92bde60467528387",
+        "source": "https://www.threads.com/@loo.fish.5u",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-27"
+      }
+    },
+    {
+      "id": "aznblock",
+      "name": "aZn block",
+      "description": "阿正塊｜給大學生的綜合拼盤",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@aznblock",
+        "ig": "",
+        "web": ""
+      },
+      "productImages": [
+        {
+          "id": "aznblock-1",
+          "halls": [
+            "V"
+          ],
+          "title": "Vote for the Life You Love",
+          "alt": "黑底上的英文字排成「VOTE FOR THE LIFE YOU LOVE 11.28」。紅色圓點和圈選記號在字行間跳動。",
+          "caption": "黑底上的英文字排成「VOTE FOR THE LIFE YOU LOVE 11.28」。紅色圓點和圈選記號在字行間跳動。",
+          "url": "/media/library/aznblock/1.webp?v=e42002173c96adc6",
+          "source": "https://www.threads.com/@aznblock/post/DgP3uyEEh8H",
+          "videoUrl": "/media/library/aznblock/1.mp4?v=74bbe3141bdde625"
+        }
+      ],
+      "logo": {
+        "url": "/media/library/aznblock/logo.webp?v=74feb9b07c0fd323",
+        "source": "https://www.threads.com/@aznblock",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-27"
+      }
+    },
+    {
+      "id": "huengua",
+      "name": "≋ 昏呱（HuenGua) ≋",
+      "description": "啊～好難 太難了",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@huengua",
+        "ig": "",
+        "web": ""
+      },
+      "productImages": [
+        {
+          "id": "huengua-1",
+          "halls": [
+            "V"
+          ],
+          "title": "走啦！回家投票",
+          "alt": "黑白兩隻鳥牽著手出門。下方寫著「出門一趟 選自己接下來幾年想要的生活 怎麼想都划算」。",
+          "caption": "黑白兩隻鳥牽著手出門。下方寫著「出門一趟 選自己接下來幾年想要的生活 怎麼想都划算」。",
+          "url": "/media/library/huengua/1.webp?v=ea581e340379f181",
+          "source": "https://www.threads.com/@huengua/post/DgP4zAHkjzD"
+        }
+      ],
+      "logo": {
+        "url": "/media/library/huengua/logo.webp?v=c79324127005d2d9",
+        "source": "https://www.threads.com/@huengua",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-27"
+      }
+    },
+    {
+      "id": "zmei",
+      "name": "哈囉兔兔",
+      "description": "草稿、完稿、先畫出來再說！\n在網路上比較活潑的人～♪( ´θ｀)ノ\n＼哈囉兔兔／✨\n#哈囉兔兔 #hellorabbits #ハロウサギ\n‪#LINEスタンプ #linesticker\n#💙❤️💚💛💜",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@zmei",
+        "ig": "",
+        "web": ""
+      },
+      "productImages": [
+        {
+          "id": "zmei-1",
+          "halls": [
+            "V"
+          ],
+          "title": "返家投票｜彩虹版",
+          "alt": "彩虹直條背景上，揹著棕色背包的哈囉兔兔舉起雙手往前走，頭頂寫著「返家投票」與「11・28」。",
+          "caption": "彩虹直條背景上，揹著棕色背包的哈囉兔兔舉起雙手往前走，頭頂寫著「返家投票」與「11・28」。",
+          "url": "/media/library/zmei/1.webp?v=63c0fb4359af2378",
+          "source": "https://www.threads.com/@zmei/post/DgP1CQUnyNE"
+        },
+        {
+          "id": "zmei-2",
+          "halls": [
+            "V"
+          ],
+          "title": "返家投票｜黃底版",
+          "alt": "黃色背景上，揹著棕色背包的哈囉兔兔舉起雙手往前走，頭頂寫著「返家投票」與「11・28」。",
+          "caption": "黃色背景上，揹著棕色背包的哈囉兔兔舉起雙手往前走，頭頂寫著「返家投票」與「11・28」。",
+          "url": "/media/library/zmei/2.webp?v=562a5182a9fd728f",
+          "source": "https://www.threads.com/@zmei/post/DgP1CQUnyNE"
+        },
+        {
+          "id": "zmei-3",
+          "halls": [
+            "V"
+          ],
+          "title": "返家投票｜粉紅版",
+          "alt": "粉紅與白色直條背景上，揹著棕色背包的哈囉兔兔舉起雙手往前走，頭頂寫著「返家投票」與「11・28」。",
+          "caption": "粉紅與白色直條背景上，揹著棕色背包的哈囉兔兔舉起雙手往前走，頭頂寫著「返家投票」與「11・28」。",
+          "url": "/media/library/zmei/3.webp?v=c8dee279d0598091",
+          "source": "https://www.threads.com/@zmei/post/DgP1CQUnyNE"
+        },
+        {
+          "id": "zmei-4",
+          "halls": [
+            "V"
+          ],
+          "title": "返家投票｜橘色版",
+          "alt": "橘色與白色直條背景上，揹著棕色背包的哈囉兔兔舉起雙手往前走，頭頂寫著「返家投票」與「11・28」。",
+          "caption": "橘色與白色直條背景上，揹著棕色背包的哈囉兔兔舉起雙手往前走，頭頂寫著「返家投票」與「11・28」。",
+          "url": "/media/library/zmei/4.webp?v=c07979d50220bb6f",
+          "source": "https://www.threads.com/@zmei/post/DgP1CQUnyNE"
+        },
+        {
+          "id": "zmei-5",
+          "halls": [
+            "V"
+          ],
+          "title": "返家投票｜薄荷綠版",
+          "alt": "薄荷綠與白色直條背景上，揹著棕色背包的哈囉兔兔舉起雙手往前走，頭頂寫著「返家投票」與「11・28」。",
+          "caption": "薄荷綠與白色直條背景上，揹著棕色背包的哈囉兔兔舉起雙手往前走，頭頂寫著「返家投票」與「11・28」。",
+          "url": "/media/library/zmei/5.webp?v=c1a271b47acdbc06",
+          "source": "https://www.threads.com/@zmei/post/DgP1CQUnyNE"
+        }
+      ],
+      "logo": {
+        "url": "/media/library/zmei/logo.webp?v=2621f8c16d6f55e4",
+        "source": "https://www.threads.com/@zmei",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-27"
+      }
+    },
+    {
+      "id": "guagua-illustrator",
+      "name": "Teddy & Fluffy｜泰迪與綿綿狗",
+      "description": "✿ 飼養員：Gua",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@guagua_illustrator",
+        "ig": "",
+        "web": ""
+      },
+      "productImages": [
+        {
+          "id": "guagua-illustrator-1",
+          "halls": [
+            "V"
+          ],
+          "title": "Go Vote",
+          "alt": "小狗坐在半空中的圈票章上，下方草地散落著黃色星星、選票和圈選印記，深藍色天空裡寫著「Go Vote」。",
+          "caption": "小狗坐在半空中的圈票章上，下方草地散落著黃色星星、選票和圈選印記，深藍色天空裡寫著「Go Vote」。",
+          "url": "/media/library/guagua-illustrator/1.webp?v=e85d5727ace3829f",
+          "source": "https://www.threads.com/@guagua_illustrator/post/DgP39UkIIWH/media"
+        }
+      ],
+      "logo": {
+        "url": "/media/library/guagua-illustrator/logo.webp?v=776e2ef332c44eb3",
+        "source": "https://www.threads.com/@guagua_illustrator",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-27"
+      }
+    },
+    {
+      "id": "pannkaka1515",
+      "name": "イチゴパンケーキ🥞🍓🍴",
+      "description": "我是圓圓，喜歡畫畫、軟綿綿狗狗、甜食、高雄歷史、老房子、歷史時代向創作。來這裡主要是想看大家的插畫、創作心得與討論，偶爾貼貼作品跟塗鴉🐩🐩🐩",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@pannkaka1515",
+        "ig": "",
+        "web": ""
+      },
+      "productImages": [
+        {
+          "id": "pannkaka1515-1",
+          "halls": [
+            "V"
+          ],
+          "title": "1128 一起回家投票吧",
+          "alt": "粉紫色頭髮的女孩拿著圈票章、比出手勢，身旁環繞小花與藍色小鳥。畫面寫著「1128 一起回家投票吧」與「高雄需要你」。",
+          "caption": "粉紫色頭髮的女孩拿著圈票章、比出手勢，身旁環繞小花與藍色小鳥。畫面寫著「1128 一起回家投票吧」與「高雄需要你」。",
+          "url": "/media/library/pannkaka1515/1.webp?v=422df14f393ebf76",
+          "source": "https://www.threads.com/@pannkaka1515/post/DgP7GeAk0l2/media"
+        }
+      ],
+      "logo": {
+        "url": "/media/library/pannkaka1515/logo.webp?v=441a5a10a676a162",
+        "source": "https://www.threads.com/@pannkaka1515",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-27"
+      }
+    },
+    {
+      "id": "wagapokega",
+      "name": "☆*:｡.o( WaGaGa )o ｡:*☆handpoke",
+      "description": "Waga aka咘老師。\n沒養狗但整天畫同一隻狗。",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@wagapokega",
+        "ig": "",
+        "web": ""
+      },
+      "productImages": [
+        {
+          "id": "wagapokega-1",
+          "halls": [
+            "V"
+          ],
+          "title": "出門投票",
+          "alt": "橘色小狗伸出長長的手臂，把印有圈選記號的選票放進票匭。上方寫著「出門投票」。",
+          "caption": "橘色小狗伸出長長的手臂，把印有圈選記號的選票放進票匭。上方寫著「出門投票」。",
+          "url": "/media/library/wagapokega/1.webp?v=ebdb8b9b15d12608",
+          "source": "https://www.threads.com/@wagapokega/post/DgQBPiSkvSc/media"
+        }
+      ],
+      "logo": {
+        "url": "/media/library/wagapokega/logo.webp?v=00dc054988eadb23",
+        "source": "https://www.threads.com/@wagapokega",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-27"
+      }
+    },
+    {
+      "id": "chiaonabear-c",
+      "name": "焦拿小熊",
+      "description": "/\n這裡有焦糖拿鐵口味的小熊們！🐻🐼✨",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@chiaonabear.c",
+        "ig": "",
+        "web": ""
+      },
+      "productImages": [
+        {
+          "id": "chiaonabear-c-1",
+          "halls": [
+            "V"
+          ],
+          "title": "Go Vote 11.28",
+          "alt": "暖米色海報上，棕色小熊和黑白熊貓並肩站在「Go Vote」旁，小熊頭頂寫著「11.28」。",
+          "caption": "暖米色海報上，棕色小熊和黑白熊貓並肩站在「Go Vote」旁，小熊頭頂寫著「11.28」。",
+          "url": "/media/library/chiaonabear-c/1.webp?v=0aa711dd57444947",
+          "source": "https://www.threads.com/@chiaonabear.c/post/DgP-5sHHTdU/media"
+        }
+      ],
+      "logo": {
+        "url": "/media/library/chiaonabear-c/logo.webp?v=cc2c3838fc25668d",
+        "source": "https://www.threads.com/@chiaonabear.c",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-27"
+      }
+    },
+    {
+      "id": "maaoo-u-u",
+      "name": "maao(　ᐛ)毛²",
+      "description": "毛毛｜插畫動物召喚師 🪄🐾 \n🔅🔅🔅🔅🔅🔅🔅🔅🔅🔅🔅\n  緩慢爬行｜線上賣場籌備中",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@maaoo.u._.u",
+        "ig": "",
+        "web": ""
+      },
+      "productImages": [
+        {
+          "id": "maaoo-u-u-1",
+          "halls": [
+            "V"
+          ],
+          "title": "11/28 vote day",
+          "alt": "藍綠色線條畫出一隻張開手臂的角色，兩隻手上各有一張笑臉。上方寫著「11/28 vote day」。",
+          "caption": "藍綠色線條畫出一隻張開手臂的角色，兩隻手上各有一張笑臉。上方寫著「11/28 vote day」。",
+          "url": "/media/library/maaoo-u-u/1.webp?v=46aabcb5055ec511",
+          "source": "https://www.threads.com/@maaoo.u._.u/post/DgPt_ujFAXD/media"
+        }
+      ],
+      "logo": {
+        "url": "/media/library/maaoo-u-u/logo.webp?v=89d9e6e3306f9209",
+        "source": "https://www.threads.com/@maaoo.u._.u",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-27"
+      }
+    },
+    {
+      "id": "pocketshiba-game",
+      "name": "口袋柴犬 - 超慢跑柴柴養成遊戲iOS",
+      "description": "不停製作著超慢跑APP",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@pocketshiba_game",
+        "ig": "",
+        "web": ""
+      },
+      "productImages": [
+        {
+          "id": "pocketshiba-game-1",
+          "halls": [
+            "V"
+          ],
+          "title": "1128 出門投票（白天）",
+          "alt": "柴犬身上印著圈選記號，抬起前腳托著甜甜圈角色。身後是海面、船隻、棕櫚樹與燈塔。",
+          "caption": "柴犬身上印著圈選記號，抬起前腳托著甜甜圈角色。身後是海面、船隻、棕櫚樹與燈塔。",
+          "url": "/media/library/pocketshiba-game/1.webp?v=36a1fc3da210283b",
+          "source": "https://www.threads.com/@pocketshiba_game/post/DgPeOQfgZf0/media"
+        },
+        {
+          "id": "pocketshiba-game-2",
+          "halls": [
+            "V"
+          ],
+          "title": "1128 出門投票（星夜）",
+          "alt": "星空下的柴犬抬起前腳，四周伸出幾隻戴著彩色帽子的細長角色。畫面上方寫著「1128 出門投票」。",
+          "caption": "星空下的柴犬抬起前腳，四周伸出幾隻戴著彩色帽子的細長角色。畫面上方寫著「1128 出門投票」。",
+          "url": "/media/library/pocketshiba-game/2.webp?v=bdeea2566dac941d",
+          "source": "https://www.threads.com/@pocketshiba_game/post/DgPeOQfgZf0/media"
+        }
+      ],
+      "logo": {
+        "url": "/media/library/pocketshiba-game/logo.webp?v=3cd785b8e303ffdf",
+        "source": "https://www.threads.com/@pocketshiba_game",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-27"
+      }
+    },
+    {
+      "id": "maisonnuts",
+      "name": "堅果公寓-Tïnsy",
+      "description": "マンション ナッツ 🌰\n맨션 너트 🍭\n關於堅果公寓裡的朋友們，\n那些不太正常的，日常。",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@maisonnuts",
+        "ig": "",
+        "web": ""
+      },
+      "productImages": [
+        {
+          "id": "maisonnuts-1",
+          "halls": [
+            "V"
+          ],
+          "title": "Go Vote！回家投票",
+          "alt": "紫色天空中，粉紅兔子騎著圈票章前進，揮舞「回家投票！」的旗子。下方的「Go Vote」隨動畫變色。",
+          "caption": "紫色天空中，粉紅兔子騎著圈票章前進，揮舞「回家投票！」的旗子。下方的「Go Vote」隨動畫變色。",
+          "url": "/media/library/maisonnuts/1.webp?v=2f83d527ddcb360b",
+          "source": "https://www.threads.com/@maisonnuts/post/DgQAiHyEsre/media",
+          "videoUrl": "/media/library/maisonnuts/1.mp4?v=ae24136b28c44ac5"
+        }
+      ],
+      "logo": {
+        "url": "/media/library/maisonnuts/logo.webp?v=02a1880621175e9c",
+        "source": "https://www.threads.com/@maisonnuts",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-27"
+      }
+    },
+    {
+      "id": "blue-noteee",
+      "name": "Bluenote 諾特",
+      "description": "Note諾特♪\n✦ note一些Note",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@blue_noteee_",
+        "ig": "",
+        "web": ""
+      },
+      "productImages": [
+        {
+          "id": "blue-noteee-1",
+          "halls": [
+            "V"
+          ],
+          "title": "回家投票 11/28",
+          "alt": "藍色背景中，白色短髮角色雙手抱著粉紅色印記的大圈票章。上方以白色手寫字寫著「回家投票 11/28」。",
+          "caption": "藍色背景中，白色短髮角色雙手抱著粉紅色印記的大圈票章。上方以白色手寫字寫著「回家投票 11/28」。",
+          "url": "/media/library/blue-noteee/1.webp?v=757f3561ca8ed524",
+          "source": "https://www.threads.com/@blue_noteee_/post/DgPXCJygQCm/media",
+          "videoUrl": "/media/library/blue-noteee/1.mp4?v=3546f42380058d8a"
+        }
+      ],
+      "logo": {
+        "url": "/media/library/blue-noteee/logo.webp?v=742d331e771316be",
+        "source": "https://www.threads.com/@blue_noteee_",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-27"
+      }
+    },
+    {
+      "id": "yaguumii",
+      "name": "牙咕咪 Yaguumii",
+      "description": "我是一顆笨牙齒🦷",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@yaguumii",
+        "ig": "",
+        "web": ""
+      },
+      "productImages": [
+        {
+          "id": "yaguumii-1",
+          "halls": [
+            "V"
+          ],
+          "title": "回家投票，GO GO VOTE!",
+          "alt": "兩個角色合力扛著圈票章，頭上分別高舉證件和印章。下方寫著「回家投票」與「GO GO VOTE!」。",
+          "caption": "兩個角色合力扛著圈票章，頭上分別高舉證件和印章。下方寫著「回家投票」與「GO GO VOTE!」。",
+          "url": "/media/library/yaguumii/1.webp?v=13d004a98c5beea9",
+          "source": "https://www.threads.com/@yaguumii/post/DgPyzLME2nI/media"
+        }
+      ],
+      "logo": {
+        "url": "/media/library/yaguumii/logo.webp?v=ea58a8fc3da1bf77",
+        "source": "https://www.threads.com/@yaguumii",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-27"
+      }
+    },
+    {
+      "id": "caiyuqian47",
+      "name": "蔡宇謙",
+      "description": "喜愛寶可夢，什麼都畫",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@caiyuqian47",
+        "ig": "",
+        "web": ""
+      },
+      "productImages": [
+        {
+          "id": "caiyuqian47-1",
+          "halls": [
+            "V"
+          ],
+          "title": "11.28 回家投票",
+          "alt": "灰黑色角色肩上扛著巨大圈票章，腳邊的選票上蓋有紅色印記。上方紅黑字寫著「11.28 回家投票」。",
+          "caption": "灰黑色角色肩上扛著巨大圈票章，腳邊的選票上蓋有紅色印記。上方紅黑字寫著「11.28 回家投票」。",
+          "url": "/media/library/caiyuqian47/1.webp?v=53849cefb4d9501e",
+          "source": "https://www.threads.com/@caiyuqian47/post/DgPtLFfkyWO/media"
+        }
+      ],
+      "logo": {
+        "url": "/media/library/caiyuqian47/logo.webp?v=9c611506e098bed9",
+        "source": "https://www.threads.com/@caiyuqian47",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-27"
+      }
+    },
+    {
+      "id": "ar-cty",
+      "name": "庭_歿影",
+      "description": "我不知道這要幹嘛",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@ar_cty",
+        "ig": "",
+        "web": ""
+      },
+      "productImages": [
+        {
+          "id": "ar-cty-1",
+          "halls": [
+            "V"
+          ],
+          "title": "白犬與投票三寶",
+          "alt": "白狗繫著橘色領巾、嘴裡叼著圈票章，舉起兩隻前腳。背景畫有身分證、印章和通知單。",
+          "caption": "白狗繫著橘色領巾、嘴裡叼著圈票章，舉起兩隻前腳。背景畫有身分證、印章和通知單。",
+          "url": "/media/library/ar-cty/1.webp?v=b98805fd87b9d8ff",
+          "source": "https://www.threads.com/@ar_cty/post/DgPzXu3EwV_/media"
+        }
+      ],
+      "logo": {
+        "url": "/media/library/ar-cty/logo.webp?v=4038d09e4c8ea805",
+        "source": "https://www.threads.com/@ar_cty",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-27"
+      }
+    },
+    {
+      "id": "blau-j024",
+      "name": "Blau.J 不老杰 illustration",
+      "description": "",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@blau.j024",
+        "ig": "",
+        "web": ""
+      },
+      "productImages": [
+        {
+          "id": "blau-j024-1",
+          "halls": [
+            "V"
+          ],
+          "title": "把票投給想要的生活",
+          "alt": "六個人物舉起手裡的選票，橘綠色標題寫著「LET’S GO VOTE」和「把票投給想要的生活」。",
+          "caption": "六個人物舉起手裡的選票，橘綠色標題寫著「LET’S GO VOTE」和「把票投給想要的生活」。",
+          "url": "/media/library/blau-j024/1.webp?v=19a81a962ee337b7",
+          "source": "https://www.threads.com/@blau.j024/post/DgP6IiRmHIg/media"
+        }
+      ],
+      "logo": {
+        "url": "/media/library/blau-j024/logo.webp?v=6454b23723871d7f",
+        "source": "https://www.threads.com/@blau.j024",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-27"
+      }
+    },
+    {
+      "id": "xinying1115",
+      "name": "黃馨瑩",
+      "description": "",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@xinying1115",
+        "ig": "",
+        "web": ""
+      },
+      "productImages": [
+        {
+          "id": "xinying1115-1",
+          "halls": [
+            "V"
+          ],
+          "title": "返鄉",
+          "alt": "橘色列車、車輛和行走的人們穿過重疊的綠色群山。「返」和「鄉」兩個字穿插在山間。",
+          "caption": "橘色列車、車輛和行走的人們穿過重疊的綠色群山。「返」和「鄉」兩個字穿插在山間。",
+          "url": "/media/library/xinying1115/1.webp?v=12cdbcb544ac370f",
+          "source": "https://www.threads.com/@xinying1115/post/DgP13gOE_M6/media"
+        }
+      ],
+      "logo": {
+        "url": "/media/library/xinying1115/logo.webp?v=5039469b41b7dfa5",
+        "source": "https://www.threads.com/@xinying1115",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-27"
+      }
+    },
+    {
+      "id": "ivona-lan",
+      "name": "精神白羅斯人",
+      "description": "早安尼好，這裡是阿藍💙\n－\nTâi-uân to̍k-li̍p ⧎\n樂為世界人，台灣名譽馨",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@ivona_lan",
+        "ig": "",
+        "web": ""
+      },
+      "productImages": [
+        {
+          "id": "ivona-lan-1",
+          "halls": [
+            "V"
+          ],
+          "title": "11.28 回家投票",
+          "alt": "粉橘底色上寫著「11.28 回家投票」。下方兩位人物用手比出數字，旁邊標有新北市長、台北市長字樣與編號。",
+          "caption": "粉橘底色上寫著「11.28 回家投票」。下方兩位人物用手比出數字，旁邊標有新北市長、台北市長字樣與編號。",
+          "url": "/media/library/ivona-lan/1.webp?v=7db4907e3970518a",
+          "source": "https://www.threads.com/@ivona_lan/post/DgP6AFPkiNl/media"
+        }
+      ],
+      "logo": {
+        "url": "/media/library/ivona-lan/logo.webp?v=c9547584f7769a0c",
+        "source": "https://www.threads.com/@ivona_lan",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-27"
+      }
+    },
+    {
+      "id": "nrabbit-n2",
+      "name": "N兔 studio",
+      "description": "𝐍𝐢𝐜𝐞 𝐭𝐨 𝐦𝐞𝐞𝐭 𝐲𝐨𝐮很開心認識您.ᐟ‪.ᐟ\n一隻情緒敏感，戴著魔法眼罩的兔子娃娃🐰",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@nrabbit_n2",
+        "ig": "",
+        "web": ""
+      },
+      "productImages": [
+        {
+          "id": "nrabbit-n2-1",
+          "halls": [
+            "V"
+          ],
+          "title": "11/28 返鄉投票!!!",
+          "alt": "粉紅兔子戴著紅色眼罩，拿著證件與車票，背後有圈選記號，頭上寫著「11/28 返鄉投票!!!」。",
+          "caption": "粉紅兔子戴著紅色眼罩，拿著證件與車票，背後有圈選記號，頭上寫著「11/28 返鄉投票!!!」。",
+          "url": "/media/library/nrabbit-n2/1.webp?v=fe1e5638492f9c11",
+          "source": "https://www.threads.com/@nrabbit_n2/post/DgP198Bo5dG/media"
+        }
+      ],
+      "logo": {
+        "url": "/media/library/nrabbit-n2/logo.webp?v=083f28c4d97f4efc",
+        "source": "https://www.threads.com/@nrabbit_n2",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-27"
+      }
+    },
+    {
+      "id": "shing-art",
+      "name": "昕 Shing",
+      "description": "▓▓▓▓\n奇珍異獸，妖魔鬼怪，\n飛禽走獸，恭請大駕。\n．\n🎪近期市集出沒：\n島國禮作-岸北\n11/14-11/15（六日）\n國父紀念館 戶外廣場\n．\n【陶作．插畫委託】",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@shing__art",
+        "ig": "",
+        "web": ""
+      },
+      "productImages": [
+        {
+          "id": "shing-art-1",
+          "halls": [
+            "V"
+          ],
+          "title": "Vote for Taiwan",
+          "alt": "一隻黑熊舉起圈票章，花紋野貓與綠色角色站在旁邊。畫面寫著「VOTE FOR TAIWAN」與「11.28 回家投票」。",
+          "caption": "一隻黑熊舉起圈票章，花紋野貓與綠色角色站在旁邊。畫面寫著「VOTE FOR TAIWAN」與「11.28 回家投票」。",
+          "url": "/media/library/shing-art/1.webp?v=ac817c0b2f720ebc",
+          "source": "https://www.threads.com/@shing__art/post/DgQAvmhkoVK/media"
+        }
+      ],
+      "logo": {
+        "url": "/media/library/shing-art/logo.webp?v=1b5ba609c697b052",
+        "source": "https://www.threads.com/@shing__art",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-27"
+      }
+    },
+    {
+      "id": "darkbooker666",
+      "name": "Darkbooker",
+      "description": "耍廢漫畫家\n商業作品：\n『四美怪談』\n『公園獅咖啡館_妖島綺麗幻夢譚』",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@darkbooker666",
+        "ig": "",
+        "web": ""
+      },
+      "productImages": [
+        {
+          "id": "darkbooker666-1",
+          "halls": [
+            "V"
+          ],
+          "title": "讓選票回到正確的票匭",
+          "alt": "黑白漫畫中，一雙手在觸手前舉起選票。中央直排「讓選票回到正確的票匭」，四角以大字寫著「回家投票」。",
+          "caption": "黑白漫畫中，一雙手在觸手前舉起選票。中央直排「讓選票回到正確的票匭」，四角以大字寫著「回家投票」。",
+          "url": "/media/library/darkbooker666/1.webp?v=bdf75cfba285ff1e",
+          "source": "https://www.threads.com/@darkbooker666/post/DgPo23SElFc/media"
+        },
+        {
+          "id": "darkbooker666-2",
+          "halls": [
+            "V"
+          ],
+          "title": "爆炸頭市長參上!!",
+          "alt": "黑白橫幅並排畫出兩個戴墨鏡、留著爆炸頭的人物，兩側寫著「爆炸頭市長」和「參上!!」。",
+          "caption": "黑白橫幅並排畫出兩個戴墨鏡、留著爆炸頭的人物，兩側寫著「爆炸頭市長」和「參上!!」。",
+          "url": "/media/library/darkbooker666/2.webp?v=b253a79a24f33850",
+          "source": "https://www.threads.com/@darkbooker666/post/DgPo23SElFc/media"
+        }
+      ],
+      "logo": {
+        "url": "/media/library/darkbooker666/logo.webp?v=9e003df952156d37",
+        "source": "https://www.threads.com/@darkbooker666",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-27"
+      }
+    },
+    {
+      "id": "eatinglife22",
+      "name": "正在吃 | 插畫 ✦ 手寫字🌼",
+      "description": "writing drawing eating( ᐛ )\nfrom Taiwan🇹🇼",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@eatinglife22",
+        "ig": "",
+        "web": ""
+      },
+      "productImages": [
+        {
+          "id": "eatinglife22-1",
+          "halls": [
+            "V"
+          ],
+          "title": "Go Vote！你的每一票都很重要",
+          "alt": "人物與彩色小動物聚在「Go Vote」和「11 28」字樣下，手中舉著圈選記號的小旗。下方寫著「你的每一票都很重要！」。",
+          "caption": "人物與彩色小動物聚在「Go Vote」和「11 28」字樣下，手中舉著圈選記號的小旗。下方寫著「你的每一票都很重要！」。",
+          "url": "/media/library/eatinglife22/1.webp?v=c50d090d04de7f8a",
+          "source": "https://www.threads.com/@eatinglife22/post/DgOthfGk2l_/media"
+        },
+        {
+          "id": "eatinglife22-2",
+          "halls": [
+            "V"
+          ],
+          "title": "投票三寶",
+          "alt": "米色底的圖卡以手寫字列出身分證、印章和投票通知單，右下角有兩個從邊框探頭的插畫角色。",
+          "caption": "米色底的圖卡以手寫字列出身分證、印章和投票通知單，右下角有兩個從邊框探頭的插畫角色。",
+          "url": "/media/library/eatinglife22/2.webp?v=c24b12629aa29f57",
+          "source": "https://www.threads.com/@eatinglife22/post/DgOthfGk2l_/media"
+        }
+      ],
+      "logo": {
+        "url": "/media/library/eatinglife22/logo.webp?v=12fb290cc195f0b0",
+        "source": "https://www.threads.com/@eatinglife22",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-27"
+      }
+    },
+    {
+      "id": "omeletmist",
+      "name": "黑麻糬蛋捲",
+      "description": "喜歡畫Pixelart👾",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@omeletmist",
+        "ig": "",
+        "web": ""
+      },
+      "productImages": [
+        {
+          "id": "omeletmist-1",
+          "halls": [
+            "V"
+          ],
+          "title": "GO VOTE！投給你想要的生活",
+          "alt": "像素風投票匭上方有一張蓋了章的選票，旁邊畫有臺灣輪廓，標題寫著「GO VOTE」與「投給你想要的生活」。",
+          "caption": "像素風投票匭上方有一張蓋了章的選票，旁邊畫有臺灣輪廓，標題寫著「GO VOTE」與「投給你想要的生活」。",
+          "url": "/media/library/omeletmist/1.webp?v=43167cd9c5c97d70",
+          "source": "https://www.threads.com/@omeletmist/post/DgJcNNFkbV6/media"
+        }
+      ],
+      "logo": {
+        "url": "/media/library/omeletmist/logo.webp?v=b73b5f5b450cd45b",
+        "source": "https://www.threads.com/@omeletmist",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-27"
+      }
+    },
+    {
+      "id": "sleepylion-love",
+      "name": "獅子Clint🪼 插畫｜美術｜接案",
+      "description": "來這裡到處留言串門子聊天 🤩\n最近上岸了，也許無法全力關心社會議題與國家內政未來\nI'll do my best",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@sleepylion_love",
+        "ig": "",
+        "web": ""
+      },
+      "productImages": [
+        {
+          "id": "sleepylion-love-1",
+          "halls": [
+            "V"
+          ],
+          "title": "2026 回家投票",
+          "alt": "四個角色步行向前，藍灰色背景左邊寫著「2026 回家投票」，右邊是一枚放大的紅色圈選記號。",
+          "caption": "四個角色步行向前，藍灰色背景左邊寫著「2026 回家投票」，右邊是一枚放大的紅色圈選記號。",
+          "url": "/media/library/sleepylion-love/1.webp?v=279bbf9e59005e21",
+          "source": "https://www.threads.com/@sleepylion_love/post/DgQALFsmEQI/media"
+        }
+      ],
+      "logo": {
+        "url": "/media/library/sleepylion-love/logo.webp?v=c7ed2a6e06fb087a",
+        "source": "https://www.threads.com/@sleepylion_love",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-27"
+      }
+    },
+    {
+      "id": "blacksivs-art",
+      "name": "阿孟 BLACKSIVS 𓅕 插畫",
+      "description": "品牌設計\n從消費者心理出發，讓設計不只好看，更能促成行動",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@blacksivs_art",
+        "ig": "",
+        "web": ""
+      },
+      "productImages": [
+        {
+          "id": "blacksivs-art-1",
+          "halls": [
+            "V"
+          ],
+          "title": "Go Vote（黃褐版）",
+          "alt": "黑底上交錯著黃褐色區塊和粉紅大字，幾個小角色圍在「Go Vote」與「Vote For Taiwan」之間。",
+          "caption": "黑底上交錯著黃褐色區塊和粉紅大字，幾個小角色圍在「Go Vote」與「Vote For Taiwan」之間。",
+          "url": "/media/library/blacksivs-art/1.webp?v=31c3ea4e303330f1",
+          "source": "https://www.threads.com/@blacksivs_art/post/DgKj6awD9hJ/media"
+        },
+        {
+          "id": "blacksivs-art-2",
+          "halls": [
+            "V"
+          ],
+          "title": "Go Vote（桃紅版）",
+          "alt": "黑底搭配桃紅色塊與淺紫文字，中央的小角色下方寫著「Vote For Taiwan」。",
+          "caption": "黑底搭配桃紅色塊與淺紫文字，中央的小角色下方寫著「Vote For Taiwan」。",
+          "url": "/media/library/blacksivs-art/2.webp?v=bf643e9078fe087f",
+          "source": "https://www.threads.com/@blacksivs_art/post/DgKj6awD9hJ/media"
+        },
+        {
+          "id": "blacksivs-art-3",
+          "halls": [
+            "V"
+          ],
+          "title": "Go Vote（藍紫版）",
+          "alt": "黑底搭配藍紫色塊與薄荷綠文字，畫面寫著「回家投票」及「11 28」。",
+          "caption": "黑底搭配藍紫色塊與薄荷綠文字，畫面寫著「回家投票」及「11 28」。",
+          "url": "/media/library/blacksivs-art/3.webp?v=cb7868fd5f98f1c3",
+          "source": "https://www.threads.com/@blacksivs_art/post/DgKj6awD9hJ/media"
+        }
+      ],
+      "logo": {
+        "url": "/media/library/blacksivs-art/logo.webp?v=0845c8cfd42a584e",
+        "source": "https://www.threads.com/@blacksivs_art",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-27"
+      }
+    },
+    {
+      "id": "kitsunebiyori",
+      "name": "狐日和｜插畫",
+      "description": "原創插畫｜狐狸村🦊吵吵鬧鬧\n⟢紙品｜插畫｜文具｜雜貨 ⟣",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@kitsunebiyori",
+        "ig": "",
+        "web": ""
+      },
+      "productImages": [
+        {
+          "id": "kitsunebiyori-1",
+          "halls": [
+            "V"
+          ],
+          "title": "幾點投票",
+          "alt": "三隻狐狸出現在橘底海報上，其中一隻拿著證件，另有一枚放大的白色圈票章。",
+          "caption": "三隻狐狸出現在橘底海報上，其中一隻拿著證件，另有一枚放大的白色圈票章。",
+          "url": "/media/library/kitsunebiyori/1.webp?v=21caa4dc55b40663",
+          "source": "https://www.threads.com/@kitsunebiyori/post/DgQBEkGkoam/media"
+        }
+      ],
+      "logo": {
+        "url": "/media/library/kitsunebiyori/logo.webp?v=02288b1699996d81",
+        "source": "https://www.threads.com/@kitsunebiyori",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-27"
+      }
+    },
+    {
+      "id": "ganmajohn",
+      "name": "ganmaJohn",
+      "description": "愛看電影愛畫畫🤓",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@ganmajohn",
+        "ig": "",
+        "web": ""
+      },
+      "productImages": [
+        {
+          "id": "ganmajohn-1",
+          "halls": [
+            "V"
+          ],
+          "title": "一起回家投票",
+          "alt": "粉紅色的手把一枚淺色印章按向白紙，白紙上排列多個紅色圈選記號。",
+          "caption": "粉紅色的手把一枚淺色印章按向白紙，白紙上排列多個紅色圈選記號。",
+          "url": "/media/library/ganmajohn/1.webp?v=fcc99239c468b454",
+          "source": "https://www.threads.com/@ganmajohn/post/DgQAfGEk0TG/media"
+        }
+      ],
+      "logo": {
+        "url": "/media/library/ganmajohn/logo.webp?v=1c9134250221082f",
+        "source": "https://www.threads.com/@ganmajohn",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-27"
+      }
+    },
+    {
+      "id": "nianchi-77",
+      "name": "✎ 𝟳𝟳49",
+      "description": "這裡4吉伊卡哇&154穿搭分享",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@nianchi_77",
+        "ig": "",
+        "web": ""
+      },
+      "productImages": [
+        {
+          "id": "nianchi-77-1",
+          "halls": [
+            "V"
+          ],
+          "title": "選擇你想要的生活（攝影圖卡 01）",
+          "alt": "金門街屋的石造立面與雕花窗欄。照片下方疊上「11.28」、貓咪和圈選記號。",
+          "caption": "金門街屋的石造立面與雕花窗欄。照片下方疊上「11.28」、貓咪和圈選記號。",
+          "url": "/media/library/nianchi-77/1.webp?v=7cbf98afd5b399da",
+          "source": "https://www.threads.com/@nianchi_77/post/DgMc4cSCcZh/media"
+        },
+        {
+          "id": "nianchi-77-2",
+          "halls": [
+            "V"
+          ],
+          "title": "選擇你想要的生活（攝影圖卡 02）",
+          "alt": "披著橘色布袍的石像站在田邊。照片下方疊上「11.28」、貓咪和圈選記號。",
+          "caption": "披著橘色布袍的石像站在田邊。照片下方疊上「11.28」、貓咪和圈選記號。",
+          "url": "/media/library/nianchi-77/2.webp?v=50fd2b44739f1cb5",
+          "source": "https://www.threads.com/@nianchi_77/post/DgMc4cSCcZh/media"
+        },
+        {
+          "id": "nianchi-77-3",
+          "halls": [
+            "V"
+          ],
+          "title": "選擇你想要的生活（攝影圖卡 03）",
+          "alt": "退潮的岸邊與灰藍色天際線。照片下方疊上「11.28」、貓咪和圈選記號。",
+          "caption": "退潮的岸邊與灰藍色天際線。照片下方疊上「11.28」、貓咪和圈選記號。",
+          "url": "/media/library/nianchi-77/3.webp?v=9218b8c905a48fa2",
+          "source": "https://www.threads.com/@nianchi_77/post/DgMc4cSCcZh/media"
+        },
+        {
+          "id": "nianchi-77-4",
+          "halls": [
+            "V"
+          ],
+          "title": "選擇你想要的生活（攝影圖卡 04）",
+          "alt": "紅磚建築的門框形成一連串取景框。照片下方疊上「11.28」、貓咪和圈選記號。",
+          "caption": "紅磚建築的門框形成一連串取景框。照片下方疊上「11.28」、貓咪和圈選記號。",
+          "url": "/media/library/nianchi-77/4.webp?v=ce7de0031188bad7",
+          "source": "https://www.threads.com/@nianchi_77/post/DgMc4cSCcZh/media"
+        },
+        {
+          "id": "nianchi-77-5",
+          "halls": [
+            "V"
+          ],
+          "title": "選擇你想要的生活（攝影圖卡 05）",
+          "alt": "一片農田延伸到遠方低矮的聚落。照片下方疊上「11.28」、貓咪和圈選記號。",
+          "caption": "一片農田延伸到遠方低矮的聚落。照片下方疊上「11.28」、貓咪和圈選記號。",
+          "url": "/media/library/nianchi-77/5.webp?v=7c5411895638f223",
+          "source": "https://www.threads.com/@nianchi_77/post/DgMc4cSCcZh/media"
+        },
+        {
+          "id": "nianchi-77-6",
+          "halls": [
+            "V"
+          ],
+          "title": "選擇你想要的生活（攝影圖卡 06）",
+          "alt": "夜間廣場的紫色噴泉與高處的金色塑像。照片下方疊上「11.28」、貓咪和圈選記號。",
+          "caption": "夜間廣場的紫色噴泉與高處的金色塑像。照片下方疊上「11.28」、貓咪和圈選記號。",
+          "url": "/media/library/nianchi-77/6.webp?v=47ab9c44ecb5f8e8",
+          "source": "https://www.threads.com/@nianchi_77/post/DgMc4cSCcZh/media"
+        },
+        {
+          "id": "nianchi-77-7",
+          "halls": [
+            "V"
+          ],
+          "title": "選擇你想要的生活（攝影圖卡 07）",
+          "alt": "樹蔭下的石砌水道延伸至小橋。照片下方疊上「11.28」、貓咪和圈選記號。",
+          "caption": "樹蔭下的石砌水道延伸至小橋。照片下方疊上「11.28」、貓咪和圈選記號。",
+          "url": "/media/library/nianchi-77/7.webp?v=9eeafa82b163894c",
+          "source": "https://www.threads.com/@nianchi_77/post/DgMc4cSCcZh/media"
+        },
+        {
+          "id": "nianchi-77-8",
+          "halls": [
+            "V"
+          ],
+          "title": "選擇你想要的生活（攝影圖卡 08）",
+          "alt": "老建築前擺著一個紅白相間的大型圓球。照片下方疊上「11.28」、貓咪和圈選記號。",
+          "caption": "老建築前擺著一個紅白相間的大型圓球。照片下方疊上「11.28」、貓咪和圈選記號。",
+          "url": "/media/library/nianchi-77/8.webp?v=ef665aa9615ca364",
+          "source": "https://www.threads.com/@nianchi_77/post/DgMc4cSCcZh/media"
+        },
+        {
+          "id": "nianchi-77-9",
+          "halls": [
+            "V"
+          ],
+          "title": "選擇你想要的生活（攝影圖卡 09）",
+          "alt": "夜市的飲料攤亮著白底手寫價目牌。照片下方疊上「11.28」、貓咪和圈選記號。",
+          "caption": "夜市的飲料攤亮著白底手寫價目牌。照片下方疊上「11.28」、貓咪和圈選記號。",
+          "url": "/media/library/nianchi-77/9.webp?v=8bdb841b4ee472d2",
+          "source": "https://www.threads.com/@nianchi_77/post/DgMc4cSCcZh/media"
+        },
+        {
+          "id": "nianchi-77-10",
+          "halls": [
+            "V"
+          ],
+          "title": "選擇你想要的生活（攝影圖卡 10）",
+          "alt": "軌道從兩側街屋之間穿過。照片下方疊上「11.28」、貓咪和圈選記號。",
+          "caption": "軌道從兩側街屋之間穿過。照片下方疊上「11.28」、貓咪和圈選記號。",
+          "url": "/media/library/nianchi-77/10.webp?v=5b11e2e32cb34833",
+          "source": "https://www.threads.com/@nianchi_77/post/DgMc4cSCcZh/media"
+        },
+        {
+          "id": "nianchi-77-11",
+          "halls": [
+            "V"
+          ],
+          "title": "選擇你想要的生活（攝影圖卡 11）",
+          "alt": "由上往下望見交錯的樓梯與扶手。照片下方疊上「11.28」、貓咪和圈選記號。",
+          "caption": "由上往下望見交錯的樓梯與扶手。照片下方疊上「11.28」、貓咪和圈選記號。",
+          "url": "/media/library/nianchi-77/11.webp?v=415bc5a15e1bb1c3",
+          "source": "https://www.threads.com/@nianchi_77/post/DgMc4cSCcZh/media"
+        },
+        {
+          "id": "nianchi-77-12",
+          "halls": [
+            "V"
+          ],
+          "title": "選擇你想要的生活（攝影圖卡 12）",
+          "alt": "水岸停著小船，遠處可見山林。照片下方疊上「11.28」、貓咪和圈選記號。",
+          "caption": "水岸停著小船，遠處可見山林。照片下方疊上「11.28」、貓咪和圈選記號。",
+          "url": "/media/library/nianchi-77/12.webp?v=b03f09516a142512",
+          "source": "https://www.threads.com/@nianchi_77/post/DgMc4cSCcZh/media"
+        },
+        {
+          "id": "nianchi-77-13",
+          "halls": [
+            "V"
+          ],
+          "title": "選擇你想要的生活（攝影圖卡 13）",
+          "alt": "大樹下的草地上有一座有屋頂的小建物。照片下方疊上「11.28」、貓咪和圈選記號。",
+          "caption": "大樹下的草地上有一座有屋頂的小建物。照片下方疊上「11.28」、貓咪和圈選記號。",
+          "url": "/media/library/nianchi-77/13.webp?v=223bc331f11587a0",
+          "source": "https://www.threads.com/@nianchi_77/post/DgMc4cSCcZh/media"
+        },
+        {
+          "id": "nianchi-77-14",
+          "halls": [
+            "V"
+          ],
+          "title": "選擇你想要的生活（攝影圖卡 14）",
+          "alt": "綠意濃密的步道旁有一根木指標。照片下方疊上「11.28」、貓咪和圈選記號。",
+          "caption": "綠意濃密的步道旁有一根木指標。照片下方疊上「11.28」、貓咪和圈選記號。",
+          "url": "/media/library/nianchi-77/14.webp?v=a612a8f268f23c86",
+          "source": "https://www.threads.com/@nianchi_77/post/DgMc4cSCcZh/media"
+        },
+        {
+          "id": "nianchi-77-15",
+          "halls": [
+            "V"
+          ],
+          "title": "選擇你想要的生活（攝影圖卡 15）",
+          "alt": "車站月台的掛鐘、屋簷與停靠的列車。照片下方疊上「11.28」、貓咪和圈選記號。",
+          "caption": "車站月台的掛鐘、屋簷與停靠的列車。照片下方疊上「11.28」、貓咪和圈選記號。",
+          "url": "/media/library/nianchi-77/15.webp?v=f0925b9c913eb763",
+          "source": "https://www.threads.com/@nianchi_77/post/DgMc4cSCcZh/media"
+        },
+        {
+          "id": "nianchi-77-16",
+          "halls": [
+            "V"
+          ],
+          "title": "選擇你想要的生活（攝影圖卡 16）",
+          "alt": "岸邊一排橘棕色的樹倒映在水面中。照片下方疊上「11.28」、貓咪和圈選記號。",
+          "caption": "岸邊一排橘棕色的樹倒映在水面中。照片下方疊上「11.28」、貓咪和圈選記號。",
+          "url": "/media/library/nianchi-77/16.webp?v=4fcf0ddf61bb096b",
+          "source": "https://www.threads.com/@nianchi_77/post/DgMc4cSCcZh/media"
+        },
+        {
+          "id": "nianchi-77-17",
+          "halls": [
+            "V"
+          ],
+          "title": "選擇你想要的生活（攝影圖卡 17）",
+          "alt": "草坡上的幾何建築，階梯沿外牆向上。照片下方疊上「11.28」、貓咪和圈選記號。",
+          "caption": "草坡上的幾何建築，階梯沿外牆向上。照片下方疊上「11.28」、貓咪和圈選記號。",
+          "url": "/media/library/nianchi-77/17.webp?v=bb48bed3f67643ae",
+          "source": "https://www.threads.com/@nianchi_77/post/DgMc4cSCcZh/media"
+        },
+        {
+          "id": "nianchi-77-18",
+          "halls": [
+            "V"
+          ],
+          "title": "選擇你想要的生活（攝影圖卡 18）",
+          "alt": "草地上的彩色熱氣球與白色角色造型氣球。照片下方疊上「11.28」、貓咪和圈選記號。",
+          "caption": "草地上的彩色熱氣球與白色角色造型氣球。照片下方疊上「11.28」、貓咪和圈選記號。",
+          "url": "/media/library/nianchi-77/18.webp?v=ab7ad51e2dd2c0d4",
+          "source": "https://www.threads.com/@nianchi_77/post/DgMc4cSCcZh/media"
+        },
+        {
+          "id": "nianchi-77-19",
+          "halls": [
+            "V"
+          ],
+          "title": "選擇你想要的生活（攝影圖卡 19）",
+          "alt": "街角一棟帶有弧形窗和陽台的紅磚建築。照片下方疊上「11.28」、貓咪和圈選記號。",
+          "caption": "街角一棟帶有弧形窗和陽台的紅磚建築。照片下方疊上「11.28」、貓咪和圈選記號。",
+          "url": "/media/library/nianchi-77/19.webp?v=9fdbc9a8b3f73b50",
+          "source": "https://www.threads.com/@nianchi_77/post/DgMc4cSCcZh/media"
+        },
+        {
+          "id": "nianchi-77-20",
+          "halls": [
+            "V"
+          ],
+          "title": "選擇你想要的生活（攝影圖卡 20）",
+          "alt": "抬頭可見一排排亮著的紅色燈籠。照片下方疊上「11.28」、貓咪和圈選記號。",
+          "caption": "抬頭可見一排排亮著的紅色燈籠。照片下方疊上「11.28」、貓咪和圈選記號。",
+          "url": "/media/library/nianchi-77/20.webp?v=8fc8c2533f1a4353",
+          "source": "https://www.threads.com/@nianchi_77/post/DgMc4cSCcZh/media"
+        }
+      ],
+      "logo": {
+        "url": "/media/library/nianchi-77/logo.webp?v=0a5e896faabe7bef",
+        "source": "https://www.threads.com/@nianchi_77",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-27"
+      }
+    },
+    {
+      "id": "govenij406",
+      "name": "天真豪",
+      "description": "深空常駐主推徹跟黎還有哥\n目前窩在新石紀跟看阿萬和小動物們\n其他坑有盜墓全職各種古風坑跟閃11早期番\n大愛犬夜叉 ( ´▽` ʃ♡ƪ )\"\n文繪雙修，偶爾還會摸魚手做(=´ω`=)",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@govenij406",
+        "ig": "",
+        "web": ""
+      },
+      "productImages": [
+        {
+          "id": "govenij406-1",
+          "halls": [
+            "V"
+          ],
+          "title": "雪貂回家投票",
+          "alt": "一隻抱著圈選記號的小雪貂浮在星星與臺灣輪廓前方，四周寫著「回家投票」。",
+          "caption": "一隻抱著圈選記號的小雪貂浮在星星與臺灣輪廓前方，四周寫著「回家投票」。",
+          "url": "/media/library/govenij406/1.webp?v=889c81f5aaabe0c9",
+          "source": "https://www.threads.com/@govenij406/post/DgQAQ7jmAoG/media"
+        }
+      ],
+      "logo": {
+        "url": "/media/library/govenij406/logo.webp?v=aaf9cc90d7e722a6",
+        "source": "https://www.threads.com/@govenij406",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-27"
+      }
+    },
+    {
+      "id": "omgs-tw",
+      "name": "OH MY GODS 歐麥尬滋",
+      "description": "OMGS歐麥尬滋\n兩個信仰愛好者的作品創作\n讓信仰融入我們的生活中👐🏻",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@omgs.tw",
+        "ig": "",
+        "web": ""
+      },
+      "productImages": [
+        {
+          "id": "omgs-tw-1",
+          "halls": [
+            "V"
+          ],
+          "title": "明天幾點出門投票",
+          "alt": "橘黃色圖卡上寫著「11.28 你明天幾點出門投票」，下方是兩位藍臉與紅臉的神將。",
+          "caption": "橘黃色圖卡上寫著「11.28 你明天幾點出門投票」，下方是兩位藍臉與紅臉的神將。",
+          "url": "/media/library/omgs-tw/1.webp?v=d8c492f0c1739c9c",
+          "source": "https://www.threads.com/@omgs.tw/post/DgOvE68Fmnn/media"
+        },
+        {
+          "id": "omgs-tw-2",
+          "halls": [
+            "V"
+          ],
+          "title": "投票三寶",
+          "alt": "兩位神將站在橘黃色圖卡下方，上方畫著身分證、印章與投票通知單。",
+          "caption": "兩位神將站在橘黃色圖卡下方，上方畫著身分證、印章與投票通知單。",
+          "url": "/media/library/omgs-tw/2.webp?v=a5ba6208b0158563",
+          "source": "https://www.threads.com/@omgs.tw/post/DgOvE68Fmnn/media"
+        }
+      ],
+      "logo": {
+        "url": "/media/library/omgs-tw/logo.webp?v=ae74e0ccfdd36e0e",
+        "source": "https://www.threads.com/@omgs.tw",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-27"
+      }
+    },
+    {
+      "id": "rincy-423",
+      "name": "rincy",
+      "description": "總之就是碎碎念跟我的醜圖吧！目前存錢買電腦…",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@rincy._.423",
+        "ig": "",
+        "web": ""
+      },
+      "productImages": [
+        {
+          "id": "rincy-423-1",
+          "halls": [
+            "V"
+          ],
+          "title": "11/28 回家投票",
+          "alt": "白兔和黃色圓形角色圍著大大的紅色圈選記號，橘色手寫字寫著「回家投票」。",
+          "caption": "白兔和黃色圓形角色圍著大大的紅色圈選記號，橘色手寫字寫著「回家投票」。",
+          "url": "/media/library/rincy-423/1.webp?v=cc443acf5779ccd7",
+          "source": "https://www.threads.com/@rincy._.423/post/DgQBHrrDxc1/media"
+        }
+      ],
+      "logo": {
+        "url": "/media/library/rincy-423/logo.webp?v=d1c35bae29dcb261",
+        "source": "https://www.threads.com/@rincy._.423",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-27"
+      }
+    },
+    {
+      "id": "patty89813",
+      "name": "肥兔兔佩兔/PattyRabbit/兔孜孜",
+      "description": "這邊是老子亂發文的天地\n也是我的抓狂天地",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@patty89813",
+        "ig": "",
+        "web": ""
+      },
+      "productImages": [
+        {
+          "id": "patty89813-1",
+          "halls": [
+            "V"
+          ],
+          "title": "飛天投票",
+          "alt": "深藍星空中，多個動物角色飛在「11/28」、「用選票」與「想要的生活」圖卡旁。",
+          "caption": "深藍星空中，多個動物角色飛在「11/28」、「用選票」與「想要的生活」圖卡旁。",
+          "url": "/media/library/patty89813/1.webp?v=971530e2c2fa19c1",
+          "source": "https://www.threads.com/@patty89813/post/DgP6apbmPL6/media"
+        }
+      ],
+      "logo": {
+        "url": "/media/library/patty89813/logo.webp?v=b859b5e08e37141f",
+        "source": "https://www.threads.com/@patty89813",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-27"
+      }
+    },
+    {
+      "id": "100-outof100",
+      "name": "一百",
+      "description": "-一百真好\n-日常分享",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@100_outof100",
+        "ig": "",
+        "web": ""
+      },
+      "productImages": [
+        {
+          "id": "100-outof100-1",
+          "halls": [
+            "V"
+          ],
+          "title": "明天投票",
+          "alt": "粉紅色底圖上，青衣角色弓起雙腿，一手舉著方形紙張。身後有紅色圈選記號與黑色大字。",
+          "caption": "粉紅色底圖上，青衣角色弓起雙腿，一手舉著方形紙張。身後有紅色圈選記號與黑色大字。",
+          "url": "/media/library/100-outof100/1.webp?v=01dac4446a2a6814",
+          "source": "https://www.threads.com/@100_outof100/post/DgPugOyk10d/media"
+        }
+      ],
+      "logo": {
+        "url": "/media/library/100-outof100/logo.webp?v=f3da6e54807ef438",
+        "source": "https://www.threads.com/@100_outof100",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-27"
+      }
+    },
+    {
+      "id": "reibi-art",
+      "name": "瑞比 -Reibi-",
+      "description": "台灣人。中文／日本語\n喜歡畫圖跟虛擬黏土。\n目前沒有把所有創作都傳這裡的意思🤫",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@reibi.art",
+        "ig": "",
+        "web": ""
+      },
+      "productImages": [
+        {
+          "id": "reibi-art-1",
+          "halls": [
+            "V"
+          ],
+          "title": "2026 GO AND VOTE",
+          "alt": "兩個有動物耳朵的角色站在溪中的石頭上，右下角的飄帶印著圈選記號及「TAIWAN」。",
+          "caption": "兩個有動物耳朵的角色站在溪中的石頭上，右下角的飄帶印著圈選記號及「TAIWAN」。",
+          "url": "/media/library/reibi-art/1.webp?v=e237f57f415f81d0",
+          "source": "https://www.threads.com/@reibi.art/post/DfujC2ynZ0y/media"
+        }
+      ],
+      "logo": {
+        "url": "/media/library/reibi-art/logo.webp?v=bf576929a858fc88",
+        "source": "https://www.threads.com/@reibi.art",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-27"
+      }
+    },
+    {
+      "id": "peiceofyou2",
+      "name": "pervsrotinhe1l",
+      "description": "",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@peiceofyou2",
+        "ig": "",
+        "web": ""
+      },
+      "productImages": [
+        {
+          "id": "peiceofyou2-1",
+          "halls": [
+            "V"
+          ],
+          "title": "11.28 VOTE",
+          "alt": "兩個小角色站在花園旁，中央的大圈票章寫著「VOTE」。上方以彩色字樣標出「11.28」。",
+          "caption": "兩個小角色站在花園旁，中央的大圈票章寫著「VOTE」。上方以彩色字樣標出「11.28」。",
+          "url": "/media/library/peiceofyou2/1.webp?v=3f472a4090bf1587",
+          "source": "https://www.threads.com/@peiceofyou2/post/DgP6K7Pklu8/media"
+        }
+      ],
+      "logo": {
+        "url": "/media/library/peiceofyou2/logo.webp?v=d8da7f4210e8adf3",
+        "source": "https://www.threads.com/@peiceofyou2",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-27"
+      }
+    },
+    {
+      "id": "kairos-flo",
+      "name": "開若時 Kairos ｜手作飾品",
+      "description": "定格綻放的片刻，收藏恰好的瞬間\n        時季更迭，願伴你走過四季。\n    \n ─ ✧･ﾟ: *✧･ﾟ:* 𓇬 *:･ﾟ✧*:･ﾟ✧ ─\n不正常簡介\n超級新手，想說先做再說吧\n不知道哪來的勇氣\n跌跌撞撞的開啟創業之路\n希望哪天自己給自己發薪水",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@kairos_flo",
+        "ig": "",
+        "web": ""
+      },
+      "productImages": [
+        {
+          "id": "kairos-flo-1",
+          "halls": [
+            "V"
+          ],
+          "title": "一起出門投票（彩虹飾品）",
+          "alt": "白底上是一個由彩色花朵圍成的圓形飾品，旁邊散落著幾朵小花。",
+          "caption": "白底上是一個由彩色花朵圍成的圓形飾品，旁邊散落著幾朵小花。",
+          "url": "/media/library/kairos-flo/1.webp?v=40ac18cb13510abd",
+          "source": "https://www.threads.com/@kairos_flo/post/DgPtgHakvtT/media"
+        },
+        {
+          "id": "kairos-flo-2",
+          "halls": [
+            "V"
+          ],
+          "title": "一起出門投票（粉色漸層飾品）",
+          "alt": "粉色漸層花朵圍成圓環，中央垂著一顆珠飾，紙上寫著「11月28日」與「一起出門投票」。",
+          "caption": "粉色漸層花朵圍成圓環，中央垂著一顆珠飾，紙上寫著「11月28日」與「一起出門投票」。",
+          "url": "/media/library/kairos-flo/2.webp?v=37463430827c5864",
+          "source": "https://www.threads.com/@kairos_flo/post/DgPtgHakvtT/media"
+        },
+        {
+          "id": "kairos-flo-3",
+          "halls": [
+            "V"
+          ],
+          "title": "望你順遂（組合照）",
+          "alt": "粉色、彩虹及黃色三個花朵飾品擺在手寫「望你順遂」和「臺灣」的紙上。",
+          "caption": "粉色、彩虹及黃色三個花朵飾品擺在手寫「望你順遂」和「臺灣」的紙上。",
+          "url": "/media/library/kairos-flo/3.webp?v=732fe8925ba8941d",
+          "source": "https://www.threads.com/@kairos_flo/post/DgPtgHakvtT/media"
+        }
+      ],
+      "logo": {
+        "url": "/media/library/kairos-flo/logo.webp?v=869e2a2624fc7dfd",
+        "source": "https://www.threads.com/@kairos_flo",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-27"
+      }
+    },
+    {
+      "id": "jiao-ah",
+      "name": "蕉啊",
+      "description": "我是一隻貓\n但媽媽想發自己的廢文 謝謝",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@jiao_ah",
+        "ig": "",
+        "web": ""
+      },
+      "productImages": [
+        {
+          "id": "jiao-ah-1",
+          "halls": [
+            "V"
+          ],
+          "title": "GO! VOTE（四款配色）",
+          "alt": "四格圖樣以黑、橘、深綠和淺黃為底，每格都有貓臉、圈票章及「回家投票」。",
+          "caption": "四格圖樣以黑、橘、深綠和淺黃為底，每格都有貓臉、圈票章及「回家投票」。",
+          "url": "/media/library/jiao-ah/1.webp?v=358f357c78efa122",
+          "source": "https://www.threads.com/@jiao_ah/post/DgLRJcAkmRt/media"
+        }
+      ],
+      "logo": {
+        "url": "/media/library/jiao-ah/logo.webp?v=0181e4daf203091e",
+        "source": "https://www.threads.com/@jiao_ah",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-27"
+      }
+    },
+    {
+      "id": "uncle-george2-0",
+      "name": "喬治先生的百貨日常",
+      "description": "這一家百貨公司，每天都會有各種大小事發生中～",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@uncle_george2.0",
+        "ig": "",
+        "web": ""
+      },
+      "productImages": [
+        {
+          "id": "uncle-george2-0-1",
+          "halls": [
+            "V"
+          ],
+          "title": "11/28 返鄉投票",
+          "alt": "桃紅色海報中央是戴帽、背包的綠線條人物，下方寫著「11/28 返鄉投票」。",
+          "caption": "桃紅色海報中央是戴帽、背包的綠線條人物，下方寫著「11/28 返鄉投票」。",
+          "url": "/media/library/uncle-george2-0/1.webp?v=b725f2d0b3ebf238",
+          "source": "https://www.threads.com/@uncle_george2.0/post/DgQByfUEyk2/media"
+        }
+      ],
+      "logo": {
+        "url": "/media/library/uncle-george2-0/logo.webp?v=e9b1de6cb1896911",
+        "source": "https://www.threads.com/@uncle_george2.0",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-27"
+      }
+    },
+    {
+      "id": "angie-art1213",
+      "name": "Angie 安吉",
+      "description": "TNUA Animation 14th\n🇹🇼\n#Countryhumans",
+      "category": "設計師",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@angie___art1213",
+        "ig": "",
+        "web": ""
+      },
+      "productImages": [
+        {
+          "id": "angie-art1213-1",
+          "halls": [
+            "V"
+          ],
+          "title": "11/28 回家投票（投票三寶）",
+          "alt": "橘白背景前，高舉雙手的角色身穿白襯衫與綠領帶，左上列出身分證、印章和投票通知單。",
+          "caption": "橘白背景前，高舉雙手的角色身穿白襯衫與綠領帶，左上列出身分證、印章和投票通知單。",
+          "url": "/media/library/angie-art1213/1.webp?v=d4db7d5481190f48",
+          "source": "https://www.threads.com/@angie___art1213/post/DgPpFVJk06e/media"
+        },
+        {
+          "id": "angie-art1213-2",
+          "halls": [
+            "V"
+          ],
+          "title": "2026.11.28 回家投票",
+          "alt": "橘綠方格與重複的圈選記號圍繞白襯衫角色，畫面下方寫著「回家投票」。",
+          "caption": "橘綠方格與重複的圈選記號圍繞白襯衫角色，畫面下方寫著「回家投票」。",
+          "url": "/media/library/angie-art1213/2.webp?v=43b2270fd36c1d26",
+          "source": "https://www.threads.com/@angie___art1213/post/DgPpFVJk06e/media"
+        }
+      ],
+      "logo": {
+        "url": "/media/library/angie-art1213/logo.webp?v=d821eed05b7dfb19",
+        "source": "https://www.threads.com/@angie___art1213",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-27"
+      }
     }
   ],
   "boothOrder": {
@@ -14942,7 +17745,73 @@
       "sparroweattako",
       "miao-eo",
       "pumpkin51ocean9",
-      "neko-1ab"
+      "neko-1ab",
+      "xxiva",
+      "teabi-su",
+      "coku102",
+      "blaze-wu",
+      "panpan-2026222",
+      "chamber-hiroto",
+      "hakkaniki",
+      "godanclub",
+      "frog-ribbbit",
+      "lost-found-studio",
+      "mocomaru-art",
+      "nanashi-bear",
+      "yellowbananastar",
+      "oswv1008",
+      "jujubecandraw",
+      "muyuco-studio",
+      "dirtysnakeko",
+      "myaowl",
+      "rain-or-shine2017",
+      "astraseer",
+      "mogi7586",
+      "ciaoillustration",
+      "lengwaguo",
+      "kwandraws",
+      "adobe0630",
+      "yirgacrow",
+      "0715deku",
+      "loo-fish-5u",
+      "aznblock",
+      "huengua",
+      "zmei",
+      "guagua-illustrator",
+      "pannkaka1515",
+      "wagapokega",
+      "chiaonabear-c",
+      "maaoo-u-u",
+      "pocketshiba-game",
+      "maisonnuts",
+      "blue-noteee",
+      "yaguumii",
+      "caiyuqian47",
+      "ar-cty",
+      "blau-j024",
+      "xinying1115",
+      "ivona-lan",
+      "nrabbit-n2",
+      "shing-art",
+      "darkbooker666",
+      "eatinglife22",
+      "omeletmist",
+      "sleepylion-love",
+      "blacksivs-art",
+      "kitsunebiyori",
+      "ganmajohn",
+      "nianchi-77",
+      "govenij406",
+      "omgs-tw",
+      "rincy-423",
+      "patty89813",
+      "100-outof100",
+      "reibi-art",
+      "peiceofyou2",
+      "kairos-flo",
+      "jiao-ah",
+      "uncle-george2-0",
+      "angie-art1213"
     ]
   }
 }
