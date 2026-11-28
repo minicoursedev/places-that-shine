@@ -9321,6 +9321,35 @@
       "verification": false,
       "disabled": false,
       "verificationNote": "使用者指定收錄。優雅通勤同名店家列永順街23巷10號1樓；土土旅食記趣的實訪（https://tutufoodaholic.tw/lll-pizzeria/）明列23巷10號位於31巷口，與 Google 商家所列31巷口及電話一致，並非兩處店址。Google 商家列為披薩店，其網站欄與食記均連往 Facebook LLLpizzeria；火車站美食餐廳網友推薦指南的公開索引以相同品牌名稱連往 Instagram lllpizzeria，Restaurant Guru 同店條目亦列同帳號，未能直接讀取 Instagram 個人頁。未確認店家官方 Threads，不採用經營者個人帳號。已比對名冊（含下架紀錄）的店名、地址及社群，未發現重複。"
+    },
+    {
+      "id": "thirtyeightcoffeeroaster",
+      "name": "叄拾捌號咖啡店",
+      "address": "桃園市桃園區中正路1428號1樓",
+      "category": "咖啡廳",
+      "latlng": {
+        "lat": 25.0240336,
+        "lng": 121.2950801
+      },
+      "coordinateSource": "https://www.google.com/maps/place/%E5%8F%84%E6%8B%BE%E6%8D%8C%E8%99%9F%E5%92%96%E5%95%A1%E5%BA%97/@24.993923,121.30168,12z/data=!4m6!3m5!1s0x34681f2d36554135:0xbec1e5de0233d66b!8m2!3d25.0240336!4d121.2950801!16s%2Fg%2F11f3n29ty1",
+      "coordinateNote": "取自 Google Maps 店家地點網址的 !3d 與 !4d，與 FooTinder 所列同一地點的中正路1428號門牌相符。",
+      "social": {
+        "facebook": "https://www.facebook.com/coffeethirtyeight/",
+        "instagram": "https://www.instagram.com/thirtyeightcoffeeroaster/",
+        "threads": "https://www.threads.com/@thirtyeightcoffeeroaster",
+        "website": "https://shop.thirtyeightcoffee.com.tw/"
+      },
+      "giftStatus": "可能有小物",
+      "verification": false,
+      "disabled": false,
+      "shopPhoto": {
+        "url": "./media/library/thirtyeightcoffeeroaster/logo.webp?v=b19b1e4761152db4",
+        "source": "https://www.threads.com/@thirtyeightcoffeeroaster",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-28",
+        "note": "官方帳號 thirtyeightcoffeeroaster 的 hd_profile_pic_versions"
+      }
     }
   ]
 }
