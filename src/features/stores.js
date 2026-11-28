@@ -5,6 +5,7 @@ import { createStoreCategoryNavigation, storeCategoryFromPath } from './store-ca
 import { storeCategoryIcon } from './store-marker-icons.js';
 import { createStoreEventFilter } from './store-events.js';
 import { createStoreShare } from './store-share.js';
+import { appendStoreWorkPreview } from './store-work-preview.js';
 
 const STORE_FEED = '/data/stores.json';
 const PAGE_SIZE = 12;
@@ -661,9 +662,10 @@ async function createStoreMap(container, layout, message, sortCenterButton, shee
   };
 }
 
-export async function mountStores(root, workPreviews = [], initialCategory = root.dataset.category || '') {
+export async function mountStores(root) {
   const directory = root.closest('.stores-directory');
   const navigateCategoryPage = createStoreCategoryNavigation(root);
+  const initialCategory = root.dataset.category || '';
   let activeCategory = initialCategory;
   const mobile = window.matchMedia('(max-width: 560px)');
   const openShare = createStoreShare(document.getElementById('store-share-dialog'));
@@ -678,7 +680,6 @@ export async function mountStores(root, workPreviews = [], initialCategory = roo
       window.scrollTo({ top: previousScroll, behavior: 'instant' });
     }
   });
-  let previousWork = -1;
   function linkedStoreId() {
     return new URLSearchParams(location.search).get(storeMapCenterParam) || storeMapId(location.hash);
   }
@@ -686,32 +687,7 @@ export async function mountStores(root, workPreviews = [], initialCategory = roo
 
   function renderStoreDetails(shop) {
     const card = renderStore(shop, openShare, openPhotos, 'article');
-    if (workPreviews.length) {
-      const avoidRepeat = previousWork >= 0 && workPreviews.length > 1;
-      const index = Math.floor(Math.random() * (workPreviews.length - Number(avoidRepeat)));
-      previousWork = avoidRepeat && index >= previousWork ? index + 1 : index;
-      const work = workPreviews[previousWork];
-      const link = element('a', 'store-work-preview-link');
-      link.href = work.href;
-      link.target = '_blank';
-      link.rel = 'noopener';
-      link.setAttribute('aria-label', `查看${work.designerName}的作品「${work.label}」（在新分頁開啟）`);
-      const image = element('img');
-      image.alt = work.label;
-      if (work.width && work.height) {
-        image.width = work.width;
-        image.height = work.height;
-      }
-      image.loading = 'lazy';
-      image.decoding = 'async';
-      image.src = work.image;
-      const cover = element('span', 'store-work-preview-cover');
-      cover.append(image, element('span', 'store-work-preview-designer', work.designerName));
-      link.append(cover);
-      const divider = element('h4', 'store-work-preview-divider', '✦');
-      divider.setAttribute('aria-label', '分享設計師');
-      card.append(divider, link);
-    }
+    void appendStoreWorkPreview(card);
     return card;
   }
 

@@ -1,3 +1,8 @@
+.store-profile > .store-work-feature {
+  max-width: 20rem;
+  margin: clamp(1.75rem, 4.5vw, 3.25rem) auto 0;
+}
+
 .store-work-preview-divider {
   display: grid;
   grid-template-columns: 1fr auto 1fr;

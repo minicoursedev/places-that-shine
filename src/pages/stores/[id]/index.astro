@@ -4,7 +4,6 @@ import { resolve } from 'node:path';
 import StoreShareDialog from '../../../components/StoreShareDialog.astro';
 import SiteLayout from '../../../layouts/SiteLayout.astro';
 import { storeMapPath } from '../../../lib/oshen-store-links.mjs';
-import { votingHallStoreWorkPreviews } from '../../../lib/oshen-store-work-previews';
 import { stores, storePath, storeCategoryPath } from '../../../lib/oshen-stores';
 import { serializeStructuredData } from '../../../../public/designers/js/profile-seo.js';
 import '../../../styles/store-work-preview.css';
@@ -16,11 +15,6 @@ export function getStaticPaths() {
 }
 
 const { store } = Astro.props;
-let previewHash = 0;
-for (const character of store.id) previewHash = Math.imul(previewHash, 31) + character.charCodeAt(0);
-const workPreview = votingHallStoreWorkPreviews.length
-  ? votingHallStoreWorkPreviews[(previewHash >>> 0) % votingHallStoreWorkPreviews.length]
-  : undefined;
 const { name, address, category, serviceType, openingHours, visitNote, socialLinks, latlng } = store;
 const directoryUrl = new URL('/stores/', Astro.site);
 const mapUrl = storeMapPath(store.id);
@@ -209,25 +203,16 @@ const structuredData = {
         ))}
       </section>
     )}
-
-    {workPreview && (
-      <section class="store-work-feature" aria-label="設計師作品">
-        <div class="store-work-preview-divider" aria-hidden="true">✦</div>
-        <a class="store-work-preview-link" href={workPreview.href} target="_blank" rel="noopener"
-          aria-label={`查看${workPreview.designerName}的作品「${workPreview.label}」（在新分頁開啟）`}>
-          <span class="store-work-preview-cover">
-            <img src={workPreview.image} alt={workPreview.label} width={workPreview.width} height={workPreview.height} loading="lazy" decoding="async" />
-            <span class="store-work-preview-designer">{workPreview.designerName}</span>
-          </span>
-        </a>
-      </section>
-    )}
   </article>
   <StoreShareDialog />
 </SiteLayout>
 
 <script>
   import { createStoreShare } from '../../../features/store-share.js';
+  import { appendStoreWorkPreview } from '../../../features/store-work-preview.js';
+
+  const profile = document.querySelector<HTMLElement>('.store-profile');
+  if (profile) void appendStoreWorkPreview(profile);
 
   const button = document.querySelector<HTMLButtonElement>('[data-store-share-id]');
   const dialog = document.querySelector<HTMLDialogElement>('#store-share-dialog');
@@ -276,5 +261,4 @@ const structuredData = {
   blockquote { padding-inline-start: .95rem; border-inline-start: 2px solid var(--line); }
   .store-record a { display: inline-block; margin-top: .6rem; }
   .store-record img { width: min(13rem, 100%); height: auto; border-radius: .4rem; }
-  .store-work-feature { max-width: 20rem; margin: clamp(1.75rem, 4.5vw, 3.25rem) auto 0; }
 </style>

@@ -1,6 +1,5 @@
 ---
 import StoreShareDialog from './StoreShareDialog.astro';
-import { votingHallStoreWorkPreviews } from '../lib/oshen-store-work-previews';
 import { categories, stores, storeCategoryPath, storeCity, storePath } from '../lib/oshen-stores';
 import type { StoreEvent } from '../lib/store-events.js';
 import '../../public/css/fullscreen-scroll.css';
@@ -55,8 +54,7 @@ const storesByCity = [...byCity].sort(([a], [b]) => compareText(a, b));
       <select id="store-event-select" class="store-input"></select>
     </nav>
   )}
-  <div id="stores-content" aria-label="店家目錄" data-category={category} data-event-id={event?.id}
-    data-work-previews={JSON.stringify(votingHallStoreWorkPreviews)}>
+  <div id="stores-content" aria-label="店家目錄" data-category={category} data-event-id={event?.id}>
     <p role="status">正在載入店家資料…</p>
   </div>
   <dialog id="store-about-dialog" class="store-info-dialog" aria-labelledby="store-about-title">
@@ -127,7 +125,7 @@ const storesByCity = [...byCity].sort(([a], [b]) => compareText(a, b));
   import { mountStores } from '../features/stores.js';
 
   const directory = document.querySelector<HTMLElement>('#stores-content');
-  if (directory) void mountStores(directory, JSON.parse(directory.dataset.workPreviews || '[]'), directory.dataset.category || '');
+  if (directory) void mountStores(directory);
 </script>
 
 <style>
