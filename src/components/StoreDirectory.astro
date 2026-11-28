@@ -1,6 +1,6 @@
 ---
 import StoreShareDialog from './StoreShareDialog.astro';
-import { storeWorkPreviews } from '../lib/oshen-store-work-previews';
+import { votingHallStoreWorkPreviews } from '../lib/oshen-store-work-previews';
 import { categories, stores, storeCategoryPath, storeCity, storePath } from '../lib/oshen-stores';
 import type { StoreEvent } from '../lib/store-events.js';
 import '../../public/css/fullscreen-scroll.css';
@@ -9,7 +9,6 @@ import '../styles/store-work-preview.css';
 
 interface Props { category?: string; event?: StoreEvent }
 const { category, event } = Astro.props;
-const showDesignerWorkPreviews = false;
 const title = event?.name || category || '發光的店家';
 const description = '發光的店家整理台灣各地的小店與生活服務，可搜尋店家並查看到訪資訊與地圖位置。';
 const eventStores = event && new Set(event.groups.flatMap(group => group.storeIds));
@@ -57,7 +56,7 @@ const storesByCity = [...byCity].sort(([a], [b]) => compareText(a, b));
     </nav>
   )}
   <div id="stores-content" aria-label="店家目錄" data-category={category} data-event-id={event?.id}
-    data-work-previews={showDesignerWorkPreviews ? JSON.stringify(storeWorkPreviews) : undefined}>
+    data-work-previews={JSON.stringify(votingHallStoreWorkPreviews)}>
     <p role="status">正在載入店家資料…</p>
   </div>
   <dialog id="store-about-dialog" class="store-info-dialog" aria-labelledby="store-about-title">
