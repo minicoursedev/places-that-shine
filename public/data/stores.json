@@ -9436,6 +9436,39 @@
         "checkedAt": "2026-11-28",
         "note": "官方帳號 somsugar_studio 的 hd_profile_pic_versions"
       }
+    },
+    {
+      "id": "1856zyc-tianmu",
+      "name": "鄭怡成香舖（天母會館）",
+      "address": "臺北市士林區士東路200巷43號",
+      "addressSource": "https://www.1856zyc.com/",
+      "category": "選物雜貨",
+      "latlng": {
+        "lat": 25.111053394954,
+        "lng": 121.53399301573
+      },
+      "coordinateSource": "https://raw.githubusercontent.com/zhengda/taiwan-address-data/master/roads/63-%E5%A3%AB%E6%9D%B1%E8%B7%AF.csv",
+      "coordinateNote": "OpenStreetMap 查詢未取得可核對的門牌點。採用標示源自 TGOS 的公開門牌 CSV，取臺北市士林區三玉里4鄰士東路200巷43號的 X（經度）與 Y（緯度）。門牌與品牌官網及一卡通店家名單一致；此為門牌定位點，非入口實測點。",
+      "visitNote": "天母會館採預約制，請至少提前兩天聯繫。提供沉香品鑑及手工製香課程；聯絡電話：0989-099-434。",
+      "visitUrl": "https://lin.ee/4Dmv5jH",
+      "social": {
+        "facebook": "https://www.facebook.com/1856ZYC/",
+        "instagram": "https://www.instagram.com/1856zyc/",
+        "threads": "https://www.threads.com/@1856zyc_insence",
+        "website": "https://www.1856zyc.com/"
+      },
+      "shopPhoto": {
+        "url": "./media/library/1856zyc-tianmu/logo.webp?v=cd0cb8f5951678ed",
+        "source": "https://www.threads.com/@1856zyc_insence",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-28",
+        "note": "官方帳號 1856zyc_insence 的 hd_profile_pic_versions"
+      },
+      "giftStatus": "可能有小物",
+      "verification": false,
+      "disabled": false,
+      "verificationNote": "指定 Threads 帳號依伺服器回傳確認為鄭怡成香舖。品牌官網明列天母會館對外預約地址及提前兩天預約的規則，一卡通公開店家清單亦列士東路200巷43號。Facebook 與 Instagram 由官網連出的品牌賣貨便（https://myship.7-11.com.tw/general/detail/GM2409203665979）確認；課程預約連結取自品牌導覽頁（https://linkgoods.com/1856zyc）。依香品及香器專賣業態沿用選物雜貨。已比對名冊（含下架紀錄）的店名、地址與社群，未發現重複。"
     }
   ]
 }
