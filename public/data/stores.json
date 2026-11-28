@@ -2380,34 +2380,6 @@
       "verificationNote": "官方 Instagram 自介為貴貴腹地，說明社區型咖哩咖啡家庭餐廳並連結 Threads；官方 Facebook 列中西區建業街18號，亦連結相同 Instagram。Facebook 營業時段標示約5年前更新且與其他資料公休日不同，未填定營業時間。"
     },
     {
-      "id": "chen-ting-fei-campaign-headquarters",
-      "name": "陳亭妃競選總部",
-      "address": "台南市永康區水漾路520號",
-      "category": "洋流服務站",
-      "latlng": {
-        "lat": 23.0515394,
-        "lng": 120.2480818
-      },
-      "serviceType": "市長候選人",
-      "shopPhoto": {
-        "url": "./media/library/chen-ting-fei-campaign-headquarters/logo.webp",
-        "status": "verified"
-      },
-      "social": {
-        "instagram": "https://www.instagram.com/chen_tingfei/",
-        "threads": "https://www.threads.com/@chen_tingfei"
-      },
-      "verification": true,
-      "mapMarker": {
-        "image": "/media/store-markers/chen-ting-fei-marker-3-type-v1.webp",
-        "width": 96,
-        "height": 135,
-        "artwork": true,
-        "type": "市長候選人"
-      },
-      "verificationNote": "使用者提供店名、地址及官方社群，指定收錄並沿用蔡麗青國安海佃服務處的人像地圖標記展示。"
-    },
-    {
       "id": "hele-sports-yidong",
       "name": "禾樂體育用品社",
       "address": "台南市東區怡東路79號",
