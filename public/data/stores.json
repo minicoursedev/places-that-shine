@@ -9263,6 +9263,34 @@
         "checkedAt": "2026-11-28",
         "note": "官方帳號 famiii.cafe 的 hd_profile_pic_versions"
       }
+    },
+    {
+      "id": "webberhood",
+      "name": "WEBBERHOOD COFFEE ROASTERS",
+      "address": "桃園市桃園區國強一街172號1樓",
+      "category": "咖啡廳",
+      "latlng": {
+        "lat": 24.9926001,
+        "lng": 121.2837943
+      },
+      "coordinateSource": "https://www.google.com.tw/maps/place/WEBBERHOOD%2BCOFFEE%2BROASTERS/data=!4m7!3m6!1s0x34681f6ceb2f036b:0x92a42bcee358dd4c!8m2!3d24.9926001!4d121.2837943!16s%2Fg%2F11f3x8rwg8!19sChIJawMv62wfaDQRTN1Y484rpJI?authuser=0&hl=zh-TW&rclk=1",
+      "coordinateNote": "取自 Google 地圖同名店家地點網址的 !3d 與 !4d，並與官方 Threads 自介及連到該地點的店家頁核對國強一街172號1樓。",
+      "social": {
+        "facebook": "https://www.facebook.com/webberhood/",
+        "instagram": "https://www.instagram.com/webberhood/",
+        "threads": "https://www.threads.com/@webberhood"
+      },
+      "verification": false,
+      "disabled": false,
+      "giftStatus": "可能有小物",
+      "shopPhoto": {
+        "url": "./media/library/webberhood/logo.webp?v=957f333b52f5e970",
+        "source": "https://www.threads.com/@webberhood",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-28",
+        "note": "官方帳號 webberhood 的 hd_profile_pic_versions"
+      }
     }
   ]
 }
