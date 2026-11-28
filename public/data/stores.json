@@ -1188,40 +1188,6 @@
       "verificationNote": "一起companio bakery的10/9送達海報清單／同串追加回覆明列店名地址；主代理放大原帖照片，確認海報上寫「你的市長沈伯洋」，並以供應者10/6洋流海報原文交叉核對。Google商家資訊核地址及店型。非店家自身公告，不代表即時庫存。2026-10-21 核對使用者提供的 Threads @yutingztw，公開個人頁名稱為 Yuting Zheng，自介明列「荷芯藥局小幫手」及「台南市北區育德路27號」，與既有店名地址一致，補入店家小幫手公開帳號。未取得可確認的 Facebook、Instagram 或個人檔案頭像，維持原欄位；本次未取得新的官方營業時段，保留既有營業時間及查證日期。"
     },
     {
-      "id": "hsiao-chih-yuan-heshun-service-office",
-      "name": "蕭智元",
-      "address": "台南市北區育德路27號",
-      "category": "洋流服務站",
-      "latlng": {
-        "lat": 23.006321,
-        "lng": 120.2031105
-      },
-      "visitNote": "和順里里長 · 1號",
-      "serviceType": "和順里里長",
-      "openingHours": {
-        "status": "unverified",
-        "text": "服務時間請洽服務站。"
-      },
-      "shopPhoto": {
-        "url": "./media/library/hexin-pharmacy/logo.webp",
-        "status": "verified"
-      },
-      "social": {
-        "facebook": "https://www.facebook.com/profile.php?id=61555371133069",
-        "threads": "https://www.threads.com/@yutingztw"
-      },
-      "verification": true,
-      "mapMarker": {
-        "image": "/media/store-markers/hexin-pharmacy-marker-1-green-v1.webp",
-        "width": 120,
-        "height": 169,
-        "artwork": true,
-        "type": "和順里里長",
-        "blankTypeFooter": true
-      },
-      "verificationNote": "2026-10-31 使用者指定此地址同時有荷芯藥局與蕭智元服務站，分開收錄；服務站名稱為蕭智元，編號1號，標籤為和順里里長。沿用同址既有座標及蕭智元圖片，不重新查證頭像。"
-    },
-    {
       "id": "dash-pound-cake",
       "name": "大囍咖啡｜磅蛋糕",
       "address": "台南市中西區府前路一段129號",
@@ -1883,41 +1849,6 @@
       "verificationNote": "使用者提供 Threads 帳號指定收錄；官方 Instagram 列相同 Threads 帳號與店名，官方 Facebook 列完整地址。小物僅呈現靜態可能有小物，不代表即時庫存。"
     },
     {
-      "id": "tsai-li-ching-guoan-haidian",
-      "name": "蔡麗青服務處",
-      "address": "臺南市安南區青砂街1段66號",
-      "category": "洋流服務站",
-      "latlng": {
-        "lat": 23.0635655,
-        "lng": 120.127951
-      },
-      "visitNote": "第6選區市議員 · 1號",
-      "serviceType": "第6選區市議員",
-      "openingHours": {
-        "status": "unverified",
-        "text": "服務時間請洽服務處社群。"
-      },
-      "shopPhoto": {
-        "url": "./media/library/tsai-li-ching-guoan-haidian/logo.webp",
-        "status": "verified"
-      },
-      "social": {
-        "facebook": "https://www.facebook.com/liching666/",
-        "instagram": "https://www.instagram.com/kisschin66/",
-        "threads": "https://www.threads.com/@kisschin66"
-      },
-      "verification": true,
-      "mapMarker": {
-        "image": "/media/store-markers/tsai-li-ching-marker-1-type-v1.webp",
-        "width": 120,
-        "height": 169,
-        "artwork": true,
-        "type": "第6選區市議員",
-        "blankTypeFooter": true
-      },
-      "verificationNote": "2026-10-27 使用者指定以表格青砂街一段66號取代原國安海佃服務處地址，臺南市政府公務通訊錄亦列此址；已同步核對新門牌座標，保留原ID。 2026-10-27 社群逐平台複核：Facebook已確認；Instagram已確認；Threads已確認。依公開搜尋索引、官方來源或本人頁面實際外連交叉核對；逐平台證據與存取限制詳見本次查證紀錄。"
-    },
-    {
       "id": "full-yakiniku-annan",
       "name": "花燒肉個人燒肉 台南安南店",
       "address": "台南市安南區安中路一段727號",
@@ -2420,37 +2351,6 @@
       "verification": true,
       "visitNote": "11月店休：9、10、24、25\nTAIWAN IS TAIWAN. \n𓅪 \n🍰 招牌是生巧克力蛋糕。\n🍰 小盒子無法回覆訊息。\n🍰 請加 line， ID @ganachoco",
       "verificationNote": "使用者指定收錄。官方網站及門市頁確認店名與懷恩街2-10號地址；Facebook、Instagram 連結取自官網。"
-    },
-    {
-      "id": "lin-yi-ting-service-office",
-      "name": "林依婷服務處",
-      "address": "台南市安平區平通路66號",
-      "category": "洋流服務站",
-      "latlng": {
-        "lat": 22.9924128,
-        "lng": 120.181408
-      },
-      "visitNote": "第9選區市議員 · 2號",
-      "serviceType": "第9選區市議員",
-      "shopPhoto": {
-        "url": "./media/library/lin-yi-ting-service-office/logo.webp",
-        "status": "verified"
-      },
-      "social": {
-        "facebook": "https://www.facebook.com/01ting/",
-        "instagram": "https://www.instagram.com/yitinglin_123/",
-        "threads": "https://www.threads.com/@yitinglin_123"
-      },
-      "verification": true,
-      "mapMarker": {
-        "image": "/media/store-markers/lin-yi-ting-marker-2-pink-v2.webp",
-        "width": 120,
-        "height": 169,
-        "artwork": true,
-        "type": "第9選區市議員",
-        "blankTypeFooter": true
-      },
-      "verificationNote": "使用者指定收錄服務處並提供地址及官方 Threads；臺南市議會第4屆市議員通訊錄核對林依婷服務處地址為安平區平通路66號。沿用既有洋流服務站分類。 2026-10-27 社群逐平台複核：Facebook已確認；Instagram已確認；Threads已確認。依公開搜尋索引、官方來源或本人頁面實際外連交叉核對；逐平台證據與存取限制詳見本次查證紀錄。"
     },
     {
       "id": "zhijue-ximen",
@@ -3855,40 +3755,6 @@
         "height": 66
       },
       "verificationNote": "使用者提供Facebook、Threads、地址及指定分類「洋流服務處」（統一為洋流服務站），沿用「洋流服務站」分類。本次比對全部既有紀錄（含disabled）與待查資料，確認為既有letsgolin-service-office，更新原紀錄、不重複新增；verification及disabled保留原值。查證子代理與主代理讀取立法院第11屆林俊憲委員官方頁，核對中西區服務處為臺南市中西區永華路一段305號、專線06-299-8266；官方LINE認證帳號亦列相同門牌。指定Facebook及Threads公開頁均為林俊憲，Threads另明確外連指定Facebook。地址未變，保留既有OSM門牌座標。未取得Instagram官方外連證據，暫留空。"
-    },
-    {
-      "id": "teamshenchennan-service-office",
-      "name": "沈震南北區服務處",
-      "address": "台南市北區和緯路二段149號",
-      "category": "洋流服務站",
-      "latlng": {
-        "lat": 23.0117246,
-        "lng": 120.2071293
-      },
-      "visitNote": "第8選區市議員 · 11號",
-      "serviceType": "第8選區市議員",
-      "openingHours": {
-        "status": "unverified",
-        "text": "固定服務時間待確認，請洽官方Threads。"
-      },
-      "shopPhoto": {
-        "url": "./media/library/teamshenchennan-service-office/logo.webp",
-        "status": "verified"
-      },
-      "social": {
-        "facebook": "https://www.facebook.com/61587722931384/",
-        "threads": "https://www.threads.com/@teamshenchennan"
-      },
-      "verification": true,
-      "mapMarker": {
-        "image": "/media/store-markers/shen-chen-nan-marker-11-type-v1.webp",
-        "width": 120,
-        "height": 169,
-        "artwork": true,
-        "type": "第8選區市議員",
-        "blankTypeFooter": true
-      },
-      "verificationNote": "使用者提供沈震南Threads帳號並指定「洋流服務處」分類，沿用既有「洋流服務站」分類；新增店家verification依本次指示設為JSON布林值true。查證子代理直接讀取官方Threads公開頁，確認姓名沈震南、自介為中西區及北區市議員參選人。本人洋流飄帶公告Deny2yeFI4Z明列「上升流地點：臺南市北區和緯路二段149號」，主代理另讀原頁核對；本人貼文DVduibvk0eL另將同址列為震東、震南北區服務處。本次僅收錄明確公告的北區洋流據點，不將中西區另一服務處或小北夜市成立大會場地另增為店家。已比對全部既有紀錄（含disabled）及待查資料的姓名、地址與社群，未發現重複；既有林俊憲服務處為不同人物及地址，保留原紀錄。 2026-10-27 社群逐平台複核：Facebook已確認；Instagram本次證據不足，留空；Threads已確認。依公開搜尋索引、官方來源或本人頁面實際外連交叉核對；逐平台證據與存取限制詳見本次查證紀錄。"
     },
     {
       "id": "twocatsapartment-tainan",
