@@ -4,7 +4,7 @@ import { resolve } from 'node:path';
 import StoreShareDialog from '../../../components/StoreShareDialog.astro';
 import SiteLayout from '../../../layouts/SiteLayout.astro';
 import { storeMapPath } from '../../../lib/oshen-store-links.mjs';
-import { storeWorkPreviews } from '../../../lib/oshen-store-work-previews';
+import { votingHallStoreWorkPreviews } from '../../../lib/oshen-store-work-previews';
 import { stores, storePath, storeCategoryPath } from '../../../lib/oshen-stores';
 import { serializeStructuredData } from '../../../../public/designers/js/profile-seo.js';
 import '../../../styles/store-work-preview.css';
@@ -18,8 +18,8 @@ export function getStaticPaths() {
 const { store } = Astro.props;
 let previewHash = 0;
 for (const character of store.id) previewHash = Math.imul(previewHash, 31) + character.charCodeAt(0);
-const workPreview = storeWorkPreviews.length
-  ? storeWorkPreviews[(previewHash >>> 0) % storeWorkPreviews.length]
+const workPreview = votingHallStoreWorkPreviews.length
+  ? votingHallStoreWorkPreviews[(previewHash >>> 0) % votingHallStoreWorkPreviews.length]
   : undefined;
 const { name, address, category, serviceType, openingHours, visitNote, socialLinks, latlng } = store;
 const directoryUrl = new URL('/stores/', Astro.site);
