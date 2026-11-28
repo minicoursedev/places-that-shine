@@ -7637,7 +7637,15 @@
       },
       "verification": false,
       "verificationNote": "收錄自「欣好店家-1122」",
-      "visitNote": "推薦品項：日韓歐美食品、服飾、生活用品、雞蛋自取。"
+      "visitNote": "推薦品項：日韓歐美食品、服飾、生活用品、雞蛋自取。",
+      "shopPhoto": {
+        "url": "./media/library/achun-2079/logo.webp?v=757793f6e9dcf290",
+        "source": "https://www.threads.com/@ownlai_studio",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-28",
+        "note": "官方帳號 ownlai_studio 的 hd_profile_pic_versions"
+      }
     },
     {
       "id": "achun-1998",
