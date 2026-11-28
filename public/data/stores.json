@@ -9524,6 +9524,35 @@
         "checkedAt": "2026-11-28",
         "note": "官方帳號 meetmeetcafe 的 hd_profile_pic_versions"
       }
+    },
+    {
+      "id": "huiyu-shokutaku",
+      "name": "洄嶼",
+      "address": "臺中市東區互助街40號",
+      "addressSource": "https://www.threads.com/@huiyu_shokutaku",
+      "category": "正餐",
+      "latlng": {
+        "lat": 24.133770717683,
+        "lng": 120.68436069606
+      },
+      "coordinateSource": "https://raw.githubusercontent.com/zhengda/taiwan-address-data/master/roads/66-%E4%BA%92%E5%8A%A9%E8%A1%97.csv",
+      "coordinateNote": "OpenStreetMap 未取得可核對的門牌點。採用標示源自 TGOS 的公開 CSV，以臺中市東區新庄里14鄰互助街40號所列的 X 為經度、Y 為緯度。門牌與店家官方 Threads 簡介一致；此為門牌定位，非店家入口實測點。",
+      "visitNote": "供應早午餐、咖啡與甜點，也提供外燴、包場及客製餐盒。",
+      "social": {
+        "threads": "https://www.threads.com/@huiyu_shokutaku"
+      },
+      "shopPhoto": {
+        "url": "./media/library/huiyu-shokutaku/logo.webp?v=76f807f4d02229ab",
+        "source": "https://www.threads.com/@huiyu_shokutaku",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-28",
+        "note": "官方帳號 huiyu_shokutaku 的 hd_profile_pic_versions"
+      },
+      "giftStatus": "可能有小物",
+      "verification": true,
+      "disabled": false,
+      "verificationNote": "使用者指定 Threads 帳號收錄。依伺服器查證的官方個人頁，店名為洄嶼，地址為臺中市東區互助街40號；依簡介所列早午餐及客製餐盒歸為正餐。已比對名冊（含下架紀錄）的店名、地址及社群帳號，未發現重複。未查得可確認的官方 Facebook 或 Instagram。"
     }
   ]
 }
