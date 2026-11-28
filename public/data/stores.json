@@ -2157,14 +2157,19 @@
         "text": "營業時間請洽店家，公開來源時段與公休日不一致。"
       },
       "shopPhoto": {
-        "url": "./media/library/zeng-jia-xinying/logo.webp",
-        "status": "verified"
+        "url": "./media/library/zeng-jia-xinying/logo.webp?v=bcd9c47cab98dab6",
+        "source": "https://www.threads.com/@2020tseng110",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-28",
+        "note": "官方帳號 2020tseng110 的 hd_profile_pic_versions"
       },
       "social": {
-        "facebook": "https://www.facebook.com/曾家小館-112772363829055"
+        "facebook": "https://www.facebook.com/曾家小館-112772363829055",
+        "threads": "https://www.threads.com/@2020tseng110"
       },
       "verification": true,
-      "verificationNote": "地址由使用者提供，台南美食地圖與土地銀行特店清單亦列民族路110號。Uber Eats列112號，差異尚未確認，保留使用者提供地址。Facebook由台南美食地圖同名、同址店家項目連結確認，未能直接讀取粉專現況；Instagram與Threads官方帳號未確認。"
+      "verificationNote": "地址由使用者指定；臺南市政府《2021大新營嘉年華活動特約店家清冊》及台南美食地圖同列民族路110號，既有查證亦記錄土地銀行特店清單列110號。Uber Eats 列112號，差異尚未確認，保留指定地址。Facebook 沿用台南美食地圖同名、同址店家項目所連結的粉專，本次未能直接讀取粉專內容。Threads 由伺服器查證為官方帳號 @2020tseng110；Instagram 尚未確認。"
     },
     {
       "id": "dancing-sheep-coffee",
