@@ -8849,10 +8849,20 @@
         "lng": 120.6606
       },
       "coordinateSource": "https://maps.app.goo.gl/E8eTHeo8rD3e2Mo6A",
-      "social": {},
+      "social": {
+        "threads": "https://www.threads.com/@47canteen"
+      },
       "verification": false,
-      "verificationNote": "收錄自「欣好店家-1122」",
-      "visitNote": "推薦品項：蕃茄雞肉馬薩拉、紅酒燉牛肉、阿嬤欸紅燒肉。\n採預約制，營業時段為週六、週日晚餐。"
+      "verificationNote": "收錄自「欣好店家-1122」。使用者指定補入 Threads；伺服器查證 @47canteen 的公開個人頁名稱為「肆柒 預約制料理食堂」，簡介列臺中市西區五權六街79-2號，與指定店家頁及台派店家名錄（第2160筆）的門牌相符，確認為既有紀錄。未取得可確認的官方 Facebook 或 Instagram 網址。",
+      "visitNote": "推薦品項：蕃茄雞肉馬薩拉、紅酒燉牛肉、阿嬤欸紅燒肉。\n採預約制，營業時段為週六、週日晚餐。",
+      "shopPhoto": {
+        "url": "./media/library/achun-1479/logo.webp?v=d3ee81869575dca2",
+        "source": "https://www.threads.com/@47canteen",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-28",
+        "note": "官方帳號 47canteen 的 hd_profile_pic_versions"
+      }
     },
     {
       "id": "achun-1478",
