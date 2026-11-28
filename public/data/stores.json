@@ -9350,6 +9350,35 @@
         "checkedAt": "2026-11-28",
         "note": "官方帳號 thirtyeightcoffeeroaster 的 hd_profile_pic_versions"
       }
+    },
+    {
+      "id": "katasumi-betogether",
+      "name": "隅生咖啡工作室 Katasumi Cafe",
+      "address": "新北市板橋區中正路250巷40號",
+      "category": "咖啡廳",
+      "latlng": {
+        "lat": 25.0194693,
+        "lng": 121.4571228
+      },
+      "coordinateSource": "https://maps.app.goo.gl/avNFcU3mNyY9biqX9",
+      "coordinateNote": "導航連結轉址至隅生咖啡工作室的 Google Maps 地點頁，取 !3d25.0194693 與 !4d121.4571228；門牌與 Threads 個人頁及店家官網一致。",
+      "social": {
+        "facebook": "https://www.facebook.com/katasumi343/",
+        "instagram": "https://www.instagram.com/katasumi_betogether/",
+        "threads": "https://www.threads.com/@katasumi_betogether",
+        "website": "https://katasumi-betogether.com/"
+      },
+      "giftStatus": "可能有小物",
+      "verification": false,
+      "disabled": false,
+      "shopPhoto": {
+        "url": "./media/library/katasumi-betogether/logo.webp?v=6aa91b283786768b",
+        "source": "https://www.threads.com/@katasumi_betogether",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-28",
+        "note": "官方帳號 katasumi_betogether 的 hd_profile_pic_versions"
+      }
     }
   ]
 }
