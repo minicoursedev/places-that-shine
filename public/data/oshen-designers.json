@@ -16298,6 +16298,14 @@
           "url": "https://www.instagram.com/guagua_0727/",
           "label": "作者 Gua（Instagram）",
           "platform": "ig"
+        },
+        {
+          "url": "https://line.me/S/shop/sticker/author/759943/new?lang=zh-Hant&utm_source=gnsh_staut",
+          "label": "LINE 貼圖作品集"
+        },
+        {
+          "url": "https://store.line.me/themeshop/author/988774",
+          "label": "LINE 主題作品集"
         }
       ]
     },
@@ -16334,7 +16342,17 @@
         "platform": "threads",
         "status": "verified",
         "checkedAt": "2026-11-27"
-      }
+      },
+      "links": [
+        {
+          "url": "https://twitter.com/pannkaka1515",
+          "label": "Twitter｜日常生活本"
+        },
+        {
+          "url": "https://bsky.app/profile/pannkaka1515.bsky.social",
+          "label": "Bluesky｜學習練習帳"
+        }
+      ]
     },
     {
       "id": "wagapokega",
@@ -16686,7 +16704,7 @@
       "disabled": false,
       "verification": true,
       "social": {
-        "fb": "",
+        "fb": "https://www.facebook.com/blaujillustration",
         "threads": "https://www.threads.com/@blau.j024",
         "ig": "https://www.instagram.com/blau.j024/",
         "web": "https://linktr.ee/blau.j"
@@ -16797,7 +16815,7 @@
       "disabled": false,
       "verification": true,
       "social": {
-        "fb": "",
+        "fb": "https://www.facebook.com/NRabbit.N2/",
         "threads": "https://www.threads.com/@nrabbit_n2",
         "ig": "https://www.instagram.com/nrabbit_n2/",
         "web": "https://portaly.cc/nrabbit_n2"
@@ -16828,8 +16846,12 @@
           "label": "🈺賣貨便·耶誕禮包週年福袋🎁活動開跑.ᐟ‪.ᐟ‪.ᐟ‪"
         },
         {
-          "url": "https://www.retrojamtaiwan.com/products/nenngajou-2026-27-003",
-          "label": "🐑𝟐𝟎𝟐𝟕年賀狀·販售中"
+          "url": "https://www.youtube.com/@NRabbit_N2",
+          "label": "YouTube 頻道"
+        },
+        {
+          "url": "https://lin.ee/PxDIuqr",
+          "label": "N兔的 LINE"
         }
       ]
     },
@@ -16842,7 +16864,7 @@
       "disabled": false,
       "verification": true,
       "social": {
-        "fb": "",
+        "fb": "https://www.facebook.com/shingsculpture",
         "threads": "https://www.threads.com/@shing__art",
         "ig": "https://www.instagram.com/shing__art/",
         "web": "https://linktr.ee/shing_art"
@@ -16872,6 +16894,10 @@
           "url": "https://www.instagram.com/shing_walldraw/",
           "label": "黑板畫、壁畫（Instagram）",
           "platform": "ig"
+        },
+        {
+          "url": "https://store.line.me/stickershop/author/2423175/zh-Hant",
+          "label": "LINE 貼圖作品集"
         }
       ]
     },
@@ -16922,16 +16948,28 @@
       },
       "links": [
         {
-          "url": "https://tw.myrenta.com/item/943571",
-          "label": "四美怪談"
-        },
-        {
-          "url": "https://www.creative-comic.tw/book/478/content",
-          "label": "公園獅咖啡館_妖島綺麗幻夢譚"
-        },
-        {
           "url": "https://linktr.ee/darkbooker666",
           "label": "各社群連結"
+        },
+        {
+          "url": "https://www.plurk.com/darkbookman",
+          "label": "Plurk"
+        },
+        {
+          "url": "https://www.pixiv.net/users/30494393",
+          "label": "pixiv 作品集"
+        },
+        {
+          "url": "https://bsky.app/profile/darkbooker666.bsky.social",
+          "label": "Bluesky"
+        },
+        {
+          "url": "https://www.twitch.tv/darkbooker666",
+          "label": "Twitch 頻道"
+        },
+        {
+          "url": "https://x.com/darkbooker666",
+          "label": "X"
         }
       ]
     },
@@ -16944,7 +16982,7 @@
       "disabled": false,
       "verification": true,
       "social": {
-        "fb": "",
+        "fb": "https://www.facebook.com/eatinglife22",
         "threads": "https://www.threads.com/@eatinglife22",
         "ig": "https://www.instagram.com/eatinglife22/",
         "web": "https://linkgoods.com/eatinglife22"
@@ -16985,6 +17023,14 @@
           "url": "https://www.instagram.com/ethandmade_/",
           "label": "正在吃手作坊（Instagram）",
           "platform": "ig"
+        },
+        {
+          "url": "https://sites.google.com/view/eatinglife22",
+          "label": "吃吃的客製化"
+        },
+        {
+          "url": "https://line.me/R/ti/p/@377thbfl?oat_content=url",
+          "label": "LINE 官方帳號"
         }
       ]
     },
@@ -17021,7 +17067,13 @@
         "platform": "threads",
         "status": "verified",
         "checkedAt": "2026-11-27"
-      }
+      },
+      "links": [
+        {
+          "url": "https://x.com/omeletmist",
+          "label": "X"
+        }
+      ]
     },
     {
       "id": "sleepylion-love",
