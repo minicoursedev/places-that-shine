@@ -17589,6 +17589,42 @@
         "status": "verified",
         "checkedAt": "2026-11-27"
       }
+    },
+    {
+      "id": "moi-gov-tw",
+      "name": "內政部",
+      "description": "人民管家內政部，\n提供最新鮮、最即時的內政資訊。",
+      "category": "創作者",
+      "entityType": "Organization",
+      "hall": "V",
+      "disabled": false,
+      "verification": true,
+      "social": {
+        "fb": "",
+        "threads": "https://www.threads.com/@moi.gov.tw",
+        "ig": "",
+        "web": ""
+      },
+      "logo": {
+        "url": "/media/library/moi-gov-tw/logo.webp?v=3e8d8e0d340a5606",
+        "source": "https://www.threads.com/@moi.gov.tw",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-28"
+      },
+      "productImages": [
+        {
+          "id": "moi-gov-tw-1",
+          "halls": [
+            "V"
+          ],
+          "title": "投票當天，最怕什麼人？",
+          "alt": "三格漫畫依序描繪忘記帶印章、投票通知單和身分證時的情景。圖底有內政部標誌。",
+          "caption": "提醒大家身分證要帶",
+          "url": "/media/library/moi-gov-tw/1.webp?v=5640c594cb97b884",
+          "source": "https://www.threads.com/@moi.gov.tw/post/DgRNBCPAKL4/media"
+        }
+      ]
     }
   ],
   "boothOrder": {
@@ -17811,7 +17847,8 @@
       "kairos-flo",
       "jiao-ah",
       "uncle-george2-0",
-      "angie-art1213"
+      "angie-art1213",
+      "moi-gov-tw"
     ]
   }
 }
