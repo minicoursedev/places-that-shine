@@ -319,7 +319,7 @@ function createStorePin(L, shop, largeServiceMarkers) {
   };
 }
 
-function createStoreSheet(panel, container, renderStoreDetails, mobile) {
+function createStoreSheet(panel, container, renderStoreDetails, mobile, onClose) {
   const sheet = element('section', 'store-sheet');
   sheet.hidden = true;
   sheet.setAttribute('aria-labelledby', 'store-sheet-title');
@@ -410,8 +410,9 @@ function createStoreSheet(panel, container, renderStoreDetails, mobile) {
     setExpanded(false);
     container.classList.remove('has-store-sheet');
     content.replaceChildren();
-    if (restoreFocus) (selected.trigger || selected.marker?.getElement())?.focus({ preventScroll: true });
+    const focusTarget = restoreFocus ? selected.trigger || selected.marker?.getElement() || container : null;
     selected = null;
+    onClose(focusTarget);
   }
 
   closeButton.addEventListener('click', () => close(true));
@@ -452,6 +453,11 @@ async function createStoreMap(container, layout, message, sortCenterButton, shee
   const map = L.map(container, { scrollWheelZoom: false, maxZoom: 19 });
   let userMarker;
   let pendingFocus;
+  let viewBeforeSheet;
+
+  map.on('movestart', () => {
+    if (container.classList.contains('has-store-sheet')) viewBeforeSheet = null;
+  });
 
   function overlayPadding() {
     const controls = layout.getBoundingClientRect();
@@ -529,6 +535,20 @@ async function createStoreMap(container, layout, message, sortCenterButton, shee
 
   return {
     closeDetails,
+    finishSheetClose(focusTarget) {
+      const previousView = viewBeforeSheet;
+      viewBeforeSheet = null;
+      const isMobile = mobile.matches;
+      if (isMobile) map.invalidateSize({ pan: false });
+      if (focusTarget) {
+        // Returning focus to a marker outside the viewport would pan the map back to it.
+        const target = isMobile && !previousView ? container : focusTarget;
+        target.focus({ preventScroll: true });
+      }
+      if (isMobile && previousView) {
+        map.setView(previousView.center, previousView.zoom, { animate: false, reset: true });
+      }
+    },
     centerPosition() {
       const center = map.getSize().add(overlayPadding()).divideBy(2);
       const { lat, lng } = map.containerPointToLatLng(center);
@@ -596,8 +616,12 @@ async function createStoreMap(container, layout, message, sortCenterButton, shee
         });
         marker.on('click', ({ trigger, center }) => {
           pendingFocus = null;
-          if (!mobile.matches && badge.classList.contains('is-selected')) return;
-          if (mobile.matches) onSelectMobileStore();
+          const isMobile = mobile.matches;
+          if (!isMobile && badge.classList.contains('is-selected')) return;
+          const previousView = isMobile && !container.classList.contains('has-store-sheet')
+            ? { center: map.getCenter(), zoom: map.getZoom() }
+            : viewBeforeSheet;
+          if (isMobile) onSelectMobileStore();
           sheet.open(shop, marker, badge, trigger);
           map.invalidateSize({ pan: false });
           if (center) centerView(center, map.getZoom());
@@ -606,6 +630,8 @@ async function createStoreMap(container, layout, message, sortCenterButton, shee
             paddingBottomRight: [35, 35],
             animate: false,
           });
+          // Keep the saved view through the pan used to reveal the selected marker.
+          viewBeforeSheet = previousView;
         });
         pins.push(marker);
       }
@@ -773,7 +799,10 @@ export async function mountStores(root, workPreviews = [], initialCategory = roo
   mapStatus.append(locationStatus, mapMessage);
   mapPanel.append(mapElement);
   mapLayout.append(listPanel);
-  const storeSheet = createStoreSheet(mapLayout, mapElement, renderStoreDetails, mobile);
+  const storeSheet = createStoreSheet(mapLayout, mapElement, renderStoreDetails, mobile, focusTarget => {
+    if (map) map.finishSheetClose(focusTarget);
+    else focusTarget?.focus({ preventScroll: true });
+  });
   mapLayout.append(mapPanel);
   root.replaceChildren(tools, feedback, retry, mapStatus, mapLayout);
 
