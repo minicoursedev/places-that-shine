@@ -8204,7 +8204,9 @@
         "lng": 120.7031244
       },
       "coordinateSource": "https://maps.app.goo.gl/5p3DTJpJXqMw6FHPA",
-      "social": {},
+      "social": {
+        "facebook": "https://www.facebook.com/100053209646677/"
+      },
       "verification": false,
       "verificationNote": "收錄自「欣好店家-1122」",
       "visitNote": "推薦品項：傳統手工被、窗簾、拉門。"
@@ -8219,7 +8221,10 @@
         "lng": 120.6966663
       },
       "coordinateSource": "https://maps.app.goo.gl/Xu11N2SdCf8YkVn28",
-      "social": {},
+      "social": {
+        "instagram": "https://www.instagram.com/musashibutadon/",
+        "facebook": "https://www.facebook.com/musashibutadon/"
+      },
       "verification": false,
       "verificationNote": "收錄自「欣好店家-1122」",
       "visitNote": "推薦品項：燒肉丼（臺灣豚）。"
@@ -8234,7 +8239,10 @@
         "lng": 120.672773
       },
       "coordinateSource": "https://maps.app.goo.gl/ZhH8NuzyVjFMmQHz7",
-      "social": {},
+      "social": {
+        "instagram": "https://www.instagram.com/mu_rong_pet/",
+        "facebook": "https://www.facebook.com/murongpet/"
+      },
       "verification": false,
       "verificationNote": "收錄自「欣好店家-1122」",
       "visitNote": "推薦品項：寵物美容、住宿。"
@@ -8251,7 +8259,8 @@
       "coordinateSource": "https://maps.app.goo.gl/U15dh2cZ9iWQ4bep9",
       "social": {
         "instagram": "https://www.instagram.com/aucb.tw/",
-        "threads": "https://www.threads.com/@aucb.tw"
+        "threads": "https://www.threads.com/@aucb.tw",
+        "facebook": "https://www.facebook.com/aucb.tw/"
       },
       "verification": false,
       "verificationNote": "收錄自「欣好店家-1122」",
@@ -8269,7 +8278,8 @@
       "coordinateSource": "https://maps.app.goo.gl/je9xy1ERafxLaa1f8",
       "social": {
         "instagram": "https://www.instagram.com/hako_nail_tw/",
-        "threads": "https://www.threads.com/@hako_nail_tw"
+        "threads": "https://www.threads.com/@hako_nail_tw",
+        "facebook": "https://www.facebook.com/100069744060396/"
       },
       "verification": false,
       "verificationNote": "收錄自「欣好店家-1122」",
