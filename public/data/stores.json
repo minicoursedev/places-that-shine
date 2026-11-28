@@ -1628,7 +1628,8 @@
       },
       "verification": true,
       "visitNote": "早安 老鐵們 喝茶嗎？",
-      "verificationNote": "使用者提供 Threads 帳號；官方帳號名稱為安平高登店（飲料、冰品、鍋燒意麵），貼文地點連結為默沫手作飲品 安平高登店，並有沈伯洋小物到貨公告。Google 商家卡與 Uber Eats 店頁地址一致；小物僅顯示靜態可能有小物。"
+      "verificationNote": "使用者提供 Threads 帳號；官方帳號名稱為安平高登店（飲料、冰品、鍋燒意麵），貼文地點連結為默沫手作飲品 安平高登店，並有沈伯洋小物到貨公告。Google 商家卡與 Uber Eats 店頁地址一致；小物僅顯示靜態可能有小物。",
+      "giftStatus": "可能有小物"
     },
     {
       "id": "show-sento-tainan",
