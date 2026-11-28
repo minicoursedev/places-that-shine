@@ -8124,7 +8124,9 @@
         "lng": 120.7053615
       },
       "coordinateSource": "https://maps.app.goo.gl/nqi8YhQig5DEpTXy7",
-      "social": {},
+      "social": {
+        "facebook": "https://www.facebook.com/100054384886158/"
+      },
       "verification": false,
       "verificationNote": "收錄自「欣好店家-1122」",
       "visitNote": "推薦品項：當歸豬腳麵線、豬心麵線、鴨肉飯、鮮蝦餛飩。"
@@ -8156,7 +8158,11 @@
         "lng": 120.6822356
       },
       "coordinateSource": "https://maps.app.goo.gl/PJFhdb7eTvNTH7sUA",
-      "social": {},
+      "social": {
+        "facebook": "https://www.facebook.com/gongong.garret/",
+        "threads": "https://www.threads.com/@gongong.studio",
+        "instagram": "https://www.instagram.com/gongong.studio/"
+      },
       "verification": false,
       "verificationNote": "收錄自「欣好店家-1122」",
       "visitNote": "推薦品項：各種酷酷的服飾。\n工作室可預約試穿。"
@@ -8171,7 +8177,11 @@
         "lng": 120.6748252
       },
       "coordinateSource": "https://maps.app.goo.gl/hDirzxsLKPttXeGq7",
-      "social": {},
+      "social": {
+        "instagram": "https://www.instagram.com/unclebarberclub/",
+        "facebook": "https://www.facebook.com/100084240981991/",
+        "threads": "https://www.threads.com/@unclebarberclub"
+      },
       "verification": false,
       "verificationNote": "收錄自「欣好店家-1122」",
       "visitNote": "推薦品項：剪、燙、染服務都很推薦。"
