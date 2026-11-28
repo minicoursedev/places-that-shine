@@ -4017,7 +4017,8 @@
         "threads": "https://www.threads.com/@sancoffeeandlife"
       },
       "verification": true,
-      "verificationNote": "使用者指定收錄。官方 Threads 顯示名為 SAN Coffee & Dessert｜咖啡 × 甜點 × 好日子，簡介明示杭州南路二段33號A2攤位及精品咖啡、台灣茶飲、手作甜點；Instagram 個人頁實際核對相同帳號、完整店名及試營運資訊。官方 Threads「來找我們」實際外連 Google Maps，該地點名為三san，地址核對為臺北市大安區杭州南路二段33號。地圖仍外連另一舊社群 santaipei，其簡介含不同舊址，未確認適用本攤位，未以舊資料覆寫現址或納入本店社群。Facebook 未能確認，故留空。"
+      "verificationNote": "使用者指定收錄。官方 Threads 顯示名為 SAN Coffee & Dessert｜咖啡 × 甜點 × 好日子，簡介明示杭州南路二段33號A2攤位及精品咖啡、台灣茶飲、手作甜點；Instagram 個人頁實際核對相同帳號、完整店名及試營運資訊。官方 Threads「來找我們」實際外連 Google Maps，該地點名為三san，地址核對為臺北市大安區杭州南路二段33號。地圖仍外連另一舊社群 santaipei，其簡介含不同舊址，未確認適用本攤位，未以舊資料覆寫現址或納入本店社群。Facebook 未能確認，故留空。",
+      "disabled": true
     },
     {
       "id": "jia-wei-motorcycle-yanshui",
@@ -4102,7 +4103,8 @@
         "facebook": "https://www.facebook.com/egg.milk.tree/"
       },
       "verification": true,
-      "verificationNote": "本次指定 Facebook 帳號與快照既有 egg-milk-tree 紀錄相符，補查原紀錄，保留既有 verification 與 disabled。已比對全部紀錄（含 disabled 店家）的店名、地址及社群帳號，未發現第二筆相同店家。官方 Facebook 公開 HTML 的 profile_name 為「蛋奶樹 蔬食專賣 | Taipei」，簡介明示蔬食、水果及自家烘焙天然酵母歐式麵包；沿用正餐分類。觀光署海外資訊與蔬福生活所列完整營業門牌及電話與既有資料相符，保留原地址與座標。未取得可確認的官方 Instagram 或 Threads 帳號，留空。"
+      "verificationNote": "本次指定 Facebook 帳號與快照既有 egg-milk-tree 紀錄相符，補查原紀錄，保留既有 verification 與 disabled。已比對全部紀錄（含 disabled 店家）的店名、地址及社群帳號，未發現第二筆相同店家。官方 Facebook 公開 HTML 的 profile_name 為「蛋奶樹 蔬食專賣 | Taipei」，簡介明示蔬食、水果及自家烘焙天然酵母歐式麵包；沿用正餐分類。觀光署海外資訊與蔬福生活所列完整營業門牌及電話與既有資料相符，保留原地址與座標。未取得可確認的官方 Instagram 或 Threads 帳號，留空。",
+      "disabled": true
     },
     {
       "id": "identitea-xinying",
@@ -5660,7 +5662,7 @@
       },
       "giftStatus": "可能有小物",
       "verification": false,
-      "disabled": false
+      "disabled": true
     },
     {
       "id": "menwen-taipei-daan",
@@ -5691,7 +5693,7 @@
       },
       "giftStatus": "可能有小物",
       "verification": false,
-      "disabled": false
+      "disabled": true
     },
     {
       "id": "menwen-tainan-anping",
@@ -5815,7 +5817,7 @@
       },
       "giftStatus": "可能有小物",
       "verification": false,
-      "disabled": false
+      "disabled": true
     },
     {
       "id": "ample-leather",
@@ -5844,7 +5846,7 @@
       },
       "giftStatus": "可能有小物",
       "verification": false,
-      "disabled": false
+      "disabled": true
     },
     {
       "id": "chef-dancingpig",
@@ -5875,7 +5877,7 @@
       },
       "giftStatus": "可能有小物",
       "verification": false,
-      "disabled": false
+      "disabled": true
     },
     {
       "id": "jiala-beefnoodle",
@@ -5891,7 +5893,8 @@
       "social": {
         "threads": "https://www.threads.com/@jiala_beefnoodle"
       },
-      "verification": false
+      "verification": false,
+      "disabled": true
     },
     {
       "id": "kauhoselect",
@@ -5923,7 +5926,8 @@
       "social": {
         "threads": "https://www.threads.com/@at.studio.mycoffee"
       },
-      "verification": false
+      "verification": false,
+      "disabled": true
     },
     {
       "id": "xiaomao-curry",
@@ -5939,7 +5943,8 @@
       "social": {
         "threads": "https://www.threads.com/@xiaomao_curry"
       },
-      "verification": false
+      "verification": false,
+      "disabled": true
     },
     {
       "id": "tuntun-booksnbooze",
@@ -5955,7 +5960,8 @@
       "social": {
         "threads": "https://www.threads.com/@tuntun_booksnbooze"
       },
-      "verification": false
+      "verification": false,
+      "disabled": true
     },
     {
       "id": "wave-flower",
@@ -5971,7 +5977,8 @@
       "social": {
         "threads": "https://www.threads.com/@wave_flower"
       },
-      "verification": false
+      "verification": false,
+      "disabled": true
     },
     {
       "id": "pegcoffee",
@@ -5987,7 +5994,8 @@
       "social": {
         "threads": "https://www.threads.com/@pegcoffee"
       },
-      "verification": false
+      "verification": false,
+      "disabled": true
     },
     {
       "id": "bonicacafe",
@@ -6003,7 +6011,8 @@
       "social": {
         "threads": "https://www.threads.com/@bonicacafe"
       },
-      "verification": false
+      "verification": false,
+      "disabled": true
     },
     {
       "id": "galicoffee",
@@ -6019,7 +6028,8 @@
       "social": {
         "threads": "https://www.threads.com/@galicoffee"
       },
-      "verification": false
+      "verification": false,
+      "disabled": true
     },
     {
       "id": "oa-cafe",
@@ -6035,7 +6045,8 @@
       "social": {
         "threads": "https://www.threads.com/@oa.cafe_"
       },
-      "verification": false
+      "verification": false,
+      "disabled": true
     },
     {
       "id": "abd-coffeeandlife",
@@ -6051,7 +6062,8 @@
       "social": {
         "threads": "https://www.threads.com/@abd_coffeeandlife"
       },
-      "verification": false
+      "verification": false,
+      "disabled": true
     },
     {
       "id": "point2coffee",
@@ -6067,7 +6079,8 @@
       "social": {
         "threads": "https://www.threads.com/@point2coffee"
       },
-      "verification": false
+      "verification": false,
+      "disabled": true
     },
     {
       "id": "op-118-2",
@@ -6083,7 +6096,8 @@
       "social": {
         "threads": "https://www.threads.com/@op_118_2"
       },
-      "verification": false
+      "verification": false,
+      "disabled": true
     },
     {
       "id": "yachingtsao",
@@ -6099,7 +6113,8 @@
       "social": {
         "threads": "https://www.threads.com/@yachingtsao"
       },
-      "verification": false
+      "verification": false,
+      "disabled": true
     },
     {
       "id": "wan-fu-hao1926",
@@ -6115,7 +6130,8 @@
       "social": {
         "threads": "https://www.threads.com/@wan_fu_hao1926"
       },
-      "verification": false
+      "verification": false,
+      "disabled": true
     },
     {
       "id": "coffeestand139",
@@ -6131,7 +6147,8 @@
       "social": {
         "threads": "https://www.threads.com/@coffeestand139"
       },
-      "verification": false
+      "verification": false,
+      "disabled": true
     },
     {
       "id": "liminal-official-tw",
@@ -6147,7 +6164,8 @@
       "social": {
         "threads": "https://www.threads.com/@liminal_official_tw"
       },
-      "verification": false
+      "verification": false,
+      "disabled": true
     },
     {
       "id": "cup-koko",
@@ -6163,7 +6181,8 @@
       "social": {
         "threads": "https://www.threads.com/@cup.koko"
       },
-      "verification": false
+      "verification": false,
+      "disabled": true
     },
     {
       "id": "rende-sanxian-temple",
@@ -6209,7 +6228,7 @@
       },
       "giftStatus": "可能有小物",
       "verification": false,
-      "disabled": false
+      "disabled": true
     },
     {
       "id": "utopia-taipei",
@@ -6222,7 +6241,8 @@
         "lng": 121.5047343
       },
       "coordinateSource": "https://data.taipei/dataset/detail?id=b7c8e724-1e98-45ee-a0bd-f3840623ed97",
-      "verification": false
+      "verification": false,
+      "disabled": true
     },
     {
       "id": "hsieh-chih-chien-campaign",
@@ -6236,7 +6256,8 @@
         "lng": 121.36319356877
       },
       "coordinateSource": "https://raw.githubusercontent.com/zhengda/taiwan-address-data/master/roads/65-%E6%96%87%E5%8C%96%E5%8C%97%E8%B7%AF.csv",
-      "verification": false
+      "verification": false,
+      "disabled": true
     },
     {
       "id": "haoke250",
@@ -6249,7 +6270,8 @@
         "lng": 121.49964642
       },
       "coordinateSource": "https://data.taipei/dataset/detail?id=b7c8e724-1e98-45ee-a0bd-f3840623ed97",
-      "verification": false
+      "verification": false,
+      "disabled": true
     },
     {
       "id": "hooah-jiangcui",
@@ -6263,7 +6285,8 @@
       },
       "coordinateSource": "https://raw.githubusercontent.com/zhengda/taiwan-address-data/master/roads/65-%E6%9D%BE%E6%9F%8F%E8%A1%97.csv",
       "verification": false,
-      "visitNote": "分店公告指引從松柏街83號獨立樓梯上2樓。"
+      "visitNote": "分店公告指引從松柏街83號獨立樓梯上2樓。",
+      "disabled": true
     },
     {
       "id": "miaozai-bar",
@@ -6276,7 +6299,8 @@
         "lng": 121.51784908
       },
       "coordinateSource": "https://data.taipei/dataset/detail?id=b7c8e724-1e98-45ee-a0bd-f3840623ed97",
-      "verification": false
+      "verification": false,
+      "disabled": true
     },
     {
       "id": "chishang-drink",
@@ -6288,7 +6312,8 @@
         "lng": 121.536234
       },
       "coordinateSource": "https://data.taipei/dataset/detail?id=b7c8e724-1e98-45ee-a0bd-f3840623ed97",
-      "verification": false
+      "verification": false,
+      "disabled": true
     },
     {
       "id": "crater-lounge",
@@ -6301,7 +6326,8 @@
         "lng": 121.50469336
       },
       "coordinateSource": "https://data.taipei/dataset/detail?id=b7c8e724-1e98-45ee-a0bd-f3840623ed97",
-      "verification": false
+      "verification": false,
+      "disabled": true
     },
     {
       "id": "achun-2333",
@@ -6314,7 +6340,8 @@
         "lng": 121.52002135219
       },
       "coordinateSource": "https://raw.githubusercontent.com/zhengda/taiwan-address-data/master/roads/65-%E6%B0%B8%E4%BA%A8%E8%B7%AF.csv",
-      "verification": false
+      "verification": false,
+      "disabled": true
     },
     {
       "id": "chi-nan-church",
@@ -6328,7 +6355,8 @@
         "lng": 121.51940674
       },
       "coordinateSource": "https://data.taipei/dataset/detail?id=b7c8e724-1e98-45ee-a0bd-f3840623ed97",
-      "verification": false
+      "verification": false,
+      "disabled": true
     },
     {
       "id": "goodman-home-to",
@@ -6342,7 +6370,8 @@
       },
       "coordinateSource": "https://data.taipei/dataset/detail?id=b7c8e724-1e98-45ee-a0bd-f3840623ed97",
       "verification": false,
-      "visitNote": "好人好室位於中山北路二段72巷18-1號3樓。好土書店位於同巷20號1樓。"
+      "visitNote": "好人好室位於中山北路二段72巷18-1號3樓。好土書店位於同巷20號1樓。",
+      "disabled": true
     },
     {
       "id": "gashapon-duke",
@@ -6355,7 +6384,8 @@
         "lng": 121.52477266
       },
       "coordinateSource": "https://data.taipei/dataset/detail?id=b7c8e724-1e98-45ee-a0bd-f3840623ed97",
-      "verification": false
+      "verification": false,
+      "disabled": true
     },
     {
       "id": "icegyaru",
@@ -6368,7 +6398,8 @@
         "lng": 121.5233259
       },
       "coordinateSource": "https://data.taipei/dataset/detail?id=b7c8e724-1e98-45ee-a0bd-f3840623ed97",
-      "verification": false
+      "verification": false,
+      "disabled": true
     },
     {
       "id": "rainma-cafe",
@@ -6381,7 +6412,8 @@
         "lng": 121.55816476
       },
       "coordinateSource": "https://data.taipei/dataset/detail?id=b7c8e724-1e98-45ee-a0bd-f3840623ed97",
-      "verification": false
+      "verification": false,
+      "disabled": true
     },
     {
       "id": "boven-magazine-library",
@@ -6395,7 +6427,8 @@
       },
       "coordinateSource": "https://data.taipei/dataset/detail?id=b7c8e724-1e98-45ee-a0bd-f3840623ed97",
       "verification": false,
-      "visitNote": "B1 為雜誌圖書館，1F 為咖啡館。"
+      "visitNote": "B1 為雜誌圖書館，1F 為咖啡館。",
+      "disabled": true
     },
     {
       "id": "nekko-bar",
@@ -6408,7 +6441,8 @@
         "lng": 121.54787224
       },
       "coordinateSource": "https://data.taipei/dataset/detail?id=b7c8e724-1e98-45ee-a0bd-f3840623ed97",
-      "verification": false
+      "verification": false,
+      "disabled": true
     },
     {
       "id": "adult-milk",
@@ -6421,7 +6455,8 @@
         "lng": 121.53511979
       },
       "coordinateSource": "https://data.taipei/dataset/detail?id=b7c8e724-1e98-45ee-a0bd-f3840623ed97",
-      "verification": false
+      "verification": false,
+      "disabled": true
     },
     {
       "id": "bubu-jinwu",
@@ -6434,7 +6469,8 @@
         "lng": 121.5323949
       },
       "coordinateSource": "https://data.taipei/dataset/detail?id=b7c8e724-1e98-45ee-a0bd-f3840623ed97",
-      "verification": false
+      "verification": false,
+      "disabled": true
     },
     {
       "id": "ka-lah-a",
@@ -6447,7 +6483,8 @@
         "lng": 121.49651601
       },
       "coordinateSource": "https://data.taipei/dataset/detail?id=b7c8e724-1e98-45ee-a0bd-f3840623ed97",
-      "verification": false
+      "verification": false,
+      "disabled": true
     },
     {
       "id": "yanshi-bar",
@@ -6460,7 +6497,8 @@
         "lng": 121.53327079
       },
       "coordinateSource": "https://data.taipei/dataset/detail?id=b7c8e724-1e98-45ee-a0bd-f3840623ed97",
-      "verification": false
+      "verification": false,
+      "disabled": true
     },
     {
       "id": "mimiice",
@@ -6473,7 +6511,8 @@
         "lng": 121.53679259
       },
       "coordinateSource": "https://data.taipei/dataset/detail?id=b7c8e724-1e98-45ee-a0bd-f3840623ed97",
-      "verification": false
+      "verification": false,
+      "disabled": true
     },
     {
       "id": "one-way-bali",
@@ -6487,7 +6526,8 @@
         "lng": 121.4263819
       },
       "coordinateSource": "https://www.google.com/maps?cid=6018050053999044819",
-      "verification": false
+      "verification": false,
+      "disabled": true
     },
     {
       "id": "flash-grid-nangang",
@@ -6500,7 +6540,8 @@
         "lng": 121.6083845
       },
       "coordinateSource": "https://www.google.com/maps?cid=18050495265590730044",
-      "verification": false
+      "verification": false,
+      "disabled": true
     },
     {
       "id": "shinpaku-sake-bar",
@@ -6513,7 +6554,8 @@
         "lng": 121.53199267
       },
       "coordinateSource": "https://data.taipei/dataset/detail?id=b7c8e724-1e98-45ee-a0bd-f3840623ed97",
-      "verification": false
+      "verification": false,
+      "disabled": true
     },
     {
       "id": "starto",
@@ -6525,7 +6567,8 @@
         "lng": 121.44661654977
       },
       "coordinateSource": "https://raw.githubusercontent.com/zhengda/taiwan-address-data/master/roads/65-%E6%B7%A1%E9%87%91%E8%B7%AF.csv",
-      "verification": false
+      "verification": false,
+      "disabled": true
     },
     {
       "id": "lele-boardgame",
@@ -6538,7 +6581,8 @@
         "lng": 121.55857407
       },
       "coordinateSource": "https://data.taipei/dataset/detail?id=b7c8e724-1e98-45ee-a0bd-f3840623ed97",
-      "verification": false
+      "verification": false,
+      "disabled": true
     },
     {
       "id": "hello-study",
@@ -6552,7 +6596,8 @@
         "lng": 121.55186502
       },
       "coordinateSource": "https://data.taipei/dataset/detail?id=b7c8e724-1e98-45ee-a0bd-f3840623ed97",
-      "verification": false
+      "verification": false,
+      "disabled": true
     },
     {
       "id": "koizumi-natural-wine",
@@ -6565,7 +6610,8 @@
         "lng": 121.55864958
       },
       "coordinateSource": "https://data.taipei/dataset/detail?id=b7c8e724-1e98-45ee-a0bd-f3840623ed97",
-      "verification": false
+      "verification": false,
+      "disabled": true
     },
     {
       "id": "hippun",
@@ -6578,7 +6624,8 @@
         "lng": 121.56679596
       },
       "coordinateSource": "https://data.taipei/dataset/detail?id=b7c8e724-1e98-45ee-a0bd-f3840623ed97",
-      "verification": false
+      "verification": false,
+      "disabled": true
     },
     {
       "id": "miracle-x-lab",
@@ -6592,7 +6639,8 @@
         "lng": 121.54498865
       },
       "coordinateSource": "https://data.taipei/dataset/detail?id=b7c8e724-1e98-45ee-a0bd-f3840623ed97",
-      "verification": false
+      "verification": false,
+      "disabled": true
     },
     {
       "id": "collaplay",
@@ -6606,7 +6654,8 @@
         "lng": 121.50529681
       },
       "coordinateSource": "https://data.taipei/dataset/detail?id=b7c8e724-1e98-45ee-a0bd-f3840623ed97",
-      "verification": false
+      "verification": false,
+      "disabled": true
     },
     {
       "id": "tmd-xinzhuang",
@@ -6618,7 +6667,8 @@
         "lng": 121.459369699
       },
       "coordinateSource": "https://raw.githubusercontent.com/zhengda/taiwan-address-data/master/roads/65-%E6%80%9D%E6%BA%90%E8%B7%AF.csv",
-      "verification": false
+      "verification": false,
+      "disabled": true
     },
     {
       "id": "seeu-coffee",
@@ -6648,7 +6698,7 @@
       },
       "giftStatus": "可能有小物",
       "verification": false,
-      "disabled": false
+      "disabled": true
     },
     {
       "id": "boven-magazine-library-taipei",
@@ -6679,7 +6729,7 @@
       },
       "giftStatus": "可能有小物",
       "verification": false,
-      "disabled": false
+      "disabled": true
     },
     {
       "id": "boven-cafe-taipei",
@@ -6710,7 +6760,7 @@
       },
       "giftStatus": "可能有小物",
       "verification": false,
-      "disabled": false
+      "disabled": true
     },
     {
       "id": "achun-2410",
@@ -8442,7 +8492,8 @@
       },
       "verification": false,
       "verificationNote": "收錄自「欣好店家-1122」",
-      "visitNote": "推薦品項：澳式小白、墨爾本魔術、提拉米蘇跟巴斯克。"
+      "visitNote": "推薦品項：澳式小白、墨爾本魔術、提拉米蘇跟巴斯克。",
+      "disabled": true
     },
     {
       "id": "achun-1512",
@@ -9254,7 +9305,7 @@
         "threads": "https://www.threads.com/@famiii.cafe"
       },
       "verification": false,
-      "disabled": false,
+      "disabled": true,
       "giftStatus": "可能有小物",
       "shopPhoto": {
         "url": "./media/library/famiii-cafe/logo.webp?v=e6edcc2ca5404afb",
@@ -9371,7 +9422,7 @@
       },
       "giftStatus": "可能有小物",
       "verification": false,
-      "disabled": false,
+      "disabled": true,
       "shopPhoto": {
         "url": "./media/library/katasumi-betogether/logo.webp?v=6aa91b283786768b",
         "source": "https://www.threads.com/@katasumi_betogether",
@@ -9467,7 +9518,7 @@
       },
       "giftStatus": "可能有小物",
       "verification": false,
-      "disabled": false,
+      "disabled": true,
       "verificationNote": "指定 Threads 帳號依伺服器回傳確認為鄭怡成香舖。品牌官網明列天母會館對外預約地址及提前兩天預約的規則，一卡通公開店家清單亦列士東路200巷43號。Facebook 與 Instagram 由官網連出的品牌賣貨便（https://myship.7-11.com.tw/general/detail/GM2409203665979）確認；課程預約連結取自品牌導覽頁（https://linkgoods.com/1856zyc）。依香品及香器專賣業態沿用選物雜貨。已比對名冊（含下架紀錄）的店名、地址與社群，未發現重複。"
     }
   ]
