@@ -9380,6 +9380,62 @@
         "checkedAt": "2026-11-28",
         "note": "官方帳號 katasumi_betogether 的 hd_profile_pic_versions"
       }
+    },
+    {
+      "id": "somsugar-taichung",
+      "name": "鬆砂糖創意販賣所（臺中消波塊門市）",
+      "address": "臺中市西區中興一巷6號1樓",
+      "category": "選物雜貨",
+      "latlng": {
+        "lat": 24.14757,
+        "lng": 120.66272
+      },
+      "coordinateSource": "https://mapcarta.com/N13152753455",
+      "coordinateNote": "Mapcarta 引用 OpenStreetMap 節點 13152753455，明列店名、門牌與座標；門牌與品牌蝦皮賣場一致。",
+      "social": {
+        "instagram": "https://www.instagram.com/somsugar_studio/",
+        "threads": "https://www.threads.com/@somsugar_studio",
+        "website": "https://portaly.cc/somsugar_kr"
+      },
+      "giftStatus": "可能有小物",
+      "verification": false,
+      "disabled": false,
+      "shopPhoto": {
+        "url": "./media/library/somsugar-taichung/logo.webp?v=7fb81223f9c4e50e",
+        "source": "https://www.threads.com/@somsugar_studio",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-28",
+        "note": "官方帳號 somsugar_studio 的 hd_profile_pic_versions"
+      }
+    },
+    {
+      "id": "somsugar-hsinchu",
+      "name": "鬆砂糖創意販賣所（新竹風吹砂門市）",
+      "address": "新竹市東區勝利路196號1樓",
+      "category": "選物雜貨",
+      "latlng": {
+        "lat": 24.80056,
+        "lng": 120.96601
+      },
+      "coordinateSource": "https://mapcarta.com/N13296667617",
+      "coordinateNote": "Mapcarta 引用 OpenStreetMap 節點 13296667617，明列風吹砂門市的門牌與座標；門牌與黑白小姐插畫設計工作室的寄賣據點一致。",
+      "social": {
+        "instagram": "https://www.instagram.com/somsugar_studio/",
+        "threads": "https://www.threads.com/@somsugar_studio",
+        "website": "https://portaly.cc/somsugar_kr"
+      },
+      "giftStatus": "可能有小物",
+      "verification": false,
+      "disabled": false,
+      "shopPhoto": {
+        "url": "./media/library/somsugar-hsinchu/logo.webp?v=7fb81223f9c4e50e",
+        "source": "https://www.threads.com/@somsugar_studio",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-28",
+        "note": "官方帳號 somsugar_studio 的 hd_profile_pic_versions"
+      }
     }
   ]
 }
