@@ -9208,6 +9208,34 @@
       "verification": false,
       "verificationNote": "收錄自「欣好店家-1122」",
       "visitNote": "推薦品項：雪藏紅豆鬆餅、柚韻茶敘。"
+    },
+    {
+      "id": "ogura-dessert",
+      "name": "小倉廚",
+      "address": "高雄市苓雅區自強三路79巷21號",
+      "category": "甜點飲料",
+      "latlng": {
+        "lat": 22.614738232945,
+        "lng": 120.2982917344
+      },
+      "coordinateSource": "https://raw.githubusercontent.com/zhengda/taiwan-address-data/master/roads/64-%E8%87%AA%E5%BC%B7%E4%B8%89%E8%B7%AF.csv",
+      "coordinateNote": "公開 TGOS 門牌資料副本中，高雄市苓雅區城北里12鄰自強三路79巷21號的 X 為經度、Y 為緯度；門牌與店家官方 Threads 簡介相符。",
+      "social": {
+        "facebook": "https://www.facebook.com/OguraDessert/",
+        "instagram": "https://www.instagram.com/ogura_dessert/",
+        "threads": "https://www.threads.com/@ogura_dessert"
+      },
+      "giftStatus": "可能有小物",
+      "verification": false,
+      "disabled": false,
+      "shopPhoto": {
+        "url": "./media/library/ogura-dessert/logo.webp?v=dfa3dfc85c81e159",
+        "source": "https://www.threads.com/@ogura_dessert",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-28",
+        "note": "官方帳號 ogura_dessert 的 hd_profile_pic_versions"
+      }
     }
   ]
 }
