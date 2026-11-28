@@ -9236,6 +9236,33 @@
         "checkedAt": "2026-11-28",
         "note": "官方帳號 ogura_dessert 的 hd_profile_pic_versions"
       }
+    },
+    {
+      "id": "famiii-cafe",
+      "name": "吾家咖啡·布丁專門店",
+      "address": "新北市汐止區仁愛路59號",
+      "category": "咖啡廳",
+      "latlng": {
+        "lat": 25.062971,
+        "lng": 121.660522
+      },
+      "coordinateSource": "https://housetw.com/addr/%E6%96%B0%E5%8C%97%E5%B8%82-%E6%B1%90%E6%AD%A2%E5%8D%80-%E4%BB%81%E6%84%9B%E8%B7%AF59%E8%99%9F",
+      "coordinateNote": "實價雷達的門牌頁明示本址座標；精確值取自同頁『看街景』連結的 cbll 參數，門牌與官方 Threads 簡介一致。",
+      "social": {
+        "facebook": "https://www.facebook.com/277057839821647/",
+        "threads": "https://www.threads.com/@famiii.cafe"
+      },
+      "verification": false,
+      "disabled": false,
+      "giftStatus": "可能有小物",
+      "shopPhoto": {
+        "url": "./media/library/famiii-cafe/logo.webp?v=e6edcc2ca5404afb",
+        "source": "https://www.threads.com/@famiii.cafe",
+        "platform": "threads",
+        "status": "verified",
+        "checkedAt": "2026-11-28",
+        "note": "官方帳號 famiii.cafe 的 hd_profile_pic_versions"
+      }
     }
   ]
 }
